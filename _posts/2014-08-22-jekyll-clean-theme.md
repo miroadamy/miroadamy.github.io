@@ -1,134 +1,68 @@
 ---
 layout: post
-title: "Jekyll Clean Theme"
-date: 2014-08-22 16:25:06 -0700
+title: "Third time is a charm"
+date: 2016-03-13 16:25:06 -0700
 comments: false
 ---
 
+As part of "back to basics" software minimalism movement, I have exported the old Wordpress blog
+and loaded it into Jekyll with intention to publish it on my Github 
+
+This contains almost 10 years worth of history of my posts. It is based on Jekyll Clean theme, 
+created by Scott Emmons - see the following links
+
 * Get it from [github](https://github.com/scotte/jekyll-clean).
+
+
+If you are interested in the Jekyll Clean theme:
+
 * See the [live demo](https://scotte.github.io/jekyll-clean).
 * See it [in action on my own blog](https://scotte.org).
 
-Welcome to the sample post for the Jekyll Clean theme.
+Migration process
+=================
 
-A simple and clean Jekyll theme using [bootstrap](http://getbootstrap.com)
-(not to be confused with jekyll-bootstrap) that's easy to modify and very
-modular in component and element reuse.
+I exported the Wordpress using Admin export tool - which produced the huge XML file.
 
-It uses Disqus for comments and includes Google Analytics support. Both of
-these features are disabled by default and can be enabled via \_config.yml. You
-can also rip this code out of the templates if you like (footer.html and post.html).
-The beauty of Jekyll - keep things clean... Jekyll Clean!
-
-The theme works well on mobile phones, using a collapsable nav bar and hiding the
-sidebar. The links pane in the sidebar is available on mobile through the nav menu,
-and you can do the same thing for any other sections added to the sidebar.
-
-Don't forget to occassionally merge against my upstream repository so you can get
-the latest changes. Pull requests are encouraged and accepted!
-
-Installation
-============
-
-If you don't have a blog already on github, start by cloning this repository.
-Best to do that directly on github and then clone that down to your computer.
-
-If you already do have a blog, You can certainly apply this theme to your existing
-blog in place, but then you won't be able to merge as the theme changes. If you
-re-apply your blog history on top of this theme's **gh-pages** branch, it's then
-easy to update to the latest version of the theme. You also don't want to have to
-deal with resolving old conflicts from your existing history, so you may wish to to
-push your existing master off to a new branch so you have the old history and start
-a new branch with this as the start, merging in your \_posts and other assets (after
-git rm'ing the current \_posts.
-
-Not ideal, but you have to make a choice - either apply it manually or base your
-blog off this theme's branch. Either way it will work, and both have their own
-pros and cons.
-
-You can setup an upstream tracking repository like so:
+I forked the jekyll-clean and made sure it works
 
 ```
+$ git clone git@github.com:miroadamy/jekyll-now.git
+$ cd jekyll-now
+$ jekyll build
+$ jekyll serve
 $ git remote add upstream git@github.com:scotte/jekyll-clean.git
 ```
-And now when you wish to merge your own branch onto the latest version of the
-theme, simply do:
+
+The last one is to allow getting fixes from Scott.
+
+Then I installed importer and few required gems to run the import
 
 ```
-$ git fetch upstream
-$ git merge upstream/gh-pages
-```
+$ sudo gem install jekyll-paginate
+$ sudo gem install github-pages
+$ sudo gem install jekyll-import
+$ sudo gem install hpricot
+$ sudo gem install open_uri_redirections
+$ mv ~/Downloads/miro039sworld.wordpress.2016-03-14.xml ..
 
-Of course you will have to resolve conflicts for \_config.yml, \_includes/links-list.html,
-and \_posts, and so on, but in practice this is pretty simple.
+$ ruby -rubygems -e 'require "jekyll-import"; JekyllImport::Importers::WordpressDotCom.run({ "source" => "/Users/miro/src/PLG/miro039sworld.wordpress.2016-03-14.xml" })'
 
-This is how I maintain my own blog which is based on this theme. The old history is
-sitting in an **old-master** branch that I can refer to when I need to.
-
-Running Locally
-===============
-
-Here's the exact set of packages I need to install on Debian to run jekyll
-locally with this theme for testing.
-
-```
-$ sudo aptitude install ruby ruby-dev rubygems nodejs
-$ sudo gem install jekyll jekyll-paginate
-```
-
-And then it's just a simple matter of running jekyll locally:
-
-```
-$ jekyll serve --baseurl=''
+$ git checkout -b master
+$ git push origin master
+$ git add .
+$ git commit -m "Imported the old Wordpress blog from miroadamy.com"
 ```
 
 Now browse to http://127.0.0.1:4000
 
+
 Disqus Comments
 ===============
 
-Getting Disqus to work can be a bit more work than it seems like it should be.
-Make sure your Disqus account is correctly configured with the right domain
-of your blog and you know your Disqus shortname.
-
-In _config.yml you'll need to set **disqus** to your Disqus shortname and
-make sure **comments** is true.
-
-Finally, in posts, make sure you have **comments: true** in the YAML front
-matter.
-
-More information on using Disqus with Jekyll is
+I have not set up comments yet as 
 [documented here](https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions).
 
-Code Syntax Highlighting
-========================
-
-To use code syntax highlighting, use the following syntax:
-
-```
-```python
-import random
-
-# Roll the die
-roll = random.randint(1, 20)
-print('You rolled a %d.' % roll)
-``` #REMOVE
-```
-
-(Remove #REMOVE from the end of the last line). Which will look like this in
-the rendered jekyll output using the default css/syntax.css provided with this
-theme (which is the **colorful** theme from [https://github.com/iwootten/jekyll-syntax](https://github.com/iwootten/jekyll-syntax)):
-
-```python
-import random
-
-# Roll the die
-roll = random.randint(1, 20)
-print('You rolled a %d.' % roll)
-```
-
-You can, of course, use any theme you wish, see the jekyll and pygments
-documentation for more details.
 
 License
 =======
