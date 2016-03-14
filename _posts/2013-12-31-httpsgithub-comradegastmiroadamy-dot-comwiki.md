@@ -20,6 +20,9 @@ author:
   first_name: ''
   last_name: ''
 ---
-<p><a href="https://github.com/radegast/miroadamy-dot-com/wiki" title="https://github.com/radegast/miroadamy-dot-com/wiki">https://github.com/radegast/miroadamy-dot-com/wiki</a></p>
-<p>The continuation of the <a href="http://miroadamy.com">old Wordpress blog</a> with more agreeable tools: Github Wiki + Gollum, Markdown and Git.</p>
-<p> </p>
+
+The continuation of the [old Wordpress blog](http://miroadamy.wordpress.com) with more agreeable tools: Github Wiki + Gollum, Markdown and Git.
+
+My old blog at Miro's World has been kinda neglected in last two years. I have written several entries and published them only internally. I have decided now to pull those of the entries that do not contain customer references, code or customer IP out.
+
+

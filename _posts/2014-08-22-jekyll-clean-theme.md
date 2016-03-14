@@ -8,16 +8,16 @@ comments: false
 As part of "back to basics" software minimalism movement, I have exported the old Wordpress blog
 and loaded it into Jekyll with intention to publish it on my Github 
 
-This contains almost 10 years worth of history of my posts. It is based on Jekyll Clean theme, 
-created by Scott Emmons - see the following links
+This contains almost 10 years worth of history of my posts, plus few not yet previously unpublished posts.
 
-* Get it from [github](https://github.com/scotte/jekyll-clean).
+It is based on Jekyll Clean theme, 
+created by Scott Emmons - see it / get it from [github](https://github.com/scotte/jekyll-clean).
 
 
 If you are interested in the Jekyll Clean theme:
 
 * See the [live demo](https://scotte.github.io/jekyll-clean).
-* See it [in action on my own blog](https://scotte.org).
+* See it [in action on Scott's blog](https://scotte.org).
 
 Migration process
 =================
