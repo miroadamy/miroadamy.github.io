@@ -1,0 +1,33 @@
+---
+layout: post
+title: VMWare and slow clocks
+date: 2009-01-04 23:51:35.000000000 -05:00
+type: post
+published: true
+status: publish
+categories:
+- Unix
+tags: []
+meta:
+  _edit_last: '369559'
+  _oembed_7fc40fb43fc70ac9a49d6c8234a32f42: '{{unknown}}'
+  _oembed_4684220a1cef84148c272eaa0e7fc1e4: '{{unknown}}'
+author:
+  login: miroadamy
+  email: miro.adamy+blog@gmail.com
+  display_name: miroadamy
+  first_name: ''
+  last_name: ''
+---
+<p>I have noticed recently that most of our VMWare instances (and we are running decent fleet of them for the ATG Lab as well as internal system) if left without time synchronization, will loose get late quite a bit: some of them as much as hour or more a week.</p>
+<p>Unix date command unfortunately belongs to those commands that I am having troubles to remember and everytime I have to use it with parameters, I end up googling for examples ...</p>
+<p>The following snippet is useful when correcting only time portion:</p>
+<pre>[tkuser@jci-app ~]$ date
+Sat Jan 3 11:28:12 EST 2009
+
+[tkuser@jci-app ~]$ sudo date -s "13:45"
+Password:
+Sat Jan 3 13:45:00 EST 2009
+
+[tkuser@jci-app ~]$ date
+Sat Jan 3 13:45:04 EST 2009</pre>
