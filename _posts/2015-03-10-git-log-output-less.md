@@ -35,6 +35,7 @@ export LESS=-iXFR
 
 
 The options we set for less are:
+
 ```
 * -i - ignore case when searching (but respect case if search term contains uppercase letters)
 * -X - do not clear screen on exit
