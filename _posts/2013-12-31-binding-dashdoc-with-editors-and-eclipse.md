@@ -45,13 +45,13 @@ There is opensource plugin for it at https://github.com/justinkb/DashLookup#read
 * Build it 
 * Select 'Export deployable plugin and Fragments' and install to host:
 
-[[images/binding-dashdoc-with-editors-and-eclipse_5.png]]
+![](/images/binding-dashdoc-with-editors-and-eclipse_5.png)
 
-[[images/binding-dashdoc-with-editors-and-eclipse_4.png]]
+![](/images/binding-dashdoc-with-editors-and-eclipse_4.png)
 
-[[images/binding-dashdoc-with-editors-and-eclipse_3.png]]
+![](/images/binding-dashdoc-with-editors-and-eclipse_3.png)
 
-[[images/binding-dashdoc-with-editors-and-eclipse_2.png]]
+![](/images/binding-dashdoc-with-editors-and-eclipse_2.png)
 
 Bind the command DashLookup (Preferences -> General -> Keys) to keys of your choice
 
@@ -105,7 +105,7 @@ The new command is :Dash and the mapping to search word under cursor is
 :nmap <silent> <leader>D <Plug>DashGlobalSearch
 ```
 
-![[images/binding-dashdoc-with-editors-and-eclipse_1.png]]
+![](/images/binding-dashdoc-with-editors-and-eclipse_1.png)
 
 The leader is '\'
 
