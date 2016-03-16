@@ -9,7 +9,7 @@ categories:
 - Mac
 tags:
 - eclipse
-- OS-X
+- osx
 - git
 author:
   login: miroadamy

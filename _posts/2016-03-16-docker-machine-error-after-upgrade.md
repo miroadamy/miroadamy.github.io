@@ -7,9 +7,9 @@ published: true
 status: publish
 categories:
 - Mac
-tags:
-- docker
-- OS-X
+tags: 
+  - docker
+  - osx
 author:
   login: miroadamy
   email: miro.adamy+blog@gmail.com
