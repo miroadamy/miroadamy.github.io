@@ -9,4 +9,20 @@
 
 - slug: git
   name: Git
+
+- slug: blog
+  name: blogging
+
+- slug: webapp
+  name: Web applications
+
+- slug: books
+  name: Books and eBooks     
+
+- slug: java
+  name: Java
+
+- slug: security
+  name: Security
+
   

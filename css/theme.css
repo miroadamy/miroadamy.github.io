@@ -42,6 +42,11 @@ body {
     font-size: 1.3em;
 }
 
+.label a {
+    color: #fff;
+}
+
+
 .author {
     color: #ee4444;
 }
