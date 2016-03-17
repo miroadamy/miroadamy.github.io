@@ -5,8 +5,7 @@ date: 2016-03-16 12:57:35.000000000 -05:00
 type: post
 published: true
 status: publish
-categories:
-- Mac
+category: devops
 tags: 
   - docker
   - osx

@@ -3,6 +3,15 @@ layout: post
 title: "Third time is a charm"
 date: 2014-08-22 16:25:06 -0700
 comments: false
+type: post
+published: true
+status: publish
+category: general
+tags: [blog]
+author:
+  login: miroadamy
+  email: miro.adamy+blog@gmail.com
+  display_name: miroadamy
 ---
 
 As part of "back to basics" software minimalism movement, I have exported the old Wordpress blog

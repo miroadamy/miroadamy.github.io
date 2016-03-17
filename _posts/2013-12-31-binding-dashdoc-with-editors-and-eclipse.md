@@ -5,11 +5,10 @@ date: 2013-12-31 00:57:35.000000000 -05:00
 type: post
 published: true
 status: publish
-categories:
-- Mac
+category: programming
 tags:
-- eclipse
-- OS-X
+- osx
+- java
 - vim
 meta:
   _publicize_pending: '1'

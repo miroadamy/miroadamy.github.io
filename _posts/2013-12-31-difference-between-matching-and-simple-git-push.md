@@ -5,8 +5,7 @@ date: 2013-12-31 16:41:38.000000000 -05:00
 type: post
 published: true
 status: publish
-categories:
-- programming
+category: devops
 tags:
 - git
 meta:

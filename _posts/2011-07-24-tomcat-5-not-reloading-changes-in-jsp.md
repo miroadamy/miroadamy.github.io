@@ -5,15 +5,9 @@ date: 2011-07-24 17:33:34.000000000 -04:00
 type: post
 published: true
 status: publish
-categories:
-- Java
-- OpenSource
+category: programming
 tags:
-- Java
-- jsp
-- tomcat
-meta:
-  _edit_last: '11437229'
+- java
 author:
   login: miroadamy
   email: miro.adamy+blog@gmail.com

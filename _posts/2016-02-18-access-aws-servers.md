@@ -5,10 +5,8 @@ date: 2016-02-18 00:57:35.000000000 -05:00
 type: post
 published: true
 status: publish
-categories:
-- Mac
+category: devops
 tags:
-- eclipse
 - osx
 - git
 author:
