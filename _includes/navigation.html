@@ -16,7 +16,7 @@
 {% for c in cats %}
  <span class="site-tag">
     <a href="/blog/category/{{ c | first | slugify }}/"
-        style="font-size: {{ c | last | size  |  times: 2 | plus: 80  }}%">
+        style="font-size: {{ c | last | size  |  times: 1 | plus: 70  }}%">
             {{ c[0] | replace:'-', ' ' }} ({{ c | last | size }})
     </a>
 </span>
