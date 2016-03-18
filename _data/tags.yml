@@ -31,7 +31,19 @@
 - slug: javascript
   name: Javascript
 
+- slug: objectivec
+  name: Objective-C
+
 - slug: security
   name: Security
+
+- slug: atg
+  name: ATG - Oracle Commerce  
+
+- slug: ecommerce
+  name: ecommerce
+
+- slug: iPhone
+  name: iPhone  
 
   

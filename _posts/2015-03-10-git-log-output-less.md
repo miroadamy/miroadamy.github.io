@@ -5,11 +5,9 @@ date: 2015-03-10 00:57:35.000000000 -05:00
 type: post
 published: true
 status: publish
-categories:
-- Mac
+category: lifehacks
 tags:
-- eclipse
-- OS-X
+- osx
 - git
 author:
   login: miroadamy
