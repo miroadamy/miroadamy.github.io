@@ -2,7 +2,7 @@
 layout: post
 title: "Third time is a charm"
 date: 2014-08-22 16:25:06 -0700
-comments: false
+comments: true
 type: post
 published: true
 status: publish

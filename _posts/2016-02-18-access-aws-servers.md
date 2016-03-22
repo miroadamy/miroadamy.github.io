@@ -5,6 +5,7 @@ date: 2016-02-18 00:57:35.000000000 -05:00
 type: post
 published: true
 status: publish
+comments: true
 category: devops
 tags:
 - osx

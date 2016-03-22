@@ -3,6 +3,7 @@ layout: post
 title: Binding DashDoc with editors and Eclipse
 date: 2013-12-31 00:57:35.000000000 -05:00
 type: post
+comments: true
 published: true
 status: publish
 category: programming
