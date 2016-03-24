@@ -24,8 +24,8 @@ set @MyGuid = NEWID()<br />
 select 'aaaaa', @MyGuid<br />
 </code><br />
 You would expect that the result will be one row, consisting of value 'aaaaa' and some GUID, right ? Wrong. It is true only in SSMS as the picture shows:</p>
-<p><a href="http://miroadamy.files.wordpress.com/2007/05/ssms.png" title="SQL Server Management Studio"><img src="{{ site.baseurl }}/assets/ssms.png" alt="SQL Server Management Studio" /></a></p>
+<p><img src="{{ site.baseurl }}/images/ssms.png" alt="SQL Server Management Studio" /></p>
 <p>In Visual Studio 2005 SP1, the result looks like this:</p>
-<p><a href="http://miroadamy.files.wordpress.com/2007/05/visualstudio.png" title="Visual Studio without conversion"><img src="{{ site.baseurl }}/assets/visualstudio.png" alt="Visual Studio without conversion" /></a></p>
+<p><img src="{{ site.baseurl }}/images/visualstudio.png" alt="Visual Studio without conversion" /></p>
 <p>which on one side announces 1 row in resultset, but does show the same result as if the resultset was empty. As we found out, the problem is related to displaying the GUID value - if your resultset does not contain it, the row will show OK. Same result can be achieved using explicit conversion, as shown in the picture:</p>
-<p><a href="http://miroadamy.files.wordpress.com/2007/05/visualstudio2.png" title="Visual Studio with conversion"><img src="{{ site.baseurl }}/assets/visualstudio2.png" alt="Visual Studio with conversion" /></a></p>
+<p><img src="{{ site.baseurl }}/images/visualstudio2.png" alt="Visual Studio with conversion" /></a></p>
