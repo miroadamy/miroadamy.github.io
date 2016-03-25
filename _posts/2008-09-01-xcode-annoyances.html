@@ -22,17 +22,16 @@ author:
 <p>Two things however are so annoying, that I have to mention them right now:</p>
 <p>1) Setting breakpoints was gamble - sometimes it worked, sometimes it did not. I could not figure out why, until I found <a href="http://kleymeyer.typepad.com/blog/2007/09/problem-with-br.html" target="_blank">here</a> that you must in Preferences -&gt; Debug switch off the 'Lazy loading symbols'. After re-entering the breakpoints, I finally got it to behave as expected.</p>
 <p>2) Trying to add existing files to a projects crashes the XCode with the following:</p>
-<p><a href="http://miroadamy.files.wordpress.com/2008/09/picture-11.png"><img class="alignnone size-full wp-image-536" src="{{ site.baseurl }}/assets/picture-11.png" alt="" width="450" height="194" /></a></p>
+<p><img class="alignnone size-full wp-image-536" src="{{ site.baseurl }}/images/picture-11.png" alt="" width="450" height="194" /></p>
 <p>The console window shows error:</p>
-<pre>
-<pre>
-<pre>
+
 <pre>[code language='xml']
 
 PM Xcode[34563] *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '
 *** -[NSAutoreleasePool stopObservingModelObject:]: unrecognized selector sent to instance 0x32da240'
 
 [/code]</pre>
+
 <p>which is clearly a bug. I tried to reboot (it was about time after running for over two weeks anyway), no help.</p>
-<p>Weird is that I remember doing that before without any problems ... Workaround is use drag and drop, of course, but I wish Apple would fix this Really Soon, as it is plainly embarrassing ...</p>
+Weird is that I remember doing that before without any problems ... Workaround is use drag and drop, of course, but I wish Apple would fix this Really Soon, as it is plainly embarrassing ...</p>
 <p>I have seen crashes like this in Visual Studio, but Eclipse was rock solid environment despite the very complex plugins ecosystem, so it is hard to go back to use something blowing under your hands ...</p>

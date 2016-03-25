@@ -26,8 +26,8 @@ author:
 <p>The second problem was fixed by replacing the bad DIMM, but the first caused that upgrade to 10.5.6 was impossible: the files were downloaded, verification failed, after restart I was back to square one. There was no obvious way how to "undownload" the files.</p>
 <p>The Apple Support representative recommended downloading the update as DMG from Apple Downloads, and run installer. The DMG of 10.5.6 had over 300 MB, while the patch file was barely 190 MB, so I was wondering whether there is better way. As it turned out, it is very easy.</p>
 <p>The location of the downloaded files is  /Library/Updates which is normally almost empty:</p>
-<p><img class="alignnone size-full wp-image-639" title="picture-105" src="{{ site.baseurl }}/assets/picture-105.png" alt="picture-105" width="450" height="182" /></p>
+<p><img class="alignnone size-full wp-image-639" title="picture-105" src="{{ site.baseurl }}/images/picture-105.png" alt="picture-105" width="450" height="182" /></p>
 <p>During update process, this is the location where OS-X will keep the downloaded files, as shown here:</p>
-<p><img class="alignnone size-full wp-image-640" title="picture-102" src="{{ site.baseurl }}/assets/picture-102.png" alt="picture-102" width="450" height="231" /></p>
+<p><img class="alignnone size-full wp-image-640" title="picture-102" src="{{ site.baseurl }}/images/picture-102.png" alt="picture-102" width="450" height="231" /></p>
 <p>All you need to do is to delete these downloads (keep the plist, of course) and try Software Updates again. The updater will re-download the files and everything will work as expected:</p>
-<p><img class="alignnone size-full wp-image-642" title="picture-103" src="{{ site.baseurl }}/assets/picture-103.png" alt="picture-103" width="450" height="153" /></p>
+<p><img class="alignnone size-full wp-image-642" title="picture-103" src="{{ site.baseurl }}/images/picture-103.png" alt="picture-103" width="450" height="153" /></p>
