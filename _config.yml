@@ -29,6 +29,7 @@ paginate: 3
 
 highlighter: rouge
 markdown: kramdown
-gems: ['jekyll-paginate']
+gems: ['jekyll-paginate', 'jekyll-gist']
+whitelist: ['jekyll-paginate', 'jekyll-gist']
 
 exclude: ['README.md', 'LICENSE']

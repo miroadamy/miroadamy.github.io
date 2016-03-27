@@ -29,7 +29,7 @@ Works OOTB on Mac
 * Download TAR from [Github](https://github.com/ejwa/gitinspector) 
 * unzipped to /opt
 
-```
+```bash
 ➜  ll /opt/gitinspector-0.3.2
 total 52K
 -rw-r--r--  1 miro  999 Jul 29  2013 DESCRIPTION.txt
@@ -43,7 +43,7 @@ drwxr-xr-x 45 miro 1.5K Mar 20  2015 gitinspector
 
 * create symlink from ~/bin (or from whatever directory on $PATH)
 
-```
+```bash
 ln -s /opt/gitinspector-0.3.2/gitinspector/gitinspector.py ~/bin/gitinspector.py
   
 ➜  ~  ll ~/bin | grep gitin
