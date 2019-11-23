@@ -30,7 +30,7 @@
     </item>
     
     <item>
-      <title>events</title>
+      <title>Events</title>
       <link>https://miroadamy.com/categories/events/</link>
       <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
       
@@ -71,6 +71,15 @@
       <pubDate>Fri, 17 Aug 2012 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/ecommerce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>travel</title>
+      <link>https://miroadamy.com/categories/travel/</link>
+      <pubDate>Mon, 20 Aug 2007 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/travel/</guid>
       <description></description>
     </item>
     
