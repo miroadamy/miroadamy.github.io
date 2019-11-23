@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ebooks on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/ebooks/</link>
+    <description>Recent content in ebooks on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 23 Apr 2007 22:42:58 -0400</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/ebooks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>One more reason to like TWIT</title>
+      <link>https://miroadamy.com/posts/2007-04-23-one-more-reason-to-like-twit/</link>
+      <pubDate>Mon, 23 Apr 2007 22:42:58 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-23-one-more-reason-to-like-twit/</guid>
+      <description>As it happens, both my most favorite podcasters - Leo Laporte as well as Steve Gibson are passionate e-book readers. They have both purchased and are (mostly) happy users of the Sony PRS-500 aka Sony Reader in addition to several other platforms - (Palm, Pocket PC). In the latest podcasts - both in TWIT as well as Security Now!, the eBooks and eReader got quite some publicity :-).
+Both had similar experience with PDF format on PRS-500 as myself - but Steve mentioned the PDF re-flowing the document to make it better suites for small screen - something I have looked into but did not get it working quite right.</description>
+    </item>
+    
+  </channel>
+</rss>

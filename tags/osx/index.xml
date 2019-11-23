@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>osx on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/osx/</link>
+    <description>Recent content in osx on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 24 Mar 2016 12:57:35 -0500</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/osx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Starting ACC (ATG Control Centre) on OS-X</title>
+      <link>https://miroadamy.com/posts/2016-03-24-acc-on-osx/</link>
+      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2016-03-24-acc-on-osx/</guid>
+      <description>Copy the installation of ACC for respective version from a Linux VM:
+The startup script in bin/startClient will fail, because it cannot determine which Java to use to run the app.
+It is trying to determine Unix flavour, failing that defaults to Solaris and ends up with invalid settings.
+Fix Set the variable JAVA_VM to path to executable command on your system.
+1 2 3 4 5  which java java is /Library/Java/JavaVirtualMachines/jdk1.</description>
+    </item>
+    
+    <item>
+      <title>Git project statistic tool</title>
+      <link>https://miroadamy.com/posts/2016-03-20-gitinspector/</link>
+      <pubDate>Sun, 20 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2016-03-20-gitinspector/</guid>
+      <description>Git project statistic tool Python based, requires Python 2.6+
+Works OOTB on Mac
+Installation  Download TAR from Github unzipped to /opt
+1 2 3 4 5 6 7 8 9  ➜ ll /opt/gitinspector-0.3.2 total 52K -rw-r--r-- 1 miro 999 Jul 29 2013 DESCRIPTION.txt -rw-r--r-- 1 miro 32K Jun 14 2013 LICENSE.txt -rw-r--r-- 1 miro 78 Jul 2 2013 MANIFEST.in -rw-r--r-- 1 miro 681 Jan 13 2014 README.txt drwxr-xr-x 45 miro 1.</description>
+    </item>
+    
+    <item>
+      <title>Fixing docker-machine error after upgrade</title>
+      <link>https://miroadamy.com/posts/2016-03-16-docker-machine-error-after-upgrade/</link>
+      <pubDate>Wed, 16 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2016-03-16-docker-machine-error-after-upgrade/</guid>
+      <description>I had to upgrade docker toolbox on Yosemite to get latest docker-compose additions.
+After installing the new package, I was not able to connect to docker machine:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ ~ docker-machine status Stopped ➜ ~ docker-machine start default Starting &amp;#34;default&amp;#34;... (default) Check network to re-create if needed... (default) Waiting for an IP... Machine &amp;#34;default&amp;#34; was started.</description>
+    </item>
+    
+    <item>
+      <title>Accessing internal AWS servers directly from Mac</title>
+      <link>https://miroadamy.com/posts/2016-02-18-access-aws-servers/</link>
+      <pubDate>Thu, 18 Feb 2016 00:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2016-02-18-access-aws-servers/</guid>
+      <description>Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.
+The credit for finding out about approach is blog post by James McOrmond - VPN over SSH - who is using this neat trick from Linux for quite some time.
+The software mentioned https://github.com/apenwarr/sshuttle supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).</description>
+    </item>
+    
+    <item>
+      <title>p4merge as default file compare for PathFinder</title>
+      <link>https://miroadamy.com/posts/2015-12-22-p4merge/</link>
+      <pubDate>Tue, 22 Dec 2015 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-12-22-p4merge/</guid>
+      <description> p4merge as default file compare for PathFinder Set the tool in File Comparison
+How to use it  Select 2 files, right click, compare from context menu In dual mode, select one file on each side, compare  </description>
+    </item>
+    
+    <item>
+      <title>How to keep git log and less output on the screen</title>
+      <link>https://miroadamy.com/posts/2015-03-10-git-log-output-less/</link>
+      <pubDate>Tue, 10 Mar 2015 00:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-03-10-git-log-output-less/</guid>
+      <description>When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.
+Just for git commands:
+1  git config --global --replace-all core.pager &amp;#34;less -iXFR&amp;#34;   For less globally (including git) - add to .bashrc / .zshrc / etc:
+1  export LESS=-iXFR   The options we set for less are:</description>
+    </item>
+    
+    <item>
+      <title>Binding DashDoc with editors and Eclipse</title>
+      <link>https://miroadamy.com/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/</link>
+      <pubDate>Tue, 31 Dec 2013 00:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/</guid>
+      <description>If you use DashDoc (see http://kapeli.com/dash), it can be integrated with editor or Eclipse to allow automatically find selected text in Dash documentation sets:
+Sublime Text This is easy - there is DashDoc plugin - https://sublime.wbond.net/packages/DashDoc
+The plugin is OS-X specific, because the DashDoc is
+ Start Package Control (Cmd-Shift-P) select Install Package (type Install) select DashDoc  The Ctrl-H does the search
+Eclipse There is opensource plugin for it at https://github.</description>
+    </item>
+    
+    <item>
+      <title>Better GMail than GMail</title>
+      <link>https://miroadamy.com/posts/2011-02-11-better-gmail-than-gmail/</link>
+      <pubDate>Fri, 11 Feb 2011 23:38:05 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2011-02-11-better-gmail-than-gmail/</guid>
+      <description>Since 2005 when I switched to GMail, I was living in browser. For better or worse, I learn to put up with issues like speed, lack of hotkeys, UI that is not as responsive as it should be, drag and drop that works most of the time. To be fair, in these five years browsers and GMail UI improved tremendously. It was rational decision to trade all these for simplicity of the UI.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft Office 2008 vs NeoOffice vs iWorks&#39;08</title>
+      <link>https://miroadamy.com/posts/2009-04-28-microsoft-office-2008-vs-neooffice-vs-iworks08/</link>
+      <pubDate>Tue, 28 Apr 2009 21:58:10 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-04-28-microsoft-office-2008-vs-neooffice-vs-iworks08/</guid>
+      <description>I was happy user of the iWork Suite 08 since I moved to OS-X. It somehow better matches the way I am thinking and does much better job than Office to get me from idea to acceptable looking rendering of that idea in the form of document, spreadsheet or presentation.
+In past two month I was involved much more interaction with the requirements, business analysis and project management part of the process.</description>
+    </item>
+    
+    <item>
+      <title>The aftermath of mainboard change</title>
+      <link>https://miroadamy.com/posts/2009-03-04-the-aftermath-of-mainboard-change/</link>
+      <pubDate>Wed, 04 Mar 2009 01:01:04 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-03-04-the-aftermath-of-mainboard-change/</guid>
+      <description>In theory, exchanging mainboard on Macbook has no impact because all your data is stored on your harddisk that is untouched. In real life, there are few minor surprises.
+First, your MAC address of the network card had changed. This is something you will not notice, unless Murphy&#39;s law plays funny game with you, as it did with me. When arriving back to the office, I was able to connect to WiFi network, but the ethernet was stubbornly getting the &#34;</description>
+    </item>
+    
+    <item>
+      <title>The myth of premium hardware or why Ottawa needs Apple Store</title>
+      <link>https://miroadamy.com/posts/2009-02-23-the-myth-of-premium-hardware-or-why-ottawa-needs-apple-store/</link>
+      <pubDate>Mon, 23 Feb 2009 23:46:44 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-02-23-the-myth-of-premium-hardware-or-why-ottawa-needs-apple-store/</guid>
+      <description>Back in November 2007, when I was buying Macbook Pro, I did order the AppleCare option, which added several hundred dollars to already pretty expensive notebook price. For moment I was tempted to go without it - after all, Apple makes top grade, high quality hardware and considering pretty low failure rate I have seen with my Windows based notebooks between 1998-2006, why to pay more ? Little did I know how much mileage will I get from the extra cost :-(.</description>
+    </item>
+    
+    <item>
+      <title>How to un-stuck unsuccessful OS-X upgrade</title>
+      <link>https://miroadamy.com/posts/2009-02-07-how-to-un-stuck-unsuccessful-os-x-upgrade/</link>
+      <pubDate>Sat, 07 Feb 2009 11:19:49 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-02-07-how-to-un-stuck-unsuccessful-os-x-upgrade/</guid>
+      <description>Here is the context: in order to upgrade iLife 08 to iLife&#39;09 (which is very nice, btw), I had to install 10.5.6 upgrade. And according Murphy&#39;s law, one of the 2 GB DIMM&#39;s in my MacBook Pro went bad exactly during the OS-X upgrade process.
+It had two rather unpleasant consequences:
+ some of the patch files got downloaded and saved in corrupted state   The machine did not boot back after restart  The second problem was fixed by replacing the bad DIMM, but the first caused that upgrade to 10.</description>
+    </item>
+    
+    <item>
+      <title>Chapters goes Mac</title>
+      <link>https://miroadamy.com/posts/2008-12-01-chapters-goes-mac/</link>
+      <pubDate>Mon, 01 Dec 2008 23:22:48 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-12-01-chapters-goes-mac/</guid>
+      <description>I have noticed few of this beauties in Kanata Chapters. Nice replacement for the beaten up CRT terminals that used to be around. They somehow looked right and familiar from the distance.
+
+Beautiful screen, with touch capability.
+Nice presentation and user interface.
+
+The keyboard with unique personality.
+And after looking closer, it was very obvious why:
+
+Proper keyboard simply must have Command key ;-)
+PS:I am sorry for bad quality of pictures - iPhone camera under bad light conditions.</description>
+    </item>
+    
+    <item>
+      <title>How to save local copy of YouTube video</title>
+      <link>https://miroadamy.com/posts/2008-11-20-how-to-save-local-copy-of-youtube-video/</link>
+      <pubDate>Thu, 20 Nov 2008 23:37:25 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-11-20-how-to-save-local-copy-of-youtube-video/</guid>
+      <description>If you want to watch YouTube video on the plane (and Google TechChannel has some amazing collection of videos), here is how to save it to disk, without any tools or third party program, using just your Mac and Safari out of the box.
+Go to YouTube page and select video you are interested in in Safari. While playing, press Option-Command-A which opens Activity window. Locate the video stream - it will be the largest item in the list.</description>
+    </item>
+    
+    <item>
+      <title>Too good to be true ?</title>
+      <link>https://miroadamy.com/posts/2008-09-11-too-good-to-be-true-2/</link>
+      <pubDate>Thu, 11 Sep 2008 22:39:20 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-09-11-too-good-to-be-true-2/</guid>
+      <description>If this thing is real, I am buying one. Regardless that I really, really do not need another Mac :-). Form factor of thin screen of size 9-12 inch, with reasonable subset of touch gestures would be EXACTLY what I need from a internet terminal / reader. Plus the option to tether it with iPhone for ubiquitous connectivity ...</description>
+    </item>
+    
+    <item>
+      <title>The Things bliss</title>
+      <link>https://miroadamy.com/posts/2008-08-24-the-things-bliss/</link>
+      <pubDate>Sun, 24 Aug 2008 23:08:37 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-24-the-things-bliss/</guid>
+      <description>Finally - the new version of Things on iPhone can synchronize with Things on Mac desktop.
+It actually works - no strings attached. Assumed that:
+1) the WiFi on iPhone is on
+2) iPhone and Mac are on same network (so that Bonjour magic can work)
+3) the Mac Things is running when you start Things on iPhone
+the synchronization happens automatically and is VERY fast (few seconds max).
+Finally a portable GTD application that works for me :-).</description>
+    </item>
+    
+    <item>
+      <title>On positives of negative experience</title>
+      <link>https://miroadamy.com/posts/2008-06-30-on-positives-of-negative-experience/</link>
+      <pubDate>Mon, 30 Jun 2008 23:08:41 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-06-30-on-positives-of-negative-experience/</guid>
+      <description>A comment got to me via friend mentioning why am I suddenly so negative about Apple and Macs, which quite surprised me. True, I have had some serious hardware issues in first two weeks of June, but this negative event was about as much positive experience as hard disk crash can be.
+Thinking back what I have learned and discovered from this:
+- Time Machine actually works
+- it pays to plug in the firewire disk with Time Machine backups every day - the two second operation saves a lot of time in long run</description>
+    </item>
+    
+    <item>
+      <title>Back to normal</title>
+      <link>https://miroadamy.com/posts/2008-06-12-back-to-normal/</link>
+      <pubDate>Thu, 12 Jun 2008 23:13:45 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-06-12-back-to-normal/</guid>
+      <description>So, after few days working diskless, I am back to normal operation mode. About time, we are late with last episode of screencast ...
+The copying of external disk went error free and took almost 5 hours (210 GB). Fortunately, the MBP was usable - I did not want to modify too many files, but it was perfect for Web research and writing in Google Docs.
+After reboot, the TimeMachine decided that 85 GB needs to be backed up again.</description>
+    </item>
+    
+    <item>
+      <title>Diskless Macbook Pro</title>
+      <link>https://miroadamy.com/posts/2008-06-09-diskless-macbook-pro/</link>
+      <pubDate>Mon, 09 Jun 2008 23:45:20 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-06-09-diskless-macbook-pro/</guid>
+      <description>So, I have positive proof that the file system crash of last week was not a software problem in Leopard, but indeed caused by hardware failure. After restoring system from Time Machine, things looked pretty good - everything seemed to work. I was able to re-render the screencasts I have lost - I mean I have lost converted AVI files and MP4 files, not the &#34;source&#34; MOV files. I worked on Mac over Saturday and Sunday.</description>
+    </item>
+    
+    <item>
+      <title>OS-X near-death experience</title>
+      <link>https://miroadamy.com/posts/2008-06-06-os-x-near-death-experience/</link>
+      <pubDate>Fri, 06 Jun 2008 02:08:27 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-06-06-os-x-near-death-experience/</guid>
+      <description>It happened on Wednesday afternoon. I knew something is wrong with my MacBook Pro immediately - when I saw semi-dark screen, unresponsive machine - even mouse cursor was frozen - and heard fans blowing full speed, making the strange, clicking noise coming from inside almost disappear ...
+OS-X does not freeze too often, but it can happen and as a matter of fact, I have seen it happen before during my almost two years with Mac, so I did not panic.</description>
+    </item>
+    
+    <item>
+      <title>Fix for iDVD 08 crash after the start</title>
+      <link>https://miroadamy.com/posts/2008-05-15-fix-for-idvd-08-crash-after-the-start/</link>
+      <pubDate>Thu, 15 May 2008 00:57:37 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-05-15-fix-for-idvd-08-crash-after-the-start/</guid>
+      <description>Today I tried for the first time the iDVD 08 with intention to create DVD version of the screencast - just to find out that the application dies right after the start. From the error report (thanks for that) the problem was in missing dependency Oxygene framework - a module similar to Windows DLL. Here is the error message:
+[sourcecode language=&#39;xml&#39;]
+Link (dyld) error:
+Library not loaded: @executable_path/../Frameworks/Oxygene.framework/Versions/A/Oxygene
+Referenced from: /Applications/iDVD.</description>
+    </item>
+    
+    <item>
+      <title>iMovie 08 and mystery of disappearing Project Library</title>
+      <link>https://miroadamy.com/posts/2008-05-13-imovie-08-and-mystery-of-disappearing-project-library/</link>
+      <pubDate>Tue, 13 May 2008 01:12:49 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-05-13-imovie-08-and-mystery-of-disappearing-project-library/</guid>
+      <description>As if the yesterday&#39;s Firmware update issue was not enough, I had very strange experience with iMovie 08. Suddenly, for no obvious particular reason the user interface became very unresponsive, I was not able to select project in project library. Switching Event library and Project windows on or off stopped working. Windows were not redrawn properly. Creating new project had no visible effect. I could not click on project to select it (well, technically I *could* click, but nothing happened).</description>
+    </item>
+    
+    <item>
+      <title>Cocoa Programming for Mac OS X, Third Edition is out</title>
+      <link>https://miroadamy.com/posts/2008-05-04-cocoa-programming-for-mac-os-x-third-edition-is-out/</link>
+      <pubDate>Sun, 04 May 2008 10:53:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-05-04-cocoa-programming-for-mac-os-x-third-edition-is-out/</guid>
+      <description>as long as you are Safari Books online subscriber - see it here.
+Completely updated with XCode 3.x and Objective C 2.0. The screenshots even show the iPhone project templates, indicating the XCode 3.1 in some places. So far the only difference against reality I have found is not covering the XIB resource format (which is generated by default) and sticking with NIB. This blog entry has good explanation of the difference.</description>
+    </item>
+    
+    <item>
+      <title>A false &#34;hang&#34; of Finder</title>
+      <link>https://miroadamy.com/posts/2008-04-24-a-false-hang-of-finder/</link>
+      <pubDate>Thu, 24 Apr 2008 00:19:22 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-24-a-false-hang-of-finder/</guid>
+      <description>Yesterday, I have noticed interesting thing related to Finder and &#34;beach ball of the death&#34;. Suddenly, for no obvious reason, the top menu became unavailable and cursor changed to beachball every time I moved it there. The Bluetooth mouse stopped responding. Finder stopped responding. All symptoms as if Finder would hanging ...
+The cause of the issue was crash of unrelated application (iShowU, if you are curious), which brought up the crash report window.</description>
+    </item>
+    
+    <item>
+      <title>The dark screen club</title>
+      <link>https://miroadamy.com/posts/2008-04-16-the-dark-screen-club/</link>
+      <pubDate>Wed, 16 Apr 2008 00:19:44 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-16-the-dark-screen-club/</guid>
+      <description>It happened few days ago for the first time: after opening the lid on my MacBook Pro, the machine woke up, but the screen stayed dark. Whatever I did, I just could see cursor and nothing underneath. I had to resort to unthinkable - reboot :-(
+Some research showed this is known problem - which is from certain point of view good, because many people found hopefully many workarounds. The more information can be found here, here and here.</description>
+    </item>
+    
+    <item>
+      <title>Blue screen of the death on a Mac</title>
+      <link>https://miroadamy.com/posts/2008-03-29-blue-screen-of-the-death-on-a-mac/</link>
+      <pubDate>Sat, 29 Mar 2008 22:29:51 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-03-29-blue-screen-of-the-death-on-a-mac/</guid>
+      <description>Here it comes, first occurence: one of my VM&#39;s BSOD-ed on me yesterday.
+To be completely fair, I did have experienced an occurrence of something similar twice in last moths: after wake up from sleep, the screen was collection of the color pixels, completely unreadable. After reboot, everything was normal.
+I found out that the issue may be related to the &#34;safesleep&#34; mode. For now, I disabled the mode by</description>
+    </item>
+    
+    <item>
+      <title>Excellent comparison of C&#43;&#43; and Objective-C</title>
+      <link>https://miroadamy.com/posts/2007-12-09-excellent-comparison-of-c-and-objective-c/</link>
+      <pubDate>Sun, 09 Dec 2007 13:56:03 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-09-excellent-comparison-of-c-and-objective-c/</guid>
+      <description>One of the languages that I managed to completely ignore for almost 20 years was Objective-C. I always saw it as less developed, dead-end version of C++ that has little perspective - despite that GCC supported it since early days. I guess I was wrong on two of three counts - that of little perspective still holds as long as you want to stay outside of OS-X platform.
+One of the issues I had was strange syntax and that from not too many books on subject, they were</description>
+    </item>
+    
+    <item>
+      <title>Over $500 worth of software for $49.99</title>
+      <link>https://miroadamy.com/posts/2007-12-07-over-500-worth-of-software-for-4999/</link>
+      <pubDate>Fri, 07 Dec 2007 13:10:23 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-07-over-500-worth-of-software-for-4999/</guid>
+      <description>As long as you are using OS-X, this is something worthy looking at: the MuPromo is running the annual bundle offer with (currently) 8 applications, worth $534 for the mentioned $49.99. The sale is on for 4 more days. The way how it works is that at certain marks, additional applications will be added to the bundle (for the same price) and will be made available to everybody who purchased the bundle.</description>
+    </item>
+    
+    <item>
+      <title>Trying out the Time Machine</title>
+      <link>https://miroadamy.com/posts/2007-12-04-trying-out-the-time-machine/</link>
+      <pubDate>Tue, 04 Dec 2007 23:27:26 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-04-trying-out-the-time-machine/</guid>
+      <description>Today I got to trying out the major feature of Leopard: the Time Machine. I was postponing it because I did not have proper external storage. Although I do have several USB disks sized from 100 to 260 GB, they are not empty and to clean them would take too much time that I currently do not have. Backing up on network drive would be technically possible - with some tweaking - but copying over network is always slower than USB2 or FireWire.</description>
+    </item>
+    
+    <item>
+      <title>How to show ZIP file content in QuickView (Leopard)</title>
+      <link>https://miroadamy.com/posts/2007-11-28-how-to-show-zip-file-content-in-quickview-leopard/</link>
+      <pubDate>Wed, 28 Nov 2007 23:15:52 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-28-how-to-show-zip-file-content-in-quickview-leopard/</guid>
+      <description>As time passes, I am discovering more little features that either fill in the still existing gaps from my Windows toolchain or add new features. Today, at Apple presentation about Leopard Client and Leopard Server I have heard great tip.
+The QuickView in Leopard is extensible with plugins. One very obvious and very useful plugin is ZIP View that gives you content of the ZIP file in preview without unzipping it.</description>
+    </item>
+    
+    <item>
+      <title>Little pains of switching</title>
+      <link>https://miroadamy.com/posts/2007-11-22-little-pains-of-switching/</link>
+      <pubDate>Thu, 22 Nov 2007 23:31:34 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-22-little-pains-of-switching/</guid>
+      <description>I have been running the Unix only workstations for over a week now. During this week, I have managed to clean up and convert two Windows boxes to VMWARE virtual machines, but actually had to resort to use the VM&#39;s only in two cases. Everything else worked just fine.
+The first case was requirement to review an non-trivial Excel file. Normally, Numbers does very decent job when it comes to loading Excel files and for the most the remaining cases, the OpenOffice (in it&#39;s more polished Cocoa version NeoOffice) works just fine.</description>
+    </item>
+    
+    <item>
+      <title>My Essential OS X toolset - part 1</title>
+      <link>https://miroadamy.com/posts/2007-11-12-my-essential-os-x-toolset-part-1/</link>
+      <pubDate>Mon, 12 Nov 2007 23:23:53 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-12-my-essential-os-x-toolset-part-1/</guid>
+      <description>Last year, when I got my first Mac, it was a wild ride of discoveries and trying out new software. As result I have ended up with many programs installed that I do not really need or use. Fortunately, the uninstall process is as simple as install and there is no registry that could get corrupted, so it was not really a big deal. With the new one, I am going to be much more selective what I put on the harddrive and what not.</description>
+    </item>
+    
+    <item>
+      <title>Ragioni per fare il grande salto</title>
+      <link>https://miroadamy.com/posts/2007-11-09-ragioni-per-fare-il-grande-salto/</link>
+      <pubDate>Fri, 09 Nov 2007 23:51:28 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-09-ragioni-per-fare-il-grande-salto/</guid>
+      <description>During the vacation, we stopped in small bookstore in Verona which was selling computer software as well. At the entrance, there was a poster showing smiling Finder&#39;s face, Apple logo and announcing reasons why you would want to make the big jump - il grande salto - to Mac platform. That is to explain the title :-)
+Grande Salto is exactly what I did. Without too much preparation or notice. Since Tuesday evening I am happy owner of the beautiful piece of hardware (17 inch 2.</description>
+    </item>
+    
+    <item>
+      <title>Missing Java 6 on Leopard - is sky really falling ?</title>
+      <link>https://miroadamy.com/posts/2007-10-31-missing-java-6-on-leopard-is-sky-really-falling/</link>
+      <pubDate>Wed, 31 Oct 2007 00:00:08 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-31-missing-java-6-on-leopard-is-sky-really-falling/</guid>
+      <description>Since the big meow on Friday, lot of unhappy people had been talking and blogging about how terrible and unacceptable is the absence of the Java 6 from the Leopard. Some post were sounding very dramatic &#34;I would not buy Mac if I only knew ...&#34; - which is a bit silly. The Leopard&#39;s 300 new features were posted and touted and hyped for two weeks. Some of the &#34;great&#34; improvements were actually fairly modest improvements - so it was OBVIOUS that Java 6 is not going to be included because it would definitely make the list.</description>
+    </item>
+    
+    <item>
+      <title>iTunes U: Great beginning</title>
+      <link>https://miroadamy.com/posts/2007-06-01-itunes-u-great-beginning/</link>
+      <pubDate>Fri, 01 Jun 2007 22:16:42 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-01-itunes-u-great-beginning/</guid>
+      <description>With latest iTunes update, quite silently, a very nice new feature appeared. Apple started to offer for download lectures from many universities, with wide selection of topics: from environment through politics to mathematics and computer science. Most of the lectures are videos, but you will find also audio tracks - albeit for some topics, audio is quite problematic. Can you imagine doing e.g. differential equations in audio-only ?
+The best feature - the lectures are free downloads.</description>
+    </item>
+    
+    <item>
+      <title>Ottawa Mac User&#39;s group meeting</title>
+      <link>https://miroadamy.com/posts/2007-03-04-ottawa-mac-users-group-meeting/</link>
+      <pubDate>Sun, 04 Mar 2007 17:02:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-04-ottawa-mac-users-group-meeting/</guid>
+      <description>Thanks to exploring the Google calendar (when playing with public calendars related to Ottawa) I found the Ottawa Mac User group&#39;s calendar and discovered that
+a) they exist
+b) they hold monthly meetings in nice Irish pub at the Market 
+The group is actually named Bytown Mac User&#39;s group, for the reasons explained on the Web site or here.
+So I decided to go there. I thought - what the heck, worst thing that can happen that I will have a glass of Guinness at the pub I never visited before, which is not a bad thing at all.</description>
+    </item>
+    
+    <item>
+      <title>Many ways how to &#34;Get a Mac&#34;</title>
+      <link>https://miroadamy.com/posts/2007-02-13-many-ways-how-to-get-a-mac/</link>
+      <pubDate>Tue, 13 Feb 2007 23:45:52 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-13-many-ways-how-to-get-a-mac/</guid>
+      <description>I found out by accident that the famous Get a Mac ads exists in many versions:
+Some nations have their own actors
+http://www.apple.com/uk/getamac/ads/
+http://www.apple.com/jp/getamac/ads/
+Other have only just language version of Long &amp;amp;&amp;amp; Hodgman act
+http://www.apple.com/de/getamac/ads/
+http://www.apple.com/fr/getamac/ads/
+http://www.apple.com/it/getamac/ads/
+http://www.apple.com/es/getamac/
+The Austria and German speaking part of Switzerland are using German version of the ads (no surprise there) - http://www.apple.com/chde/getamac/ - and the francophone part of Switzerland uses the French version. As it looks like, Italian and Romansch speaking Swiss do not count :-(</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2007-01-09-quote-of-the-day-3/</link>
+      <pubDate>Tue, 09 Jan 2007 23:37:59 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-09-quote-of-the-day-3/</guid>
+      <description>From today&#39;s Steve Jobs&#39; keynote at Macworld 2007:
+&#34;I skate to where the puck is going to be, not to where it has been. &#34;
+Wayne Gretzky
+I guess everybody is going to write about iPhone - which is OK because it is indeed very interesting gadget and it stole the show. To bad it will be 6 more months until it will be available in the US and (my best hopes) 8-9 months to have it here in Canada.</description>
+    </item>
+    
+    <item>
+      <title>How to duplicate CD on a Mac</title>
+      <link>https://miroadamy.com/posts/2006-12-11-how-to-duplicate-cd-on-a-mac/</link>
+      <pubDate>Mon, 11 Dec 2006 20:20:52 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-11-how-to-duplicate-cd-on-a-mac/</guid>
+      <description>My daughter&#39;s music CD for her skating short program got badly scratched and because it was the last-but-one copy (as skater you need many copies, in case you loose/forget/scratch/misplace it), I was confronted with the task to create a new copy. Rather than starting Nero on Win-XP notebook, I have decided to learn (finally) how to do it on Mac. It must be simple, intuititive and much easier than on Windows.</description>
+    </item>
+    
+    <item>
+      <title>Software for new Mac users</title>
+      <link>https://miroadamy.com/posts/2006-12-03-software-for-new-mac-users/</link>
+      <pubDate>Sun, 03 Dec 2006 20:32:18 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-03-software-for-new-mac-users/</guid>
+      <description>It&#39;s been almost 5 months now since I started to use Mac OS-X. During these months, I became very comfortable in the new environment and albeit I do not consider being a power user, I can do all I need with my Macbook and use it daily.
+Today I found out that yet another from my friends got a Mac. Great news, Thomas - hope you will enjoy your Macbook Pro as much as myself, Gabo and many others.</description>
+    </item>
+    
+    <item>
+      <title>Road to Mac VI: The infection is spreading</title>
+      <link>https://miroadamy.com/posts/2006-08-28-road-to-mac-vi-the-infection-is-spreading/</link>
+      <pubDate>Mon, 28 Aug 2006 20:57:29 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-28-road-to-mac-vi-the-infection-is-spreading/</guid>
+      <description>See also Part I, Part II, Part III, Part IV and Part V
+This Mac thing seems to be quite contagious. Gabo started to seriously considering buying the MacBook, after listening to my happy stories about Great Mac Discoveries. Even Vlad, right now living trough his latest love-affair with Ubuntu Linux was deeply impressed with OS-X after we seeing Expose, Spotlight, PhotoBooth and iPhoto in action.
+Next day, after I arrived to the office in the morning, Gabo was already there.</description>
+    </item>
+    
+    <item>
+      <title>Road to Mac V: Feeling happy</title>
+      <link>https://miroadamy.com/posts/2006-08-26-road-to-mac-v-feeling-happy/</link>
+      <pubDate>Sat, 26 Aug 2006 11:16:10 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-26-road-to-mac-v-feeling-happy/</guid>
+      <description>See also part I, part II and part III and Part IV
+August 13th I have discovered wonderful thing today. I was experimenting with my PocketPC (Toshiba e830) and switched on Bluetooth. Mac discovered the device OK - all I had to do was to follow the wizard Setup Bluetooth device, under Bluetooth menulet (the strange B icon upper right). I have entered the code Mac suggested on PPC and they new about each other.</description>
+    </item>
+    
+    <item>
+      <title>Road to Mac IV: Getting accustomed</title>
+      <link>https://miroadamy.com/posts/2006-08-25-14-road-to-mac-iv/</link>
+      <pubDate>Fri, 25 Aug 2006 22:51:19 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-25-14-road-to-mac-iv/</guid>
+      <description>See also part I, part II and part III
+August 10th That Spotlight thing is just freaking fantastic :-). After few days of work, accumulating some files, emails etc, just for fun I typed Gabo’s last name to Command-Space search box. I did not even finish typing and first results were coming in the result list: all emails exchanged with Gabo, saved chats, text documents and as “best hit” Gabo’s contact card.</description>
+    </item>
+    
+    <item>
+      <title>Road to Mac III: The Culture Shock</title>
+      <link>https://miroadamy.com/posts/2006-08-24-road-to-mac-iii-the-culture-shock/</link>
+      <pubDate>Thu, 24 Aug 2006 21:00:09 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-24-road-to-mac-iii-the-culture-shock/</guid>
+      <description>See also part I and part II
+August 3rd This is my second day with Mac, writing in TextEdit as I have not installed any other editor (yet). Still learning, do not want to install lot of junk before I find out proper ways how to do things. Time to learn how things are in the Brave New World ….
+First surprises and unexpected culture shocks: How do I get around ?</description>
+    </item>
+    
+    <item>
+      <title>Road to Mac II: I&#39;ve got a Macbook !</title>
+      <link>https://miroadamy.com/posts/2006-08-23-road-to-mac-ii-ive-got-a-macbook/</link>
+      <pubDate>Wed, 23 Aug 2006 21:22:13 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-23-road-to-mac-ii-ive-got-a-macbook/</guid>
+      <description>See part I
+July 25th - August 2nd After ordering, I received two emails from Apple, confirming the order. It took 3 days until the order finally got shipped from China (where else, of course) on Friday, July 28th and the estimate for delivery was 5-8 business days. I have received the tracking number and was able to track how my Macbook was moving around the globe: starting from Shizou, China on 28th, arriving to USA, Anchorage, Alaska one day later.</description>
+    </item>
+    
+    <item>
+      <title>List of Mac applications by macgiver</title>
+      <link>https://miroadamy.com/posts/2006-08-23-list-of-mac-applications-by-macgiver/</link>
+      <pubDate>Wed, 23 Aug 2006 21:00:53 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-23-list-of-mac-applications-by-macgiver/</guid>
+      <description>Just stumbled upon this blog and noted at least three things of interest:
+ he has got a new a Mac Pro (I am green with envy :-) ) uses as a nick nice wordplay on MacGyver (this name has special meaning for all us, ex-Montage folks) he started to learn Objective C and Cocoa and blogs about it, I am curious - (not that I plan to give up Java, C# and Python .</description>
+    </item>
+    
+    <item>
+      <title>Road to Mac I: Hard Decisions</title>
+      <link>https://miroadamy.com/posts/2006-08-22-road-to-mac-i-hard-decisions/</link>
+      <pubDate>Tue, 22 Aug 2006 22:53:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-22-road-to-mac-i-hard-decisions/</guid>
+      <description>January - July 2006 This is the story of a journey travelled quite often these days. It describes discoveries, joys and frustrations of one long time Windows user learning how to use Mac OS-X. Many have done this before, many have blogged about it.
+The reason why I am writing this down is mostly to remember, and as well because I can. One of the assumes uses of the new MacBook was creative writing so I guess I am trying fulfill the promise to myself.</description>
+    </item>
+    
+  </channel>
+</rss>

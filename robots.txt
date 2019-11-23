@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://miroadamy.com/sitemap.xml

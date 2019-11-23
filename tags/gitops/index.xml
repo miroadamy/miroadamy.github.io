@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gitops on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/gitops/</link>
+    <description>Recent content in gitops on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 07 Nov 2019 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/gitops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>All Day DevOps 2019</title>
+      <link>https://miroadamy.com/posts/2019-11-07-all-day-devops/</link>
+      <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-07-all-day-devops/</guid>
+      <description>All Day DevOps 2019 - Notes I have attended the All Day Devops - https://www.alldaydevops.com/ on 06 Nov 2019 - an event that runs for 24 hours and has multiple tracks of content organized in 4 blocks.
+The tracks:
+ Keynotes Cultural Change DevSecOps SRE CI/CD Everything Cloud  The complete list is here: https://www.alldaydevops.com/2019-live-schedule - the play button points to the block video.
+The Video URLs Channel 1  https://www.</description>
+    </item>
+    
+  </channel>
+</rss>

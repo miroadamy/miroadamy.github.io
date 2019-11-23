@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>groovy on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/groovy/</link>
+    <description>Recent content in groovy on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 17 Mar 2009 19:08:35 -0400</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/groovy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bye bye Ruby, hello Groovy</title>
+      <link>https://miroadamy.com/posts/2009-03-17-bye-bye-ruby-hello-groovy/</link>
+      <pubDate>Tue, 17 Mar 2009 19:08:35 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-03-17-bye-bye-ruby-hello-groovy/</guid>
+      <description>I first time discovered Ruby back in 2006 (yes, I know, I was late to the game), and immediately fell in love with it. The dynamic nature of the language, the consistency, pure esthaetics and practicality certainly changed the way how I saw software development and programming languages.
+Since that time, I made several attempts to integrate Ruby into my professional life and make it part of the toolbox. It was cool to play with Ruby in my spare time, but I wanted to use it on projects whose main development language/platform was mainly Java.</description>
+    </item>
+    
+    <item>
+      <title>Trying out Groovy with Oracle database</title>
+      <link>https://miroadamy.com/posts/2008-04-07-trying-out-groovy-with-oracle-database/</link>
+      <pubDate>Mon, 07 Apr 2008 22:44:17 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-07-trying-out-groovy-with-oracle-database/</guid>
+      <description>There is a saying that necessity is the mother of invention. Such necessity happened last week and forced me to try out the Groovy language.
+The trigger was need for creating good data set for testing changes in a full text search. I had to locate few hundred of obsolete technical documents to be used as test data, dump the metadata as well as the BLOB data to disc, create INSERT sql scripts and loader that would from Ant pre-load the database with the test set and insert the BLOB&#39;s.</description>
+    </item>
+    
+    <item>
+      <title>Showstopper issue with JRuby ?</title>
+      <link>https://miroadamy.com/posts/2008-03-16-showstopper-issue-with-jruby/</link>
+      <pubDate>Sun, 16 Mar 2008 23:36:26 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-03-16-showstopper-issue-with-jruby/</guid>
+      <description>After some break, I dusted off the Ruby to try out one interesting idea Peter presented yesterday that literally ASKS for Rails. So I grabbed the latest and greatest RubyNetBeans from Ruby Hudson. For some reason it stopped updates on January 26th so the latest version I have got was build 6327. It is bundled with JRuby 1.1RC1 and the Rails version that comes preinstalled is 1.2.6. Using the menu Tools -&amp;gt; Ruby Gems, they can be easily upgraded to latest and greatest 2.</description>
+    </item>
+    
+  </channel>
+</rss>

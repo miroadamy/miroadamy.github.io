@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>NAS Odyssey: Up and running - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="After lots of attempts (see here, here and here), I have finally resolved my disk space problems and the RAID-5 NAS server is up and running since about two weeks now. I have stayed with Fedora 6, successfully installed Samba, configured the shares and copied all family JPEG&#39;s, videos, MP3&#39;s etc onto the huge 907 GB large RAID5 share. The old NSLU2 is still dead - I did not have any time to try to re-flash it, but all content of it&#39;s disk was without any issues readable by the new server (the NSLU2 was using ext3 filesystem) so I did not even have to try to use backups." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2007-02-12-nas-odyssey-up-and-running/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="NAS Odyssey: Up and running" />
+<meta property="og:description" content="After lots of attempts (see here, here and here), I have finally resolved my disk space problems and the RAID-5 NAS server is up and running since about two weeks now. I have stayed with Fedora 6, successfully installed Samba, configured the shares and copied all family JPEG&#39;s, videos, MP3&#39;s etc onto the huge 907 GB large RAID5 share. The old NSLU2 is still dead - I did not have any time to try to re-flash it, but all content of it&#39;s disk was without any issues readable by the new server (the NSLU2 was using ext3 filesystem) so I did not even have to try to use backups." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2007-02-12-nas-odyssey-up-and-running/" />
+<meta property="article:published_time" content="2007-02-12T23:31:55-05:00" />
+<meta property="article:modified_time" content="2007-02-12T23:31:55-05:00" />
+<meta itemprop="name" content="NAS Odyssey: Up and running">
+<meta itemprop="description" content="After lots of attempts (see here, here and here), I have finally resolved my disk space problems and the RAID-5 NAS server is up and running since about two weeks now. I have stayed with Fedora 6, successfully installed Samba, configured the shares and copied all family JPEG&#39;s, videos, MP3&#39;s etc onto the huge 907 GB large RAID5 share. The old NSLU2 is still dead - I did not have any time to try to re-flash it, but all content of it&#39;s disk was without any issues readable by the new server (the NSLU2 was using ext3 filesystem) so I did not even have to try to use backups.">
+
+
+<meta itemprop="datePublished" content="2007-02-12T23:31:55-05:00" />
+<meta itemprop="dateModified" content="2007-02-12T23:31:55-05:00" />
+<meta itemprop="wordCount" content="494">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="NAS Odyssey: Up and running"/>
+<meta name="twitter:description" content="After lots of attempts (see here, here and here), I have finally resolved my disk space problems and the RAID-5 NAS server is up and running since about two weeks now. I have stayed with Fedora 6, successfully installed Samba, configured the shares and copied all family JPEG&#39;s, videos, MP3&#39;s etc onto the huge 907 GB large RAID5 share. The old NSLU2 is still dead - I did not have any time to try to re-flash it, but all content of it&#39;s disk was without any issues readable by the new server (the NSLU2 was using ext3 filesystem) so I did not even have to try to use backups."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">NAS Odyssey: Up and running</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2007-02-12 </span>
+        
+          <span class="more-meta"> 494 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>After lots of attempts (see <a href="http://thinkwrap.wordpress.com/2007/01/21/the-joys-of-open-source-nas/" target="_blank">here</a>, <a href="http://thinkwrap.wordpress.com/2007/01/29/joys-of-the-opensource-nas-part-2-openfiler/" target="_blank">here</a> and <a href="http://thinkwrap.wordpress.com/2007/01/30/nas-odyssey-openfiler-is-out-lets-try-ubuntu/">here</a>), I have finally resolved my disk space problems and the RAID-5 NAS server is up and running since about two weeks now. I have stayed with Fedora 6, successfully installed Samba, configured the shares and copied all family JPEG's, videos, MP3's etc onto the huge 907 GB large RAID5 share. The old <a href="http://en.wikipedia.org/wiki/NSLU2">NSLU2</a> is still dead - I did not have any time to try to re-flash it, but all content of it's disk was without any issues readable by the new server (the NSLU2 was using ext3 filesystem) so I did not even have to try to use backups.</p>
+<p>Most of things in Fedora can be configured graphically. The only case I had to go to shell were final configuration changes in Samba. As it turned out, the default umask allowed search on directories (rwxr-xr-x), but none on files (rwx------). This lead to strange behaviour when the images were visible from Windows client - user could see the file names in the directory but no viewer could display them. Fix was trivial:</p>
+<p>find . -name "*.jpg" -exec chmod +r '{}' \;</p>
+<p>It's kind of funny how old skills reapper when you need them. Unix is like riding a bike: you get uncomfortable and out of form but you never loose it completely. I even remembered quite a few vi and emacs key combinations (but happily switched to use gedit or JEdit).</p>
+<p>One thing that did <em>not</em> work out of the box was VNC server (I am getting ready to disconnect monitor and keyboard, move the box under the desk and forget about it for next year or so :-)). When attempting to start the VNC server using the GUI interface - it does not report any error, but does not start either. When trying from command line (using /sbin/service), the error explained the problem with Xstartup. I found this <a href="http://www.bobpeers.com/linux/vnc">useful info</a>, will try it out.</p>
+<p>So far I am very happy with performance of the system (I have copied about 150 GB of content on the NAS).</p>
+<p>Lessons learned:<br />
+- the "NAS" like distributions (FreeNAS, NASLite+) have variety of limitations (like lack of readonly/readwrite access support, user access rights) and are basically all-or-nothing solutions<br />
+- OpenFiler is not good solution for home network either. It goes to the other extreme - unless you have domain controller, you are out of luck, as it does not support local users<br />
+- from full distributions, Fedora provides everything you need to have NAS as well as well user friendly environment for administration. To be fair, I did not try OpenSUSE or Mandriva. Ubuntu - despite being known as the "most user friendly" distro did not work for me: the desktop edition (which indeed was great user experience) does not contain server components and the server edition requires really experienced Linux admin as it has no GUI at all.</p>
+<p>All summed up: lots of fun. Worth every penny.</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2007-02-12
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2007-02-13-many-ways-how-to-get-a-mac/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Many ways how to &#34;Get a Mac&#34;</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2007-02-11-who-is-the-most-successful-programmer-of-the-world/">
+            <span class="next-text nav-default">Who is the most successful programmer of the world ?</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

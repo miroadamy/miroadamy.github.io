@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>How to generate and send emails using Spring and Velocity - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Testing applications that communicate using email is more challenging than e.g. testing database access. Thanks to GMail and Spring, it can be done pretty easily.
+Here is the scoop: I need to generate email notifying users about business events and after sending the email, store the content in the database. In real environment you will use corporate SMTP server and real email addresses of real people.
+For development we can avoid bothering and spamming our customers by few simple tricks." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2008-03-05-how-to-generate-and-send-emails-using-spring-and-velocity/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="How to generate and send emails using Spring and Velocity" />
+<meta property="og:description" content="Testing applications that communicate using email is more challenging than e.g. testing database access. Thanks to GMail and Spring, it can be done pretty easily.
+Here is the scoop: I need to generate email notifying users about business events and after sending the email, store the content in the database. In real environment you will use corporate SMTP server and real email addresses of real people.
+For development we can avoid bothering and spamming our customers by few simple tricks." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2008-03-05-how-to-generate-and-send-emails-using-spring-and-velocity/" />
+<meta property="article:published_time" content="2008-03-05T23:29:38-05:00" />
+<meta property="article:modified_time" content="2008-03-05T23:29:38-05:00" />
+<meta itemprop="name" content="How to generate and send emails using Spring and Velocity">
+<meta itemprop="description" content="Testing applications that communicate using email is more challenging than e.g. testing database access. Thanks to GMail and Spring, it can be done pretty easily.
+Here is the scoop: I need to generate email notifying users about business events and after sending the email, store the content in the database. In real environment you will use corporate SMTP server and real email addresses of real people.
+For development we can avoid bothering and spamming our customers by few simple tricks.">
+
+
+<meta itemprop="datePublished" content="2008-03-05T23:29:38-05:00" />
+<meta itemprop="dateModified" content="2008-03-05T23:29:38-05:00" />
+<meta itemprop="wordCount" content="1049">
+
+
+
+<meta itemprop="keywords" content="java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to generate and send emails using Spring and Velocity"/>
+<meta name="twitter:description" content="Testing applications that communicate using email is more challenging than e.g. testing database access. Thanks to GMail and Spring, it can be done pretty easily.
+Here is the scoop: I need to generate email notifying users about business events and after sending the email, store the content in the database. In real environment you will use corporate SMTP server and real email addresses of real people.
+For development we can avoid bothering and spamming our customers by few simple tricks."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">How to generate and send emails using Spring and Velocity</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2008-03-05 </span>
+        
+          <span class="more-meta"> 1049 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>Testing applications that communicate using email is more challenging than e.g. testing database access. Thanks to GMail and Spring, it can be done pretty easily.</p>
+<p>Here is the scoop: I need to generate email notifying users about business events and after sending the email, store the content in the database. In real environment you will use corporate SMTP server and real email addresses of real people.<br />
+For development we can avoid bothering and spamming our customers by few simple tricks.</p>
+<p>First step is to get new GMail account. Name it e.g. Company.Notifier or something easily distinguishable. In Spring, configure the sender bean:</p>
+<p>[sourcecode language='xml']</p>
+<p>                  smtp.gmail.com</p>
+<p>                          true</p>
+<p>                          true<br />
+                          25000</p>
+<p>                   company.notifier</p>
+<p>                   secret</p>
+<p>            <!--   you don’t need to set the port number, 25 is default --><br />
+     [/sourcecode]<br />
+The port can have value 25 (default) - but if you are using ISP provider such as Rogers, chances are the default port is blocked for outgoing connections - you can use port 587 instead.Second piece is component that actually uses the mailSender: notificationService.<br />
+[sourcecode language='xml']</p>
+<p>               miro.adamy+alwaysCC@thinknostic.com</p>
+<p>    .... deleted ...</p>
+<p>[/sourcecode]<br />
+Note the velocityEngine bean that is used to generate the body of the email from the template. The 'alwaysCCList' property is using nice little trick available with GMail: if you send email to YOURNAME+anything@gmail.com, the '+anything' will be ignored but kept with email and it will arrive as if the address were just YOURNAME@gmail.com. You can use the postfix to find or autotag the emails.The code that sends email is actually pretty simple (the method of the notificationService)<br />
+[sourcecode language='java']<br />
+public EmailContent sendNotificationEmail(EmailParameters params, EmailContent _content, boolean isDryRun) {</p>
+<p>    final EmailContent c = mergeTemplate(params, _content);</p>
+<p>    MimeMessagePreparator preparator = new MimeMessagePreparator() {<br />
+         public void prepare(MimeMessage mimeMessage) throws Exception {<br />
+            MimeMessageHelper message = new MimeMessageHelper(mimeMessage);<br />
+            message.setTo(c.getEmailTo());<br />
+            message.setFrom("DO-NOT-REPLY@company.com"); // could be parameterized...</p>
+<p>            message.setText(c.getEmailBody(), true);<br />
+            message.setSubject(c.getEmailSubject());</p>
+<p>            if (alwaysCCList != null &amp;&amp; alwaysCCList.size() &gt; 0) {<br />
+                message.setCc(alwaysCCList.toArray(new String[0]));<br />
+                c.setEmailCcFromList(alwaysCCList);<br />
+            }<br />
+            ...<br />
+         }<br />
+      };</p>
+<p>      if (isDryRun || emailsToFile)<br />
+      {<br />
+              // save to file<br />
+            ...<br />
+      }</p>
+<p>      if (!isDryRun)<br />
+          this.mailSender.send(preparator);<br />
+      return c;<br />
+}</p>
+<p>[/sourcecode]<br />
+The class EmailContent is container for email address, subject, body, CC list.<br />
+It gets created as empty class with only recipient name and email address passed from business method as well as name of the Velocity template that is used to render email body. The method mergeTemplate loads the Velocity template and renders the actual email body, using the parameters (which is more or less) a hash map, cotaining e.g. URL's or information that needs to be inserted to email. The generated content is stored back to EmailContent, which will be after successful delivery written to database for audit and archiving purposes.If you are JavaScript or Ruby programmer, you will immediately recognize the 'functor' pattern: preparator is set to instance of anonymous inner class and is used with configured preparator.The actual rendering of the content using Velocity can be done like this:</p>
+<p>[sourcecode language='java']</p>
+<p>private EmailContent mergeTemplate( EmailParameters params, EmailContent content) {<br />
+    Map model = new HashMap();<br />
+    model.put("param", params);<br />
+    model.put("content", content);</p>
+<p>    String text = "MISSING TEXT";<br />
+    String subject = "Notification email";<br />
+    String template = content.getTemplateId();<br />
+    try {</p>
+<p>        // get subject line</p>
+<p>        if (template_names.containsKey(template)) {<br />
+            subject = template_names.get(template);<br />
+            VelocityContext velocityContext = new VelocityContext(model);<br />
+             StringWriter writer = new StringWriter (  ) ;<br />
+             PrintWriter out = new PrintWriter ( writer ) ;</p>
+<p>             Velocity.evaluate(velocityContext, out, "subject", new StringReader(subject));<br />
+             subject = writer.toString();</p>
+<p>             model.put("subjectLine", subject);<br />
+            // now the body<br />
+             text = VelocityEngineUtils.mergeTemplateIntoString(velocityEngine,<br />
+                    "com/thinknostic/APP/service/email/"+template, model);</p>
+<p>        }<br />
+        else {<br />
+            // TODO: log configuration error - template not found<br />
+        }</p>
+<p>        content.setEmailBody(text);<br />
+        content.setEmailSubject(subject);<br />
+        return content;</p>
+<p>    } catch (VelocityException e) {<br />
+        // back to untranslated<br />
+        // TODO: error report<br />
+        // subject = params.subject;<br />
+    } catch (IOException e) {<br />
+        // TODO Auto-generated catch block<br />
+        e.printStackTrace();<br />
+    }</p>
+<p>    return null;<br />
+}</p>
+<p>[/sourcecode]<br />
+In the above, template id is actual file name with body of the HTML email and the hashmap template_names (configured in Spring XML) maps the id to another string,  which is then used as subject line. Both body and subject can contain macros.<br />
+Note: if you get conflict on ${} syntax, see this <a href="http://thinkwrap.wordpress.com/2008/02/25/spring-propertyplaceholderconfigurer-with-velocity/" target="_blank">entry</a>.</p>
+<p>Now, finally - how do we test this ? It is quite easy, thanks to JUnit support in Spring.</p>
+<p>[sourcecode language='java']</p>
+<p>@ContextConfiguration(locations={"/com/thinknostic/APP/test/test-context.xml",<br />
+"/com/thinknostic/APP/test/service/NotificationTests-context.xml"})<br />
+public class NotificationTests extends AbstractTransactionalJUnit4SpringContextTests {</p>
+<p>    @Autowired<br />
+    NotificationServiceImpl notificationService;<br />
+    public NotificationServiceImpl getNotificationService() {<br />
+        return notificationService;<br />
+    }<br />
+    public void setNotificationService(NotificationServiceImpl notificationService) {<br />
+        this.notificationService = notificationService;<br />
+    }</p>
+<p>    @Autowired<br />
+    ApprovalDAO        approvalDao;<br />
+    public ApprovalDAO getApprovalDao() {<br />
+        return approvalDao;<br />
+    }<br />
+    public void setApprovalDao(ApprovalDAO approvalDao) {<br />
+        this.approvalDao = approvalDao;<br />
+    }</p>
+<p>      Document doc;<br />
+      EmailContent cont;<br />
+      Approval app;<br />
+      ApprovalStep step1;<br />
+      ApprovalStep step2;</p>
+<p>      @Before<br />
+      public void createMockApproval() {<br />
+          this.logger.info("Before");<br />
+          // controlls whether to use emails<br />
+          notificationService.setReallySend(true);</p>
+<p>          doc = (Document)DocumentInfo.createMockDI("103", 1);</p>
+<p>          // create the approval and insert it into<br />
+          app = Approval.createMockApproval(1L, doc);<br />
+          approvalDao.insert(app);</p>
+<p>          step1 = ApprovalStep.createMockStep(app.getApprId(), 1);<br />
+          approvalDao.insert(step1);<br />
+          step2 = ApprovalStep.createMockStep(app.getApprId(), 2);<br />
+          approvalDao.insert(step2);</p>
+<p>          cont = EmailContent.createMock(app.getApprId(), step1.getStep(), "miro adamy", "miro_adamy@rogers.com");</p>
+<p>      }</p>
+<p>      @After<br />
+      public void cleanup() {<br />
+          this.logger.info("After");<br />
+          // reset<br />
+          notificationService.setReallySend(false);<br />
+          doc = null;<br />
+          cont = null;<br />
+          app = null;<br />
+          step1 = null;<br />
+          step2 = null;<br />
+      }</p>
+<p>      private void assertEverything()<br />
+      {<br />
+          assertTrue("The email service is empty", notificationService != null);<br />
+        assertTrue("The email parameteres not available", emailParameters != null);<br />
+        assertTrue("The document does not exist", doc != null);<br />
+      }</p>
+<p>    @Test<br />
+    public void approval_all_cancelled_test() {<br />
+        doc.setFilename("approval_all_cancelled");</p>
+<p>        notificationService.notifyApprovalCancelledAll(doc, cont);<br />
+    }</p>
+<p>    @Test<br />
+    public void approval_cancelled_test() {<br />
+        assertEverything();</p>
+<p>        doc.setFilename("approval_cancelled");<br />
+        EmailContent ui = EmailContent.createMock(app.getApprId(), step1.getStep(), "miro adamy", "Miro.Adamy@gmail.com");</p>
+<p>        notificationService.notifyApprovalCancelled(doc, ui);<br />
+    }</p>
+<p>    // and so on - many more tests<br />
+    ....<br />
+}</p>
+<p>[/sourcecode]<br />
+Assumed that your Spring context configuration files defined in annotations are OK, all you have to do is run the suite. The XML defines beans with names corresponding to the test properties and autowiring will take care of the rest.Also notice that @Before method (which runs before each test) actually DOES modify the database and inserts records with same primary key over and over. This works thanks to transaction magic of Spring, which rolls back the inserts at the end of the test.Last thing to mention is using of "mockXXX" static methods to generate the instance of object. IT not really a mock object we are creating here, but a well defined instance of business object with some properties parametrized. You can even define it as a bean in Spring context XML, but that is IMHO an overkill - keeping everything in test Java class makes things easier to understand.</p>
+<p>This method does belong to tests, but it is very convenient just to keep it with domain object. I usually create the 'createMock' method right after I add a new domain object</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2008-03-05
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/java/">java</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2008-03-07-ibatis-date-null-values-and-oracle/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">iBatis, Date null values and Oracle</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2008-02-25-spring-propertyplaceholderconfigurer-with-velocity/">
+            <span class="next-text nav-default">Spring PropertyPlaceholderConfigurer with Velocity</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

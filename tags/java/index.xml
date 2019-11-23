@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/java/</link>
+    <description>Recent content in java on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 31 Dec 2013 00:57:35 -0500</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Binding DashDoc with editors and Eclipse</title>
+      <link>https://miroadamy.com/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/</link>
+      <pubDate>Tue, 31 Dec 2013 00:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/</guid>
+      <description>If you use DashDoc (see http://kapeli.com/dash), it can be integrated with editor or Eclipse to allow automatically find selected text in Dash documentation sets:
+Sublime Text This is easy - there is DashDoc plugin - https://sublime.wbond.net/packages/DashDoc
+The plugin is OS-X specific, because the DashDoc is
+ Start Package Control (Cmd-Shift-P) select Install Package (type Install) select DashDoc  The Ctrl-H does the search
+Eclipse There is opensource plugin for it at https://github.</description>
+    </item>
+    
+    <item>
+      <title>Tomcat 5 not reloading changes in JSP</title>
+      <link>https://miroadamy.com/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/</link>
+      <pubDate>Sun, 24 Jul 2011 17:33:34 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/</guid>
+      <description>Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that. I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application.</description>
+    </item>
+    
+    <item>
+      <title>JSP compiler configuration in JBoss 4.2.x for ATG</title>
+      <link>https://miroadamy.com/posts/2010-02-24-jsp-compiler-configuration-in-jboss-4-2-x-for-atg/</link>
+      <pubDate>Wed, 24 Feb 2010 01:33:44 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2010-02-24-jsp-compiler-configuration-in-jboss-4-2-x-for-atg/</guid>
+      <description>The post is on corporate blog - http://blog.thinkwrap.com/blog/2010/2/24/jsp-compiler-configuration-in-jboss-42x-for-atg.html</description>
+    </item>
+    
+    <item>
+      <title>Bye bye Ruby, hello Groovy</title>
+      <link>https://miroadamy.com/posts/2009-03-17-bye-bye-ruby-hello-groovy/</link>
+      <pubDate>Tue, 17 Mar 2009 19:08:35 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-03-17-bye-bye-ruby-hello-groovy/</guid>
+      <description>I first time discovered Ruby back in 2006 (yes, I know, I was late to the game), and immediately fell in love with it. The dynamic nature of the language, the consistency, pure esthaetics and practicality certainly changed the way how I saw software development and programming languages.
+Since that time, I made several attempts to integrate Ruby into my professional life and make it part of the toolbox. It was cool to play with Ruby in my spare time, but I wanted to use it on projects whose main development language/platform was mainly Java.</description>
+    </item>
+    
+    <item>
+      <title>It&#39;s alive !</title>
+      <link>https://miroadamy.com/posts/2009-02-18-its-alive/</link>
+      <pubDate>Wed, 18 Feb 2009 20:26:22 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-02-18-its-alive/</guid>
+      <description>I was aching to blog about this since December 18th, when our system quietly and gently slipped into public visibility. Marked as Beta (thanks, Google for making this a legitimate way how to go live) it comfortably made it through Christmas shopping season into 2009.
+Now when the site has been announced and mentioned few times in the media, I guess it&#39;s OK to mention it here too.
+What is &#34;</description>
+    </item>
+    
+    <item>
+      <title>After the Spring Storm</title>
+      <link>https://miroadamy.com/posts/2008-09-25-after-the-spring-storm/</link>
+      <pubDate>Thu, 25 Sep 2008 23:58:54 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-09-25-after-the-spring-storm/</guid>
+      <description>Few days ago, I have received an email asking to attend the SpringSource conference and offering $300 discount if I decide to buy before end of month. The timining was pretty ironical, considering the recent contraversy about SpringSource Entreprise Maintenance policy change. The was a heated discussion on TheServerside.com and even FAQ was compiled by Rod Johnson to explain the whole thing.
+So what is the issue: SpringSource, commercial entity behind community driven Spring Framework decided to capitalize on the investment and push the community toward paid service suport contract.</description>
+    </item>
+    
+    <item>
+      <title>Trying out Groovy with Oracle database</title>
+      <link>https://miroadamy.com/posts/2008-04-07-trying-out-groovy-with-oracle-database/</link>
+      <pubDate>Mon, 07 Apr 2008 22:44:17 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-07-trying-out-groovy-with-oracle-database/</guid>
+      <description>There is a saying that necessity is the mother of invention. Such necessity happened last week and forced me to try out the Groovy language.
+The trigger was need for creating good data set for testing changes in a full text search. I had to locate few hundred of obsolete technical documents to be used as test data, dump the metadata as well as the BLOB data to disc, create INSERT sql scripts and loader that would from Ant pre-load the database with the test set and insert the BLOB&#39;s.</description>
+    </item>
+    
+    <item>
+      <title>Showstopper issue with JRuby ?</title>
+      <link>https://miroadamy.com/posts/2008-03-16-showstopper-issue-with-jruby/</link>
+      <pubDate>Sun, 16 Mar 2008 23:36:26 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-03-16-showstopper-issue-with-jruby/</guid>
+      <description>After some break, I dusted off the Ruby to try out one interesting idea Peter presented yesterday that literally ASKS for Rails. So I grabbed the latest and greatest RubyNetBeans from Ruby Hudson. For some reason it stopped updates on January 26th so the latest version I have got was build 6327. It is bundled with JRuby 1.1RC1 and the Rails version that comes preinstalled is 1.2.6. Using the menu Tools -&amp;gt; Ruby Gems, they can be easily upgraded to latest and greatest 2.</description>
+    </item>
+    
+    <item>
+      <title>Versioning with Spring and Ant</title>
+      <link>https://miroadamy.com/posts/2008-03-10-versioning-with-spring-and-ant/</link>
+      <pubDate>Mon, 10 Mar 2008 21:11:33 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-03-10-versioning-with-spring-and-ant/</guid>
+      <description>This is post is NOT about version control in the sense of source code control. It addresses the issue how to easily tell which version of the Web application is running as well make sure that the same version is reflected in the snapshots performed by Ant. We have used this approach on several applications and found it quite useful.
+The version I talk about is not the automatically generated version from VCS system (such as SVN revision).</description>
+    </item>
+    
+    <item>
+      <title>iBatis, Date null values and Oracle</title>
+      <link>https://miroadamy.com/posts/2008-03-07-ibatis-date-null-values-and-oracle/</link>
+      <pubDate>Fri, 07 Mar 2008 23:36:09 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-03-07-ibatis-date-null-values-and-oracle/</guid>
+      <description>I better blog this before I forget what was the issue :-).
+During daily run of unit tests, I started to receive this (very well explained) exception:
+[sourcecode language=&#39;xml&#39;]
+org.springframework.jdbc.UncategorizedSQLException: SqlMapClient operation; uncategorized SQLException for SQL []; SQL state [null]; error code [17004];
+--- The error occurred while applying a parameter map.
+--- Check the APPROVAL_TASK.insert-InlineParameterMap.
+--- Check the parameter mapping for the &#39;scheduledDate&#39; property.
+--- Cause: java.sql.SQLException: Invalid column type; nested exception is com.</description>
+    </item>
+    
+    <item>
+      <title>How to generate and send emails using Spring and Velocity</title>
+      <link>https://miroadamy.com/posts/2008-03-05-how-to-generate-and-send-emails-using-spring-and-velocity/</link>
+      <pubDate>Wed, 05 Mar 2008 23:29:38 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-03-05-how-to-generate-and-send-emails-using-spring-and-velocity/</guid>
+      <description>Testing applications that communicate using email is more challenging than e.g. testing database access. Thanks to GMail and Spring, it can be done pretty easily.
+Here is the scoop: I need to generate email notifying users about business events and after sending the email, store the content in the database. In real environment you will use corporate SMTP server and real email addresses of real people.
+For development we can avoid bothering and spamming our customers by few simple tricks.</description>
+    </item>
+    
+    <item>
+      <title>Spring PropertyPlaceholderConfigurer with Velocity</title>
+      <link>https://miroadamy.com/posts/2008-02-25-spring-propertyplaceholderconfigurer-with-velocity/</link>
+      <pubDate>Mon, 25 Feb 2008 23:24:11 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-02-25-spring-propertyplaceholderconfigurer-with-velocity/</guid>
+      <description>Part of the configuration magic is (one of several) Spring post-processors, that allows load the property file or files and refer to the values in these files inside XML configuration files. The rationale behind these is that property files are much easier to edit that possibly huge XML config file and using property values prevents repeating same value over and over again. With this approach, the following configuration:
+[sourcecode language=&#39;xml&#39;]</description>
+    </item>
+    
+    <item>
+      <title>Oracle SQLDeveloper and mystery of the missing host</title>
+      <link>https://miroadamy.com/posts/2008-02-23-oracle-sqldeveloper-and-mystery-of-the-missing-host/</link>
+      <pubDate>Sat, 23 Feb 2008 09:48:07 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-02-23-oracle-sqldeveloper-and-mystery-of-the-missing-host/</guid>
+      <description>If you work with Oracle database, a very good tool you should not ignore is the Oracle SQL Developer. It gives you much more power when it comes to manipulating data or managing database. I use most of the time MyEclipseIDE plugins, but when I need e.g. export data, the SQLDeveloper is way to go.
+Today I tried it for first time on the Mac. I started to configure and database connection and was completely confused by the error message &#34;</description>
+    </item>
+    
+    <item>
+      <title>Book recommendation: Java Concurrency in Practice</title>
+      <link>https://miroadamy.com/posts/2008-02-06-book-recommendation-java-concurrency-in-practice/</link>
+      <pubDate>Wed, 06 Feb 2008 23:01:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-02-06-book-recommendation-java-concurrency-in-practice/</guid>
+      <description>After long time, I stumbled upon something that is both educational and practical. Since Doug Lea&#39;s classic, this is very readworthy work on concurrency in Java world. It focuses on Java 5 features and addresses both Web applications as well as GUI apps - each group having their own share of concurrency related problems
+Here is the Amazon page for the book - check the reviews. There is also a sample chapter available on the book&#39;s website.</description>
+    </item>
+    
+    <item>
+      <title>Spring Framework - the biggest missing piece</title>
+      <link>https://miroadamy.com/posts/2008-02-04-spring-framework-the-biggest-missing-piece/</link>
+      <pubDate>Mon, 04 Feb 2008 22:04:18 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-02-04-spring-framework-the-biggest-missing-piece/</guid>
+      <description>I am having the pleasure working with Spring 2.x since about October last year. It is my return back to Spring, after first encounter in 2005 (counting only larger projects). Same as in previous project, it has been so much fun :-). So much fun in fact, that I was spending my evening playing with code and reading up what is new in 2.5, rather that blogging ;-)
+I am still amazed about how nice is the whole thing designed and how many ways it can be used.</description>
+    </item>
+    
+    <item>
+      <title>Spring 2 MVC and ResourceBundleViewResolver problem</title>
+      <link>https://miroadamy.com/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/</link>
+      <pubDate>Thu, 24 Jan 2008 23:12:57 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/</guid>
+      <description>This one took some time to figure out - it is one of those problems that are obvious after you know the solution but hard to see beforehand.
+I had the ResourceBundleViewResolver configured with Tiles 2, like this:
+[code language=&#39;xml&#39;]
+[/code]
+and the view.properties was:
+[code language=&#39;xml&#39;]
+parent-view.(class)=org.springframework.web.servlet.view.JstlView
+parent-view.(abstract)=true
+about.url=/WEB-INF/jsp/about.jsp
+form.url=/WEB-INF/jsp/form.jsp
+list.url=/WEB-INF/jsp/list.jsp
+[/code]
+It kept givin exception saying that /WEB-INF/jsp/list.jsp does not exist. Which it did. I tried couple of things, no result.</description>
+    </item>
+    
+    <item>
+      <title>Using iBatis with Abator</title>
+      <link>https://miroadamy.com/posts/2008-01-20-using-ibatis-with-abator/</link>
+      <pubDate>Sun, 20 Jan 2008 23:02:44 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-01-20-using-ibatis-with-abator/</guid>
+      <description>I am back to Java and on mission of re-discovering Spring coolness - and in awe how much was added since 1.2 to current 2.5.1. Thanks, SpringSource and hundreds of contributors.
+Data layer of the current project is based on iBatis and Spring DAO. We have decided to try out the Abator tool from Apache (part of the iBatis suite) to generate initial version of data mapping (as we inherited the database schema).</description>
+    </item>
+    
+    <item>
+      <title>JRuby - keeping your database.yml really DRY</title>
+      <link>https://miroadamy.com/posts/2008-01-03-jruby-keeping-your-databaseyml-really-dry/</link>
+      <pubDate>Thu, 03 Jan 2008 11:15:26 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-01-03-jruby-keeping-your-databaseyml-really-dry/</guid>
+      <description>I am experimenting in JRuby and use database in virtual machine (VMWare Fusion). This is great because you can have multiple versions of multiple databases ready without polluting the notebook. One downsize though is that IP address of the database will change between the VM restarts.
+First important setting in Fusion is to use the &#39;NAT&#39; option rather than &#39;Bridged&#39;. With NAT, you database host IP address will not follow the network.</description>
+    </item>
+    
+    <item>
+      <title>JRuby trunk - issues with JDBC connectivity</title>
+      <link>https://miroadamy.com/posts/2007-12-28-jruby-trunk-issues-with-jdbc-connectivity/</link>
+      <pubDate>Fri, 28 Dec 2007 22:24:37 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-28-jruby-trunk-issues-with-jdbc-connectivity/</guid>
+      <description>Following the book on JRuby I am discovering small differences when trying the examples. After installing activerecord-jdbc gem which is available in version 0.5, the shoplet application fails with Rails 2.0, as soon as you click on the &#39;About your application environment&#39; link.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38  =&amp;gt; Booting Mongrel (use &amp;#39;script/server webrick&amp;#39; to force WEBrick) =&amp;gt; Rails application starting on http://0.</description>
+    </item>
+    
+    <item>
+      <title>Installation of Mongrel gem on JRuby</title>
+      <link>https://miroadamy.com/posts/2007-12-23-installation-of-mongrel-gem-on-jruby/</link>
+      <pubDate>Sun, 23 Dec 2007 20:22:50 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-23-installation-of-mongrel-gem-on-jruby/</guid>
+      <description>I bought the Ola Bini&amp;rsquo;s eBook on JRuby and started to work through the examples. The installation of the Mongrel gem in JRuby (trunk revision 5341 fails with the following error code:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  $ jruby -S gem install -y mongrel&amp;gt; INFO: `gem install -y` is now default and will be removed&amp;gt; INFO: use --ignore-dependencies to install only the gems you list&amp;gt; Building native extensions.</description>
+    </item>
+    
+    <item>
+      <title>Great Spring blog</title>
+      <link>https://miroadamy.com/posts/2007-12-19-great-spring-blog/</link>
+      <pubDate>Wed, 19 Dec 2007 15:42:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-19-great-spring-blog/</guid>
+      <description>in case you have not noticed - Interface21 aka SpringSource (great name change, btw) runs a blog with lots of hidden treasures inside.
+Recent article describes new addition to Spring portfolio which is territory within my &#34;watched space&#34;: enterprise integration. See the blog entry for more.
+If you are in corporate space that is keen on &#34;standards&#34;, the comparison of Spring vs EJB3 is very good article as well. Not that EJB would matter too much these days (IMHO) - but a nice read nevertheless.</description>
+    </item>
+    
+    <item>
+      <title>An advice to a fellow developer - 1</title>
+      <link>https://miroadamy.com/posts/2007-12-12-an-advice-to-a-fellow-developer-1/</link>
+      <pubDate>Wed, 12 Dec 2007 23:55:20 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-12-an-advice-to-a-fellow-developer-1/</guid>
+      <description>We are recently interviewing quite a lot in anticipation of the great things coming. It is sort of similar task as we did year and something ago, but I enjoy this round much better. This time, rather than &#34;we have to assemble the project team ASAP&#34;, we have the luxury of longer term view and focus more on hiring the people that will be great match to the company culture, will be with us for longer period and will grow with the company.</description>
+    </item>
+    
+    <item>
+      <title>Ragioni per fare il grande salto</title>
+      <link>https://miroadamy.com/posts/2007-11-09-ragioni-per-fare-il-grande-salto/</link>
+      <pubDate>Fri, 09 Nov 2007 23:51:28 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-09-ragioni-per-fare-il-grande-salto/</guid>
+      <description>During the vacation, we stopped in small bookstore in Verona which was selling computer software as well. At the entrance, there was a poster showing smiling Finder&#39;s face, Apple logo and announcing reasons why you would want to make the big jump - il grande salto - to Mac platform. That is to explain the title :-)
+Grande Salto is exactly what I did. Without too much preparation or notice. Since Tuesday evening I am happy owner of the beautiful piece of hardware (17 inch 2.</description>
+    </item>
+    
+    <item>
+      <title>Installing ATG on Fedora Core</title>
+      <link>https://miroadamy.com/posts/2007-11-08-installing-atg-on-fedora-core/</link>
+      <pubDate>Thu, 08 Nov 2007 15:56:30 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-08-installing-atg-on-fedora-core/</guid>
+      <description>Trying to install ATG on the Linux platform turned out to be not completely hickup-free. The default installer died with the following message:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  $ ./ATG2007.1.bin&amp;gt; Preparing to install...&amp;gt; Extracting the installation resources from the installer archive...&amp;gt; Configuring the installer for this system&amp;#39;s environment...&amp;gt; awk: error while loading shared libraries: libdl.so.2: cannot open shared object file: No such file or directory&amp;gt; dirname: error while loading shared libraries: libc.</description>
+    </item>
+    
+    <item>
+      <title>Missing Java 6 on Leopard - is sky really falling ?</title>
+      <link>https://miroadamy.com/posts/2007-10-31-missing-java-6-on-leopard-is-sky-really-falling/</link>
+      <pubDate>Wed, 31 Oct 2007 00:00:08 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-31-missing-java-6-on-leopard-is-sky-really-falling/</guid>
+      <description>Since the big meow on Friday, lot of unhappy people had been talking and blogging about how terrible and unacceptable is the absence of the Java 6 from the Leopard. Some post were sounding very dramatic &#34;I would not buy Mac if I only knew ...&#34; - which is a bit silly. The Leopard&#39;s 300 new features were posted and touted and hyped for two weeks. Some of the &#34;great&#34; improvements were actually fairly modest improvements - so it was OBVIOUS that Java 6 is not going to be included because it would definitely make the list.</description>
+    </item>
+    
+    <item>
+      <title>Petstore for Ruby/JRuby</title>
+      <link>https://miroadamy.com/posts/2007-10-01-petstore-for-rubyjruby/</link>
+      <pubDate>Mon, 01 Oct 2007 23:27:37 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-01-petstore-for-rubyjruby/</guid>
+      <description>There is - after all - a Petstore implementation for Ruby. Somebody asked a question at the DZone and the response posted by Raphael Valyi was:
+Re: Is there a Pet Store in Grails/Rails? I&#39;m speaking here for the Rails (JRuby) side:
+there is actually a petstore, it can be found there:
+http://viewvc.rubyforge.mmmultiworks.com/cgi/viewvc.cgi/?root=tw-commons
+Some guys used it to compare C-Ruby vs JRuby performance:
+http://www.nabble.com/JRuby-vs-MRI---Petstore-shootout-t4289470.html</description>
+    </item>
+    
+    <item>
+      <title>Spring example Petclinic on Tomcat 6</title>
+      <link>https://miroadamy.com/posts/2007-09-20-spring-example-petclinic-on-tomcat-6/</link>
+      <pubDate>Thu, 20 Sep 2007 23:07:37 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-20-spring-example-petclinic-on-tomcat-6/</guid>
+      <description>If you try to deploy one of the Spring 2 samples included in the Spring framework source distribution - Petclinic on Tomcat 6 (6.0.14), the web application does not get loaded and fails with errror. The cause is the ClassNotFound exception for the class org.springframework.instrument.classloading.tomcat.TomcatInstrumentableClassLoader, more precisely:
+
+SEVERE: LifecycleException
+java.lang.ClassNotFoundException: org.springframework.instrument.classloading.tomcat.TomcatInstrumentableClassLoader
+at java.net.URLClassLoader$1.run(Unknown Source)
+at java.security.AccessController.doPrivileged(Native Method)
+at java.net.URLClassLoader.findClass(Unknown Source)
+at java.lang.ClassLoader.loadClass(Unknown Source)
+The message is a bit confusing, because after peeking into spring.</description>
+    </item>
+    
+    <item>
+      <title>Java Web tools: Eclipse WTP, Netbeans and MyEclipse</title>
+      <link>https://miroadamy.com/posts/2007-09-18-java-web-tools-eclipse-wtp-netbeans-and-myeclipse/</link>
+      <pubDate>Tue, 18 Sep 2007 23:10:51 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-18-java-web-tools-eclipse-wtp-netbeans-and-myeclipse/</guid>
+      <description>Part of the technology upgrade in the three Java based projects is also tool update. We have started with Eclipse version 1 and gradually moved up to the currently used Eclipse 3.0. The build and deployment process was based on custom written Ant build script, which compiled, created WAR, deployed, undeployed, run the tests, created source snapshot - you name it. The Eclipse was used mostly as editor and debugger - using JPDA talking to Tomcat started in debug mode.</description>
+    </item>
+    
+    <item>
+      <title>Good book on Spring Framework version 2</title>
+      <link>https://miroadamy.com/posts/2007-09-12-good-book-on-spring-framework-version-2/</link>
+      <pubDate>Wed, 12 Sep 2007 22:36:00 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-12-good-book-on-spring-framework-version-2/</guid>
+      <description>During my recent return to Javaland, I have noticed many improvements in newer releases of well established frameworks and toolkits, as well as many new ones. One such new release is version 2 of Spring framework. It is not really a hot news, because the final version of 2.0 is out for almost a year (October 2006), but it is new to me, because I spend pretty much all of last 12 months in DotNet, C# and OLAP worlds, with only brief visits to older Struts based, Spring-free Java projects.</description>
+    </item>
+    
+    <item>
+      <title>Fresh cup of Java</title>
+      <link>https://miroadamy.com/posts/2007-09-06-fresh-cup-of-java/</link>
+      <pubDate>Thu, 06 Sep 2007 22:28:40 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-06-fresh-cup-of-java/</guid>
+      <description>Hi, all Java gurus inside and outside of Thinknostic - I have a very interesting problem. Imagine the following situation: we have three existing Java Web applications, written back in 2000/2001, based on open source libraries of that time: Struts 0.9/1.0 and JSP 1.x (no JSTL) with Tiles for Web layer, Apache Torque for ORM, early version of Quartz for job scheduling, Jasper Reports for PDF reports and Freemarker as template engine for email creation.</description>
+    </item>
+    
+    <item>
+      <title>.NET on Linux faster than on Windows ? Hmm</title>
+      <link>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</link>
+      <pubDate>Wed, 27 Jun 2007 22:28:29 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</guid>
+      <description>An interesting article on JavaLobby caught my eye today: Do .NET Applications Run Better on Java?
+
+Normally, knowing the not exactly impartial focus of the Java centric site such as JavaLobby or theserverside.com, one should be careful when reading how much Java outperforms .NET. The bias works the other way too - just look at the Theserverside.net or other .NET centric side how much is C# superior :-). With that in mind, I looked atthe technical report.</description>
+    </item>
+    
+    <item>
+      <title>Netbeans Ruby IDE - great tool getting even better !</title>
+      <link>https://miroadamy.com/posts/2007-06-24-netbeans-ruby-ide-great-tool-getting-even-better/</link>
+      <pubDate>Sun, 24 Jun 2007 23:08:11 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-24-netbeans-ruby-ide-great-tool-getting-even-better/</guid>
+      <description>I have spent last two days (and few evenings before) playing with Rails and using Netbeans Ruby IDE. What a great experience ! Unlike before, it is so much easier to have really good debugger that allows put breakpoints not only into the Ruby code in controllers and model - but even into the RHTML view files !
+Netbeans team works hard on improving the tool. With latest build - 2434, I have noticed great addition - Rails console.</description>
+    </item>
+    
+    <item>
+      <title>MSDN Documentation - the worst in class ?</title>
+      <link>https://miroadamy.com/posts/2007-06-14-msdn-documentation-the-worse-in-class/</link>
+      <pubDate>Thu, 14 Jun 2007 22:41:36 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-14-msdn-documentation-the-worse-in-class/</guid>
+      <description>Did it ever happened to you that you were using some tool day after day - and never realized it&#39;s pretty big deficiencies ? Until somebody, coming from different background pointed out what everything is wrong with the tool ? Before that moment of revelation, the issues were just inconvenience, but right after that they became real annoyance ?
+Exactly this happened to me last week and the credit for pointing out what is wrong with MSDN documentation (and the &#34;</description>
+    </item>
+    
+    <item>
+      <title>Swing-ing back - to Netbeans</title>
+      <link>https://miroadamy.com/posts/2007-06-11-swing-ing-back-to-netbeans/</link>
+      <pubDate>Mon, 11 Jun 2007 22:22:35 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-11-swing-ing-back-to-netbeans/</guid>
+      <description>It has been quite some time since I used a Swing based Java application. Compared to beauty and close-to-native feeling of Eclipse based application, Swing just did not feel right - it looked differently and behaved a bit differently. For long time, my desktop was Swing-free (not counting the JDK demo). Not any more, though.
+What made me to reconsider, is new release of the Netbeans v 6. In the latest milestone builds (M6 to M9), Netbeans team built amazing Ruby development environment.</description>
+    </item>
+    
+    <item>
+      <title>DHH on RIA</title>
+      <link>https://miroadamy.com/posts/2007-05-24-dhh-on-ria/</link>
+      <pubDate>Thu, 24 May 2007 20:46:02 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-24-dhh-on-ria/</guid>
+      <description>DHH is (obviously) David Heinemeier Hansson (the creator of Rails) and RIA (in this context) means Rich Internet Applications. And here is the quote:
+I think there&#39;s always room for new ideas, but I don&#39;t think that the whole fuss that&#39;s currently going on about RIA, rich Internet applications, is justified. I think we&#39;ve been through this cycle so many times before that it in some ways amazes me how history seems to be ignored.</description>
+    </item>
+    
+    <item>
+      <title>New kid on the block in race to be Flash killer</title>
+      <link>https://miroadamy.com/posts/2007-05-12-new-kid-on-the-block-in-race-to-be-flash-killer/</link>
+      <pubDate>Sat, 12 May 2007 22:27:42 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-12-new-kid-on-the-block-in-race-to-be-flash-killer/</guid>
+      <description>After Adobe&#39;s Apollo and Microsoft&#39;s Silverlight, Sun has addes own version of scriptable, interactive platform named JavaFX. Unlike the previous three (Flash included), this is going to be Open Sourced - under the Microsoft&#39;s most hated license - GPL.
+Now the race to replace Flash really becomes really interesting ...</description>
+    </item>
+    
+    <item>
+      <title>Upgrading Java and Open Source libraries</title>
+      <link>https://miroadamy.com/posts/2007-03-28-upgrading-java-and-open-source-libraries/</link>
+      <pubDate>Wed, 28 Mar 2007 21:28:22 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-28-upgrading-java-and-open-source-libraries/</guid>
+      <description>As Murphy said - you cannot do just one thing. Thanks to JDK 1.4 entering end-of-life support period (and 1.3 being unsupported for some time), we need to move few applications happily running on these antique Java platforms to at least Java 5 and gain few more years of uninterrupted Sun-supported life.
+Upgrading the applications was as expected, piece of cake - as long as you have solid build environment with build scripts and everything - which we certainly do.</description>
+    </item>
+    
+    <item>
+      <title>Ode on Eclipse :-)</title>
+      <link>https://miroadamy.com/posts/2007-03-27-ode-on-eclipse/</link>
+      <pubDate>Tue, 27 Mar 2007 20:52:31 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-27-ode-on-eclipse/</guid>
+      <description>After almost two years of uninterrupted C# and .NET development, I have got back for few days to Java world. One of our old customers asked us to do few enhancements and changes in the application we wrote. And because we always stand behind our work, always do answer the call for help and do support our customers as long as they want to be supported, I have squeezed-in few days worth of work into pretty packed schedule.</description>
+    </item>
+    
+    <item>
+      <title>Vista security and Java</title>
+      <link>https://miroadamy.com/posts/2006-12-26-vista-security-and-java/</link>
+      <pubDate>Tue, 26 Dec 2006 20:44:11 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-26-vista-security-and-java/</guid>
+      <description>I had a brief MSN chat with friend of mine today, who tried to install and use Vista as development platform. I mean install on the real hardware, in order to use it as core operating system. I have no feedback yet on how Visual Studio works, but as he found out, his Ant build files he uses to compile and deploy Java programs stopped working - because Vista did not allow to copy Javascript files.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Upgrading Java and Open Source libraries - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="As Murphy said - you cannot do just one thing. Thanks to JDK 1.4 entering end-of-life support period (and 1.3 being unsupported for some time), we need to move few applications happily running on these antique Java platforms to at least Java 5 and gain few more years of uninterrupted Sun-supported life.
+Upgrading the applications was as expected, piece of cake - as long as you have solid build environment with build scripts and everything - which we certainly do." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2007-03-28-upgrading-java-and-open-source-libraries/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Upgrading Java and Open Source libraries" />
+<meta property="og:description" content="As Murphy said - you cannot do just one thing. Thanks to JDK 1.4 entering end-of-life support period (and 1.3 being unsupported for some time), we need to move few applications happily running on these antique Java platforms to at least Java 5 and gain few more years of uninterrupted Sun-supported life.
+Upgrading the applications was as expected, piece of cake - as long as you have solid build environment with build scripts and everything - which we certainly do." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2007-03-28-upgrading-java-and-open-source-libraries/" />
+<meta property="article:published_time" content="2007-03-28T21:28:22-04:00" />
+<meta property="article:modified_time" content="2007-03-28T21:28:22-04:00" />
+<meta itemprop="name" content="Upgrading Java and Open Source libraries">
+<meta itemprop="description" content="As Murphy said - you cannot do just one thing. Thanks to JDK 1.4 entering end-of-life support period (and 1.3 being unsupported for some time), we need to move few applications happily running on these antique Java platforms to at least Java 5 and gain few more years of uninterrupted Sun-supported life.
+Upgrading the applications was as expected, piece of cake - as long as you have solid build environment with build scripts and everything - which we certainly do.">
+
+
+<meta itemprop="datePublished" content="2007-03-28T21:28:22-04:00" />
+<meta itemprop="dateModified" content="2007-03-28T21:28:22-04:00" />
+<meta itemprop="wordCount" content="787">
+
+
+
+<meta itemprop="keywords" content="java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Upgrading Java and Open Source libraries"/>
+<meta name="twitter:description" content="As Murphy said - you cannot do just one thing. Thanks to JDK 1.4 entering end-of-life support period (and 1.3 being unsupported for some time), we need to move few applications happily running on these antique Java platforms to at least Java 5 and gain few more years of uninterrupted Sun-supported life.
+Upgrading the applications was as expected, piece of cake - as long as you have solid build environment with build scripts and everything - which we certainly do."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Upgrading Java and Open Source libraries</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2007-03-28 </span>
+        
+          <span class="more-meta"> 787 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>As Murphy said - you cannot do just one thing. Thanks to JDK 1.4 entering end-of-life support period (and 1.3 being unsupported for some time), we need to move few applications happily running on these antique Java platforms to at least Java 5 and gain few more years of uninterrupted Sun-supported life.</p>
+<p>Upgrading the applications was as expected, piece of cake - as long as you have solid build environment with build scripts and everything - which we certainly do. Ant runs on Java5 exactly as well as on 1.4 (maybe faster, but I did not measure), Tomcat was the same no-brainer thing and switching the Eclipse required only selecting different JRE in preferences window. Codewise, the only change required inside the application code was renaming few identifiers to something else than <em>enum</em>, which happens to be keyword in Java 5.</p>
+<p>So far so good. What was not so easy were third party libraries. Our applications are using Jakarta Commons, Struts, Torque and few other great pieces of open source software. I like to compile everything from source, so I tried to rebuild 3rd party jar's. No luck - about one third did not compile (I have to remind you that these were versions from late 2001/early 2002). Unlike with our own code, it would make little sense try to change the 3rd party code - certainly not when there are many newer versions for each of the components already available anyway. Therefore - upgrading components is way to go. And here the fun begins.</p>
+<p>The idea behind components such as Jakarta Commons is that they <span style="font-style:italic;">should</span> be used in other components. And indeed - they <span style="font-style:italic;">are</span> used. With little luck and enough components, you will end up with one jar being used/required by two, three or more other jars and over time, nice Web of inter-dependencies will somehow grow inside your little app. Nothing wrong with that. The trouble is that as the libraries mature and evolve, new versions are added, which add new features. In this process, sometimes the component's APIs are changed, some features are deprecated and eventually removed - and backwards compatibility slowly disappears. Because the different open source projects are evolving with various speed, you will eventually end up with requirements of two different and incompatible versions of the same component at the same time.  This is usually not an issue when you are developing new project, because the time span is too short so that the differences in required versions are not very far apart. It does however cause problems when you are upgrading and working with enough components over a time span of several years.</p>
+<p>There are two possible strategies: many small steps or one big jump. The small steps means that you try to upgrade as little as possible, keeping the changes in API minimal - just to achieve the goal (compilable with Java 5 in our case). The problem with this approach is that it is quite time consuming process, because of the cascading updates. Imagine e.g, that upgrading A1 to A2 requires upgrade of B1 to B2 (because A depends on B), but because B depends on C, you need also upgrade C1 to C2. And because the X also depends on B, after upgrading to B2 (unless you are lucky) you may be forced to upgrade X as well . It iterative "snowball" process and easily can take much longer than expected. Another problem is that after spending all that time, you have application that is still running on out-of-date components. Whether this is a problem or not, depends on number and size of business changes required.</p>
+<p>The big jump strategy is to get the latest versions of everything. Chances are very high that it will compile and run OK - as long as all components are still active projects. The typical catch is that you have just updated the B1 to B7  and this is fine with all components except X, which was kind of dormant inactive project for last 3 years and still requires B3 as dependency. If the API of B3 and B7 differ enough, you may not be able simply use B7 without diving into unknown code and fixing it. The other catch is that your own application may be incompatible with latest components API of B7 and needs changes. This is better situation because you a) know the code b) it may be better code (if you did a good job) than the code of component X - but in both cases you may need to spend time on something that has no direct link to what you wanted to do in a first place: doing just that one thing :-)</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2007-03-28
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/java/">java</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2007-03-30-how-to-access-gmail-with-multiple-pop-clients/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">How to access GMail with multiple POP clients</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2007-03-27-ode-on-eclipse/">
+            <span class="next-text nav-default">Ode on Eclipse :-)</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

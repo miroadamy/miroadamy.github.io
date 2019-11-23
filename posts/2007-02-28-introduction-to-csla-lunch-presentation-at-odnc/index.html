@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Introduction to CSLA - lunch presentation at ODNC - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="The Ottawa .NET Community organized today interesting lunch-and-learn session: first of two sessions on introducing the Rocky Lhotka&#39;s CSLA Framework. Usual location - Glacier Room at downtown Microsoft Office. I decided to attend for two reasons: first was that I knew the presenter - David Campbell. David is a great guy - consultant with 20 years of history in the software development business, running his own company. Last year when we were looking for people with CSLA experience in Ottawa, David&#39;s name came out first." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2007-02-28-introduction-to-csla-lunch-presentation-at-odnc/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Introduction to CSLA - lunch presentation at ODNC" />
+<meta property="og:description" content="The Ottawa .NET Community organized today interesting lunch-and-learn session: first of two sessions on introducing the Rocky Lhotka&#39;s CSLA Framework. Usual location - Glacier Room at downtown Microsoft Office. I decided to attend for two reasons: first was that I knew the presenter - David Campbell. David is a great guy - consultant with 20 years of history in the software development business, running his own company. Last year when we were looking for people with CSLA experience in Ottawa, David&#39;s name came out first." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2007-02-28-introduction-to-csla-lunch-presentation-at-odnc/" />
+<meta property="article:published_time" content="2007-02-28T22:21:31-05:00" />
+<meta property="article:modified_time" content="2007-02-28T22:21:31-05:00" />
+<meta itemprop="name" content="Introduction to CSLA - lunch presentation at ODNC">
+<meta itemprop="description" content="The Ottawa .NET Community organized today interesting lunch-and-learn session: first of two sessions on introducing the Rocky Lhotka&#39;s CSLA Framework. Usual location - Glacier Room at downtown Microsoft Office. I decided to attend for two reasons: first was that I knew the presenter - David Campbell. David is a great guy - consultant with 20 years of history in the software development business, running his own company. Last year when we were looking for people with CSLA experience in Ottawa, David&#39;s name came out first.">
+
+
+<meta itemprop="datePublished" content="2007-02-28T22:21:31-05:00" />
+<meta itemprop="dateModified" content="2007-02-28T22:21:31-05:00" />
+<meta itemprop="wordCount" content="619">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Introduction to CSLA - lunch presentation at ODNC"/>
+<meta name="twitter:description" content="The Ottawa .NET Community organized today interesting lunch-and-learn session: first of two sessions on introducing the Rocky Lhotka&#39;s CSLA Framework. Usual location - Glacier Room at downtown Microsoft Office. I decided to attend for two reasons: first was that I knew the presenter - David Campbell. David is a great guy - consultant with 20 years of history in the software development business, running his own company. Last year when we were looking for people with CSLA experience in Ottawa, David&#39;s name came out first."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Introduction to CSLA - lunch presentation at ODNC</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2007-02-28 </span>
+        
+          <span class="more-meta"> 619 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>The <a href="http://www.ottawacommunity.net/" target="_blank">Ottawa .NET Community</a> organized today interesting lunch-and-learn session: first of two sessions on introducing the Rocky Lhotka's <a href="http://www.lhotka.net/Area.aspx?id=3" target="_blank">CSLA Framework</a>. Usual location - Glacier Room at downtown <a href="http://www.microsoft.com/en/ca/default.aspx" target="_blank">Microsoft</a> Office. I decided to attend for two reasons: first was that I knew the presenter - David Campbell. David is a great guy - consultant with 20 years of history in the software development business, running his <a href="http://www.creativeprocess.ca/DesktopDefault.aspx?tabindex=1&amp;tabid=2" target="_blank">own company</a>. Last year when we were looking for people with CSLA experience in Ottawa, David's name came out first.</p>
+<p>My second reason was a educational. No, I did not really expect to learn something new about CSLA. We are using the framework on two projects since summer 2006, I have read the <a href="http://www.amazon.ca/Expert-2005-Business-Objects-Second/sim/1590596323/1?o=10&amp;pf=3" target="_blank">book</a> (and agree with David that it is good but a pretty dry read) and also read and wrote quite some amount of code that uses the framework. I certainly do not think that I know enough about CSLA (as the German proverb says, <em>man lernt nie aus</em> ) but it is hard to go during introductory session to the level of detail that uncovers anything new to active users of the CSLA. What I was looking for is an inspiration how to present the framework to the developers who are new to it - and I was not disappointed. And btw, I *did* learn something completely new about CSLA: that SmartDate trick with ".", "+" and "-" is really neat (see the source code of SmartDate unit tests).</p>
+<p>What I always enjoy on the ODNC sessions is discussion during and after the presentation. It was like this last time (Adam Machanic) and it was like that today. People ask great questions (OK - with one expection - if you are ODNC regular, you know who I am talking about).</p>
+<p>We have had lots of discussion in-house about the relative pros and cons of using CSLA. In our projects, portions of the CSLA functionality are not so important: we do not really need multi-level undo, for one example. On the other hand, the location-independent business objects and scalability it gives you is really nice. Yes - CSLA forces you to do things certain way, which  may not be considered ideal, but at least it results in consistent approach across the codebase.</p>
+<p>CSLA has pretty steep learning curve, even with the books available and the way of doing things can look strange to seasoned object oriented designer. Heavy use of generics and design of the core framework classes forces you to use very flat object hierarchies. Instead of inheritance, it pushes either towards sharing functionality with wrapping or using code generation. I am not exactly crazy about the read-only/readwrite object dichotomy - without use of inheritance, it often leads to code duplication.</p>
+<p>Also the book example on Projects and Resource is IMHO not the most illustrative one: it puts too much emphasis on dealing with lists of objects and does not illustrate many important aspects of dealing with root objects and switchable (root/child) objects. I had trouble of using this example for in-house training and mentoring: it is not simple enough to make obvious things really obvious and not comprehensive enough to cover many everyday situations.</p>
+<p>Despite of all that, our experience with CSLA was overly positive: we were very pleased with performance compared to plain datasets and after few initial hick-ups, the framework allows you to create very solid, reusable, scalable layer of mobile business objects.</p>
+<p>David is going to do Part Deux of the CSLA intro, which should be practical exercise of creating address book applicatopn based on CSLA with multiple UI. Looking forward to it - maybe that example will fill the gap ...</p>
+<p>And btw - thanks, David.</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2007-02-28
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2007-03-02-what-is-wrong-with-gmail/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">What is wrong with GMail</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2007-02-27-webbits-2007-05/">
+            <span class="next-text nav-default">Webbits 2007-05</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

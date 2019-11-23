@@ -1,0 +1,3294 @@
+<?xml-stylesheet type="text/xsl" href="https://miroadamy.com/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://miroadamy.com/about/</loc>
+    <lastmod>2017-08-28T21:41:52+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2019-11-07-all-day-devops/</loc>
+    <lastmod>2019-11-07T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/aws/</loc>
+    <lastmod>2019-11-07T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/</loc>
+    <lastmod>2019-11-07T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/devops/</loc>
+    <lastmod>2019-11-07T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/events/</loc>
+    <lastmod>2019-11-07T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/gitops/</loc>
+    <lastmod>2019-11-07T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/k8s/</loc>
+    <lastmod>2019-11-07T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/</loc>
+    <lastmod>2019-11-07T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/</loc>
+    <lastmod>2019-11-07T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/</loc>
+    <lastmod>2019-11-07T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/docker/</loc>
+    <lastmod>2018-12-07T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-12-07-dockercon-2018/</loc>
+    <lastmod>2018-12-07T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/cloud/</loc>
+    <lastmod>2017-11-14T14:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/command-line/</loc>
+    <lastmod>2017-11-14T14:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2017-11-14-install-aws-cli-mac/</loc>
+    <lastmod>2017-11-14T14:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/git/</loc>
+    <lastmod>2016-09-05T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/programming/</loc>
+    <lastmod>2016-09-05T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2016-09-05-git-update-all-local-branches/</loc>
+    <lastmod>2016-09-05T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/atg/</loc>
+    <lastmod>2016-03-24T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/e-commerce/</loc>
+    <lastmod>2016-03-24T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/osx/</loc>
+    <lastmod>2016-03-24T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2016-03-24-acc-on-osx/</loc>
+    <lastmod>2016-03-24T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/technology/</loc>
+    <lastmod>2016-03-24T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2016-03-23-gitbits2/</loc>
+    <lastmod>2016-03-23T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/ruby/</loc>
+    <lastmod>2016-03-23T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2016-03-22-git-unmerged/</loc>
+    <lastmod>2016-03-22T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2016-03-21-gitbits1/</loc>
+    <lastmod>2016-03-21T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2016-03-20-gitinspector/</loc>
+    <lastmod>2016-03-20T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2016-03-16-docker-machine-error-after-upgrade/</loc>
+    <lastmod>2016-03-16T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2016-02-18-access-aws-servers/</loc>
+    <lastmod>2016-02-18T00:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2015-12-22-p4merge/</loc>
+    <lastmod>2015-12-22T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2015-03-10-git-log-output-less/</loc>
+    <lastmod>2015-03-10T00:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/blog/</loc>
+    <lastmod>2014-08-22T16:25:06-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2014-08-22-jekyll-clean-theme/</loc>
+    <lastmod>2014-08-22T16:25:06-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</loc>
+    <lastmod>2014-04-04T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/linux/</loc>
+    <lastmod>2014-04-04T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</loc>
+    <lastmod>2014-03-11T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/virtualbox/</loc>
+    <lastmod>2014-03-11T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2013-12-31-difference-between-matching-and-simple-git-push/</loc>
+    <lastmod>2013-12-31T16:41:38-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/</loc>
+    <lastmod>2013-12-31T00:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/java/</loc>
+    <lastmod>2013-12-31T00:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/vim/</loc>
+    <lastmod>2013-12-31T00:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2013-12-31-httpsgithub-comradegastmiroadamy-dot-comwiki/</loc>
+    <lastmod>2013-12-31T00:54:46-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2013-09-26-git-push-matching-simple/</loc>
+    <lastmod>2013-09-26T21:02:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/os-x/</loc>
+    <lastmod>2013-09-26T21:02:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/editors/</loc>
+    <lastmod>2013-09-25T16:12:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2013-09-25-sublime-text-macro-timestamp/</loc>
+    <lastmod>2013-09-25T16:12:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</loc>
+    <lastmod>2013-09-24T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/</loc>
+    <lastmod>2013-09-16T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2013-09-05-mc-color-scheme/</loc>
+    <lastmod>2013-09-05T21:32:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2013-09-03-show-lock-screen-indicator/</loc>
+    <lastmod>2013-09-03T12:57:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/ecommerce/</loc>
+    <lastmod>2012-08-17T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/hybris/</loc>
+    <lastmod>2012-08-17T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2012-08-17-install-hybris/</loc>
+    <lastmod>2012-08-17T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2012-03-25-few-git-tricks/</loc>
+    <lastmod>2012-03-25T15:43:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2012-02-15-miro-manifesto/</loc>
+    <lastmod>2012-02-15T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/</loc>
+    <lastmod>2011-07-24T17:33:34-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2011-07-11-google-is-superset-of-both-facebook-and-twitter/</loc>
+    <lastmod>2011-07-11T22:49:41-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2011-06-19-back-to-twitter/</loc>
+    <lastmod>2011-06-19T23:16:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2011-06-18-dear-cultured-code-you-are-history/</loc>
+    <lastmod>2011-06-18T23:16:36-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2011-04-07-facebook-or-linkedin-thats-the-question/</loc>
+    <lastmod>2011-04-07T22:51:48-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2011-02-11-better-gmail-than-gmail/</loc>
+    <lastmod>2011-02-11T23:38:05-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2011-01-30-bye-bye-twitter/</loc>
+    <lastmod>2011-01-30T18:12:29-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2010-11-24-podcast-recommendation/</loc>
+    <lastmod>2010-11-24T00:13:10-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2010-02-24-jsp-compiler-configuration-in-jboss-4-2-x-for-atg/</loc>
+    <lastmod>2010-02-24T01:33:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2010-01-26-thanks-for-all-the-adds/</loc>
+    <lastmod>2010-01-26T02:57:31-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2010-01-25-one-month-with-windows-7/</loc>
+    <lastmod>2010-01-25T10:33:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2010-01-24-unintended-coincidence/</loc>
+    <lastmod>2010-01-24T10:50:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2010-01-11-cure-for-crashing-foursquare-and-runkeeper-on-iphone/</loc>
+    <lastmod>2010-01-11T00:29:18-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2010-01-05-attention-is-new-currency/</loc>
+    <lastmod>2010-01-05T01:02:09-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-12-30-blog-reloade/</loc>
+    <lastmod>2009-12-30T12:56:40-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-07-24-facebook-domain-type-in-hack/</loc>
+    <lastmod>2009-07-24T19:00:56-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/security/</loc>
+    <lastmod>2009-07-24T19:00:56-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-05-23-forget-me-not-web2-0-edition/</loc>
+    <lastmod>2009-05-23T16:07:13-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/webapp/</loc>
+    <lastmod>2009-05-23T16:07:13-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-05-20-book-recommendation-outliers-by-malcolm-caldwell/</loc>
+    <lastmod>2009-05-20T22:24:39-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/books/</loc>
+    <lastmod>2009-05-20T22:24:39-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-05-17-lost-in-the-social-networks/</loc>
+    <lastmod>2009-05-17T23:09:35-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-04-28-microsoft-office-2008-vs-neooffice-vs-iworks08/</loc>
+    <lastmod>2009-04-28T21:58:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-03-24-almost-perfect-backup-backup-solution/</loc>
+    <lastmod>2009-03-24T21:19:36-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-03-22-evernote-firefox-plugin-version-30045382-do-not-update/</loc>
+    <lastmod>2009-03-22T18:35:07-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-03-17-bye-bye-ruby-hello-groovy/</loc>
+    <lastmod>2009-03-17T19:08:35-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/groovy/</loc>
+    <lastmod>2009-03-17T19:08:35-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-03-04-the-aftermath-of-mainboard-change/</loc>
+    <lastmod>2009-03-04T01:01:04-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-02-23-the-myth-of-premium-hardware-or-why-ottawa-needs-apple-store/</loc>
+    <lastmod>2009-02-23T23:46:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/ecommerce/</loc>
+    <lastmod>2009-02-18T20:26:22-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-02-18-its-alive/</loc>
+    <lastmod>2009-02-18T20:26:22-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-02-07-how-to-un-stuck-unsuccessful-os-x-upgrade/</loc>
+    <lastmod>2009-02-07T11:19:49-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-01-09-vmware-and-slow-clocks-take-2/</loc>
+    <lastmod>2009-01-09T14:37:46-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-01-04-vmware-and-slow-clocks/</loc>
+    <lastmod>2009-01-04T23:51:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-01-02-weird-rogers-3g-network-error-fixed/</loc>
+    <lastmod>2009-01-02T11:34:20-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2009-01-02-excellent-free-git-tutorial/</loc>
+    <lastmod>2009-01-02T11:29:21-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-12-16-weird-rogers-3g-network-error/</loc>
+    <lastmod>2008-12-16T14:19:51-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-12-01-chapters-goes-mac/</loc>
+    <lastmod>2008-12-01T23:22:48-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-11-24-fix-for-sender-address-is-invalid-error-on-iphone-3g/</loc>
+    <lastmod>2008-11-24T23:08:20-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-11-20-how-to-save-local-copy-of-youtube-video/</loc>
+    <lastmod>2008-11-20T23:37:25-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-11-18-sane-version-of-twitter/</loc>
+    <lastmod>2008-11-18T01:17:26-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-11-16-about-time-to-break-the-silence/</loc>
+    <lastmod>2008-11-16T00:32:03-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-10-19-vmware-converter-error-p2verror-unable_to_determine_guest_os/</loc>
+    <lastmod>2008-10-19T17:34:26-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-10-13-deweys-classification-can-be-funny/</loc>
+    <lastmod>2008-10-13T18:08:20-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-09-30-project-management-in-a-nutshell/</loc>
+    <lastmod>2008-09-30T21:56:55-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-09-27-free-ebook-on-altnet/</loc>
+    <lastmod>2008-09-27T20:04:01-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-09-25-after-the-spring-storm/</loc>
+    <lastmod>2008-09-25T23:58:54-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-09-20-three-great-git-resources/</loc>
+    <lastmod>2008-09-20T22:10:41-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-09-16-iphone-firmware-21-first-impressions/</loc>
+    <lastmod>2008-09-16T23:35:42-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-09-11-too-good-to-be-true-2/</loc>
+    <lastmod>2008-09-11T22:39:20-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-09-09-calendar-synchronization-between-iphone-google-calendars-and-ical/</loc>
+    <lastmod>2008-09-09T02:08:08-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/iphone/</loc>
+    <lastmod>2008-09-09T02:08:08-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-09-08-good-read-not-only-for-software-architects/</loc>
+    <lastmod>2008-09-08T21:22:08-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-09-07-proper-shellspace-above-all/</loc>
+    <lastmod>2008-09-07T21:25:49-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-09-04-chrome-is-interesting-but-ill-stick-with-firefox/</loc>
+    <lastmod>2008-09-04T22:21:34-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-09-02-objective-c-i-really-miss-namespaces/</loc>
+    <lastmod>2008-09-02T23:33:30-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/objectivec/</loc>
+    <lastmod>2008-09-02T23:33:30-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-09-01-xcode-annoyances/</loc>
+    <lastmod>2008-09-01T22:34:57-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-28-more-on-kcferrordomaincfnetwork-error-302/</loc>
+    <lastmod>2008-08-28T08:38:19-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-26-we-are-hiring/</loc>
+    <lastmod>2008-08-26T10:12:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-25-easy-access-to-log-files/</loc>
+    <lastmod>2008-08-25T22:04:04-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-24-the-things-bliss/</loc>
+    <lastmod>2008-08-24T23:08:37-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-23-rogers-iphone-and-the-dreaded-kcferrordomaincfnetwork-error-302/</loc>
+    <lastmod>2008-08-23T22:57:15-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-22-linux-vs-windows-great-comparison/</loc>
+    <lastmod>2008-08-22T23:35:47-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-21-iphone-3g-first-impressions-applications/</loc>
+    <lastmod>2008-08-21T02:09:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-20-itunes-appstore-update-chaos/</loc>
+    <lastmod>2008-08-20T03:08:51-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-19-how-to-make-screenshot-of-running-application-on-iphone-3g/</loc>
+    <lastmod>2008-08-19T23:04:37-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-17-good-hard-shell-case-for-iphone-3g/</loc>
+    <lastmod>2008-08-17T03:35:12-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-16-how-to-kill-iphone-battery-in-less-that-2-hours/</loc>
+    <lastmod>2008-08-16T11:58:44-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-15-create-own-ringtones-for-iphone-3g/</loc>
+    <lastmod>2008-08-15T23:48:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-14-it-arrived/</loc>
+    <lastmod>2008-08-14T13:00:49-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-12-test-of-the-wordpress-and-smugshot-applications-for-iphone/</loc>
+    <lastmod>2008-08-12T01:50:57-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-11-gmail-is-down-sky-is-falling/</loc>
+    <lastmod>2008-08-11T17:26:51-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-11-irony-of-anti-spam-site-selling-spam-tools/</loc>
+    <lastmod>2008-08-11T01:34:13-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-10-example-of-useless-error-message/</loc>
+    <lastmod>2008-08-10T04:53:23-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-09-quote-of-the-day-14/</loc>
+    <lastmod>2008-08-09T11:13:27-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-07-iphone-3g-first-impressions-phone-battery-life/</loc>
+    <lastmod>2008-08-07T13:02:56-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-05-bymug-meeting-august/</loc>
+    <lastmod>2008-08-05T23:30:04-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-04-iphone-3g-first-impressions-email-web-camera-gps-data-plan/</loc>
+    <lastmod>2008-08-04T23:01:48-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-03-iphone-3g-first-impressions-activation/</loc>
+    <lastmod>2008-08-03T23:28:21-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-08-02-great-technical-screencasts/</loc>
+    <lastmod>2008-08-02T21:03:48-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-07-30-iphone-3g-i-surrender/</loc>
+    <lastmod>2008-07-30T23:51:12-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-07-10-rogers-iphone-and-conspiracy-theory/</loc>
+    <lastmod>2008-07-10T14:34:50-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-07-01-the-most-underappreciated-java-pioneers/</loc>
+    <lastmod>2008-07-01T20:53:38-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-06-30-on-positives-of-negative-experience/</loc>
+    <lastmod>2008-06-30T23:08:41-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-06-15-no-words-necessary-no-drm-either/</loc>
+    <lastmod>2008-06-15T18:49:21-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-06-12-back-to-normal/</loc>
+    <lastmod>2008-06-12T23:13:45-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-06-09-diskless-macbook-pro/</loc>
+    <lastmod>2008-06-09T23:45:20-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-06-06-os-x-near-death-experience/</loc>
+    <lastmod>2008-06-06T02:08:27-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-06-02-dmca-for-canada-act-now/</loc>
+    <lastmod>2008-06-02T23:33:21-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-06-01-mac-gems-visualhub/</loc>
+    <lastmod>2008-06-01T21:49:53-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-05-21-quote-of-the-day-13/</loc>
+    <lastmod>2008-05-21T23:24:47-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-05-19-unit-testing-debt/</loc>
+    <lastmod>2008-05-19T23:44:17-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-05-15-fix-for-idvd-08-crash-after-the-start/</loc>
+    <lastmod>2008-05-15T00:57:37-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-05-13-imovie-08-and-mystery-of-disappearing-project-library/</loc>
+    <lastmod>2008-05-13T01:12:49-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-05-12-mac-firmware-update/</loc>
+    <lastmod>2008-05-12T22:10:43-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-05-08-catching-up-with-hanselminutes/</loc>
+    <lastmod>2008-05-08T22:31:29-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-05-04-cocoa-programming-for-mac-os-x-third-edition-is-out/</loc>
+    <lastmod>2008-05-04T10:53:06-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-05-03-rogers-bell-and-net-neutrality/</loc>
+    <lastmod>2008-05-03T20:09:14-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-04-29-easy-way-how-to-transfer-really-big-files/</loc>
+    <lastmod>2008-04-29T11:42:32-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-04-28-quick-online-diagramming-tool/</loc>
+    <lastmod>2008-04-28T21:28:22-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-04-24-a-false-hang-of-finder/</loc>
+    <lastmod>2008-04-24T00:19:22-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-04-21-agile-development-team-member-mantra/</loc>
+    <lastmod>2008-04-21T00:24:41-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-04-20-weird-kind-of-spam-that-passes-through-akismet/</loc>
+    <lastmod>2008-04-20T18:24:19-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</loc>
+    <lastmod>2008-04-17T09:50:06-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-04-16-the-dark-screen-club/</loc>
+    <lastmod>2008-04-16T00:19:44-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-04-09-quote-of-the-day-12/</loc>
+    <lastmod>2008-04-09T23:02:02-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-04-07-trying-out-groovy-with-oracle-database/</loc>
+    <lastmod>2008-04-07T22:44:17-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-04-02-couple-of-new-podcasts/</loc>
+    <lastmod>2008-04-02T23:48:40-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-03-29-blue-screen-of-the-death-on-a-mac/</loc>
+    <lastmod>2008-03-29T22:29:51-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-03-26-finally-over-16/</loc>
+    <lastmod>2008-03-26T23:32:36-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-03-25-rails-2-really-good-tutorial/</loc>
+    <lastmod>2008-03-25T23:09:55-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-03-19-the-meaning-of-ora-29907-error-and-the-fix/</loc>
+    <lastmod>2008-03-19T23:17:52-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-03-17-starting-ruby-on-rails-2-with-netbeans-and-awdwr-book/</loc>
+    <lastmod>2008-03-17T20:11:08-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-03-16-showstopper-issue-with-jruby/</loc>
+    <lastmod>2008-03-16T23:36:26-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-03-13-on-white-stuff-and-other-disasters/</loc>
+    <lastmod>2008-03-13T21:29:13-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-03-12-couple-of-objective-c-and-cocoa-links/</loc>
+    <lastmod>2008-03-12T23:25:46-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-03-10-versioning-with-spring-and-ant/</loc>
+    <lastmod>2008-03-10T21:11:33-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-03-07-ibatis-date-null-values-and-oracle/</loc>
+    <lastmod>2008-03-07T23:36:09-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-03-05-how-to-generate-and-send-emails-using-spring-and-velocity/</loc>
+    <lastmod>2008-03-05T23:29:38-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-02-25-spring-propertyplaceholderconfigurer-with-velocity/</loc>
+    <lastmod>2008-02-25T23:24:11-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-02-23-oracle-sqldeveloper-and-mystery-of-the-missing-host/</loc>
+    <lastmod>2008-02-23T09:48:07-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-02-22-why-so-quiet/</loc>
+    <lastmod>2008-02-22T22:47:29-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-02-11-leopard-1052-update/</loc>
+    <lastmod>2008-02-11T22:55:10-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-02-06-book-recommendation-java-concurrency-in-practice/</loc>
+    <lastmod>2008-02-06T23:01:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-02-04-spring-framework-the-biggest-missing-piece/</loc>
+    <lastmod>2008-02-04T22:04:18-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/</loc>
+    <lastmod>2008-01-24T23:12:57-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-01-20-using-ibatis-with-abator/</loc>
+    <lastmod>2008-01-20T23:02:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-01-16-steves-latest/</loc>
+    <lastmod>2008-01-16T23:55:41-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-01-14-the-best-gtd-tool-is-still-a-wiki-part-ii/</loc>
+    <lastmod>2008-01-14T20:52:01-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-01-11-safari-books-online-and-lyndacom-on-ipod-touch/</loc>
+    <lastmod>2008-01-11T23:03:52-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-01-07-sony-ereader-format-lrf-viewer-for-the-mac-linux-and-windows/</loc>
+    <lastmod>2008-01-07T23:29:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-01-06-the-best-gtd-tool-is-still-a-wiki-part-i/</loc>
+    <lastmod>2008-01-06T23:55:52-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-01-03-jruby-keeping-your-databaseyml-really-dry/</loc>
+    <lastmod>2008-01-03T11:15:26-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-01-02-free-microsoft-press-e-books/</loc>
+    <lastmod>2008-01-02T12:44:27-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2008-01-01-facebook-time/</loc>
+    <lastmod>2008-01-01T23:42:49-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-28-jruby-trunk-issues-with-jdbc-connectivity/</loc>
+    <lastmod>2007-12-28T22:24:37-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-27-ipod-touch-which-to-choose-8gb-or-16gb/</loc>
+    <lastmod>2007-12-27T22:46:47-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-23-installation-of-mongrel-gem-on-jruby/</loc>
+    <lastmod>2007-12-23T20:22:50-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-22-fix-for-the-stalled-downloads-in-leopard/</loc>
+    <lastmod>2007-12-22T23:12:18-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-20-joels-gems/</loc>
+    <lastmod>2007-12-20T01:51:31-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-19-great-spring-blog/</loc>
+    <lastmod>2007-12-19T15:42:54-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-14-an-advice-to-a-fellow-developer-2/</loc>
+    <lastmod>2007-12-14T00:21:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-12-an-advice-to-a-fellow-developer-1/</loc>
+    <lastmod>2007-12-12T23:55:20-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-11-absurdity-of-the-dmca/</loc>
+    <lastmod>2007-12-11T10:50:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-10-how-to-show-preview-for-chm-file-in-leopard/</loc>
+    <lastmod>2007-12-10T01:02:32-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-09-excellent-comparison-of-c-and-objective-c/</loc>
+    <lastmod>2007-12-09T13:56:03-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-08-taking-the-pain-off-installation/</loc>
+    <lastmod>2007-12-08T19:31:52-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-07-over-500-worth-of-software-for-4999/</loc>
+    <lastmod>2007-12-07T13:10:23-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-06-movie-theatre-for-us-geeks/</loc>
+    <lastmod>2007-12-06T23:17:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-12-04-trying-out-the-time-machine/</loc>
+    <lastmod>2007-12-04T23:27:26-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-30-ipod-touch-the-best-pda-i-ever-had/</loc>
+    <lastmod>2007-11-30T23:52:20-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-28-how-to-show-zip-file-content-in-quickview-leopard/</loc>
+    <lastmod>2007-11-28T23:15:52-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-25-why-it-is-probably-bad-idea-to-have-skype-always-on/</loc>
+    <lastmod>2007-11-25T21:17:20-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-23-phaser-6120n-rocks/</loc>
+    <lastmod>2007-11-23T22:08:47-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-22-little-pains-of-switching/</loc>
+    <lastmod>2007-11-22T23:31:34-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-19-crossing-bit-boundaries/</loc>
+    <lastmod>2007-11-19T23:41:31-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-16-book-recommendation-seth-godin-small-is-the-new-big/</loc>
+    <lastmod>2007-11-16T23:25:50-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-15-leopard-in-business-environment-week-1/</loc>
+    <lastmod>2007-11-15T23:11:33-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-12-my-essential-os-x-toolset-part-1/</loc>
+    <lastmod>2007-11-12T23:23:53-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-09-ragioni-per-fare-il-grande-salto/</loc>
+    <lastmod>2007-11-09T23:51:28-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-08-installing-atg-on-fedora-core/</loc>
+    <lastmod>2007-11-08T15:56:30-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-06-macbook-pro-arrived/</loc>
+    <lastmod>2007-11-06T23:11:06-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-05-on-hardwood-floors-and-software-engineering/</loc>
+    <lastmod>2007-11-05T22:57:12-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-11-01-going-mostly-virtual/</loc>
+    <lastmod>2007-11-01T23:39:09-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-31-missing-java-6-on-leopard-is-sky-really-falling/</loc>
+    <lastmod>2007-10-31T00:00:08-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-28-ordered-a-macbook-pro/</loc>
+    <lastmod>2007-10-28T15:07:11-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-25-great-solution-for-offsite-backup/</loc>
+    <lastmod>2007-10-25T00:06:35-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-23-good-way-how-to-improve-your-english/</loc>
+    <lastmod>2007-10-23T00:27:32-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-21-book-review-the-dip/</loc>
+    <lastmod>2007-10-21T21:30:49-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-20-book-mini-review-breaking-windows/</loc>
+    <lastmod>2007-10-20T23:15:23-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-18-ipod-touch-ebooks-reader-problem-solved/</loc>
+    <lastmod>2007-10-18T00:31:03-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-17-botd-raganwald-by-reg-braithwaite/</loc>
+    <lastmod>2007-10-17T23:10:03-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-17-reading-source-code-considered-harmful/</loc>
+    <lastmod>2007-10-17T00:15:14-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-16-book-recomendations-google-story-the-tipping-point/</loc>
+    <lastmod>2007-10-16T01:14:25-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-15-the-craziest-requirement-ive-ever-heard-about/</loc>
+    <lastmod>2007-10-15T23:12:46-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-12-ipod-touch-finally/</loc>
+    <lastmod>2007-10-12T23:23:42-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-11-ipod-touch-first-impressions/</loc>
+    <lastmod>2007-10-11T23:51:23-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-09-free-ebook-and-audiobook-on-media-business-and-distribution-control/</loc>
+    <lastmod>2007-10-09T00:05:37-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-08-great-way-how-to-deal-with-telemarketers/</loc>
+    <lastmod>2007-10-08T22:39:03-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-07-who-said-governments-web-pages-are-boring/</loc>
+    <lastmod>2007-10-07T16:47:06-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-05-botd-figuring-out-computer-science/</loc>
+    <lastmod>2007-10-05T23:18:18-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-04-botd-michaels-thoughts/</loc>
+    <lastmod>2007-10-04T21:34:56-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-03-like-netmeeting-only-much-better/</loc>
+    <lastmod>2007-10-03T03:10:30-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-02-free-pdf-ebook-build-your-own-ruby-on-rails-application/</loc>
+    <lastmod>2007-10-02T23:09:17-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-10-01-petstore-for-rubyjruby/</loc>
+    <lastmod>2007-10-01T23:27:37-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-30-ruby-is-in-top-ten-programming-languages/</loc>
+    <lastmod>2007-09-30T23:04:14-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-27-microsoft-will-ship-mvc-for-aspnet/</loc>
+    <lastmod>2007-09-27T23:00:05-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-26-adding-week-numbers-to-google-calendar/</loc>
+    <lastmod>2007-09-26T11:57:25-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-25-quote-of-the-day-11/</loc>
+    <lastmod>2007-09-25T00:02:18-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-24-oracle-10g-xe-nice-surprise/</loc>
+    <lastmod>2007-09-24T11:22:04-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-23-book-softwar-an-intimate-portrait-of-larry-ellison-and-oracle/</loc>
+    <lastmod>2007-09-23T21:54:31-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-22-botd-the-reader/</loc>
+    <lastmod>2007-09-22T22:06:21-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-21-webbits-2007-06-2/</loc>
+    <lastmod>2007-09-21T23:12:09-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-20-spring-example-petclinic-on-tomcat-6/</loc>
+    <lastmod>2007-09-20T23:07:37-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-19-experiment-with-sony-reader-battery-life/</loc>
+    <lastmod>2007-09-19T22:00:42-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-18-java-web-tools-eclipse-wtp-netbeans-and-myeclipse/</loc>
+    <lastmod>2007-09-18T23:10:51-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-17-field-test-of-sony-ereader/</loc>
+    <lastmod>2007-09-17T23:00:41-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-17-the-price-of-anonymity/</loc>
+    <lastmod>2007-09-17T00:18:40-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-16-quote-of-the-day-10/</loc>
+    <lastmod>2007-09-16T22:08:14-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-14-botd-good-math-bad-math/</loc>
+    <lastmod>2007-09-14T02:09:48-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-13-images-from-vacation-are-on-smugmug/</loc>
+    <lastmod>2007-09-13T22:17:23-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-13-quote-of-the-day-9/</loc>
+    <lastmod>2007-09-13T01:36:08-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-12-good-book-on-spring-framework-version-2/</loc>
+    <lastmod>2007-09-12T22:36:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-10-new-ipod-touch-as-ebook-reader/</loc>
+    <lastmod>2007-09-10T00:23:53-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-09-great-article-on-data-visualization/</loc>
+    <lastmod>2007-09-09T22:23:50-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-06-fresh-cup-of-java/</loc>
+    <lastmod>2007-09-06T22:28:40-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-09-03-double-negative/</loc>
+    <lastmod>2007-09-03T19:58:15-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-08-28-back-again-2/</loc>
+    <lastmod>2007-08-28T13:21:13-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-08-15-on-vacations/</loc>
+    <lastmod>2007-08-15T17:13:48-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-08-06-sony-ereader-charging-problem-fixed/</loc>
+    <lastmod>2007-08-06T01:32:11-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-07-30-sapkowski-in-english-is-out/</loc>
+    <lastmod>2007-07-30T00:05:54-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-07-29-web-based-task-manager-with-offline-mode-finally/</loc>
+    <lastmod>2007-07-29T23:08:50-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-07-27-most-important-event-of-the-year/</loc>
+    <lastmod>2007-07-27T23:30:15-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-07-18-end-of-democracy-or-how-i-turned-into-platform/</loc>
+    <lastmod>2007-07-18T23:20:32-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-07-16-limits-of-virtualization/</loc>
+    <lastmod>2007-07-16T23:14:54-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-07-10-smugmug-processing-image-follow-up/</loc>
+    <lastmod>2007-07-10T22:33:32-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-07-07-first-week-with-smugmug/</loc>
+    <lastmod>2007-07-07T22:44:14-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-07-05-total-comander-version-701-final-is-out/</loc>
+    <lastmod>2007-07-05T22:48:37-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-07-02-book-review-dreaming-in-code/</loc>
+    <lastmod>2007-07-02T19:09:46-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</loc>
+    <lastmod>2007-06-27T22:28:29-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-25-search-for-perfect-online-photo-storage/</loc>
+    <lastmod>2007-06-25T23:46:19-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-24-netbeans-ruby-ide-great-tool-getting-even-better/</loc>
+    <lastmod>2007-06-24T23:08:11-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-21-quote-of-the-day-8/</loc>
+    <lastmod>2007-06-21T22:25:19-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-21-adding-image-to-link-with-css-only/</loc>
+    <lastmod>2007-06-21T08:55:27-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-19-botd-railscast/</loc>
+    <lastmod>2007-06-19T22:06:03-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-15-msdn-documentation-the-follow-up/</loc>
+    <lastmod>2007-06-15T20:01:02-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-14-msdn-documentation-the-worse-in-class/</loc>
+    <lastmod>2007-06-14T22:41:36-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-12-botd-strange-maps/</loc>
+    <lastmod>2007-06-12T21:39:44-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-11-swing-ing-back-to-netbeans/</loc>
+    <lastmod>2007-06-11T22:22:35-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-07-game-over-back-to-business/</loc>
+    <lastmod>2007-06-07T20:34:51-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-04-strange-charging-behaviour-of-sony-reader/</loc>
+    <lastmod>2007-06-04T22:41:12-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-03-martin-fowlers-article-on-ruby-and-microsoft/</loc>
+    <lastmod>2007-06-03T22:25:44-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-02-code-in-ruby-under-aspnet-coming-soon/</loc>
+    <lastmod>2007-06-02T22:33:27-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-06-01-itunes-u-great-beginning/</loc>
+    <lastmod>2007-06-01T22:16:42-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-31-why-blogging-is-important/</loc>
+    <lastmod>2007-05-31T23:06:24-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-30-reading-blogs-and-feeds-offline/</loc>
+    <lastmod>2007-05-30T19:30:18-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-29-quote-of-the-day-martin-fowler/</loc>
+    <lastmod>2007-05-29T22:33:38-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-28-botd-blog-of-the-day-frank-boumas-blog/</loc>
+    <lastmod>2007-05-28T22:53:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-27-online-diagram-drawing-tool/</loc>
+    <lastmod>2007-05-27T22:33:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-25-new-version-of-delicious-extension-for-firefox/</loc>
+    <lastmod>2007-05-25T22:14:12-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-24-dhh-on-ria/</loc>
+    <lastmod>2007-05-24T20:46:02-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-23-three-amazing-visualization-projects/</loc>
+    <lastmod>2007-05-23T22:33:48-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-22-unified-ids-for-legacy-database/</loc>
+    <lastmod>2007-05-22T23:20:12-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-17-using-wiki-markup-without-a-wiki/</loc>
+    <lastmod>2007-05-17T22:10:44-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-15-more-programming-quotes/</loc>
+    <lastmod>2007-05-15T10:15:54-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-12-new-kid-on-the-block-in-race-to-be-flash-killer/</loc>
+    <lastmod>2007-05-12T22:27:42-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-11-differences-between-visual-studio-and-ssms/</loc>
+    <lastmod>2007-05-11T22:43:32-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-09-rails-ideas-everywhere/</loc>
+    <lastmod>2007-05-09T22:22:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-07-best-book-for-ruby-on-rails/</loc>
+    <lastmod>2007-05-07T20:41:16-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-05-its-all-about-numbers/</loc>
+    <lastmod>2007-05-05T22:39:38-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-03-fixing-broken-windows-development-environment/</loc>
+    <lastmod>2007-05-03T22:18:19-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-05-01-microsoft-is-getting-more-dynamic/</loc>
+    <lastmod>2007-05-01T22:08:12-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-30-few-interesting-links/</loc>
+    <lastmod>2007-04-30T22:53:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-27-new-great-podcast/</loc>
+    <lastmod>2007-04-27T22:48:29-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-25-accessing-sql-server-2005-from-ruby/</loc>
+    <lastmod>2007-04-25T23:58:13-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-24-in-praise-of-the-polyglot/</loc>
+    <lastmod>2007-04-24T23:55:34-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/ebooks/</loc>
+    <lastmod>2007-04-23T22:42:58-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-23-one-more-reason-to-like-twit/</loc>
+    <lastmod>2007-04-23T22:42:58-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-21-four-quadrants-of-uncertainty/</loc>
+    <lastmod>2007-04-21T22:54:58-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-19-unify-tour-2007-and-open-source/</loc>
+    <lastmod>2007-04-19T23:44:16-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-18-you-should-write-blogs/</loc>
+    <lastmod>2007-04-18T21:00:05-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-15-quote-of-the-day-7/</loc>
+    <lastmod>2007-04-15T23:47:23-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-14-time-to-leave-cvs/</loc>
+    <lastmod>2007-04-14T23:49:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-12-synchronizin-gcalendar-and-thunderbird/</loc>
+    <lastmod>2007-04-12T22:25:19-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-11-kurt-vonnegut-rip/</loc>
+    <lastmod>2007-04-11T23:39:47-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-10-quote-of-the-day-6/</loc>
+    <lastmod>2007-04-10T22:34:59-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-09-gems-and-bookmarks/</loc>
+    <lastmod>2007-04-09T22:36:06-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-04-long-weekend-coming/</loc>
+    <lastmod>2007-04-04T22:30:41-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-02-very-useful-data-structure-and-algorithms-library/</loc>
+    <lastmod>2007-04-02T22:28:52-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-04-01-couple-of-things-i-really-like-about-ruby/</loc>
+    <lastmod>2007-04-01T22:45:29-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-31-walking-season-and-spam/</loc>
+    <lastmod>2007-03-31T22:10:53-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-30-how-to-access-gmail-with-multiple-pop-clients/</loc>
+    <lastmod>2007-03-30T20:39:35-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-28-upgrading-java-and-open-source-libraries/</loc>
+    <lastmod>2007-03-28T21:28:22-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-27-ode-on-eclipse/</loc>
+    <lastmod>2007-03-27T20:52:31-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-25-managing-knowledge-portfolio/</loc>
+    <lastmod>2007-03-25T22:50:43-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-24-thought-of-the-day/</loc>
+    <lastmod>2007-03-24T22:05:59-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-22-converting-ebooks-to-sony-reader-format/</loc>
+    <lastmod>2007-03-22T19:50:51-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-21-sony-ebook-reader-software-updated/</loc>
+    <lastmod>2007-03-21T22:28:26-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-20-avalon-reloaded/</loc>
+    <lastmod>2007-03-20T22:54:25-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-19-quote-of-the-day-5/</loc>
+    <lastmod>2007-03-19T19:29:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-18-google-notebook-new-feature/</loc>
+    <lastmod>2007-03-18T21:22:20-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-14-india-time-zone-mystery-solved/</loc>
+    <lastmod>2007-03-14T21:11:15-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-13-webbits-2007-06/</loc>
+    <lastmod>2007-03-13T22:49:25-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-12-times-are-a-changing/</loc>
+    <lastmod>2007-03-12T20:07:13-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-11-computers-ltd/</loc>
+    <lastmod>2007-03-11T20:25:32-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-10-quote-of-the-day-4/</loc>
+    <lastmod>2007-03-10T20:07:05-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-09-useful-hacks-for-totalcommander/</loc>
+    <lastmod>2007-03-09T19:18:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-07-epigrams-on-programming/</loc>
+    <lastmod>2007-03-07T21:03:40-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-06-security-of-the-browsers/</loc>
+    <lastmod>2007-03-06T23:00:27-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-05-project-management-using-wiki/</loc>
+    <lastmod>2007-03-05T22:50:04-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-04-ottawa-mac-users-group-meeting/</loc>
+    <lastmod>2007-03-04T17:02:54-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-03-programmers-classification/</loc>
+    <lastmod>2007-03-03T22:00:04-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-03-02-what-is-wrong-with-gmail/</loc>
+    <lastmod>2007-03-02T22:57:17-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-28-introduction-to-csla-lunch-presentation-at-odnc/</loc>
+    <lastmod>2007-02-28T22:21:31-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-27-webbits-2007-05/</loc>
+    <lastmod>2007-02-27T21:52:10-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-26-scripting-repeatability-and-gui/</loc>
+    <lastmod>2007-02-26T22:15:53-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-25-good-book-on-coding-and-software-development/</loc>
+    <lastmod>2007-02-25T23:23:54-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-24-more-great-programming-quotes/</loc>
+    <lastmod>2007-02-24T20:13:09-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-22-really-nice-idea/</loc>
+    <lastmod>2007-02-22T23:50:38-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-21-hiring-a-programmer-or-degrees-of-done/</loc>
+    <lastmod>2007-02-21T23:57:37-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-20-dotnet-development-toolbox-ii/</loc>
+    <lastmod>2007-02-20T21:51:00-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-19-evolution-of-the-math-problem-or-dumbing-down-the-recent-grads/</loc>
+    <lastmod>2007-02-19T23:37:54-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-18-dotnet-development-toolbox/</loc>
+    <lastmod>2007-02-18T19:33:36-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-17-programmers-and-programming-in-quotes/</loc>
+    <lastmod>2007-02-17T23:01:08-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-16-webbits-2007-04/</loc>
+    <lastmod>2007-02-16T23:56:40-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-15-on-myers-briggs-spaghetti-sauce-and-getting-things-done/</loc>
+    <lastmod>2007-02-15T23:33:21-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-14-handling-concurrency-in-sql-server-applications/</loc>
+    <lastmod>2007-02-14T22:24:49-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-13-many-ways-how-to-get-a-mac/</loc>
+    <lastmod>2007-02-13T23:45:52-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-12-nas-odyssey-up-and-running/</loc>
+    <lastmod>2007-02-12T23:31:55-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-11-who-is-the-most-successful-programmer-of-the-world/</loc>
+    <lastmod>2007-02-11T23:52:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-10-math-is-fun/</loc>
+    <lastmod>2007-02-10T23:23:54-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-09-blogs-of-the-week-9-feb/</loc>
+    <lastmod>2007-02-09T19:51:46-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-08-webbits-2007-03/</loc>
+    <lastmod>2007-02-08T21:46:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-07-surf-more-in-less-time-google-reader/</loc>
+    <lastmod>2007-02-07T23:33:33-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-06-offline-access-to-gmail-and-google-docs-coming/</loc>
+    <lastmod>2007-02-06T09:39:42-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-05-software-oscar-award/</loc>
+    <lastmod>2007-02-05T22:48:22-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</loc>
+    <lastmod>2007-02-04T23:38:11-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-03-nice-resource-on-tcpip-and-networking/</loc>
+    <lastmod>2007-02-03T23:26:54-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-02-nas-odyssey-almost-there/</loc>
+    <lastmod>2007-02-02T19:36:04-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-02-01-using-multiple-gmailgcalendar-accounts/</loc>
+    <lastmod>2007-02-01T23:46:34-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-31-before-you-upgrade-to-vista-you-should-read-this/</loc>
+    <lastmod>2007-01-31T23:10:10-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-31-nas-odyssey-fedora-core/</loc>
+    <lastmod>2007-01-31T01:23:08-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-30-nas-odyssey-openfiler-is-out-lets-try-ubuntu/</loc>
+    <lastmod>2007-01-30T01:57:20-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-29-joys-of-the-opensource-nas-part-2-openfiler/</loc>
+    <lastmod>2007-01-29T00:54:31-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-28-mac-is-the-way-to-enlightenment/</loc>
+    <lastmod>2007-01-28T11:55:46-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-27-more-on-sony-reader/</loc>
+    <lastmod>2007-01-27T20:24:16-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-26-feotd-google-notebook/</loc>
+    <lastmod>2007-01-26T23:57:24-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-25-evergreen-security-now/</loc>
+    <lastmod>2007-01-25T23:07:26-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-23-webbits-2007-01/</loc>
+    <lastmod>2007-01-23T19:38:26-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-22-feotd-clipping-gmails-best-friend/</loc>
+    <lastmod>2007-01-22T19:43:51-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-21-the-joys-of-open-source-nas/</loc>
+    <lastmod>2007-01-21T16:19:01-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-20-dealing-with-digital-mess-local-offline-file-storage/</loc>
+    <lastmod>2007-01-20T23:39:40-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-19-too-good-to-be-true/</loc>
+    <lastmod>2007-01-19T23:08:20-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-17-improve-your-english-use-spellchecking/</loc>
+    <lastmod>2007-01-17T23:06:27-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-16-how-to-recover-lost-win-xp-password/</loc>
+    <lastmod>2007-01-16T23:42:24-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-15-automating-itunes/</loc>
+    <lastmod>2007-01-15T23:15:28-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-14-why-engineers-dont-write-cookbooks/</loc>
+    <lastmod>2007-01-14T23:44:52-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-13-the-amazing-free-system-information-utility-for-windows/</loc>
+    <lastmod>2007-01-13T23:37:29-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-12-from-latest-podcasts/</loc>
+    <lastmod>2007-01-12T23:56:57-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-11-repetition-is-the-mother-of-the-web/</loc>
+    <lastmod>2007-01-11T21:39:50-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-10-vocabulary-test/</loc>
+    <lastmod>2007-01-10T23:49:25-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-09-quote-of-the-day-3/</loc>
+    <lastmod>2007-01-09T23:37:59-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-08-dealing-with-digital-mess-bookmarks/</loc>
+    <lastmod>2007-01-08T23:03:03-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-07-installophobia-a-setupanxiety/</loc>
+    <lastmod>2007-01-07T22:40:16-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-06-how-to-reset-an-ipod/</loc>
+    <lastmod>2007-01-06T23:58:31-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-05-speaking-to-the-dragon/</loc>
+    <lastmod>2007-01-05T23:45:12-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-04-feotd-well-hidden-secret/</loc>
+    <lastmod>2007-01-04T23:27:54-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-03-sony-ereader-first-impression/</loc>
+    <lastmod>2007-01-03T23:12:07-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2007-01-01-looking-back-on-2006/</loc>
+    <lastmod>2007-01-01T21:46:33-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-31-dealing-with-digital-mess-part-2/</loc>
+    <lastmod>2006-12-31T23:48:11-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-30-how-to-get-rid-of-outlook-part-1/</loc>
+    <lastmod>2006-12-30T00:38:28-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-29-dealing-with-digital-mess-part-1/</loc>
+    <lastmod>2006-12-29T03:14:59-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-28-sales-as-con-art-or-welcome-to-direct-energy-flat-rate-plan/</loc>
+    <lastmod>2006-12-28T21:59:16-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-27-publish-your-own-book-or-lulucom-rocks/</loc>
+    <lastmod>2006-12-27T23:17:19-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-26-vista-security-and-java/</loc>
+    <lastmod>2006-12-26T20:44:11-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-24-got-the-sony-reader/</loc>
+    <lastmod>2006-12-24T11:24:11-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-23-statistics-are-fun/</loc>
+    <lastmod>2006-12-23T23:42:10-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-21-few-more-podcasts/</loc>
+    <lastmod>2006-12-21T23:38:31-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-20-unlike-vista-this-user-interface-is-something-new/</loc>
+    <lastmod>2006-12-20T23:09:25-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-19-surfmania/</loc>
+    <lastmod>2006-12-19T22:19:35-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-18-how-to-synchronize-pocket-pc-with-mac/</loc>
+    <lastmod>2006-12-18T22:06:18-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-17-disappearing-act-of-computer-magazines/</loc>
+    <lastmod>2006-12-17T23:30:24-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-16-weekend-special/</loc>
+    <lastmod>2006-12-16T18:47:37-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-15-party-time/</loc>
+    <lastmod>2006-12-15T23:55:50-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-14-quote-of-the-day-2/</loc>
+    <lastmod>2006-12-14T20:49:18-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-13-ready-for-a-new-day-continued/</loc>
+    <lastmod>2006-12-13T22:05:28-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-12-ready-for-a-new-day-or-vista-office-exchange-launch/</loc>
+    <lastmod>2006-12-12T23:56:18-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-11-how-to-duplicate-cd-on-a-mac/</loc>
+    <lastmod>2006-12-11T20:20:52-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-10-unknown-celebrity/</loc>
+    <lastmod>2006-12-10T13:50:12-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-09-few-new-links-from-my-delicious-collection/</loc>
+    <lastmod>2006-12-09T20:11:50-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-08-too-many-ebooks-too-little-time/</loc>
+    <lastmod>2006-12-08T23:11:21-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-07-reading-code-can-be-fun/</loc>
+    <lastmod>2006-12-07T22:51:49-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-06-feotd-stealther/</loc>
+    <lastmod>2006-12-06T22:14:17-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-05-the-problem-with-hard-drives-too-large-and-too-cheap/</loc>
+    <lastmod>2006-12-05T23:36:51-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-04-will-c-30-become-a-uglier-version-of-python/</loc>
+    <lastmod>2006-12-04T22:54:43-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-03-software-for-new-mac-users/</loc>
+    <lastmod>2006-12-03T20:32:18-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-02-security-now/</loc>
+    <lastmod>2006-12-02T20:38:04-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-12-01-feotd-linky/</loc>
+    <lastmod>2006-12-01T22:29:44-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-30-vista-security-and-starting-from-scratch/</loc>
+    <lastmod>2006-11-30T22:14:34-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-29-feotd-linkify/</loc>
+    <lastmod>2006-11-29T22:38:14-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-28-podcast-du-jour/</loc>
+    <lastmod>2006-11-28T22:21:13-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-27-feotd-session-saver/</loc>
+    <lastmod>2006-11-27T22:22:52-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-26-weekend-nuggets/</loc>
+    <lastmod>2006-11-26T21:27:43-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-25-are-blogs-the-threat-for-professional-journalists/</loc>
+    <lastmod>2006-11-25T23:28:32-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-24-feotd-downthemall/</loc>
+    <lastmod>2006-11-24T19:25:29-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-23-rip-vhs/</loc>
+    <lastmod>2006-11-23T21:27:58-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-22-feotd-live-http-headers/</loc>
+    <lastmod>2006-11-22T22:53:08-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-21-wikis-are-everywhere/</loc>
+    <lastmod>2006-11-21T21:05:25-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-20-feotd-scrapbook/</loc>
+    <lastmod>2006-11-20T22:40:57-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-19-apple-makes-me-healthier/</loc>
+    <lastmod>2006-11-19T23:47:11-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-18-new-toy/</loc>
+    <lastmod>2006-11-18T21:25:30-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-17-feotd-firefox-extension-of-the-day-delicious/</loc>
+    <lastmod>2006-11-17T21:37:47-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-11-16-the-30-day-challenge/</loc>
+    <lastmod>2006-11-16T00:58:12-05:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-10-28-to-upgrade-or-not-to-upgrade/</loc>
+    <lastmod>2006-10-28T21:48:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-10-13-back-again/</loc>
+    <lastmod>2006-10-13T23:28:56-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-09-19-taking-off/</loc>
+    <lastmod>2006-09-19T14:19:35-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-09-14-moved-in/</loc>
+    <lastmod>2006-09-14T01:08:30-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-09-08-quote-of-the-day/</loc>
+    <lastmod>2006-09-08T00:02:06-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-09-07-on-ottawa-beduins-or-we-want-starbucks-with-whiteboards/</loc>
+    <lastmod>2006-09-07T22:50:34-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-09-06-working-on-line-more-to-word-processors-and-spreadsheets/</loc>
+    <lastmod>2006-09-06T22:45:00-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-09-05-harddisks-turns-50-on-september-13th/</loc>
+    <lastmod>2006-09-05T21:33:19-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-09-03-internal-free-books-to-a-good-home/</loc>
+    <lastmod>2006-09-03T23:26:16-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-09-02-working-on-line-excell-ent-on-line-spreadsheets/</loc>
+    <lastmod>2006-09-02T23:15:20-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-08-28-road-to-mac-vi-the-infection-is-spreading/</loc>
+    <lastmod>2006-08-28T20:57:29-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-08-26-road-to-mac-v-feeling-happy/</loc>
+    <lastmod>2006-08-26T11:16:10-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-08-25-14-road-to-mac-iv/</loc>
+    <lastmod>2006-08-25T22:51:19-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-08-24-road-to-mac-iii-the-culture-shock/</loc>
+    <lastmod>2006-08-24T21:00:09-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-08-23-road-to-mac-ii-ive-got-a-macbook/</loc>
+    <lastmod>2006-08-23T21:22:13-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-08-23-list-of-mac-applications-by-macgiver/</loc>
+    <lastmod>2006-08-23T21:00:53-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-08-22-road-to-mac-i-hard-decisions/</loc>
+    <lastmod>2006-08-22T22:53:06-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-08-22-on-blogs-bloggers-blogging/</loc>
+    <lastmod>2006-08-22T07:42:55-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2006-08-19-hello-world-2/</loc>
+    <lastmod>2006-08-19T18:24:13-04:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

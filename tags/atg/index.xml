@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>atg on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/atg/</link>
+    <description>Recent content in atg on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 24 Mar 2016 12:57:35 -0500</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/atg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Starting ACC (ATG Control Centre) on OS-X</title>
+      <link>https://miroadamy.com/posts/2016-03-24-acc-on-osx/</link>
+      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2016-03-24-acc-on-osx/</guid>
+      <description>Copy the installation of ACC for respective version from a Linux VM:
+The startup script in bin/startClient will fail, because it cannot determine which Java to use to run the app.
+It is trying to determine Unix flavour, failing that defaults to Solaris and ends up with invalid settings.
+Fix Set the variable JAVA_VM to path to executable command on your system.
+1 2 3 4 5  which java java is /Library/Java/JavaVirtualMachines/jdk1.</description>
+    </item>
+    
+    <item>
+      <title>JSP compiler configuration in JBoss 4.2.x for ATG</title>
+      <link>https://miroadamy.com/posts/2010-02-24-jsp-compiler-configuration-in-jboss-4-2-x-for-atg/</link>
+      <pubDate>Wed, 24 Feb 2010 01:33:44 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2010-02-24-jsp-compiler-configuration-in-jboss-4-2-x-for-atg/</guid>
+      <description>The post is on corporate blog - http://blog.thinkwrap.com/blog/2010/2/24/jsp-compiler-configuration-in-jboss-42x-for-atg.html</description>
+    </item>
+    
+    <item>
+      <title>It&#39;s alive !</title>
+      <link>https://miroadamy.com/posts/2009-02-18-its-alive/</link>
+      <pubDate>Wed, 18 Feb 2009 20:26:22 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-02-18-its-alive/</guid>
+      <description>I was aching to blog about this since December 18th, when our system quietly and gently slipped into public visibility. Marked as Beta (thanks, Google for making this a legitimate way how to go live) it comfortably made it through Christmas shopping season into 2009.
+Now when the site has been announced and mentioned few times in the media, I guess it&#39;s OK to mention it here too.
+What is &#34;</description>
+    </item>
+    
+    <item>
+      <title>Installing ATG on Fedora Core</title>
+      <link>https://miroadamy.com/posts/2007-11-08-installing-atg-on-fedora-core/</link>
+      <pubDate>Thu, 08 Nov 2007 15:56:30 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-08-installing-atg-on-fedora-core/</guid>
+      <description>Trying to install ATG on the Linux platform turned out to be not completely hickup-free. The default installer died with the following message:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  $ ./ATG2007.1.bin&amp;gt; Preparing to install...&amp;gt; Extracting the installation resources from the installer archive...&amp;gt; Configuring the installer for this system&amp;#39;s environment...&amp;gt; awk: error while loading shared libraries: libdl.so.2: cannot open shared object file: No such file or directory&amp;gt; dirname: error while loading shared libraries: libc.</description>
+    </item>
+    
+  </channel>
+</rss>

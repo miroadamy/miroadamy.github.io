@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Avalon - reloaded ... - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Now this is something really interesting: as found on Adobe Labs site, their technology codenamed Apollo is approaching Alpha status. What Apollo is - in a nutshell - is another virtual machine, similar to Java runtime or .Net framework, with few minor twists: it is multiplatform (as Java) as well as multi-language (as .Net) at the same time. Before flame wars start - I am aware that JVM is capable (more or less) to support multiple languages beyond Java and also that ." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2007-03-20-avalon-reloaded/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Avalon - reloaded ..." />
+<meta property="og:description" content="Now this is something really interesting: as found on Adobe Labs site, their technology codenamed Apollo is approaching Alpha status. What Apollo is - in a nutshell - is another virtual machine, similar to Java runtime or .Net framework, with few minor twists: it is multiplatform (as Java) as well as multi-language (as .Net) at the same time. Before flame wars start - I am aware that JVM is capable (more or less) to support multiple languages beyond Java and also that ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2007-03-20-avalon-reloaded/" />
+<meta property="article:published_time" content="2007-03-20T22:54:25-04:00" />
+<meta property="article:modified_time" content="2007-03-20T22:54:25-04:00" />
+<meta itemprop="name" content="Avalon - reloaded ...">
+<meta itemprop="description" content="Now this is something really interesting: as found on Adobe Labs site, their technology codenamed Apollo is approaching Alpha status. What Apollo is - in a nutshell - is another virtual machine, similar to Java runtime or .Net framework, with few minor twists: it is multiplatform (as Java) as well as multi-language (as .Net) at the same time. Before flame wars start - I am aware that JVM is capable (more or less) to support multiple languages beyond Java and also that .">
+
+
+<meta itemprop="datePublished" content="2007-03-20T22:54:25-04:00" />
+<meta itemprop="dateModified" content="2007-03-20T22:54:25-04:00" />
+<meta itemprop="wordCount" content="659">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Avalon - reloaded ..."/>
+<meta name="twitter:description" content="Now this is something really interesting: as found on Adobe Labs site, their technology codenamed Apollo is approaching Alpha status. What Apollo is - in a nutshell - is another virtual machine, similar to Java runtime or .Net framework, with few minor twists: it is multiplatform (as Java) as well as multi-language (as .Net) at the same time. Before flame wars start - I am aware that JVM is capable (more or less) to support multiple languages beyond Java and also that ."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Avalon - reloaded ...</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2007-03-20 </span>
+        
+          <span class="more-meta"> 659 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>Now this is something really interesting: as found on <a href="http://labs.adobe.com/" target="_blank">Adobe Labs</a> site, their technology codenamed <a href="http://labs.adobe.com/technologies/apollo/">Apollo</a> is approaching Alpha status. What Apollo is - in a nutshell - is another virtual machine, similar to Java runtime or .Net framework, with few minor twists: it is multiplatform (as Java) as well as multi-language (as .Net) <em><strong>at the same time</strong></em>. Before flame wars start - I <em>am</em> aware that JVM is capable (more or less) to support multiple languages beyond Java and also that .Net is (more or less) capable running on  non-Windows platforms (e.g. Mono project), but that is not the point. The point is what is different about the Apollo compared to JVM or CLR.</p>
+<p>First thing that is different is developers skill-set. Adobe is trying to leverage the experience of Web application developers and allow to use traditionally Web oriented technologies to create desktop applications: HTML, Flash, Javascript and PDF in context of desktop applications. The other is that Apollo is designed with notion of being "occasionally connected", or in other words online/offline applications. It does support well the regime when you can work offline with local copy of the data and reconnect / synchronize with master copy on-line, providing both access to local resources (as traditional desktop application) as well as rich asynchronous XML capable communication library (as Web 2.0 application running in browser on the client).</p>
+<p>Using Javascript/HTML for desktop-ish apps is not really an innovation. If you look on how the Firefox extensions are created, or on Widgets/Gadgets in Vista or OS-X you will see something very similar. The same idea was also implemented in Avalon - renamed to Windows Presentation Foundation - which uses XML to define the user interface and "scripting" that determines the logic. In WPF, you use the .Net languages to do "scripting" (Javascript being one of them) and you need a .Net 3.0 capable platform to run it (currently Windows XP SP2, Windows 2003 and Vista, unless I am mistaken). Even with similar language (Javascript), programming WPF is quite different and requires different skills from Web application programming. Allowing the use the Web app development skills and adding variety of Flash/Html/Javascript/Pdf combinations may be very appealing for somebody who needs to create desktop-like application without learning WPF. Plus the ability being platform-independent is added bonus and could be finaly a solution for a problem that Java did not really addressed well. It has been possible to create rich client Web-startable applications  for several years and yet, it has not become the mainstream. Possibly because of the complexity of creating Swing-UI applications in a first place ?</p>
+<p>Compared to Firefox important point is that Apollo departs from browser while keeping the Web capabilities - such as rendering Web pages or creating mixed apps. Eliminating browser is important from security point of view. Installed runtime can give the Apollo application access to local machine resources such as local files without compromising security - as it would be in case of browser based applications. Access to local resources together with modern approach to remote connectivity is very interesting. The browsers are very much Web 1.0 with the request/response shaped vision of the world and adding the asynchronous capability in AJAX was one grandious hack ... Another good reason why getting  rid of browser is simplicity of supporting one version of runtime versus making sure that you new great Web2 app works with wildly different Javascript/DOM capabilities of Internet Explorer 5, 6 and 7, Firefox 1.0, Safari, Opera, and so on ...</p>
+<p>The <a href="http://movielibrary.lynda.com/html/modPage.asp?ID=378" target="_blank">demonstration videos</a> on Lynda.com show few interesting capabilities of new application types - follow the 'Sample Apollo applications' link and also <a href="http://labs.adobe.com/wiki/index.php/Apollo:Applications:Samples" target="_blank">here</a>.</p>
+<p>It is still Alpha so it is too early to get excited, we have no data about performance, resource requirements or real world application development experience. Positive is that both runtime as well as SDK should be free. And it is always good to have more options available :-)</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2007-03-20
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2007-03-21-sony-ebook-reader-software-updated/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Sony eBook Reader - software updated</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2007-03-19-quote-of-the-day-5/">
+            <span class="next-text nav-default">Quote of the day</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Vista security and starting from scratch ... - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="I have read somewhere that quotation is safe way how to say something potentially dangerous or controversial without being legally exposed :-). So today I am going to quote an authority in computer security - Steve Gibson on some very interesting Vista related security information.
+Steve is doing (together with Leo Laporte) excellent weekly podcast &#34;Security Now!&#34;. It is so great that I have decided to download as many back episodes as I could find on their site and started to listen to them in the chronological order, back from June 2006." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2006-11-30-vista-security-and-starting-from-scratch/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Vista security and starting from scratch ..." />
+<meta property="og:description" content="I have read somewhere that quotation is safe way how to say something potentially dangerous or controversial without being legally exposed :-). So today I am going to quote an authority in computer security - Steve Gibson on some very interesting Vista related security information.
+Steve is doing (together with Leo Laporte) excellent weekly podcast &#34;Security Now!&#34;. It is so great that I have decided to download as many back episodes as I could find on their site and started to listen to them in the chronological order, back from June 2006." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2006-11-30-vista-security-and-starting-from-scratch/" />
+<meta property="article:published_time" content="2006-11-30T22:14:34-05:00" />
+<meta property="article:modified_time" content="2006-11-30T22:14:34-05:00" />
+<meta itemprop="name" content="Vista security and starting from scratch ...">
+<meta itemprop="description" content="I have read somewhere that quotation is safe way how to say something potentially dangerous or controversial without being legally exposed :-). So today I am going to quote an authority in computer security - Steve Gibson on some very interesting Vista related security information.
+Steve is doing (together with Leo Laporte) excellent weekly podcast &#34;Security Now!&#34;. It is so great that I have decided to download as many back episodes as I could find on their site and started to listen to them in the chronological order, back from June 2006.">
+
+
+<meta itemprop="datePublished" content="2006-11-30T22:14:34-05:00" />
+<meta itemprop="dateModified" content="2006-11-30T22:14:34-05:00" />
+<meta itemprop="wordCount" content="857">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Vista security and starting from scratch ..."/>
+<meta name="twitter:description" content="I have read somewhere that quotation is safe way how to say something potentially dangerous or controversial without being legally exposed :-). So today I am going to quote an authority in computer security - Steve Gibson on some very interesting Vista related security information.
+Steve is doing (together with Leo Laporte) excellent weekly podcast &#34;Security Now!&#34;. It is so great that I have decided to download as many back episodes as I could find on their site and started to listen to them in the chronological order, back from June 2006."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Vista security and starting from scratch ...</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2006-11-30 </span>
+        
+          <span class="more-meta"> 857 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>I have read somewhere that quotation is safe way how to say something potentially dangerous or controversial without being legally exposed :-). So today I am going to quote an authority in computer security - Steve Gibson on some very interesting Vista related security information.</p>
+<p>Steve is doing (together with Leo Laporte) excellent weekly podcast <a href="http://www.twit.tv/SN">"Security Now!"</a>. It is so great that I have decided to download as many back episodes as I could find on their site and started to listen to them in the chronological order,  back from June 2006. It was worth of every minute. I am now somewhere in August 2006 and Steve Gibson (== SG) covered interesting tricks what to do with you hosts file, very nicely explained the usefulness of netstat program and started multi-episode sequence on virtualization and virtaul machines. Thanks to many years of experience, Steve always gives a historical perspective on every topic he covers.</p>
+<p>What I want to mention (and quote) is the Vista security and Microsoft claims that</p>
+<p>a) Vista is the most secure Windows system ever written and much more secure than previous versions of Windows</p>
+<p>b) the Vista code was written from scratch which should be in support and a contribution to a)</p>
+<p>As SG said, security is something that is earned, not claimed. No company can say that system XYZ is most secure - it can just release it and let the reality - how the system stands in hard battles of attacks - decide how secure or insecure the system is. For that reason, according to SG, saying anything about Vista security is at minimum premature - and nothing really new, because similar claims were made with release of Windows 2000 and Windows XP. The reality did not quite support that claim - and XP  was at least unti SP2 a "land of worms".</p>
+<p>Microsoft claims to have fresh new TCP/IP stack in Vista, written from scratch. Unfortunately - according to SG - this time it seems to be so. The reason why "unfortunately" are implication of having new, untested "virgin stack" for security. SG offers nice historical perspectives on issues of Windows networking implementation - mentions famous problems like machine freeze on packet with spoofed source address being same as destination, SYNC flood attacks, the "ping of death" and how all these were found and eventually fixed. Now, with fresh new stack, at least one of these problems that was fixed long back in the times of Windows 95 re-appered again in Vista.</p>
+<p>The episode also gives very interesting peek on history of network stack in Windows. As SG points out, Microsoft suddenly got in Windows 2000 very good, solid and mature networking implementation, a huge improvement in stability and performance against previous versions of Windows.</p>
+<p>TCPIP stack is very complex piece of software and traditionally the most solid, most performant and certainly most secure implementation were found in open source Unix variants like FreeBSD and OpenBSD. Network experts use special tools to "fingerprint" the implementation - by sending specially crafted packets are analyzing the response, they can tell apart one implementation from the other, without actually having access to the stack's source code. And strangely enough - according to SG - the greatly improved Win2000 stack showed amazing compatibility and similarity in responses, quirks and "fingerprint" to BSD implementation :-). Draw your own conclusion</p>
+<p>I am pretty sure that decision to start from scratch and rewrite was carefully considered at Microsoft. There certainly were very many reasons for this: new features added, support for IPv6, and so on. Starting new often makes sense. What is wrong with it is presentation and marketing message that "it is much better because it is new".</p>
+<p>As this <a href="http://www.joelonsoftware.com/articles/fog0000000069.html">article</a> in Joel On Software puts it</p>
+<blockquote><p> <strong>"</strong>All new source code! As if source code <em>rusted</em>.The idea that new code is better than old is patently absurd. Old code has been <em>used</em>. It has been <em>tested</em>. <em>Lots</em> of bugs have been found, and they've been <em>fixed</em>. There's nothing wrong with it. It doesn't acquire bugs just by sitting around on your hard drive. Au contraire, baby! Is software supposed to be like an old Dodge Dart, that rusts just sitting in the garage? Is software like a teddy bear that's kind of gross if it's not made out of <em>all new material</em> .. "</p></blockquote>
+<p>We will probably never know what was the real reason for TCP/IP stack rewrite, neither will know how to interpret "amazingly similar" behaviour of Windows 2000 stack and BSD implementation. The recent events of complicated deals related to intellectual property between Novell and Microsoft, and rumors of possible legal battles on IP with other Linux vendors, do not make it any clearer either.</p>
+<p>What almost sure, that despite the claims, we can expect old new bugs appearing in Vista networking and it will take quite some time until security experts as SG can test Vista enough to be comfortable with degree of security it really offers. I am in no hurry to upgrade - running Vista in virtual machine sounds like best approach right now, at least until Service Pack 2 :-).</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2006-11-30
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2006-12-01-feotd-linky/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">FEOTD: Linky</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2006-11-29-feotd-linkify/">
+            <span class="next-text nav-default">FEOTD: Linkify</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

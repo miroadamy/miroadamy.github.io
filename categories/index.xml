@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Miro&#39;s World</title>
+    <link>https://miroadamy.com/categories/</link>
+    <description>Recent content in Categories on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 07 Nov 2019 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>devops</title>
+      <link>https://miroadamy.com/categories/devops/</link>
+      <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>events</title>
+      <link>https://miroadamy.com/categories/events/</link>
+      <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/events/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://miroadamy.com/categories/programming/</link>
+      <pubDate>Mon, 05 Sep 2016 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>e-Commerce</title>
+      <link>https://miroadamy.com/categories/e-commerce/</link>
+      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/categories/e-commerce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Technology</title>
+      <link>https://miroadamy.com/categories/technology/</link>
+      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/categories/technology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecommerce</title>
+      <link>https://miroadamy.com/categories/ecommerce/</link>
+      <pubDate>Fri, 17 Aug 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/ecommerce/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

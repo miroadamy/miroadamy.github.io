@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>.NET on Linux faster than on Windows ? Hmm - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="An interesting article on JavaLobby caught my eye today: Do .NET Applications Run Better on Java?
+
+Normally, knowing the not exactly impartial focus of the Java centric site such as JavaLobby or theserverside.com, one should be careful when reading how much Java outperforms .NET. The bias works the other way too - just look at the Theserverside.net or other .NET centric side how much is C# superior :-). With that in mind, I looked atthe technical report." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content=".NET on Linux faster than on Windows ? Hmm" />
+<meta property="og:description" content="An interesting article on JavaLobby caught my eye today: Do .NET Applications Run Better on Java?
+
+Normally, knowing the not exactly impartial focus of the Java centric site such as JavaLobby or theserverside.com, one should be careful when reading how much Java outperforms .NET. The bias works the other way too - just look at the Theserverside.net or other .NET centric side how much is C# superior :-). With that in mind, I looked atthe technical report." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/" />
+<meta property="article:published_time" content="2007-06-27T22:28:29-04:00" />
+<meta property="article:modified_time" content="2007-06-27T22:28:29-04:00" />
+<meta itemprop="name" content=".NET on Linux faster than on Windows ? Hmm">
+<meta itemprop="description" content="An interesting article on JavaLobby caught my eye today: Do .NET Applications Run Better on Java?
+
+Normally, knowing the not exactly impartial focus of the Java centric site such as JavaLobby or theserverside.com, one should be careful when reading how much Java outperforms .NET. The bias works the other way too - just look at the Theserverside.net or other .NET centric side how much is C# superior :-). With that in mind, I looked atthe technical report.">
+
+
+<meta itemprop="datePublished" content="2007-06-27T22:28:29-04:00" />
+<meta itemprop="dateModified" content="2007-06-27T22:28:29-04:00" />
+<meta itemprop="wordCount" content="761">
+
+
+
+<meta itemprop="keywords" content="java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=".NET on Linux faster than on Windows ? Hmm"/>
+<meta name="twitter:description" content="An interesting article on JavaLobby caught my eye today: Do .NET Applications Run Better on Java?
+
+Normally, knowing the not exactly impartial focus of the Java centric site such as JavaLobby or theserverside.com, one should be careful when reading how much Java outperforms .NET. The bias works the other way too - just look at the Theserverside.net or other .NET centric side how much is C# superior :-). With that in mind, I looked atthe technical report."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">.NET on Linux faster than on Windows ? Hmm</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2007-06-27 </span>
+        
+          <span class="more-meta"> 761 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>An interesting article on JavaLobby caught my eye today: <a href="http://www.javalobby.org/java/forums/t97871.html" target="_blank">Do .NET Applications Run Better on Java?<br />
+</a><br />
+Normally, knowing the not exactly impartial focus of the Java centric site such as <a href="http://www.javalobby.org/java/forums/t97871.html" target="_blank">JavaLobby</a> or <a href="http://www.theserverside.com/" target="_blank">theserverside.com</a>, one should be careful when reading how much Java outperforms .NET. The bias works the other way too - just look at the <a href="http://www.theserverside.net/" target="_blank">Theserverside.net</a> or other .NET centric side how much is C# superior :-). With that in mind, I looked at<a href="http://www.mainsoft.com/solutions/pdfs/PerformanceStudy.pdf" target="_blank"> the technical report</a>.</p>
+<p>The report was produced by <a href="http://www.mainsoft.com/solutions/pdfs/PerformanceStudy.pdf" target="_blank">Mainsoft</a>, the company behind the cross compiler product MainSoft for Java EE. The crosscompilation means that the C# or VB.NET code is first compiled into CLR bytecode using standard Microsoft tools and then transformed into Java bytecode using the CLR byte as input. The study was based on fairly large project - 260'000 lines of code. The published result show that translated code running on Java VM and Websphere platform outperformed the .NET stack on both Windows as well as Linux platform.</p>
+<p>So far so good. I have no plan to question the results of the test. One could argue that because the evaluation was not done by independent third party, but by the authors of the crosscompiler, the result must be like it was - simply because if the measurement would show that .NET performs better, no report would be published :-)</p>
+<p>First of all "faster" does not really means much faster. The speed increase measured is 8% in throughput and very much the same for requests per second. 8% increase is much too small to suggest doing anything major with the application, certainly not re-platforming ...</p>
+<p>Second, comparison based on single port of an application proves absolutely nothing about results of repeating same process for other application or even every application. It can be indication of reality as easy as an exception. I am pretty sure that given the chance to respond, Microsoft or some other party interested in the opposite outcome, could find a C# application that would perform worse after conversion.</p>
+<p>More interesting questions is why would you want to do this - replace Win2003 + .NET CLR with some other operating system (Windows/Linux/something else) plus Java plus Websphere. Clearly, performance cannot be the reason - at least not based on this results.</p>
+<p>Price is not a good reason either. From cost saving perspective, crosscompiling .NET application to run in Java under Windows makes no sense, because .NET runtime is part of Win2003 license and cost of the license is there in both cases. This leaves using Linux as platform (or some other free alternative). True, Linux is free - but support is not, neither is labor. In real life, initial costs of licenses are small compared to accumulated costs of supporting application in production - and professional support for Windows or Linux is comparably priced. Besides, I bet that savings gained from not paying for Windows license will not cover cost of Websphere license plus the Mainsoft Java EE Entreprise edition license. True, you could use free j2EE server just as Tomcat or Glassfish or JBoss with the free Grasshoper version of the crosscompiler - but you may not get the same performance numbers. I like Tomcat and use it all the time: it is nice, flexible, easy to configure - but, not the fastest servlet container out there (there must be a reason why did Mainsoft pick Websphere with their own enterprise version after all) ...</p>
+<p>What is the conclusion ? The article above and approach it describes can be a life saviour if you have lot's of .NET code and *must* for some real reason switch the platform. The reason may be technical - or not - just consider the magic Google did with Linux. The report does hint one possible good reason - moving your application from PC's to really big machine - multiprocessors (multi means more than 16 these days when desktop machines start getting quadcores ;-)) running Unix or mainframe. The report shows that AIX on Power5+ based system with 4 CPU did ~ 3400 requests per second whereas the PC based did 2335. This would be interesting if  the comparison was fair - but it was not. The AIX had 32 GB RAM whereas PC (with Linux or Windows) had 2 GB and you can imagine the price difference in the hardware.</p>
+<p>But if there is no really compelling business reason of switching platforms, sticking with Windows when you want to run .NET application may save you lot of work - and most likely some money as well.</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2007-06-27
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/java/">java</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2007-07-02-book-review-dreaming-in-code/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Book review: Dreaming in Code</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2007-06-25-search-for-perfect-online-photo-storage/">
+            <span class="next-text nav-default">Search for perfect online photo storage</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

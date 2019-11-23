@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/linux/</link>
+    <description>Recent content in linux on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 04 Apr 2014 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to install Chrome in Centos 6.5</title>
+      <link>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</link>
+      <pubDate>Fri, 04 Apr 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</guid>
+      <description>How to install Chrome in Centos 6.5 Step 1. Add Google Yum Repository Create a new yum repository using below instructions.
+sudo vim /etc/yum.repos.d/google.repo
+Add following content to this file
+1 2 3 4 5 6  [google] name=Google baseurl=http://dl.google.com/linux/rpm/stable/$basearch enabled=1 gpgcheck=1 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub   Step 2: Install/Update Google Chrome Richard Lloid provided an shell script to grab libraries from a more recent Linux distro, put them in a tree (/opt/google/chrome/lib) exclusively picked up by Google Chrome and then you can indeed run Google Chrome on CentOS 6.</description>
+    </item>
+    
+    <item>
+      <title>Installation of sshfs in the new VM</title>
+      <link>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</link>
+      <pubDate>Tue, 11 Mar 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</guid>
+      <description>Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
+Get the &amp;lsquo;epel&amp;rsquo; repos 1 2 3  wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm   Validate
+1 2 3 4  $ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo   It if good idea to enable the remi by default
+sudo vim /etc/yum.repos.d/remi.repo
+Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap   Using Mount the host directory</description>
+    </item>
+    
+  </channel>
+</rss>

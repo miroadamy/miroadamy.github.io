@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>devops on Miro&#39;s World</title>
+    <link>https://miroadamy.com/categories/devops/</link>
+    <description>Recent content in devops on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 07 Nov 2019 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/categories/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>All Day DevOps 2019</title>
+      <link>https://miroadamy.com/posts/2019-11-07-all-day-devops/</link>
+      <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-07-all-day-devops/</guid>
+      <description>All Day DevOps 2019 - Notes I have attended the All Day Devops - https://www.alldaydevops.com/ on 06 Nov 2019 - an event that runs for 24 hours and has multiple tracks of content organized in 4 blocks.
+The tracks:
+ Keynotes Cultural Change DevSecOps SRE CI/CD Everything Cloud  The complete list is here: https://www.alldaydevops.com/2019-live-schedule - the play button points to the block video.
+The Video URLs Channel 1  https://www.</description>
+    </item>
+    
+    <item>
+      <title>Install AWS CLI on Mac</title>
+      <link>https://miroadamy.com/posts/2017-11-14-install-aws-cli-mac/</link>
+      <pubDate>Tue, 14 Nov 2017 14:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2017-11-14-install-aws-cli-mac/</guid>
+      <description>Install AWS CLI on Mac The Mac comes with Python 2.7 and no pip
+This guide recommends upgrade to Python 3 which I want to avoid: http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html
+Unsuccesfull path - keep the Python 2.7 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86  ➜ ~ pip --version zsh: command not found: pip ➜ ~ sudo easy_install pip Password: Searching for pip Reading https://pypi.</description>
+    </item>
+    
+    <item>
+      <title>How to install Chrome in Centos 6.5</title>
+      <link>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</link>
+      <pubDate>Fri, 04 Apr 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</guid>
+      <description>How to install Chrome in Centos 6.5 Step 1. Add Google Yum Repository Create a new yum repository using below instructions.
+sudo vim /etc/yum.repos.d/google.repo
+Add following content to this file
+1 2 3 4 5 6  [google] name=Google baseurl=http://dl.google.com/linux/rpm/stable/$basearch enabled=1 gpgcheck=1 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub   Step 2: Install/Update Google Chrome Richard Lloid provided an shell script to grab libraries from a more recent Linux distro, put them in a tree (/opt/google/chrome/lib) exclusively picked up by Google Chrome and then you can indeed run Google Chrome on CentOS 6.</description>
+    </item>
+    
+  </channel>
+</rss>

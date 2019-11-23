@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/vim/</link>
+    <description>Recent content in vim on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 31 Dec 2013 00:57:35 -0500</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Binding DashDoc with editors and Eclipse</title>
+      <link>https://miroadamy.com/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/</link>
+      <pubDate>Tue, 31 Dec 2013 00:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/</guid>
+      <description>If you use DashDoc (see http://kapeli.com/dash), it can be integrated with editor or Eclipse to allow automatically find selected text in Dash documentation sets:
+Sublime Text This is easy - there is DashDoc plugin - https://sublime.wbond.net/packages/DashDoc
+The plugin is OS-X specific, because the DashDoc is
+ Start Package Control (Cmd-Shift-P) select Install Package (type Install) select DashDoc  The Ctrl-H does the search
+Eclipse There is opensource plugin for it at https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Installing and running &#39;naked&#39; hybris platform - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Installing and running &amp;ldquo;naked&amp;rdquo; hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
+Starting point: hybris-platform-4.7.1.zip
+Install point: /opt/hybris-platform/hybris-platform-4.7.1
+Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2012-08-17-install-hybris/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Installing and running &#39;naked&#39; hybris platform" />
+<meta property="og:description" content="Installing and running &ldquo;naked&rdquo; hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
+Starting point: hybris-platform-4.7.1.zip
+Install point: /opt/hybris-platform/hybris-platform-4.7.1
+Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2012-08-17-install-hybris/" />
+<meta property="article:published_time" content="2012-08-17T11:22:48+08:00" />
+<meta property="article:modified_time" content="2012-08-17T11:22:48+08:00" />
+<meta itemprop="name" content="Installing and running &#39;naked&#39; hybris platform">
+<meta itemprop="description" content="Installing and running &ldquo;naked&rdquo; hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
+Starting point: hybris-platform-4.7.1.zip
+Install point: /opt/hybris-platform/hybris-platform-4.7.1
+Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all.">
+
+
+<meta itemprop="datePublished" content="2012-08-17T11:22:48&#43;08:00" />
+<meta itemprop="dateModified" content="2012-08-17T11:22:48&#43;08:00" />
+<meta itemprop="wordCount" content="925">
+
+
+
+<meta itemprop="keywords" content="hybris," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Installing and running &#39;naked&#39; hybris platform"/>
+<meta name="twitter:description" content="Installing and running &ldquo;naked&rdquo; hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
+Starting point: hybris-platform-4.7.1.zip
+Install point: /opt/hybris-platform/hybris-platform-4.7.1
+Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Installing and running &#39;naked&#39; hybris platform</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-08-17 </span>
+        <div class="post-category">
+            <a href="/categories/ecommerce/"> ecommerce </a>
+            </div>
+          <span class="more-meta"> 925 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#installing-and-running-naked-hybris-platform">Installing and running &ldquo;naked&rdquo; hybris platform</a>
+<ul>
+<li><a href="#start-with-hsqldb">Start (with HSQLdb)</a></li>
+<li><a href="#list-of-modules-that-goes-up">List of modules that goes up:</a></li>
+<li><a href="#initialization-log">Initialization log</a>
+<ul>
+<li><a href="#exploring">Exploring</a></li>
+<li><a href="#rest-client">REST Client</a></li>
+<li><a href="#admin-cockpit">Admin Cockpit</a></li>
+<li><a href="#virtual-jdbc">Virtual JDBC</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h1 id="installing-and-running-naked-hybris-platform">Installing and running &ldquo;naked&rdquo; hybris platform</h1>
+
+<p>Log of an exercise to install and start the Hybris without all those fancy modules</p>
+
+<p>Starting point: <code>hybris-platform-4.7.1.zip</code></p>
+
+<p>Install point: <code>/opt/hybris-platform/hybris-platform-4.7.1</code></p>
+
+<h2 id="start-with-hsqldb">Start (with HSQLdb)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">~ $ cd /opt/hybris-platform/hybris-platform-4.7.1
+hybris-platform-4.7.1 $ cd bin/platform/
+platform $ pwd
+/opt/hybris-platform/hybris-platform-4.7.1/bin/platform
+ 
+ 
+platform $ . ./setantenv.sh
+Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2
+Apache Ant(TM) version 1.8.2 compiled on April 21 2011
+platform $ ant clean all | tee ant-clean-all.log</pre></td></tr></table>
+</div>
+</div>
+<p>=&gt; Select <code>develop</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">....
+....
+   
+   [echo] [jspcompile] compiling.. /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/work/Catalina/localhost/hmc
+   [yjavac] Compiling 205 source files to /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/work/Catalina/localhost/hmc
+    [touch] Creating /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/work/Catalina/localhost/hmc/jspcompile_touch
+[stopwatch] [build: 43.686 sec]
+server:
+     [echo]
+     [echo] Configuring server at /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6
+     [echo] Using config set at /opt/hybris-platform/hybris-platform-4.7.1/config/tomcat
+     [echo]            
+    [mkdir] Created dir: /opt/hybris-platform/hybris-platform-4.7.1/log/tomcat
+    [mkdir] Created dir: /opt/hybris-platform/hybris-platform-4.7.1/data/media
+     [copy] Copying 8 files to /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6
+     [copy] Copying 6 files to /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6
+     [copy] Copying 1 file to /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/lib
+     [echo]
+     [echo] Embedded server does not seem to be running (no PID found). No restart necessary.
+     [echo]                        
+all:
+     [echo] Build finished on 17-August-2012 19:43:22.
+     [echo]        
+BUILD SUCCESSFUL
+Total time: 1 minute 26 seconds</pre></td></tr></table>
+</div>
+</div>
+<p>Goto <a href="http://localhost:9001/">http://localhost:9001/</a> - redirects to <a href="http://localhost:9001/platform/init">http://localhost:9001/platform/init</a></p>
+
+<h2 id="list-of-modules-that-goes-up">List of modules that goes up:</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">core
+hmc
+servicelayer
+task
+commons
+cronjob
+lucenesearch
+impex
+validation
+variants
+europe1
+category
+catalog
+virtualjdbc
+platformservices
+workflow
+processengine
+ldap
+comments
+cockpit
+mcc
+advancedsavedquery
+admincockpit</pre></td></tr></table>
+</div>
+</div>
+<h2 id="initialization-log">Initialization log</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Initialization
+Dropping ALL tables ...
+ 
+Initialize system ...
+ 
+Please wait. This step can take some minutes to complete.
+If you do not receive any feedback on this page in this time, consult the applicationserver logs for possible errors.
+Dropping old and creating new empty system ...
+&gt;&gt;&gt; Remove objects ...
+&gt;&gt;&gt; Create types ...
+&gt;&gt;&gt; Modify types ...
+&gt;&gt;&gt; Create objects ...
+&gt;&gt;&gt; Setting licence ...
+Restarting tenant ...
+ 
+Clearing hmc configuration from database ...
+ 
+ 
+Creating essential data ...
+ 
+Creating essential data for core ...
+Creating essential data for mediaweb ...
+Creating essential data for maintenanceweb ...
+Creating essential data for hmc ...
+Creating essential data for servicelayer ...
+Creating essential data for task ...
+Creating essential data for paymentstandard ...
+Creating essential data for deliveryzone ...
+Creating essential data for commons ...
+Creating essential data for cronjob ...
+Creating essential data for lucenesearch ...
+Creating essential data for impex ...
+Creating essential data for validation ...
+Creating essential data for variants ...
+Creating essential data for europe1 ...
+Creating essential data for category ...
+Creating essential data for catalog ...
+Creating essential data for virtualjdbc ...
+Creating essential data for platformservices ...
+Creating essential data for workflow ...
+Creating essential data for processengine ...
+Creating essential data for platformwebservices ...
+Creating essential data for ldap ...
+Creating essential data for hac ...
+Creating essential data for comments ...
+Creating essential data for cockpit ...
+Creating essential data for mcc ...
+Creating essential data for advancedsavedquery ...
+Creating essential data for admincockpit ...
+ 
+Localizing types ...
+ 
+Creating project data ...
+ 
+Creating project data for core ...
+Creating project data for hmc ...
+Creating project data for servicelayer ...
+Creating project data for task ...
+Creating project data for commons ...
+Creating project data for cronjob ...
+Creating project data for lucenesearch ...
+Creating project data for impex ...
+Creating project data for validation ...
+Creating project data for variants ...
+Creating project data for europe1 ...
+Creating project data for category ...
+Creating project data for catalog ...
+Creating project data for virtualjdbc ...
+Creating project data for platformservices ...
+Creating project data for workflow ...
+Creating project data for processengine ...
+Creating project data for ldap ...
+Creating project data for comments ...
+Creating project data for cockpit ...
+Creating project data for mcc ...
+Creating project data for advancedsavedquery ...
+Creating project data for admincockpit ...
+ 
+ 
+FINISHED. The initialization took: 0d 00h:01m:08s:235ms</pre></td></tr></table>
+</div>
+</div>
+<h3 id="exploring">Exploring</h3>
+
+<ul>
+<li>look at the configuration parameters under <a href="http://localhost:9001/platform/config">http://localhost:9001/platform/config</a></li>
+<li>logging - <a href="http://localhost:9001/platform/log4j">http://localhost:9001/platform/log4j</a></li>
+<li>All loaded extensions - with their Web apps: <a href="http://localhost:9001/platform/extensions">http://localhost:9001/platform/extensions</a>
+
+<ul>
+<li><a href="http://localhost:9001/virtualjdbc/">http://localhost:9001/virtualjdbc/</a></li>
+<li>AdminCockpit: <a href="http://localhost:9001/admincockpit/index.zul">http://localhost:9001/admincockpit/index.zul</a></li>
+<li>MultiChannel Cockpit - <a href="http://localhost:9001/mcc/index.zul">http://localhost:9001/mcc/index.zul</a></li>
+<li>Hybris Management Console - <a href="http://localhost:9001/hmc/hybris?wid=MC0x0&amp;prgrequest=true&amp;MC0x2_!DISPLAY=MC0x12">http://localhost:9001/hmc/hybris?wid=MC0x0&amp;prgrequest=true&amp;MC0x2_!DISPLAY=MC0x12</a></li>
+<li>Maintenance page: <a href="http://localhost:9001/maintenance/">http://localhost:9001/maintenance/</a></li>
+<li>Medias (??) <a href="http://localhost:9001/medias/">http://localhost:9001/medias/</a></li>
+<li>WS - <a href="http://localhost:9001/ws410/">http://localhost:9001/ws410/</a></li>
+<li>Sample data must be loaded ? Q: How do I load sample data ?</li>
+</ul></li>
+</ul>
+
+<h3 id="rest-client">REST Client</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cd /opt/restClient/
+restClient $ ll
+total 44280
+-rw-r--r--@ 1 miro  staff   8.4M 17 Aug 20:15 restclient-cli-2.5-jar-with-dependencies.jar
+-rw-r--r--@ 1 miro  staff    13M 17 Aug 20:16 restclient-ui-2.5-jar-with-dependencies.jar
+restClient $ java -jar restclient-ui-2.5-jar-with-dependencies.jar</pre></td></tr></table>
+</div>
+</div>
+<p>must enter admin/nimda into tool</p>
+
+<p>Follow <a href="http://localhost:9001/ws410/rest/countries">http://localhost:9001/ws410/rest/countries</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;
+&lt;countries xmlns:ns2=&#34;http://wadl.dev.java.net/2009/02&#34; uri=&#34;http://localhost:9001/ws410/rest/countries&#34;&gt;
+&lt;country isocode=&#34;DE&#34; pk=&#34;8796093055010&#34; uri=&#34;http://localhost:9001/ws410/rest/countries/DE&#34;/&gt;
+&lt;/countries&gt;</pre></td></tr></table>
+</div>
+</div>
+<p>Interesting catalog tool - comparison:</p>
+
+<ul>
+<li><a href="http://localhost:9001/hmc/hybris?wid=MC1x745&amp;prgrequest=true&amp;null">http://localhost:9001/hmc/hybris?wid=MC1x745&amp;prgrequest=true&amp;null</a></li>
+</ul>
+
+<h3 id="admin-cockpit">Admin Cockpit</h3>
+
+<p><a href="http://localhost:9001/admincockpit/index.zul">http://localhost:9001/admincockpit/index.zul</a></p>
+
+<h3 id="virtual-jdbc">Virtual JDBC</h3>
+
+<p>Available at <a href="http://localhost:9001/virtualjdbc/">http://localhost:9001/virtualjdbc/</a></p>
+
+<p>This extension offers the functionality to connect to a database using a virtual JDBC connection.
+This allows to create reports in real-time on live data without risks of corrupting data.</p>
+
+<p>To connect via HTTP the jdbc url looks like:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[jdbc:hybris:sql:http://localhost:9001/virtualjdbc/service]()
+[jdbc:hybris:flexiblesearch:http://localhost:9001/virtualjdbc/service;tenant=master]()</pre></td></tr></table>
+</div>
+</div>
+<p>Detailed documentation can be found at <a href="https://wiki.hybris.com/x/waEFAw">virtualjdbc Extension</a>.</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2012-08-17
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hybris/">hybris</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2013-09-03-show-lock-screen-indicator/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Show lock screen indicator in OS-X menu</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2012-03-25-few-git-tricks/">
+            <span class="next-text nav-default">Few gitbits to remember</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

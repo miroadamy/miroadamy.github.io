@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Spring PropertyPlaceholderConfigurer with Velocity - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Part of the configuration magic is (one of several) Spring post-processors, that allows load the property file or files and refer to the values in these files inside XML configuration files. The rationale behind these is that property files are much easier to edit that possibly huge XML config file and using property values prevents repeating same value over and over again. With this approach, the following configuration:
+[sourcecode language=&#39;xml&#39;]" /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2008-02-25-spring-propertyplaceholderconfigurer-with-velocity/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Spring PropertyPlaceholderConfigurer with Velocity" />
+<meta property="og:description" content="Part of the configuration magic is (one of several) Spring post-processors, that allows load the property file or files and refer to the values in these files inside XML configuration files. The rationale behind these is that property files are much easier to edit that possibly huge XML config file and using property values prevents repeating same value over and over again. With this approach, the following configuration:
+[sourcecode language=&#39;xml&#39;]" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2008-02-25-spring-propertyplaceholderconfigurer-with-velocity/" />
+<meta property="article:published_time" content="2008-02-25T23:24:11-05:00" />
+<meta property="article:modified_time" content="2008-02-25T23:24:11-05:00" />
+<meta itemprop="name" content="Spring PropertyPlaceholderConfigurer with Velocity">
+<meta itemprop="description" content="Part of the configuration magic is (one of several) Spring post-processors, that allows load the property file or files and refer to the values in these files inside XML configuration files. The rationale behind these is that property files are much easier to edit that possibly huge XML config file and using property values prevents repeating same value over and over again. With this approach, the following configuration:
+[sourcecode language=&#39;xml&#39;]">
+
+
+<meta itemprop="datePublished" content="2008-02-25T23:24:11-05:00" />
+<meta itemprop="dateModified" content="2008-02-25T23:24:11-05:00" />
+<meta itemprop="wordCount" content="171">
+
+
+
+<meta itemprop="keywords" content="java," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Spring PropertyPlaceholderConfigurer with Velocity"/>
+<meta name="twitter:description" content="Part of the configuration magic is (one of several) Spring post-processors, that allows load the property file or files and refer to the values in these files inside XML configuration files. The rationale behind these is that property files are much easier to edit that possibly huge XML config file and using property values prevents repeating same value over and over again. With this approach, the following configuration:
+[sourcecode language=&#39;xml&#39;]"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Spring PropertyPlaceholderConfigurer with Velocity</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2008-02-25 </span>
+        
+          <span class="more-meta"> 171 words </span>
+          <span class="more-meta"> 1 min read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>Part of the configuration magic is (one of several) Spring post-processors, that allows load the property file or files and refer to the values in these files inside XML configuration files. The rationale behind these is that property files are much easier to edit that possibly huge XML config file and using property values prevents repeating same value over and over again. With this approach, the following configuration:</p>
+<p>[sourcecode language='xml']<br />
+ 	</p>
+<p>[/sourcecode]<br />
+can be written as<br />
+[sourcecode language='xml']<br />
+ 	</p>
+<p>				WEB-INF/mail.properties<br />
+				WEB-INF/jdbc.properties</p>
+<p> 	</p>
+<p> <br />
+[/sourcecode]<br />
+and (in jdbc.properties)<br />
+[sourcecode language='java']<br />
+jdbc.username=some_user<br />
+jdbc.password=secret[/sourcecode]If you are using in the same project Velocity and want to utilize the VTL macros inside the configured values, the approach above will not work, because PropertyPlaceholderConfigurer will try to replace ALL macros in form ${something} with a value from property file - and throw exception if not found.The solution is easy: you need to switch the prefix of the   PropertyPlaceholderConfigurer to something else than the default ${ and avoid conflict wih Velocity. The modified configuration could look like:</p>
+<p>[sourcecode language='xml']<br />
+ </p>
+<p>				WEB-INF/mail.properties<br />
+				WEB-INF/jdbc.properties</p>
+<p> </p>
+<p> <br />
+[/sourcecode]</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2008-02-25
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/java/">java</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2008-03-05-how-to-generate-and-send-emails-using-spring-and-velocity/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">How to generate and send emails using Spring and Velocity</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2008-02-23-oracle-sqldeveloper-and-mystery-of-the-missing-host/">
+            <span class="next-text nav-default">Oracle SQLDeveloper and mystery of the missing host</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

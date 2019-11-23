@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>virtualbox on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/virtualbox/</link>
+    <description>Recent content in virtualbox on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 11 Mar 2014 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Installation of sshfs in the new VM</title>
+      <link>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</link>
+      <pubDate>Tue, 11 Mar 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</guid>
+      <description>Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
+Get the &amp;lsquo;epel&amp;rsquo; repos 1 2 3  wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm   Validate
+1 2 3 4  $ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo   It if good idea to enable the remi by default
+sudo vim /etc/yum.repos.d/remi.repo
+Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap   Using Mount the host directory</description>
+    </item>
+    
+    <item>
+      <title>How to make screenshot from command line</title>
+      <link>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</link>
+      <pubDate>Tue, 24 Sep 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</guid>
+      <description>How to make screenshot from command line 1 2 3 4 5 6 7  platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk   First one is &amp;ldquo;interactive&amp;rdquo; - Cmd-Shift-3 with selection tool, second is full screen</description>
+    </item>
+    
+    <item>
+      <title>Case sensitivity and VirtualBox shared folder</title>
+      <link>https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/</link>
+      <pubDate>Mon, 16 Sep 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/</guid>
+      <description>Case sensitivity and VirtualBox shared folder Weird but true behaviour:
+I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
+1  touch zz zZ   creates two files, both &amp;ldquo;inside VM&amp;rdquo; ~/development/ATG/platform-edc as well as in OS-X.
+If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
+The command</description>
+    </item>
+    
+    <item>
+      <title>Usable mc color scheme</title>
+      <link>https://miroadamy.com/posts/2013-09-05-mc-color-scheme/</link>
+      <pubDate>Thu, 05 Sep 2013 21:32:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-09-05-mc-color-scheme/</guid>
+      <description> Usable mc color scheme Edit
+~/.mc/ini
+insert
+1 2  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   </description>
+    </item>
+    
+    <item>
+      <title>Miro Manifesto</title>
+      <link>https://miroadamy.com/posts/2012-02-15-miro-manifesto/</link>
+      <pubDate>Wed, 15 Feb 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-02-15-miro-manifesto/</guid>
+      <description>Miro Manifesto Original text of the memo, written in February 2012 and shared with limited audience, until it surfaced up as main them of the planning meeting in December 2012.
+This is an attempt to come up with better answers to the following questions:
+ what issues and challenges I see on our way ahead from the technology point of view and what needs to be done to address them where do I see my professional and personal career go over next 12 to 18 months and in long run how to best align those two streams  In the spirit of my latest “back to the basics” obsession, it was written in Markdown format and in Vi, copied and pasted into Google Doc, btw.</description>
+    </item>
+    
+  </channel>
+</rss>

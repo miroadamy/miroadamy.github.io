@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/</link>
+    <description>Recent content in Tags on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 07 Nov 2019 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>aws</title>
+      <link>https://miroadamy.com/tags/aws/</link>
+      <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitops</title>
+      <link>https://miroadamy.com/tags/gitops/</link>
+      <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/gitops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k8s</title>
+      <link>https://miroadamy.com/tags/k8s/</link>
+      <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://miroadamy.com/tags/docker/</link>
+      <pubDate>Fri, 07 Dec 2018 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud</title>
+      <link>https://miroadamy.com/tags/cloud/</link>
+      <pubDate>Tue, 14 Nov 2017 14:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>command-line</title>
+      <link>https://miroadamy.com/tags/command-line/</link>
+      <pubDate>Tue, 14 Nov 2017 14:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/command-line/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://miroadamy.com/tags/git/</link>
+      <pubDate>Mon, 05 Sep 2016 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>atg</title>
+      <link>https://miroadamy.com/tags/atg/</link>
+      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/atg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>osx</title>
+      <link>https://miroadamy.com/tags/osx/</link>
+      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/osx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ruby</title>
+      <link>https://miroadamy.com/tags/ruby/</link>
+      <pubDate>Wed, 23 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://miroadamy.com/tags/blog/</link>
+      <pubDate>Fri, 22 Aug 2014 16:25:06 -0700</pubDate>
+      
+      <guid>https://miroadamy.com/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://miroadamy.com/tags/linux/</link>
+      <pubDate>Fri, 04 Apr 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualbox</title>
+      <link>https://miroadamy.com/tags/virtualbox/</link>
+      <pubDate>Tue, 11 Mar 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/virtualbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://miroadamy.com/tags/java/</link>
+      <pubDate>Tue, 31 Dec 2013 00:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>https://miroadamy.com/tags/vim/</link>
+      <pubDate>Tue, 31 Dec 2013 00:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>os-x</title>
+      <link>https://miroadamy.com/tags/os-x/</link>
+      <pubDate>Thu, 26 Sep 2013 21:02:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/os-x/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>editors</title>
+      <link>https://miroadamy.com/tags/editors/</link>
+      <pubDate>Wed, 25 Sep 2013 16:12:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/editors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hybris</title>
+      <link>https://miroadamy.com/tags/hybris/</link>
+      <pubDate>Fri, 17 Aug 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/hybris/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://miroadamy.com/tags/security/</link>
+      <pubDate>Fri, 24 Jul 2009 19:00:56 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webapp</title>
+      <link>https://miroadamy.com/tags/webapp/</link>
+      <pubDate>Sat, 23 May 2009 16:07:13 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/webapp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>books</title>
+      <link>https://miroadamy.com/tags/books/</link>
+      <pubDate>Wed, 20 May 2009 22:24:39 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/books/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>groovy</title>
+      <link>https://miroadamy.com/tags/groovy/</link>
+      <pubDate>Tue, 17 Mar 2009 19:08:35 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/groovy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecommerce</title>
+      <link>https://miroadamy.com/tags/ecommerce/</link>
+      <pubDate>Wed, 18 Feb 2009 20:26:22 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ecommerce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iPhone</title>
+      <link>https://miroadamy.com/tags/iphone/</link>
+      <pubDate>Tue, 09 Sep 2008 02:08:08 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/iphone/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>objectivec</title>
+      <link>https://miroadamy.com/tags/objectivec/</link>
+      <pubDate>Tue, 02 Sep 2008 23:33:30 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/objectivec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ebooks</title>
+      <link>https://miroadamy.com/tags/ebooks/</link>
+      <pubDate>Mon, 23 Apr 2007 22:42:58 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ebooks/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

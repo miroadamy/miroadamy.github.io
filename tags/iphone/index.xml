@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iPhone on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/iphone/</link>
+    <description>Recent content in iPhone on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 09 Sep 2008 02:08:08 -0400</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/iphone/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Calendar synchronization between iPhone, Google calendars and iCal</title>
+      <link>https://miroadamy.com/posts/2008-09-09-calendar-synchronization-between-iphone-google-calendars-and-ical/</link>
+      <pubDate>Tue, 09 Sep 2008 02:08:08 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-09-09-calendar-synchronization-between-iphone-google-calendars-and-ical/</guid>
+      <description>Here is my situation: I am using three different Macs (Macbook Pro and two iMacs - one at home and occasionally second one at work) and need to keep the contacts and calendars synchronized at least between two of them (MBP and home iMac). I use iPhone which also has calendar and contacts. And in the cloud, there is Google calendar. Actually, more than one: my own calendar and company shared calendar of my colleagues from Thinknostic.</description>
+    </item>
+    
+    <item>
+      <title>More on kCFErrorDomainCFNetwork Error 302</title>
+      <link>https://miroadamy.com/posts/2008-08-28-more-on-kcferrordomaincfnetwork-error-302/</link>
+      <pubDate>Thu, 28 Aug 2008 08:38:19 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-28-more-on-kcferrordomaincfnetwork-error-302/</guid>
+      <description>A friend made me aware of this (thanks, Peter):
+The Inside Deets on iPhone 2.0.2 and Dropped Calls
+http://www.roughlydrafted.com/2008/08/28/the-inside-deets-on-iphone-202-and-dropped-calls/
+Sounds like plausible explanation.
+It is not the network that is fault but the interaction of the bad
+power control algorithm in 2.0 and 2.0.1 software and the network that
+is at fault. The sooner everybody is running 2.0.2 software the better
+things will be. Having seen the graphs the 2.0.2 software has already</description>
+    </item>
+    
+    <item>
+      <title>Rogers, iPhone and the dreaded kCFErrorDomainCFNetwork Error 302</title>
+      <link>https://miroadamy.com/posts/2008-08-23-rogers-iphone-and-the-dreaded-kcferrordomaincfnetwork-error-302/</link>
+      <pubDate>Sat, 23 Aug 2008 22:57:15 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-23-rogers-iphone-and-the-dreaded-kcferrordomaincfnetwork-error-302/</guid>
+      <description>Many people recently (including myself) had experiences difficulties with Web access on the iPhone. Quite often the following error message pops up:
+Usually repeating the web page access helps. Sometimes you have to try third time or wait few minutes.
+This has nothing to do with signal strenght - as you can see, there are 4 bars and 3G is on. I saw it happen on Edge as well. Reseting the phone sometimes helps, but it is hard to say whether because of the reset or time delay .</description>
+    </item>
+    
+    <item>
+      <title>iPhone 3G first impressions: Applications</title>
+      <link>https://miroadamy.com/posts/2008-08-21-iphone-3g-first-impressions-applications/</link>
+      <pubDate>Thu, 21 Aug 2008 02:09:00 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-21-iphone-3g-first-impressions-applications/</guid>
+      <description>Having used Touch 2.0, I managed not to install everything I found in AppStore. Majority of which is crap anyway - people are still learning how to use the platform properly. Pretty soon though, all those flashlights, tip calculators and similar pointless-ware will be replaced by apps that make sense. I hope.
+Just for the reference: here is my iTunes snapshot as of today:
+Some applications are pure time killers (when waiting in line and there is signal to read news online) but some are actually very useful.</description>
+    </item>
+    
+    <item>
+      <title>How to make screenshot of running application on iPhone 3G</title>
+      <link>https://miroadamy.com/posts/2008-08-19-how-to-make-screenshot-of-running-application-on-iphone-3g/</link>
+      <pubDate>Tue, 19 Aug 2008 23:04:37 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-19-how-to-make-screenshot-of-running-application-on-iphone-3g/</guid>
+      <description>It is sooo simple:
+1) Run the app you want to get screenshot of
+2) Press the home button at the same time as On button. Screen will flash white for a sec
+3) Find the picture saved in your photos.
+This is second amazing thing I have found out about iPhone in last few days. First was hidden button on the headphone mike that can start/stop running iPod music, pick up the ringing phone or (doubleclick) advance to next song.</description>
+    </item>
+    
+    <item>
+      <title>Good hard shell case for iPhone 3G</title>
+      <link>https://miroadamy.com/posts/2008-08-17-good-hard-shell-case-for-iphone-3g/</link>
+      <pubDate>Sun, 17 Aug 2008 03:35:12 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-17-good-hard-shell-case-for-iphone-3g/</guid>
+      <description>After carrying in my pocket for 3 days, I have decided to get something to prevent my smallest Mac from scratches and breaking when drops (I did drop the iPod touch and it was close call: one of the edges was scratched and slightly damaged).
+It took some time to decide, but at the end I settled for this one:
+
+In white, of course. It is a bit tricky to put it on, but it feels very solid and does not slip.</description>
+    </item>
+    
+    <item>
+      <title>How to kill iPhone battery in less than 2 hours</title>
+      <link>https://miroadamy.com/posts/2008-08-16-how-to-kill-iphone-battery-in-less-that-2-hours/</link>
+      <pubDate>Sat, 16 Aug 2008 11:58:44 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-16-how-to-kill-iphone-battery-in-less-that-2-hours/</guid>
+      <description>This may be a random event, but here is what happened:
+1) Switch on camera and and take couple of pictures
+2) While camera still on in taking pictures mode, switch off the phone (by the switch on top).
+After doing that, about 1.5 hour later I took out the phone to check the emails. Phone was very warm - not the kind of unpleasantly hot you get from Macbook Pro battery when rendering movie on batery power , but still much warmer than ever.</description>
+    </item>
+    
+    <item>
+      <title>Create own ringtones for iPhone 3G</title>
+      <link>https://miroadamy.com/posts/2008-08-15-create-own-ringtones-for-iphone-3g/</link>
+      <pubDate>Fri, 15 Aug 2008 23:48:00 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-15-create-own-ringtones-for-iphone-3g/</guid>
+      <description>One of the many things that I never did before was actually customizing the phone. Neither of the songs that I really liked for ringtone (and were unique enough) were available of course. I found this website: http://audiko.net/en.html that allows to take an MP3 (one that you legally own, of course) and convert it to ringtone.
+Here is how it works:
+1) Find a suitable MP3
+2) Go to above website, upload MP3</description>
+    </item>
+    
+    <item>
+      <title>Test of the Wordpress and Smugshot applications for iPhone</title>
+      <link>https://miroadamy.com/posts/2008-08-12-test-of-the-wordpress-and-smugshot-applications-for-iphone/</link>
+      <pubDate>Tue, 12 Aug 2008 01:50:57 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-12-test-of-the-wordpress-and-smugshot-applications-for-iphone/</guid>
+      <description>Does it work ?
+We&#39;ll see - blogging from the train
+All the above - including the picture was created and posted on iPhone, using the Wordpress Application (thanks to Peter K. to make me aware of it). I have not used it much, but the first impressions are certainly positive: it works and allows to compose reasonable blog entry, including images on the go. As long as you are fast typist on the miniature keyboard - which I am not, so I will still prefer for longer text the great comfort of Macbook Pro keyboard (probably the best keyboard I have ever used so far).</description>
+    </item>
+    
+    <item>
+      <title>iPhone 3G first impressions: Phone, Battery Life</title>
+      <link>https://miroadamy.com/posts/2008-08-07-iphone-3g-first-impressions-phone-battery-life/</link>
+      <pubDate>Thu, 07 Aug 2008 13:02:56 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-07-iphone-3g-first-impressions-phone-battery-life/</guid>
+      <description>Phone
+The sound of the iPhone is much clearer and generally better than my old RAZR.
+What I really like is a built-in microphone in headphones that allows making and answering calls without holding phone next to your ear. Second is handling of the incoming call while listening to podcast or music: it fades aways and after finishing the call, it slowly fades back in. Very nicely done.
+But the best phone feature is seamless integration with my address book, which thanks to synchronization that works very well always the same as address book on my Mac.</description>
+    </item>
+    
+    <item>
+      <title>iPhone 3G first impressions: Email, Web, Camera, GPS, Data Plan</title>
+      <link>https://miroadamy.com/posts/2008-08-04-iphone-3g-first-impressions-email-web-camera-gps-data-plan/</link>
+      <pubDate>Mon, 04 Aug 2008 23:01:48 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-04-iphone-3g-first-impressions-email-web-camera-gps-data-plan/</guid>
+      <description>continued from here
+Email
+My email information was transferred from Touch as part of the activation process and started to work right away. Very good and functional user interface.
+I also found the mobile Google page (http://www.google.com/m) to be very useful - it adds easy access to small screen optimized versions of the Calendar and Reader. I use Reader a lot, the best feature being that articles I read on ANY device (MBP, Linux desktop, iPhone or even some of the many VM&#39;s I am using)</description>
+    </item>
+    
+    <item>
+      <title>iPhone 3G first impressions: Activation</title>
+      <link>https://miroadamy.com/posts/2008-08-03-iphone-3g-first-impressions-activation/</link>
+      <pubDate>Sun, 03 Aug 2008 23:28:21 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-03-iphone-3g-first-impressions-activation/</guid>
+      <description>There more than enough reviews and opinions on the coolest gadget in the telephony space so what is point o adding another one ? I was originally quite anti-iPhone anti-Rogers for - IMHO - pretty strong reasons, so it is interesting to review them and see how they survived the reality check.
+That maybe not be the strongest reason ... but am going to do that anyway.
+Activation
+I have ordered the phone by calling the 1-888-ROGERS1 and as I mentioned, the shopping experience was for a change a great one .</description>
+    </item>
+    
+    <item>
+      <title>iPod Touch eBooks reader - problem solved</title>
+      <link>https://miroadamy.com/posts/2007-10-18-ipod-touch-ebooks-reader-problem-solved/</link>
+      <pubDate>Thu, 18 Oct 2007 00:31:03 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-18-ipod-touch-ebooks-reader-problem-solved/</guid>
+      <description>As I noticed on Apple Website, the SDK for developing 3rd party applications for iPhone/Touch will be available in February. This solves the biggest problem - offline reading - because with SDK, storing a downloaded copy will be trivial. It also will most likely fix the annoying lack of updatability of calendar and add few more interesting apps.
+It is only matter of time until the other eBook formats will be be readable on iPod - such as CHM or PalmDoc (non-DRM-ed version).</description>
+    </item>
+    
+    <item>
+      <title>iPod touch - finally !</title>
+      <link>https://miroadamy.com/posts/2007-10-12-ipod-touch-finally/</link>
+      <pubDate>Fri, 12 Oct 2007 23:23:42 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-12-ipod-touch-finally/</guid>
+      <description>So, I have finally got it. Only the 8 GB version as the 16 GB were sold out, but I just could not wait for another week :-). After playing with it for about 1.5 hour, I like it even more. The readability of Safari Web sites is excellent - I started to put together some links. Did not try too many sites yet, but the Dzone reads OK :-). Also the PDF book reading is very good - but that is no news.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>security on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/security/</link>
+    <description>Recent content in security on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 24 Jul 2009 19:00:56 -0400</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/security/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Facebook domain type-in hack</title>
+      <link>https://miroadamy.com/posts/2009-07-24-facebook-domain-type-in-hack/</link>
+      <pubDate>Fri, 24 Jul 2009 19:00:56 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-07-24-facebook-domain-type-in-hack/</guid>
+      <description>You know the drill: open browser, new tab, type &#39;www.facebook.com&#39; and in moment you can see who of your online buddies is up to something interesting. This is exactly what I did. Only I did not end up in well known Facebook page, but on something really fishy:
+This is definitely NOT facebook. How come I ended up on &#39;quiz.us&#39; site when I typed in www.facebook.com. Or did I ? Let&#39;s do it again:</description>
+    </item>
+    
+    <item>
+      <title>Why it is probably bad idea to have Skype always on</title>
+      <link>https://miroadamy.com/posts/2007-11-25-why-it-is-probably-bad-idea-to-have-skype-always-on/</link>
+      <pubDate>Sun, 25 Nov 2007 21:17:20 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-25-why-it-is-probably-bad-idea-to-have-skype-always-on/</guid>
+      <description>no, not because of the memory it takes or CPU cycles burned (does not really matter when you have 4 GB notebook with Core2Duo).
+Few days ago, a good friend from old country (well, technically not anymore as he also moved within the EU) made me aware of this presentation &#34;Silver Needle in the Skype&#34; (link points to fairly large PDF file) by Philippe Biondi, &amp;amp; Fabrice Desclaux.
+To fully digest and fully comprehend the content requires way more time than I am willing to invest - and to make meaningful arguments for or against conclusions does require much deeper special knowledge.</description>
+    </item>
+    
+    <item>
+      <title>The price of anonymity</title>
+      <link>https://miroadamy.com/posts/2007-09-17-the-price-of-anonymity/</link>
+      <pubDate>Mon, 17 Sep 2007 00:18:40 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-17-the-price-of-anonymity/</guid>
+      <description>The combination of software allowing anonymous access to the Net, not too competent police officers and laws not quite 21st century ready can be a very dangerous combination. According this story, the operator of the Tor node was arrested by German police ...
+I am quite curious how be would situation like this handled in Canada. First of all, would it happen ? Would the RCMP be more technically up to date than Deutsche Polizei ?</description>
+    </item>
+    
+    <item>
+      <title>Limits of virtualization</title>
+      <link>https://miroadamy.com/posts/2007-07-16-limits-of-virtualization/</link>
+      <pubDate>Mon, 16 Jul 2007 23:14:54 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-07-16-limits-of-virtualization/</guid>
+      <description>It&#39;s been over 10 months since we have started to seriously use virtualization and run Windows inside virtual machine to ease installation and configuration pain. It starting first as convenient measure of isolation two different development environments (.NET 1.1 based and .NET 2.0 based) and avoid &#34;crosspolination&#34; in the data analytics project. At that time, my expectations what would be the limits of what you can or cannot do in virtual environment were mostly around performance, responsiveness and device support (USB especially).</description>
+    </item>
+    
+    <item>
+      <title>Walking season ... and SPAM</title>
+      <link>https://miroadamy.com/posts/2007-03-31-walking-season-and-spam/</link>
+      <pubDate>Sat, 31 Mar 2007 22:10:53 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-31-walking-season-and-spam/</guid>
+      <description>Today I have started the walking season 2007. I did some gentle preparation during the week - few short, 4-5 km strolls around the neighbourhood, but it was today when I really started. It was beautiful day in Ottawa - sunny, temperature around 8-10, so I took off and did 12 km loop through Westboro, down south and around Dow&#39;s Lake up to downtown. Just fantastic. The companion on the road were Security Now!</description>
+    </item>
+    
+    <item>
+      <title>How to recover lost Win XP password</title>
+      <link>https://miroadamy.com/posts/2007-01-16-how-to-recover-lost-win-xp-password/</link>
+      <pubDate>Tue, 16 Jan 2007 23:42:24 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-16-how-to-recover-lost-win-xp-password/</guid>
+      <description>If it ever happens to you that you need to restart old computer which you have not logged on for 2-3 months and you find out you have no clue what the password could be, do not panick. Exactly this happened to me yesterday. Fortunately I have remembered reading something on lifehacker few days ago about bootable CD which contains live Linux distribution with password cracking open source software Ophcrack. It runs from CD only, does not touch your file system, only loads local SAM and tries cracking the hashes.</description>
+    </item>
+    
+    <item>
+      <title>Dealing with digital mess - Part 2: Passwords</title>
+      <link>https://miroadamy.com/posts/2006-12-31-dealing-with-digital-mess-part-2/</link>
+      <pubDate>Sun, 31 Dec 2006 23:48:11 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-31-dealing-with-digital-mess-part-2/</guid>
+      <description>Today&#39;s topic is dealing with sensitive information - such as logins, passwords, PIN numbers, credit card numbers and so on.
+Up to last week, I was using the SplashID software to keep everything worth securing secure. I started to use SplashID back in 2001 when I bought the Palm based Sony Clie SJ30 (as replacement for wonderful Palm IIIxe). The Palm based program came with desktop counterpart that allowed editing of entries.</description>
+    </item>
+    
+  </channel>
+</rss>

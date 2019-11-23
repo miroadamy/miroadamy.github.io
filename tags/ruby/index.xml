@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ruby on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/ruby/</link>
+    <description>Recent content in ruby on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Mar 2016 12:57:35 -0500</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git bits 2</title>
+      <link>https://miroadamy.com/posts/2016-03-23-gitbits2/</link>
+      <pubDate>Wed, 23 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2016-03-23-gitbits2/</guid>
+      <description>Using the Scala source repo to demonstrate - see Github
+Show merged and unmerged branches This command allows you to show all local branches merged / unmerged to current branch
+1 2 3 4 5  ➜ scala git:(2.12.x) git branch -a --merged * 2.12.x remotes/origin/2.11.x remotes/origin/2.12.x remotes/origin/HEAD -&amp;gt; origin/2.12.x  1 2 3 4 5 6 7  ➜ scala git:(2.12.x) git branch -a --no-merged remotes/origin/2.10.x remotes/origin/2.8.x remotes/origin/2.9.x remotes/origin/DarkDimius-patch-1 remotes/origin/gh-pages remotes/origin/legacy/msil   This shows you all local branches merged into named branch:</description>
+    </item>
+    
+    <item>
+      <title>Git - find unmerged commits</title>
+      <link>https://miroadamy.com/posts/2016-03-22-git-unmerged/</link>
+      <pubDate>Tue, 22 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2016-03-22-git-unmerged/</guid>
+      <description>This is Ruby script I found way back and was using it since.
+The credits for creation goes to Zach Dennis. The script is decribed in his blog post
+The source is here
+Example This is beginning of very long output from Groovy source
+The code 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247 248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267 268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287 288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307 308 309 310 311 312 313 314 315 316 317 318 319 320 321 322 323 324 325 326 327 328 329 330 331 332 333 334 335 336 337  #!</description>
+    </item>
+    
+    <item>
+      <title>Bye bye Ruby, hello Groovy</title>
+      <link>https://miroadamy.com/posts/2009-03-17-bye-bye-ruby-hello-groovy/</link>
+      <pubDate>Tue, 17 Mar 2009 19:08:35 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-03-17-bye-bye-ruby-hello-groovy/</guid>
+      <description>I first time discovered Ruby back in 2006 (yes, I know, I was late to the game), and immediately fell in love with it. The dynamic nature of the language, the consistency, pure esthaetics and practicality certainly changed the way how I saw software development and programming languages.
+Since that time, I made several attempts to integrate Ruby into my professional life and make it part of the toolbox. It was cool to play with Ruby in my spare time, but I wanted to use it on projects whose main development language/platform was mainly Java.</description>
+    </item>
+    
+    <item>
+      <title>Rails 2 - really good tutorial</title>
+      <link>https://miroadamy.com/posts/2008-03-25-rails-2-really-good-tutorial/</link>
+      <pubDate>Tue, 25 Mar 2008 23:09:55 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-03-25-rails-2-really-good-tutorial/</guid>
+      <description>Akita published two part tutorial that leads you through building the famous 15 minute blog application in Rails 2.0. Read the parts one and two - or follow the screencast by the same author.
+Thanks a lot, Akita - very nicely done !</description>
+    </item>
+    
+    <item>
+      <title>Starting Ruby on Rails 2 with Netbeans and AWDWR book</title>
+      <link>https://miroadamy.com/posts/2008-03-17-starting-ruby-on-rails-2-with-netbeans-and-awdwr-book/</link>
+      <pubDate>Mon, 17 Mar 2008 20:11:08 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-03-17-starting-ruby-on-rails-2-with-netbeans-and-awdwr-book/</guid>
+      <description>After some break, I got back to Rails land. The return is not as smooth as I hoped: since Rails 2.0, many things work differently and quite a few steps learned from &#34;The Book&#34; do not work any more. The issues are more often than not quite easy to fix, but there is quite a few of them.
+All the following is related to NetbeansRuby build 6327 from Jan 26th with JRuby 1.</description>
+    </item>
+    
+    <item>
+      <title>Showstopper issue with JRuby ?</title>
+      <link>https://miroadamy.com/posts/2008-03-16-showstopper-issue-with-jruby/</link>
+      <pubDate>Sun, 16 Mar 2008 23:36:26 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-03-16-showstopper-issue-with-jruby/</guid>
+      <description>After some break, I dusted off the Ruby to try out one interesting idea Peter presented yesterday that literally ASKS for Rails. So I grabbed the latest and greatest RubyNetBeans from Ruby Hudson. For some reason it stopped updates on January 26th so the latest version I have got was build 6327. It is bundled with JRuby 1.1RC1 and the Rails version that comes preinstalled is 1.2.6. Using the menu Tools -&amp;gt; Ruby Gems, they can be easily upgraded to latest and greatest 2.</description>
+    </item>
+    
+    <item>
+      <title>JRuby - keeping your database.yml really DRY</title>
+      <link>https://miroadamy.com/posts/2008-01-03-jruby-keeping-your-databaseyml-really-dry/</link>
+      <pubDate>Thu, 03 Jan 2008 11:15:26 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-01-03-jruby-keeping-your-databaseyml-really-dry/</guid>
+      <description>I am experimenting in JRuby and use database in virtual machine (VMWare Fusion). This is great because you can have multiple versions of multiple databases ready without polluting the notebook. One downsize though is that IP address of the database will change between the VM restarts.
+First important setting in Fusion is to use the &#39;NAT&#39; option rather than &#39;Bridged&#39;. With NAT, you database host IP address will not follow the network.</description>
+    </item>
+    
+    <item>
+      <title>JRuby trunk - issues with JDBC connectivity</title>
+      <link>https://miroadamy.com/posts/2007-12-28-jruby-trunk-issues-with-jdbc-connectivity/</link>
+      <pubDate>Fri, 28 Dec 2007 22:24:37 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-28-jruby-trunk-issues-with-jdbc-connectivity/</guid>
+      <description>Following the book on JRuby I am discovering small differences when trying the examples. After installing activerecord-jdbc gem which is available in version 0.5, the shoplet application fails with Rails 2.0, as soon as you click on the &#39;About your application environment&#39; link.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38  =&amp;gt; Booting Mongrel (use &amp;#39;script/server webrick&amp;#39; to force WEBrick) =&amp;gt; Rails application starting on http://0.</description>
+    </item>
+    
+    <item>
+      <title>Installation of Mongrel gem on JRuby</title>
+      <link>https://miroadamy.com/posts/2007-12-23-installation-of-mongrel-gem-on-jruby/</link>
+      <pubDate>Sun, 23 Dec 2007 20:22:50 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-23-installation-of-mongrel-gem-on-jruby/</guid>
+      <description>I bought the Ola Bini&amp;rsquo;s eBook on JRuby and started to work through the examples. The installation of the Mongrel gem in JRuby (trunk revision 5341 fails with the following error code:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  $ jruby -S gem install -y mongrel&amp;gt; INFO: `gem install -y` is now default and will be removed&amp;gt; INFO: use --ignore-dependencies to install only the gems you list&amp;gt; Building native extensions.</description>
+    </item>
+    
+    <item>
+      <title>Free PDF ebook &#39;Build your own Ruby on Rails Application&#39;</title>
+      <link>https://miroadamy.com/posts/2007-10-02-free-pdf-ebook-build-your-own-ruby-on-rails-application/</link>
+      <pubDate>Tue, 02 Oct 2007 23:09:17 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-02-free-pdf-ebook-build-your-own-ruby-on-rails-application/</guid>
+      <description>For sixty more days (actually 59 days and 17 hours as of Time.now, or if you prefer to speak Javaish rather than Rubyish, new java.util.Date()) you will be able to download free PDF version of the book by Patrick Lenz Build Your Own Ruby on Rails Web Applications - courtesy of nice guys of Sitepoint.
+The book download page is here, no strings attached - all it will cost you is disclosing an email address (book download link will be emailed to you) and bandwidth to get the 20 MB PDF.</description>
+    </item>
+    
+    <item>
+      <title>Petstore for Ruby/JRuby</title>
+      <link>https://miroadamy.com/posts/2007-10-01-petstore-for-rubyjruby/</link>
+      <pubDate>Mon, 01 Oct 2007 23:27:37 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-01-petstore-for-rubyjruby/</guid>
+      <description>There is - after all - a Petstore implementation for Ruby. Somebody asked a question at the DZone and the response posted by Raphael Valyi was:
+Re: Is there a Pet Store in Grails/Rails? I&#39;m speaking here for the Rails (JRuby) side:
+there is actually a petstore, it can be found there:
+http://viewvc.rubyforge.mmmultiworks.com/cgi/viewvc.cgi/?root=tw-commons
+Some guys used it to compare C-Ruby vs JRuby performance:
+http://www.nabble.com/JRuby-vs-MRI---Petstore-shootout-t4289470.html</description>
+    </item>
+    
+    <item>
+      <title>Ruby is in top ten programming languages</title>
+      <link>https://miroadamy.com/posts/2007-09-30-ruby-is-in-top-ten-programming-languages/</link>
+      <pubDate>Sun, 30 Sep 2007 23:04:14 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-30-ruby-is-in-top-ten-programming-languages/</guid>
+      <description>According to the TIOBE Programming Community index (which gives an indication of the popularity of programming languages), Ruby jumped 3 places and made it to top ten. Congratulations !
+If you look closely on the trends down on the page, the dynamically languages popularity has risen over 3.6% during year period. Which is A Good Thing (TM).
+Should I make my personal Top Ten of the programming languages, ordering languages by my degree of comfort of using the language, the language beauty (which is, in the eye of the beholder ;-)).</description>
+    </item>
+    
+    <item>
+      <title>Netbeans Ruby IDE - great tool getting even better !</title>
+      <link>https://miroadamy.com/posts/2007-06-24-netbeans-ruby-ide-great-tool-getting-even-better/</link>
+      <pubDate>Sun, 24 Jun 2007 23:08:11 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-24-netbeans-ruby-ide-great-tool-getting-even-better/</guid>
+      <description>I have spent last two days (and few evenings before) playing with Rails and using Netbeans Ruby IDE. What a great experience ! Unlike before, it is so much easier to have really good debugger that allows put breakpoints not only into the Ruby code in controllers and model - but even into the RHTML view files !
+Netbeans team works hard on improving the tool. With latest build - 2434, I have noticed great addition - Rails console.</description>
+    </item>
+    
+    <item>
+      <title>BOTD: Railscast</title>
+      <link>https://miroadamy.com/posts/2007-06-19-botd-railscast/</link>
+      <pubDate>Tue, 19 Jun 2007 22:06:03 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-19-botd-railscast/</guid>
+      <description>Today&#39;s blog of the day is not really a blog, but a screencast. Dedicated to Ruby on Rails, the Railscast offers (as of today) 46 episodes of short, targeted practical advice on various aspects of Rails development.
+Unlike some other screencasts who try to record the screen action as MPEG movie, this one is perfectly legible. In addition to the Rails enlightenment, you can also enjoy the speed and aesthetics of using TextMate - with many great Ruby editing shortcuts and beautiful OS-X typography.</description>
+    </item>
+    
+    <item>
+      <title>Swing-ing back - to Netbeans</title>
+      <link>https://miroadamy.com/posts/2007-06-11-swing-ing-back-to-netbeans/</link>
+      <pubDate>Mon, 11 Jun 2007 22:22:35 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-11-swing-ing-back-to-netbeans/</guid>
+      <description>It has been quite some time since I used a Swing based Java application. Compared to beauty and close-to-native feeling of Eclipse based application, Swing just did not feel right - it looked differently and behaved a bit differently. For long time, my desktop was Swing-free (not counting the JDK demo). Not any more, though.
+What made me to reconsider, is new release of the Netbeans v 6. In the latest milestone builds (M6 to M9), Netbeans team built amazing Ruby development environment.</description>
+    </item>
+    
+    <item>
+      <title>Martin Fowler&#39;s article on Ruby and Microsoft</title>
+      <link>https://miroadamy.com/posts/2007-06-03-martin-fowlers-article-on-ruby-and-microsoft/</link>
+      <pubDate>Sun, 03 Jun 2007 22:25:44 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-03-martin-fowlers-article-on-ruby-and-microsoft/</guid>
+      <description>There has been lots of interesting news related to Microsof and Ruby recently, mostly about DLR&#39;s support of dynamic languages. One of my favorite tech authors stirred the waters once again last Friday with an article that goes beyond this and tries to paint larger picture of the uneasy relation between Ruby platform, Agile movement, OpenSource Community and Microsoft.
+One quote from the article:
+The attitude to open-source is a large part of this problem.</description>
+    </item>
+    
+    <item>
+      <title>Code in Ruby under ASP.NET: coming soon ?</title>
+      <link>https://miroadamy.com/posts/2007-06-02-code-in-ruby-under-aspnet-coming-soon/</link>
+      <pubDate>Sat, 02 Jun 2007 22:33:27 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-02-code-in-ruby-under-aspnet-coming-soon/</guid>
+      <description>The support for using dynamic languages such as Ruby or Python to code ASP.NET pages was announced for future versions of ASP.NET in the ASP.NET futures.
+Unless I am mistaken, it means that we eventually will be able to write control event handlers in Python or even Ruby - which is certainly more fun than in VB.NET or even in C#, but is it really so important ?
+What would be *really* cool if the whole ASP.</description>
+    </item>
+    
+    <item>
+      <title>Rails&#39; ideas everywhere</title>
+      <link>https://miroadamy.com/posts/2007-05-09-rails-ideas-everywhere/</link>
+      <pubDate>Wed, 09 May 2007 22:22:10 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-09-rails-ideas-everywhere/</guid>
+      <description>Since I got through &#34;Rails immersion&#34;, I keep seeing the implementations of the same idea everywhere. Latest find is Subsonic, which implements Active Records in .NET space. Rather than writing more, see this screencast.</description>
+    </item>
+    
+    <item>
+      <title>Best book for Ruby on Rails</title>
+      <link>https://miroadamy.com/posts/2007-05-07-best-book-for-ruby-on-rails/</link>
+      <pubDate>Mon, 07 May 2007 20:41:16 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-07-best-book-for-ruby-on-rails/</guid>
+      <description>During last two weeks I have been reading and playing a lot with Rails. Now I am in the state where I think I started to &#34;get it&#34; and understand how things work under the surface. Which means I am ready actually start using the framework for real work and become proficient as I get my hands dirty.
+To get to this state, absolutely essential and by far the best book is the classic one - Agile Web development with Rails co-authored by the original Rails designer and one of the Pragmatic Programmers.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft is getting more dynamic</title>
+      <link>https://miroadamy.com/posts/2007-05-01-microsoft-is-getting-more-dynamic/</link>
+      <pubDate>Tue, 01 May 2007 22:08:12 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-01-microsoft-is-getting-more-dynamic/</guid>
+      <description>at least as the programming language languages are concerned. One of the things that will be presented on the MIX07 is Dynamic Language Runtime, a new platform suitable to host high level, dynamic languages such as Python and Ruby. For Python, there is already pretty decent .NET implementation - namely IronPython. What is coming now is IronPython 2.0 based on the DLR as well as - yesss - IronRuby.
+It is great that this is happening.</description>
+    </item>
+    
+    <item>
+      <title>Accessing SQL Server 2005 from Ruby</title>
+      <link>https://miroadamy.com/posts/2007-04-25-accessing-sql-server-2005-from-ruby/</link>
+      <pubDate>Wed, 25 Apr 2007 23:58:13 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-25-accessing-sql-server-2005-from-ruby/</guid>
+      <description>The natural gravity of our environment keeps pulling me out of scripting and Ruby world back to .Net zone :-). Out of curiosity, I looked into how easy or hard is it to access other database from Ruby, than the default MySQL which dominates all books, samples and tutorials.
+I have found three ways (at least), one likely platform independent and two Windows only. The platform independent requires module ADO.rb and works with the DBI interface.</description>
+    </item>
+    
+    <item>
+      <title>In praise of the polyglot</title>
+      <link>https://miroadamy.com/posts/2007-04-24-in-praise-of-the-polyglot/</link>
+      <pubDate>Tue, 24 Apr 2007 23:55:34 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-24-in-praise-of-the-polyglot/</guid>
+      <description>If you&#39;ve ever envied the ability of multilingual friends to bridge language gaps wherever they travel or gained new appreciation for your native language by learning a new one, then you can probably see the advantage of being a programming language polyglot. Developer polyglots travel the IT world more freely than do monolinguists (sure that they can apply their skills in any environment), and they also tend to better appreciate the programming language called home, because among other things they know the roots from which that home is sprung.</description>
+    </item>
+    
+    <item>
+      <title>Gems and bookmarks</title>
+      <link>https://miroadamy.com/posts/2007-04-09-gems-and-bookmarks/</link>
+      <pubDate>Mon, 09 Apr 2007 22:36:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-09-gems-and-bookmarks/</guid>
+      <description>This was one great weekend ! Easter should be more often than once a year, I guess. Unlike Christmas, there was no shopping craziness before and much less overeating danger. Not counting overdose of chocolate, of course, but that&#39;s OK.
+I managed do mostly nothing for about one day - up to Friday evening. Then I dived into the Ruby and Ruby on Rails world. After reading this and one third of this book, I like Ruby even more.</description>
+    </item>
+    
+    <item>
+      <title>Couple of things I really like about Ruby</title>
+      <link>https://miroadamy.com/posts/2007-04-01-couple-of-things-i-really-like-about-ruby/</link>
+      <pubDate>Sun, 01 Apr 2007 22:45:29 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-01-couple-of-things-i-really-like-about-ruby/</guid>
+      <description>I guess it is too early to write any more systematic opinion about the language you know less than 10 days, but after reading the Programming Ruby 2nd edition (thank you, Safari Books) I have found out that I actually do like couple of Ruby features a lot. Your mileage may vary - what speaks here is my Java/C#/C++/C/Python/Perl background and bias. Here there are my favorite Ruby-isms (so far) in no particular order:</description>
+    </item>
+    
+    <item>
+      <title>Managing knowledge portfolio</title>
+      <link>https://miroadamy.com/posts/2007-03-25-managing-knowledge-portfolio/</link>
+      <pubDate>Sun, 25 Mar 2007 22:50:43 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-25-managing-knowledge-portfolio/</guid>
+      <description>There are few technical books which you enjoy first time you read them, remember the experience and keep coming back. One of such classic books is The Pragmatic Programmer - from journeyman to master - by David Thomas and Andrew Hunt. If you have not read it, get it, it is worth every cent. Since the book was written - ages ago, back in 2000 - it did not loose anything of its freshness and value - which one cannot say about most of technical books written earlier than 2-3 years ago.</description>
+    </item>
+    
+  </channel>
+</rss>
