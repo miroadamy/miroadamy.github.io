@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>From Jekyll to Hugo - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="I have decided to consolidate all piecemeal versions of my blogpost uder one roof and at the same to do these four things
+ technology upgrade - from Jekyll to Hugo visual refresh of the page review tagging and categorization merge hidden posts from Wikis to one place  Why Hugo replaced Jekyll The version 3 of my blog (see below for a bit of history) has been hosted on Github pages and using the default static site generators - Jekyll." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="From Jekyll to Hugo" />
+<meta property="og:description" content="I have decided to consolidate all piecemeal versions of my blogpost uder one roof and at the same to do these four things
+ technology upgrade - from Jekyll to Hugo visual refresh of the page review tagging and categorization merge hidden posts from Wikis to one place  Why Hugo replaced Jekyll The version 3 of my blog (see below for a bit of history) has been hosted on Github pages and using the default static site generators - Jekyll." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/" />
+<meta property="article:published_time" content="2019-11-20T23:22:48+08:00" />
+<meta property="article:modified_time" content="2019-11-20T23:22:48+08:00" />
+<meta itemprop="name" content="From Jekyll to Hugo">
+<meta itemprop="description" content="I have decided to consolidate all piecemeal versions of my blogpost uder one roof and at the same to do these four things
+ technology upgrade - from Jekyll to Hugo visual refresh of the page review tagging and categorization merge hidden posts from Wikis to one place  Why Hugo replaced Jekyll The version 3 of my blog (see below for a bit of history) has been hosted on Github pages and using the default static site generators - Jekyll.">
+
+
+<meta itemprop="datePublished" content="2019-11-20T23:22:48&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-20T23:22:48&#43;08:00" />
+<meta itemprop="wordCount" content="882">
+
+
+
+<meta itemprop="keywords" content="blog,hugo,jekyll," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="From Jekyll to Hugo"/>
+<meta name="twitter:description" content="I have decided to consolidate all piecemeal versions of my blogpost uder one roof and at the same to do these four things
+ technology upgrade - from Jekyll to Hugo visual refresh of the page review tagging and categorization merge hidden posts from Wikis to one place  Why Hugo replaced Jekyll The version 3 of my blog (see below for a bit of history) has been hosted on Github pages and using the default static site generators - Jekyll."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">From Jekyll to Hugo</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-11-20 </span>
+        <div class="post-category">
+            <a href="/categories/general/"> general </a>
+            </div>
+          <span class="more-meta"> 882 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#why-hugo-replaced-jekyll">Why Hugo replaced Jekyll</a></li>
+<li><a href="#a-bit-of-history">A bit of history</a>
+<ul>
+<li><a href="#version-1-wordpress">Version 1 - Wordpress</a></li>
+<li><a href="#version-2-2-blogs-in-wordpress">Version 2 - 2 blogs in Wordpress</a></li>
+<li><a href="#version-2-5-gollum-and-github-wiki">Version 2.5 - Gollum and Github Wiki</a></li>
+<li><a href="#version-3-jekyll-and-github-pages-with-custom-domain">Version 3 - Jekyll and Github pages with custom domain</a></li>
+<li><a href="#version-4-hugo-with-github-pages-hosting">Version 4 - Hugo with Github pages hosting</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>I have decided to consolidate all piecemeal versions of my blogpost uder one roof and at the same to do these four things</p>
+
+<ol>
+<li>technology upgrade - from Jekyll to Hugo</li>
+<li>visual refresh of the page</li>
+<li>review tagging and categorization</li>
+<li>merge hidden posts from Wikis to one place</li>
+</ol>
+
+<h2 id="why-hugo-replaced-jekyll">Why Hugo replaced Jekyll</h2>
+
+<p>The version 3 of my blog (see below for a bit of history) has been hosted on <a href="https://pages.github.com/">Github pages</a> and using the default static site generators - <a href="https://jekyllrb.com/">Jekyll</a>.</p>
+
+<h2 id="a-bit-of-history">A bit of history</h2>
+
+<p>I started to keep my notes on things of interest long long time ago - in 2006, shortly after we founded Thinknostic.</p>
+
+<h3 id="version-1-wordpress">Version 1 - Wordpress</h3>
+
+<p>When I started blogging back in 2006, it was Thinknostic second year and we started to really grow:  we got our own space beyond small sales office in downtown we have had before, built some serious hardware infrastructure, employee numbers started to go into two digit territory and we landed our first 1 M$+ project. My blog at <a href="http://thinkwrap.wordpress.com/">http://thinkwrap.wordpress.com/</a> was our unofficial presence in the social space. In 2006 I picked the login and account name “thinkwrap”, because it was – at that time – a word that kind-of expressed the approach we were using: something between methodology, best practices and a toolset.</p>
+
+<p>In the three years, the same word ThinkWrap was selected as the new brand when Thinknostic in Ottawa and Pentura Solutions in Toronto (both “second life” companies of Montage origin) merged.  Now suddenly, with “thinkwrap” in URL,  my blog became whole lot more company-bound that I wanted. As everybody can see on dropping rate of contributions, I found pretty hard to post. I was never quite sure whether I really want to present my personal opinion to appear under ThinkWrap brand as something that the company would be saying. Even worse, now we were several times the size as before, with headcount of about 50 – who was I to speak for all these people, when there were so many smarter, more talented and more experienced than myself ?</p>
+
+<p>As result, the whole blog thing came to a big halt – no posts for over 6 months. The only solution I could come up with was restart. Thus, a new, real corporate blog was created in 2009 that represented way more than single guy’s opinion. I was one of the contributors.</p>
+
+<p>The blog <a href="http://thinkwrap.wordpress.com/">http://thinkwrap.wordpress.com/</a> is still out there and ends in 2009 with
+the post <a href="https://thinkwrap.wordpress.com/2009/12/29/the-fork-at-the-end-of-this-blog/">The Fork at the end of this blog</a>.</p>
+
+<p>The <a href="https://blog.thinkwrap.com/">https://blog.thinkwrap.com/</a> evolved over years into something much more corporate-ish and enterprise-ish and eventually disappeared with Thinkwrap purchase of</p>
+
+<h3 id="version-2-2-blogs-in-wordpress">Version 2 - 2 blogs in Wordpress</h3>
+
+<p>After halting the <a href="http://thinkwrap.wordpress.com/">http://thinkwrap.wordpress.com/</a> for my personal stuff, I have exported and reimported the content into different WordPress blog and hooked it under domain that clearly indicates that it was my personal blog and personal opinions: <a href="https://miroadamy.wordpress.com/">https://miroadamy.wordpress.com/</a></p>
+
+<p>This blog is still out there and it&rsquo;s &ldquo;separate existence&rdquo; started with <a href="https://miroadamy.wordpress.com/2009/12/30/blog-reloade/">this post</a> in December 2009.</p>
+
+<p>Compared with the first blog, there is much less content. I was not really writing less, but most of what I wrote ended up in Wiki&rsquo;s and Intranet and never made it to the blog.</p>
+
+<p>Also, Wordpress was more and more an obstacle - and the fact that my texts live in some form of database instead of a source control system was really bugging me. So in 2013 I made first attempt to leave Wordpress platform and switch to repository driven approach (today we would say &ldquo;blog as a code&rdquo;).</p>
+
+<p>During this time, I become bit fan of plain text and markup formats and lots of my notes, internal blogs etc were originating as Markdown or AsciiDoc - which turned up to be a good thing in the end.</p>
+
+<h3 id="version-2-5-gollum-and-github-wiki">Version 2.5 - Gollum and Github Wiki</h3>
+
+<p>Well, the first attempt did not take. I tried to use Wiki pages in Github attached to the repository <a href="https://github.com/miroadamy/miroadamy-dot-com">https://github.com/miroadamy/miroadamy-dot-com</a>. It did not work well - wiki is NOT good platform for this kind of content - and after short time I learned how to use Github pages with custom domain. The miroadamy-dot-com is archived now.</p>
+
+<h3 id="version-3-jekyll-and-github-pages-with-custom-domain">Version 3 - Jekyll and Github pages with custom domain</h3>
+
+<p>The blog <a href="https://miroadamy.com/">https://miroadamy.com/</a> existed in Jekyll incarnation from 2013 to November 2019. The look and feel was a bit plain and lots of posts were not included in the public version. It worked OK (mostly).</p>
+
+<p>I had three major issues with with this setup:</p>
+
+<ul>
+<li>Jekyll is based on Ruby and I was trying to go away from the environments that need native modules / libraries (== gems) - I have enough headaches with Python libraries and JARs. Local development with Jekyll was a bit cumbersome and it was SLOW =&gt; regenerating site took tens of seconds. Not good.</li>
+<li>consolidation of the internal Markdown files would be quite unpleasant with the above</li>
+<li>I really wanted to try Hugo :-)</li>
+</ul>
+
+<h3 id="version-4-hugo-with-github-pages-hosting">Version 4 - Hugo with Github pages hosting</h3>
+
+<p>This is current state - site was migrated (see next post on technical details) and published in the place of the old site. For visual refresh, I settled for the theme Even - <a href="https://github.com/olOwOlo/hugo-theme-even">https://github.com/olOwOlo/hugo-theme-even</a>. I do not know whether I will keep it or not, but before playing with themes I need to finish #4 and #3 above.</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-11-20
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/blog/">blog</a>
+          <a href="/tags/hugo/">hugo</a>
+          <a href="/tags/jekyll/">jekyll</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/posts/2019-11-07-all-day-devops/">
+            <span class="next-text nav-default">All Day DevOps 2019</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
