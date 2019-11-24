@@ -6,10 +6,19 @@
     <description>Recent content in Categories on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Nov 2019 23:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2019 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>programming</title>
+      <link>https://miroadamy.com/categories/programming/</link>
+      <pubDate>Fri, 22 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/programming/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>general</title>
@@ -35,15 +44,6 @@
       <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/events/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programming</title>
-      <link>https://miroadamy.com/categories/programming/</link>
-      <pubDate>Mon, 05 Sep 2016 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/categories/programming/</guid>
       <description></description>
     </item>
     

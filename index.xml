@@ -6,7 +6,7 @@
     <description>Recent content on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Nov 2019 23:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2019 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,6 +22,18 @@ Im am DevOps/Cloud engineer, living in beautiful Valencia, Spain and spending my
 Resume My current resume can be downloaded from here as PDF
 Contact Email me - firstname dot lastname, at Sergei&amp;rsquo;s and Larry&amp;rsquo;s company&amp;rsquo;s email
 Disclaimer The thoughts and opinions expressed in this blog are mine and do not represent the position of my employer.</description>
+    </item>
+    
+    <item>
+      <title>Current Hugo setup on Github Pages</title>
+      <link>https://miroadamy.com/posts/2019-11-22-hugo-setup/</link>
+      <pubDate>Fri, 22 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-22-hugo-setup/</guid>
+      <description>How does the blog setup and publishing work Before I forget, here is how the current configuration works.
+There are two repositories at play:
+ source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io  The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
+The Githup pages repo contains generated static site, with index.</description>
     </item>
     
     <item>

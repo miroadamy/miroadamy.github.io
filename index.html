@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2019-11-20T23:22:48+08:00" />
+<meta property="og:updated_time" content="2019-11-22T11:22:48+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -116,6 +116,32 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2019-11-22-hugo-setup/">Current Hugo setup on Github Pages</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-11-22 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 548 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      How does the blog setup and publishing work Before I forget, here is how the current configuration works.
+There are two repositories at play:
+ source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io  The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
+The Githup pages repo contains generated static site, with index.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2019-11-22-hugo-setup/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2019-11-20-from-jekyll-to-hugo/">From Jekyll to Hugo</a></h1>
@@ -212,33 +238,6 @@ Unsuccesfull path - keep the Python 2.7 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 1
     </div>
     <div class="read-more">
       <a href="/posts/2017-11-14-install-aws-cli-mac/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-09-05-git-update-all-local-branches/">Update all local branches in Git repo</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-09-05 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 780 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Update all local branches in Git repo Issue: The git pull updates just one current branch.
-In DevOps I am following many Git repos and need to keep up to date for all local branches.
-git ffwd-update command Source: http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches
-Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36  #!
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-09-05-git-update-all-local-branches/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

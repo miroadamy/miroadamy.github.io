@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Nov 2019 23:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2019 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Current Hugo setup on Github Pages</title>
+      <link>https://miroadamy.com/posts/2019-11-22-hugo-setup/</link>
+      <pubDate>Fri, 22 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-22-hugo-setup/</guid>
+      <description>How does the blog setup and publishing work Before I forget, here is how the current configuration works.
+There are two repositories at play:
+ source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io  The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
+The Githup pages repo contains generated static site, with index.</description>
+    </item>
     
     <item>
       <title>From Jekyll to Hugo</title>
