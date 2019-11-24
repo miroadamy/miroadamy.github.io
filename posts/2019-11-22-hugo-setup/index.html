@@ -59,7 +59,7 @@ The Githup pages repo contains generated static site, with index.">
 
 <meta itemprop="datePublished" content="2019-11-22T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2019-11-22T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="548">
+<meta itemprop="wordCount" content="1550">
 
 
 
@@ -143,8 +143,8 @@ The Githup pages repo contains generated static site, with index."/>
         <div class="post-category">
             <a href="/categories/programming/"> programming </a>
             </div>
-          <span class="more-meta"> 548 words </span>
-          <span class="more-meta"> 3 mins read </span>
+          <span class="more-meta"> 1550 words </span>
+          <span class="more-meta"> 8 mins read </span>
         
       </div>
     </header>
@@ -322,13 +322,251 @@ Press Ctrl+C to stop</pre></td></tr></table>
 <p>When the content looks good, we generate the static content into <code>./public</code>. This writes new content to the GHPR repo. Here are the steps used for this article:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
+<pre class="chroma"><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
 </span></pre></td>
 <td class="lntd">
 <pre class="chroma"># In the source repository
@@ -337,7 +575,280 @@ Press Ctrl+C to stop</pre></td></tr></table>
 
 # Note the added file - we have validated that all is OK by running `hugo serve` and localhost:1313
 ➜  miroadamy.com git:(master) ✗ gss
-?? content/posts/2019-11-22-hugo-setup.md</pre></td></tr></table>
+?? content/posts/2019-11-22-hugo-setup.md
+
+# Now we generate the site
+
+➜  miroadamy.com git:(master) ✗ hugo
+
+                   | EN
++------------------+-----+
+  Pages            | 527
+  Paginator pages  | 149
+  Non-page files   |   1
+  Static files     | 200
+  Processed images |   0
+  Aliases          |  41
+  Sitemaps         |   1
+  Cleaned          |   0
+
+Total in 679 ms
+
+# Note that there is additonal change - the `public` link has been modified
+
+# We are now in context of source repo:
+
+➜  miroadamy.com git:(master) ✗ git remote -v
+origin  git@github.com:miro.adamy/miroadamy.com.git (fetch)
+origin  git@github.com:miro.adamy/miroadamy.com.git (push)
+
+# Go to public =&gt; here we will be in context of GHPR
+
+➜  miroadamy.com git:(master) ✗ cd public
+➜  public git:(master) ✗ git remote -v
+origin  git@github.com:miroadamy/miroadamy.github.io.git (fetch)
+origin  git@github.com:miroadamy/miroadamy.github.io.git (push)
+
+# The generator modified  lots of files and added some. We need to commit these changes
+
+➜  public git:(master) ✗ git add .
+➜  public git:(master) ✗ git status
+On branch master
+Your branch is up-to-date with &#39;origin/master&#39;.
+Changes to be committed:
+  (use &#34;git reset HEAD &lt;file&gt;...&#34; to unstage)
+
+    modified:   categories/index.html
+    modified:   categories/index.xml
+    modified:   categories/programming/index.html
+    modified:   categories/programming/index.xml
+    modified:   index.html
+    modified:   index.xml
+    modified:   page/10/index.html
+    modified:   page/11/index.html
+    modified:   page/12/index.html
+    modified:   page/13/index.html
+    modified:   page/14/index.html
+    modified:   page/15/index.html
+    modified:   page/16/index.html
+    modified:   page/17/index.html
+    modified:   page/18/index.html
+    modified:   page/19/index.html
+    modified:   page/2/index.html
+    modified:   page/20/index.html
+    modified:   page/21/index.html
+    modified:   page/22/index.html
+    modified:   page/23/index.html
+    modified:   page/24/index.html
+    modified:   page/25/index.html
+    modified:   page/26/index.html
+    modified:   page/27/index.html
+    modified:   page/28/index.html
+    modified:   page/29/index.html
+    modified:   page/3/index.html
+    modified:   page/30/index.html
+    modified:   page/31/index.html
+    modified:   page/32/index.html
+    modified:   page/33/index.html
+    modified:   page/34/index.html
+    modified:   page/35/index.html
+    modified:   page/36/index.html
+    modified:   page/37/index.html
+    modified:   page/38/index.html
+    modified:   page/39/index.html
+    modified:   page/4/index.html
+    modified:   page/40/index.html
+    modified:   page/41/index.html
+    modified:   page/42/index.html
+    modified:   page/43/index.html
+    modified:   page/44/index.html
+    modified:   page/45/index.html
+    modified:   page/46/index.html
+    modified:   page/47/index.html
+    modified:   page/48/index.html
+    modified:   page/49/index.html
+    modified:   page/5/index.html
+    modified:   page/50/index.html
+    modified:   page/51/index.html
+    modified:   page/52/index.html
+    modified:   page/53/index.html
+    modified:   page/54/index.html
+    modified:   page/55/index.html
+    modified:   page/56/index.html
+    modified:   page/57/index.html
+    modified:   page/58/index.html
+    modified:   page/59/index.html
+    modified:   page/6/index.html
+    modified:   page/60/index.html
+    modified:   page/61/index.html
+    modified:   page/62/index.html
+    modified:   page/63/index.html
+    modified:   page/64/index.html
+    modified:   page/65/index.html
+    modified:   page/66/index.html
+    modified:   page/67/index.html
+    modified:   page/68/index.html
+    modified:   page/69/index.html
+    modified:   page/7/index.html
+    modified:   page/70/index.html
+    modified:   page/71/index.html
+    modified:   page/72/index.html
+    modified:   page/73/index.html
+    modified:   page/74/index.html
+    modified:   page/75/index.html
+    modified:   page/76/index.html
+    modified:   page/77/index.html
+    modified:   page/78/index.html
+    modified:   page/79/index.html
+    modified:   page/8/index.html
+    modified:   page/80/index.html
+    modified:   page/81/index.html
+    modified:   page/82/index.html
+    modified:   page/83/index.html
+    modified:   page/84/index.html
+    modified:   page/85/index.html
+    modified:   page/86/index.html
+    modified:   page/87/index.html
+    modified:   page/88/index.html
+    modified:   page/9/index.html
+    modified:   posts/2019-11-20-from-jekyll-to-hugo/index.html
+    new file:   posts/2019-11-22-hugo-setup/index.html
+    new file:   posts/2029-01-01-post.md.template
+    modified:   posts/index.html
+    modified:   posts/index.xml
+    modified:   posts/page/10/index.html
+    modified:   posts/page/11/index.html
+    modified:   posts/page/12/index.html
+    modified:   posts/page/13/index.html
+    modified:   posts/page/14/index.html
+    modified:   posts/page/15/index.html
+    modified:   posts/page/16/index.html
+    modified:   posts/page/17/index.html
+    modified:   posts/page/18/index.html
+    modified:   posts/page/19/index.html
+    modified:   posts/page/2/index.html
+    modified:   posts/page/20/index.html
+    modified:   posts/page/21/index.html
+    modified:   posts/page/22/index.html
+    modified:   posts/page/23/index.html
+    modified:   posts/page/24/index.html
+    modified:   posts/page/25/index.html
+    modified:   posts/page/26/index.html
+    modified:   posts/page/27/index.html
+    modified:   posts/page/28/index.html
+    modified:   posts/page/29/index.html
+    modified:   posts/page/3/index.html
+    modified:   posts/page/30/index.html
+    modified:   posts/page/31/index.html
+    modified:   posts/page/32/index.html
+    modified:   posts/page/33/index.html
+    modified:   posts/page/34/index.html
+    modified:   posts/page/35/index.html
+    modified:   posts/page/36/index.html
+    modified:   posts/page/37/index.html
+    modified:   posts/page/38/index.html
+    modified:   posts/page/39/index.html
+    modified:   posts/page/4/index.html
+    modified:   posts/page/40/index.html
+    modified:   posts/page/41/index.html
+    modified:   posts/page/42/index.html
+    modified:   posts/page/43/index.html
+    modified:   posts/page/44/index.html
+    modified:   posts/page/5/index.html
+    modified:   posts/page/6/index.html
+    modified:   posts/page/7/index.html
+    modified:   posts/page/8/index.html
+    modified:   posts/page/9/index.html
+    modified:   sitemap.xml
+    modified:   tags/blog/index.html
+    modified:   tags/blog/index.xml
+    modified:   tags/blog/page/2/index.html
+    modified:   tags/blog/page/3/index.html
+    modified:   tags/index.html
+    modified:   tags/index.xml
+
+
+# Make local commit
+
+➜  public git:(master) ✗ git commit -m &#34;Published the Hugo setup article&#34;
+[master cd95809] Published the Hugo setup article
+ 148 files changed, 3219 insertions(+), 2638 deletions(-)
+ create mode 100644 posts/2019-11-22-hugo-setup/index.html
+ create mode 100644 posts/2029-01-01-post.md.template
+
+# Publish site on Github
+
+➜  public git:(master) git push
+Counting objects: 291, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (157/157), done.
+Writing objects: 100% (291/291), 131.31 KiB | 0 bytes/s, done.
+Total 291 (delta 150), reused 0 (delta 0)
+remote: Resolving deltas: 100% (150/150), completed with 61 local objects.
+To github.com:miroadamy/miroadamy.github.io.git
+   676432b..cd95809  master -&gt; master
+
+# Now the static site was updated but the source needs to be as well
+
+➜  miroadamy.com git:(master) ✗ git status
+On branch master
+Your branch is ahead of &#39;origin/master&#39; by 1 commit.
+  (use &#34;git push&#34; to publish your local commits)
+Changes not staged for commit:
+  (use &#34;git add &lt;file&gt;...&#34; to update what will be committed)
+  (use &#34;git checkout -- &lt;file&gt;...&#34; to discard changes in working directory)
+
+    modified:   public (new commits)
+
+Untracked files:
+  (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
+
+    content/posts/2019-11-22-hugo-setup.md
+
+no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)
+
+# We add the changes to source - new changed file as well as the &#39;public&#39; link
+➜  miroadamy.com git:(master) ✗ git add .
+
+➜  miroadamy.com git:(master) ✗ git commit -m &#34;Published the Hugo setup article source&#34;
+[master f078d54] Published the Hugo setup article source
+ 2 files changed, 352 insertions(+), 1 deletion(-)
+ create mode 100644 content/posts/2019-11-22-hugo-setup.md</pre></td></tr></table>
+</div>
+</div>
+<p>And we are done</p>
+
+<p>It can be automated to this small script:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"><span class="cp">#!/bin/bash
+</span><span class="cp"></span>
+<span class="nv">MESSAGE</span><span class="o">=</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="s1">&#39;Published changes&#39;</span><span class="si">}</span>
+
+hugo
+<span class="nb">cd</span> public
+git add .
+git commit -m <span class="s2">&#34;</span><span class="nv">$MESSAGE</span><span class="s2">&#34;</span>
+git push
+<span class="nb">cd</span> ..
+git add .
+git commit -m <span class="s2">&#34;</span><span class="si">${</span><span class="nv">MESSAGE</span><span class="si">}</span><span class="s2"> - source&#34;</span>
+git push</pre></td></tr></table>
 </div>
 </div>
     </div>
