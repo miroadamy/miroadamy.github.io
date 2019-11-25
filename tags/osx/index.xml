@@ -94,6 +94,29 @@ Eclipse There is opensource plugin for it at https://github.</description>
     </item>
     
     <item>
+      <title>Performance issues with Quicklook in OS-X Lion</title>
+      <link>https://miroadamy.com/posts/2013-02-23-perf-quicklook-lion/</link>
+      <pubDate>Sat, 23 Feb 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-02-23-perf-quicklook-lion/</guid>
+      <description>I have been experiencing issues with Quicklook (press Space on file in Finder or Pathfinder) for some time: it took several second, sometimes 10-15 to show content of simple 1K large property file.
+It turned out that on of the QuickLook plugins, installed originally way back in Leopard and brought ahead with TimeMachine restores could have been the reason: the QLStephen.
+For more on that plugin see:
+ http://whomwah.github.com/qlstephen/ https://github.com/whomwah/qlstephen  To remove the plugin, go to ~/Library/QuickLook and delete the file (it is the bundle) QLStephen.</description>
+    </item>
+    
+    <item>
+      <title>Fixing Git plugin for Sublime Text 2</title>
+      <link>https://miroadamy.com/posts/2012-09-21-post/</link>
+      <pubDate>Fri, 21 Sep 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-09-21-post/</guid>
+      <description>After update, the ST2 started to complain about missing git command.
+Finding out Git on MBP:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  platform $ which git git is /usr/bin/git git is /usr/local/bin/git platform $ git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/bin/git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/local/bin/git --version git version 1.7.3.2   Fix the the Package file in /Users/miro/Library/Application Support/Sublime Text 2/Packages/Git - Git.</description>
+    </item>
+    
+    <item>
       <title>Admin tool goodies</title>
       <link>https://miroadamy.com/posts/2012-05-29-admin-tool-goodies/</link>
       <pubDate>Tue, 29 May 2012 11:22:48 +0800</pubDate>
@@ -102,6 +125,40 @@ Eclipse There is opensource plugin for it at https://github.</description>
       <description>tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &amp;hellip; again.
 Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
 1 2 3 4 5 6 7 8 9 10  547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups.</description>
+    </item>
+    
+    <item>
+      <title>Homelessness is over, moved in</title>
+      <link>https://miroadamy.com/posts/2012-05-13-homelessness-over/</link>
+      <pubDate>Sun, 13 May 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-05-13-homelessness-over/</guid>
+      <description>Being two weeks without &amp;ldquo;permanent computer home&amp;rdquo; and living among old Helios, MacMini, temp repair and Web was interesting experience. I certainly remember most of my Web passwords (again).
+Got my new MacBook Pro replacement yesterday. Pretty sweet upgrade: quad-core i7 @ 2.4, 8 GB RAM, 750 GB HDD 7200 RPM, Thunderbolt. Noticeably faster but also a bit louder - runs fans more often, maybe it is just while Spotlight does index everything ?</description>
+    </item>
+    
+    <item>
+      <title>Using MacVim as git editor</title>
+      <link>https://miroadamy.com/posts/2012-04-09-macvim-git/</link>
+      <pubDate>Mon, 09 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-04-09-macvim-git/</guid>
+      <description>Add this to .bashrc  export GIT_EDITOR=&amp;lsquo;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &amp;lsquo;
+ The key is -f, without it git will abort because of empty commit message.</description>
+    </item>
+    
+    <item>
+      <title>How to make unregistered files work in Quick View on OS-X</title>
+      <link>https://miroadamy.com/posts/2012-04-08-quickview/</link>
+      <pubDate>Sun, 08 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-04-08-quickview/</guid>
+      <description>Out of the box Quick View (press Space in Finder) behaviour on unregistered files is not very useful: it shows huge Unix icon instead of content of file.
+This is default for files like Makefile or build.gradle
+This plugin makes it go away and show text file for all UTIs that are plain text: http://whomwah.github.com/qlstephen/
+Installation: * open the DMG file * copy QLStephen.qlgenerator to /Users/&amp;lt;&amp;lt;USERNAME&amp;gt;&amp;gt;/Library/QuickLook/QLStephen.qlgenerator
+That&amp;rsquo;s it.
+Now it looks like this:</description>
     </item>
     
     <item>

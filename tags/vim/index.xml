@@ -24,5 +24,15 @@ The plugin is OS-X specific, because the DashDoc is
 Eclipse There is opensource plugin for it at https://github.</description>
     </item>
     
+    <item>
+      <title>Using MacVim as git editor</title>
+      <link>https://miroadamy.com/posts/2012-04-09-macvim-git/</link>
+      <pubDate>Mon, 09 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-04-09-macvim-git/</guid>
+      <description>Add this to .bashrc  export GIT_EDITOR=&amp;lsquo;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &amp;lsquo;
+ The key is -f, without it git will abort because of empty commit message.</description>
+    </item>
+    
   </channel>
 </rss>

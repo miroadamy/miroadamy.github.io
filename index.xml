@@ -386,6 +386,18 @@ and it is back:</description>
     </item>
     
     <item>
+      <title>Performance issues with Quicklook in OS-X Lion</title>
+      <link>https://miroadamy.com/posts/2013-02-23-perf-quicklook-lion/</link>
+      <pubDate>Sat, 23 Feb 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-02-23-perf-quicklook-lion/</guid>
+      <description>I have been experiencing issues with Quicklook (press Space on file in Finder or Pathfinder) for some time: it took several second, sometimes 10-15 to show content of simple 1K large property file.
+It turned out that on of the QuickLook plugins, installed originally way back in Leopard and brought ahead with TimeMachine restores could have been the reason: the QLStephen.
+For more on that plugin see:
+ http://whomwah.github.com/qlstephen/ https://github.com/whomwah/qlstephen  To remove the plugin, go to ~/Library/QuickLook and delete the file (it is the bundle) QLStephen.</description>
+    </item>
+    
+    <item>
       <title>GVM</title>
       <link>https://miroadamy.com/posts/2013-01-08-gvm/</link>
       <pubDate>Tue, 08 Jan 2013 11:22:48 +0800</pubDate>
@@ -394,6 +406,44 @@ and it is back:</description>
       <description>Installed GVM from:
 http://gvmtool.net
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46  ~ $ curl -s get.gvmtool.net | bash Thanks for using _____/\\\\\\\\\\\\__/\\\________/\\\__/\\\\____________/\\\\_ ___/\\\//////////__\/\\\_______\/\\\_\/\\\\\\________/\\\\\\_ __/\\\_____________\//\\\______/\\\__\/\\\//\\\____/\\\//\\\_ _\/\\\____/\\\\\\\__\//\\\____/\\\___\/\\\\///\\\/\\\/_\/\\\_ _\/\\\___\/////\\\___\//\\\__/\\\____\/\\\__\///\\\/___\/\\\_ _\/\\\_______\/\\\____\//\\\/\\\_____\/\\\____\///_____\/\\\_ _\/\\\_______\/\\\_____\//\\\\\______\/\\\_____________\/\\\_ _\//\\\\\\\\\\\\/_______\//\\\_______\/\\\_____________\/\\\_ __\////////////__________\///________\///______________\///__ Will now attempt installing.</description>
+    </item>
+    
+    <item>
+      <title>Discovered Trello</title>
+      <link>https://miroadamy.com/posts/2012-11-12-trello/</link>
+      <pubDate>Mon, 12 Nov 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-11-12-trello/</guid>
+      <description>Finally a todo/task/project management system that is very good fit.
+Here is why:
+ is pretty visually modern and dynamic UI has Web back-end (usable from Linux VM) has decent iPhone app allows checklists (multiple) allows color coding Markdown support ecosystem  There is Gmello that allows create card from GMail, plus few others that seem to bridge the gap between Evernote, System XYZ and Trello
+http://trello.com
+Courtesy of Fog Creek / Joel Spolsky&amp;rsquo;s company</description>
+    </item>
+    
+    <item>
+      <title>Custom build of MacVim with file drawer - pure bliss</title>
+      <link>https://miroadamy.com/posts/2012-10-07-macvim/</link>
+      <pubDate>Sun, 07 Oct 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-10-07-macvim/</guid>
+      <description>OK, NERDTree plugin IS great, but this is awesome.
+Alloy made custom version of MacVim with file drawer: see https://github.com/alloy/macvim/wiki/Building
+It is available in source - so you have to compile it yourselves. But if you do not want to, I did it and the binary is attached, built with these features:
+ ./configure &amp;ndash;with-feature=huge &amp;ndash;enable-rubyinterp &amp;ndash;enable-pythoninterp &amp;ndash;enable-perlinterp &amp;ndash;enable-cscope
+ Archive is attached: MacVim.zip
+If you want to get my set of plugins and customizations, it is on GitHub: - https://github.</description>
+    </item>
+    
+    <item>
+      <title>Fixing Git plugin for Sublime Text 2</title>
+      <link>https://miroadamy.com/posts/2012-09-21-post/</link>
+      <pubDate>Fri, 21 Sep 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-09-21-post/</guid>
+      <description>After update, the ST2 started to complain about missing git command.
+Finding out Git on MBP:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  platform $ which git git is /usr/bin/git git is /usr/local/bin/git platform $ git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/bin/git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/local/bin/git --version git version 1.7.3.2   Fix the the Package file in /Users/miro/Library/Application Support/Sublime Text 2/Packages/Git - Git.</description>
     </item>
     
     <item>
@@ -417,6 +467,53 @@ Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-pla
       <description>tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &amp;hellip; again.
 Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
 1 2 3 4 5 6 7 8 9 10  547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups.</description>
+    </item>
+    
+    <item>
+      <title>Homelessness is over, moved in</title>
+      <link>https://miroadamy.com/posts/2012-05-13-homelessness-over/</link>
+      <pubDate>Sun, 13 May 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-05-13-homelessness-over/</guid>
+      <description>Being two weeks without &amp;ldquo;permanent computer home&amp;rdquo; and living among old Helios, MacMini, temp repair and Web was interesting experience. I certainly remember most of my Web passwords (again).
+Got my new MacBook Pro replacement yesterday. Pretty sweet upgrade: quad-core i7 @ 2.4, 8 GB RAM, 750 GB HDD 7200 RPM, Thunderbolt. Noticeably faster but also a bit louder - runs fans more often, maybe it is just while Spotlight does index everything ?</description>
+    </item>
+    
+    <item>
+      <title>GitHub identity mixup</title>
+      <link>https://miroadamy.com/posts/2012-04-15-github/</link>
+      <pubDate>Sun, 15 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-04-15-github/</guid>
+      <description>After I created the ThinkWrap GitHub account and uploaded the public key, this key got somehow bound to GitHub identity &amp;lsquo;madamy&amp;rsquo;
+I had to add user madamy to my public GitHub repo - where I keep the dot-files - https://github.com/radegast/dotvim
+This may be an issue for people that have their own private accounts - the key management is the key.
+This article is useful:
+ http://sealedabstract.com/code/github-ssh-with-multiple-identities-the-slightly-more-definitive-guide/ http://net.tutsplus.com/tutorials/tools-and-tips/how-to-work-with-github-and-multiple-accounts/  Alternative Use https for forking , instead read/write ssh.</description>
+    </item>
+    
+    <item>
+      <title>Using MacVim as git editor</title>
+      <link>https://miroadamy.com/posts/2012-04-09-macvim-git/</link>
+      <pubDate>Mon, 09 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-04-09-macvim-git/</guid>
+      <description>Add this to .bashrc  export GIT_EDITOR=&amp;lsquo;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &amp;lsquo;
+ The key is -f, without it git will abort because of empty commit message.</description>
+    </item>
+    
+    <item>
+      <title>How to make unregistered files work in Quick View on OS-X</title>
+      <link>https://miroadamy.com/posts/2012-04-08-quickview/</link>
+      <pubDate>Sun, 08 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-04-08-quickview/</guid>
+      <description>Out of the box Quick View (press Space in Finder) behaviour on unregistered files is not very useful: it shows huge Unix icon instead of content of file.
+This is default for files like Makefile or build.gradle
+This plugin makes it go away and show text file for all UTIs that are plain text: http://whomwah.github.com/qlstephen/
+Installation: * open the DMG file * copy QLStephen.qlgenerator to /Users/&amp;lt;&amp;lt;USERNAME&amp;gt;&amp;gt;/Library/QuickLook/QLStephen.qlgenerator
+That&amp;rsquo;s it.
+Now it looks like this:</description>
     </item>
     
     <item>

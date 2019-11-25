@@ -22,5 +22,18 @@ I had 3 challenges to overcome related to co-existence of GH and GL versions:
  I need to use same repo for both GH and GL the submodule link for public does not work on GL the site root is different - I have no custom domain forward for GitLab  Using same repo To separate the GH and GL, I have added 2 remotes to repo and special branch gitlab-pages.</description>
     </item>
     
+    <item>
+      <title>GitHub identity mixup</title>
+      <link>https://miroadamy.com/posts/2012-04-15-github/</link>
+      <pubDate>Sun, 15 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-04-15-github/</guid>
+      <description>After I created the ThinkWrap GitHub account and uploaded the public key, this key got somehow bound to GitHub identity &amp;lsquo;madamy&amp;rsquo;
+I had to add user madamy to my public GitHub repo - where I keep the dot-files - https://github.com/radegast/dotvim
+This may be an issue for people that have their own private accounts - the key management is the key.
+This article is useful:
+ http://sealedabstract.com/code/github-ssh-with-multiple-identities-the-slightly-more-definitive-guide/ http://net.tutsplus.com/tutorials/tools-and-tips/how-to-work-with-github-and-multiple-accounts/  Alternative Use https for forking , instead read/write ssh.</description>
+    </item>
+    
   </channel>
 </rss>

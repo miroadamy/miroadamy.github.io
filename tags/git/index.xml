@@ -135,6 +135,54 @@ Just for git commands:
     </item>
     
     <item>
+      <title>Custom build of MacVim with file drawer - pure bliss</title>
+      <link>https://miroadamy.com/posts/2012-10-07-macvim/</link>
+      <pubDate>Sun, 07 Oct 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-10-07-macvim/</guid>
+      <description>OK, NERDTree plugin IS great, but this is awesome.
+Alloy made custom version of MacVim with file drawer: see https://github.com/alloy/macvim/wiki/Building
+It is available in source - so you have to compile it yourselves. But if you do not want to, I did it and the binary is attached, built with these features:
+ ./configure &amp;ndash;with-feature=huge &amp;ndash;enable-rubyinterp &amp;ndash;enable-pythoninterp &amp;ndash;enable-perlinterp &amp;ndash;enable-cscope
+ Archive is attached: MacVim.zip
+If you want to get my set of plugins and customizations, it is on GitHub: - https://github.</description>
+    </item>
+    
+    <item>
+      <title>Fixing Git plugin for Sublime Text 2</title>
+      <link>https://miroadamy.com/posts/2012-09-21-post/</link>
+      <pubDate>Fri, 21 Sep 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-09-21-post/</guid>
+      <description>After update, the ST2 started to complain about missing git command.
+Finding out Git on MBP:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  platform $ which git git is /usr/bin/git git is /usr/local/bin/git platform $ git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/bin/git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/local/bin/git --version git version 1.7.3.2   Fix the the Package file in /Users/miro/Library/Application Support/Sublime Text 2/Packages/Git - Git.</description>
+    </item>
+    
+    <item>
+      <title>GitHub identity mixup</title>
+      <link>https://miroadamy.com/posts/2012-04-15-github/</link>
+      <pubDate>Sun, 15 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-04-15-github/</guid>
+      <description>After I created the ThinkWrap GitHub account and uploaded the public key, this key got somehow bound to GitHub identity &amp;lsquo;madamy&amp;rsquo;
+I had to add user madamy to my public GitHub repo - where I keep the dot-files - https://github.com/radegast/dotvim
+This may be an issue for people that have their own private accounts - the key management is the key.
+This article is useful:
+ http://sealedabstract.com/code/github-ssh-with-multiple-identities-the-slightly-more-definitive-guide/ http://net.tutsplus.com/tutorials/tools-and-tips/how-to-work-with-github-and-multiple-accounts/  Alternative Use https for forking , instead read/write ssh.</description>
+    </item>
+    
+    <item>
+      <title>Using MacVim as git editor</title>
+      <link>https://miroadamy.com/posts/2012-04-09-macvim-git/</link>
+      <pubDate>Mon, 09 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-04-09-macvim-git/</guid>
+      <description>Add this to .bashrc  export GIT_EDITOR=&amp;lsquo;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &amp;lsquo;
+ The key is -f, without it git will abort because of empty commit message.</description>
+    </item>
+    
+    <item>
       <title>Few gitbits to remember</title>
       <link>https://miroadamy.com/posts/2012-03-25-few-git-tricks/</link>
       <pubDate>Sun, 25 Mar 2012 15:43:48 +0800</pubDate>

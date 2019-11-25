@@ -118,109 +118,113 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-04-24-a-false-hang-of-finder/">A false &#34;hang&#34; of Finder</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-05-15-fix-for-idvd-08-crash-after-the-start/">Fix for iDVD 08 crash after the start</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2008-04-24 </span>
+      <span class="post-time"> 2008-05-15 </span>
       
-        <span class="more-meta"> 154 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Yesterday, I have noticed interesting thing related to Finder and "beach ball of the death". Suddenly, for no obvious reason, the top menu became unavailable and cursor changed to beachball every time I moved it there. The Bluetooth mouse stopped responding. Finder stopped responding. All symptoms as if Finder would hanging ...
-The cause of the issue was crash of unrelated application (iShowU, if you are curious), which brought up the crash report window.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-04-24-a-false-hang-of-finder/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-04-21-agile-development-team-member-mantra/">Agile development team member mantra</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-04-21 </span>
-      
-        <span class="more-meta"> 171 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Introducing code review and pair programming has often an impact on relationships in the team - especially when a critique needs to be delivered. It takes great degree of experience on both sides to communicate defects in the code for both the reviewer as well as for the code author to get something useful out of it.
-I found this at http://www.finetix.com/blogs/finetixblogs.html which can be helpful (page is 404-ing now, but I luckily saved it in Google Docs way back) :
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-04-21-agile-development-team-member-mantra/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-04-20-weird-kind-of-spam-that-passes-through-akismet/">Weird kind of spam that passes through Akismet</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-04-20 </span>
-      
-        <span class="more-meta"> 208 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Spam has always been a big problem for all blogs. Fortunately, worpress.com provides wonderfull Akismet spam filter which is works amazingly well. I do have switched on moderation for all comments, to make sure no spam gets through, but without Akismet it would be impossible to manage it because of the spam volume. Since I started this blog (August 2006), it caught over 17'000 (yes, seventeen thousands) spam posts. In other words, about 30 spam comments a day or almost 60 spam comments per published post.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-04-20-weird-kind-of-spam-that-passes-through-akismet/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-04-17-heroes-happened-here/">Heroes Happened ... here</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-04-17 </span>
-      
-        <span class="more-meta"> 886 words </span>
-        <span class="more-meta"> 5 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Last week I attended one day event organized by Microsoft named Heroes Happens Here. It is series of introduction targeting new products: Windows Server 2008 (not out yet) SQL Server 2008 (not out yet) and Visual Studio 2008 (out and well).
-I do not do much Microsoft development these days - my world is currently rather unevenly divided between Java (about 70 %), Web-ish technologies (XHTML, CSS, JavaScript, some Ruby) and OS-X (Objective C) which I am trying to squeeze in and get finally started.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-04-17-heroes-happened-here/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-04-16-the-dark-screen-club/">The dark screen club</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-04-16 </span>
-      
-        <span class="more-meta"> 215 words </span>
+        <span class="more-meta"> 244 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      It happened few days ago for the first time: after opening the lid on my MacBook Pro, the machine woke up, but the screen stayed dark. Whatever I did, I just could see cursor and nothing underneath. I had to resort to unthinkable - reboot :-(
-Some research showed this is known problem - which is from certain point of view good, because many people found hopefully many workarounds. The more information can be found here, here and here.
+      Today I tried for the first time the iDVD 08 with intention to create DVD version of the screencast - just to find out that the application dies right after the start. From the error report (thanks for that) the problem was in missing dependency Oxygene framework - a module similar to Windows DLL. Here is the error message:
+[sourcecode language='xml']
+Link (dyld) error:
+Library not loaded: @executable_path/../Frameworks/Oxygene.framework/Versions/A/Oxygene
+Referenced from: /Applications/iDVD.
     </div>
     <div class="read-more">
-      <a href="/posts/2008-04-16-the-dark-screen-club/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-05-15-fix-for-idvd-08-crash-after-the-start/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-05-13-imovie-08-and-mystery-of-disappearing-project-library/">iMovie 08 and mystery of disappearing Project Library</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-05-13 </span>
+      
+        <span class="more-meta"> 434 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      As if the yesterday's Firmware update issue was not enough, I had very strange experience with iMovie 08. Suddenly, for no obvious particular reason the user interface became very unresponsive, I was not able to select project in project library. Switching Event library and Project windows on or off stopped working. Windows were not redrawn properly. Creating new project had no visible effect. I could not click on project to select it (well, technically I *could* click, but nothing happened).
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-05-13-imovie-08-and-mystery-of-disappearing-project-library/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-05-12-mac-firmware-update/">Mac firmware update</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-05-12 </span>
+      
+        <span class="more-meta"> 217 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Today I (finally) found out that Apple pushed the long expected Java update with Java 6 for OS-X. Together with this update was another one - Firmware update. I installed both, but on next login, the same firmware update showed up again and checking the firmware version with System Profiler has shown that it was not updated.
+So I installed firmware update again, and rebooted. But nothing happened again.
+After some googling, I found out that the Firmware update - unlike all other updates does NOT really install itself.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-05-12-mac-firmware-update/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-05-08-catching-up-with-hanselminutes/">Catching up with Hanselminutes</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-05-08 </span>
+      
+        <span class="more-meta"> 254 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Thanks to great weather, the walking season is in full progress :-) and that means I was able to add some more listening material to my podcast collection. I still keep track with all part of TWIT network - This week in tech, Security Now!, MacBreak Weekly and Windows Weekly - but that is nowhere close enough for both walking and driving ...
+I have returned back to listening to Scott Hanselman blog (Hanselminutes) - mostly out of curiosity how did working for Microsoft change is very balanced and realistic view of technologies.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-05-08-catching-up-with-hanselminutes/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-05-04-cocoa-programming-for-mac-os-x-third-edition-is-out/">Cocoa Programming for Mac OS X, Third Edition is out</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-05-04 </span>
+      
+        <span class="more-meta"> 113 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      as long as you are Safari Books online subscriber - see it here.
+Completely updated with XCode 3.x and Objective C 2.0. The screenshots even show the iPhone project templates, indicating the XCode 3.1 in some places. So far the only difference against reality I have found is not covering the XIB resource format (which is generated by default) and sticking with NIB. This blog entry has good explanation of the difference.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-05-04-cocoa-programming-for-mac-os-x-third-edition-is-out/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
