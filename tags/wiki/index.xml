@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wiki on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/wiki/</link>
+    <description>Recent content in wiki on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 07 Apr 2012 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/wiki/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>GitHub &#43; Gollum vs BitBucket Wiki</title>
+      <link>https://miroadamy.com/posts/2012-04-07-gollum/</link>
+      <pubDate>Sat, 07 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-04-07-gollum/</guid>
+      <description>both Wikis are backed by Git repo both allow local edit  Gollum See https://github.com/github/gollum#readme
+Installation: http://alblue.bandlem.com/2011/05/git-tip-of-week-gollum.html
+ sudo gem install gollum
+ Running 1 2 3  git init TestWiki gollum --page-file-dir wiki TestWiki openurl http://localhost:4567   Parsers - separate install 1 2  gem install rdiscount gem install wikicloth   Get Wiki for repo 1 2 3 4 5 6  git clone URL URL: - git@github.</description>
+    </item>
+    
+  </channel>
+</rss>

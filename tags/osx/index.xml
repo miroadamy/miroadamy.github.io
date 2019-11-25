@@ -94,6 +94,17 @@ Eclipse There is opensource plugin for it at https://github.</description>
     </item>
     
     <item>
+      <title>Admin tool goodies</title>
+      <link>https://miroadamy.com/posts/2012-05-29-admin-tool-goodies/</link>
+      <pubDate>Tue, 29 May 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-05-29-admin-tool-goodies/</guid>
+      <description>tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &amp;hellip; again.
+Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
+1 2 3 4 5 6 7 8 9 10  547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups.</description>
+    </item>
+    
+    <item>
       <title>Better GMail than GMail</title>
       <link>https://miroadamy.com/posts/2011-02-11-better-gmail-than-gmail/</link>
       <pubDate>Fri, 11 Feb 2011 23:38:05 -0500</pubDate>

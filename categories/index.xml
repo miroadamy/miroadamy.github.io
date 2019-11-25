@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Programming</title>
+      <title>programming</title>
       <link>https://miroadamy.com/categories/programming/</link>
       <pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
       
@@ -39,7 +39,7 @@
     </item>
     
     <item>
-      <title>events</title>
+      <title>Events</title>
       <link>https://miroadamy.com/categories/events/</link>
       <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
       
@@ -71,6 +71,24 @@
       <pubDate>Fri, 17 Aug 2012 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/ecommerce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>admin</title>
+      <link>https://miroadamy.com/categories/admin/</link>
+      <pubDate>Tue, 29 May 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/admin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>documentation</title>
+      <link>https://miroadamy.com/categories/documentation/</link>
+      <pubDate>Sat, 07 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/documentation/</guid>
       <description></description>
     </item>
     

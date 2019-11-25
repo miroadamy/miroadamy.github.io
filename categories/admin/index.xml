@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>admin on Miro&#39;s World</title>
+    <link>https://miroadamy.com/categories/admin/</link>
+    <description>Recent content in admin on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 29 May 2012 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/categories/admin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Admin tool goodies</title>
+      <link>https://miroadamy.com/posts/2012-05-29-admin-tool-goodies/</link>
+      <pubDate>Tue, 29 May 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-05-29-admin-tool-goodies/</guid>
+      <description>tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &amp;hellip; again.
+Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
+1 2 3 4 5 6 7 8 9 10  547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups.</description>
+    </item>
+    
+  </channel>
+</rss>

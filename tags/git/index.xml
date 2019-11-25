@@ -106,6 +106,25 @@ Just for git commands:
     </item>
     
     <item>
+      <title>Replace BSD grep with GNU grep</title>
+      <link>https://miroadamy.com/posts/2014-11-02-bsd-grep-gnu/</link>
+      <pubDate>Sun, 02 Nov 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-11-02-bsd-grep-gnu/</guid>
+      <description>If annoyed with: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  ➜ ~ echo $PATH | tr &amp;#39;:&amp;#39; &amp;#39;\n&amp;#39; /usr/local/opt/coreutils/libexec/gnubin /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin /opt/ant/bin /opt/groovy/bin /opt/gradle/bin /Users/miro/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /usr/texbin # YEs I am using GNU core utils but grep is not there # The issue ➜ ~ grep --version grep (BSD grep) 2.</description>
+    </item>
+    
+    <item>
+      <title>Keepass-Node install</title>
+      <link>https://miroadamy.com/posts/2014-10-03-keepas-node/</link>
+      <pubDate>Fri, 03 Oct 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-10-03-keepas-node/</guid>
+      <description>See https://github.com/gesellix/keepass-node
+1 2  ➜ keepass-node git:(master) pwd /Users/miro/src/PLG/keepass-node   Install 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107  ➜ keepass-node git:(master) ✗ sudo npm install Password: &amp;gt; dejavu@0.</description>
+    </item>
+    
+    <item>
       <title>Difference between matching and simple Git push</title>
       <link>https://miroadamy.com/posts/2013-12-31-difference-between-matching-and-simple-git-push/</link>
       <pubDate>Tue, 31 Dec 2013 16:41:38 -0500</pubDate>
@@ -127,6 +146,17 @@ git push origin experimental
 This is the same as:
 git push origin experimental:refs/heads/experimental
 Create the branch experimental in the origin repository by copying the current experimental branch.</description>
+    </item>
+    
+    <item>
+      <title>How to fix the remote origin from read only</title>
+      <link>https://miroadamy.com/posts/2012-03-21-remote-origin/</link>
+      <pubDate>Wed, 21 Mar 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-03-21-remote-origin/</guid>
+      <description>Issue In dotvim repo, I used readonly URL for cloning the repository. Now I have created local branch ( linux-vm ) to track Linux specific font settings and need them to push up.
+After creating new SSH pair and adding to GitHub, does not work
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41  [tkuser@cplx-dev-vf .</description>
     </item>
     
     <item>

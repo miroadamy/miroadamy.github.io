@@ -25,6 +25,17 @@ Eclipse There is opensource plugin for it at https://github.</description>
     </item>
     
     <item>
+      <title>GVM</title>
+      <link>https://miroadamy.com/posts/2013-01-08-gvm/</link>
+      <pubDate>Tue, 08 Jan 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-01-08-gvm/</guid>
+      <description>Installed GVM from:
+http://gvmtool.net
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46  ~ $ curl -s get.gvmtool.net | bash Thanks for using _____/\\\\\\\\\\\\__/\\\________/\\\__/\\\\____________/\\\\_ ___/\\\//////////__\/\\\_______\/\\\_\/\\\\\\________/\\\\\\_ __/\\\_____________\//\\\______/\\\__\/\\\//\\\____/\\\//\\\_ _\/\\\____/\\\\\\\__\//\\\____/\\\___\/\\\\///\\\/\\\/_\/\\\_ _\/\\\___\/////\\\___\//\\\__/\\\____\/\\\__\///\\\/___\/\\\_ _\/\\\_______\/\\\____\//\\\/\\\_____\/\\\____\///_____\/\\\_ _\/\\\_______\/\\\_____\//\\\\\______\/\\\_____________\/\\\_ _\//\\\\\\\\\\\\/_______\//\\\_______\/\\\_____________\/\\\_ __\////////////__________\///________\///______________\///__ Will now attempt installing.</description>
+    </item>
+    
+    <item>
       <title>Tomcat 5 not reloading changes in JSP</title>
       <link>https://miroadamy.com/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/</link>
       <pubDate>Sun, 24 Jul 2011 17:33:34 -0400</pubDate>

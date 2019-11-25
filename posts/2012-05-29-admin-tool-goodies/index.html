@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Admin tool goodies - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &amp;hellip; again.
+Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
+1 2 3 4 5 6 7 8 9 10  547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2012-05-29-admin-tool-goodies/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Admin tool goodies" />
+<meta property="og:description" content="tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &hellip; again.
+Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
+1 2 3 4 5 6 7 8 9 10  547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2012-05-29-admin-tool-goodies/" />
+<meta property="article:published_time" content="2012-05-29T11:22:48+08:00" />
+<meta property="article:modified_time" content="2012-05-29T11:22:48+08:00" />
+<meta itemprop="name" content="Admin tool goodies">
+<meta itemprop="description" content="tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &hellip; again.
+Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
+1 2 3 4 5 6 7 8 9 10  547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups.">
+
+
+<meta itemprop="datePublished" content="2012-05-29T11:22:48&#43;08:00" />
+<meta itemprop="dateModified" content="2012-05-29T11:22:48&#43;08:00" />
+<meta itemprop="wordCount" content="1597">
+
+
+
+<meta itemprop="keywords" content="tools,commandline,osx," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Admin tool goodies"/>
+<meta name="twitter:description" content="tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &hellip; again.
+Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
+1 2 3 4 5 6 7 8 9 10  547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Admin tool goodies</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-05-29 </span>
+        <div class="post-category">
+            <a href="/categories/admin/"> admin </a>
+            </div>
+          <span class="more-meta"> 1597 words </span>
+          <span class="more-meta"> 8 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#tmutil">tmutil</a></li>
+<li><a href="#diff">Diff</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="tmutil">tmutil</h2>
+
+<p>The tmutil - everything to know about Time machine backups.
+For example, why is the MBP backing up 4.3 GB &hellip; again.</p>
+
+<p>Lion only. See <a href="http://www.macgurulounge.com/see-which-files-time-machine-backed-up/">http://www.macgurulounge.com/see-which-files-time-machine-backed-up/</a> for Snow Leopard and before.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">547  tmutil
+548  tmutil help
+549  tmutil help listbackups
+550  tmutil listbackups
+551  tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449
+552  tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/
+553  tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/
+554  tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-130159/
+555  tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449
+556  tmutil compare /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449</pre></td></tr></table>
+</div>
+</div>
+<p>### here is why:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"> ~ $ tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-13
+2012-05-27-130159/ 2012-05-27-131532/
+~ $ tmutil compare /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449
+! 5.4K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Library/Application Support/CrashPlan/conf/service.model
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Library/Application Support/CrashReporter
+! 18.6K   (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Library/Application Support/CrashReporter/DiagnosticMessagesHistory.plist
+! 7.2K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Library/Application Support/CrashReporter/SubmitDiagInfo.domains
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Library/Preferences
+! 713B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Library/Preferences/com.apple.TimeMachine.plist
+! 503B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Library/Preferences/com.apple.applepushserviced.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Desktop
++ 55.2K                         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Desktop/Screen Shot 2012-05-27 at 1.36.29 PM.png
+! 102.0K  (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Desktop/.DS_Store
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Documents/Microsoft User Data/Office 2011 AutoRecovery
+- 15.8M                         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/Macintosh HD/Users/miro/Documents/Microsoft User Data/Office 2011 AutoRecovery/PowerPoint Temp
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Downloads
+- 271.5K                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/Macintosh HD/Users/miro/Downloads/Introduction To GIT.ppt
+- 1.0M                          /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/Macintosh HD/Users/miro/Downloads/egit1-0-110705134610-phpapp02.odp
+- 1.3M                          /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/Macintosh HD/Users/miro/Downloads/git-100618212852-phpapp01.zip
+- 719.5K                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/Macintosh HD/Users/miro/Downloads/git-1212761677968831-9.pdf
+- 2.7M                          /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/Macintosh HD/Users/miro/Downloads/git-presentation.pdf
+- 709.5K                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/Macintosh HD/Users/miro/Downloads/gitandeclipsejena-100617100628-phpapp02.ppt
+- 885.9K                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/Macintosh HD/Users/miro/Downloads/gitstartedwithgit-nhruby-090501133113-phpapp02 (1).pdf
+- 885.9K                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/Macintosh HD/Users/miro/Downloads/gitstartedwithgit-nhruby-090501133113-phpapp02.pdf
+- 645.7K                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/Macintosh HD/Users/miro/Downloads/introtogit-090518104200-phpapp02.pdf
+- 5.4M                          /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/Macintosh HD/Users/miro/Downloads/progit.en.pdf
++ 330.3M                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Downloads/ECKHART TOLLE - Moc pritomnÇho okamziku - audiokniha.1
++ 122.2M                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Downloads/Eckhart Tolle - Stille spricht Hîrbuch
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/AddressBook
+! 10B     (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/AddressBook/.database.lockN
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CalendarBar
+! 2.3M    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CalendarBar/GoogleCalendar.sqlite
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CoRD/Servers
+! 459B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CoRD/Servers/192.168.16.248.rdp
+! 462B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CoRD/Servers/ATGHome - home en0.rdp
+! 462B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CoRD/Servers/ATGMobile - 16.52.rdp
+! 466B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CoRD/Servers/ATGMobile - Bonjour.rdp
+! 462B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CoRD/Servers/ATGMobile - Rocket.rdp
+! 455B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CoRD/Servers/Chewbaca.rdp
+! 454B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CoRD/Servers/Chewbacca.rdp
+! 452B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CoRD/Servers/Igor.rdp
+! 437B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CoRD/Servers/New Server.rdp
+! 453B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CoRD/Servers/TW_ATG.rdp
+! 461B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CoRD/Servers/XP Pro VM Luke.rdp
+! 13.3K   (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/CrashReporter/Intervals_5DE3241B-6882-529D-B8D6-404D684BE551.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Evernote/accounts/Evernote/miroadamy/promos
+! 42B     (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Evernote/accounts/Evernote/miroadamy/promos/stats.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Evernote/skus
+! 469B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Evernote/skus/www.evernote.com
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default
+! 1.0M    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Cookies
+! 16.0K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Cookies-journal
+! 1010.0K (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Current Session
+! 906.8K  (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Current Tabs
+! 16.2M   (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/History Index 2012-05
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Local Storage
+! 16.0K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Local Storage/http_mediacdn.disqus.com_0.localstorage
+! 3.0K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Local Storage/https_www.icloud.com_0.localstorage
+! 58.0K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Login Data
+! 4.5K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Login Data-journal
+! 2.8M    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Network Action Predictor
+! 16.0K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Network Action Predictor-journal
+! 94.2K   (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Preferences
+! 200.0K  (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Shortcuts
+! 16.0K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Shortcuts-journal
+! 8.0M    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Sync Data/SyncData.sqlite3
+! 16.0K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Sync Data/SyncData.sqlite3-journal
+! 400.0K  (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Top Sites
+! 16.0K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Top Sites-journal
+! 3.4K    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/TransportSecurity
+! 511.9K  (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Visited Links
+! 1.1M    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Web Data
+! 16.0K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Default/Web Data-journal
+! 12.3K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Google/Chrome/Local State
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Path Finder/Settings/Data Store
+! 1.2M    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Path Finder/Settings/Data Store/directoryAttributes.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/Accounts/miro.adamy@gmail.com
+! 27.2K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/Accounts/miro.adamy@gmail.com/avatar.tiff
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/LocalDrafts
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/camry2002ottawa@gmail.com.sparrowdb
+! 1023.5K (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/camry2002ottawa@gmail.com.sparrowdb/messages.db-wal
+! 899B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/camry2002ottawa@gmail.com.sparrowdb/syncdates.plist
+! 775.7K  (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/email.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@gmail.com.sparrowdb
+! 1.0M    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@gmail.com.sparrowdb/messages.db-wal
+! 4.3K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@gmail.com.sparrowdb/syncdates.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/%5BGmail%5D%2FAll%20Mail
+! 442B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/%5BGmail%5D%2FAll%20Mail/uids
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/%5BGmail%5D%2FDrafts
+! 440B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/%5BGmail%5D%2FDrafts/uids
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/%5BGmail%5D%2FImportant
+! 440B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/%5BGmail%5D%2FImportant/uids
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/%5BGmail%5D%2FSent%20Mail
+! 440B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/%5BGmail%5D%2FSent%20Mail/uids
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/%5BGmail%5D%2FSpam
+! 440B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/%5BGmail%5D%2FSpam/uids
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/%5BGmail%5D%2FTrash
+! 442B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/%5BGmail%5D%2FTrash/uids
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/INBOX
+! 440B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/INBOX/uids
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/spam-ish
+! 440B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Cache/spam-ish/uids
+! 68.6M   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Indexes/contents.index
+! 11.4M   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Indexes/from.index
+! 11.8M   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Indexes/recipient.index
+! 11.6M   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/Indexes/subject.index
+! 397.7M  (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/contents-cache.db/data.tch
+! 127.4M  (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/conversations-cache.db/data.tch
+! 310.6M  (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/messages-cache.db/data.tch
+! 54.3M   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/messages.db
+! 1.2M    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/messages.db-wal
+! 125.7M  (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/preview-cache.db/data.tch
+! 51.7M   (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/search-metadata.db/data.tch
+! 2.2K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/miro.adamy@thinkwrap.com.sparrowdb/syncdates.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/radegast4@gmail.com.sparrowdb
+! 1023.5K (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/radegast4@gmail.com.sparrowdb/messages.db-wal
+! 834B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/radegast4@gmail.com.sparrowdb/syncdates.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/tmp
+! 6.3K    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Application Support/Sparrow/uistate.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Google/GoogleSoftwareUpdate/Actives
+- 0B                            /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/Macintosh HD/Users/miro/Library/Google/GoogleSoftwareUpdate/Actives/com.google.GoogleDrive
+! 0B      (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Google/GoogleSoftwareUpdate/Actives/com.google.Chrome
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Google/GoogleSoftwareUpdate/Stats
+! 181B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Google/GoogleSoftwareUpdate/Stats/Keystone.stats
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Keychains
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences
+! 2.2K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/.GlobalPreferences.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/ByHost
+! 1.5K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/ByHost/.GlobalPreferences.5DE3241B-6882-529D-B8D6-404D684BE551.plist
+! 434B    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/ByHost/com.apple.CrashReporter.5DE3241B-6882-529D-B8D6-404D684BE551.plist
+! 526B    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/ByHost/com.apple.HIToolbox.5DE3241B-6882-529D-B8D6-404D684BE551.plist
+! 190B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/ByHost/com.apple.SubmitDiagInfo.5DE3241B-6882-529D-B8D6-404D684BE551.plist
+! 1.3K    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/ByHost/com.apple.loginwindow.5DE3241B-6882-529D-B8D6-404D684BE551.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/Macromedia/Flash Player/#SharedObjects/CA7U5XUM
++ 0B                            /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/Macromedia/Flash Player/#SharedObjects/CA7U5XUM/media.miamiherald.com
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/Macromedia/Flash Player/#SharedObjects/CA7U5XUM/www.wimp.com
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/Macromedia/Flash Player/macromedia.com/support/flashplayer/sys
++ 91B                           /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/Macromedia/Flash Player/macromedia.com/support/flashplayer/sys/#media.miamiherald.com
+! 2.6K    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/Macromedia/Flash Player/macromedia.com/support/flashplayer/sys/settings.sol
+! 124B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.apple.ATS.plist
+! 623B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.apple.PreferenceSync.plist
+! 443B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.apple.internetconfigpriv.plist
+! 446B    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.apple.loginwindow.plist
+! 24.3K   (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.apple.recentitems.plist
+! 1.3K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.cleancutcode.CalendarBar.plist
+! 76.7K   (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.cocoatech.PathFinder.plist
+! 886B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.google.Keystone.Agent.plist
+! 6.3K    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.microsoft.Powerpoint.plist
+! 254B    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.microsoft.error_reporting.plist
+! 258.8K  (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.microsoft.office.plist
+! 18.9K   (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.sparrowmailapp.sparrow.plist
+! 17.4K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/com.torusknot.SourceTree.plist
+! 12.9K   (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/de.jinx.JollysFastVNC.Pro.plist
+! 2.4K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/net.sf.cord.plist
+! 2.0K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Preferences/org.vim.MacVim.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Safari
+! 225.3K  (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Safari/History.plist
+! 14.4K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Safari/LastSession.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Safari/LocalStorage
+! 10.0K   (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Safari/LocalStorage/safari-extension_com.divx.wpa-kzyj7hj34p_0.localstorage
+! 1.3K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Safari/TopSites.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Spelling
+! 3.0K    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/Spelling/dynamic-text.dat
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/SyncedPreferences
+! 993B    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Library/SyncedPreferences/com.apple.syncedpreferences.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git
++ 5.8M                          /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/Git-2a.pptx
++ 271.5K                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/Introduction To GIT.ppt
++ 1.0M                          /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/egit1-0-110705134610-phpapp02.odp
++ 1.3M                          /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/git-100618212852-phpapp01.zip
++ 719.5K                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/git-1212761677968831-9.pdf
++ 2.7M                          /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/git-presentation.pdf
++ 709.5K                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/gitandeclipsejena-100617100628-phpapp02.ppt
++ 2.4M                          /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/gitintro-110722021214-phpapp02.ppt
++ 885.9K                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/gitstartedwithgit-nhruby-090501133113-phpapp02 (1).pdf
++ 885.9K                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/gitstartedwithgit-nhruby-090501133113-phpapp02.pdf
++ 645.7K                        /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/introtogit-090518104200-phpapp02.pdf
++ 5.4M                          /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/progit.en.pdf
+! 10.3M   (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Users/miro/Projects/Training/Git/Git-1.pptx
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/etc/cups/certs
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/tmp
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/db
+! 1.1K    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/db/.TimeMachine.Results.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/db/BootCaches/FCD06070-6268-466A-A3D6-C697CA300BAC
++ 19.0K                         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/db/BootCaches/FCD06070-6268-466A-A3D6-C697CA300BAC/app.com.microsoft.error_reporting.playlist
+! 21.2K   (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/db/BootCaches/FCD06070-6268-466A-A3D6-C697CA300BAC/app.com.microsoft.Powerpoint.playlist
+! 20B     (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/db/SystemEntropyCache
+! 616B    (size, mtime)         /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/db/com.apple.TimeMachine.SnapshotDates.plist
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/db/crls
+! 3.2K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/db/crls/AC99EBF7D89822D3A424E7768D107BCD60A9A0F5.pem
+! 3.2K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/db/crls/FE2FDB1DABD01758E9B204075DBB026D1D3E6B3B.pem
+! 320.9K  (size)                /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/db/crls/crlcache.db
+! 13.3K   (size)                /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/db/crls/ocspcache.db
+!         (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/private/var/vm
+-------------------------------------
+Added:         475.1M
+Removed:       30.1M
+Changed:       1.2G</pre></td></tr></table>
+</div>
+</div>
+<h2 id="diff">Diff</h2>
+
+<p>Which libs are in that Ant81 and not in Ant71 ?</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@jenkins2 opt]$ diff -q apache-ant-1.7.1/lib apache-ant-1.8.2/lib | grep jar | more
+Files apache-ant-1.7.1/lib/ant-antlr.jar and apache-ant-1.8.2/lib/ant-antlr.jar differ
+Files apache-ant-1.7.1/lib/ant-apache-bcel.jar and apache-ant-1.8.2/lib/ant-apache-bcel.jar differ
+Files apache-ant-1.7.1/lib/ant-apache-bsf.jar and apache-ant-1.8.2/lib/ant-apache-bsf.jar differ
+Files apache-ant-1.7.1/lib/ant-apache-log4j.jar and apache-ant-1.8.2/lib/ant-apache-log4j.jar differ
+Files apache-ant-1.7.1/lib/ant-apache-oro.jar and apache-ant-1.8.2/lib/ant-apache-oro.jar differ
+Files apache-ant-1.7.1/lib/ant-apache-regexp.jar and apache-ant-1.8.2/lib/ant-apache-regexp.jar differ
+Files apache-ant-1.7.1/lib/ant-apache-resolver.jar and apache-ant-1.8.2/lib/ant-apache-resolver.jar differ
+Only in apache-ant-1.8.2/lib: ant-apache-xalan2.jar
+Files apache-ant-1.7.1/lib/ant-commons-logging.jar and apache-ant-1.8.2/lib/ant-commons-logging.jar differ
+Files apache-ant-1.7.1/lib/ant-commons-net.jar and apache-ant-1.8.2/lib/ant-commons-net.jar differ
+Files apache-ant-1.7.1/lib/ant-jai.jar and apache-ant-1.8.2/lib/ant-jai.jar differ
+Files apache-ant-1.7.1/lib/ant.jar and apache-ant-1.8.2/lib/ant.jar differ
+Files apache-ant-1.7.1/lib/ant-javamail.jar and apache-ant-1.8.2/lib/ant-javamail.jar differ
+Files apache-ant-1.7.1/lib/ant-jdepend.jar and apache-ant-1.8.2/lib/ant-jdepend.jar differ
+Files apache-ant-1.7.1/lib/ant-jmf.jar and apache-ant-1.8.2/lib/ant-jmf.jar differ
+Files apache-ant-1.7.1/lib/ant-jsch.jar and apache-ant-1.8.2/lib/ant-jsch.jar differ
+Only in apache-ant-1.8.2/lib: ant-junit4.jar
+Files apache-ant-1.7.1/lib/ant-junit.jar and apache-ant-1.8.2/lib/ant-junit.jar differ
+Files apache-ant-1.7.1/lib/ant-launcher.jar and apache-ant-1.8.2/lib/ant-launcher.jar differ
+Files apache-ant-1.7.1/lib/ant-netrexx.jar and apache-ant-1.8.2/lib/ant-netrexx.jar differ
+Only in apache-ant-1.7.1/lib: ant-nodeps.jar
+Only in apache-ant-1.7.1/lib: ant-starteam.jar
+Only in apache-ant-1.7.1/lib: ant-stylebook.jar
+Files apache-ant-1.7.1/lib/ant-swing.jar and apache-ant-1.8.2/lib/ant-swing.jar differ
+Files apache-ant-1.7.1/lib/ant-testutil.jar and apache-ant-1.8.2/lib/ant-testutil.jar differ
+Only in apache-ant-1.7.1/lib: ant-trax.jar
+Only in apache-ant-1.7.1/lib: ant-weblogic.jar
+Only in apache-ant-1.7.1/lib: jsch-0.1.44.jar
+Only in apache-ant-1.7.1/lib: xercesImpl.jar
+Only in apache-ant-1.7.1/lib: xml-apis.jar</pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2012-05-29
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/tools/">tools</a>
+          <a href="/tags/commandline/">commandline</a>
+          <a href="/tags/osx/">osx</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2012-08-17-install-hybris/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Installing and running &#39;naked&#39; hybris platform</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2012-04-07-gollum/">
+            <span class="next-text nav-default">GitHub &#43; Gollum vs BitBucket Wiki</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
