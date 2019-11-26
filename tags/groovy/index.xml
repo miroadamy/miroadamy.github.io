@@ -6,10 +6,23 @@
     <description>Recent content in groovy on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 08 Jan 2013 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 16 May 2014 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/groovy/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ATG Groovy TDD</title>
+      <link>https://miroadamy.com/posts/2014-05-16-atg-groovy-tdd/</link>
+      <pubDate>Fri, 16 May 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-05-16-atg-groovy-tdd/</guid>
+      <description>Got it working. It is a bit rough around the edges, but functional.
+The two components
+ http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyDemoScript/ http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyScriptRunner/  The are not started via Initial, but that is not a problem.
+The script tested:
+1 2 3 4 5 6 7 8 9  class ThatsGroovyDude implements com.thinkwrap.twatg.script.RunnableScript { atg.nucleus.Nucleus nuc = atg.nucleus.Nucleus.getGlobalNucleus(); public String run() { String s = &amp;#34;&amp;#34;; nuc.configPathNames.each { s += &amp;#34;${it}\n&amp;#34; } return &amp;#34;Hello World!</description>
+    </item>
     
     <item>
       <title>GVM</title>

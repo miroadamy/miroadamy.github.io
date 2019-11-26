@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>How to fix Jenkins build issues related to Git connectivity - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &amp;lsquo;git status&amp;rsquo; in that directory. If you see something like
+1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2015-06-18-jenkins-git/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="How to fix Jenkins build issues related to Git connectivity" />
+<meta property="og:description" content="Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like
+1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2015-06-18-jenkins-git/" />
+<meta property="article:published_time" content="2015-06-18T11:22:48+08:00" />
+<meta property="article:modified_time" content="2015-06-18T11:22:48+08:00" />
+<meta itemprop="name" content="How to fix Jenkins build issues related to Git connectivity">
+<meta itemprop="description" content="Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like
+1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded.">
+
+
+<meta itemprop="datePublished" content="2015-06-18T11:22:48&#43;08:00" />
+<meta itemprop="dateModified" content="2015-06-18T11:22:48&#43;08:00" />
+<meta itemprop="wordCount" content="455">
+
+
+
+<meta itemprop="keywords" content="git,jenkins," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to fix Jenkins build issues related to Git connectivity"/>
+<meta name="twitter:description" content="Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like
+1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">How to fix Jenkins build issues related to Git connectivity</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-06-18 </span>
+        <div class="post-category">
+            <a href="/categories/devops/"> devops </a>
+            </div>
+          <span class="more-meta"> 455 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#symptoms">Symptoms:</a></li>
+<li><a href="#validate-this-is-the-case">Validate this is the case</a></li>
+</ul></li>
+<li><a href="#step-1-get-the-remote-repo-url">Step 1 - Get the remote repo URL</a></li>
+<li><a href="#step-2-clone-the-repo-to-tmp-location">Step 2 - Clone the repo to /tmp location</a></li>
+<li><a href="#step-3-erase-corrupted-git-repo">Step 3 - Erase corrupted &lsquo;.git&rsquo; repo</a></li>
+<li><a href="#step-4-move-the-fresly-cloned-git-directory">Step 4 - move the fresly cloned &lsquo;.git&rsquo; directory</a></li>
+<li><a href="#step-5-resynchronize-git-and-file-tree">Step 5 - resynchronize &lsquo;.git&rsquo; and file tree</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="symptoms">Symptoms:</h2>
+
+<ul>
+<li>build fails</li>
+<li>cannot checkout / connect to GIT</li>
+</ul>
+
+<h2 id="validate-this-is-the-case">Validate this is the case</h2>
+
+<ul>
+<li>ssh to jenkins2</li>
+<li>assume identity of jenkins user (VERY IMPORTANT)</li>
+<li>go to <code>/home/projects/workspace/PROJECTNAME</code> directory</li>
+</ul>
+
+<p>This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">-bash-3.2$ git status
+fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253</pre></td></tr></table>
+</div>
+</div>
+<p>the git repo is corrupted and needs to be reloaded.</p>
+
+<h1 id="step-1-get-the-remote-repo-url">Step 1 - Get the remote repo URL</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">-bash-3.2$ git remote -v
+origin  client@pensieve.thinkwrap.com:client-store.git (fetch)
+origin  client@pensieve.thinkwrap.com:client-store.git (push)</pre></td></tr></table>
+</div>
+</div>
+<h1 id="step-2-clone-the-repo-to-tmp-location">Step 2 - Clone the repo to /tmp location</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">-bash-3.2$ git clone client@pensieve.thinkwrap.com:client-store.git /tmp/client-store
+Cloning into /tmp/client-store...
+remote: Counting objects: 129011, done.
+remote: Compressing objects: 100% (36403/36403), done.
+remote: Total 129011 (delta 80801), reused 124811 (delta 77481)
+Receiving objects: 100% (129011/129011), 250.76 MiB | 30.13 MiB/s, done.
+Resolving deltas: 100% (80801/80801), done.</pre></td></tr></table>
+</div>
+</div>
+<p>The directory you clone into must not exist</p>
+
+<h1 id="step-3-erase-corrupted-git-repo">Step 3 - Erase corrupted &lsquo;.git&rsquo; repo</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">-bash-3.2$ pwd
+/home/projects/workspace/PROJECTNAME
+-bash-3.2$ rm -rf .git/</pre></td></tr></table>
+</div>
+</div>
+<h1 id="step-4-move-the-fresly-cloned-git-directory">Step 4 - move the fresly cloned &lsquo;.git&rsquo; directory</h1>
+
+<p>We will steal the &lsquo;.git&rsquo; from the clone in /tmp/DIR</p>
+
+<blockquote>
+<p>-bash-3.2$ mv /tmp/client-store/.git .</p>
+</blockquote>
+
+<h1 id="step-5-resynchronize-git-and-file-tree">Step 5 - resynchronize &lsquo;.git&rsquo; and file tree</h1>
+
+<p>It is important to make sure that file tree does not have any modifications against the &lsquo;.git&rsquo;.</p>
+
+<p>Simplest way is:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">-bash-3.2$ git status
+# On branch master
+# Changes not staged for commit:
+#   (use &#34;git add/rm &lt;file&gt;...&#34; to update what will be committed)
+#   (use &#34;git checkout -- &lt;file&gt;...&#34; to discard changes in working directory)
+#
+#   modified:   Store/config/client/integration/ups/UpsConfiguration.properties
+#   modified:   Store/config/client/integration/ups/UpsManager.properties
+#   deleted:    Store/config/client/ui/droplet/ShippingEstimateDroplet.properties
+#   modified:   Store/j2ee/Store.war/css/theme.css
+#   modified:   Store/src/com/client/integrations/ups/UpsConfiguration.java
+#   modified:   Store/src/com/client/integrations/ups/UpsGateway.java
+#   modified:   Store/src/com/client/integrations/ups/UpsManager.java
+#   modified:   Store/src/com/client/integrations/ups/UpsRequestFactory.java
+#   deleted:    Store/src/com/client/ui/ShippingEstimate.java
+#   deleted:    Store/src/com/client/ui/droplet/ShippingEstimateDroplet.java
+#   deleted:    WRFulfillment/src/com/client/fcc/formatter/AdditionalItemFeedGenerator.java
+#   deleted:    WRFulfillment/src/com/client/fcc/formatter/ElectronicGiftCardItemFeedGenerator.java
+#   deleted:    WRFulfillment/src/com/client/fcc/formatter/OrderDetailFeedGenerator.java
+#   deleted:    WRFulfillment/src/com/client/fcc/formatter/OrderHeaderFeedGenerator.java
+#   modified:   servers/wool-prod-mgmt/localconfig/client/feeds/images/ImagesImportScheduler.properties
+#   modified:   servers/wool-prod-mgmt/localconfig/client/feeds/images/ImagesImportService.properties
+#
+# Untracked files:
+#   (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
+#
+#   target/
+no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)</pre></td></tr></table>
+</div>
+</div>
+<p>As you see, this one does. We will blow it away. We are on branch master and use hard reset to remove all changes.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">-bash-3.2$ git reset --hard HEAD
+HEAD is now at 0a7f6c9 Client-824: Error handling
+  
+-bash-3.2$ git pull
+Already up-to-date.</pre></td></tr></table>
+</div>
+</div>
+<p>Now there are no local changes.</p>
+
+<p>If your task is using different branch - that does not matter because Jenkins is using checkouts using absolute sha-1 anyway and as long there are no local modifications that would prevent this checkout it will work.</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2015-06-18
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          <a href="/tags/jenkins/">jenkins</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2015-12-22-p4merge/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">p4merge as default file compare for PathFinder</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2015-03-10-git-log-output-less/">
+            <span class="next-text nav-default">How to keep git log and less output on the screen</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

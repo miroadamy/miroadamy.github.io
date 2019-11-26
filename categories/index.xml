@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Programming</title>
+      <title>programming</title>
       <link>https://miroadamy.com/categories/programming/</link>
       <pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
       
@@ -39,7 +39,7 @@
     </item>
     
     <item>
-      <title>events</title>
+      <title>Events</title>
       <link>https://miroadamy.com/categories/events/</link>
       <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
       
@@ -89,6 +89,15 @@
       <pubDate>Sat, 07 Apr 2012 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sysadmin</title>
+      <link>https://miroadamy.com/categories/sysadmin/</link>
+      <pubDate>Thu, 03 Feb 2011 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/sysadmin/</guid>
       <description></description>
     </item>
     

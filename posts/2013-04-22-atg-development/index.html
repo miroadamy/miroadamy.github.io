@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>ATG Development using &#39;hidden&#39; VM - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.
+Inspiration for the setup came from https://www.youtube.com/watch?feature=player_embedded&amp;amp;v=cPt_1Vga-Nk
+Motivation - issues with VMs VMs are great - they allow &amp;ldquo;packaged&amp;rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2013-04-22-atg-development/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="ATG Development using &#39;hidden&#39; VM" />
+<meta property="og:description" content="Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.
+Inspiration for the setup came from https://www.youtube.com/watch?feature=player_embedded&amp;v=cPt_1Vga-Nk
+Motivation - issues with VMs VMs are great - they allow &ldquo;packaged&rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2013-04-22-atg-development/" />
+<meta property="article:published_time" content="2013-04-22T11:22:48+08:00" />
+<meta property="article:modified_time" content="2013-04-22T11:22:48+08:00" />
+<meta itemprop="name" content="ATG Development using &#39;hidden&#39; VM">
+<meta itemprop="description" content="Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.
+Inspiration for the setup came from https://www.youtube.com/watch?feature=player_embedded&amp;v=cPt_1Vga-Nk
+Motivation - issues with VMs VMs are great - they allow &ldquo;packaged&rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business.">
+
+
+<meta itemprop="datePublished" content="2013-04-22T11:22:48&#43;08:00" />
+<meta itemprop="dateModified" content="2013-04-22T11:22:48&#43;08:00" />
+<meta itemprop="wordCount" content="692">
+
+
+
+<meta itemprop="keywords" content="atg,virtualbox,virtualization," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="ATG Development using &#39;hidden&#39; VM"/>
+<meta name="twitter:description" content="Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.
+Inspiration for the setup came from https://www.youtube.com/watch?feature=player_embedded&amp;v=cPt_1Vga-Nk
+Motivation - issues with VMs VMs are great - they allow &ldquo;packaged&rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">ATG Development using &#39;hidden&#39; VM</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-04-22 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+          <span class="more-meta"> 692 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#motivation-issues-with-vms">Motivation - issues with VMs</a></li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#samba-configuration">Samba configuration</a></li>
+<li><a href="#mac-side-setup">Mac side setup</a></li>
+<li><a href="#hints-and-tricks">Hints and tricks</a></li>
+<li><a href="#using-the-setup-and-limitations">Using the setup and limitations</a></li>
+<li><a href="#linux-linux">Linux -&gt; Linux</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.</p>
+
+<p>Inspiration for the setup came from <a href="https://www.youtube.com/watch?feature=player_embedded&amp;v=cPt_1Vga-Nk">https://www.youtube.com/watch?feature=player_embedded&amp;v=cPt_1Vga-Nk</a></p>
+
+<h2 id="motivation-issues-with-vms">Motivation - issues with VMs</h2>
+
+<p>VMs are great - they allow &ldquo;packaged&rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business.</p>
+
+<p>For longer running projects, it is still suboptimal environment compared to &ldquo;native&rdquo; environments. Here is my list of issues with developing inside VM (running Eclipse, browsers and all tools in addition of ATG)</p>
+
+<ul>
+<li>UI comfort. Linux, especially the older Centos 4 and Centos 5 are nowhere close to UI comfort of OS-X, or even Windows 7 for that matter</li>
+<li>old tools, old libraries:
+
+<ul>
+<li>because of the older versions of clib, gclib, it is a problem to install recent versions of browsers (Chrome, FF), recent editors</li>
+</ul></li>
+<li>missing tools: some tools (like SourceTree, Curio) do not exist for Linux at all</li>
+<li>speed: you may have quacore notebook, but effective user responsiveness will be same as single core old PC 4 years back because everything competes for single CPU cycles: DB, ATG, Eclipse</li>
+<li>RAM: to run 2 instance of ATG with memory hungry Eclipse requires beefed up VM memory settings and that will slow down front end</li>
+<li>VPN: it is hard to access VPN from Linux. Using VNC remote desktop via VPN (when VM runs inside office) is an exercise in patience &hellip;)</li>
+</ul>
+
+<h2 id="setup">Setup</h2>
+
+<p>I am using VM running primarily out of my notebook - on MacMini or on Chewbaca, but it can be used with local VM as well.</p>
+
+<p>VM must be Linux based (to allow simple access via ssh) and does not need to run any UI after you configure it. VM must run Samba and export the home directory as writeable.</p>
+
+<p>All my VMs are using layout with ATG installed in ~/opt/ATG and JBoss in ~/opt/jboss-something, with installed Oracle XE and samba out of the box.</p>
+
+<p>If samba is not install, add it: <code>sudo yum install samba</code></p>
+
+<h2 id="samba-configuration">Samba configuration</h2>
+
+<p>Simplest way is to use Administration Menu in Linux UI</p>
+
+<p><img src="/images/atgvm-1.png" alt="" />
+<img src="/images/atgvm-2.png" alt="" />
+<img src="/images/atgvm-3.png" alt="" />
+<img src="/images/atgvm-4.png" alt="" /></p>
+
+<p>Set up Samba user as tkuser / $PWD</p>
+
+<p>After this you can logout and kill VNC.</p>
+
+<h2 id="mac-side-setup">Mac side setup</h2>
+
+<p>Map the Samba drive:</p>
+
+<p><img src="/images/atgvm-5.png" alt="" /></p>
+
+<ul>
+<li>use either mount_smbsf or GUI in PathFinder / Finder. The mapped drive will look like this:</li>
+<li>create new Workspace in Eclipse referring the files on the <code>/Volumes/tkuser/opt/ATG/ATG10.0.3/ClientName</code></li>
+<li>connect multiple SSH sessions to remote hosts that allow to run ant, start ATG, do Git operations and such</li>
+<li>create local terminal session to <code>/Volumes/tkuser/opt/...</code> to run Mac tools over source - Sublime Text, etc</li>
+</ul>
+
+<h2 id="hints-and-tricks">Hints and tricks</h2>
+
+<p>These are little things that make is more convenient:</p>
+
+<p>Map the symbolic name of the VM in /etc/hosts</p>
+
+<p>I am using convention CLIENT-VM-partialIP</p>
+
+<p><img src="/images/atgvm-6.png" alt="" /></p>
+
+<p>Use color coding in terminal (iTerm specific)</p>
+
+<p>To tell which terminal is &ldquo;local&rdquo;, I color them - the brownish ones are remotes, green is local</p>
+
+<p><img src="/images/atgvm-7.png" alt="" /></p>
+
+<p>Always create local workspace in Eclipse</p>
+
+<h2 id="using-the-setup-and-limitations">Using the setup and limitations</h2>
+
+<p>This setup can be used from Mac or Windows development station, with local or remote back-end VM. If you are on mac, you have everything. On Windows, you need install decent ssh client and terminal - both of which comes with Git Extensions</p>
+
+<p>If you are on Windows, you need to use different &ldquo;shell&rdquo; for local terminal sessions and remote terminal sessions (if the command interpreter of Windows can be named &ldquo;shell&rdquo; &hellip;)</p>
+
+<p>In theory the VM could be Windows based - but instead of accessing it using ssh, you would have to start remote desktop client and open the command windows there &hellip; and suffer with their limitations. You could not get rid of UI, but at least you could run Eclipse on local hardware without double-slowdown caused by VMWare and Windows.</p>
+
+<h2 id="linux-linux">Linux -&gt; Linux</h2>
+
+<p>This is very feasible alternative that allows to use older version of Linux kernel to run the ATG and modern Ubuntu with all the bells and whistles for running Eclipse. It also removes a need for customizing and reconfiguring/updating multiple versions of Eclipse for multiple VMs.</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2013-04-22
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/atg/">atg</a>
+          <a href="/tags/virtualbox/">virtualbox</a>
+          <a href="/tags/virtualization/">virtualization</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2013-09-03-show-lock-screen-indicator/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Show lock screen indicator in OS-X menu</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2013-04-09-bash/">
+            <span class="next-text nav-default">Pattern for test sourcing the script</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

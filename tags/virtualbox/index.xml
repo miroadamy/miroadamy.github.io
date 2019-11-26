@@ -59,6 +59,17 @@ insert
     </item>
     
     <item>
+      <title>ATG Development using &#39;hidden&#39; VM</title>
+      <link>https://miroadamy.com/posts/2013-04-22-atg-development/</link>
+      <pubDate>Mon, 22 Apr 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-04-22-atg-development/</guid>
+      <description>Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.
+Inspiration for the setup came from https://www.youtube.com/watch?feature=player_embedded&amp;amp;v=cPt_1Vga-Nk
+Motivation - issues with VMs VMs are great - they allow &amp;ldquo;packaged&amp;rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business.</description>
+    </item>
+    
+    <item>
       <title>Miro Manifesto</title>
       <link>https://miroadamy.com/posts/2012-02-15-miro-manifesto/</link>
       <pubDate>Wed, 15 Feb 2012 11:22:48 +0800</pubDate>

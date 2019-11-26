@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jenkins on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/jenkins/</link>
+    <description>Recent content in jenkins on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 18 Jun 2015 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/jenkins/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to fix Jenkins build issues related to Git connectivity</title>
+      <link>https://miroadamy.com/posts/2015-06-18-jenkins-git/</link>
+      <pubDate>Thu, 18 Jun 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-06-18-jenkins-git/</guid>
+      <description>Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &amp;lsquo;git status&amp;rsquo; in that directory. If you see something like
+1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded.</description>
+    </item>
+    
+  </channel>
+</rss>

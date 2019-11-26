@@ -90,6 +90,18 @@ Unsuccesfull path - keep the Python 2.7 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 1
     </item>
     
     <item>
+      <title>Merge conflict with deleted file</title>
+      <link>https://miroadamy.com/posts/2013-04-13-git-conflict/</link>
+      <pubDate>Mon, 05 Sep 2016 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-04-13-git-conflict/</guid>
+      <description>I was merging the branch that removed / consolidated bunch of duplicate JSP files (corporate-ui-cleanup).
+In the meantime in master, some minor UI changes were made to these files whose content was now elsewhere.
+Quick trick how to resolve it fast:
+Show branch 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  CineplexB2B $ git show-branch !</description>
+    </item>
+    
+    <item>
       <title>Update all local branches in Git repo</title>
       <link>https://miroadamy.com/posts/2016-09-05-git-update-all-local-branches/</link>
       <pubDate>Mon, 05 Sep 2016 11:22:48 +0800</pubDate>
@@ -195,6 +207,16 @@ How to use it  Select 2 files, right click, compare from context menu In dual mo
     </item>
     
     <item>
+      <title>How to fix Jenkins build issues related to Git connectivity</title>
+      <link>https://miroadamy.com/posts/2015-06-18-jenkins-git/</link>
+      <pubDate>Thu, 18 Jun 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-06-18-jenkins-git/</guid>
+      <description>Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &amp;lsquo;git status&amp;rsquo; in that directory. If you see something like
+1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded.</description>
+    </item>
+    
+    <item>
       <title>How to keep git log and less output on the screen</title>
       <link>https://miroadamy.com/posts/2015-03-10-git-log-output-less/</link>
       <pubDate>Tue, 10 Mar 2015 00:57:35 -0500</pubDate>
@@ -247,6 +269,19 @@ It is uncertain how good is all this - but as they say:
 This contains almost 10 years worth of history of my posts, plus few not yet previously unpublished posts.
 It is based on Jekyll Clean theme, created by Scott Emmons - see it / get it from github.
 If you are interested in the Jekyll Clean theme:</description>
+    </item>
+    
+    <item>
+      <title>ATG Groovy TDD</title>
+      <link>https://miroadamy.com/posts/2014-05-16-atg-groovy-tdd/</link>
+      <pubDate>Fri, 16 May 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-05-16-atg-groovy-tdd/</guid>
+      <description>Got it working. It is a bit rough around the edges, but functional.
+The two components
+ http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyDemoScript/ http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyScriptRunner/  The are not started via Initial, but that is not a problem.
+The script tested:
+1 2 3 4 5 6 7 8 9  class ThatsGroovyDude implements com.thinkwrap.twatg.script.RunnableScript { atg.nucleus.Nucleus nuc = atg.nucleus.Nucleus.getGlobalNucleus(); public String run() { String s = &amp;#34;&amp;#34;; nuc.configPathNames.each { s += &amp;#34;${it}\n&amp;#34; } return &amp;#34;Hello World!</description>
     </item>
     
     <item>
@@ -383,6 +418,59 @@ insert
 The Lock in menu is provided by KeyChain Access, not by System Preferences.
 Open &amp;lsquo;KeyChain Access&amp;rsquo; -&amp;gt; Preferences, select &amp;lsquo;Show keychain status&amp;rsquo;
 and it is back:</description>
+    </item>
+    
+    <item>
+      <title>ATG Development using &#39;hidden&#39; VM</title>
+      <link>https://miroadamy.com/posts/2013-04-22-atg-development/</link>
+      <pubDate>Mon, 22 Apr 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-04-22-atg-development/</guid>
+      <description>Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.
+Inspiration for the setup came from https://www.youtube.com/watch?feature=player_embedded&amp;amp;v=cPt_1Vga-Nk
+Motivation - issues with VMs VMs are great - they allow &amp;ldquo;packaged&amp;rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business.</description>
+    </item>
+    
+    <item>
+      <title>Pattern for test sourcing the script</title>
+      <link>https://miroadamy.com/posts/2013-04-09-bash/</link>
+      <pubDate>Tue, 09 Apr 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-04-09-bash/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  # Test if it is sourced or not if [[ $0 != .*bash ]]; then echo Please source it: . $0 exit 1 fi res=`gradle --version &amp;gt;/dev/null 2&amp;gt;&amp;amp;1; echo $? ` if [[ $res == &amp;#34;0&amp;#34; ]]; then echo Have gradle: `which gradle` gradle --version else export GRADLE_HOME=~/opt/gradle export PATH=$PATH:$GRADLE_HOME/bin echo No Gradle, adding - `which gradle` gradle --version fi  </description>
+    </item>
+    
+    <item>
+      <title>ATG Repository item linking and versioned repos</title>
+      <link>https://miroadamy.com/posts/2013-03-10-atg-repository/</link>
+      <pubDate>Sun, 10 Mar 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-03-10-atg-repository/</guid>
+      <description>We have versioned repository ClientProvinceRepository that defines discount types based on account category pricelist and accounts - discountTypePriceList
+=&amp;gt; (let&amp;rsquo;s not start discussion why this is not part of the pricelists).
+The item definition:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &amp;lt;item-descriptor name=&amp;#34;discountTypePriceList&amp;#34; display-name=&amp;#34;Discount Type Price List&amp;#34; item-cache-size=&amp;#34;1000&amp;#34; query-cache-size=&amp;#34;1000&amp;#34; display-property=&amp;#34;discountType&amp;#34;&amp;gt; &amp;lt;table name=&amp;#34;CPLXB2B_DISCOUNT_PRICE_LIST&amp;#34; type=&amp;#34;primary&amp;#34; id-column-name=&amp;#34;DISCOUNT_PRICELIST_ID&amp;#34; &amp;gt; &amp;lt;property name=&amp;#34;discountType&amp;#34; data-type=&amp;#34;enumerated&amp;#34; column-name=&amp;#34;DISCOUNT_TYPE&amp;#34; default=&amp;#34;Base&amp;#34; queryable=&amp;#34;true&amp;#34; category=&amp;#34;Discount Price List&amp;#34; display-name=&amp;#34;Discount Type&amp;#34; &amp;gt; &amp;lt;attribute name=&amp;#34;useCodeForValue&amp;#34; value=&amp;#34;false&amp;#34;/&amp;gt; &amp;lt;option value=&amp;#34;Base&amp;#34; code=&amp;#34;0&amp;#34;/&amp;gt; &amp;lt;option value=&amp;#34;Silver&amp;#34; code=&amp;#34;1&amp;#34;/&amp;gt; &amp;lt;option value=&amp;#34;Gold&amp;#34; code=&amp;#34;2&amp;#34;/&amp;gt; &amp;lt;option value=&amp;#34;Platinum&amp;#34; code=&amp;#34;3&amp;#34;/&amp;gt; &amp;lt;/property&amp;gt; &amp;lt;property name=&amp;#34;priceListId&amp;#34; column-name=&amp;#34;PRICE_LIST_ID&amp;#34; repository=&amp;#34;/atg/commerce/pricing/priceLists/PriceLists&amp;#34; item-type=&amp;#34;priceList&amp;#34; display-name=&amp;#34;List Price List&amp;#34; required=&amp;#34;true&amp;#34; category=&amp;#34;Discount Price List&amp;#34;/&amp;gt; &amp;lt;property name=&amp;#34;salePriceListId&amp;#34; column-name=&amp;#34;SALE_PRICE_LIST_ID&amp;#34; repository=&amp;#34;/atg/commerce/pricing/priceLists/PriceLists&amp;#34; item-type=&amp;#34;priceList&amp;#34; display-name=&amp;#34;Sale Price List&amp;#34; category=&amp;#34;Discount Price List&amp;#34;/&amp;gt; &amp;lt;property name=&amp;#34;startDate&amp;#34; column-name=&amp;#34;START_DATE&amp;#34; data-type=&amp;#34;timestamp&amp;#34; display-name=&amp;#34;Start Date&amp;#34; category=&amp;#34;Discount Price List&amp;#34;/&amp;gt; &amp;lt;property name=&amp;#34;endDate&amp;#34; column-name=&amp;#34;END_DATE&amp;#34; data-type=&amp;#34;timestamp&amp;#34; display-name=&amp;#34;End Date&amp;#34; category=&amp;#34;Discount Price List&amp;#34;/&amp;gt; &amp;lt;/table&amp;gt; &amp;lt;/item-descriptor&amp;gt;   When I tried deployment with this, I got error</description>
+    </item>
+    
+    <item>
+      <title>German attack</title>
+      <link>https://miroadamy.com/posts/2013-03-05-german-attack/</link>
+      <pubDate>Tue, 05 Mar 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-03-05-german-attack/</guid>
+      <description>Suddenly I started to see all apps auf Deutsch:
+The cause was by mistake selecting additional language in Properties -&amp;gt; Internationalization (Österreichisches Deutsch) and the system added it to the list as language #1.
+Those programs that are localized, picked it up &amp;hellip;.
+Here is how that list looks like after reorder :-) I care only for the first 11 languages anyway ;-)</description>
+    </item>
+    
+    <item>
+      <title>Dot-vimming new machine</title>
+      <link>https://miroadamy.com/posts/2013-03-03-dotvim/</link>
+      <pubDate>Sun, 03 Mar 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-03-03-dotvim/</guid>
+      <description>New MacMini 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63  MacMini:~ mediaserver$ mkdir .</description>
     </item>
     
     <item>
@@ -647,6 +735,17 @@ The next vector of distraction to be brought under control is Facebook. This is 
       
       <guid>https://miroadamy.com/posts/2011-02-11-better-gmail-than-gmail/</guid>
       <description>Since 2005 when I switched to GMail, I was living in browser. For better or worse, I learn to put up with issues like speed, lack of hotkeys, UI that is not as responsive as it should be, drag and drop that works most of the time. To be fair, in these five years browsers and GMail UI improved tremendously. It was rational decision to trade all these for simplicity of the UI.</description>
+    </item>
+    
+    <item>
+      <title>Configuring permanent time updates for Linux</title>
+      <link>https://miroadamy.com/posts/2011-02-03-linux-time/</link>
+      <pubDate>Thu, 03 Feb 2011 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2011-02-03-linux-time/</guid>
+      <description>1) make sure the DNS works 1 2 3 4 5 6  sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1   2) check that you have ntpd installed  cat /etc/ntp.conf
+ 3) make it work in all 1 2  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
+ 5) Start service / restart  sudo /sbin/service ntpd start</description>
     </item>
     
     <item>

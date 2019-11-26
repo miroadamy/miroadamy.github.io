@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sysadmin on Miro&#39;s World</title>
+    <link>https://miroadamy.com/categories/sysadmin/</link>
+    <description>Recent content in sysadmin on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 03 Feb 2011 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/categories/sysadmin/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Configuring permanent time updates for Linux</title>
+      <link>https://miroadamy.com/posts/2011-02-03-linux-time/</link>
+      <pubDate>Thu, 03 Feb 2011 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2011-02-03-linux-time/</guid>
+      <description>1) make sure the DNS works 1 2 3 4 5 6  sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1   2) check that you have ntpd installed  cat /etc/ntp.conf
+ 3) make it work in all 1 2  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
+ 5) Start service / restart  sudo /sbin/service ntpd start</description>
+    </item>
+    
+  </channel>
+</rss>

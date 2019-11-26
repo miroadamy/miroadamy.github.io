@@ -25,6 +25,42 @@ Fix Set the variable JAVA_VM to path to executable command on your system.
     </item>
     
     <item>
+      <title>ATG Groovy TDD</title>
+      <link>https://miroadamy.com/posts/2014-05-16-atg-groovy-tdd/</link>
+      <pubDate>Fri, 16 May 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-05-16-atg-groovy-tdd/</guid>
+      <description>Got it working. It is a bit rough around the edges, but functional.
+The two components
+ http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyDemoScript/ http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyScriptRunner/  The are not started via Initial, but that is not a problem.
+The script tested:
+1 2 3 4 5 6 7 8 9  class ThatsGroovyDude implements com.thinkwrap.twatg.script.RunnableScript { atg.nucleus.Nucleus nuc = atg.nucleus.Nucleus.getGlobalNucleus(); public String run() { String s = &amp;#34;&amp;#34;; nuc.configPathNames.each { s += &amp;#34;${it}\n&amp;#34; } return &amp;#34;Hello World!</description>
+    </item>
+    
+    <item>
+      <title>ATG Development using &#39;hidden&#39; VM</title>
+      <link>https://miroadamy.com/posts/2013-04-22-atg-development/</link>
+      <pubDate>Mon, 22 Apr 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-04-22-atg-development/</guid>
+      <description>Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.
+Inspiration for the setup came from https://www.youtube.com/watch?feature=player_embedded&amp;amp;v=cPt_1Vga-Nk
+Motivation - issues with VMs VMs are great - they allow &amp;ldquo;packaged&amp;rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business.</description>
+    </item>
+    
+    <item>
+      <title>ATG Repository item linking and versioned repos</title>
+      <link>https://miroadamy.com/posts/2013-03-10-atg-repository/</link>
+      <pubDate>Sun, 10 Mar 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-03-10-atg-repository/</guid>
+      <description>We have versioned repository ClientProvinceRepository that defines discount types based on account category pricelist and accounts - discountTypePriceList
+=&amp;gt; (let&amp;rsquo;s not start discussion why this is not part of the pricelists).
+The item definition:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &amp;lt;item-descriptor name=&amp;#34;discountTypePriceList&amp;#34; display-name=&amp;#34;Discount Type Price List&amp;#34; item-cache-size=&amp;#34;1000&amp;#34; query-cache-size=&amp;#34;1000&amp;#34; display-property=&amp;#34;discountType&amp;#34;&amp;gt; &amp;lt;table name=&amp;#34;CPLXB2B_DISCOUNT_PRICE_LIST&amp;#34; type=&amp;#34;primary&amp;#34; id-column-name=&amp;#34;DISCOUNT_PRICELIST_ID&amp;#34; &amp;gt; &amp;lt;property name=&amp;#34;discountType&amp;#34; data-type=&amp;#34;enumerated&amp;#34; column-name=&amp;#34;DISCOUNT_TYPE&amp;#34; default=&amp;#34;Base&amp;#34; queryable=&amp;#34;true&amp;#34; category=&amp;#34;Discount Price List&amp;#34; display-name=&amp;#34;Discount Type&amp;#34; &amp;gt; &amp;lt;attribute name=&amp;#34;useCodeForValue&amp;#34; value=&amp;#34;false&amp;#34;/&amp;gt; &amp;lt;option value=&amp;#34;Base&amp;#34; code=&amp;#34;0&amp;#34;/&amp;gt; &amp;lt;option value=&amp;#34;Silver&amp;#34; code=&amp;#34;1&amp;#34;/&amp;gt; &amp;lt;option value=&amp;#34;Gold&amp;#34; code=&amp;#34;2&amp;#34;/&amp;gt; &amp;lt;option value=&amp;#34;Platinum&amp;#34; code=&amp;#34;3&amp;#34;/&amp;gt; &amp;lt;/property&amp;gt; &amp;lt;property name=&amp;#34;priceListId&amp;#34; column-name=&amp;#34;PRICE_LIST_ID&amp;#34; repository=&amp;#34;/atg/commerce/pricing/priceLists/PriceLists&amp;#34; item-type=&amp;#34;priceList&amp;#34; display-name=&amp;#34;List Price List&amp;#34; required=&amp;#34;true&amp;#34; category=&amp;#34;Discount Price List&amp;#34;/&amp;gt; &amp;lt;property name=&amp;#34;salePriceListId&amp;#34; column-name=&amp;#34;SALE_PRICE_LIST_ID&amp;#34; repository=&amp;#34;/atg/commerce/pricing/priceLists/PriceLists&amp;#34; item-type=&amp;#34;priceList&amp;#34; display-name=&amp;#34;Sale Price List&amp;#34; category=&amp;#34;Discount Price List&amp;#34;/&amp;gt; &amp;lt;property name=&amp;#34;startDate&amp;#34; column-name=&amp;#34;START_DATE&amp;#34; data-type=&amp;#34;timestamp&amp;#34; display-name=&amp;#34;Start Date&amp;#34; category=&amp;#34;Discount Price List&amp;#34;/&amp;gt; &amp;lt;property name=&amp;#34;endDate&amp;#34; column-name=&amp;#34;END_DATE&amp;#34; data-type=&amp;#34;timestamp&amp;#34; display-name=&amp;#34;End Date&amp;#34; category=&amp;#34;Discount Price List&amp;#34;/&amp;gt; &amp;lt;/table&amp;gt; &amp;lt;/item-descriptor&amp;gt;   When I tried deployment with this, I got error</description>
+    </item>
+    
+    <item>
       <title>ATG module graph</title>
       <link>https://miroadamy.com/posts/2012-04-02-atg-module-graph/</link>
       <pubDate>Mon, 02 Apr 2012 11:22:48 +0800</pubDate>

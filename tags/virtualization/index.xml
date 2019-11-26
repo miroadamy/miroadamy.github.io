@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>virtualization on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/virtualization/</link>
+    <description>Recent content in virtualization on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 22 Apr 2013 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/virtualization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ATG Development using &#39;hidden&#39; VM</title>
+      <link>https://miroadamy.com/posts/2013-04-22-atg-development/</link>
+      <pubDate>Mon, 22 Apr 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-04-22-atg-development/</guid>
+      <description>Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.
+Inspiration for the setup came from https://www.youtube.com/watch?feature=player_embedded&amp;amp;v=cPt_1Vga-Nk
+Motivation - issues with VMs VMs are great - they allow &amp;ldquo;packaged&amp;rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business.</description>
+    </item>
+    
+  </channel>
+</rss>

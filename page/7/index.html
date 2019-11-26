@@ -118,6 +118,79 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-25-sublime-text-macro-timestamp/">Sublime text macro to insert timestamp</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-09-25 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> Programming </a>
+          </div>
+        <span class="more-meta"> 75 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-09-25-sublime-text-macro-timestamp/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-24-screenshot-cli/">How to make screenshot from command line</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-09-24 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 64 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      How to make screenshot from command line 1 2 3 4 5 6 7  platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk   First one is &ldquo;interactive&rdquo; - Cmd-Shift-3 with selection tool, second is full screen
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-09-24-screenshot-cli/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-16-vbox-shared-folder/">Case sensitivity and VirtualBox shared folder</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-09-16 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 104 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Case sensitivity and VirtualBox shared folder Weird but true behaviour:
+I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
+1  touch zz zZ   creates two files, both &ldquo;inside VM&rdquo; ~/development/ATG/platform-edc as well as in OS-X.
+If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
+The command
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-09-16-vbox-shared-folder/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2013-09-05-mc-color-scheme/">Usable mc color scheme</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2013-09-05 </span>
@@ -164,84 +237,6 @@ and it is back:
     </div>
     <div class="read-more">
       <a href="/posts/2013-09-03-show-lock-screen-indicator/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-02-23-perf-quicklook-lion/">Performance issues with Quicklook in OS-X Lion</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-02-23 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 1149 words </span>
-        <span class="more-meta"> 6 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I have been experiencing issues with Quicklook (press Space on file in Finder or Pathfinder) for some time: it took several second, sometimes 10-15 to show content of simple 1K large property file.
-It turned out that on of the QuickLook plugins, installed originally way back in Leopard and brought ahead with TimeMachine restores could have been the reason: the QLStephen.
-For more on that plugin see:
- http://whomwah.github.com/qlstephen/ https://github.com/whomwah/qlstephen  To remove the plugin, go to ~/Library/QuickLook and delete the file (it is the bundle) QLStephen.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-02-23-perf-quicklook-lion/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-01-08-gvm/">GVM</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-01-08 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 229 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Installed GVM from:
-http://gvmtool.net
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46  ~ $ curl -s get.gvmtool.net | bash Thanks for using _____/\\\\\\\\\\\\__/\\\________/\\\__/\\\\____________/\\\\_ ___/\\\//////////__\/\\\_______\/\\\_\/\\\\\\________/\\\\\\_ __/\\\_____________\//\\\______/\\\__\/\\\//\\\____/\\\//\\\_ _\/\\\____/\\\\\\\__\//\\\____/\\\___\/\\\\///\\\/\\\/_\/\\\_ _\/\\\___\/////\\\___\//\\\__/\\\____\/\\\__\///\\\/___\/\\\_ _\/\\\_______\/\\\____\//\\\/\\\_____\/\\\____\///_____\/\\\_ _\/\\\_______\/\\\_____\//\\\\\______\/\\\_____________\/\\\_ _\//\\\\\\\\\\\\/_______\//\\\_______\/\\\_____________\/\\\_ __\////////////__________\///________\///______________\///__ Will now attempt installing.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-01-08-gvm/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-11-12-trello/">Discovered Trello</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-11-12 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 73 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Finally a todo/task/project management system that is very good fit.
-Here is why:
- is pretty visually modern and dynamic UI has Web back-end (usable from Linux VM) has decent iPhone app allows checklists (multiple) allows color coding Markdown support ecosystem  There is Gmello that allows create card from GMail, plus few others that seem to bridge the gap between Evernote, System XYZ and Trello
-http://trello.com
-Courtesy of Fog Creek / Joel Spolsky&rsquo;s company
-    </div>
-    <div class="read-more">
-      <a href="/posts/2012-11-12-trello/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

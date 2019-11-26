@@ -147,6 +147,33 @@
     </item>
     
     <item>
+      <title>jenkins</title>
+      <link>https://miroadamy.com/tags/jenkins/</link>
+      <pubDate>Thu, 18 Jun 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>groovy</title>
+      <link>https://miroadamy.com/tags/groovy/</link>
+      <pubDate>Fri, 16 May 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/groovy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tdd</title>
+      <link>https://miroadamy.com/tags/tdd/</link>
+      <pubDate>Fri, 16 May 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/tdd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>linux</title>
       <link>https://miroadamy.com/tags/linux/</link>
       <pubDate>Fri, 04 Apr 2014 11:22:48 +0800</pubDate>
@@ -219,20 +246,47 @@
     </item>
     
     <item>
+      <title>virtualization</title>
+      <link>https://miroadamy.com/tags/virtualization/</link>
+      <pubDate>Mon, 22 Apr 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/virtualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>https://miroadamy.com/tags/bash/</link>
+      <pubDate>Tue, 09 Apr 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecommerce</title>
+      <link>https://miroadamy.com/tags/ecommerce/</link>
+      <pubDate>Sun, 10 Mar 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ecommerce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>commandline</title>
       <link>https://miroadamy.com/tags/commandline/</link>
-      <pubDate>Tue, 08 Jan 2013 11:22:48 +0800</pubDate>
+      <pubDate>Sun, 03 Mar 2013 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/commandline/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>groovy</title>
-      <link>https://miroadamy.com/tags/groovy/</link>
-      <pubDate>Tue, 08 Jan 2013 11:22:48 +0800</pubDate>
+      <title>editor</title>
+      <link>https://miroadamy.com/tags/editor/</link>
+      <pubDate>Sun, 03 Mar 2013 11:22:48 +0800</pubDate>
       
-      <guid>https://miroadamy.com/tags/groovy/</guid>
+      <guid>https://miroadamy.com/tags/editor/</guid>
       <description></description>
     </item>
     
@@ -305,15 +359,6 @@
       <pubDate>Wed, 20 May 2009 22:24:39 -0400</pubDate>
       
       <guid>https://miroadamy.com/tags/books/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ecommerce</title>
-      <link>https://miroadamy.com/tags/ecommerce/</link>
-      <pubDate>Wed, 18 Feb 2009 20:26:22 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/tags/ecommerce/</guid>
       <description></description>
     </item>
     

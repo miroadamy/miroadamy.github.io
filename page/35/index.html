@@ -118,110 +118,111 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-16-steves-latest/">Steve&#39;s latest ...</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-03-05-how-to-generate-and-send-emails-using-spring-and-velocity/">How to generate and send emails using Spring and Velocity</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2008-01-16 </span>
+      <span class="post-time"> 2008-03-05 </span>
       
-        <span class="more-meta"> 947 words </span>
+        <span class="more-meta"> 1049 words </span>
         <span class="more-meta"> 5 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Of course, I mean the other Steve, Steve Jobs. My world is revolving around few Steves. Steve Jobs is usually Steve Nr. 2 - and no, Joel - the Steve #1 is definitely not Ballmer :-). But every year, for two brief occasions - Macworld and WWDC - Steve Jobs becomes Steve #1 for very large amount of people.
-I was waiting with this post full day to allow the new-ity of the keynote sink in and reality distortion field to evaporate .
+      Testing applications that communicate using email is more challenging than e.g. testing database access. Thanks to GMail and Spring, it can be done pretty easily.
+Here is the scoop: I need to generate email notifying users about business events and after sending the email, store the content in the database. In real environment you will use corporate SMTP server and real email addresses of real people.
+For development we can avoid bothering and spamming our customers by few simple tricks.
     </div>
     <div class="read-more">
-      <a href="/posts/2008-01-16-steves-latest/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-03-05-how-to-generate-and-send-emails-using-spring-and-velocity/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-14-the-best-gtd-tool-is-still-a-wiki-part-ii/">The best GTD tool is still a Wiki - part II</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-02-25-spring-propertyplaceholderconfigurer-with-velocity/">Spring PropertyPlaceholderConfigurer with Velocity</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2008-01-14 </span>
+      <span class="post-time"> 2008-02-25 </span>
       
-        <span class="more-meta"> 590 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Continuation of this post.
-As every TiddlyWiki, the main building block of the MGTDTW (MonkeyGTD TiddlyWiki, if you are wondering what kind of monstrous acronym is that) is a tiddler. And the only one building block because everything is a tiddler. How does this map to the GTD approach ?
-The GTD workflow works with projects, contexts and actions. Action (or task or todo) is smallest building stone. The actions in GTD are really small actions.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-01-14-the-best-gtd-tool-is-still-a-wiki-part-ii/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-11-safari-books-online-and-lyndacom-on-ipod-touch/">Safari Books Online and Lynda.com on iPod Touch</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-01-11 </span>
-      
-        <span class="more-meta"> 258 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Last few weeks I have been using one application on iTouch much more than before: YouTube. Within my how wireless network, I can have an access to the videos on YouTube without sitting behind the computer - for example while walking on treadmill (I recommend walking slowly) or on a sofa :-).
-Very interesting videos and actually worth the time spent on them are Google technical talks from Google channel. Few examples of videos I watched and liked:
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-01-11-safari-books-online-and-lyndacom-on-ipod-touch/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-07-sony-ereader-format-lrf-viewer-for-the-mac-linux-and-windows/">Sony eReader format (LRF) viewer for the Mac, Linux and Windows</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-01-07 </span>
-      
-        <span class="more-meta"> 176 words </span>
+        <span class="more-meta"> 171 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Thanks to Kovid Goyal, the Sony Reader's very own terrible software (iTunes wannabe) can very soon be decommissioned from my software collection. The libprs500 project, multi-platform solution written in Python works very well and allows to move data between Sony and your Mac / Linux / Windows. The UI is actually pretty decent, considering that it is not native Cocoa app:
-You can also edit metadata, which is very important because of the limited screen space on PRS500.
+      Part of the configuration magic is (one of several) Spring post-processors, that allows load the property file or files and refer to the values in these files inside XML configuration files. The rationale behind these is that property files are much easier to edit that possibly huge XML config file and using property values prevents repeating same value over and over again. With this approach, the following configuration:
+[sourcecode language='xml']
     </div>
     <div class="read-more">
-      <a href="/posts/2008-01-07-sony-ereader-format-lrf-viewer-for-the-mac-linux-and-windows/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-02-25-spring-propertyplaceholderconfigurer-with-velocity/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-06-the-best-gtd-tool-is-still-a-wiki-part-i/">The best GTD tool is still a Wiki - part I</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-02-23-oracle-sqldeveloper-and-mystery-of-the-missing-host/">Oracle SQLDeveloper and mystery of the missing host</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2008-01-06 </span>
+      <span class="post-time"> 2008-02-23 </span>
       
-        <span class="more-meta"> 891 words </span>
-        <span class="more-meta"> 5 mins read </span>
+        <span class="more-meta"> 193 words </span>
+        <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Did you notice that there are seasons for software as well ? Similarly as with other merchandise, there are times during the year when many more people suddenly decide they need that one application X. Luckily, this trend is not as extreme as with e.g. Santa hats or carved pumpkins, which are impossible to find in stores outside of the narrow window around Christmas and Halloween (I am grateful for that :-)).
+      If you work with Oracle database, a very good tool you should not ignore is the Oracle SQL Developer. It gives you much more power when it comes to manipulating data or managing database. I use most of the time MyEclipseIDE plugins, but when I need e.g. export data, the SQLDeveloper is way to go.
+Today I tried it for first time on the Mac. I started to configure and database connection and was completely confused by the error message "
     </div>
     <div class="read-more">
-      <a href="/posts/2008-01-06-the-best-gtd-tool-is-still-a-wiki-part-i/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-02-23-oracle-sqldeveloper-and-mystery-of-the-missing-host/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-02-22-why-so-quiet/">Why so quiet</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-02-22 </span>
+      
+        <span class="more-meta"> 175 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I have been sick for last two weeks, most of the time offline, listening to podcasts and audiobooks and doing more or less nothing. I have caught up with the backlog of episodes, saw lots of videos from Macworld.
+Among the audiobooks I was listening two, some recommendations:
+The Company is good parody of the corporate life. Starting with missing donut, it tells the story of a new hire in large corporation, governed by strange rules.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-02-22-why-so-quiet/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-02-11-leopard-1052-update/">Leopard 10.5.2 update</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-02-11 </span>
+      
+        <span class="more-meta"> 271 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Apple released today the 10.5.2 update. After over a year and half with Mac platform (and over 2 months on Mac only work environment) I become fearless and installed update without too much worries :-). Year ago, I guess I would be quite concerned whether the Service Pack will or will not render my work notebook useless with unreparable registry ... I still remember the fun after SP2 got installed .
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-02-11-leopard-1052-update/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

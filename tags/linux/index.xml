@@ -36,5 +36,16 @@ sudo vim /etc/yum.repos.d/remi.repo
 Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap   Using Mount the host directory</description>
     </item>
     
+    <item>
+      <title>Configuring permanent time updates for Linux</title>
+      <link>https://miroadamy.com/posts/2011-02-03-linux-time/</link>
+      <pubDate>Thu, 03 Feb 2011 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2011-02-03-linux-time/</guid>
+      <description>1) make sure the DNS works 1 2 3 4 5 6  sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1   2) check that you have ntpd installed  cat /etc/ntp.conf
+ 3) make it work in all 1 2  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
+ 5) Start service / restart  sudo /sbin/service ntpd start</description>
+    </item>
+    
   </channel>
 </rss>

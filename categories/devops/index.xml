@@ -35,6 +35,16 @@ Unsuccesfull path - keep the Python 2.7 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 1
     </item>
     
     <item>
+      <title>How to fix Jenkins build issues related to Git connectivity</title>
+      <link>https://miroadamy.com/posts/2015-06-18-jenkins-git/</link>
+      <pubDate>Thu, 18 Jun 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-06-18-jenkins-git/</guid>
+      <description>Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &amp;lsquo;git status&amp;rsquo; in that directory. If you see something like
+1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded.</description>
+    </item>
+    
+    <item>
       <title>How to install Chrome in Centos 6.5</title>
       <link>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</link>
       <pubDate>Fri, 04 Apr 2014 11:22:48 +0800</pubDate>

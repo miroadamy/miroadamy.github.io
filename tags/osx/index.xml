@@ -94,6 +94,18 @@ Eclipse There is opensource plugin for it at https://github.</description>
     </item>
     
     <item>
+      <title>German attack</title>
+      <link>https://miroadamy.com/posts/2013-03-05-german-attack/</link>
+      <pubDate>Tue, 05 Mar 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-03-05-german-attack/</guid>
+      <description>Suddenly I started to see all apps auf Deutsch:
+The cause was by mistake selecting additional language in Properties -&amp;gt; Internationalization (Österreichisches Deutsch) and the system added it to the list as language #1.
+Those programs that are localized, picked it up &amp;hellip;.
+Here is how that list looks like after reorder :-) I care only for the first 11 languages anyway ;-)</description>
+    </item>
+    
+    <item>
       <title>Performance issues with Quicklook in OS-X Lion</title>
       <link>https://miroadamy.com/posts/2013-02-23-perf-quicklook-lion/</link>
       <pubDate>Sat, 23 Feb 2013 11:22:48 +0800</pubDate>
