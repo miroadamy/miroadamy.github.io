@@ -9,6 +9,20 @@
   </url>
   
   <url>
+    <loc>https://miroadamy.com/</loc>
+    <lastmod>2019-11-27T20:24:21+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/status/</loc>
+    <lastmod>2019-11-27T20:24:21+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://miroadamy.com/tags/blog/</loc>
     <lastmod>2019-11-23T22:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -52,13 +66,6 @@
   
   <url>
     <loc>https://miroadamy.com/tags/hugo/</loc>
-    <lastmod>2019-11-23T22:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/</loc>
     <lastmod>2019-11-23T22:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

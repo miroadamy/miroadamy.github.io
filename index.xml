@@ -6,7 +6,7 @@
     <description>Recent content on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 23 Nov 2019 22:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 27 Nov 2019 20:24:21 +0000</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,6 +21,19 @@
 Im am DevOps/Cloud engineer, living in beautiful Valencia, Spain and spending my days designing and creating software systems for living and pleasure, reading books, surfing Web, walking, thinking and enjoying life with my family
 Resume My current resume is available online or can be downloaded from here as PDF
 Contact Email me - firstname dot lastname, at Sergei&amp;rsquo;s and Larry&amp;rsquo;s company&amp;rsquo;s email</description>
+    </item>
+    
+    <item>
+      <title>status</title>
+      <link>https://miroadamy.com/status/</link>
+      <pubDate>Wed, 27 Nov 2019 20:24:21 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/status/</guid>
+      <description>Status Hugo Static Site Generator v0.59.1/extended darwin/amd64 BuildDate: unknown
+Pygments version 2.4.2, &amp;copy; 2006-2019 by Georg Brandl.
+Blog commit: c1e137a5d2cff2355cde57c12a51ff9d1341e64e
+Theme commit: d39d3e443953caea05510b19fdd7a259c71a0ab3
+Published: &amp;ldquo;2019-11-27T20:24:21Z&amp;rdquo;</description>
     </item>
     
     <item>
