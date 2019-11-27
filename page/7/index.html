@@ -118,125 +118,122 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-25-sublime-text-macro-timestamp/">Sublime text macro to insert timestamp</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-03-10-git-log-output-less/">How to keep git log and less output on the screen</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2013-09-25 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> Programming </a>
-          </div>
-        <span class="more-meta"> 75 words </span>
+      <span class="post-time"> 2015-03-10 </span>
+      
+        <span class="more-meta"> 129 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see
+      When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.
+Just for git commands:
+1  git config --global --replace-all core.pager &#34;less -iXFR&#34;   For less globally (including git) - add to .bashrc / .zshrc / etc:
+1  export LESS=-iXFR   The options we set for less are:
     </div>
     <div class="read-more">
-      <a href="/posts/2013-09-25-sublime-text-macro-timestamp/" class="read-more-link">Read more...</a>
+      <a href="/posts/2015-03-10-git-log-output-less/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-24-screenshot-cli/">How to make screenshot from command line</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-02-16-grasshoper/">New image that expresses my new undefined job title</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2013-09-24 </span>
+      <span class="post-time"> 2015-02-16 </span>
       <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
+          <a href="/categories/general/"> general </a>
           </div>
-        <span class="more-meta"> 64 words </span>
+        <span class="more-meta"> 42 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      How to make screenshot from command line 1 2 3 4 5 6 7  platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk   First one is &ldquo;interactive&rdquo; - Cmd-Shift-3 with selection tool, second is full screen
+      That is what I do - jump from project to project to topic to project. And back.
+It is uncertain how good is all this - but as they say:
+ &ldquo;If you cannot do something right, learn to enjoy doing it poorly&rdquo;
+ 
     </div>
     <div class="read-more">
-      <a href="/posts/2013-09-24-screenshot-cli/" class="read-more-link">Read more...</a>
+      <a href="/posts/2015-02-16-grasshoper/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-16-vbox-shared-folder/">Case sensitivity and VirtualBox shared folder</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-02-05-unmerged/">Finding unmerged commits in all branches</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2013-09-16 </span>
+      <span class="post-time"> 2015-02-05 </span>
       <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
+          <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 104 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 902 words </span>
+        <span class="more-meta"> 5 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Case sensitivity and VirtualBox shared folder Weird but true behaviour:
-I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
-1  touch zz zZ   creates two files, both &ldquo;inside VM&rdquo; ~/development/ATG/platform-edc as well as in OS-X.
-If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
-The command
+      This one goes beyond git, but is very useful. Ruby script that produces this:
+Here is the script
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236  #!
     </div>
     <div class="read-more">
-      <a href="/posts/2013-09-16-vbox-shared-folder/" class="read-more-link">Read more...</a>
+      <a href="/posts/2015-02-05-unmerged/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-05-mc-color-scheme/">Usable mc color scheme</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-11-02-bsd-grep-gnu/">Replace BSD grep with GNU grep</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2013-09-05 </span>
+      <span class="post-time"> 2014-11-02 </span>
       <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
+          <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 11 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 215 words </span>
+        <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-       Usable mc color scheme Edit
-~/.mc/ini
-insert
-1 2  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   
+      If annoyed with: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  ➜ ~ echo $PATH | tr &#39;:&#39; &#39;\n&#39; /usr/local/opt/coreutils/libexec/gnubin /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin /opt/ant/bin /opt/groovy/bin /opt/gradle/bin /Users/miro/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /usr/texbin # YEs I am using GNU core utils but grep is not there # The issue ➜ ~ grep --version grep (BSD grep) 2.
     </div>
     <div class="read-more">
-      <a href="/posts/2013-09-05-mc-color-scheme/" class="read-more-link">Read more...</a>
+      <a href="/posts/2014-11-02-bsd-grep-gnu/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-03-show-lock-screen-indicator/">Show lock screen indicator in OS-X menu</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-10-03-keepas-node/">Keepass-Node install</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2013-09-03 </span>
+      <span class="post-time"> 2014-10-03 </span>
       <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
+          <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 50 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 566 words </span>
+        <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Show lock screen indicator in OS-X menu After HDD reinstall I lost most of my customizations (by choice decided NOT to restore from TM).
-The Lock in menu is provided by KeyChain Access, not by System Preferences.
-Open &lsquo;KeyChain Access&rsquo; -&gt; Preferences, select &lsquo;Show keychain status&rsquo;
-and it is back:
+      See https://github.com/gesellix/keepass-node
+1 2  ➜ keepass-node git:(master) pwd /Users/miro/src/PLG/keepass-node   Install 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107  ➜ keepass-node git:(master) ✗ sudo npm install Password: &gt; dejavu@0.
     </div>
     <div class="read-more">
-      <a href="/posts/2013-09-03-show-lock-screen-indicator/" class="read-more-link">Read more...</a>
+      <a href="/posts/2014-10-03-keepas-node/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

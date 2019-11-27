@@ -118,121 +118,111 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-02-06-book-recommendation-java-concurrency-in-practice/">Book recommendation: Java Concurrency in Practice</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-03-26-finally-over-16/">Finally over 16 :-)</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2008-02-06 </span>
+      <span class="post-time"> 2008-03-26 </span>
       
-        <span class="more-meta"> 90 words </span>
+        <span class="more-meta"> 64 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      After long time, I stumbled upon something that is both educational and practical. Since Doug Lea's classic, this is very readworthy work on concurrency in Java world. It focuses on Java 5 features and addresses both Web applications as well as GUI apps - each group having their own share of concurrency related problems
-Here is the Amazon page for the book - check the reviews. There is also a sample chapter available on the book's website.
+      I did not even notice that the visit counter left the 16 bit domain sometimes during last few days. Now it shows about 67 000 visits. Honestly, I am pleasantly surprised how many people found this blog worthy their time :-). Thanks to you all ...
+Next boundary is of course 128K, 256K, 512K hits and finally a "Megahit". But that's far far away.
     </div>
     <div class="read-more">
-      <a href="/posts/2008-02-06-book-recommendation-java-concurrency-in-practice/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-03-26-finally-over-16/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-02-04-spring-framework-the-biggest-missing-piece/">Spring Framework - the biggest missing piece</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-03-25-rails-2-really-good-tutorial/">Rails 2 - really good tutorial</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2008-02-04 </span>
+      <span class="post-time"> 2008-03-25 </span>
       
-        <span class="more-meta"> 561 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I am having the pleasure working with Spring 2.x since about October last year. It is my return back to Spring, after first encounter in 2005 (counting only larger projects). Same as in previous project, it has been so much fun :-). So much fun in fact, that I was spending my evening playing with code and reading up what is new in 2.5, rather that blogging ;-)
-I am still amazed about how nice is the whole thing designed and how many ways it can be used.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-02-04-spring-framework-the-biggest-missing-piece/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/">Spring 2 MVC and ResourceBundleViewResolver problem</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-01-24 </span>
-      
-        <span class="more-meta"> 129 words </span>
+        <span class="more-meta"> 43 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      This one took some time to figure out - it is one of those problems that are obvious after you know the solution but hard to see beforehand.
-I had the ResourceBundleViewResolver configured with Tiles 2, like this:
-[code language='xml']
-[/code]
-and the view.properties was:
-[code language='xml']
-parent-view.(class)=org.springframework.web.servlet.view.JstlView
-parent-view.(abstract)=true
-about.url=/WEB-INF/jsp/about.jsp
-form.url=/WEB-INF/jsp/form.jsp
-list.url=/WEB-INF/jsp/list.jsp
-[/code]
-It kept givin exception saying that /WEB-INF/jsp/list.jsp does not exist. Which it did. I tried couple of things, no result.
+      Akita published two part tutorial that leads you through building the famous 15 minute blog application in Rails 2.0. Read the parts one and two - or follow the screencast by the same author.
+Thanks a lot, Akita - very nicely done !
     </div>
     <div class="read-more">
-      <a href="/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-03-25-rails-2-really-good-tutorial/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-20-using-ibatis-with-abator/">Using iBatis with Abator</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-03-19-the-meaning-of-ora-29907-error-and-the-fix/">The meaning of ORA-29907 error and the fix</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2008-01-20 </span>
+      <span class="post-time"> 2008-03-19 </span>
       
-        <span class="more-meta"> 457 words </span>
+        <span class="more-meta"> 189 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I have first time encountered the error:
+ORA-29907: found duplicate labels in primary invocations
+after testing the change request we have implemented recently. The error message was not very helpful - I was not exactly sure which labels and which invocations ;-) - and as Oracle guru who actually does understand fine details of Oracle Text was visiting sunny India, I was on my own.
+The change addressed an issue in repository search: users were asking for more flexible processing of full text search phrases: instead of e.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-03-19-the-meaning-of-ora-29907-error-and-the-fix/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-03-17-starting-ruby-on-rails-2-with-netbeans-and-awdwr-book/">Starting Ruby on Rails 2 with Netbeans and AWDWR book</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-03-17 </span>
+      
+        <span class="more-meta"> 701 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      After some break, I got back to Rails land. The return is not as smooth as I hoped: since Rails 2.0, many things work differently and quite a few steps learned from "The Book" do not work any more. The issues are more often than not quite easy to fix, but there is quite a few of them.
+All the following is related to NetbeansRuby build 6327 from Jan 26th with JRuby 1.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-03-17-starting-ruby-on-rails-2-with-netbeans-and-awdwr-book/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-03-16-showstopper-issue-with-jruby/">Showstopper issue with JRuby ?</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-03-16 </span>
+      
+        <span class="more-meta"> 606 words </span>
         <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      I am back to Java and on mission of re-discovering Spring coolness - and in awe how much was added since 1.2 to current 2.5.1. Thanks, SpringSource and hundreds of contributors.
-Data layer of the current project is based on iBatis and Spring DAO. We have decided to try out the Abator tool from Apache (part of the iBatis suite) to generate initial version of data mapping (as we inherited the database schema).
+      After some break, I dusted off the Ruby to try out one interesting idea Peter presented yesterday that literally ASKS for Rails. So I grabbed the latest and greatest RubyNetBeans from Ruby Hudson. For some reason it stopped updates on January 26th so the latest version I have got was build 6327. It is bundled with JRuby 1.1RC1 and the Rails version that comes preinstalled is 1.2.6. Using the menu Tools -&gt; Ruby Gems, they can be easily upgraded to latest and greatest 2.
     </div>
     <div class="read-more">
-      <a href="/posts/2008-01-20-using-ibatis-with-abator/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-16-steves-latest/">Steve&#39;s latest ...</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-01-16 </span>
-      
-        <span class="more-meta"> 947 words </span>
-        <span class="more-meta"> 5 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Of course, I mean the other Steve, Steve Jobs. My world is revolving around few Steves. Steve Jobs is usually Steve Nr. 2 - and no, Joel - the Steve #1 is definitely not Ballmer :-). But every year, for two brief occasions - Macworld and WWDC - Steve Jobs becomes Steve #1 for very large amount of people.
-I was waiting with this post full day to allow the new-ity of the keynote sink in and reality distortion field to evaporate .
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-01-16-steves-latest/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-03-16-showstopper-issue-with-jruby/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

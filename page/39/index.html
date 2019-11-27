@@ -118,114 +118,122 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2007-12-22-fix-for-the-stalled-downloads-in-leopard/">Fix for the stalled downloads in Leopard</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-02-04-spring-framework-the-biggest-missing-piece/">Spring Framework - the biggest missing piece</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2007-12-22 </span>
+      <span class="post-time"> 2008-02-04 </span>
       
-        <span class="more-meta"> 202 words </span>
+        <span class="more-meta"> 561 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I am having the pleasure working with Spring 2.x since about October last year. It is my return back to Spring, after first encounter in 2005 (counting only larger projects). Same as in previous project, it has been so much fun :-). So much fun in fact, that I was spending my evening playing with code and reading up what is new in 2.5, rather that blogging ;-)
+I am still amazed about how nice is the whole thing designed and how many ways it can be used.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-02-04-spring-framework-the-biggest-missing-piece/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/">Spring 2 MVC and ResourceBundleViewResolver problem</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-01-24 </span>
+      
+        <span class="more-meta"> 129 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      I was experiencing the occasional weird behaviour on downloading large files in Leopard: the download would stall, but after stopping/restarting (which can be done in Safari and iTunes), the download would continue. It was not very consistent, and I suspected the NAT router or even Rogers - some sites were occasionally having this problem, while other sites would not.
-While playing with JRuby over the weekend, this happened again and pretty much prevented the gem installation - because the multi-megabyte gem index would not download from http://gems.
+      This one took some time to figure out - it is one of those problems that are obvious after you know the solution but hard to see beforehand.
+I had the ResourceBundleViewResolver configured with Tiles 2, like this:
+[code language='xml']
+[/code]
+and the view.properties was:
+[code language='xml']
+parent-view.(class)=org.springframework.web.servlet.view.JstlView
+parent-view.(abstract)=true
+about.url=/WEB-INF/jsp/about.jsp
+form.url=/WEB-INF/jsp/form.jsp
+list.url=/WEB-INF/jsp/list.jsp
+[/code]
+It kept givin exception saying that /WEB-INF/jsp/list.jsp does not exist. Which it did. I tried couple of things, no result.
     </div>
     <div class="read-more">
-      <a href="/posts/2007-12-22-fix-for-the-stalled-downloads-in-leopard/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2007-12-20-joels-gems/">Joel&#39;s gems</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-20-using-ibatis-with-abator/">Using iBatis with Abator</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2007-12-20 </span>
+      <span class="post-time"> 2008-01-20 </span>
       
-        <span class="more-meta"> 97 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 457 words </span>
+        <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      One of the most readable, original blogers out there, writing on software development practice and techniques - Joel Spolsky - published an excellent 3 part Talk at Yale: Part1, Part2 and Part3.
-You will find out:
-- what two computer science courses were most useful in his university studies
-(one that was not really a comp-sci and one he decided to drop)
-- why is it tough to be an in-house programmer
+      I am back to Java and on mission of re-discovering Spring coolness - and in awe how much was added since 1.2 to current 2.5.1. Thanks, SpringSource and hundreds of contributors.
+Data layer of the current project is based on iBatis and Spring DAO. We have decided to try out the Abator tool from Apache (part of the iBatis suite) to generate initial version of data mapping (as we inherited the database schema).
     </div>
     <div class="read-more">
-      <a href="/posts/2007-12-20-joels-gems/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-01-20-using-ibatis-with-abator/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2007-12-19-great-spring-blog/">Great Spring blog</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-16-steves-latest/">Steve&#39;s latest ...</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2007-12-19 </span>
+      <span class="post-time"> 2008-01-16 </span>
       
-        <span class="more-meta"> 86 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 947 words </span>
+        <span class="more-meta"> 5 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      in case you have not noticed - Interface21 aka SpringSource (great name change, btw) runs a blog with lots of hidden treasures inside.
-Recent article describes new addition to Spring portfolio which is territory within my "watched space": enterprise integration. See the blog entry for more.
-If you are in corporate space that is keen on "standards", the comparison of Spring vs EJB3 is very good article as well. Not that EJB would matter too much these days (IMHO) - but a nice read nevertheless.
+      Of course, I mean the other Steve, Steve Jobs. My world is revolving around few Steves. Steve Jobs is usually Steve Nr. 2 - and no, Joel - the Steve #1 is definitely not Ballmer :-). But every year, for two brief occasions - Macworld and WWDC - Steve Jobs becomes Steve #1 for very large amount of people.
+I was waiting with this post full day to allow the new-ity of the keynote sink in and reality distortion field to evaporate .
     </div>
     <div class="read-more">
-      <a href="/posts/2007-12-19-great-spring-blog/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-01-16-steves-latest/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2007-12-14-an-advice-to-a-fellow-developer-2/">An advice to a fellow developer - 2</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-14-the-best-gtd-tool-is-still-a-wiki-part-ii/">The best GTD tool is still a Wiki - part II</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2007-12-14 </span>
+      <span class="post-time"> 2008-01-14 </span>
       
-        <span class="more-meta"> 1281 words </span>
-        <span class="more-meta"> 7 mins read </span>
+        <span class="more-meta"> 590 words </span>
+        <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      The part 1 of the post is here --- continuing ---
-So back again - different coffee shop (Starbucks at Carling), freshly charged battery, Grande Latte and no internet connection (which means no distractions from emails and the Web) - here we go again, part 2.
-If I should single out one or two technologies that I think I have neglected and should have paid much more attention to it would be the Web trio of HTML/JavaScript/CSS as one and the SQL as second.
+      Continuation of this post.
+As every TiddlyWiki, the main building block of the MGTDTW (MonkeyGTD TiddlyWiki, if you are wondering what kind of monstrous acronym is that) is a tiddler. And the only one building block because everything is a tiddler. How does this map to the GTD approach ?
+The GTD workflow works with projects, contexts and actions. Action (or task or todo) is smallest building stone. The actions in GTD are really small actions.
     </div>
     <div class="read-more">
-      <a href="/posts/2007-12-14-an-advice-to-a-fellow-developer-2/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2007-12-12-an-advice-to-a-fellow-developer-1/">An advice to a fellow developer - 1</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2007-12-12 </span>
-      
-        <span class="more-meta"> 1333 words </span>
-        <span class="more-meta"> 7 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      We are recently interviewing quite a lot in anticipation of the great things coming. It is sort of similar task as we did year and something ago, but I enjoy this round much better. This time, rather than "we have to assemble the project team ASAP", we have the luxury of longer term view and focus more on hiring the people that will be great match to the company culture, will be with us for longer period and will grow with the company.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2007-12-12-an-advice-to-a-fellow-developer-1/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-01-14-the-best-gtd-tool-is-still-a-wiki-part-ii/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

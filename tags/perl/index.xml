@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>perl on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/perl/</link>
+    <description>Recent content in perl on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 08 Jul 2015 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/perl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Accessing Keepass information from command line</title>
+      <link>https://miroadamy.com/posts/2015-07-08-keepass-cli/</link>
+      <pubDate>Wed, 08 Jul 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-07-08-keepass-cli/</guid>
+      <description>This is mainly for Linux and Mac as they do not have good client.
+It requires relatively modern Perl - 5.1x should work. I have
+1 2 3  ➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail)   Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.</description>
+    </item>
+    
+  </channel>
+</rss>

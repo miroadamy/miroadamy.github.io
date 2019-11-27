@@ -102,6 +102,33 @@
     </item>
     
     <item>
+      <title>java</title>
+      <link>https://miroadamy.com/tags/java/</link>
+      <pubDate>Thu, 23 Nov 2017 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monitoring</title>
+      <link>https://miroadamy.com/tags/monitoring/</link>
+      <pubDate>Thu, 23 Nov 2017 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualization</title>
+      <link>https://miroadamy.com/tags/virtualization/</link>
+      <pubDate>Thu, 23 Nov 2017 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/virtualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>cloud</title>
       <link>https://miroadamy.com/tags/cloud/</link>
       <pubDate>Tue, 14 Nov 2017 14:22:48 +0800</pubDate>
@@ -120,20 +147,38 @@
     </item>
     
     <item>
-      <title>atg</title>
-      <link>https://miroadamy.com/tags/atg/</link>
-      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
+      <title>bitbucket</title>
+      <link>https://miroadamy.com/tags/bitbucket/</link>
+      <pubDate>Wed, 02 Nov 2016 11:22:48 +0800</pubDate>
       
-      <guid>https://miroadamy.com/tags/atg/</guid>
+      <guid>https://miroadamy.com/tags/bitbucket/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitolite</title>
+      <link>https://miroadamy.com/tags/gitolite/</link>
+      <pubDate>Wed, 02 Nov 2016 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/gitolite/</guid>
       <description></description>
     </item>
     
     <item>
       <title>osx</title>
       <link>https://miroadamy.com/tags/osx/</link>
-      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
+      <pubDate>Tue, 17 May 2016 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/osx/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>atg</title>
+      <link>https://miroadamy.com/tags/atg/</link>
+      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/atg/</guid>
       <description></description>
     </item>
     
@@ -147,11 +192,56 @@
     </item>
     
     <item>
+      <title>commandline</title>
+      <link>https://miroadamy.com/tags/commandline/</link>
+      <pubDate>Wed, 08 Jul 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/commandline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>keepass</title>
+      <link>https://miroadamy.com/tags/keepass/</link>
+      <pubDate>Wed, 08 Jul 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/keepass/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>perl</title>
+      <link>https://miroadamy.com/tags/perl/</link>
+      <pubDate>Wed, 08 Jul 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/perl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>jenkins</title>
       <link>https://miroadamy.com/tags/jenkins/</link>
       <pubDate>Thu, 18 Jun 2015 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://miroadamy.com/tags/ssh/</link>
+      <pubDate>Fri, 22 May 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jboss</title>
+      <link>https://miroadamy.com/tags/jboss/</link>
+      <pubDate>Sat, 11 Apr 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/jboss/</guid>
       <description></description>
     </item>
     
@@ -188,15 +278,6 @@
       <pubDate>Tue, 11 Mar 2014 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/virtualbox/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>java</title>
-      <link>https://miroadamy.com/tags/java/</link>
-      <pubDate>Tue, 31 Dec 2013 00:57:35 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/tags/java/</guid>
       <description></description>
     </item>
     
@@ -246,15 +327,6 @@
     </item>
     
     <item>
-      <title>virtualization</title>
-      <link>https://miroadamy.com/tags/virtualization/</link>
-      <pubDate>Mon, 22 Apr 2013 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/virtualization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>bash</title>
       <link>https://miroadamy.com/tags/bash/</link>
       <pubDate>Tue, 09 Apr 2013 11:22:48 +0800</pubDate>
@@ -269,15 +341,6 @@
       <pubDate>Sun, 10 Mar 2013 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/ecommerce/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>commandline</title>
-      <link>https://miroadamy.com/tags/commandline/</link>
-      <pubDate>Sun, 03 Mar 2013 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/commandline/</guid>
       <description></description>
     </item>
     
@@ -305,15 +368,6 @@
       <pubDate>Fri, 17 Aug 2012 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/hybris/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ssh</title>
-      <link>https://miroadamy.com/tags/ssh/</link>
-      <pubDate>Sun, 15 Apr 2012 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/ssh/</guid>
       <description></description>
     </item>
     

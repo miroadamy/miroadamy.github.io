@@ -6,10 +6,21 @@
     <description>Recent content in osx on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Mar 2016 12:57:35 -0500</lastBuildDate>
+    <lastBuildDate>Tue, 17 May 2016 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/osx/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Native OS-X Docker (Beta) - not quite there yet</title>
+      <link>https://miroadamy.com/posts/2016-05-17-docker-osx/</link>
+      <pubDate>Tue, 17 May 2016 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2016-05-17-docker-osx/</guid>
+      <description>I was intrigued by convenience of using Docker natively on Mac, without dealing with differences localhost != dockerhost, so I subscribed for Beta and installed it.
+Good news 1 It can coexist with previous Docker installation (mostly) - see the note at the end. As long as you do not try to run native Docker and docker-machine at the same time, things coexist.
+Good news 2 It works for several images I tried.</description>
+    </item>
     
     <item>
       <title>Starting ACC (ATG Control Centre) on OS-X</title>
