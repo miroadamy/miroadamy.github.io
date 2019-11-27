@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>agile on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/agile/</link>
+    <description>Recent content in agile on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 15 Feb 2012 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/agile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Miro Manifesto</title>
+      <link>https://miroadamy.com/posts/2012-02-15-miro-manifesto/</link>
+      <pubDate>Wed, 15 Feb 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-02-15-miro-manifesto/</guid>
+      <description>Miro Manifesto Original text of the memo, written in February 2012 and shared with limited audience, until it surfaced up as main them of the planning meeting in December 2012.
+This is an attempt to come up with better answers to the following questions:
+ what issues and challenges I see on our way ahead from the technology point of view and what needs to be done to address them where do I see my professional and personal career go over next 12 to 18 months and in long run how to best align those two streams  In the spirit of my latest “back to the basics” obsession, it was written in Markdown format and in Vi, copied and pasted into Google Doc, btw.</description>
+    </item>
+    
+    <item>
+      <title>Agile development team member mantra</title>
+      <link>https://miroadamy.com/posts/2008-04-21-agile-development-team-member-mantra/</link>
+      <pubDate>Mon, 21 Apr 2008 00:24:41 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-21-agile-development-team-member-mantra/</guid>
+      <description>Introducing code review and pair programming has often an impact on relationships in the team - especially when a critique needs to be delivered. It takes great degree of experience on both sides to communicate defects in the code for both the reviewer as well as for the code author to get something useful out of it.
+I found this at http://www.finetix.com/blogs/finetixblogs.html which can be helpful (page is 404-ing now, but I luckily saved it in Google Docs way back) :</description>
+    </item>
+    
+  </channel>
+</rss>

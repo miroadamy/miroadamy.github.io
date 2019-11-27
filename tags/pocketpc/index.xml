@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pocketpc on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/pocketpc/</link>
+    <description>Recent content in pocketpc on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 18 Dec 2006 22:06:18 -0500</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/pocketpc/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>How to synchronize Pocket PC with Mac</title>
+      <link>https://miroadamy.com/posts/2006-12-18-how-to-synchronize-pocket-pc-with-mac/</link>
+      <pubDate>Mon, 18 Dec 2006 22:06:18 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-18-how-to-synchronize-pocket-pc-with-mac/</guid>
+      <description>Using PocketPC with Windows is very easy, assumed that you are using Outlook. Synchronization is straightforward, works out of the box. If you are keeping your contacts in other software than Outlook, you can often find 3rd party software that does the synchronization - or at least provides the plugin. The selection of the solutions is fairly large.
+On Mac, you are in similar situation if you want to use Palm based PDA.</description>
+    </item>
+    
+  </channel>
+</rss>

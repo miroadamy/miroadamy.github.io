@@ -118,121 +118,132 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/">Binding DashDoc with editors and Eclipse</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-23-shared-folder/">How to access shared folder in Linux guest in VirtualBox</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2013-12-31 </span>
-      
-        <span class="more-meta"> 263 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      If you use DashDoc (see http://kapeli.com/dash), it can be integrated with editor or Eclipse to allow automatically find selected text in Dash documentation sets:
-Sublime Text This is easy - there is DashDoc plugin - https://sublime.wbond.net/packages/DashDoc
-The plugin is OS-X specific, because the DashDoc is
- Start Package Control (Cmd-Shift-P) select Install Package (type Install) select DashDoc  The Ctrl-H does the search
-Eclipse There is opensource plugin for it at https://github.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-12-31-httpsgithub-comradegastmiroadamy-dot-comwiki/">Miro&#39;s World 2.0</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-12-31 </span>
-      
-        <span class="more-meta"> 63 words </span>
+      <span class="post-time"> 2014-09-23 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 148 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      The continuation of the old Wordpress blog with more agreeable tools: Github Wiki + Gollum, Markdown and Git.
-My old blog at Miro&rsquo;s World has been kinda neglected in last two years. I have written several entries and published them only internally. I have decided now to pull those of the entries that do not contain customer references, code or customer IP out.
+      Make sure the VBOx extensions are installed.
+Go here for details:
+Add share In VirtualBox, Device add transient shared folder:
+This one has made available path /Users/Shared/ATG-11 under the name ATG-11
+Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x.
     </div>
     <div class="read-more">
-      <a href="/posts/2013-12-31-httpsgithub-comradegastmiroadamy-dot-comwiki/" class="read-more-link">Read more...</a>
+      <a href="/posts/2014-09-23-shared-folder/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-10-16-endeca-oracle/">Endeca start scripts - Oracle way</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-22-gitbit/">Git bit of the day</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2013-10-16 </span>
+      <span class="post-time"> 2014-09-22 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 297 words </span>
+        <span class="more-meta"> 501 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Question from email:  how do I merge 1 file from master -&gt; LIVE
+ Answer You cannot. Merge operation creates new commit that has 2 or more parents and will always join full histories of the branches.
+You can however:
+ replicate all changes done in single commit to different branch - this is &ldquo;cherry pick&rdquo; take state of single file from different branch into current branch  How to replicate all changes done in single commit to different branch - &ldquo;cherry pick&rdquo; Say you have latest commit in master that contains change to two files you need.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-09-22-gitbit/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-16-logstash-error/">logstash - known error</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-09-16 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 326 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      I have ported the Oracle VM style management scripts into the Loyalty VM.
-The scripts are in the loyalty-endeca Git repo, originally in eVoucher branch but also merged into edc
-1 2 3 4 5 6 7 8 9 10  [tkuser@vm-lo1-hpr-ma endeca]$ ls -1 total 28 dev-check-environment.sh* dev-deploy-endeca-app.sh* dev-endeca-environmet.ini* dev-remove-endeca-app.sh* endeca-control* endeca-vars.txt* README.md* RewardsEndc/   dev-endeca-environmet.ini This is environment setting script.
-1 2 3 4 5 6 7 8 9 10 11  ### MUST BE SOURCED IN source dev-endeca-environmet.
+      I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
+Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE
+What should work:
+1 2 3 4 5  grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] }   What needs to be done instead
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33  You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches.
     </div>
     <div class="read-more">
-      <a href="/posts/2013-10-16-endeca-oracle/" class="read-more-link">Read more...</a>
+      <a href="/posts/2014-09-16-logstash-error/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-26-git-push-matching-simple/">Difference between matching and simple - Git push</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-09-redo-graph/">Recreate txt base graph generator</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2013-09-26 </span>
+      <span class="post-time"> 2014-09-09 </span>
       <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 734 words </span>
-        <span class="more-meta"> 4 mins read </span>
+        <span class="more-meta"> 386 words </span>
+        <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Git message
-1 2 3 4 5 6 7 8 9 10  Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. To squelch this message and maintain the current behavior after the default changes, use: git config --global push.default matching To squelch this message and adopt the new behavior now, use: git config --global push.default simple   Options for push.default
-1 2 3 4 5  nothing - do not push anything.
+      Graphviz This time using brew
+1 2 3 4 5 6 7 8  ➜ DPS brew install graphviz ==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz ######################################################################## 100.0% ==&gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz 🍺 /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M ➜ DPS dot -V dot - graphviz version 2.38.0 (20140413.2041) ➜ DPS   Schema Spy From http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/
+To /opt/diagram
+Run:
+ diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training
     </div>
     <div class="read-more">
-      <a href="/posts/2013-09-26-git-push-matching-simple/" class="read-more-link">Read more...</a>
+      <a href="/posts/2014-09-09-redo-graph/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-25-sublime-text-macro-timestamp/">Sublime text macro to insert timestamp</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-04-better-dynadmin/">Better dynadmin</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2013-09-25 </span>
+      <span class="post-time"> 2014-09-04 </span>
       <div class="post-category">
-          <a href="/categories/programming/"> Programming </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 75 words </span>
+        <span class="more-meta"> 134 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see
+      Source of the fix is https://github.com/jc7447/BetterDynAdmin. This is to capture the installation process and provide backup in case the tool disappears.
+The pages generated by DynAdmin are actually not coming from a JSP or JHTML pages. The HTML you see is generated by hardcoded servlets. Each Nucleus component has assigned Admin servet, which is called when DynAdmin is trying to render the page.
+The improvent here are user scripts - running inside Firefox or Chrome, utilizing infrastructure provided by Greasemonkey extension (FF) or Tampermonkey (Chrome).
     </div>
     <div class="read-more">
-      <a href="/posts/2013-09-25-sublime-text-macro-timestamp/" class="read-more-link">Read more...</a>
+      <a href="/posts/2014-09-04-better-dynadmin/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

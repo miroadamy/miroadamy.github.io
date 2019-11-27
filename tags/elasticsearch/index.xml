@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>elasticsearch on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/elasticsearch/</link>
+    <description>Recent content in elasticsearch on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 27 Aug 2014 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/elasticsearch/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Elastic search and Kibana - getting started</title>
+      <link>https://miroadamy.com/posts/2014-08-27-es1/</link>
+      <pubDate>Wed, 27 Aug 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-08-27-es1/</guid>
+      <description>#Installation:
+See [](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_installing_elasticsearch.html)
+1 2 3  curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION   Marvel is management plugin - console about cluster. Install:
+1 2 3 4  ./bin/plugin -i elasticsearch/marvel/latest # disable data collection for local cluster echo &amp;#39;marvel.agent.enabled: false&amp;#39; &amp;gt;&amp;gt; ./config/elasticsearch.yml   Test Startup log:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  ➜ elasticsearch-1.</description>
+    </item>
+    
+  </channel>
+</rss>

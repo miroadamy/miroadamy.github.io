@@ -140,16 +140,6 @@ The Google Story is interesting if you are into history of computing - because i
     </item>
     
     <item>
-      <title>iPod touch - first impressions</title>
-      <link>https://miroadamy.com/posts/2007-10-11-ipod-touch-first-impressions/</link>
-      <pubDate>Thu, 11 Oct 2007 23:51:23 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-10-11-ipod-touch-first-impressions/</guid>
-      <description>No, I have not bought it yet, to big disappointment of Gabo and Shane - sorry guys. I wanted to buy it but all FutureShop stores in Ottawa are hopelessly sold out and on-line delivery is 7-10 business days - which I hope I will beat if these guys get new shipment (maybe tomorrow ?).
-I played with two demo pieces though for about 30 minutes, and here are the first impressions:</description>
-    </item>
-    
-    <item>
       <title>Free eBook and audiobook on media business and distribution control</title>
       <link>https://miroadamy.com/posts/2007-10-09-free-ebook-and-audiobook-on-media-business-and-distribution-control/</link>
       <pubDate>Tue, 09 Oct 2007 00:05:37 -0400</pubDate>
@@ -192,26 +182,6 @@ Here I discovered that Sony is assumably preparing new version of reader - PRS 5
     </item>
     
     <item>
-      <title>Experiment with Sony Reader battery life</title>
-      <link>https://miroadamy.com/posts/2007-09-19-experiment-with-sony-reader-battery-life/</link>
-      <pubDate>Wed, 19 Sep 2007 22:00:42 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-09-19-experiment-with-sony-reader-battery-life/</guid>
-      <description>After returning from holidays with completely drained PRS 500 (see field test blog entry), I have decided to test what is the battery life of the fully charged reader without any usage at all. It was easy as I was pretty busy after being away 3 weeks.
-The reader was fully charged on 29th of August (24 hrs with wall charger). After that, I did not use it at all, only checked every 2-3 days the status (the reader was switched off except this brief check).</description>
-    </item>
-    
-    <item>
-      <title>Field test of Sony eReader</title>
-      <link>https://miroadamy.com/posts/2007-09-17-field-test-of-sony-ereader/</link>
-      <pubDate>Mon, 17 Sep 2007 23:00:41 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-09-17-field-test-of-sony-ereader/</guid>
-      <description>One of the many gadgets I have packed for the summer vacation was of course Sony Reader and SD card with nice selection of texts. It was fresh and fully charged, so I assumed that I will be well prepared for the gaps in program during the following three weeks ahead of us and for the long flights over Atlantic.
-Obviously, the flight was first moment where Reader was used. During the 7 hours, I spent about 3-4 hours reading.</description>
-    </item>
-    
-    <item>
       <title>Good book on Spring Framework version 2</title>
       <link>https://miroadamy.com/posts/2007-09-12-good-book-on-spring-framework-version-2/</link>
       <pubDate>Wed, 12 Sep 2007 22:36:00 -0400</pubDate>
@@ -227,16 +197,6 @@ Obviously, the flight was first moment where Reader was used. During the 7 hours
       
       <guid>https://miroadamy.com/posts/2007-09-10-new-ipod-touch-as-ebook-reader/</guid>
       <description>As the September 28th is approaching (the day when the new iPod touch will be available in Canada), I have a real dilemma: do I go with the &#34;iPhone without the phone&#34; or not ? The price $329 for 8 GB iPod is pretty high - compared to $279 for 80GB classic - which would allow me to carry all my music, some movies and all podcasts with me. On the other hand, the Touch has WiFi and can be used as pretty decent Web browser on top of iPod functionality.</description>
-    </item>
-    
-    <item>
-      <title>Sony eReader - charging problem fixed ?</title>
-      <link>https://miroadamy.com/posts/2007-08-06-sony-ereader-charging-problem-fixed/</link>
-      <pubDate>Mon, 06 Aug 2007 01:32:11 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-08-06-sony-ereader-charging-problem-fixed/</guid>
-      <description>With the latest software update (I am now on 1.0.3), one of the issues to be fixed was the &#34;charging indicator behaviour&#34;. Looks like it was indeed the software bug. After upgrade, the indicator jumped to full 4 bars and stayed there. Beforehand, I had usually only 3 bars regardless how long it was charged.
-Time will tell - I am taking the reader with me to Italy to get some mileage out of it, during transatlantic flight .</description>
     </item>
     
     <item>
@@ -266,16 +226,6 @@ You can get it on Amazon.</description>
       <guid>https://miroadamy.com/posts/2007-07-02-book-review-dreaming-in-code/</guid>
       <description>Thanks to long weekend and more quiet time in last couple of days (Happy 140th Birthday, Canada!), I managed to read something else than Ruby-ism/Rail-ism. Among others, I finished the Dreaming in Code by Scott Rosenberg, a book promising to explain why software is hard.
 It is pretty tough question to answer. The way this books tries to address it is following the story not very well known open source project named Chandler through it&#39;s beginning over period of 3 years.</description>
-    </item>
-    
-    <item>
-      <title>Strange charging behaviour of Sony Reader</title>
-      <link>https://miroadamy.com/posts/2007-06-04-strange-charging-behaviour-of-sony-reader/</link>
-      <pubDate>Mon, 04 Jun 2007 22:41:12 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-06-04-strange-charging-behaviour-of-sony-reader/</guid>
-      <description>Despite pretty impressive battery life - which is btw *nowhere* in the range of advertised 7500 page turns - over period of few months I have noted that the charging of the reader behaves kind of funny. Sometimes, even after being plugged-in for 24 hours, the battery indicator stubbornly stays on two squares out of four. Other times, right after connecting, it jumps right to full charge.
-It is hard to really measure these things as the battery depletion is very slow on reading and I do not really listen to music on this device (that&#39;s what iPods are for).</description>
     </item>
     
     <item>
@@ -336,6 +286,17 @@ I have picked this small book with title Computers Ltd in Ottawa Public Library 
 Part I - At the codeface - defensive programming techniques, naming, formatting, commenting, error handling
 Part II - The secret life of code - code contruction tools, testing and debugging methods, building
 Part III - The Shape of the code - code design, architecture, source code growth and decay over time</description>
+    </item>
+    
+    <item>
+      <title>DotNet Development Toolbox - II</title>
+      <link>https://miroadamy.com/posts/2007-02-20-dotnet-development-toolbox-ii/</link>
+      <pubDate>Tue, 20 Feb 2007 21:51:00 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-20-dotnet-development-toolbox-ii/</guid>
+      <description>Continuing from here.
+ Ch-7: Digging into the source code
+In this chapter, Mike describes the tools that work with, around or towards source code: Idlasm, Reflector and FxCop. The book is written for Visual Studio 2003, so some references are slightly outdated - but there is one utility that stands out and is still more useful than ever: Lutz Roeder&#39;s Reflector. It is part of the Visual Studio 2005 (albeit in older version that you can get on the Web site).</description>
     </item>
     
     <item>

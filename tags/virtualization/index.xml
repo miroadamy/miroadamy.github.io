@@ -22,6 +22,19 @@
     </item>
     
     <item>
+      <title>Starting ACC in VM</title>
+      <link>https://miroadamy.com/posts/2015-07-15-acc-in-vm/</link>
+      <pubDate>Wed, 15 Jul 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-07-15-acc-in-vm/</guid>
+      <description>The ACC is installed in default location: ~/ATG/ACC11.1
+This does not work OOTB. You must set 2 additional ENV properties
+1 2 3 4  cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp;amp;   Starting from dyn/admin The start in separate VM works OK.
+Start in server VM brings errors message very often complaining of malformed Help URL. The issue is documented here: http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg - for JBOSS.
+I tried to add the protocol.</description>
+    </item>
+    
+    <item>
       <title>ATG Development using &#39;hidden&#39; VM</title>
       <link>https://miroadamy.com/posts/2013-04-22-atg-development/</link>
       <pubDate>Mon, 22 Apr 2013 11:22:48 +0800</pubDate>

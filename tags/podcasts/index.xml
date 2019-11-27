@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>podcasts on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/podcasts/</link>
+    <description>Recent content in podcasts on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 03 Feb 2007 23:26:54 -0500</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/podcasts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nice resource on TCP/IP and Networking</title>
+      <link>https://miroadamy.com/posts/2007-02-03-nice-resource-on-tcpip-and-networking/</link>
+      <pubDate>Sat, 03 Feb 2007 23:26:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-03-nice-resource-on-tcpip-and-networking/</guid>
+      <description>As of today, I am at podcast #26 of Security Now! and Steve with Leo are have started their &#34;foundation series&#34; on How Internet works. It is really great and enjoyable topic, nicely and very enjoyably presented. Given the delivery format limitation (voice without possibility of adding any drawing), there is of course limit on the amount of details that can be presented. Being a curious creature, I wanted to dig little bit deeper into &#34;</description>
+    </item>
+    
+  </channel>
+</rss>

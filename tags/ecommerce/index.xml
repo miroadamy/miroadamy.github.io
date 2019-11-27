@@ -24,6 +24,18 @@ The item definition:
     </item>
     
     <item>
+      <title>Installing and running &#39;naked&#39; hybris platform</title>
+      <link>https://miroadamy.com/posts/2012-08-17-install-hybris/</link>
+      <pubDate>Fri, 17 Aug 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-08-17-install-hybris/</guid>
+      <description>Installing and running &amp;ldquo;naked&amp;rdquo; hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
+Starting point: hybris-platform-4.7.1.zip
+Install point: /opt/hybris-platform/hybris-platform-4.7.1
+Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all.</description>
+    </item>
+    
+    <item>
       <title>It&#39;s alive !</title>
       <link>https://miroadamy.com/posts/2009-02-18-its-alive/</link>
       <pubDate>Wed, 18 Feb 2009 20:26:22 -0500</pubDate>

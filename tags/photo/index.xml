@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>photo on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/photo/</link>
+    <description>Recent content in photo on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 10 Jul 2007 22:33:32 -0400</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/photo/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Smugmug &#34;processing image&#34; - follow up</title>
+      <link>https://miroadamy.com/posts/2007-07-10-smugmug-processing-image-follow-up/</link>
+      <pubDate>Tue, 10 Jul 2007 22:33:32 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-07-10-smugmug-processing-image-follow-up/</guid>
+      <description>In the previous article I have mentioned the potential issue with some uploaded images hanging in state &#34;Processing image&#34; for surprisingly long time after upload and expressed hope that there is some background &#34;catch it all&#34; process that would take care of all these. As it turned out, there is. All uploaded images that were haging in the processing stage turned up to be fixed by next day or so (it was about 10-20 images out of about 3-4 thousand).</description>
+    </item>
+    
+    <item>
+      <title>First week with SmugMug</title>
+      <link>https://miroadamy.com/posts/2007-07-07-first-week-with-smugmug/</link>
+      <pubDate>Sat, 07 Jul 2007 22:44:14 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-07-07-first-week-with-smugmug/</guid>
+      <description>Week ago, my SmugMug 14 day trial period expired and (as expected) I signed up for the 1 year service. Here are my first impressions after over week of use, with over 3000 uploaded photos and 6.8 GB disc space consumed :-).
+Good news is - it really works as advertised and I still like it a lot. I have not really tried many of the features, but what I did try, worked as expected.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -92,6 +92,30 @@ Just for git commands:
     </item>
     
     <item>
+      <title>Dealing with &#39;Java Runtime SE 6&#39; required error</title>
+      <link>https://miroadamy.com/posts/2014-10-14-java6required/</link>
+      <pubDate>Tue, 14 Oct 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-10-14-java6required/</guid>
+      <description>When trying to start DBeaver (http://dbeaver.jkiss.org) I got this
+I do have Java 7 installed:
+1 2 3 4 5 6 7 8  ➜ Contents java -version java version &amp;#34;1.7.0_55&amp;#34; Java(TM) SE Runtime Environment (build 1.7.0_55-b13) Java HotSpot(TM) 64-Bit Server VM (build 24.55-b03, mixed mode) ➜ Contents which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java   which should be a superset. But it is not.
+Solution Oracle seems to screw up the PLIST capabilities in JAva7 install</description>
+    </item>
+    
+    <item>
+      <title>Folder action to autorename screenshots</title>
+      <link>https://miroadamy.com/posts/2014-04-22-autorename-screenshots/</link>
+      <pubDate>Tue, 22 Apr 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-04-22-autorename-screenshots/</guid>
+      <description> Move the location of the screenshots I do not want to have ~/Desktop polluted with files. Thus
+1 2 3  mkdir -p ~/Documents/Screenshots defaults write com.apple.screencapture location ~/Documents/Screenshots killall SystemUIServer   Test the screenshot - it does it
+Automator based auto-rename  Create Folder action for ~/Documents/Screenshots  It has 3 actions
+1 2 3  s/Screen Shots // s/./-/g s/ at /_/  </description>
+    </item>
+    
+    <item>
       <title>Binding DashDoc with editors and Eclipse</title>
       <link>https://miroadamy.com/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/</link>
       <pubDate>Tue, 31 Dec 2013 00:57:35 -0500</pubDate>
@@ -439,6 +463,15 @@ The first case was requirement to review an non-trivial Excel file. Normally, Nu
     </item>
     
     <item>
+      <title>Leopard in business environment - week 1</title>
+      <link>https://miroadamy.com/posts/2007-11-15-leopard-in-business-environment-week-1/</link>
+      <pubDate>Thu, 15 Nov 2007 23:11:33 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-15-leopard-in-business-environment-week-1/</guid>
+      <description>I have already worked through full week solely on Mac and Leopard platform with excellent results. The productivity in using Java is actually higher, thanks to faster machine and Spaces allowing to have opened few Firefox windows with Spring documentation, terminals for Ant builds, Tomcat, Eclipse and Spype/Adium to keep in touch. Spaces is about as good as having multiple monitors - the ability of switching between both with mouse and keyboard fits well in my working habits.</description>
+    </item>
+    
+    <item>
       <title>My Essential OS X toolset - part 1</title>
       <link>https://miroadamy.com/posts/2007-11-12-my-essential-os-x-toolset-part-1/</link>
       <pubDate>Mon, 12 Nov 2007 23:23:53 -0500</pubDate>
@@ -455,6 +488,16 @@ The first case was requirement to review an non-trivial Excel file. Normally, Nu
       <guid>https://miroadamy.com/posts/2007-11-09-ragioni-per-fare-il-grande-salto/</guid>
       <description>During the vacation, we stopped in small bookstore in Verona which was selling computer software as well. At the entrance, there was a poster showing smiling Finder&#39;s face, Apple logo and announcing reasons why you would want to make the big jump - il grande salto - to Mac platform. That is to explain the title :-)
 Grande Salto is exactly what I did. Without too much preparation or notice. Since Tuesday evening I am happy owner of the beautiful piece of hardware (17 inch 2.</description>
+    </item>
+    
+    <item>
+      <title>Macbook Pro arrived</title>
+      <link>https://miroadamy.com/posts/2007-11-06-macbook-pro-arrived/</link>
+      <pubDate>Tue, 06 Nov 2007 23:11:06 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-06-macbook-pro-arrived/</guid>
+      <description>The combination of 17&#34; screen with Leopard&#39;s visual appeal is pure beauty.
+Unlike assumed, the Leopard does NOT (yet) come preinstalled on hard disk. There is a DVD which will install it. I have decided to erase everything and start from scratch. The install took about 45 minutes and had zero problems. The only confusing part was that after erasing harddrive you also erase iLife and need to reinstall it. On the Web site, Apple shows an image of two DVD&#39;s - Leopard and iLife&#39;08.</description>
     </item>
     
     <item>

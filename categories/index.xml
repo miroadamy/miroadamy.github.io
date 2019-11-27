@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Programming</title>
+      <title>programming</title>
       <link>https://miroadamy.com/categories/programming/</link>
       <pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
       
@@ -23,7 +23,7 @@
     <item>
       <title>general</title>
       <link>https://miroadamy.com/categories/general/</link>
-      <pubDate>Wed, 20 Nov 2019 23:22:48 +0800</pubDate>
+      <pubDate>Fri, 22 Nov 2019 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/general/</guid>
       <description></description>
@@ -39,7 +39,7 @@
     </item>
     
     <item>
-      <title>Events</title>
+      <title>events</title>
       <link>https://miroadamy.com/categories/events/</link>
       <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
       
@@ -48,18 +48,9 @@
     </item>
     
     <item>
-      <title>e-Commerce</title>
-      <link>https://miroadamy.com/categories/e-commerce/</link>
-      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/categories/e-commerce/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Technology</title>
+      <title>technology</title>
       <link>https://miroadamy.com/categories/technology/</link>
-      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
+      <pubDate>Wed, 23 Mar 2016 12:57:35 -0500</pubDate>
       
       <guid>https://miroadamy.com/categories/technology/</guid>
       <description></description>
@@ -75,47 +66,38 @@
     </item>
     
     <item>
-      <title>ecommerce</title>
-      <link>https://miroadamy.com/categories/ecommerce/</link>
-      <pubDate>Fri, 17 Aug 2012 11:22:48 +0800</pubDate>
+      <title>lifehacks</title>
+      <link>https://miroadamy.com/categories/lifehacks/</link>
+      <pubDate>Tue, 10 Mar 2015 00:57:35 -0500</pubDate>
       
-      <guid>https://miroadamy.com/categories/ecommerce/</guid>
+      <guid>https://miroadamy.com/categories/lifehacks/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>admin</title>
-      <link>https://miroadamy.com/categories/admin/</link>
-      <pubDate>Tue, 29 May 2012 11:22:48 +0800</pubDate>
+      <title>startup-life</title>
+      <link>https://miroadamy.com/categories/startup-life/</link>
+      <pubDate>Wed, 15 Feb 2012 11:22:48 +0800</pubDate>
       
-      <guid>https://miroadamy.com/categories/admin/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>documentation</title>
-      <link>https://miroadamy.com/categories/documentation/</link>
-      <pubDate>Sat, 07 Apr 2012 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/categories/documentation/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sysadmin</title>
-      <link>https://miroadamy.com/categories/sysadmin/</link>
-      <pubDate>Thu, 03 Feb 2011 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/categories/sysadmin/</guid>
+      <guid>https://miroadamy.com/categories/startup-life/</guid>
       <description></description>
     </item>
     
     <item>
       <title>travel</title>
       <link>https://miroadamy.com/categories/travel/</link>
-      <pubDate>Mon, 20 Aug 2007 11:22:48 +0800</pubDate>
+      <pubDate>Thu, 13 Sep 2007 22:17:23 -0400</pubDate>
       
       <guid>https://miroadamy.com/categories/travel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jokes</title>
+      <link>https://miroadamy.com/categories/jokes/</link>
+      <pubDate>Mon, 03 Sep 2007 19:58:15 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/categories/jokes/</guid>
       <description></description>
     </item>
     

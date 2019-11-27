@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Using Gitolite for code sharing setup - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
+Main features  multiple users each user represent a client:  e.g. users client1   Users are separated by Unix permissions:  access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes  Inside each user, there are multiple projects." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2012-06-21-gitolite-setup/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Using Gitolite for code sharing setup" />
+<meta property="og:description" content="General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
+Main features  multiple users each user represent a client:  e.g. users client1   Users are separated by Unix permissions:  access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes  Inside each user, there are multiple projects." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2012-06-21-gitolite-setup/" />
+<meta property="article:published_time" content="2012-06-21T11:22:48+08:00" />
+<meta property="article:modified_time" content="2012-06-21T11:22:48+08:00" />
+<meta itemprop="name" content="Using Gitolite for code sharing setup">
+<meta itemprop="description" content="General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
+Main features  multiple users each user represent a client:  e.g. users client1   Users are separated by Unix permissions:  access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes  Inside each user, there are multiple projects.">
+
+
+<meta itemprop="datePublished" content="2012-06-21T11:22:48&#43;08:00" />
+<meta itemprop="dateModified" content="2012-06-21T11:22:48&#43;08:00" />
+<meta itemprop="wordCount" content="5139">
+
+
+
+<meta itemprop="keywords" content="git,gitolite," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using Gitolite for code sharing setup"/>
+<meta name="twitter:description" content="General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
+Main features  multiple users each user represent a client:  e.g. users client1   Users are separated by Unix permissions:  access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes  Inside each user, there are multiple projects."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Using Gitolite for code sharing setup</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2012-06-21 </span>
+        <div class="post-category">
+            <a href="/categories/devops/"> devops </a>
+            </div>
+          <span class="more-meta"> 5139 words </span>
+          <span class="more-meta"> 25 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#general-setup-of-code-sharing-host">General setup of code sharing host</a>
+<ul>
+<li><a href="#main-features">Main features</a></li>
+<li><a href="#users-are-separated-by-unix-permissions">Users are separated by Unix permissions:</a></li>
+<li><a href="#inside-each-user-there-are-multiple-projects">Inside each user, there are multiple projects.</a></li>
+<li><a href="#pensieve-and-codeserver">Pensieve and CodeServer</a></li>
+<li><a href="#how-gitolite-works">How Gitolite works</a></li>
+<li><a href="#how-external-developers-access-codeshare">How external developers access CodeShare</a></li>
+<li><a href="#security-and-packability-sidenote">Security and packability - Sidenote</a></li>
+</ul></li>
+<li><a href="#detailed-walkthrough-of-setup">Detailed walkthrough of setup</a>
+<ul>
+<li><a href="#on-codeshare">On CodeShare</a>
+<ul>
+<li><a href="#step-one-setup-gitolite">Step one - setup Gitolite</a></li>
+<li><a href="#create-bin-directory">Create bin directory</a></li>
+<li><a href="#install-it">Install it:</a></li>
+<li><a href="#add-private-key">Add private key:</a></li>
+</ul></li>
+<li><a href="#on-client">On Client</a>
+<ul>
+<li><a href="#next-step-will-be-editing-gitolite-conf">Next step will be editing gitolite.conf</a></li>
+</ul></li>
+<li><a href="#time-to-simulate-some-development">Time to simulate some development.</a>
+<ul>
+<li><a href="#second-developer">Second developer</a></li>
+</ul></li>
+<li><a href="#back-to-macbook-and-put-on-my-integration-manager-hat">Back to Macbook and put on my Integration Manager hat:</a></li>
+<li><a href="#back-on-luke-i-am-tkuser-now">Back on Luke, I am tkuser now:</a></li>
+</ul></li>
+<li><a href="#sharing-external-repo-among-developers">Sharing external repo among developers</a></li>
+<li><a href="#security-and-hackability">Security and hackability</a>
+<ul>
+<li><a href="#attempt-to-bypass-the-security-by-logging-on-as-hosting-user">Attempt to bypass the security by logging on as hosting user</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="general-setup-of-code-sharing-host">General setup of code sharing host</h2>
+
+<p>The code sharing host (<strong>Pensieve</strong>) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network
+(dual homed) - for the build server access.</p>
+
+<h3 id="main-features">Main features</h3>
+
+<ul>
+<li>multiple users</li>
+<li>each user represent a client:
+
+<ul>
+<li>e.g. users client1</li>
+</ul></li>
+</ul>
+
+<h3 id="users-are-separated-by-unix-permissions">Users are separated by Unix permissions:</h3>
+
+<ul>
+<li>access rights to /home/USER are 0700 - no access except the dedicated user</li>
+<li>only ThinkWrap has root access or sudo access</li>
+<li>the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes</li>
+</ul>
+
+<h3 id="inside-each-user-there-are-multiple-projects">Inside each user, there are multiple projects.</h3>
+
+<p>These projects will have multiple repositiories and will follow the naming convention:</p>
+
+<ul>
+<li>PROJECT_BASE_NAME-DEV_NAME</li>
+<li>PROJECT_BASE_NAME-RELEASE or PROJECT_BASE_NAME-THINKWRAP</li>
+</ul>
+
+<p>The PROJECT_BASE_NAME-THINKWRAP is the &ldquo;blessed&rdquo; repository from Integration manager workflow.</p>
+
+<p>The external developers will be pulling from this repo, merging on their local workstations and pushing their released changes to their respective repositories in CodeShare</p>
+
+<p>Inside each user there is ACL layer (Gitolite) which allows read-only or read-write access to repository.</p>
+
+<p>Only ThinkWrap integration managers will have write access (push) to blessed repositories.</p>
+
+<p>External developers will have push access only to their own external repository on CodeShare
+All external developers will have pull (read-only) access to blessed repository.</p>
+
+<p>Depending on project setup, external developers may or may not have pull access to each other repositories
+(for sharing code before it goes through integration).</p>
+
+<p>Internal counterpart for the code sharing</p>
+
+<h3 id="pensieve-and-codeserver">Pensieve and CodeServer</h3>
+
+<p>Internally, we will have per-project area on internal repositories host - <strong>CodeServer</strong></p>
+
+<p>Each project code area will follow exactly same naming convention:</p>
+
+<ul>
+<li>PROJECT_BASE_NAME-DEV_NAME</li>
+<li>PROJECT_BASE_NAME (the RELEASE - internal &ldquo;blessed&rdquo; repository)</li>
+</ul>
+
+<p>These developer&rsquo;s repositories are external repositories of the team members and BLESSED is integration repository which receives code from developers</p>
+
+<p>There will be similar ACL layer as in CodeShare, with somehow relaxed protection rules (tradeoff security for practicality):</p>
+
+<ul>
+<li>all projects will be probably using same internal &ldquo;hosting&rdquo; user</li>
+<li>internal developers will be able to have read (pull) access to</li>
+</ul>
+
+<p>Depending on project needs / size / requirements, we can support wide variety of control over code release repository</p>
+
+<ul>
+<li>strict model - developers push to their external repositories, only team lead / integration manager can push to RELEASE</li>
+<li>relaxed model: some or all developers can push directly to release repository, IM handles external code transfers</li>
+<li>&ldquo;minimized&rdquo; model - there is only RELEASE repository on CodeServer and developers push directly to it (aka Subversion model).</li>
+</ul>
+
+<p>Team lead or IM is responsible to handle code transitions between Pensieve and CodeServer</p>
+
+<p>All this access magic is possible because of the combination of the SSH and Gitolite (see <a href="http://sitaramc.github.com/gitolite/master-toc.html">http://sitaramc.github.com/gitolite/master-toc.html</a>)</p>
+
+<h3 id="how-gitolite-works">How Gitolite works</h3>
+
+<p>Everything is described in the manual, MAKE SURE you read these parts:</p>
+
+<ul>
+<li><a href="http://sitaramc.github.com/gitolite/ssh.html">http://sitaramc.github.com/gitolite/ssh.html</a></li>
+<li><a href="http://sitaramc.github.com/gitolite/glssh.html">http://sitaramc.github.com/gitolite/glssh.html</a> - how it uses SSH</li>
+<li><a href="http://sitaramc.github.com/gitolite/auth.html">http://sitaramc.github.com/gitolite/auth.html</a></li>
+</ul>
+
+<p>Gitolite provide access to repositories using single &ldquo;hosting user&rdquo; - this is the only Unix user that actually exists.
+In documentation, this hosting user is called git.</p>
+
+<p>In our setup, this hosting user is customer user - e.g. client1. Consequently, there are many hosting users.</p>
+
+<p>For each hosting user, we will have separate Gitolite configuration - it is very litlle overhead, all that Gitolite is bunch of Perl scripts
+two data directories and one small administration Git repository.</p>
+
+<p>So there will be separate Gitolite setup for client1, where user &lsquo;client1&rsquo; will play the role of &lsquo;git user&rsquo;, separate and completely
+independent Gitolite setup for client2, where unix user &lsquo;client2&rsquo; will play the role &lsquo;git user&rsquo; etc etc. This can be easily scaled up
+to using separate hosts for customers if required.</p>
+
+<h3 id="how-external-developers-access-codeshare">How external developers access CodeShare</h3>
+
+<p>The only access mode is using the public key and SSH. We do not support</p>
+
+<ul>
+<li>logging in using password</li>
+<li>https access</li>
+</ul>
+
+<p>All developers (including the Integration manager) are &ldquo;virtual&rdquo; identities. All will have to provide their public keys and the
+account admin (the person setting up Gitolite for the account, e.g. client1) will be responsible to</p>
+
+<ul>
+<li>add these keys to account&rsquo;s gitolite database</li>
+<li>create empty repositories for users</li>
+<li>set up access rights (read / write) for the repositories</li>
+</ul>
+
+<p>The Integration Manager can be the same person managing the account but it does not have to be. It is easy to allow
+multiple developers with write access to blessed repositories. Unlike the identity of the account admin (which is determined
+when Gitolite is set up for the account), these users can be added or removed at any time.</p>
+
+<p>The setup of Gitolite is described here: <a href="http://sitaramc.github.com/gitolite/qi.html">http://sitaramc.github.com/gitolite/qi.html</a> - it described &ldquo;single account&rdquo; hosting.</p>
+
+<p>To make sure that everybody understands how does this translate to our situation, here is detailed step-by-step walkthrough to
+both setting up one user account and simulation of the development .</p>
+
+<h3 id="security-and-packability-sidenote">Security and packability - Sidenote</h3>
+
+<p>The only way how to use Git is ssh with public key and we will not provide shell access, only git access. This makes sure that nobody from external developers can log into CodeShare and poke around in the repositories he/she does not have access to  or even trying to gain root access or access othe accounts.</p>
+
+<p>Keeping very long password and rotating it can further increase security. For really paranoid customers, we can disable login shell access in <code>/etc/passwd</code>, but this will cause additional work the system administrator to make sure file ownership and permission are correct (when using root access).</p>
+
+<h2 id="detailed-walkthrough-of-setup">Detailed walkthrough of setup</h2>
+
+<p>This guide is using &ldquo;temporary&rdquo; VM named jenkins0 (the playground for build server) playing the role of CodeShare and shows all steps for setting up Gitolite on Jenkins0 for user client1.</p>
+
+<p>Main reason for this detailed log is to allow somebody else administer it and help my memory after the vacation !</p>
+
+<h3 id="on-codeshare">On CodeShare</h3>
+
+<p>I have created users:</p>
+
+<ul>
+<li>client1</li>
+<li>client2</li>
+<li>client3</li>
+</ul>
+
+<p>This setup describes process for client1 and can be repeated for any other.</p>
+
+<h4 id="step-one-setup-gitolite">Step one - setup Gitolite</h4>
+
+<p>Gitolite is distributred as Git repo, so we clone into home directory of hosting user (==client1)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[client1@jenkins0 ~]$ pwd
+/home/client1
+[client1@jenkins0 ~]$ git clone git://github.com/sitaramc/gitolite
+Cloning into gitolite...
+remote: Counting objects: 8267, done.
+remote: Compressing objects: 100% (2829/2829), done.
+remote: Total 8267 (delta 5682), reused 7848 (delta 5318)
+Receiving objects: 100% (8267/8267), 2.52 MiB | 1.12 MiB/s, done.
+Resolving deltas: 100% (5682/5682), done.</pre></td></tr></table>
+</div>
+</div>
+<p>It creates directory &lsquo;~/gitolite&rsquo; which contains few scripts</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[client1@jenkins0 ~]$ ll
+total 16
+drwxr-xr-x 6 client1 client1 4096 Jun 17 16:38 gitolite
+-rw-r--r-- 1 client1 client1 393 Jun 17 12:02 luke.pub
+-rw-r--r-- 1 client1 client1 401 Jun 13 16:07 miro-radegast.pub
+drwxrwxr-x 5 client1 client1 4096 Jun 17 12:09 projects</pre></td></tr></table>
+</div>
+</div>
+<p>Pre-requisites for next step are:</p>
+
+<ul>
+<li>existing <code>~/bin</code> directory</li>
+<li>this directory as part of PATH</li>
+</ul>
+
+<h4 id="create-bin-directory">Create bin directory</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[client1@jenkins0 ~]$ mkdir ~/bin
+[client1@jenkins0 ~]$ export PATH=$PATH:~/bin
+[client1@jenkins0 ~]$ echo $PATH
+/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/client1/bin:/home/client1/bin
+[client1@jenkins0 ~]$</pre></td></tr></table>
+</div>
+</div>
+<h4 id="install-it">Install it:</h4>
+
+<p>The install just creates symlink in <code>~/bin</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[client1@jenkins0 ~]$ gitolite/install -ln
+[client1@jenkins0 ~]$ ll ~/bin/
+total 0
+lrwxrwxrwx 1 client1 client1 35 Jun 17 16:40 gitolite -&gt; /home/client1/gitolite/src/gitolite</pre></td></tr></table>
+</div>
+</div>
+<p><strong>Next part is to setup Gitolite admin account.</strong></p>
+
+<p>We need a public key of the person that will be admininistering this hosting account.</p>
+
+<p>It must satisfy few requirements:</p>
+
+<ul>
+<li>it must be in file <code>USERNAME.pub</code>, where <code>USERNAME</code> is actually username on admin&rsquo;s system (which is stored in public key file)</li>
+<li>it MUST NOT be already in <code>~/.ssh/authorized_keys</code></li>
+</ul>
+
+<p>As we have freshly created the user &lsquo;client1&rsquo;, the <code>~/.ssh/authorized_keys</code> is empty</p>
+
+<p>I have already copied my public key to jenkins0 - it is there as file &lsquo;miro.pub&rsquo;</p>
+
+<p>Inside this file, there is username@hostname - it is important that you name the file properly (I found out the hard way)</p>
+
+<p><code>ssh-rsa AAAAB3NzaC..... DELETED .... d9jajwIsLnJjw== miro</code><code>@Radegast</code><code>.local</code></p>
+
+<h4 id="add-private-key">Add private key:</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[client1@jenkins0 ~]$ gitolite setup -pk miro.pub
+Initialized empty Git repository in /home/client1/repositories/gitolite-admin.git/
+Initialized empty Git repository in /home/client1/repositories/testing.git/
+[client1@jenkins0 ~]$</pre></td></tr></table>
+</div>
+</div>
+<p>This created two Git repositories: gitolite-admin (which will be used for all administration) and test one.</p>
+
+<p>It also adds user &lsquo;miro&rsquo; as admin of the gitolite with write access (push) to gitolite-admin repo</p>
+
+<p><strong>Under the hood:</strong></p>
+
+<ul>
+<li>it adds public key of user &lsquo;miro&rsquo; to authorized_keys, but forces all communication using &ldquo;command &hellip;.&rdquo; syntax (check the ssh documentation for details).
+This command causes that whenever user with this public key logs in, instead of getting shell access, gitolite intercepts and executes commands on its behalf.</li>
+<li>The setup also adds special hooks to gitolite-admin repository that help enforce access and trigger additional action after pushing changes.</li>
+</ul>
+
+<p>All this had to be done on jenkins0 (the CodeShare host)</p>
+
+<h3 id="on-client">On Client</h3>
+
+<p>On workstation from which the public key originated, I will need to clone the gitolite-admin repo:</p>
+
+<p>I am in the temp working directory &lsquo;gitolite-on-jenkins0&rsquo;, and &lsquo;gs&rsquo; is an alias for &lsquo;git status&rsquo;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">gitolite-on-jenkins0 $ git clone client1@192.168.16.144:gitolite-admin.git
+Cloning into &#39;gitolite-admin&#39;...
+remote: Counting objects: 6, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (6/6), done.</pre></td></tr></table>
+</div>
+</div>
+<p>Please note that I have used url &lsquo;client1@hostname&rsquo; format - not &lsquo;miro@hostname&rsquo;.
+We always connect using host identity.</p>
+
+<p>Here is what happens under the hood:</p>
+
+<ul>
+<li>client tries to connect to hostnama as user &lsquo;client1&rsquo; and sends the default public key (from ~/.ssh/id_rsa.pub)
+This is the same key we set up on hostname</li>
+<li>ssh finds the key in authorized_keys and because there is command clause, hands over control to gitolite</li>
+<li>gitolite retrieves the name of the &ldquo;virtual user&rdquo; (miro), checks ACL list and allows / disallows the action</li>
+</ul>
+
+<p>The cloned repository has two areas:</p>
+
+<ul>
+<li>keydir/ directory</li>
+<li>gitolite config files</li>
+</ul>
+
+<p>To add user for the hosting account, all you need to do is to copy properly named public key file under keydir/, add it and push the change.</p>
+
+<p>Here I have added <a href="mailto:tkuser@luke.pub">tkuser@luke.pub</a> (note that this naming is OK - see Gitolite docs for details).</p>
+
+<p>The other file I am adding is from third VM and has weird name. I wanted to test the third format with two @ signs but get to it. Ignore this file.</p>
+
+<p>After copying the files, we add them in git, commit locally and push</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">gitolite-admin $ gs
+# On branch master
+# Untracked files:
+# (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
+#
+# keydir/miro.adamy+client3-dev-vf-osx@gmail.com@client3-dev-vf.pub
+# keydir/tkuser@luke.pub
+nothing added to commit but untracked files present (use &#34;git add&#34; to track)
+gitolite-admin $ git add keydir/
+gitolite-admin $ gs
+# On branch master
+# Changes to be committed:
+# (use &#34;git reset HEAD &lt;file&gt;...&#34; to unstage)
+#
+# new file: keydir/miro.adamy+client3-dev-vf-osx@gmail.com@client3-dev-vf.pub
+# new file: keydir/tkuser@luke.pub
+#
+gitolite-admin $ git commit -m&#34;Added 2 users&#34;
+[master 18caa3d] Added 2 users
+2 files changed, 2 insertions(+), 0 deletions(-)
+create mode 100644 keydir/miro.adamy+client3-dev-vf-osx@gmail.com@client3-dev-vf.pub
+create mode 100644 keydir/tkuser@luke.pub</pre></td></tr></table>
+</div>
+</div>
+<h4 id="next-step-will-be-editing-gitolite-conf">Next step will be editing gitolite.conf</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">gitolite-admin $ vi conf/gitolite.conf
+gitolite-admin $ cat conf/gitolite.conf
+repo gitolite-admin
+RW+ = miro
+repo testing
+RW+ = @all
+repo projectOne projectTwo
+RW+ = tkuser
+RW+ = miro
+repo projectOne-Blessed
+R = tkuser
+RW+ = miro</pre></td></tr></table>
+</div>
+</div>
+<p>I will create two repositories for project named unimaginatively &lsquo;projectOne&rsquo;.</p>
+
+<p>The projectOne repository (yes, I know this is not according naming convention - there should have been two repos named projectOne-tkuser, and projectOne-SomeOther developer. I will be cheating a bit and use &ldquo;projectOne&rdquo;
+as developer repository shared by two developers: tkuser@luke, and miro@radegast.</p>
+
+<p>User miro@radegast will be wearing second hat as integration manager and will also have access to &ldquo;blessed&rdquo; repository named &ldquo;projectOne-Blessed&rdquo;.</p>
+
+<p>OK, this is also not according naming convention - which I have created AFTER this exercise.</p>
+
+<p><strong><em>Please do what I say to do, not what I do :-D</em></strong></p>
+
+<p>The syntax is documented in Gitolite, but here is the idea: but just naming the repositories, they will be created when we push gitolite-admin repo.</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">gitolite-admin $ gs
+# On branch master
+# Your branch is ahead of &#39;origin/master&#39; by 1 commit.
+#
+# Changes not staged for commit:
+# (use &#34;git add &lt;file&gt;...&#34; to update what will be committed)
+# (use &#34;git checkout -- &lt;file&gt;...&#34; to discard changes in working directory)
+#
+# modified: conf/gitolite.conf
+#
+no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)
+gitolite-admin $ git add conf/gitolite.conf
+gitolite-admin $ git commit -m&#34;Some repos&#34;
+[master 35789bb] Some repos
+1 files changed, 10 insertions(+), 0 deletions(-)</pre></td></tr></table>
+</div>
+</div>
+<p>When we push, lost of magic happens on the other end:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">gitolite-admin $ git push
+Counting objects: 13, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 1.46 KiB, done.
+Total 9 (delta 0), reused 0 (delta 0)
+remote: Initialized empty Git repository in /home/client1/repositories/projectOne.git/
+remote: Initialized empty Git repository in /home/client1/repositories/projectOne-Blessed.git/
+remote: Initialized empty Git repository in /home/client1/repositories/projectTwo.git/
+To client1@192.168.16.144:gitolite-admin.git
+ca335c9..35789bb master -&gt; master</pre></td></tr></table>
+</div>
+</div>
+<p>Also, worth noticing that miro.pub found its way into keydir - even if it was never added (the setup action copied it there).</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">gitolite-admin $ ll keydir/
+total 24
+-rw-r--r-- 1 miro staff 418B 17 Jun 17:04 miro.adamy+client3-dev-vf-osx@gmail.com@client3-dev-vf.pub
+-rw-r--r-- 1 miro staff 401B 17 Jun 16:54 miro.pub
+-rw-r--r-- 1 miro staff 393B 17 Jun 17:01 tkuser@luke.pub</pre></td></tr></table>
+</div>
+</div>
+<h3 id="time-to-simulate-some-development">Time to simulate some development.</h3>
+
+<p>I am still on Macbook, wearing my &ldquo;developer&rdquo; hat, go to directory where I work with client1 project and clone: (the directory is empty as we are just starting):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">client1 $ pwd
+/Users/miro/Projects/Thinkwrap/Infrastructure/git-repos/client1
+client1 $ ll
+client1 $ git clone client1@192.168.16.144:projectOne
+Cloning into &#39;projectOne&#39;...
+warning: You appear to have cloned an empty repository.</pre></td></tr></table>
+</div>
+</div>
+<p>Again, I used &lsquo;client1@hostname&rsquo; to connect.</p>
+
+<p>Note that the url does contain just repository name, while on server side the repos are stored in folder &lsquo;repositories&rsquo; and the directory is named &lsquo;projectOne.git&rsquo;. This is OK.</p>
+
+<p>I will also clone the blessed repository (now wearing my Integration manager hat):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">client1 $ git clone client1@192.168.16.144:projectOne-Blessed
+Cloning into &#39;projectOne-Blessed&#39;...
+warning: You appear to have cloned an empty repository.
+client1 $ ll
+total 0
+drwxr-xr-x 3 miro staff 102B 17 Jun 17:12 projectOne
+drwxr-xr-x 3 miro staff 102B 17 Jun 17:12 projectOne-Blessed</pre></td></tr></table>
+</div>
+</div>
+<p>Lets set up some content for the team to work on:</p>
+
+<p>I work in blessed - create 2 files, commit locally and push</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">client1 $ cd projectOne-Blessed/
+projectOne-Blessed $ ll
+projectOne-Blessed $ ll ~/bin &gt;bin-dir.txt
+projectOne-Blessed $ ll .. &gt;this-dir.txt
+projectOne-Blessed $ gs
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+# (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
+#
+# bin-dir.txt
+# this-dir.txt
+nothing added to commit but untracked files present (use &#34;git add&#34; to track)
+projectOne-Blessed $ git add .
+projectOne-Blessed $ git commit -m&#34;2 files&#34;
+[master (root-commit) 4ecde6e] 2 files
+2 files changed, 45 insertions(+), 0 deletions(-)
+create mode 100644 bin-dir.txt
+create mode 100644 this-dir.txt</pre></td></tr></table>
+</div>
+</div>
+<p>For the first push, you MUST specify the upstream repo and branch. Here is what happens if you do not:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">projectOne-Blessed $ git push
+No refs in common and none specified; doing nothing.
+Perhaps you should specify a branch such as &#39;master&#39;.
+fatal: The remote end hung up unexpectedly
+error: failed to push some refs to &#39;client1@192.168.16.144:projectOne-Blessed&#39;</pre></td></tr></table>
+</div>
+</div>
+<p>OK then, I will push to origin (this is where I got the blessed repo from) and push the only branch - master</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">projectOne-Blessed $ git push origin master
+Counting objects: 4, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.21 KiB, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To client1@192.168.16.144:projectOne-Blessed
+* [new branch] master -&gt; master</pre></td></tr></table>
+</div>
+</div>
+<p>Now it works.</p>
+
+<h4 id="second-developer">Second developer</h4>
+
+<p>Now, second developer joined project. I will simulate him from Luke. His name is tkuser and his public key was already added to gitolite-admin</p>
+
+<p>I ssh to Luke - checkout the ProjectOne, connect upstream ProjectOne-blessed, add some files / modify some</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE temp]$ git clone client1@192.168.16.144:projectOne
+Cloning into projectOne...
+warning: You appear to have cloned an empty repository.
+[tkuser@LUKE temp]$ cd projectOne/
+[tkuser@LUKE projectOne]$ ll
+total 0
+[tkuser@LUKE projectOne]$ ll ~ &gt;my-home.txt
+[tkuser@LUKE projectOne]$ git add .
+ 
+[tkuser@LUKE projectOne]$ git commit -m &#34;tkuser started&#34;
+[master (root-commit) ac41962] tkuser started
+Committer: Thinknostic User &lt;tkuser@LUKE.(none)&gt;
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+git config --global user.name &#34;Your Name&#34;
+git config --global user.email you@example.com
+After doing this, you may fix the identity used for this commit with:
+git commit --amend --reset-author
+1 files changed, 16 insertions(+), 0 deletions(-)
+create mode 100644 my-home.txt</pre></td></tr></table>
+</div>
+</div>
+<p>From first commit (as there was never any development from Luke, I just installed Git there today), we get message that Git has trouble determining committer info and is using Thinknostic User &lt;tkuser@LUKE.(none)&gt;</p>
+
+<p><strong>We can fix this easily:</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git config --global user.name &#34;ThinkWrap User&#34;
+[tkuser@LUKE projectOne]$ git config --global user.email tkuser.luke@thinkwrap.net</pre></td></tr></table>
+</div>
+</div>
+<p>The next commit will be better</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git commit -m &#34;tkuser started&#34;
+# On branch master
+nothing to commit (working directory clean)
+ 
+ 
+[tkuser@LUKE projectOne]$ git status
+# On branch master
+nothing to commit (working directory clean)
+[tkuser@LUKE projectOne]$ ll
+total 8
+-rw-rw-r-- 1 tkuser tkuser 1040 Jun 17 17:17 my-home.txt
+[tkuser@LUKE projectOne]$ pwd
+/home/tkuser/temp/projectOne</pre></td></tr></table>
+</div>
+</div>
+<p>As we see, two commits to local repo have different indentities. I could fix that by ammending the commit, and I would in real project, but lets move on:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git log
+commit ac419625e9bef60a8bfb4f78c676eb25b7dc85b9
+Author: Thinknostic User &lt;tkuser@LUKE.(none)&gt;
+Date: Sun Jun 17 17:18:41 2012 -0400
+tkuser started</pre></td></tr></table>
+</div>
+</div>
+<p>OK, some more hard development:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ vim my-home.txt
+[tkuser@LUKE projectOne]$ git status
+# On branch master
+# Changes not staged for commit:
+# (use &#34;git add &lt;file&gt;...&#34; to update what will be committed)
+# (use &#34;git checkout -- &lt;file&gt;...&#34; to discard changes in working directory)
+#
+# modified: my-home.txt
+#
+no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)
+[tkuser@LUKE projectOne]$ git commit -a -m &#34;tkuser second&#34;
+[master a6cbdf9] tkuser second
+1 files changed, 6 insertions(+), 0 deletions(-)
+[tkuser@LUKE projectOne]$ git log
+commit a6cbdf9b3459c91572741c9ca2f5272e761b120f
+Author: ThinkWrap User &lt;tkuser.luke@thinkwrap.net&gt;
+Date: Sun Jun 17 17:20:56 2012 -0400
+tkuser second
+commit ac419625e9bef60a8bfb4f78c676eb25b7dc85b9
+Author: Thinknostic User &lt;tkuser@LUKE.(none)&gt;
+Date: Sun Jun 17 17:18:41 2012 -0400
+tkuser started</pre></td></tr></table>
+</div>
+</div>
+<p>Now we will share the code with the users on the CodeShare:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git push origin master
+Counting objects: 6, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 867 bytes, done.
+Total 6 (delta 1), reused 0 (delta 0)
+To client1@192.168.16.144:projectOne
+* [new branch] master -&gt; master</pre></td></tr></table>
+</div>
+</div>
+<p>What we have forgotten to do was to integrate code coming from ThinkWrap and shared in blessed repo.</p>
+
+<p>Let&rsquo;s hook up the blessed to my local repository on Luke:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git remote add blessed client1@192.168.16.144:projectOne-Blessed
+[tkuser@LUKE projectOne]$ git remote -v
+blessed client1@192.168.16.144:projectOne-Blessed (fetch)
+blessed client1@192.168.16.144:projectOne-Blessed (push)
+origin client1@192.168.16.144:projectOne (fetch)
+origin client1@192.168.16.144:projectOne (push)</pre></td></tr></table>
+</div>
+</div>
+<p>This is &ldquo;read-only&rdquo; link even if it does not say so. We can now fetch the changes from blessed (I could have named it anything, it is just name).</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git fetch blessed master
+warning: no common commits
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0)
+Unpacking objects: 100% (4/4), done.
+From 192.168.16.144:projectOne-Blessed
+* branch master -&gt; FETCH_HEAD</pre></td></tr></table>
+</div>
+</div>
+<p>This would be ideal situation if I want just to see what is going on, without impacting my local master.</p>
+
+<p>More practical would be to merge the changes into my master, which is what pull does. Again, for first time I must be explicit what do I want to pull - here is what happens if I am not:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git pull blessed
+From 192.168.16.144:projectOne-Blessed
+* [new branch] master -&gt; blessed/master
+You asked to pull from the remote &#39;blessed&#39;, but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.</pre></td></tr></table>
+</div>
+</div>
+<p>OK, we want master:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git pull blessed master
+From 192.168.16.144:projectOne-Blessed
+* branch master -&gt; FETCH_HEAD
+Merge made by recursive.
+bin-dir.txt | 42 ++++++++++++++++++++++++++++++++++++++++++
+this-dir.txt | 3 +++
+2 files changed, 45 insertions(+), 0 deletions(-)
+create mode 100644 bin-dir.txt
+create mode 100644 this-dir.txt
+ 
+ 
+[tkuser@LUKE projectOne]$ gs
+ESP Ghostscript 815.02 (2006-04-19)
+Copyright (C) 2004 artofcode LLC, Benicia, CA. All rights reserved.
+This software comes with NO WARRANTY: see the file PUBLIC for details.
+GS&gt;</pre></td></tr></table>
+</div>
+</div>
+<p>Eventually, I will get annoyed by GhostScript and kill it by defining my favorite alias:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ alias gs=&#39;git status&#39;
+[tkuser@LUKE projectOne]$ gs
+# On branch master
+# Your branch is ahead of &#39;origin/master&#39; by 2 commits.
+#
+nothing to commit (working directory clean)</pre></td></tr></table>
+</div>
+</div>
+<p>So we are fine. All is merged, but only locally. Git indicates we need to push to origin.</p>
+
+<p>I have all files:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ ll
+total 24
+-rw-rw-r-- 1 tkuser tkuser 2704 Jun 17 17:24 bin-dir.txt
+-rw-rw-r-- 1 tkuser tkuser 1070 Jun 17 17:20 my-home.txt
+-rw-rw-r-- 1 tkuser tkuser 130 Jun 17 17:24 this-dir.txt</pre></td></tr></table>
+</div>
+</div>
+<p>Let&rsquo;s push (now there is no need to say &lsquo;master&rsquo;):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git push origin
+Counting objects: 7, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.48 KiB, done.
+Total 6 (delta 1), reused 0 (delta 0)
+To client1@192.168.16.144:projectOne
+a6cbdf9..5d8d73b master -&gt; master</pre></td></tr></table>
+</div>
+</div>
+<p>What would happen if I wanted to short circuit the wait for integration manager and see my changes published right away in blessed repo ? Let&rsquo;s try of Gitolite access control works:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git push blessed
+FATAL: W any projectOne-Blessed tkuser DENIED by fallthru
+(or you mis-spelled the reponame)
+fatal: The remote end hung up unexpectedly
+[tkuser@LUKE projectOne]$ cd ..</pre></td></tr></table>
+</div>
+</div>
+<p>As it looks like, it does :-D</p>
+
+<p>I will not give up - in addition to link the blessed repo from my projectOne, I will try to clone it locally (which I can do as I have read access and push it back:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ cd ..
+[tkuser@LUKE temp]$ git clone client1@192.168.16.144:projectOne-Blessed
+Cloning into projectOne-Blessed...
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 0 (delta 0)
+Receiving objects: 100% (4/4), done.</pre></td></tr></table>
+</div>
+</div>
+<p>OK, let&rsquo;s hack it:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE temp]$ cd projectOne-Blessed/
+[tkuser@LUKE projectOne-Blessed]$ ll
+total 16
+-rw-rw-r-- 1 tkuser tkuser 2704 Jun 17 17:31 bin-dir.txt
+-rw-rw-r-- 1 tkuser tkuser 130 Jun 17 17:31 this-dir.txt
+[tkuser@LUKE projectOne-Blessed]$ vim bin-dir.txt
+[tkuser@LUKE projectOne-Blessed]$ git add .
+[tkuser@LUKE projectOne-Blessed]$ gs
+# On branch master
+# Changes to be committed:
+# (use &#34;git reset HEAD &lt;file&gt;...&#34; to unstage)
+#
+# modified: bin-dir.txt</pre></td></tr></table>
+</div>
+</div>
+<p>Local commit will work fine:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne-Blessed]$ git commit -m&#34;Changing Blessed&#34;
+[master eefd800] Changing Blessed
+1 files changed, 2 insertions(+), 1 deletions(-)
+[tkuser@LUKE projectOne-Blessed]$ gs
+# On branch master
+# Your branch is ahead of &#39;origin/master&#39; by 1 commit.
+#
+nothing to commit (working directory clean)</pre></td></tr></table>
+</div>
+</div>
+<p>But push will fail:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne-Blessed]$ git push origin
+FATAL: W any projectOne-Blessed tkuser DENIED by fallthru
+(or you mis-spelled the reponame)
+fatal: The remote end hung up unexpectedly</pre></td></tr></table>
+</div>
+</div>
+<h3 id="back-to-macbook-and-put-on-my-integration-manager-hat">Back to Macbook and put on my Integration Manager hat:</h3>
+
+<p>Int Manager on MBP - working with local clone of blessed repo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">projectOne-Blessed $ hostname
+Radegast.local
+projectOne-Blessed $ pwd
+/Users/miro/Projects/Thinkwrap/Infrastructure/git-repos/client1/projectOne-Blessed
+projectOne-Blessed $</pre></td></tr></table>
+</div>
+</div>
+<p>Integration manager has better tools so I use SourceTree from Atlassian to</p>
+
+<ul>
+<li>attach developer1 repository on CodeShare (the projectOne tkuser used), fetch the changes</li>
+<li>review them,</li>
+<li>merged developer1/master</li>
+<li>pushed to BLESSED</li>
+</ul>
+
+<p><img src="/images/sharing-1.png" alt="" /></p>
+
+<h3 id="back-on-luke-i-am-tkuser-now">Back on Luke, I am tkuser now:</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git pull blessed master
+From 192.168.16.144:projectOne-Blessed
+* branch master -&gt; FETCH_HEAD
+Already up-to-date.</pre></td></tr></table>
+</div>
+</div>
+<p>OK, this may be surprising: how come that IM pushed changes to blessed and tkuser does not see them ?</p>
+
+<p>What happened here is that the merge in Blessed was fast forward to latest and the latest is already in projectOne rep (as it originated from there). So nothing really changed just few references were moved.</p>
+
+<p>We can verify that we do have the latest commit by checking the sha1</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git log
+commit 5d8d73b7f24307482edbfc4ca1328dabdfcf8353
+Merge: a6cbdf9 4ecde6e
+Author: ThinkWrap User &lt;tkuser.luke@thinkwrap.net&gt;
+Date: Sun Jun 17 17:24:13 2012 -0400
+Merge branch &#39;master&#39; of 192.168.16.144:projectOne-Blessed
+commit a6cbdf9b3459c91572741c9ca2f5272e761b120f
+Author: ThinkWrap User &lt;tkuser.luke@thinkwrap.net&gt;
+Date: Sun Jun 17 17:20:56 2012 -0400
+tkuser second
+commit ac419625e9bef60a8bfb4f78c676eb25b7dc85b9
+Author: Thinknostic User &lt;tkuser@LUKE.(none)&gt;
+Date: Sun Jun 17 17:18:41 2012 -0400
+tkuser started
+commit 4ecde6eebd93448628c6475e12da380a962aecc9
+Author: Miro Adamy &lt;miro.adamy@thinkwrap.com&gt;
+Date: Sun Jun 17 17:15:04 2012 -0400
+2 files</pre></td></tr></table>
+</div>
+</div>
+<p>Or we can even see the fancy ASCII-Artsy graph:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git log --graph
+* commit 5d8d73b7f24307482edbfc4ca1328dabdfcf8353
+|\ Merge: a6cbdf9 4ecde6e
+| | Author: ThinkWrap User &lt;tkuser.luke@thinkwrap.net&gt;
+| | Date: Sun Jun 17 17:24:13 2012 -0400
+| |
+| | Merge branch &#39;master&#39; of 192.168.16.144:projectOne-Blessed
+| |
+| * commit 4ecde6eebd93448628c6475e12da380a962aecc9
+| Author: Miro Adamy &lt;miro.adamy@thinkwrap.com&gt;
+| Date: Sun Jun 17 17:15:04 2012 -0400
+|
+| 2 files
+|
+* commit a6cbdf9b3459c91572741c9ca2f5272e761b120f
+| Author: ThinkWrap User &lt;tkuser.luke@thinkwrap.net&gt;
+| Date: Sun Jun 17 17:20:56 2012 -0400
+|
+| tkuser second
+|
+* commit ac419625e9bef60a8bfb4f78c676eb25b7dc85b9
+Author: Thinknostic User &lt;tkuser@LUKE.(none)&gt;
+Date: Sun Jun 17 17:18:41 2012 -0400
+ 
+tkuser started
+[tkuser@LUKE projectOne]$</pre></td></tr></table>
+</div>
+</div>
+<h2 id="sharing-external-repo-among-developers">Sharing external repo among developers</h2>
+
+<p>For the final part, lets create scenario that does not happen if every developer has his/her own external repo on CodeShare, but which will certainly happen in the setup where multiple developer push to same external repo - kinda centralized mode.</p>
+
+<p>I will start by add local change to projectOne repo on MBPro by Miro. Back on Macbook:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">projectOne-Blessed $ cd ../projectOne
+projectOne $ ll
+total 24
+-rw-r--r-- 1 miro staff 2.6K 17 Jun 17:47 bin-dir.txt
+-rw-r--r-- 1 miro staff 1.0K 17 Jun 17:47 my-home.txt
+-rw-r--r-- 1 miro staff 130B 17 Jun 17:47 this-dir.txt
+projectOne $ vim this-dir.txt
+projectOne $ git commit -a -m&#34;local by Miro&#34;
+[master c62dd90] local by Miro
+1 files changed, 1 insertions(+), 1 deletions(-)
+projectOne $ git push
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 297 bytes, done.
+Total 3 (delta 2), reused 0 (delta 0)
+To client1@192.168.16.144:projectOne
+5d8d73b..c62dd90 master -&gt; master</pre></td></tr></table>
+</div>
+</div>
+<p>At the same time, tkuser on luke did also change something - starting from same starting code as miron on Radegast: attempt to push will this time end up with conflict</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ ll
+total 24
+-rw-rw-r-- 1 tkuser tkuser 2704 Jun 17 17:24 bin-dir.txt
+-rw-rw-r-- 1 tkuser tkuser 1070 Jun 17 17:20 my-home.txt
+-rw-rw-r-- 1 tkuser tkuser 130 Jun 17 17:24 this-dir.txt
+[tkuser@LUKE projectOne]$ vim my-home.txt
+[tkuser@LUKE projectOne]$ git commit -a -m&#34;Changing my home on Luke&#34;
+[master deb5d23] Changing my home on Luke
+1 files changed, 0 insertions(+), 1 deletions(-)</pre></td></tr></table>
+</div>
+</div>
+<p>Note that local commit is always OK, it will be the push that fails:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git push
+To client1@192.168.16.144:projectOne
+! [rejected] master -&gt; master (non-fast-forward)
+error: failed to push some refs to &#39;client1@192.168.16.144:projectOne&#39;
+To prevent you from losing history, non-fast-forward updates were rejected
+Merge the remote changes (e.g. &#39;git pull&#39;) before pushing again. See the
+&#39;Note about fast-forwards&#39; section of &#39;git push --help&#39; for details.</pre></td></tr></table>
+</div>
+</div>
+<p>Git was nice enough to tell me what to do. Let&rsquo;s pull:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git pull
+remote: Counting objects: 5, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0)
+Unpacking objects: 100% (3/3), done.
+From 192.168.16.144:projectOne
+5d8d73b..c62dd90 master -&gt; origin/master
+Merge made by recursive.
+this-dir.txt | 2 +-
+1 files changed, 1 insertions(+), 1 deletions(-)</pre></td></tr></table>
+</div>
+</div>
+<p>Merge resulted in new commit - it was done right away as there were no conflicts. We can push again:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE projectOne]$ git push
+Counting objects: 8, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 618 bytes, done.
+Total 5 (delta 2), reused 0 (delta 0)
+To client1@192.168.16.144:projectOne
+c62dd90..e031acf master -&gt; master
+[tkuser@LUKE projectOne]$</pre></td></tr></table>
+</div>
+</div>
+<h2 id="security-and-hackability">Security and hackability</h2>
+
+<p>Last note is on security. The hacker&rsquo;s soul in tkuser wants to see what else except projectOne is on CodeShare. Let&rsquo;s log on.</p>
+
+<h3 id="attempt-to-bypass-the-security-by-logging-on-as-hosting-user">Attempt to bypass the security by logging on as hosting user</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">[tkuser@LUKE ~]$ ssh client1@192.168.16.144
+hello tkuser, this is client1@jenkins0 running gitolite3 v3.03-34-ga171053 on git 1.7.7.1
+R W projectOne
+R projectOne-Blessed
+R W projectTwo
+R W testing
+Connection to 192.168.16.144 closed.</pre></td></tr></table>
+</div>
+</div>
+<p>Bummer. Gitolite was nice enough to show all repos made available for the user, but rejected the login.</p>
+
+<p>Therefore: <strong>public key is the only supported way how to access CodeShare repo.</strong></p>
+
+<p>For admins and such who know the password the ssh is still there (unless we change it git-shell).</p>
+
+<p>I will prove this by logging in with different identity (to prevent my public key being sent) - I will use my public key I use for github:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">client1 $ ssh -i ~/.ssh/github_rsa.pub client1@192.168.16.144
+client1@192.168.16.144&#39;s password:
+Last login: Sun Jun 17 14:38:57 2012 from 192.168.16.108
+[client1@jenkins0 ~]$</pre></td></tr></table>
+</div>
+</div>
+<p>In this case, it asks for password and logs me in</p>
+
+<p>And that is end of the walkthrough</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2012-06-21
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          <a href="/tags/gitolite/">gitolite</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2012-08-06-gitilite-admin/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Gitolite Administration Guide</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2012-05-29-admin-tool-goodies/">
+            <span class="next-text nav-default">Admin tool goodies</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

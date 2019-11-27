@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dot-net on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/dot-net/</link>
+    <description>Recent content in dot-net on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 27 Sep 2007 23:00:05 -0400</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/dot-net/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Microsoft will ship MVC for ASP.NET ?</title>
+      <link>https://miroadamy.com/posts/2007-09-27-microsoft-will-ship-mvc-for-aspnet/</link>
+      <pubDate>Thu, 27 Sep 2007 23:00:05 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-27-microsoft-will-ship-mvc-for-aspnet/</guid>
+      <description>From Scott Guthrie&#39;s interview on .NET futures
+SG: We’ve seen demand for an MVC framework on two fronts. One is for even more testability, having the ability to completely mock-up a request. We’ve also always seen with ASP.NET that some people like having the server control, postback model; some people say, “I just want absolute control.”
+The MVC framework we’re coming up with is a fairly simple MVC model, it’s very clean, it’s a front controller model, and it integrates very well into ASP.</description>
+    </item>
+    
+    <item>
+      <title>.NET on Linux faster than on Windows ? Hmm</title>
+      <link>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</link>
+      <pubDate>Wed, 27 Jun 2007 22:28:29 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</guid>
+      <description>An interesting article on JavaLobby caught my eye today: Do .NET Applications Run Better on Java?
+
+Normally, knowing the not exactly impartial focus of the Java centric site such as JavaLobby or theserverside.com, one should be careful when reading how much Java outperforms .NET. The bias works the other way too - just look at the Theserverside.net or other .NET centric side how much is C# superior :-). With that in mind, I looked atthe technical report.</description>
+    </item>
+    
+    <item>
+      <title>Fixing broken ASP.NET development environment</title>
+      <link>https://miroadamy.com/posts/2007-05-03-fixing-broken-windows-development-environment/</link>
+      <pubDate>Thu, 03 May 2007 22:18:19 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-03-fixing-broken-windows-development-environment/</guid>
+      <description>I had again the not-so infrequent pleasure of setting up fresh copy of Windows development stack. We were moving few machines between projects and to make sure that no forgotten source files are left on the harddisk, we reformatted and reinstalled Windows from scratch. It is usually good idea anyway, because developers like to install strange tools and utilities and generally customize machines to their own taste, which tend to be unique and is seldom shared.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft is getting more dynamic</title>
+      <link>https://miroadamy.com/posts/2007-05-01-microsoft-is-getting-more-dynamic/</link>
+      <pubDate>Tue, 01 May 2007 22:08:12 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-01-microsoft-is-getting-more-dynamic/</guid>
+      <description>at least as the programming language languages are concerned. One of the things that will be presented on the MIX07 is Dynamic Language Runtime, a new platform suitable to host high level, dynamic languages such as Python and Ruby. For Python, there is already pretty decent .NET implementation - namely IronPython. What is coming now is IronPython 2.0 based on the DLR as well as - yesss - IronRuby.
+It is great that this is happening.</description>
+    </item>
+    
+    <item>
+      <title>DotNet Development Toolbox - II</title>
+      <link>https://miroadamy.com/posts/2007-02-20-dotnet-development-toolbox-ii/</link>
+      <pubDate>Tue, 20 Feb 2007 21:51:00 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-20-dotnet-development-toolbox-ii/</guid>
+      <description>Continuing from here.
+ Ch-7: Digging into the source code
+In this chapter, Mike describes the tools that work with, around or towards source code: Idlasm, Reflector and FxCop. The book is written for Visual Studio 2003, so some references are slightly outdated - but there is one utility that stands out and is still more useful than ever: Lutz Roeder&#39;s Reflector. It is part of the Visual Studio 2005 (albeit in older version that you can get on the Web site).</description>
+    </item>
+    
+    <item>
+      <title>DotNet Development Toolbox</title>
+      <link>https://miroadamy.com/posts/2007-02-18-dotnet-development-toolbox/</link>
+      <pubDate>Sun, 18 Feb 2007 19:33:36 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-18-dotnet-development-toolbox/</guid>
+      <description>I have recently picked very interesting book that I have read about year ago, from Mike Gunderloy named Coder to Developer, with subtitle Tools and Strategies for Delivering Your Software. It is an excellent book and I highly recommend to give it a look if you are in software development business on Microsoft platform. Easy read, practical, useful.When I was reading it back in 2006, it was before we have set up own development lab and started the biometric project.</description>
+    </item>
+    
+  </channel>
+</rss>

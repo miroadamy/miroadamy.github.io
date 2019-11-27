@@ -23,6 +23,19 @@ It requires relatively modern Perl - 5.1x should work. I have
     </item>
     
     <item>
+      <title>Recreate txt base graph generator</title>
+      <link>https://miroadamy.com/posts/2014-09-09-redo-graph/</link>
+      <pubDate>Tue, 09 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-09-redo-graph/</guid>
+      <description>Graphviz This time using brew
+1 2 3 4 5 6 7 8  ➜ DPS brew install graphviz ==&amp;gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz ######################################################################## 100.0% ==&amp;gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz 🍺 /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M ➜ DPS dot -V dot - graphviz version 2.38.0 (20140413.2041) ➜ DPS   Schema Spy From http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/
+To /opt/diagram
+Run:
+ diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training</description>
+    </item>
+    
+    <item>
       <title>Dot-vimming new machine</title>
       <link>https://miroadamy.com/posts/2013-03-03-dotvim/</link>
       <pubDate>Sun, 03 Mar 2013 11:22:48 +0800</pubDate>

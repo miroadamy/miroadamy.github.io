@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>How to get information about all ATG components - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="How to get information about all ATG Nucleus components Dyn Admin has useful feature - Configuration reporter: http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml
+There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes
+1 2 3 4 5 6  -rw-r--r-- 1 miro 2." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2015-07-12-component-report/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="How to get information about all ATG components" />
+<meta property="og:description" content="How to get information about all ATG Nucleus components Dyn Admin has useful feature - Configuration reporter: http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml
+There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes
+1 2 3 4 5 6  -rw-r--r-- 1 miro 2." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2015-07-12-component-report/" />
+<meta property="article:published_time" content="2015-07-12T11:22:48+08:00" />
+<meta property="article:modified_time" content="2015-07-12T11:22:48+08:00" />
+<meta itemprop="name" content="How to get information about all ATG components">
+<meta itemprop="description" content="How to get information about all ATG Nucleus components Dyn Admin has useful feature - Configuration reporter: http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml
+There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes
+1 2 3 4 5 6  -rw-r--r-- 1 miro 2.">
+
+
+<meta itemprop="datePublished" content="2015-07-12T11:22:48&#43;08:00" />
+<meta itemprop="dateModified" content="2015-07-12T11:22:48&#43;08:00" />
+<meta itemprop="wordCount" content="965">
+
+
+
+<meta itemprop="keywords" content="atg,dynadmin," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to get information about all ATG components"/>
+<meta name="twitter:description" content="How to get information about all ATG Nucleus components Dyn Admin has useful feature - Configuration reporter: http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml
+There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes
+1 2 3 4 5 6  -rw-r--r-- 1 miro 2."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">How to get information about all ATG components</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-07-12 </span>
+        <div class="post-category">
+            <a href="/categories/devops/"> devops </a>
+            </div>
+          <span class="more-meta"> 965 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#how-to-get-information-about-all-atg-nucleus-components">How to get information about all ATG Nucleus components</a></li>
+<li><a href="#custom-report">Custom report</a>
+<ul>
+<li><a href="#weakness-and-issues">Weakness and issues</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h1 id="how-to-get-information-about-all-atg-nucleus-components">How to get information about all ATG Nucleus components</h1>
+
+<p>Dyn Admin has useful feature - Configuration reporter: <a href="http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml">http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml</a></p>
+
+<p><img src="/images/da-1.jpeg" alt="" /></p>
+
+<p>There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">-rw-r--r-- 1 miro 2.2M Jul 12 14:07 bean1
+-rw-r--r-- 1 miro 2.5M Jul 12 14:07 bean1.xml
+ 
+ 
+-rw-r--r-- 1 miro 275K Jul 12 13:50 file1
+-rw-r--r-- 1 miro 572K Jul 12 13:51 file1.xml</pre></td></tr></table>
+</div>
+</div>
+<p><img src="/images/da-2.jpeg" alt="" />
+<img src="/images/da-3.jpeg" alt="" /></p>
+
+<p>In both cases first creates binary file with properties and then transforms it to XML format:</p>
+
+<p><img src="/images/da-4.jpeg" alt="" />
+<img src="/images/da-5.jpeg" alt="" />
+Both files will be saved in the home directory of the JVM.</p>
+
+<p>In development, it will be most likely the ATG module directory - from where the Start script was run.</p>
+
+<p>You can format it</p>
+
+<blockquote>
+<p>xmllint &ndash;format file1.xml &gt;file1-formatted.xml</p>
+</blockquote>
+
+<p>after which it looks like this (PRR)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">...
+&lt;/component&gt;
+    &lt;component NAME=&#34;/atg/devtools/ArchiveDirectoryCache&#34;&gt;
+      &lt;property NAME=&#34;$scope&#34;&gt;&lt;![CDATA[global]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;directoryAgent&#34;&gt;&lt;![CDATA[./ContainerAppDirectoryAgent]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;loggingInfo&#34;&gt;&lt;![CDATA[true]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;logListeners&#34;&gt;&lt;![CDATA[atg/dynamo/service/logging/LogQueue,atg/dynamo/service/logging/ScreenLog]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;schedule&#34;&gt;&lt;![CDATA[every 30 minutes]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;stagingDirectoryRoot&#34;&gt;&lt;![CDATA[{serverHomeDirResource?resourceURI=j2ee/archive-cache}]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;$description&#34;&gt;&lt;![CDATA[server-side J2EE application and stand alone archived application cache]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;loggingWarning&#34;&gt;&lt;![CDATA[true]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;logging.logListeners&#34;&gt;&lt;![CDATA[atg/dynamo/service/logging/LogQueue,atg/dynamo/service/logging/ScreenLog]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;$class&#34;&gt;&lt;![CDATA[atg.ui.j2edit.model.CachingJ2eeArchiveDirectoryAgent]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;loggingError&#34;&gt;&lt;![CDATA[true]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;loggingDebug&#34;&gt;&lt;![CDATA[false]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;enabled^&#34;&gt;&lt;![CDATA[/atg/dynamo/Configuration.j2eeArchiveCachingEnabled]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;scheduler&#34;&gt;&lt;![CDATA[/atg/dynamo/service/Scheduler]]&gt;&lt;/property&gt;
+    &lt;/component&gt;
+    &lt;component NAME=&#34;/atg/devtools/ComponentIndex&#34;&gt;
+      &lt;property NAME=&#34;logging.logListeners&#34;&gt;&lt;![CDATA[atg/dynamo/service/logging/LogQueue,atg/dynamo/service/logging/ScreenLog]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;loggingWarning&#34;&gt;&lt;![CDATA[true]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;loggingDebug&#34;&gt;&lt;![CDATA[false]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;moduleManager&#34;&gt;&lt;![CDATA[/atg/modules/ModuleManager]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;loggingInfo&#34;&gt;&lt;![CDATA[true]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;excludeDirectories&#34;&gt;&lt;![CDATA[/docroot,/atg/dynamo/servlet/sessiontracking/SessionManager,/atg/dynamo/servlet/pipeline/RequestScopeManager,/atg/reporting/contentviewed,/atg/reporting/profilegroup,/atg/reporting/requests,/atg/reporting/userevents]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;componentIndexFile&#34;&gt;&lt;![CDATA[{serverHomeDirResource?resourceURI=data/componentIndex.ser}]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;$description&#34;&gt;&lt;![CDATA[Index of all configured global components in Nucleus]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;logListeners&#34;&gt;&lt;![CDATA[atg/dynamo/service/logging/LogQueue,atg/dynamo/service/logging/ScreenLog]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;loggingError&#34;&gt;&lt;![CDATA[true]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;componentManager&#34;&gt;&lt;![CDATA[ComponentManager]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;$class&#34;&gt;&lt;![CDATA[atg.ui.component.model.GlobalComponentIndex]]&gt;&lt;/property&gt;
+    &lt;/component&gt;
+    &lt;component NAME=&#34;/atg/devtools/ComponentManager&#34;&gt;
+      &lt;property NAME=&#34;loggingDebug&#34;&gt;&lt;![CDATA[false]]&gt;&lt;/property&gt;
+      &lt;property NAME=&#34;loggingError&#34;&gt;&lt;![CDATA[true]]&gt;&lt;/property&gt;
+...</pre></td></tr></table>
+</div>
+</div>
+<p>or this (BRR):</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">...
+&lt;/component&gt;
+&lt;component NAME=&#34;/atg/devtools/ArchiveDirectoryCache&#34;&gt;
+&lt;property NAME=&#34;schedule&#34;&gt;&lt;![CDATA[schedule every 30 minutes without catch up]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;loggingTrace&#34;&gt;&lt;![CDATA[loggingTrace false]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;adminServlet&#34;&gt;&lt;![CDATA[adminServlet atg.nucleus.GenericService$1AdminServlet@5d6142fe]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;loggingWarning&#34;&gt;&lt;![CDATA[loggingWarning true]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;loggingDebug&#34;&gt;&lt;![CDATA[loggingDebug false]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;nucleus&#34;&gt;&lt;![CDATA[nucleus /]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;scheduler&#34;&gt;&lt;![CDATA[scheduler /atg/dynamo/service/Scheduler]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;absoluteName&#34;&gt;&lt;![CDATA[absoluteName /atg/devtools/ArchiveDirectoryCache]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;serviceConfiguration&#34;&gt;&lt;![CDATA[serviceConfiguration atg.nucleus.PropertyConfiguration@1c756197]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;enabled&#34;&gt;&lt;![CDATA[enabled true]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;purgeInterval&#34;&gt;&lt;![CDATA[purgeInterval 4]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;nameContext&#34;&gt;&lt;![CDATA[nameContext /atg/devtools]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;stagingDirectoryRoot&#34;&gt;&lt;![CDATA[stagingDirectoryRoot /Users/miro/src/TRAINING/twc-training2/servers/atg/training_dev01/j2ee/archive-cache]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;logListenerCount&#34;&gt;&lt;![CDATA[logListenerCount 2]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;running&#34;&gt;&lt;![CDATA[running true]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;loggingInfo&#34;&gt;&lt;![CDATA[loggingInfo true]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;adminServletUseServletOutputStream&#34;&gt;&lt;![CDATA[adminServletUseServletOutputStream false]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;j2eeAppInfoCache&#34;&gt;&lt;![CDATA[j2eeAppInfoCache {/Users/miro/ATG/ATG11.1/PubPortlet/:PubPortlets.ear=atg.ui.j2edit.model.J2eeAppInfo@3f9e8e2f, /Users/miro/ATG/ATG11.1/twc-training/servers/atg/training_dev01/j2ee/archive-cache/1436676669459-30/:screenscraper=atg.ui.j2edit.model.J2eeAppInfo@4288d04a, /Users/miro/ATG/ATG11.1/Tomcat/apache-tomcat-7.0.37/webapps/:host-manager=atg.ui.j2edit.model.J2eeAppInfo@2422cc66, /Users/miro/ATG/ATG11.1/ATGDBSetup/j2ee-apps/:ATGDBSetup=atg.ui.j2edit.model.J2eeAppInfo@68994f12, /Users/miro/ATG/ATG11.1/Service11.1/Service/CRMIntegration/j2ee-apps/:getAgentPasswordHashAlgorithm.ear=atg.ui.j2edit.model.J2eeAppInfo@29165c64, /Users/miro/ATG/ATG11.1/twc-training/servers/tomcat/training_dev01/webapps/:dyn=atg.ui.j2edit.model.J2eeAppInfo@7b0bbe4e, /Users/miro/ATG/ATG11.1/WSRP/admin/:admin=atg.ui.j2edit.model.J2eeAppInfo@3ffb31fe, /Users/miro/ATG/ATG11.1/Portal/gear-template/helloworld_war/:helloworld.war=atg.ui.j2edit.model.J2eeAppInfo@48f3b83, /Users/miro/ATG/ATG11.1/TWC-TDD/j2ee-apps/:TDD.ear=atg.ui.j2edit.model.J2eeAppInfo@578c17cb, /Users/miro/ATG/ATG11.1/WSRP/producer/:producer=atg.ui.j2edit.model.J2eeAppInfo@2e6e3d54, /Users/miro/ATG/ATG11.1/twc-training/servers/atg/training_dev01/j2ee/archive-cache/1436676669406-28/:quicklinks=atg.ui.j2edit.model.J2eeAppInfo@477c6d9c, /Users/miro/ATG/ATG11.1/twc-training/servers/atg/training_dev01/j2ee/archive-cache/1436676669177-22/:exchange=atg.ui.j2edit.model.J2eeAppInfo@3a00416e, /Users/miro/ATG/ATG11.1/DCS-UI/Versioned/j2ee-apps/:DCS-UI-Versioned.ear=atg.ui.j2edit.model.J2eeAppInfo@66c7ba81, /Users/miro/ATG/ATG11.1/Service11.1/Service/CRMIntegration/j2ee-apps/:loginAgentUser.ear=atg.ui.j2edit.model.J2eeAppInfo@42a59fde, /Users/miro/ATG/ATG11.1/twc-training/servers/atg/training_dev01/j2ee/archive-cache/1436676667174-7/:Fcc=atg.ui.j2edit.model.J2eeAppInfo@7a2ca01, /Users/miro/ATG/ATG11.1/twc-training/servers/tomcat/training_dev01/webapps/:dyn#admin=atg.ui.j2edit.model.J2eeAppInfo@507c0b91, /Users/miro/ATG/ATG11.1/BIZUI/j2ee-apps/:bizui.ear=atg.ui.j2edit.model.J2eeAppInfo@7fdb85de, /Users/miro/ATG/ATG11.1/twc-training/servers/atg/training_dev01/j2ee/archive-cache/1436676668997-14/:alert=atg.ui.j2edit.model.J2eeAppInfo@2531f366, /Users/miro/ATG/ATG11.1/twc-training/servers/atg/training_dev01/j2ee/archive-cache/1436676669691-37/:xmlprotocol=atg.ui.j2edit.model.J2eeAppInfo@7262c09d, /Users/miro/ATG/ATG11.1/twc-training/servers/atg/training_dev01/j2ee/archive-cache/1436676669036-16/:bookmarks=atg.ui.j2edit.model.J2eeAppInfo@3153be16, /Users/miro/ATG/ATG11.1/Portal/slotgear/:slotgear-war=atg.ui.j2edit.model.J2eeAppInfo@70e4afa6, /Users/miro/ATG/ATG11.1/twc-training/servers/atg/training_dev01/j2ee/archive-cache/1436676667067-4/:atg-bootstrap=atg.ui.j2edit.model.J2eeAppInfo@35c7f531, /Users/miro/ATG/ATG11.1/DPS-UI/j2ee-apps/:DPS-UI.ear=atg.ui.j2edit.model.J2eeAppInfo@5ab27f8c, /Users/miro/ATG/ATG11.1/twc-training/servers/atg/training_dev01/j2ee/archive-cache/1436676666956-0/:orderapproval=atg.ui.j2edit.model.J2eeAppInfo@7cd3eed8, /Users/miro/ATG/ATG11.1/twc-training/servers/atg/training_dev01/j2ee/archive-cache/1436676669537-33/:soapclient=atg.ui.j2edit.model.J2eeAppInfo@3de5e6ee, /Users/miro/ATG/ATG11.1/twc-training/servers/atg/training_dev01/j2ee/archive-cache/1436676669140-21/:docexch=atg.ui.j2edit.model.J2eeAppInfo@409c3301, /Users/miro/ATG/ATG11.1/twc-training/servers/atg/training_dev01/j2ee/archive-cache/1436676669302-26/:settings=atg.ui.j2edit.model.J2eeAppInfo@4ed8a7ca, /Users/miro/ATG/ATG11.1/ContentMgmt-UI/j2ee-apps/:ContentMgmt-UI.ear=atg.ui.j2edit.model.J2eeAppInfo@71e
+[DELETED the rest of line ...]
+&lt;property NAME=&#34;name&#34;&gt;&lt;![CDATA[name ArchiveDirectoryCache]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;logListeners&#34;&gt;&lt;![CDATA[atg.service.configurationreporter.MultiValueProperty@76711470]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;serviceInfo&#34;&gt;&lt;![CDATA[serviceInfo server-side J2EE application and stand alone archived application cache]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;root&#34;&gt;&lt;![CDATA[root /]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;cache&#34;&gt;&lt;![CDATA[cache {}]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;adminServletOutputStreamEncoding&#34;&gt;&lt;![CDATA[adminServletOutputStreamEncoding UTF-8]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;loggingError&#34;&gt;&lt;![CDATA[loggingError true]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;class&#34;&gt;&lt;![CDATA[class class atg.ui.j2edit.model.CachingJ2eeArchiveDirectoryAgent]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;directoryAgent&#34;&gt;&lt;![CDATA[directoryAgent /atg/devtools/ContainerAppDirectoryAgent]]&gt;&lt;/property&gt;
+&lt;/component&gt;
+&lt;component NAME=&#34;/atg/devtools/ComponentIndex&#34;&gt;
+&lt;property NAME=&#34;loggingTrace&#34;&gt;&lt;![CDATA[loggingTrace false]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;adminServlet&#34;&gt;&lt;![CDATA[adminServlet atg.nucleus.GenericService$1AdminServlet@1a9a8c3d]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;loggingWarning&#34;&gt;&lt;![CDATA[loggingWarning true]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;loggingDebug&#34;&gt;&lt;![CDATA[loggingDebug false]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;nucleus&#34;&gt;&lt;![CDATA[nucleus /]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;absoluteName&#34;&gt;&lt;![CDATA[absoluteName /atg/devtools/ComponentIndex]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;serviceConfiguration&#34;&gt;&lt;![CDATA[serviceConfiguration atg.nucleus.PropertyConfiguration@186d0670]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;componentIndexFile&#34;&gt;&lt;![CDATA[componentIndexFile /Users/miro/src/TRAINING/twc-training2/servers/atg/training_dev01/data/componentIndex.ser]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;enabled&#34;&gt;&lt;![CDATA[enabled true]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;excludeDirectories&#34;&gt;&lt;![CDATA[atg.service.configurationreporter.MultiValueProperty@79f501cf]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;moduleManager&#34;&gt;&lt;![CDATA[moduleManager /atg/modules/ModuleManager]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;rebuilding&#34;&gt;&lt;![CDATA[rebuilding false]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;nameContext&#34;&gt;&lt;![CDATA[nameContext /atg/devtools]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;logListenerCount&#34;&gt;&lt;![CDATA[logListenerCount 2]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;indexAvailable&#34;&gt;&lt;![CDATA[indexAvailable false]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;running&#34;&gt;&lt;![CDATA[running true]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;loggingInfo&#34;&gt;&lt;![CDATA[loggingInfo true]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;adminServletUseServletOutputStream&#34;&gt;&lt;![CDATA[adminServletUseServletOutputStream false]]&gt;&lt;/property&gt;
+&lt;property NAME=&#34;name&#34;&gt;&lt;![CDATA[name ComponentIndex]]&gt;&lt;/property&gt;</pre></td></tr></table>
+</div>
+</div>
+<p>The BRR file seems to have syntactic issues:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">➜  dev01 git:(d1-150/main) ✗ xmllint --format bean1.xml
+bean1.xml:10865: parser error : Char 0x0 out of allowed range
+14:10:9f:1f:cd:04@fe80::1610:9fff:fe1f:cd04._apple-mobdev._tcp.local.,4500/4279,
+                                                                               ^
+bean1.xml:10865: parser error : CData section not finished
+jmDNS   ---- Services -----
+        Service: wanderlust.l
+14:10:9f:1f:cd:04@fe80::1610:9fff:fe1f:cd04._apple-mobdev._tcp.local.,4500/4279,
+                                                                               ^
+bean1.xml:10865: parser error : Premature end of data in tag property line 10852
+14:10:9f:1f:cd:04@fe80::1610:9fff:fe1f:cd04._apple-mobdev._tcp.local.,4500/4279,
+                                                                               ^
+bean1.xml:10865: parser error : Premature end of data in tag component line 10845
+14:10:9f:1f:cd:04@fe80::1610:9fff:fe1f:cd04._apple-mobdev._tcp.local.,4500/4279,
+                                                                               ^
+bean1.xml:10865: parser error : Premature end of data in tag component_list line 95
+14:10:9f:1f:cd:04@fe80::1610:9fff:fe1f:cd04._apple-mobdev._tcp.local.,4500/4279,
+                                                                               ^
+bean1.xml:10865: parser error : Premature end of data in tag repository line 1
+14:10:9f:1f:cd:04@fe80::1610:9fff:fe1f:cd04._apple-mobdev._tcp.local.,4500/4279,
+                                                                        ^</pre></td></tr></table>
+</div>
+</div>
+<p>This offers very useful posibilities for using standard Unix text tools.</p>
+
+<p>For example: list all components using other components:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">grep -n &#39;/atg/dynamo/service/jdbc/JTDataSource&#39; file1-formatted.xml
+255:      &lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[/atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+1205:      &lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[/atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+1344:      &lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[/atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+1854:      &lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[/atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+2335:    &lt;component NAME=&#34;/atg/dynamo/service/jdbc/JTDataSource&#34;&gt;
+2370:      &lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[/atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+5497:      &lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[/atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+6229:      &lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[/atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+6489:      &lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[/atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+6536:      &lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[/atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+6815:      &lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[/atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+6833:      &lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[/atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+  
+grep -n &#39;/atg/dynamo/service/jdbc/JTDataSource&#39; bean1.xml
+785:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+7397:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+7756:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+9027:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+10605:&lt;component NAME=&#34;/atg/dynamo/service/jdbc/JTDataSource&#34;&gt;
+10649:&lt;property NAME=&#34;absoluteName&#34;&gt;&lt;![CDATA[absoluteName /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+10732:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+19875:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+20312:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+20460:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+20608:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+30639:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+31097:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+31340:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+32131:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;
+32279:&lt;property NAME=&#34;dataSource&#34;&gt;&lt;![CDATA[dataSource /atg/dynamo/service/jdbc/JTDataSource]]&gt;&lt;/property&gt;</pre></td></tr></table>
+</div>
+</div>
+<h1 id="custom-report">Custom report</h1>
+
+<p>This allows possibility to report only part of hierarchy. You have to provide control file (complete hierarchy can be generated at</p>
+
+<p><a href="http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-output-hierarchy-titled.jhtml?_DARGS=/atg/dynamo/admin/en/config-reporter-output-hierarchy-titled.jhtml.2&amp;_dynSessConf=-8731147233557828105">http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-output-hierarchy-titled.jhtml?_DARGS=/atg/dynamo/admin/en/config-reporter-output-hierarchy-titled.jhtml.2&amp;_dynSessConf=-8731147233557828105</a></p>
+
+<p>The file is not XML file, it contains lines for components and directories:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">...
+&lt;component&gt;/atg/userprofiling/RepositoryItemGroupRoleCacheAdapter&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/ProfileTools&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/UserCacheAdapter&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/PageEventTrigger&lt;/component&gt;
+&lt;directory&gt;/atg/userprofiling/email&lt;/directory&gt;
+&lt;component&gt;/atg/userprofiling/email/HtmlContentProcessor&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/email/TemplateEmailPersister&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/email/BatchEmailPeriodicService&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/email/TemplateEmailSender&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/email/TemplateEmailBatchPersister&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/email/TemplateEmailBatchServerPersister&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/ProfileRequestServlet&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/FolderCacheAdapter&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/ProfileUserDirectoryProperties&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/PropertyManager&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/ProfileSessionFailServiceSharable&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/FolderPathCache&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/ProfileItemFinder&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/DPSMessageSource&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/CookieManager&lt;/component&gt;
+&lt;component&gt;/atg/userprofiling/ExpiredPasswordService&lt;/component&gt;
+...</pre></td></tr></table>
+</div>
+</div>
+<p>I have generated file, left only sub-tree of &lsquo;/atg/userprofiling&rsquo;:</p>
+
+<p>This file is then used as input. If you leave file in the directory it was generated in, that is the safest way how it will be found.</p>
+
+<p><img src="/images/da-6.jpeg" alt="" /></p>
+
+<p>Here is the output:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"> -rw-r--r-- 1 miro 146K Jul 12 14:28 bean2
+ -rw-r--r-- 1 miro 198K Jul 12 14:29 bean2.xml</pre></td></tr></table>
+</div>
+</div>
+<h2 id="weakness-and-issues">Weakness and issues</h2>
+
+<p>This tool would be much more useful if many important classes provided override &lsquo;toString&rsquo; methods.</p>
+
+<p>For example, this is what you get from ProfileAdapterRepository&rsquo;s DatabaseTableInfo</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">...
+&lt;property NAME=&#34;databaseTableInfo&#34;&gt;&lt;![CDATA[databaseTableInfo atg.adapter.gsa.DatabaseTableInfo@74924b8c]]&gt;&lt;/property&gt;</pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2015-07-12
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/atg/">atg</a>
+          <a href="/tags/dynadmin/">dynadmin</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2015-15-07-git-history/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">How to truncate Git history</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2015-07-08-keepass-cli/">
+            <span class="next-text nav-default">Accessing Keepass information from command line</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

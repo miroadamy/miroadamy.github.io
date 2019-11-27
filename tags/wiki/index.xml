@@ -23,5 +23,32 @@ Installation: http://alblue.bandlem.com/2011/05/git-tip-of-week-gollum.html
  Running 1 2 3  git init TestWiki gollum --page-file-dir wiki TestWiki openurl http://localhost:4567   Parsers - separate install 1 2  gem install rdiscount gem install wikicloth   Get Wiki for repo 1 2 3 4 5 6  git clone URL URL: - git@github.</description>
     </item>
     
+    <item>
+      <title>Using Wiki markup without a Wiki</title>
+      <link>https://miroadamy.com/posts/2007-05-17-using-wiki-markup-without-a-wiki/</link>
+      <pubDate>Thu, 17 May 2007 22:10:44 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-17-using-wiki-markup-without-a-wiki/</guid>
+      <description>Even with having Wiki as the main documentation repository, not all documentation ends up in a Wiki. Some documentation needs to be managed as part of the source tree - e.g. Readme&#39;s, compilation instructions and similar. This information is usually either plain text or in some form of text processor format, mostly Microsoft Word compatible. Both have their selection of problems. Word documents are large, bloated, harder to version controlled and not readable in shell environment (try to cat or tail Word document :-)).</description>
+    </item>
+    
+    <item>
+      <title>Project management using Wiki</title>
+      <link>https://miroadamy.com/posts/2007-03-05-project-management-using-wiki/</link>
+      <pubDate>Mon, 05 Mar 2007 22:50:04 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-05-project-management-using-wiki/</guid>
+      <description>It has been half a year in March since we have started to use Wiki as main project management, collaboration and content creation tool. I think this is period long enough to look back and summarize what we have discovered, what worked and what not. This was not the first attempt to use Wiki in this context - however, it was first case when the result can be considered full success.</description>
+    </item>
+    
+    <item>
+      <title>Wiki&#39;s are everywhere ...</title>
+      <link>https://miroadamy.com/posts/2006-11-21-wikis-are-everywhere/</link>
+      <pubDate>Tue, 21 Nov 2006 21:05:25 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-11-21-wikis-are-everywhere/</guid>
+      <description>Since the beginning of the biometric security project, we are using an excellent enterprise-level Wiki Confluence as knowledge repository and main team communication tool. I was not sure at the beginning, how will the Wiki approach work for all the people on the team, mostly because once before I already tried it and had not much success of introducing the idea. It was few years ago and the Wiki engine I used were nowhere in the same league as Confluence, but main problem at that time was probably the users&#39; mindset.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Technology on Miro&#39;s World</title>
+    <title>technology on Miro&#39;s World</title>
     <link>https://miroadamy.com/categories/technology/</link>
-    <description>Recent content in Technology on Miro&#39;s World</description>
+    <description>Recent content in technology on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Mar 2016 12:57:35 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 23 Mar 2016 12:57:35 -0500</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/categories/technology/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Starting ACC (ATG Control Centre) on OS-X</title>
-      <link>https://miroadamy.com/posts/2016-03-24-acc-on-osx/</link>
-      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2016-03-24-acc-on-osx/</guid>
-      <description>Copy the installation of ACC for respective version from a Linux VM:
-The startup script in bin/startClient will fail, because it cannot determine which Java to use to run the app.
-It is trying to determine Unix flavour, failing that defaults to Solaris and ends up with invalid settings.
-Fix Set the variable JAVA_VM to path to executable command on your system.
-1 2 3 4 5  which java java is /Library/Java/JavaVirtualMachines/jdk1.</description>
-    </item>
     
     <item>
       <title>Git bits 2</title>
@@ -152,6 +139,18 @@ Got my new MacBook Pro replacement yesterday. Pretty sweet upgrade: quad-core i7
     </item>
     
     <item>
+      <title>GitHub &#43; Gollum vs BitBucket Wiki</title>
+      <link>https://miroadamy.com/posts/2012-04-07-gollum/</link>
+      <pubDate>Sat, 07 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-04-07-gollum/</guid>
+      <description>both Wikis are backed by Git repo both allow local edit  Gollum See https://github.com/github/gollum#readme
+Installation: http://alblue.bandlem.com/2011/05/git-tip-of-week-gollum.html
+ sudo gem install gollum
+ Running 1 2 3  git init TestWiki gollum --page-file-dir wiki TestWiki openurl http://localhost:4567   Parsers - separate install 1 2  gem install rdiscount gem install wikicloth   Get Wiki for repo 1 2 3 4 5 6  git clone URL URL: - git@github.</description>
+    </item>
+    
+    <item>
       <title>Miro Manifesto</title>
       <link>https://miroadamy.com/posts/2012-02-15-miro-manifesto/</link>
       <pubDate>Wed, 15 Feb 2012 11:22:48 +0800</pubDate>
@@ -160,6 +159,389 @@ Got my new MacBook Pro replacement yesterday. Pretty sweet upgrade: quad-core i7
       <description>Miro Manifesto Original text of the memo, written in February 2012 and shared with limited audience, until it surfaced up as main them of the planning meeting in December 2012.
 This is an attempt to come up with better answers to the following questions:
  what issues and challenges I see on our way ahead from the technology point of view and what needs to be done to address them where do I see my professional and personal career go over next 12 to 18 months and in long run how to best align those two streams  In the spirit of my latest “back to the basics” obsession, it was written in Markdown format and in Vi, copied and pasted into Google Doc, btw.</description>
+    </item>
+    
+    <item>
+      <title>The aftermath of mainboard change</title>
+      <link>https://miroadamy.com/posts/2009-03-04-the-aftermath-of-mainboard-change/</link>
+      <pubDate>Wed, 04 Mar 2009 01:01:04 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-03-04-the-aftermath-of-mainboard-change/</guid>
+      <description>In theory, exchanging mainboard on Macbook has no impact because all your data is stored on your harddisk that is untouched. In real life, there are few minor surprises.
+First, your MAC address of the network card had changed. This is something you will not notice, unless Murphy&#39;s law plays funny game with you, as it did with me. When arriving back to the office, I was able to connect to WiFi network, but the ethernet was stubbornly getting the &#34;</description>
+    </item>
+    
+    <item>
+      <title>Rogers, iPhone and the dreaded kCFErrorDomainCFNetwork Error 302</title>
+      <link>https://miroadamy.com/posts/2008-08-23-rogers-iphone-and-the-dreaded-kcferrordomaincfnetwork-error-302/</link>
+      <pubDate>Sat, 23 Aug 2008 22:57:15 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-23-rogers-iphone-and-the-dreaded-kcferrordomaincfnetwork-error-302/</guid>
+      <description>Many people recently (including myself) had experiences difficulties with Web access on the iPhone. Quite often the following error message pops up:
+Usually repeating the web page access helps. Sometimes you have to try third time or wait few minutes.
+This has nothing to do with signal strenght - as you can see, there are 4 bars and 3G is on. I saw it happen on Edge as well. Reseting the phone sometimes helps, but it is hard to say whether because of the reset or time delay .</description>
+    </item>
+    
+    <item>
+      <title>iPhone 3G first impressions: Email, Web, Camera, GPS, Data Plan</title>
+      <link>https://miroadamy.com/posts/2008-08-04-iphone-3g-first-impressions-email-web-camera-gps-data-plan/</link>
+      <pubDate>Mon, 04 Aug 2008 23:01:48 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-04-iphone-3g-first-impressions-email-web-camera-gps-data-plan/</guid>
+      <description>continued from here
+Email
+My email information was transferred from Touch as part of the activation process and started to work right away. Very good and functional user interface.
+I also found the mobile Google page (http://www.google.com/m) to be very useful - it adds easy access to small screen optimized versions of the Calendar and Reader. I use Reader a lot, the best feature being that articles I read on ANY device (MBP, Linux desktop, iPhone or even some of the many VM&#39;s I am using)</description>
+    </item>
+    
+    <item>
+      <title>On positives of negative experience</title>
+      <link>https://miroadamy.com/posts/2008-06-30-on-positives-of-negative-experience/</link>
+      <pubDate>Mon, 30 Jun 2008 23:08:41 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-06-30-on-positives-of-negative-experience/</guid>
+      <description>A comment got to me via friend mentioning why am I suddenly so negative about Apple and Macs, which quite surprised me. True, I have had some serious hardware issues in first two weeks of June, but this negative event was about as much positive experience as hard disk crash can be.
+Thinking back what I have learned and discovered from this:
+- Time Machine actually works
+- it pays to plug in the firewire disk with Time Machine backups every day - the two second operation saves a lot of time in long run</description>
+    </item>
+    
+    <item>
+      <title>Macbook Pro arrived</title>
+      <link>https://miroadamy.com/posts/2007-11-06-macbook-pro-arrived/</link>
+      <pubDate>Tue, 06 Nov 2007 23:11:06 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-06-macbook-pro-arrived/</guid>
+      <description>The combination of 17&#34; screen with Leopard&#39;s visual appeal is pure beauty.
+Unlike assumed, the Leopard does NOT (yet) come preinstalled on hard disk. There is a DVD which will install it. I have decided to erase everything and start from scratch. The install took about 45 minutes and had zero problems. The only confusing part was that after erasing harddrive you also erase iLife and need to reinstall it. On the Web site, Apple shows an image of two DVD&#39;s - Leopard and iLife&#39;08.</description>
+    </item>
+    
+    <item>
+      <title>iPod Touch eBooks reader - problem solved</title>
+      <link>https://miroadamy.com/posts/2007-10-18-ipod-touch-ebooks-reader-problem-solved/</link>
+      <pubDate>Thu, 18 Oct 2007 00:31:03 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-18-ipod-touch-ebooks-reader-problem-solved/</guid>
+      <description>As I noticed on Apple Website, the SDK for developing 3rd party applications for iPhone/Touch will be available in February. This solves the biggest problem - offline reading - because with SDK, storing a downloaded copy will be trivial. It also will most likely fix the annoying lack of updatability of calendar and add few more interesting apps.
+It is only matter of time until the other eBook formats will be be readable on iPod - such as CHM or PalmDoc (non-DRM-ed version).</description>
+    </item>
+    
+    <item>
+      <title>iPod touch - finally !</title>
+      <link>https://miroadamy.com/posts/2007-10-12-ipod-touch-finally/</link>
+      <pubDate>Fri, 12 Oct 2007 23:23:42 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-12-ipod-touch-finally/</guid>
+      <description>So, I have finally got it. Only the 8 GB version as the 16 GB were sold out, but I just could not wait for another week :-). After playing with it for about 1.5 hour, I like it even more. The readability of Safari Web sites is excellent - I started to put together some links. Did not try too many sites yet, but the Dzone reads OK :-). Also the PDF book reading is very good - but that is no news.</description>
+    </item>
+    
+    <item>
+      <title>iPod touch - first impressions</title>
+      <link>https://miroadamy.com/posts/2007-10-11-ipod-touch-first-impressions/</link>
+      <pubDate>Thu, 11 Oct 2007 23:51:23 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-11-ipod-touch-first-impressions/</guid>
+      <description>No, I have not bought it yet, to big disappointment of Gabo and Shane - sorry guys. I wanted to buy it but all FutureShop stores in Ottawa are hopelessly sold out and on-line delivery is 7-10 business days - which I hope I will beat if these guys get new shipment (maybe tomorrow ?).
+I played with two demo pieces though for about 30 minutes, and here are the first impressions:</description>
+    </item>
+    
+    <item>
+      <title>Experiment with Sony Reader battery life</title>
+      <link>https://miroadamy.com/posts/2007-09-19-experiment-with-sony-reader-battery-life/</link>
+      <pubDate>Wed, 19 Sep 2007 22:00:42 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-19-experiment-with-sony-reader-battery-life/</guid>
+      <description>After returning from holidays with completely drained PRS 500 (see field test blog entry), I have decided to test what is the battery life of the fully charged reader without any usage at all. It was easy as I was pretty busy after being away 3 weeks.
+The reader was fully charged on 29th of August (24 hrs with wall charger). After that, I did not use it at all, only checked every 2-3 days the status (the reader was switched off except this brief check).</description>
+    </item>
+    
+    <item>
+      <title>Sony eReader - charging problem fixed ?</title>
+      <link>https://miroadamy.com/posts/2007-08-06-sony-ereader-charging-problem-fixed/</link>
+      <pubDate>Mon, 06 Aug 2007 01:32:11 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-08-06-sony-ereader-charging-problem-fixed/</guid>
+      <description>With the latest software update (I am now on 1.0.3), one of the issues to be fixed was the &#34;charging indicator behaviour&#34;. Looks like it was indeed the software bug. After upgrade, the indicator jumped to full 4 bars and stayed there. Beforehand, I had usually only 3 bars regardless how long it was charged.
+Time will tell - I am taking the reader with me to Italy to get some mileage out of it, during transatlantic flight .</description>
+    </item>
+    
+    <item>
+      <title>Strange charging behaviour of Sony Reader</title>
+      <link>https://miroadamy.com/posts/2007-06-04-strange-charging-behaviour-of-sony-reader/</link>
+      <pubDate>Mon, 04 Jun 2007 22:41:12 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-04-strange-charging-behaviour-of-sony-reader/</guid>
+      <description>Despite pretty impressive battery life - which is btw *nowhere* in the range of advertised 7500 page turns - over period of few months I have noted that the charging of the reader behaves kind of funny. Sometimes, even after being plugged-in for 24 hours, the battery indicator stubbornly stays on two squares out of four. Other times, right after connecting, it jumps right to full charge.
+It is hard to really measure these things as the battery depletion is very slow on reading and I do not really listen to music on this device (that&#39;s what iPods are for).</description>
+    </item>
+    
+    <item>
+      <title>Time to leave CVS ?</title>
+      <link>https://miroadamy.com/posts/2007-04-14-time-to-leave-cvs/</link>
+      <pubDate>Sat, 14 Apr 2007 23:49:00 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-14-time-to-leave-cvs/</guid>
+      <description>A friend sent me link two days ago making me aware that Mozilla decided to change the source code control system (= SCCS) they use. When such large and important project as Mozilla moves ahead and changes something so basic and fundamental to development as the SCCS, there must be good reason behind it. What was even more interesting was the system selected: no, it was not Subversion, but something much less established - Mercurial.</description>
+    </item>
+    
+    <item>
+      <title>Sony eBook Reader - software updated</title>
+      <link>https://miroadamy.com/posts/2007-03-21-sony-ebook-reader-software-updated/</link>
+      <pubDate>Wed, 21 Mar 2007 22:28:26 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-21-sony-ebook-reader-software-updated/</guid>
+      <description>After few weeks, I have got back to actually using my PRS500 again and I have finished the books loaded on the device. When I have connected the reader, first the CONNECT software as well as the PRS500 downloaded the updates. The firmware in reader is up to version 1.0.02.0130 from 1.0.00.21081 and should bring longer battery life and stability improvements. It better does, because so far the battery life is nowhere in the proclaimed range of 7000 page turns .</description>
+    </item>
+    
+    <item>
+      <title>Avalon - reloaded ...</title>
+      <link>https://miroadamy.com/posts/2007-03-20-avalon-reloaded/</link>
+      <pubDate>Tue, 20 Mar 2007 22:54:25 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-20-avalon-reloaded/</guid>
+      <description>Now this is something really interesting: as found on Adobe Labs site, their technology codenamed Apollo is approaching Alpha status. What Apollo is - in a nutshell - is another virtual machine, similar to Java runtime or .Net framework, with few minor twists: it is multiplatform (as Java) as well as multi-language (as .Net) at the same time. Before flame wars start - I am aware that JVM is capable (more or less) to support multiple languages beyond Java and also that .</description>
+    </item>
+    
+    <item>
+      <title>NAS Odyssey: Almost there</title>
+      <link>https://miroadamy.com/posts/2007-02-02-nas-odyssey-almost-there/</link>
+      <pubDate>Fri, 02 Feb 2007 19:36:04 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-02-nas-odyssey-almost-there/</guid>
+      <description>As the tittle says, Fedora Core 6 is it. Everything is installed, everything works. The box is very fast, Samba network server is visible on all computers - I have not had time yet to do some tests on access and write speed. I have 930 GB shared space on RAID 5 which is in process of being subdivided into separate shares for video, images, music, and so on.
+Installation was really nice and I was very pleasantly surprised how huge progress did Linux made since 2000 when I last time was really spending some time on it (I was always using Linux as file server and Webserver, but since year 2000 never actually was working in Linux environment).</description>
+    </item>
+    
+    <item>
+      <title>Before you upgrade to Vista, you should read this</title>
+      <link>https://miroadamy.com/posts/2007-01-31-before-you-upgrade-to-vista-you-should-read-this/</link>
+      <pubDate>Wed, 31 Jan 2007 23:10:10 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-31-before-you-upgrade-to-vista-you-should-read-this/</guid>
+      <description>In order to provide HD Video capabilities and to appease content creators, Microsoft went very far in making sure the Vista is not seen as a tool for content piracy. Did they went too far ? What will be the real cost of this contraversial features ?
+Listen (or read) the comments of people that understand the DRM topic better than me and make your own opinion:
+* How and why Windows Vista has incorporated the most pervasive and invasive system for digital rights management ever created, AACS - as MP3 and PDF</description>
+    </item>
+    
+    <item>
+      <title>NAS Odyssey: Fedora Core</title>
+      <link>https://miroadamy.com/posts/2007-01-31-nas-odyssey-fedora-core/</link>
+      <pubDate>Wed, 31 Jan 2007 01:23:08 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-31-nas-odyssey-fedora-core/</guid>
+      <description>As the title says, the Ubuntu is out. Not really because of some technical flaw or missing features (as the FreeNAS, NASLite+ and OpenFiler before), but because of lack of experience and patience on my side. Unlike other distribution which come pre-packed on DVD, Ubuntu installs from a single CD. There are 3 CD variations available: Desktop, which most of the people use and which is likely responsible for Ubuntu fame, Server and Alternative.</description>
+    </item>
+    
+    <item>
+      <title>NAS Odyssey: OpenFiler is out, let&#39;s try Ubuntu</title>
+      <link>https://miroadamy.com/posts/2007-01-30-nas-odyssey-openfiler-is-out-lets-try-ubuntu/</link>
+      <pubDate>Tue, 30 Jan 2007 01:57:20 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-30-nas-odyssey-openfiler-is-out-lets-try-ubuntu/</guid>
+      <description>My love affair with OpenFiler did not last very long. After installation finished, I started browser, pointed to URL I was told by the installer and started to configure. The Web admin was OK, nothing really exciting, but functional. The bad surprise came when I was trying to define users - in order to define volumes later. And here came the screen saying:
+Please note that Openfiler needs a central directory service</description>
+    </item>
+    
+    <item>
+      <title>Joys of the Opensource NAS - Part 2: OpenFiler</title>
+      <link>https://miroadamy.com/posts/2007-01-29-joys-of-the-opensource-nas-part-2-openfiler/</link>
+      <pubDate>Mon, 29 Jan 2007 00:54:31 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-29-joys-of-the-opensource-nas-part-2-openfiler/</guid>
+      <description>After spending most Saturday and Sunday fixing, coding and logging bugs, I finally got to moving ahead. Very likely it is about time, because the NSLU2 keeps producing strange sounds
+The box has now additional IDE 160 GB IDE disk, which will hold Linux installation as well as &#34;temp&#34; share, which will not be RAID-ed. Sort of staging area for the stuff in flux.
+After contemplating for a while which distribution to use - and generally, whether to build more generic Linux server with Samba or more appliance-type box, I went on with trying OpenFiler first.</description>
+    </item>
+    
+    <item>
+      <title>More on Sony Reader</title>
+      <link>https://miroadamy.com/posts/2007-01-27-more-on-sony-reader/</link>
+      <pubDate>Sat, 27 Jan 2007 20:24:16 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-27-more-on-sony-reader/</guid>
+      <description>I have been living with my Sony eReader for almost a month now and managed to read about two full books. If not the time crush in biometric project, I would have probably read much more than just two books - nevertheless, I do have some real life experience with the device.
+First - the claimed battery life of 7500 page turns is BS. I have observed real battery life about 15-20 hours, so unless you manage to turn about 500 pages per hour, it just does not add up.</description>
+    </item>
+    
+    <item>
+      <title>The joys of open source NAS</title>
+      <link>https://miroadamy.com/posts/2007-01-21-the-joys-of-open-source-nas/</link>
+      <pubDate>Sun, 21 Jan 2007 16:19:01 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-21-the-joys-of-open-source-nas/</guid>
+      <description>Well, as it looks like, I was prematurely ecstatic about the new open source based NAS server. While the hardware works great, I had not much luck so far with setting up the software on top of that.
+My original idea was to use FreeNAS, let it boot and install into USB drive and use all 4 SATA disks in RAID 5 set up by BIOS. It did not work. FreeNAS does not see the RAID5 volume created by BIOS and keeps referring to 4 separate SATA drives.</description>
+    </item>
+    
+    <item>
+      <title>Unlike Vista, this user interface *is* something new</title>
+      <link>https://miroadamy.com/posts/2006-12-20-unlike-vista-this-user-interface-is-something-new/</link>
+      <pubDate>Wed, 20 Dec 2006 23:09:25 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-20-unlike-vista-this-user-interface-is-something-new/</guid>
+      <description>Quite seldom I see something on the net that is elegant, beautiful, and simple - so simple that it becomes obvious. Last time I had this feeling was with iPod&#39;s wheel.
+There was lots of excitement about new Vista user interface features. The users who never used / saw OS-X, must love Vista. It is huge improvement over XP - much nicer, cleaner, very good typography, comes very close to Tiger.</description>
+    </item>
+    
+    <item>
+      <title>Ready for a new day (continued)</title>
+      <link>https://miroadamy.com/posts/2006-12-13-ready-for-a-new-day-continued/</link>
+      <pubDate>Wed, 13 Dec 2006 22:05:28 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-13-ready-for-a-new-day-continued/</guid>
+      <description>As I mentioned yesterday, my expectations regarding Office 2007 were fairly low. I am not a big fan of office application suites and for most of my editing I am using either on-line tools (like Google docs or Writeboard) or Open Office. True, neither of them has the smoothness and fine polish of Microsoft Office 2003, neither has all of it&#39;s features, but - let&#39;s face it - I barely use maybe 10-20% of Word or Excel capabilities anyway.</description>
+    </item>
+    
+    <item>
+      <title>Ready for a new day - or Vista-Office-Exchange launch</title>
+      <link>https://miroadamy.com/posts/2006-12-12-ready-for-a-new-day-or-vista-office-exchange-launch/</link>
+      <pubDate>Tue, 12 Dec 2006 23:56:18 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-12-ready-for-a-new-day-or-vista-office-exchange-launch/</guid>
+      <description>Today was a big day in Ottawa Microsoft community. The Congress Centre was hosting large event - simultaneous launch of Windows Vista, Office 2007 and Exchange server 2007. Because I have almost registered about two months ago, I attended the event. The &#34;almost&#34; means that I tried to register right after receiving MSDN Flash email, but many people must have been faster - I was put on waiting list on two of the 3 tracks (Developers and IT Pros) and before I could even try to register for the third track (Business), everything crashed, Web site hang and I have never heard back from them, nor received any email.</description>
+    </item>
+    
+    <item>
+      <title>The problem with hard drives: too large and too cheap</title>
+      <link>https://miroadamy.com/posts/2006-12-05-the-problem-with-hard-drives-too-large-and-too-cheap/</link>
+      <pubDate>Tue, 05 Dec 2006 23:36:51 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-05-the-problem-with-hard-drives-too-large-and-too-cheap/</guid>
+      <description>I have worked through my listening to the Security Now! podcasts up to middle October now (more specifically up to here) and one remark from Steve Gibson forced me to think very hard: how today&#39;s hard drives encounter hundreds of read errors a day (actually Leo said &#34;hundreds a minute&#34;), but thanks to ECC process and dynamic reallocation of sectors, this is invisible to the user, because:
+&#34; .... if a file is damaged because of a bad sector, it can recover that data by recovering the data, either moving it or kind of reformatting the sector underneath it to make it readable again .</description>
+    </item>
+    
+    <item>
+      <title>Security now</title>
+      <link>https://miroadamy.com/posts/2006-12-02-security-now/</link>
+      <pubDate>Sat, 02 Dec 2006 20:38:04 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-02-security-now/</guid>
+      <description>After listening for over week to Security Now! podcast (thanks, Steve, thanks Leo and happy birthday), I&#39;ve decided to actually do something about the security on computers around. I started to scanning my home network using &#34;Shields Up&#34; and was happy to found that the only open port was SSH, exactly as I thought I configured it.
+As next step, I followed the advice from this podcast and used my hosts file to block out ads servers and other internet vermins.</description>
+    </item>
+    
+    <item>
+      <title>Vista security and starting from scratch ...</title>
+      <link>https://miroadamy.com/posts/2006-11-30-vista-security-and-starting-from-scratch/</link>
+      <pubDate>Thu, 30 Nov 2006 22:14:34 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-11-30-vista-security-and-starting-from-scratch/</guid>
+      <description>I have read somewhere that quotation is safe way how to say something potentially dangerous or controversial without being legally exposed :-). So today I am going to quote an authority in computer security - Steve Gibson on some very interesting Vista related security information.
+Steve is doing (together with Leo Laporte) excellent weekly podcast &#34;Security Now!&#34;. It is so great that I have decided to download as many back episodes as I could find on their site and started to listen to them in the chronological order, back from June 2006.</description>
+    </item>
+    
+    <item>
+      <title>R.I.P. V.H.S.</title>
+      <link>https://miroadamy.com/posts/2006-11-23-rip-vhs/</link>
+      <pubDate>Thu, 23 Nov 2006 21:27:58 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-11-23-rip-vhs/</guid>
+      <description>I cannot help it, but it is awkward feeling when something that was part of your life, was so omnipresent is announced to be dead and disappear shortly. Exactly this is happening to video tapes and format VHS specifically. The news has been all around the net day or two ago: studio&#39;s stopped after 30 years production and distribution of the VHS media.
+It does not seem to so many years ago when VHS was and new and struggling to survive against more technically advanced BetaMax (I still remember how great the BetaMax movies looked).</description>
+    </item>
+    
+    <item>
+      <title>New toy</title>
+      <link>https://miroadamy.com/posts/2006-11-18-new-toy/</link>
+      <pubDate>Sat, 18 Nov 2006 21:25:30 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-11-18-new-toy/</guid>
+      <description>Got a new gadget. Actually, not quite &#34;got&#34; - just borrowed from Mike. It the digital pen - amazing piece of machinery, that remembers all you write (up to 40 pages) and allows you to transfer written text to computer. The catch is that you *must* write on special paper, with microscopic marks that help to note the position of the pen.
+I was surprise how successful was the CRC software of making some sense from my cat scratches :-).</description>
+    </item>
+    
+    <item>
+      <title>To upgrade or not to upgrade ?</title>
+      <link>https://miroadamy.com/posts/2006-10-28-to-upgrade-or-not-to-upgrade/</link>
+      <pubDate>Sat, 28 Oct 2006 21:48:10 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-10-28-to-upgrade-or-not-to-upgrade/</guid>
+      <description>It&#39;s official. The Browser version 2 final is out. I mean Firefox, of course - it should be quite obvious what is &#34;the browser&#34; these days. Yes, I know - IE still holds majority of the browser share and yes, Safari is really really nice, fast and good looking application - but let&#39;s face it: browser is not just another application - it is a *platform* these days. Platform means extensibility and extensibility means being a good foundation for add-ons, extensions and plugins.</description>
+    </item>
+    
+    <item>
+      <title>Working On-Line: More to word processors and spreadsheets</title>
+      <link>https://miroadamy.com/posts/2006-09-06-working-on-line-more-to-word-processors-and-spreadsheets/</link>
+      <pubDate>Wed, 06 Sep 2006 22:45:00 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-09-06-working-on-line-more-to-word-processors-and-spreadsheets/</guid>
+      <description>Bruce Byfield has interesting article in Linux.com featuring hands-on comparison of four on-line wordprocessors: specifically ajaxWrite, ThinkFree Online, Writely, and Zoho Writer. I do not 100% agree with all his conclusions, but it&#39;s interesting and worth reading if you are exploring these tools. I am certainly staying with Writely, right now I am using it on daily basis. Combination of WriteRoom for off-line concepts and &#34;thinking phase&#34; of writing and Writely for on-line editing, adding links, etc fits ideally my needs.</description>
+    </item>
+    
+    <item>
+      <title>Harddisks turns 50 on September 13th</title>
+      <link>https://miroadamy.com/posts/2006-09-05-harddisks-turns-50-on-september-13th/</link>
+      <pubDate>Tue, 05 Sep 2006 21:33:19 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-09-05-harddisks-turns-50-on-september-13th/</guid>
+      <description>It is hard to imagine - on September 13th it will be 50 years since IBM introduced the very first hard drive.
+Since that time technology made quite a progress. Compare for yourself:
+1956 - RAMAC drive
+ capacity: 5 Megabytes, built from fifty 24&#34; spinning disks weight: about one ton price: $250&#39;000 / year (lease) price per gigabyte: about fifty million dollars  2006 - typical harddrive
+ capacity: 500 GB weight: &amp;lt; 1kg price: ~ $300 price per gigabyte: about 60 cents  Amazing, isn&#39;t it ?</description>
+    </item>
+    
+    <item>
+      <title>Road to Mac VI: The infection is spreading</title>
+      <link>https://miroadamy.com/posts/2006-08-28-road-to-mac-vi-the-infection-is-spreading/</link>
+      <pubDate>Mon, 28 Aug 2006 20:57:29 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-28-road-to-mac-vi-the-infection-is-spreading/</guid>
+      <description>See also Part I, Part II, Part III, Part IV and Part V
+This Mac thing seems to be quite contagious. Gabo started to seriously considering buying the MacBook, after listening to my happy stories about Great Mac Discoveries. Even Vlad, right now living trough his latest love-affair with Ubuntu Linux was deeply impressed with OS-X after we seeing Expose, Spotlight, PhotoBooth and iPhoto in action.
+Next day, after I arrived to the office in the morning, Gabo was already there.</description>
+    </item>
+    
+    <item>
+      <title>Road to Mac V: Feeling happy</title>
+      <link>https://miroadamy.com/posts/2006-08-26-road-to-mac-v-feeling-happy/</link>
+      <pubDate>Sat, 26 Aug 2006 11:16:10 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-26-road-to-mac-v-feeling-happy/</guid>
+      <description>See also part I, part II and part III and Part IV
+August 13th I have discovered wonderful thing today. I was experimenting with my PocketPC (Toshiba e830) and switched on Bluetooth. Mac discovered the device OK - all I had to do was to follow the wizard Setup Bluetooth device, under Bluetooth menulet (the strange B icon upper right). I have entered the code Mac suggested on PPC and they new about each other.</description>
+    </item>
+    
+    <item>
+      <title>Road to Mac IV: Getting accustomed</title>
+      <link>https://miroadamy.com/posts/2006-08-25-14-road-to-mac-iv/</link>
+      <pubDate>Fri, 25 Aug 2006 22:51:19 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-25-14-road-to-mac-iv/</guid>
+      <description>See also part I, part II and part III
+August 10th That Spotlight thing is just freaking fantastic :-). After few days of work, accumulating some files, emails etc, just for fun I typed Gabo’s last name to Command-Space search box. I did not even finish typing and first results were coming in the result list: all emails exchanged with Gabo, saved chats, text documents and as “best hit” Gabo’s contact card.</description>
+    </item>
+    
+    <item>
+      <title>Road to Mac III: The Culture Shock</title>
+      <link>https://miroadamy.com/posts/2006-08-24-road-to-mac-iii-the-culture-shock/</link>
+      <pubDate>Thu, 24 Aug 2006 21:00:09 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-24-road-to-mac-iii-the-culture-shock/</guid>
+      <description>See also part I and part II
+August 3rd This is my second day with Mac, writing in TextEdit as I have not installed any other editor (yet). Still learning, do not want to install lot of junk before I find out proper ways how to do things. Time to learn how things are in the Brave New World ….
+First surprises and unexpected culture shocks: How do I get around ?</description>
+    </item>
+    
+    <item>
+      <title>Road to Mac II: I&#39;ve got a Macbook !</title>
+      <link>https://miroadamy.com/posts/2006-08-23-road-to-mac-ii-ive-got-a-macbook/</link>
+      <pubDate>Wed, 23 Aug 2006 21:22:13 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-23-road-to-mac-ii-ive-got-a-macbook/</guid>
+      <description>See part I
+July 25th - August 2nd After ordering, I received two emails from Apple, confirming the order. It took 3 days until the order finally got shipped from China (where else, of course) on Friday, July 28th and the estimate for delivery was 5-8 business days. I have received the tracking number and was able to track how my Macbook was moving around the globe: starting from Shizou, China on 28th, arriving to USA, Anchorage, Alaska one day later.</description>
+    </item>
+    
+    <item>
+      <title>List of Mac applications by macgiver</title>
+      <link>https://miroadamy.com/posts/2006-08-23-list-of-mac-applications-by-macgiver/</link>
+      <pubDate>Wed, 23 Aug 2006 21:00:53 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-23-list-of-mac-applications-by-macgiver/</guid>
+      <description>Just stumbled upon this blog and noted at least three things of interest:
+ he has got a new a Mac Pro (I am green with envy :-) ) uses as a nick nice wordplay on MacGyver (this name has special meaning for all us, ex-Montage folks) he started to learn Objective C and Cocoa and blogs about it, I am curious - (not that I plan to give up Java, C# and Python .</description>
     </item>
     
   </channel>

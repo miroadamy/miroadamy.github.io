@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Finding out the class in ATG installation - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Java approach Use the real time search with this JAR - https://jarscan.com/
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  ➜ scripts git:(authoring) ✗ java -jar ~/bin/jarscan.jar ========================= JarScan written by Geoff Yaworski gyaworski@hotmail.com Version 2.0 ========================= Usage: java -jar jarscan.jar [-help | /?] [-dir directory name] [-zip] [-showProgress] &amp;lt;-files | -class | -package&amp;gt; &amp;lt;search string 1&amp;gt; [search string 2] [search string n] Help: -help or /?" /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2014-08-26-find-class/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Finding out the class in ATG installation" />
+<meta property="og:description" content="Java approach Use the real time search with this JAR - https://jarscan.com/
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  ➜ scripts git:(authoring) ✗ java -jar ~/bin/jarscan.jar ========================= JarScan written by Geoff Yaworski gyaworski@hotmail.com Version 2.0 ========================= Usage: java -jar jarscan.jar [-help | /?] [-dir directory name] [-zip] [-showProgress] &lt;-files | -class | -package&gt; &lt;search string 1&gt; [search string 2] [search string n] Help: -help or /?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2014-08-26-find-class/" />
+<meta property="article:published_time" content="2014-08-26T11:22:48+08:00" />
+<meta property="article:modified_time" content="2014-08-26T11:22:48+08:00" />
+<meta itemprop="name" content="Finding out the class in ATG installation">
+<meta itemprop="description" content="Java approach Use the real time search with this JAR - https://jarscan.com/
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  ➜ scripts git:(authoring) ✗ java -jar ~/bin/jarscan.jar ========================= JarScan written by Geoff Yaworski gyaworski@hotmail.com Version 2.0 ========================= Usage: java -jar jarscan.jar [-help | /?] [-dir directory name] [-zip] [-showProgress] &lt;-files | -class | -package&gt; &lt;search string 1&gt; [search string 2] [search string n] Help: -help or /?">
+
+
+<meta itemprop="datePublished" content="2014-08-26T11:22:48&#43;08:00" />
+<meta itemprop="dateModified" content="2014-08-26T11:22:48&#43;08:00" />
+<meta itemprop="wordCount" content="1094">
+
+
+
+<meta itemprop="keywords" content="atg,java,tools," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Finding out the class in ATG installation"/>
+<meta name="twitter:description" content="Java approach Use the real time search with this JAR - https://jarscan.com/
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  ➜ scripts git:(authoring) ✗ java -jar ~/bin/jarscan.jar ========================= JarScan written by Geoff Yaworski gyaworski@hotmail.com Version 2.0 ========================= Usage: java -jar jarscan.jar [-help | /?] [-dir directory name] [-zip] [-showProgress] &lt;-files | -class | -package&gt; &lt;search string 1&gt; [search string 2] [search string n] Help: -help or /?"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Finding out the class in ATG installation</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-08-26 </span>
+        <div class="post-category">
+            <a href="/categories/devops/"> devops </a>
+            </div>
+          <span class="more-meta"> 1094 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#java-approach">Java approach</a></li>
+<li><a href="#unix-way">Unix way</a>
+<ul>
+<li><a href="#unix-way-preloaded">Unix way - preloaded</a>
+<ul>
+<li><a href="#example">Example:</a></li>
+</ul></li>
+<li><a href="#the-script">The script:</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h1 id="java-approach">Java approach</h1>
+
+<p>Use the real time search with this JAR - <a href="https://jarscan.com/">https://jarscan.com/</a></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"><span class="err">➜</span>  <span class="nx">scripts</span> <span class="nx">git</span><span class="p">:(</span><span class="nx">authoring</span><span class="p">)</span> <span class="err">✗</span> <span class="nx">java</span> <span class="o">-</span><span class="nx">jar</span> <span class="err">~</span><span class="o">/</span><span class="nx">bin</span><span class="o">/</span><span class="nx">jarscan</span><span class="p">.</span><span class="nx">jar</span>
+<span class="o">========================</span><span class="p">=</span>
+<span class="nx">JarScan</span>
+<span class="nx">written</span> <span class="nx">by</span> <span class="nx">Geoff</span> <span class="nx">Yaworski</span>
+<span class="nx">gyaworski</span><span class="err">@</span><span class="nx">hotmail</span><span class="p">.</span><span class="nx">com</span>
+<span class="nx">Version</span> <span class="mf">2.0</span>
+<span class="o">========================</span><span class="p">=</span>
+<span class="nx">Usage</span><span class="p">:</span> <span class="nx">java</span> <span class="o">-</span><span class="nx">jar</span> <span class="nx">jarscan</span><span class="p">.</span><span class="nx">jar</span> <span class="p">[</span><span class="o">-</span><span class="nx">help</span> <span class="p">|</span> <span class="o">/</span><span class="err">?</span><span class="p">]</span>
+                    <span class="p">[</span><span class="o">-</span><span class="nx">dir</span> <span class="nx">directory</span> <span class="nx">name</span><span class="p">]</span>
+                    <span class="p">[</span><span class="o">-</span><span class="nx">zip</span><span class="p">]</span>
+                    <span class="p">[</span><span class="o">-</span><span class="nx">showProgress</span><span class="p">]</span>
+                    <span class="o">&lt;-</span><span class="nx">files</span> <span class="p">|</span> <span class="o">-</span><span class="nx">class</span> <span class="p">|</span> <span class="o">-</span><span class="kn">package</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nx">search</span> <span class="kt">string</span> <span class="mi">1</span><span class="p">&gt;</span> <span class="p">[</span><span class="nx">search</span> <span class="kt">string</span> <span class="mi">2</span><span class="p">]</span>
+                    <span class="p">[</span><span class="nx">search</span> <span class="kt">string</span> <span class="nx">n</span><span class="p">]</span>
+<span class="nx">Help</span><span class="p">:</span>
+  <span class="o">-</span><span class="nx">help</span> <span class="nx">or</span> <span class="o">/</span><span class="err">?</span>           <span class="nx">Displays</span> <span class="nx">this</span> <span class="nx">message</span><span class="p">.</span>
+  <span class="o">-</span><span class="nx">dir</span>                  <span class="nx">The</span> <span class="nx">directory</span> <span class="nx">to</span> <span class="nx">start</span> <span class="nx">searching</span>
+                        <span class="nx">from</span> <span class="k">default</span> <span class="nx">is</span> <span class="s">&#34;.&#34;</span>
+  <span class="o">-</span><span class="nx">zip</span>                  <span class="nx">Also</span> <span class="nx">search</span> <span class="nx">Zip</span> <span class="nx">files</span>
+  <span class="o">-</span><span class="nx">showProgress</span>         <span class="nx">Show</span> <span class="nx">a</span> <span class="nx">running</span> <span class="nx">count</span> <span class="nx">of</span> <span class="nx">files</span> <span class="nx">read</span> <span class="nx">in</span>
+  <span class="o">-</span><span class="nx">files</span> <span class="nx">or</span> <span class="o">-</span><span class="nx">class</span>      <span class="nx">Search</span> <span class="k">for</span> <span class="nx">a</span> <span class="nx">file</span> <span class="nx">or</span> <span class="nx">Java</span> <span class="nx">class</span>
+                        <span class="nx">contained</span> <span class="nx">in</span> <span class="nx">some</span> <span class="nx">library</span><span class="p">.</span>
+                        <span class="nx">i</span><span class="p">.</span><span class="nx">e</span><span class="p">.</span> <span class="nx">HttpServlet</span>
+  <span class="o">-</span><span class="kn">package</span>              <span class="nx">Search</span> <span class="k">for</span> <span class="nx">a</span> <span class="nx">Java</span> <span class="kn">package</span>
+                        <span class="nx">contained</span> <span class="nx">in</span> <span class="nx">some</span> <span class="nx">library</span><span class="p">.</span>
+                        <span class="nx">i</span><span class="p">.</span><span class="nx">e</span><span class="p">.</span> <span class="nx">javax</span><span class="p">.</span><span class="nx">servlet</span><span class="p">.</span><span class="nx">http</span>
+  <span class="nx">search</span> <span class="kt">string</span>         <span class="nx">The</span> <span class="nx">file</span> <span class="nx">or</span> <span class="kn">package</span> <span class="nx">to</span>
+                        <span class="nx">search</span> <span class="k">for</span><span class="p">.</span>
+                        <span class="nx">i</span><span class="p">.</span><span class="nx">e</span><span class="p">.</span> <span class="nx">see</span> <span class="nx">examples</span> <span class="nx">above</span></pre></td></tr></table>
+</div>
+</div>
+<p>example</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">=========================
+JarScan
+written by Geoff Yaworski
+gyaworski@hotmail.com
+Version 2.0
+=========================
+  
+Will start search from: /Users/miro/ATG/ATG11.0/DAS
+  
+Looking for class(es): [atg.nucleus.NucleusBeanInfo]
+  
+Processed 196 directories containing 895 files
+found 115 libraries under the directory: /Users/miro/ATG/ATG11.0/DAS
+  
+1) batchconfig.jar [/Users/miro/ATG/ATG11.0/DAS/config/batchconfig.jar]
+2) config.jar [/Users/miro/ATG/ATG11.0/DAS/config/config.jar]
+3) dtmconfig.jar [/Users/miro/ATG/ATG11.0/DAS/config/dtmconfig.jar]
+4) jspbatchconfig.jar [/Users/miro/ATG/ATG11.0/DAS/config/jspbatchconfig.jar]
+5) oca-ldap.jar [/Users/miro/ATG/ATG11.0/DAS/config/oca-ldap.jar]
+6) config.jar [/Users/miro/ATG/ATG11.0/DAS/configlayers/md5/config.jar]
+7) das_ui_help.jar [/Users/miro/ATG/ATG11.0/DAS/help/das_ui_help.jar]
+8) ldap.jar [/Users/miro/ATG/ATG11.0/DAS/LDAP/lib/ldap.jar]
+9) atg-coherence-classes.jar [/Users/miro/ATG/ATG11.0/DAS/lib/atg-coherence-classes.jar]
+10) atg-jaxb-invoker.jar [/Users/miro/ATG/ATG11.0/DAS/lib/atg-jaxb-invoker.jar]
+11) axis-1.4.jar [/Users/miro/ATG/ATG11.0/DAS/lib/axis-1.4.jar]
+12) bundle-support-standard-1.1.2.jar [/Users/miro/ATG/ATG11.0/DAS/lib/bundle-support-standard-1.1.2.jar]
+13) cglib-nodep-2.1_3.jar [/Users/miro/ATG/ATG11.0/DAS/lib/cglib-nodep-2.1_3.jar]
+14) classes.jar [/Users/miro/ATG/ATG11.0/DAS/lib/classes.jar]
+15) coherence.jar [/Users/miro/ATG/ATG11.0/DAS/lib/coherence.jar]
+16) commons-codec-1.3.jar [/Users/miro/ATG/ATG11.0/DAS/lib/commons-codec-1.3.jar]
+17) commons-discovery-0.2.jar [/Users/miro/ATG/ATG11.0/DAS/lib/commons-discovery-0.2.jar]
+18) commons-logging-1.1.1.jar [/Users/miro/ATG/ATG11.0/DAS/lib/commons-logging-1.1.1.jar]
+19) ehcache-core-2.3.2.jar [/Users/miro/ATG/ATG11.0/DAS/lib/ehcache-core-2.3.2.jar]
+20) filedist.jar [/Users/miro/ATG/ATG11.0/DAS/lib/filedist.jar]
+21) groovy-all-1.7.2.jar [/Users/miro/ATG/ATG11.0/DAS/lib/groovy-all-1.7.2.jar]
+22) hibernate-validator-4.3.1.Final.jar [/Users/miro/ATG/ATG11.0/DAS/lib/hibernate-validator-4.3.1.Final.jar]
+23) httpclient-4.2.5.jar [/Users/miro/ATG/ATG11.0/DAS/lib/httpclient-4.2.5.jar]
+24) httpcore-4.2.4.jar [/Users/miro/ATG/ATG11.0/DAS/lib/httpcore-4.2.4.jar]
+25) ice.jar [/Users/miro/ATG/ATG11.0/DAS/lib/ice.jar]
+26) jaxb-impl104.jar [/Users/miro/ATG/ATG11.0/DAS/lib/jaxb-impl104.jar]
+27) jaxb-libs104.jar [/Users/miro/ATG/ATG11.0/DAS/lib/jaxb-libs104.jar]
+28) jboss-logging-3.1.2.GA.jar [/Users/miro/ATG/ATG11.0/DAS/lib/jboss-logging-3.1.2.GA.jar]
+29) jline-0.9.94.jar [/Users/miro/ATG/ATG11.0/DAS/lib/jline-0.9.94.jar]
+30) jmdns-20.jar [/Users/miro/ATG/ATG11.0/DAS/lib/jmdns-20.jar]
+31) joda-time-2.2.jar [/Users/miro/ATG/ATG11.0/DAS/lib/joda-time-2.2.jar]
+32) jsp-api.jar [/Users/miro/ATG/ATG11.0/DAS/lib/jsp-api.jar]
+33) juel-impl-2.2.5.jar [/Users/miro/ATG/ATG11.0/DAS/lib/juel-impl-2.2.5.jar]
+34) jxl-2.6.6.jar [/Users/miro/ATG/ATG11.0/DAS/lib/jxl-2.6.6.jar]
+35) min-ejb3-api.jar [/Users/miro/ATG/ATG11.0/DAS/lib/min-ejb3-api.jar]
+36) mysql-connector-java-5.1.15-bin.jar [/Users/miro/ATG/ATG11.0/DAS/lib/mysql-connector-java-5.1.15-bin.jar]
+37) asn1c.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/asn1c.jar]
+38) glassfish.jaxb.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/glassfish.jaxb.jar]
+39) javax.persistence.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/javax.persistence.jar]
+40) dms.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.dms_11.1.1/dms.jar]
+41) fmw_audit.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.iau_11.1.1/fmw_audit.jar]
+42) identitystore.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.idm_11.1.1/identitystore.jar]
+43) identityutils.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.idm_11.1.1/identityutils.jar]
+44) arisId-stack-ovd.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.igf_11.1.1/arisId-stack-ovd.jar]
+45) identitydirectory.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.igf_11.1.1/identitydirectory.jar]
+46) igf_mbeans.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.igf_11.1.1/igf_mbeans.jar]
+47) ojdbc6dms.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jdbc_11.1.1/ojdbc6dms.jar]
+48) jacc-spi.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jacc-spi.jar]
+49) jps-api.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-api.jar]
+50) jps-audit.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-audit.jar]
+51) jps-az-api.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-az-api.jar]
+52) jps-az-common.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-az-common.jar]
+53) jps-az-management.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-az-management.jar]
+54) jps-az-rt.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-az-rt.jar]
+55) jps-az-sspi.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-az-sspi.jar]
+56) jps-common.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-common.jar]
+57) jps-ee.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-ee.jar]
+58) jps-internal.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-internal.jar]
+59) jps-jboss-deployer.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-jboss-deployer.jar]
+60) jps-jboss.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-jboss.jar]
+61) jps-pep.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-pep.jar]
+62) jps-platform.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-platform.jar]
+63) jps-se.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-se.jar]
+64) jps-tomcat.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-tomcat.jar]
+65) jps-unsupported-api.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-unsupported-api.jar]
+66) jps-was.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-was.jar]
+67) jps-wls-trustprovider.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-wls-trustprovider.jar]
+68) jps-wls.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/jps-wls.jar]
+69) oracle.security.jps.was.deployment.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.jps_11.1.1/oracle.security.jps.was.deployment.jar]
+70) ldapjclnt11.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.ldap_11.1.1/ldapjclnt11.jar]
+71) orai18n-service.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.nlsgdk_11.1.0/orai18n-service.jar]
+72) ojdl.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.odl_11.1.1/ojdl.jar]
+73) osdt_cert.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.osdt_11.1.1/osdt_cert.jar]
+74) osdt_core.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.osdt_11.1.1/osdt_core.jar]
+75) osdt_restsec.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.osdt_11.1.1/osdt_restsec.jar]
+76) osdt_saml.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.osdt_11.1.1/osdt_saml.jar]
+77) osdt_saml2.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.osdt_11.1.1/osdt_saml2.jar]
+78) osdt_ws_sx.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.osdt_11.1.1/osdt_ws_sx.jar]
+79) osdt_wss.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.osdt_11.1.1/osdt_wss.jar]
+80) osdt_xmlsec.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.osdt_11.1.1/osdt_xmlsec.jar]
+81) config.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.ovd_11.1.1/config.jar]
+82) ovd.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.ovd_11.1.1/ovd.jar]
+83) plugins.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.ovd_11.1.1/plugins.jar]
+84) oraclepki.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.pki_11.1.1/oraclepki.jar]
+85) eclipselink.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.toplink_11.1.1/eclipselink.jar]
+86) xmlparserv2_sans_jaxp_services.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/oracle.xdk_11.1.0/xmlparserv2_sans_jaxp_services.jar]
+87) org.apache.neethi-2.0.4.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/org.apache.neethi-2.0.4.jar]
+88) org.dom4j_1.6.1.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/org.dom4j_1.6.1.jar]
+89) org.openliberty.arisId_1.1.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/org.openliberty.arisId_1.1.jar]
+90) org.openliberty.arisIdBeans_1.1.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/org.openliberty.arisIdBeans_1.1.jar]
+91) org.openliberty.openaz.azapi_1.1.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opss/modules/org.openliberty.openaz.azapi_1.1.jar]
+92) opssclassloader.jar [/Users/miro/ATG/ATG11.0/DAS/lib/opssclassloader.jar]
+93) orawsdl.jar [/Users/miro/ATG/ATG11.0/DAS/lib/orawsdl.jar]
+94) protocol.jar [/Users/miro/ATG/ATG11.0/DAS/lib/protocol.jar]
+95) resources.jar [/Users/miro/ATG/ATG11.0/DAS/lib/resources.jar]
+96) servlet.jar [/Users/miro/ATG/ATG11.0/DAS/lib/servlet.jar]
+97) slf4j-api-1.5.11.jar [/Users/miro/ATG/ATG11.0/DAS/lib/slf4j-api-1.5.11.jar]
+98) slf4j-jdk14-1.5.11.jar [/Users/miro/ATG/ATG11.0/DAS/lib/slf4j-jdk14-1.5.11.jar]
+99) spring-aop-1.2-rc1.jar [/Users/miro/ATG/ATG11.0/DAS/lib/spring-aop-1.2-rc1.jar]
+100) subclassloader.jar [/Users/miro/ATG/ATG11.0/DAS/lib/subclassloader.jar]
+101) tangosol.jar [/Users/miro/ATG/ATG11.0/DAS/lib/tangosol.jar]
+102) validation-api-1.0.0.GA.jar [/Users/miro/ATG/ATG11.0/DAS/lib/validation-api-1.0.0.GA.jar]
+103) coreTaglib1_0.jar [/Users/miro/ATG/ATG11.0/DAS/taglib/coreTaglib/1.0/lib/coreTaglib1_0.jar]
+104) dspjspTaglib1_0.jar [/Users/miro/ATG/ATG11.0/DAS/taglib/dspjspTaglib/1.0/lib/dspjspTaglib1_0.jar]
+105) json-taglib-0.4.jar [/Users/miro/ATG/ATG11.0/DAS/taglib/json/0.4/lib/json-taglib-0.4.jar]
+106) jaxen-full.jar [/Users/miro/ATG/ATG11.0/DAS/taglib/jstl/1.0/lib/jaxen-full.jar]
+107) jstl.jar [/Users/miro/ATG/ATG11.0/DAS/taglib/jstl/1.0/lib/jstl.jar]
+108) saxpath.jar [/Users/miro/ATG/ATG11.0/DAS/taglib/jstl/1.0/lib/saxpath.jar]
+109) standard.jar [/Users/miro/ATG/ATG11.0/DAS/taglib/jstl/1.0/lib/standard.jar]
+110) jstl.jar [/Users/miro/ATG/ATG11.0/DAS/taglib/jstl/1.1/lib/jstl.jar]
+111) standard.jar [/Users/miro/ATG/ATG11.0/DAS/taglib/jstl/1.1/lib/standard.jar]
+112) jstl-1.2.jar [/Users/miro/ATG/ATG11.0/DAS/taglib/jstl/1.2/lib/jstl-1.2.jar]
+113) config.jar [/Users/miro/ATG/ATG11.0/DAS/Versioned/config/config.jar]
+114) config.jar [/Users/miro/ATG/ATG11.0/DAS/Versioned/configlayers/stagingandprod/config.jar]
+115) config.jar [/Users/miro/ATG/ATG11.0/DAS/Versioned/liveconfig/config.jar]
+  
+searching these jarfiles now ....
+  
+===============================================
+Found: atg.nucleus.NucleusBeanInfo
+Class: atg.nucleus.NucleusBeanInfo
+Package: atg.nucleus
+Library Name: classes.jar
+Library Path: /Users/miro/ATG/ATG11.0/DAS/lib/classes.jar
+===============================================
+  
+Search took: 162 milliseconds.</pre></td></tr></table>
+</div>
+</div>
+<h1 id="unix-way">Unix way</h1>
+
+<p>real time search - quick and dirty</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nv">pattern</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nb">shift</span>
+<span class="k">for</span> jar in <span class="k">$(</span>find <span class="nv">$*</span> -type f -name <span class="s2">&#34;*.jar&#34;</span><span class="k">)</span>
+<span class="k">do</span>
+  <span class="c1"># echo Checking: $jar</span>
+  <span class="nv">match</span><span class="o">=</span><span class="sb">`</span>jar -tvf <span class="nv">$jar</span> <span class="p">|</span> grep <span class="nv">$pattern</span><span class="sb">`</span>
+  <span class="k">if</span> <span class="o">[</span> ! -z <span class="s2">&#34;</span><span class="nv">$match</span><span class="s2">&#34;</span> <span class="o">]</span>
+  <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&#34;Found in: </span><span class="nv">$jar</span><span class="s2">&#34;</span>
+    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$match</span><span class="s2">&#34;</span>
+  <span class="k">fi</span>
+<span class="k">done</span></pre></td></tr></table>
+</div>
+</div>
+<h2 id="unix-way-preloaded">Unix way - preloaded</h2>
+
+<p>The following script creates text file with map KEY=value, where KEY is name of the JAR file (relative to root == argument1) and VALUE is the classname.</p>
+
+<h3 id="example">Example:</h3>
+
+<p>the script run as</p>
+
+<blockquote>
+<p>./atgTool.sh $ATG_ROOT/DAS list</p>
+</blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">config/config.jar=atg.webservice.security.NucleusSecurityManager.properties
+config/config.jar=atg.webservice.security.NucleusSecurityRepository.properties
+config/config.jar=atg.webservice.security.RegisteredUsersOnly.properties
+config/config.jar=atg.webservice.security.nucleusSecurity.xml
+config/dtmconfig.jar=META-INF.MANIFEST.MF
+config/dtmconfig.jar=atg.dynamo.transaction.TransactionManager.properties
+config/jspbatchconfig.jar=META-INF.MANIFEST.MF
+config/jspbatchconfig.jar=Initial.properties
+config/jspbatchconfig.jar=Nucleus.properties
+config/jspbatchconfig.jar=atg.dynamo.service.j2ee.ConnectorContainer.properties
+config/jspbatchconfig.jar=atg.dynamo.service.j2ee.EJBContainer.properties
+config/jspbatchconfig.jar=atg.dynamo.service.j2ee.J2EEContainer.properties
+config/jspbatchconfig.jar=atg.dynamo.service.j2ee.WebContainer.properties
+config/oca-ldap.jar=META-INF.MANIFEST.MF
+config/oca-ldap.jar=CONFIG.properties
+config/oca-ldap.jar=atg.adapter.ldap.InitialContextEnvironment.properties
+config/oca-ldap.jar=atg.adapter.ldap.InitialContextPool.properties
+config/oca-ldap.jar=atg.adapter.ldap.LDAPItemCache.properties
+config/oca-ldap.jar=atg.adapter.ldap.LDAPItemCacheAdapter.properties
+config/oca-ldap.jar=atg.adapter.ldap.LDAPQueryCache.properties
+config/oca-ldap.jar=atg.adapter.ldap.LDAPQueryCacheAdapter.properties
+config/oca-ldap.jar=atg.adapter.ldap.LDAPRepository.properties
+config/oca-ldap.jar=atg.adapter.ldap.NDSPasswordHasher.properties
+config/oca-ldap.jar=atg.adapter.ldap.ldapUserProfile.xml
+configlayers/md5/config.jar=META-INF.MANIFEST.MF
+configlayers/md5/config.jar=atg.dynamo.security.AdminAccountManager.properties
+configlayers/md5/config.jar=atg.dynamo.security.AdminUserAuthority.properties
+configlayers/md5/config.jar=atg.dynamo.security.passwordchecker.AdminPasswordRuleChecker.properties
+configlayers/md5/config.jar=atg.dynamo.security.passwordchecker.ExpiredPasswordAdminService.properties
+help/das_ui_help.jar=META-INF.MANIFEST.MF
+help/das_ui_help.jar=about.html</pre></td></tr></table>
+</div>
+</div>
+<h2 id="the-script">The script:</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nv">atg</span><span class="o">=</span><span class="nv">$1</span>
+<span class="nv">action</span><span class="o">=</span><span class="nv">$2</span>
+<span class="nv">usage</span><span class="o">=</span><span class="s2">&#34;Usage: </span><span class="nv">$0</span><span class="s2"> ATG_ROOT (list|expand)&#34;</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;x</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;x&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> <span class="s2">&#34;x</span><span class="nv">$2</span><span class="s2">&#34;</span> <span class="o">==</span>  <span class="s2">&#34;x&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+   <span class="nb">echo</span> <span class="nv">$usage</span>
+   <span class="nb">exit</span> <span class="m">1</span>
+<span class="k">fi</span>
+<span class="nb">echo</span> Got <span class="nv">ATG</span><span class="o">=</span><span class="nv">$atg</span>, <span class="nv">action</span><span class="o">=</span><span class="nv">$action</span>
+<span class="c1"># All jars except of archived cache and taglibs which is everywhere</span>
+<span class="nv">alljars</span><span class="o">=</span><span class="sb">`</span>find <span class="nv">$atg</span> -name <span class="s1">&#39;*.jar&#39;</span> <span class="p">|</span> grep -v archive-cache <span class="p">|</span> grep -v dspjspTaglib1_0.jar<span class="sb">`</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;list&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="nv">out_all_classes</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$atg</span> <span class="p">|</span> sed <span class="s1">&#39;s,/,_,g&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/^_//&#39;</span><span class="sb">`</span>.txt
+<span class="nb">echo</span> Creating list of classes into:<span class="nv">$out_all_classes</span>
+<span class="nb">echo</span> Got <span class="sb">`</span><span class="nb">echo</span> <span class="nv">$alljars</span> <span class="p">|</span> wc -w<span class="sb">`</span> jars
+<span class="k">for</span> jar in <span class="nv">$alljars</span><span class="p">;</span> <span class="k">do</span>
+    <span class="nv">archivename</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$jar</span> <span class="p">|</span> sed <span class="s2">&#34;s,^</span><span class="nv">$atg</span><span class="s2">/,,g&#34;</span><span class="sb">`</span>
+    <span class="nb">echo</span> Processing <span class="nv">$jar</span> <span class="o">=</span> <span class="nv">$archivename</span>
+    <span class="nv">classes</span><span class="o">=</span><span class="sb">`</span>jar -tf <span class="nv">$jar</span>  <span class="p">|</span> grep -v <span class="s2">&#34;.*/</span>$<span class="s2">&#34;</span> <span class="p">|</span> sed <span class="s1">&#39;s,/,.,g&#39;</span><span class="sb">`</span>
+    <span class="k">for</span> cls in <span class="nv">$classes</span><span class="p">;</span> <span class="k">do</span>
+        <span class="nb">echo</span> <span class="nv">$archivename</span><span class="o">=</span><span class="nv">$cls</span>  &gt;&gt;<span class="nv">$out_all_classes</span>
+    <span class="k">done</span>
+<span class="k">done</span>
+<span class="nb">exit</span> <span class="m">0</span>
+<span class="k">fi</span> <span class="c1"># list</span>
+<span class="c1"># This will explode all jar archives</span>
+<span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$2</span><span class="s2">&#34;</span> <span class="o">==</span> <span class="s2">&#34;expand&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+<span class="nv">out_all_classes_base</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$atg</span> <span class="p">|</span> sed <span class="s1">&#39;s,/,_,g&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/^_//&#39;</span><span class="sb">`</span>
+<span class="nb">echo</span> Creating list of classes into:<span class="nv">$out_all_classes_base</span>
+mkdir -p <span class="s2">&#34;./</span><span class="nv">$out_all_classes_base</span><span class="s2">&#34;</span>
+<span class="k">for</span> jar in <span class="nv">$alljars</span><span class="p">;</span> <span class="k">do</span>
+    <span class="nv">archivename</span><span class="o">=</span><span class="sb">`</span><span class="nb">echo</span> <span class="nv">$jar</span> <span class="p">|</span> sed <span class="s2">&#34;s,^</span><span class="nv">$atg</span><span class="s2">/,,g&#34;</span> <span class="p">|</span> sed <span class="s2">&#34;s,/,_,g&#34;</span> <span class="p">|</span> sed <span class="s1">&#39;s,\.,-,g&#39;</span><span class="sb">`</span>
+    <span class="nb">echo</span> Processing <span class="nv">$jar</span> <span class="o">=</span> <span class="nv">$archivename</span>
+    mkdir -p <span class="s2">&#34;./</span><span class="nv">$out_all_classes_base</span><span class="s2">/</span><span class="nv">$archivename</span><span class="s2">&#34;</span>
+    unzip <span class="nv">$jar</span> -d <span class="s2">&#34;./</span><span class="nv">$out_all_classes_base</span><span class="s2">/</span><span class="nv">$archivename</span><span class="s2">&#34;</span>
+<span class="k">done</span>
+<span class="nb">exit</span> <span class="m">0</span>
+<span class="k">fi</span>
+<span class="nb">echo</span> <span class="s2">&#34;Invalid action: </span><span class="nv">$2</span><span class="s2">&#34;</span>
+<span class="nb">echo</span> <span class="nv">$usage</span>
+<span class="nb">exit</span> <span class="m">1</span></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2014-08-26
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/atg/">atg</a>
+          <a href="/tags/java/">java</a>
+          <a href="/tags/tools/">tools</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2014-08-27-es1/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Elastic search and Kibana - getting started</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2014-08-22-jekyll-clean-theme/">
+            <span class="next-text nav-default">Third time is a charm</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

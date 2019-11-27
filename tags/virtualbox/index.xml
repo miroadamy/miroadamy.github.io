@@ -6,10 +6,23 @@
     <description>Recent content in virtualbox on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Mar 2014 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Sep 2014 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to access shared folder in Linux guest in VirtualBox</title>
+      <link>https://miroadamy.com/posts/2014-09-23-shared-folder/</link>
+      <pubDate>Tue, 23 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-23-shared-folder/</guid>
+      <description>Make sure the VBOx extensions are installed.
+Go here for details:
+Add share In VirtualBox, Device add transient shared folder:
+This one has made available path /Users/Shared/ATG-11 under the name ATG-11
+Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x.</description>
+    </item>
     
     <item>
       <title>Installation of sshfs in the new VM</title>
@@ -67,17 +80,6 @@ insert
       <description>Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.
 Inspiration for the setup came from https://www.youtube.com/watch?feature=player_embedded&amp;amp;v=cPt_1Vga-Nk
 Motivation - issues with VMs VMs are great - they allow &amp;ldquo;packaged&amp;rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business.</description>
-    </item>
-    
-    <item>
-      <title>Miro Manifesto</title>
-      <link>https://miroadamy.com/posts/2012-02-15-miro-manifesto/</link>
-      <pubDate>Wed, 15 Feb 2012 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2012-02-15-miro-manifesto/</guid>
-      <description>Miro Manifesto Original text of the memo, written in February 2012 and shared with limited audience, until it surfaced up as main them of the planning meeting in December 2012.
-This is an attempt to come up with better answers to the following questions:
- what issues and challenges I see on our way ahead from the technology point of view and what needs to be done to address them where do I see my professional and personal career go over next 12 to 18 months and in long run how to best align those two streams  In the spirit of my latest “back to the basics” obsession, it was written in Markdown format and in Vi, copied and pasted into Google Doc, btw.</description>
     </item>
     
   </channel>

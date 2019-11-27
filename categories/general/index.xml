@@ -6,10 +6,22 @@
     <description>Recent content in general on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 20 Nov 2019 23:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 22 Nov 2019 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/categories/general/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Current Hugo setup on Github Pages</title>
+      <link>https://miroadamy.com/posts/2019-11-22-hugo-setup/</link>
+      <pubDate>Fri, 22 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-22-hugo-setup/</guid>
+      <description>How does the blog setup and publishing work Before I forget, here is how the current configuration works.
+There are two repositories at play:
+ source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io  The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
+The Githup pages repo contains generated static site, with index.</description>
+    </item>
     
     <item>
       <title>From Jekyll to Hugo</title>
@@ -31,6 +43,1472 @@
 It is uncertain how good is all this - but as they say:
  &amp;ldquo;If you cannot do something right, learn to enjoy doing it poorly&amp;rdquo;
  </description>
+    </item>
+    
+    <item>
+      <title>Third time is a charm</title>
+      <link>https://miroadamy.com/posts/2014-08-22-jekyll-clean-theme/</link>
+      <pubDate>Fri, 22 Aug 2014 16:25:06 -0700</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-08-22-jekyll-clean-theme/</guid>
+      <description>As part of &amp;ldquo;back to basics&amp;rdquo; software minimalism movement, I have exported the old Wordpress blog and loaded it into Jekyll with intention to publish it on my Github
+This contains almost 10 years worth of history of my posts, plus few not yet previously unpublished posts.
+It is based on Jekyll Clean theme, created by Scott Emmons - see it / get it from github.
+If you are interested in the Jekyll Clean theme:</description>
+    </item>
+    
+    <item>
+      <title>Miro&#39;s World 2.0</title>
+      <link>https://miroadamy.com/posts/2013-12-31-httpsgithub-comradegastmiroadamy-dot-comwiki/</link>
+      <pubDate>Tue, 31 Dec 2013 00:54:46 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-12-31-httpsgithub-comradegastmiroadamy-dot-comwiki/</guid>
+      <description>The continuation of the old Wordpress blog with more agreeable tools: Github Wiki + Gollum, Markdown and Git.
+My old blog at Miro&amp;rsquo;s World has been kinda neglected in last two years. I have written several entries and published them only internally. I have decided now to pull those of the entries that do not contain customer references, code or customer IP out.</description>
+    </item>
+    
+    <item>
+      <title>Google&#43; is superset of both Facebook and Twitter</title>
+      <link>https://miroadamy.com/posts/2011-07-11-google-is-superset-of-both-facebook-and-twitter/</link>
+      <pubDate>Mon, 11 Jul 2011 22:49:41 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2011-07-11-google-is-superset-of-both-facebook-and-twitter/</guid>
+      <description>It may be too early to express opinions about something so new as Google+, but in the short few days I was playing with it, I started to like it a lot. Many bloggers consider it to be a Facebook killer - and it (unlike two previous Google attempts on social networking) eventually may become that. Conceptually, however it is much closer to Twitter than Facebook.
+The biggest difference is that in G+ there is no peer relation - &#34;</description>
+    </item>
+    
+    <item>
+      <title>Unintended coincidence</title>
+      <link>https://miroadamy.com/posts/2010-01-24-unintended-coincidence/</link>
+      <pubDate>Sun, 24 Jan 2010 10:50:14 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2010-01-24-unintended-coincidence/</guid>
+      <description>To be fair, the book is to appear in March 2010, so most likely the cover image is not ready yet. But I found lack of images for book whose main point is to make explanation illustrated quite ironical :-).</description>
+    </item>
+    
+    <item>
+      <title>Attention is new currency</title>
+      <link>https://miroadamy.com/posts/2010-01-05-attention-is-new-currency/</link>
+      <pubDate>Tue, 05 Jan 2010 01:02:09 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2010-01-05-attention-is-new-currency/</guid>
+      <description>Some companies just do not get it.
+It starts with an email, like this one:
+
+By coincidence, you are on project that has the CRM component so you decide to check it out and click on link. After all, it is free, right, so why wouldn&#39;t you ?
+The catch is that it is not free at all. Without realizing it, you have already made your first payment, by doing the sender a favor: as we know, clicking on a link in email is definitely not a good idea and recommended behaviour, unless you know the sender and trust the sender.</description>
+    </item>
+    
+    <item>
+      <title>Here we go again</title>
+      <link>https://miroadamy.com/posts/2009-12-30-blog-reloade/</link>
+      <pubDate>Wed, 30 Dec 2009 12:56:40 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-12-30-blog-reloade/</guid>
+      <description>This is reloaded version of my previous blog - or continuation of the fork.
+First thing to start is to explain why did I do something quite contra-productive as relocate the blog and loose all the audience - however small it could have been.
+It would seem that I like restarts and things reloaded. I did pick a new country to become new home for me and my family (if emigration is not a restart, what else is ?</description>
+    </item>
+    
+    <item>
+      <title>Book recommendation: Outliers by Malcolm Caldwell</title>
+      <link>https://miroadamy.com/posts/2009-05-20-book-recommendation-outliers-by-malcolm-caldwell/</link>
+      <pubDate>Wed, 20 May 2009 22:24:39 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-05-20-book-recommendation-outliers-by-malcolm-caldwell/</guid>
+      <description>From the author that wrote Tipping point (on my reading list) as well as Blink - which I listened to but found rather controversial. I was very curious what will this one be about.
+The book is about success and people that managed to achieve extraordinary results. It touches several topics, I will pick three of them that I found most interesting. It starts with interesting observation - if you look at the MONTH of the birth of junior NHL hockey players, you&#39;ll discover that over 50% of them was born between January and April.</description>
+    </item>
+    
+    <item>
+      <title>Lost in the social networks</title>
+      <link>https://miroadamy.com/posts/2009-05-17-lost-in-the-social-networks/</link>
+      <pubDate>Sun, 17 May 2009 23:09:35 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-05-17-lost-in-the-social-networks/</guid>
+      <description>This is public answer to all who were asking why is my blog so badly neglected. Short answer is: It is because I am pretty active elsewhere and did not really find any additional time to allocate. If you are busy person, now you know, see ya later. If you are curious what elsewhere means, read on.
+Last year and before, blogosphere and this blog was *only* part of the social networking space I was paying attention to.</description>
+    </item>
+    
+    <item>
+      <title>The myth of premium hardware or why Ottawa needs Apple Store</title>
+      <link>https://miroadamy.com/posts/2009-02-23-the-myth-of-premium-hardware-or-why-ottawa-needs-apple-store/</link>
+      <pubDate>Mon, 23 Feb 2009 23:46:44 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-02-23-the-myth-of-premium-hardware-or-why-ottawa-needs-apple-store/</guid>
+      <description>Back in November 2007, when I was buying Macbook Pro, I did order the AppleCare option, which added several hundred dollars to already pretty expensive notebook price. For moment I was tempted to go without it - after all, Apple makes top grade, high quality hardware and considering pretty low failure rate I have seen with my Windows based notebooks between 1998-2006, why to pay more ? Little did I know how much mileage will I get from the extra cost :-(.</description>
+    </item>
+    
+    <item>
+      <title>Weird Rogers 3G network error - fixed ?</title>
+      <link>https://miroadamy.com/posts/2009-01-02-weird-rogers-3g-network-error-fixed/</link>
+      <pubDate>Fri, 02 Jan 2009 11:34:20 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-01-02-weird-rogers-3g-network-error-fixed/</guid>
+      <description>Just tried out to switch the iPhone to automatic Date and Time setting with 3G on. The time jumped from 11:31 to 11:30 (my iPhone was about 1 minute too fast) and STAYED THERE.
+This could mean that the issue is finally fixed. Can anybody confirm that ?</description>
+    </item>
+    
+    <item>
+      <title>Weird Rogers 3G network error</title>
+      <link>https://miroadamy.com/posts/2008-12-16-weird-rogers-3g-network-error/</link>
+      <pubDate>Tue, 16 Dec 2008 14:19:51 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-12-16-weird-rogers-3g-network-error/</guid>
+      <description>Since about Sunday, Dec 7th (I remember exactly because I noticed it when leaving the regular ByMUG meeting at Patty Bolands) my iPhone for no particular reason decided to translocate itself to GMT+1 time zone. It was not visible immediately, only emails received at 16:20 were shown as received 6 hour in the future.
+All this without any changes or installing anything on my end ...
+The Clock application showed what was wrong (this snapshot was taken on Sunday, 16:02 Ottawa time):</description>
+    </item>
+    
+    <item>
+      <title>Chapters goes Mac</title>
+      <link>https://miroadamy.com/posts/2008-12-01-chapters-goes-mac/</link>
+      <pubDate>Mon, 01 Dec 2008 23:22:48 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-12-01-chapters-goes-mac/</guid>
+      <description>I have noticed few of this beauties in Kanata Chapters. Nice replacement for the beaten up CRT terminals that used to be around. They somehow looked right and familiar from the distance.
+
+Beautiful screen, with touch capability.
+Nice presentation and user interface.
+
+The keyboard with unique personality.
+And after looking closer, it was very obvious why:
+
+Proper keyboard simply must have Command key ;-)
+PS:I am sorry for bad quality of pictures - iPhone camera under bad light conditions.</description>
+    </item>
+    
+    <item>
+      <title>About time to break the silence</title>
+      <link>https://miroadamy.com/posts/2008-11-16-about-time-to-break-the-silence/</link>
+      <pubDate>Sun, 16 Nov 2008 00:32:03 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-11-16-about-time-to-break-the-silence/</guid>
+      <description>Several people asked what is going on with me: no blog posts for almost a month, litlle presence on Gtalk / MSN. It is simpler to answer this way that write same email over and over.
+Unfortunately the reason for being quiet is not that I am taking time off and enjoying myself somewhere in Caribbean on a secluded island without internet connection. Those who know me well also know that I would never go somewhere without access to Web for longer period of time than week - and even that would cause serious withdrawal issues.</description>
+    </item>
+    
+    <item>
+      <title>Dewey&#39;s Classification can be funny</title>
+      <link>https://miroadamy.com/posts/2008-10-13-deweys-classification-can-be-funny/</link>
+      <pubDate>Mon, 13 Oct 2008 18:08:20 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-10-13-deweys-classification-can-be-funny/</guid>
+      <description>Yes, I mean *that* dry, boring Deweys Decimal Classification used by libraries around the world.
+Here is what I noticed in Ottawa Public Library:
+Can you imagine two subjects so far apart from each other - and sometimes sooo close ;-)</description>
+    </item>
+    
+    <item>
+      <title>iPhone firmware 2.1 - first impressions</title>
+      <link>https://miroadamy.com/posts/2008-09-16-iphone-firmware-21-first-impressions/</link>
+      <pubDate>Tue, 16 Sep 2008 23:35:42 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-09-16-iphone-firmware-21-first-impressions/</guid>
+      <description>I was brave and updated right away last Friday, as soon as the update appeared, both the iTunes and the iPhone firmware. And so far, so good. Initial observations are quite positive - at least so far, from using it during last few days.
+I never had any issues with the dropped calls, so I cannot report any improvement. What seems to work better is browsing: I get much less (if any) connection errors.</description>
+    </item>
+    
+    <item>
+      <title>Too good to be true ?</title>
+      <link>https://miroadamy.com/posts/2008-09-11-too-good-to-be-true-2/</link>
+      <pubDate>Thu, 11 Sep 2008 22:39:20 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-09-11-too-good-to-be-true-2/</guid>
+      <description>If this thing is real, I am buying one. Regardless that I really, really do not need another Mac :-). Form factor of thin screen of size 9-12 inch, with reasonable subset of touch gestures would be EXACTLY what I need from a internet terminal / reader. Plus the option to tether it with iPhone for ubiquitous connectivity ...</description>
+    </item>
+    
+    <item>
+      <title>Chrome is interesting, but I&#39;ll stick with Firefox ...</title>
+      <link>https://miroadamy.com/posts/2008-09-04-chrome-is-interesting-but-ill-stick-with-firefox/</link>
+      <pubDate>Thu, 04 Sep 2008 22:21:34 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-09-04-chrome-is-interesting-but-ill-stick-with-firefox/</guid>
+      <description>Everybody seems to be crazy about Chrome, the new superfast Google browser. The odes on speed sounded quite exaggerated, so I had to try it. I opened up again my old battered Fujitsu Lifebook and after 3 reboots (it was not used for about 2 months and Windows update had to have its patching done) I downloaded and installed it.
+The rumors were not unsubstantiated ... it IS considerably speedier than anything else, including Opera.</description>
+    </item>
+    
+    <item>
+      <title>More on kCFErrorDomainCFNetwork Error 302</title>
+      <link>https://miroadamy.com/posts/2008-08-28-more-on-kcferrordomaincfnetwork-error-302/</link>
+      <pubDate>Thu, 28 Aug 2008 08:38:19 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-28-more-on-kcferrordomaincfnetwork-error-302/</guid>
+      <description>A friend made me aware of this (thanks, Peter):
+The Inside Deets on iPhone 2.0.2 and Dropped Calls
+http://www.roughlydrafted.com/2008/08/28/the-inside-deets-on-iphone-202-and-dropped-calls/
+Sounds like plausible explanation.
+It is not the network that is fault but the interaction of the bad
+power control algorithm in 2.0 and 2.0.1 software and the network that
+is at fault. The sooner everybody is running 2.0.2 software the better
+things will be. Having seen the graphs the 2.0.2 software has already</description>
+    </item>
+    
+    <item>
+      <title>We are hiring</title>
+      <link>https://miroadamy.com/posts/2008-08-26-we-are-hiring/</link>
+      <pubDate>Tue, 26 Aug 2008 10:12:00 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-26-we-are-hiring/</guid>
+      <description>After everything-but-quiet summer, things got even busier and we need to add more great people to our teams.
+At the moment we&#39;re looking for
+* Junior Java developers
+* Intermediate Java developers
+* Intermediate .Net developers
+* Senior .Net developers
+* Junior Graphics/UI/Multimedia Designer
+Sorry - no teleworking, you must be local to apply. If you feel like fitting in - or know somebody in Ottawa that would fit, email Miro at thinknostic dot com .</description>
+    </item>
+    
+    <item>
+      <title>Linux vs Windows - great comparison</title>
+      <link>https://miroadamy.com/posts/2008-08-22-linux-vs-windows-great-comparison/</link>
+      <pubDate>Fri, 22 Aug 2008 23:35:47 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-22-linux-vs-windows-great-comparison/</guid>
+      <description>I have been &#34;living in a command line&#34; for last few weeks. Pretty refreshing experience. As result, I had to google a lot, especially when it comes to e.g. subtle differences between tar options on Ubuntu Linux and Open Solaris ... While doing that, I somehow stumbled upon this great writeup on cultural differences between Linux and Windows. Nicely written, no flamewars - obviously pro-Linux, but no Microsoft or Windows bashing and lots of insight.</description>
+    </item>
+    
+    <item>
+      <title>iPhone 3G first impressions: Applications</title>
+      <link>https://miroadamy.com/posts/2008-08-21-iphone-3g-first-impressions-applications/</link>
+      <pubDate>Thu, 21 Aug 2008 02:09:00 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-21-iphone-3g-first-impressions-applications/</guid>
+      <description>Having used Touch 2.0, I managed not to install everything I found in AppStore. Majority of which is crap anyway - people are still learning how to use the platform properly. Pretty soon though, all those flashlights, tip calculators and similar pointless-ware will be replaced by apps that make sense. I hope.
+Just for the reference: here is my iTunes snapshot as of today:
+Some applications are pure time killers (when waiting in line and there is signal to read news online) but some are actually very useful.</description>
+    </item>
+    
+    <item>
+      <title>How to make screenshot of running application on iPhone 3G</title>
+      <link>https://miroadamy.com/posts/2008-08-19-how-to-make-screenshot-of-running-application-on-iphone-3g/</link>
+      <pubDate>Tue, 19 Aug 2008 23:04:37 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-19-how-to-make-screenshot-of-running-application-on-iphone-3g/</guid>
+      <description>It is sooo simple:
+1) Run the app you want to get screenshot of
+2) Press the home button at the same time as On button. Screen will flash white for a sec
+3) Find the picture saved in your photos.
+This is second amazing thing I have found out about iPhone in last few days. First was hidden button on the headphone mike that can start/stop running iPod music, pick up the ringing phone or (doubleclick) advance to next song.</description>
+    </item>
+    
+    <item>
+      <title>Good hard shell case for iPhone 3G</title>
+      <link>https://miroadamy.com/posts/2008-08-17-good-hard-shell-case-for-iphone-3g/</link>
+      <pubDate>Sun, 17 Aug 2008 03:35:12 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-17-good-hard-shell-case-for-iphone-3g/</guid>
+      <description>After carrying in my pocket for 3 days, I have decided to get something to prevent my smallest Mac from scratches and breaking when drops (I did drop the iPod touch and it was close call: one of the edges was scratched and slightly damaged).
+It took some time to decide, but at the end I settled for this one:
+
+In white, of course. It is a bit tricky to put it on, but it feels very solid and does not slip.</description>
+    </item>
+    
+    <item>
+      <title>How to kill iPhone battery in less than 2 hours</title>
+      <link>https://miroadamy.com/posts/2008-08-16-how-to-kill-iphone-battery-in-less-that-2-hours/</link>
+      <pubDate>Sat, 16 Aug 2008 11:58:44 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-16-how-to-kill-iphone-battery-in-less-that-2-hours/</guid>
+      <description>This may be a random event, but here is what happened:
+1) Switch on camera and and take couple of pictures
+2) While camera still on in taking pictures mode, switch off the phone (by the switch on top).
+After doing that, about 1.5 hour later I took out the phone to check the emails. Phone was very warm - not the kind of unpleasantly hot you get from Macbook Pro battery when rendering movie on batery power , but still much warmer than ever.</description>
+    </item>
+    
+    <item>
+      <title>Create own ringtones for iPhone 3G</title>
+      <link>https://miroadamy.com/posts/2008-08-15-create-own-ringtones-for-iphone-3g/</link>
+      <pubDate>Fri, 15 Aug 2008 23:48:00 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-15-create-own-ringtones-for-iphone-3g/</guid>
+      <description>One of the many things that I never did before was actually customizing the phone. Neither of the songs that I really liked for ringtone (and were unique enough) were available of course. I found this website: http://audiko.net/en.html that allows to take an MP3 (one that you legally own, of course) and convert it to ringtone.
+Here is how it works:
+1) Find a suitable MP3
+2) Go to above website, upload MP3</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2008-08-09-quote-of-the-day-14/</link>
+      <pubDate>Sat, 09 Aug 2008 11:13:27 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-09-quote-of-the-day-14/</guid>
+      <description>A gem from Merlin&#39;s twitter feed. I found it being both hilariously funny as well as wildly applicable :D
+There&#39;s nothing wrong with me that couldn&#39;t be fixed by a little exercise, some discipline, and a weekend at the Dog Psychology Center.
+Merlin Mann
+ </description>
+    </item>
+    
+    <item>
+      <title>iPhone 3G first impressions: Phone, Battery Life</title>
+      <link>https://miroadamy.com/posts/2008-08-07-iphone-3g-first-impressions-phone-battery-life/</link>
+      <pubDate>Thu, 07 Aug 2008 13:02:56 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-07-iphone-3g-first-impressions-phone-battery-life/</guid>
+      <description>Phone
+The sound of the iPhone is much clearer and generally better than my old RAZR.
+What I really like is a built-in microphone in headphones that allows making and answering calls without holding phone next to your ear. Second is handling of the incoming call while listening to podcast or music: it fades aways and after finishing the call, it slowly fades back in. Very nicely done.
+But the best phone feature is seamless integration with my address book, which thanks to synchronization that works very well always the same as address book on my Mac.</description>
+    </item>
+    
+    <item>
+      <title>iPhone 3G - I surrender</title>
+      <link>https://miroadamy.com/posts/2008-07-30-iphone-3g-i-surrender/</link>
+      <pubDate>Wed, 30 Jul 2008 23:51:12 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-07-30-iphone-3g-i-surrender/</guid>
+      <description>I was holding off for over two weeks, decided not go with that outrageous iPhone voice/data racket. Even trying to encourage people to wait in a hope the demand will be weak and Rogers will bend and lower the rates.
+Only, it was not. I mean demand. iPhones seems to be selling better than beaver tales on Dow&#39;s Lake during sub minus twenty sunny skating Saturday. Especially the 16 GB ones.</description>
+    </item>
+    
+    <item>
+      <title>No words necessary. No DRM either ...</title>
+      <link>https://miroadamy.com/posts/2008-06-15-no-words-necessary-no-drm-either/</link>
+      <pubDate>Sun, 15 Jun 2008 18:49:21 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-06-15-no-words-necessary-no-drm-either/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Back to normal</title>
+      <link>https://miroadamy.com/posts/2008-06-12-back-to-normal/</link>
+      <pubDate>Thu, 12 Jun 2008 23:13:45 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-06-12-back-to-normal/</guid>
+      <description>So, after few days working diskless, I am back to normal operation mode. About time, we are late with last episode of screencast ...
+The copying of external disk went error free and took almost 5 hours (210 GB). Fortunately, the MBP was usable - I did not want to modify too many files, but it was perfect for Web research and writing in Google Docs.
+After reboot, the TimeMachine decided that 85 GB needs to be backed up again.</description>
+    </item>
+    
+    <item>
+      <title>DMCA for Canada ? Act now !</title>
+      <link>https://miroadamy.com/posts/2008-06-02-dmca-for-canada-act-now/</link>
+      <pubDate>Mon, 02 Jun 2008 23:33:21 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-06-02-dmca-for-canada-act-now/</guid>
+      <description>I have got a letter from Online Rights Canada. I believe that what is about to hapen, may have pretty deep implications down the stream. Minimum thing I can do is try to help spreading the word.
+Here is the message:
+Dear Online Rights Canada Supporter,
+We understand that the government will imminently introduce legislation to amend the Copyright Act - and it intends to push it through quickly. We at Online Rights Canada wanted to let you know what was ahead in the next few weeks, and what you can do to protect Canada from a new DMCA.</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2008-05-21-quote-of-the-day-13/</link>
+      <pubDate>Wed, 21 May 2008 23:24:47 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-05-21-quote-of-the-day-13/</guid>
+      <description>I&#39;ve been writing a lot of code for the past 6 months. I have to admit, it is a welcome change from Word documents and PowerPoint presentations. Java, unlike text and graphics has a clearer definition of correct and finished.
+ From Software Is A Craft by Dan Pritchett</description>
+    </item>
+    
+    <item>
+      <title>Catching up with Hanselminutes</title>
+      <link>https://miroadamy.com/posts/2008-05-08-catching-up-with-hanselminutes/</link>
+      <pubDate>Thu, 08 May 2008 22:31:29 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-05-08-catching-up-with-hanselminutes/</guid>
+      <description>Thanks to great weather, the walking season is in full progress :-) and that means I was able to add some more listening material to my podcast collection. I still keep track with all part of TWIT network - This week in tech, Security Now!, MacBreak Weekly and Windows Weekly - but that is nowhere close enough for both walking and driving ...
+I have returned back to listening to Scott Hanselman blog (Hanselminutes) - mostly out of curiosity how did working for Microsoft change is very balanced and realistic view of technologies.</description>
+    </item>
+    
+    <item>
+      <title>Rogers, Bell and Net neutrality</title>
+      <link>https://miroadamy.com/posts/2008-05-03-rogers-bell-and-net-neutrality/</link>
+      <pubDate>Sat, 03 May 2008 20:09:14 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-05-03-rogers-bell-and-net-neutrality/</guid>
+      <description>I do not blog on political issues, but this one is kind of different.
+Couple of weeks ago I received a letter from my ISP provider (Rogers Cable), stating that days of unlimited downloads are over. More or less. Rogers capped the monthly transfer depending on your subscription plan, which in my case means maximum 95 GB / month for sum of upload and download.
+They started to monitor the traffic in December and will start charging for the transfer exceeding the cap in June.</description>
+    </item>
+    
+    <item>
+      <title>Heroes Happened ... here</title>
+      <link>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</link>
+      <pubDate>Thu, 17 Apr 2008 09:50:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</guid>
+      <description>Last week I attended one day event organized by Microsoft named Heroes Happens Here. It is series of introduction targeting new products: Windows Server 2008 (not out yet) SQL Server 2008 (not out yet) and Visual Studio 2008 (out and well).
+I do not do much Microsoft development these days - my world is currently rather unevenly divided between Java (about 70 %), Web-ish technologies (XHTML, CSS, JavaScript, some Ruby) and OS-X (Objective C) which I am trying to squeeze in and get finally started.</description>
+    </item>
+    
+    <item>
+      <title>On White Stuff and Other Disasters</title>
+      <link>https://miroadamy.com/posts/2008-03-13-on-white-stuff-and-other-disasters/</link>
+      <pubDate>Thu, 13 Mar 2008 21:29:13 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-03-13-on-white-stuff-and-other-disasters/</guid>
+      <description>Guess what are three most useful tools without which no proper Ottawa household can exist ? Snow shovel, snow pusher and car window ice scratcher. If the number was 4, the next would be snowblower. Up to yesterday, our family was in safe position being equipped with several shovels, four or five scratchers and one pusher.
+Then disaster stroke: my son broke the pusher while moving away few cube meters of snow we removed from the roof.</description>
+    </item>
+    
+    <item>
+      <title>Free Microsoft Press E-Books !</title>
+      <link>https://miroadamy.com/posts/2008-01-02-free-microsoft-press-e-books/</link>
+      <pubDate>Wed, 02 Jan 2008 12:44:27 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-01-02-free-microsoft-press-e-books/</guid>
+      <description>Microsoft Press is handing out 3 books:
+- Introducing Microsoft LINQ by Paolo Pialorsi and Marco Russo
+- Introducing ASP.NET Ajax by Dino Esposito
+- Introducing Microsoft Silverlight 1.0 by Laurence Moroney
+Silverlinght 1.0 is probably a bit outdated (with 1.1/2.0 close), but the others should be good, judging by the authors. Dino Esposito wrote couple of very good books on ASP.NET and .NET.
+See this blog for more details and download links.</description>
+    </item>
+    
+    <item>
+      <title>Absurdity of the DMCA</title>
+      <link>https://miroadamy.com/posts/2007-12-11-absurdity-of-the-dmca/</link>
+      <pubDate>Tue, 11 Dec 2007 10:50:14 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-11-absurdity-of-the-dmca/</guid>
+      <description>If the world of physical objects would governed with the same rules as the Digital Millennium Copyright Act does impose on all things digital, scissors would be illegal and you could end up in jail for manufacturing, and maybe even owning or using them. Crazy ? Well, see this presentation and judge for yourself.
+This &#34;law&#34; is currently impacting our friends south of the border only, but it is very real that it will soon become a law in Canada as well.</description>
+    </item>
+    
+    <item>
+      <title>Over $500 worth of software for $49.99</title>
+      <link>https://miroadamy.com/posts/2007-12-07-over-500-worth-of-software-for-4999/</link>
+      <pubDate>Fri, 07 Dec 2007 13:10:23 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-07-over-500-worth-of-software-for-4999/</guid>
+      <description>As long as you are using OS-X, this is something worthy looking at: the MuPromo is running the annual bundle offer with (currently) 8 applications, worth $534 for the mentioned $49.99. The sale is on for 4 more days. The way how it works is that at certain marks, additional applications will be added to the bundle (for the same price) and will be made available to everybody who purchased the bundle.</description>
+    </item>
+    
+    <item>
+      <title>Crossing bit boundaries</title>
+      <link>https://miroadamy.com/posts/2007-11-19-crossing-bit-boundaries/</link>
+      <pubDate>Mon, 19 Nov 2007 23:41:31 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-19-crossing-bit-boundaries/</guid>
+      <description>Today is a special day for this blog as two bit boundaries were crossed. This is post number 256, which means that I have used all 8 bit numbers for numbering and jumped into nine bit space. The byte is not enough any more - vive la 0x100.
+Another boundary crossed today is number of hits as tracked by Wordpress (which does not count my visits). In this case the number reached and crossed was 0x8000 or 32768 decimal, which brings us to upper half of the 16 bit address space.</description>
+    </item>
+    
+    <item>
+      <title>Book recommendation: Seth Godin - Small is the new big</title>
+      <link>https://miroadamy.com/posts/2007-11-16-book-recommendation-seth-godin-small-is-the-new-big/</link>
+      <pubDate>Fri, 16 Nov 2007 23:25:50 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-16-book-recommendation-seth-godin-small-is-the-new-big/</guid>
+      <description>On previous weekend I had great opportunity to spend a lot of time listening to books and podcasts. The opportunity was long drive to Quebec City and back, plus the two days spent walking around with camera, taking pictures, enjoying the differences in style and architecture and listening to Seth Godin&#39;s book - Small is the new big.
+There is nothing in this book that would actually require to drive almost 500 km one way - you can comfortably get the same benefit out of it without moving out from your favorite sofa, walking around your neighborhood or on a treadmill (hi Joel).</description>
+    </item>
+    
+    <item>
+      <title>Going (mostly) virtual</title>
+      <link>https://miroadamy.com/posts/2007-11-01-going-mostly-virtual/</link>
+      <pubDate>Thu, 01 Nov 2007 23:39:09 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-01-going-mostly-virtual/</guid>
+      <description>With my new Macbook Pro on the way from China, I have started the big consolidation of hardware and software platforms. The goal is to improve the change management of software development environments, increase mobility and increase stability of the environments.
+The way how I am going to do that is moving all &#34;fragile&#34; environments to virtual machines. My most fragile environment is Windows XP (I am still resisting Vista). What I mean &#34;</description>
+    </item>
+    
+    <item>
+      <title>Ordered a Macbook Pro</title>
+      <link>https://miroadamy.com/posts/2007-10-28-ordered-a-macbook-pro/</link>
+      <pubDate>Sun, 28 Oct 2007 15:07:11 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-28-ordered-a-macbook-pro/</guid>
+      <description>I have to confess, I did it :-). But no, I did NOT do it right away after Friday 6PM when Leopard became publically available. I managed to wait for whole 5 hours... partly because I was not sure whether the 6PM is local time or Cupertino time - and partly because the Apple store was stubbornly saying that my MBPro would ship with Tiger. At about 10:30 there was a &#34;</description>
+    </item>
+    
+    <item>
+      <title>Book review: The Dip</title>
+      <link>https://miroadamy.com/posts/2007-10-21-book-review-the-dip/</link>
+      <pubDate>Sun, 21 Oct 2007 21:30:49 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-21-book-review-the-dip/</guid>
+      <description>Subtitled &#34;A little book that teaches you when to quit and when to stick&#34; by Seth Godin.
+So what is the dip ? It is the strange valley after you start with something, causing that after initial quick success you will get worse before you can get better. Obstacles that you either overcome - or you quit. Seth explains that these obstacles are there for a reason - they separate those who want something badly enough from those who do not.</description>
+    </item>
+    
+    <item>
+      <title>Book mini-review: Breaking Windows</title>
+      <link>https://miroadamy.com/posts/2007-10-20-book-mini-review-breaking-windows/</link>
+      <pubDate>Sat, 20 Oct 2007 23:15:23 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-20-book-mini-review-breaking-windows/</guid>
+      <description>I&#39;ve spent lot of time today reading. I am catching up with my reading stack. Between stuff I&#39;ve finished was: Breaking Windows : How Bill Gates Fumbled the Future of Microsoft
+The impression ? Mixed feelings. Maybe I&#39;ve expected something different. Lot&#39;s of details on internal politics and inner fights, not too flattering portrait of Bill G as control obsessed person with very questionable interpersonal skills. From technology perspective, very little what was both interesting and new.</description>
+    </item>
+    
+    <item>
+      <title>Book recomendations: Google Story, The Tipping Point</title>
+      <link>https://miroadamy.com/posts/2007-10-16-book-recomendations-google-story-the-tipping-point/</link>
+      <pubDate>Tue, 16 Oct 2007 01:14:25 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-16-book-recomendations-google-story-the-tipping-point/</guid>
+      <description>Thanks to sudden memory jump in my iPod (from 4GB Nano 2gen to 8 GB iPod touch) I have enough space to load some books in addition to podcasts. I normally do not like abridged versions, but the weather is getting worse so I do not get enough walking time for full versions. These two were both 3-4 disc long audio books.
+The Google Story is interesting if you are into history of computing - because it describes the probably the largest transition in computing history - the evolution of World Wide Web to a platform and the evolution of the company that made the Web actually useful.</description>
+    </item>
+    
+    <item>
+      <title>Free eBook and audiobook on media business and distribution control</title>
+      <link>https://miroadamy.com/posts/2007-10-09-free-ebook-and-audiobook-on-media-business-and-distribution-control/</link>
+      <pubDate>Tue, 09 Oct 2007 00:05:37 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-09-free-ebook-and-audiobook-on-media-business-and-distribution-control/</guid>
+      <description>Gerd Leonhard, co-author of the Future of Music book is making an experiment with his new book - The End of Control. He is publishing the chapters of the book as they appear in PDF format as well as MP3&#39;s on his website. First two chapters - &#34;Attention is the new currency&#34; and &#34;Copyright in the Age of Uncontrolled distribution&#34; are currently available for download / reading / listening.
+The books tries to address very important questions on how will the new media business function in environment with little control over the distribution channel.</description>
+    </item>
+    
+    <item>
+      <title>Who said government&#39;s Web pages are boring ?</title>
+      <link>https://miroadamy.com/posts/2007-10-07-who-said-governments-web-pages-are-boring/</link>
+      <pubDate>Sun, 07 Oct 2007 16:47:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-07-who-said-governments-web-pages-are-boring/</guid>
+      <description>Look how creatively did French government - more specifically Ministère de la culture et de la communication - approach even such mundane subject as the 404 page :-).</description>
+    </item>
+    
+    <item>
+      <title>BOTD: Figuring out computer science</title>
+      <link>https://miroadamy.com/posts/2007-10-05-botd-figuring-out-computer-science/</link>
+      <pubDate>Fri, 05 Oct 2007 23:18:18 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-05-botd-figuring-out-computer-science/</guid>
+      <description>It is all about deep questions and problems computer science. Including the question whether such thing as computer science actually exists. I thing it does, but have occasional moments of doubts - mostly when I read something related to real science :-).
+What does Andreas Zwinkau (it is read as ts-win-cow, my anglophone friends ;-)) think about it, can be found http://focs.wordpress.com/
+His comments are amazingly deep for such a young guy.</description>
+    </item>
+    
+    <item>
+      <title>Like Netmeeting - only much better</title>
+      <link>https://miroadamy.com/posts/2007-10-03-like-netmeeting-only-much-better/</link>
+      <pubDate>Wed, 03 Oct 2007 03:10:30 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-03-like-netmeeting-only-much-better/</guid>
+      <description>My current client is multi-national company, headquartered in Ottawa with offices in USA and Europe. With teams all over the globe, the conference calls and network meetings are part of the game. This usually means Microsoft Netmeeting to share the screen and teleconference bridge for voice. Netmeeting usually works quite OK - except when it does not - for no obvious reason :-).
+Thanks to Yugma, there is now better alternative.</description>
+    </item>
+    
+    <item>
+      <title>Microsoft will ship MVC for ASP.NET ?</title>
+      <link>https://miroadamy.com/posts/2007-09-27-microsoft-will-ship-mvc-for-aspnet/</link>
+      <pubDate>Thu, 27 Sep 2007 23:00:05 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-27-microsoft-will-ship-mvc-for-aspnet/</guid>
+      <description>From Scott Guthrie&#39;s interview on .NET futures
+SG: We’ve seen demand for an MVC framework on two fronts. One is for even more testability, having the ability to completely mock-up a request. We’ve also always seen with ASP.NET that some people like having the server control, postback model; some people say, “I just want absolute control.”
+The MVC framework we’re coming up with is a fairly simple MVC model, it’s very clean, it’s a front controller model, and it integrates very well into ASP.</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2007-09-25-quote-of-the-day-11/</link>
+      <pubDate>Tue, 25 Sep 2007 00:02:18 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-25-quote-of-the-day-11/</guid>
+      <description>Experience is what you get when you did not get what you wanted.
+
+ Brick walls are there for a reason: they let us prove how badly we want things.
+They are there to stop the people who do not want it badly enough
+They are there to stop &#34;the other people&#34;
+ Randy Pausch 
+If you want to watch and listen to a lecture by professor of CMU Computer Science that will teach you things way beyond realms of software engineering, check this video.</description>
+    </item>
+    
+    <item>
+      <title>Book: Softwar - an intimate portrait of Larry Ellison and Oracle</title>
+      <link>https://miroadamy.com/posts/2007-09-23-book-softwar-an-intimate-portrait-of-larry-ellison-and-oracle/</link>
+      <pubDate>Sun, 23 Sep 2007 21:54:31 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-23-book-softwar-an-intimate-portrait-of-larry-ellison-and-oracle/</guid>
+      <description>This is blog entry I wrote over a two years ago - before this blog has even started. Now I found it on the disk during cleanups and found out it is still valid. The iPod mentioned was my first, now long dead first generation Shuffle.
+Here it comes:
+Spent most of Friday night and part of Saturday reading this book. I did not really expect to finish it, considering the size (~ 500 pages) and the fact that I am not such a great fan of Oracle products - especially not the Oracle Apps.</description>
+    </item>
+    
+    <item>
+      <title>BOTD: The Reader</title>
+      <link>https://miroadamy.com/posts/2007-09-22-botd-the-reader/</link>
+      <pubDate>Sat, 22 Sep 2007 22:06:21 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-22-botd-the-reader/</guid>
+      <description>Today&#39;s Blog of the Day is &#34;The Reader&#34;.
+Everything about ebooks and readers - all the stuff I like. See at http://wowio.wordpress.com/
+Here I discovered that Sony is assumably preparing new version of reader - PRS 505. From the changes that should be included, none is IMHO really so important. The memory capacity of the reader with SD cards (which are reaching 8GB these days) is much bigger than you ever will need.</description>
+    </item>
+    
+    <item>
+      <title>Webbits 2007-06</title>
+      <link>https://miroadamy.com/posts/2007-09-21-webbits-2007-06-2/</link>
+      <pubDate>Fri, 21 Sep 2007 23:12:09 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-21-webbits-2007-06-2/</guid>
+      <description>Few nuggets from recent surfing and reading newsfeeds:
+A very nice explanation of differences between Ruby Gem and Rails plugin in Arun Gupta&#39;s blog
+The community seems to be still fairly divided on the &#34;Is Vista good or bad&#34; ? For the laters, read the story from the corporate IT point of view. I still have not found any good reason to upgrade :-).
+Good story of how the experience of joining a project should not look like</description>
+    </item>
+    
+    <item>
+      <title>Field test of Sony eReader</title>
+      <link>https://miroadamy.com/posts/2007-09-17-field-test-of-sony-ereader/</link>
+      <pubDate>Mon, 17 Sep 2007 23:00:41 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-17-field-test-of-sony-ereader/</guid>
+      <description>One of the many gadgets I have packed for the summer vacation was of course Sony Reader and SD card with nice selection of texts. It was fresh and fully charged, so I assumed that I will be well prepared for the gaps in program during the following three weeks ahead of us and for the long flights over Atlantic.
+Obviously, the flight was first moment where Reader was used. During the 7 hours, I spent about 3-4 hours reading.</description>
+    </item>
+    
+    <item>
+      <title>The price of anonymity</title>
+      <link>https://miroadamy.com/posts/2007-09-17-the-price-of-anonymity/</link>
+      <pubDate>Mon, 17 Sep 2007 00:18:40 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-17-the-price-of-anonymity/</guid>
+      <description>The combination of software allowing anonymous access to the Net, not too competent police officers and laws not quite 21st century ready can be a very dangerous combination. According this story, the operator of the Tor node was arrested by German police ...
+I am quite curious how be would situation like this handled in Canada. First of all, would it happen ? Would the RCMP be more technically up to date than Deutsche Polizei ?</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2007-09-16-quote-of-the-day-10/</link>
+      <pubDate>Sun, 16 Sep 2007 22:08:14 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-16-quote-of-the-day-10/</guid>
+      <description>First-rate people hire first-rate people; second-rate people hire third-rate people.
+
+Leo Rosten</description>
+    </item>
+    
+    <item>
+      <title>BOTD: Good Math, Bad Math</title>
+      <link>https://miroadamy.com/posts/2007-09-14-botd-good-math-bad-math/</link>
+      <pubDate>Fri, 14 Sep 2007 02:09:48 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-14-botd-good-math-bad-math/</guid>
+      <description>Today&#39;s BOTD (Blog of the Day) is &#34;Good Math, Bad math&#34;.
+What it is about is summarized in its subtitle:
+Finding the fun in good math. Squashing the bad math and the fools who promote it. 
+ There is no need to add anything to this.
+Only maybe an URL: http://scienceblogs.com/goodmath/</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2007-09-13-quote-of-the-day-9/</link>
+      <pubDate>Thu, 13 Sep 2007 01:36:08 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-13-quote-of-the-day-9/</guid>
+      <description>Software problems aren&#39;t like mathematical problems. They have no clear boundaries or axioms and the problem domain is always shifting and evolving and changing. This fundamental difference ensures that while mathematical knowledge has a long shelf life, technical knowledge seems to last little longer than most popstars. And the changes wrought in programming are not just shallow refinements or surface innovations but fundamental changes wrought by order-of-magnitude shifts in the virtual landscape.</description>
+    </item>
+    
+    <item>
+      <title>New iPod touch as ebook reader ?</title>
+      <link>https://miroadamy.com/posts/2007-09-10-new-ipod-touch-as-ebook-reader/</link>
+      <pubDate>Mon, 10 Sep 2007 00:23:53 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-10-new-ipod-touch-as-ebook-reader/</guid>
+      <description>As the September 28th is approaching (the day when the new iPod touch will be available in Canada), I have a real dilemma: do I go with the &#34;iPhone without the phone&#34; or not ? The price $329 for 8 GB iPod is pretty high - compared to $279 for 80GB classic - which would allow me to carry all my music, some movies and all podcasts with me. On the other hand, the Touch has WiFi and can be used as pretty decent Web browser on top of iPod functionality.</description>
+    </item>
+    
+    <item>
+      <title>Great article on data visualization</title>
+      <link>https://miroadamy.com/posts/2007-09-09-great-article-on-data-visualization/</link>
+      <pubDate>Sun, 09 Sep 2007 22:23:50 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-09-great-article-on-data-visualization/</guid>
+      <description>&#34;Data visualization: Modern approaches&#34; - great read, highly recommended. Availablehere.</description>
+    </item>
+    
+    <item>
+      <title>Sapkowski in English is out !</title>
+      <link>https://miroadamy.com/posts/2007-07-30-sapkowski-in-english-is-out/</link>
+      <pubDate>Mon, 30 Jul 2007 00:05:54 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-07-30-sapkowski-in-english-is-out/</guid>
+      <description>For all my fantasy-loving friends who consider reading in Czech or Polish too inconvenient: the first book of the grand master Andrzej Sapkowski in English is out. It is book of short stories about Geralt, the Hexer (or Witcher if you want), who is the main character of the 5-book saga with the same name.
+You can get it on Amazon.</description>
+    </item>
+    
+    <item>
+      <title>Most important event of the year</title>
+      <link>https://miroadamy.com/posts/2007-07-27-most-important-event-of-the-year/</link>
+      <pubDate>Fri, 27 Jul 2007 23:30:15 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-07-27-most-important-event-of-the-year/</guid>
+      <description>I have been pretty quiet during last month. Few reasons why, none of them business related. The summer is not the season where people in our industry are incredibly busy - that&#39;s what winter is for ... and end of March, government fiscal year end ;-). We had family visit - my two nephews were staying with us for few weeks. So instead of blogging, I was spending evenings with them and weekends as a tour guide around Ottawa&#39;s attractions.</description>
+    </item>
+    
+    <item>
+      <title>End of democracy - or how I turned into platform</title>
+      <link>https://miroadamy.com/posts/2007-07-18-end-of-democracy-or-how-i-turned-into-platform/</link>
+      <pubDate>Wed, 18 Jul 2007 23:20:32 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-07-18-end-of-democracy-or-how-i-turned-into-platform/</guid>
+      <description>Once upon a time, there was an application named Democracy Player. A really neat one, capable of downloading videos from internet and playing them in multiple formats. It even can download YouTube videos.
+For some reason, the Democracy Player name was replaced with a new name. My name. The Democracy Player will be know as Miro. I have not discovered why this name was chosen, or if it means something. Maybe the guys responsible for it had similar thoughts as my parents over 40 years ago :-).</description>
+    </item>
+    
+    <item>
+      <title>Smugmug &#34;processing image&#34; - follow up</title>
+      <link>https://miroadamy.com/posts/2007-07-10-smugmug-processing-image-follow-up/</link>
+      <pubDate>Tue, 10 Jul 2007 22:33:32 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-07-10-smugmug-processing-image-follow-up/</guid>
+      <description>In the previous article I have mentioned the potential issue with some uploaded images hanging in state &#34;Processing image&#34; for surprisingly long time after upload and expressed hope that there is some background &#34;catch it all&#34; process that would take care of all these. As it turned out, there is. All uploaded images that were haging in the processing stage turned up to be fixed by next day or so (it was about 10-20 images out of about 3-4 thousand).</description>
+    </item>
+    
+    <item>
+      <title>First week with SmugMug</title>
+      <link>https://miroadamy.com/posts/2007-07-07-first-week-with-smugmug/</link>
+      <pubDate>Sat, 07 Jul 2007 22:44:14 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-07-07-first-week-with-smugmug/</guid>
+      <description>Week ago, my SmugMug 14 day trial period expired and (as expected) I signed up for the 1 year service. Here are my first impressions after over week of use, with over 3000 uploaded photos and 6.8 GB disc space consumed :-).
+Good news is - it really works as advertised and I still like it a lot. I have not really tried many of the features, but what I did try, worked as expected.</description>
+    </item>
+    
+    <item>
+      <title>Search for perfect online photo storage</title>
+      <link>https://miroadamy.com/posts/2007-06-25-search-for-perfect-online-photo-storage/</link>
+      <pubDate>Mon, 25 Jun 2007 23:46:19 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-25-search-for-perfect-online-photo-storage/</guid>
+      <description>One thing that is on my Someday/Maybe list for quite some time is to get some off-site storage for my digital images. They are reasonably safe on RAID-5 NAS with a copy on USB disk, but what is missing is off-site copy. At minimum, a remote backup, ideally with an UI resembling something like Aperture or Photoshop Elements or Shoebox: photo organizer with Web intefarce and remote storage. So that in addition to have offline backup I would have an option to work with images from any location.</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2007-06-21-quote-of-the-day-8/</link>
+      <pubDate>Thu, 21 Jun 2007 22:25:19 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-21-quote-of-the-day-8/</guid>
+      <description>The realization came over me with full force that a good part of the remainder of my life was going to be spent in finding errors in my own programs.
+-- Maurice Wilkes
+What is so worthy mentioning on this obvious stament, describing fate likely shared by many thousand or milions of software developers worldwide ? Not much, only the date. According this book (which is a pretty good read btw),</description>
+    </item>
+    
+    <item>
+      <title>MSDN Documentation - the follow up</title>
+      <link>https://miroadamy.com/posts/2007-06-15-msdn-documentation-the-follow-up/</link>
+      <pubDate>Fri, 15 Jun 2007 20:01:02 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-15-msdn-documentation-the-follow-up/</guid>
+      <description>Judging by the number of hits, Joel (and myself) are not the only people who would like to see nicer, better and faster MSDN documentation. As a very nice surprise, some of the feedback came directly from the people than actually can do something about it - like Darren Parker from Microsoft and Anand Raman from the Sandcastle project. Rob Relyea suggested and interesting looking tool based on XAML.
+Thanks everybody - it is always nice to find out that even really big companies listen to the developers and want to address the problems.</description>
+    </item>
+    
+    <item>
+      <title>MSDN Documentation - the worst in class ?</title>
+      <link>https://miroadamy.com/posts/2007-06-14-msdn-documentation-the-worse-in-class/</link>
+      <pubDate>Thu, 14 Jun 2007 22:41:36 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-14-msdn-documentation-the-worse-in-class/</guid>
+      <description>Did it ever happened to you that you were using some tool day after day - and never realized it&#39;s pretty big deficiencies ? Until somebody, coming from different background pointed out what everything is wrong with the tool ? Before that moment of revelation, the issues were just inconvenience, but right after that they became real annoyance ?
+Exactly this happened to me last week and the credit for pointing out what is wrong with MSDN documentation (and the &#34;</description>
+    </item>
+    
+    <item>
+      <title>BOTD: Strange Maps</title>
+      <link>https://miroadamy.com/posts/2007-06-12-botd-strange-maps/</link>
+      <pubDate>Tue, 12 Jun 2007 21:39:44 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-12-botd-strange-maps/</guid>
+      <description>Today&#39;s Blog Of The Day is named Strange Maps, which strangely accurate name. If you have are into maps, or information visualization - or combination of both, do NOT visit this link, because you risk sticking there for few hours :-).
+Some ideas presented are quite original and wonderful: for example the map of the USA, having instead of names of the states name of the countries with same GDP as the state.</description>
+    </item>
+    
+    <item>
+      <title>Game over, back to business</title>
+      <link>https://miroadamy.com/posts/2007-06-07-game-over-back-to-business/</link>
+      <pubDate>Thu, 07 Jun 2007 20:34:51 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-07-game-over-back-to-business/</guid>
+      <description>The wild ride is over and the city gets back to normal. I wish we had won the Cup, but - Ducks were playing pretty good and found what worked on our team. Thanks, Alfie and the Sens - for all the great moments. You were fantastic. There will be another season in few months and another chance to bring the cup home.
+On the positive side - it is good to have 2-3 more free evenings a week, now - when there is again nothing on the TV :-).</description>
+    </item>
+    
+    <item>
+      <title>iTunes U: Great beginning</title>
+      <link>https://miroadamy.com/posts/2007-06-01-itunes-u-great-beginning/</link>
+      <pubDate>Fri, 01 Jun 2007 22:16:42 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-01-itunes-u-great-beginning/</guid>
+      <description>With latest iTunes update, quite silently, a very nice new feature appeared. Apple started to offer for download lectures from many universities, with wide selection of topics: from environment through politics to mathematics and computer science. Most of the lectures are videos, but you will find also audio tracks - albeit for some topics, audio is quite problematic. Can you imagine doing e.g. differential equations in audio-only ?
+The best feature - the lectures are free downloads.</description>
+    </item>
+    
+    <item>
+      <title>Why blogging is important</title>
+      <link>https://miroadamy.com/posts/2007-05-31-why-blogging-is-important/</link>
+      <pubDate>Thu, 31 May 2007 23:06:24 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-31-why-blogging-is-important/</guid>
+      <description>Joel Oleson is suffering if you do not blog ! Sounds strange ? Read the article Join the SharePoint Blogging Revolution!
+at http://blogs.msdn.com/joelo/archive/2007/05/25/you-don-t-blog-i-m-suffering-because-you-don-t-blog.aspx
+He makes several very good points - which have very little to do with Sharepoint - but I think the best one is helping the &#34;organic indexing&#34; of the Web space and helping the search engines out there better rank content. I wrote about this while ago.</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day (Martin Fowler)</title>
+      <link>https://miroadamy.com/posts/2007-05-29-quote-of-the-day-martin-fowler/</link>
+      <pubDate>Tue, 29 May 2007 22:33:38 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-29-quote-of-the-day-martin-fowler/</guid>
+      <description>&#34;Corporate IT is dominated by bloatware. Time and time again we have to deal with expensive software purchased on golf-courses that just get in our way while sucking funds and development hours. Technologies that make it harder for programmers to do what they like to do best - make a difference for the businesses they are supporting. &#34;
+ -- Martin Fowler</description>
+    </item>
+    
+    <item>
+      <title>DHH on RIA</title>
+      <link>https://miroadamy.com/posts/2007-05-24-dhh-on-ria/</link>
+      <pubDate>Thu, 24 May 2007 20:46:02 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-24-dhh-on-ria/</guid>
+      <description>DHH is (obviously) David Heinemeier Hansson (the creator of Rails) and RIA (in this context) means Rich Internet Applications. And here is the quote:
+I think there&#39;s always room for new ideas, but I don&#39;t think that the whole fuss that&#39;s currently going on about RIA, rich Internet applications, is justified. I think we&#39;ve been through this cycle so many times before that it in some ways amazes me how history seems to be ignored.</description>
+    </item>
+    
+    <item>
+      <title>Three amazing visualization projects</title>
+      <link>https://miroadamy.com/posts/2007-05-23-three-amazing-visualization-projects/</link>
+      <pubDate>Wed, 23 May 2007 22:33:48 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-23-three-amazing-visualization-projects/</guid>
+      <description>Found by accident - as usually - while searching for something completely different.
+Visuwords - visual dictionary, showing semantic relations between words.
+Universe by Jonathan Harris.
+Wikisky - detailed online sky map, showing the positions &amp;amp; basic characteristics of space objects using a Google Maps like interface.
+And two great videos: the 4 minutes video summary on what Web2 actually means and very funny presentation about PowerPoint presentations.</description>
+    </item>
+    
+    <item>
+      <title>Using Wiki markup without a Wiki</title>
+      <link>https://miroadamy.com/posts/2007-05-17-using-wiki-markup-without-a-wiki/</link>
+      <pubDate>Thu, 17 May 2007 22:10:44 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-17-using-wiki-markup-without-a-wiki/</guid>
+      <description>Even with having Wiki as the main documentation repository, not all documentation ends up in a Wiki. Some documentation needs to be managed as part of the source tree - e.g. Readme&#39;s, compilation instructions and similar. This information is usually either plain text or in some form of text processor format, mostly Microsoft Word compatible. Both have their selection of problems. Word documents are large, bloated, harder to version controlled and not readable in shell environment (try to cat or tail Word document :-)).</description>
+    </item>
+    
+    <item>
+      <title>More programming quotes</title>
+      <link>https://miroadamy.com/posts/2007-05-15-more-programming-quotes/</link>
+      <pubDate>Tue, 15 May 2007 10:15:54 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-15-more-programming-quotes/</guid>
+      <description>&#34;If it works, leave it alone — there&#39;s no need to understand it.
+If it fails, try to fix it — there&#39;s no time to understand it.&#34;
+&#34;A one-question geek test. If you get the joke, you&#39;re a geek:
+Seen on a California license plate on a VW Beetle: &#39;FEATURE&#39;...&#34;
+— Joshua D. Wachs, Natural Intelligence Inc.
+&#34;Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.</description>
+    </item>
+    
+    <item>
+      <title>Best book for Ruby on Rails</title>
+      <link>https://miroadamy.com/posts/2007-05-07-best-book-for-ruby-on-rails/</link>
+      <pubDate>Mon, 07 May 2007 20:41:16 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-07-best-book-for-ruby-on-rails/</guid>
+      <description>During last two weeks I have been reading and playing a lot with Rails. Now I am in the state where I think I started to &#34;get it&#34; and understand how things work under the surface. Which means I am ready actually start using the framework for real work and become proficient as I get my hands dirty.
+To get to this state, absolutely essential and by far the best book is the classic one - Agile Web development with Rails co-authored by the original Rails designer and one of the Pragmatic Programmers.</description>
+    </item>
+    
+    <item>
+      <title>Few interesting links</title>
+      <link>https://miroadamy.com/posts/2007-04-30-few-interesting-links/</link>
+      <pubDate>Mon, 30 Apr 2007 22:53:10 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-30-few-interesting-links/</guid>
+      <description>Repository of presentations - http://www.slideshare.net/ on variety of topics.
+Specialize code-only search engine: http://www.krugle.com/
+New Google product on vertical search - Google Co-op.</description>
+    </item>
+    
+    <item>
+      <title>New great podcast</title>
+      <link>https://miroadamy.com/posts/2007-04-27-new-great-podcast/</link>
+      <pubDate>Fri, 27 Apr 2007 22:48:29 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-27-new-great-podcast/</guid>
+      <description>Running out of Security Now! and TWIT episodes, I have subscribed and started listening to few newly discovered podcasts.
+I have started to listen to the .NET specific one from Scott Hanselman named Hanselminutes. There are couple of factors that makes it better that other geeky blogs out there. First reason is the content quality. There is very high signal-to-noise ratio, pretty much all content counts and both guys in addition to being smart are quite good at achieving right balance between keeping on topic and spontaneity.</description>
+    </item>
+    
+    <item>
+      <title>You should write blogs</title>
+      <link>https://miroadamy.com/posts/2007-04-18-you-should-write-blogs/</link>
+      <pubDate>Wed, 18 Apr 2007 21:00:05 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-18-you-should-write-blogs/</guid>
+      <description>YOU should write blogs. 
+Even if nobody reads them, you should write them. It&#39;s become pretty clear to me that blogging is a source of both innovation and clarity. I have many of my best ideas and insights while blogging. Struggling to express things that you&#39;re thinking or feeling helps you understand them better.
+From http://steve.yegge.googlepages.com/you-should-write-blogs.</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2007-04-15-quote-of-the-day-7/</link>
+      <pubDate>Sun, 15 Apr 2007 23:47:23 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-15-quote-of-the-day-7/</guid>
+      <description>C++: an octopus made by nailing extra legs to a dog.
+(Steve Taylor).
+When C++ is your hammer, everything starts to look like your thumb.
+(Unknown author).
+I guess somebody got pretty fustrated with good ole C++ :-)</description>
+    </item>
+    
+    <item>
+      <title>Kurt Vonnegut - R.I.P.</title>
+      <link>https://miroadamy.com/posts/2007-04-11-kurt-vonnegut-rip/</link>
+      <pubDate>Wed, 11 Apr 2007 23:39:47 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-11-kurt-vonnegut-rip/</guid>
+      <description>It is a sad news - Kurt Vonnegut Jr., one of the great sci-fi writers, died at the age of 84.
+Thanks for all the great hours spent reading many of great books he wrote over last 55 years. I guess that best way how to show respect is re-read something he wrote - like this one.</description>
+    </item>
+    
+    <item>
+      <title>Long weekend coming</title>
+      <link>https://miroadamy.com/posts/2007-04-04-long-weekend-coming/</link>
+      <pubDate>Wed, 04 Apr 2007 22:30:41 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-04-long-weekend-coming/</guid>
+      <description>I have decided to take weekend off. No catching up, no work, no stress. And it will be a proper weekend - 4 days long in total because both Friday and Monday are statutory holidays in Thinknostic. Great opportunity to relax, decompress, catch up on some reading and audio books and do something fun. And maybe gettogether with friends and celebrate Vlad&#39;s birthday. After all, the 28H is not every year :-)</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2007-03-19-quote-of-the-day-5/</link>
+      <pubDate>Mon, 19 Mar 2007 19:29:00 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-19-quote-of-the-day-5/</guid>
+      <description>Often, scientific &#34;failure&#34; teaches you more than success ... An experiment which gives you a clear answer is not a failure; it can surprise you, though. Failure comes only when an experiment answers no question -- usually because it&#39;s been done with ignorance or sloppiness. The true trick in science is to know what question your experiment is truly asking.
+ Gregory Benford
+Ten Thousand Years of Solitude</description>
+    </item>
+    
+    <item>
+      <title>Google Notebook - new feature</title>
+      <link>https://miroadamy.com/posts/2007-03-18-google-notebook-new-feature/</link>
+      <pubDate>Sun, 18 Mar 2007 21:22:20 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-18-google-notebook-new-feature/</guid>
+      <description>Actually, maybe not really new, but I have noticed it just two days ago while trying to to clean up the clips collected from the Web.
+It is sort of hidden feature, but very useful one: In Actions you can find &#39;Export in Google Docs &amp;amp; Spreadsheet&#39;. It takes the current notebook and makes it a new document in you Google Docs. All texts, including pictures are transferred. It does very good job in keeping meaningful structure of the newly created document: every note will become an URL heading in document, pointing to the original.</description>
+    </item>
+    
+    <item>
+      <title>India Time Zone mystery solved</title>
+      <link>https://miroadamy.com/posts/2007-03-14-india-time-zone-mystery-solved/</link>
+      <pubDate>Wed, 14 Mar 2007 21:11:15 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-14-india-time-zone-mystery-solved/</guid>
+      <description>It happened few times in past few months: using Google to find out what is the time in Bombay or New Delhi, I used the search phrase &#34;India time zone&#34; and got two types of results. One was referring to the India Time zone as UTC+9hrs and the other was giving the correct answer - UTC+5:30. I know that whole India is in single time zone and this time zone is 5.</description>
+    </item>
+    
+    <item>
+      <title>Webbits 2007-06</title>
+      <link>https://miroadamy.com/posts/2007-03-13-webbits-2007-06/</link>
+      <pubDate>Tue, 13 Mar 2007 22:49:25 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-13-webbits-2007-06/</guid>
+      <description>Time to clean up the link cache again. I did not surfed much during last two weekends, so there is less to clean than usual :-).
+If your computers are still confused about the DST change, here are some links that may be useful dealing with the issues - for Windows as well as for Mac. Speaking of which, I just checked that my Fedora Core 6 Linux-based NAS did recognized the DST without any issues at all as well.</description>
+    </item>
+    
+    <item>
+      <title>Times are a-changing</title>
+      <link>https://miroadamy.com/posts/2007-03-12-times-are-a-changing/</link>
+      <pubDate>Mon, 12 Mar 2007 20:07:13 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-12-times-are-a-changing/</guid>
+      <description>This year unusually early, we switched the Daylight Saving Time. The clocks did spring ahead one hour on Sunday morning. Btw, this is a good mnemonic how to remember which direction does the clock go: it Springs ahead and it Falls back ... Technically, it was decision of the US legislative to start DST early but because of the integration of the two economies, Canada had not much choice, just to follow.</description>
+    </item>
+    
+    <item>
+      <title>Computers Ltd.</title>
+      <link>https://miroadamy.com/posts/2007-03-11-computers-ltd/</link>
+      <pubDate>Sun, 11 Mar 2007 20:25:32 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-11-computers-ltd/</guid>
+      <description>Same as last few weeks, I have spent most of the weekend reading. Unlike the weekends before, this time I was actually reading a book, not source code. It was nice change ...
+I have picked this small book with title Computers Ltd in Ottawa Public Library last Friday, while returning some books on CD. Written by David Harel of Weizmann Institute of Science, Rehovot, the book is trying to explain what computers cannot do.</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2007-03-10-quote-of-the-day-4/</link>
+      <pubDate>Sat, 10 Mar 2007 20:07:05 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-10-quote-of-the-day-4/</guid>
+      <description>Data is zeroes and ones — software is zeroes and ones and hard work.
+As seen on The Third Bit.</description>
+    </item>
+    
+    <item>
+      <title>Security of the browsers</title>
+      <link>https://miroadamy.com/posts/2007-03-06-security-of-the-browsers/</link>
+      <pubDate>Tue, 06 Mar 2007 23:00:27 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-06-security-of-the-browsers/</guid>
+      <description>I have just finished listening to the back-episodes of Security Now! # 38, where Steve Gibson describes his approach to securely browsing Web without antivirus and with Internet Explorer. The idea in a nutshell is - use properly locked down IE zones. Steve has modified the security settings of the default (Internet zone) to maximum: not allowing any scripting, cookies etc. Which makes many sites unusable, of course because increasing number of browsers does require Javascript enabled - or else game is over.</description>
+    </item>
+    
+    <item>
+      <title>Project management using Wiki</title>
+      <link>https://miroadamy.com/posts/2007-03-05-project-management-using-wiki/</link>
+      <pubDate>Mon, 05 Mar 2007 22:50:04 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-05-project-management-using-wiki/</guid>
+      <description>It has been half a year in March since we have started to use Wiki as main project management, collaboration and content creation tool. I think this is period long enough to look back and summarize what we have discovered, what worked and what not. This was not the first attempt to use Wiki in this context - however, it was first case when the result can be considered full success.</description>
+    </item>
+    
+    <item>
+      <title>Ottawa Mac User&#39;s group meeting</title>
+      <link>https://miroadamy.com/posts/2007-03-04-ottawa-mac-users-group-meeting/</link>
+      <pubDate>Sun, 04 Mar 2007 17:02:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-04-ottawa-mac-users-group-meeting/</guid>
+      <description>Thanks to exploring the Google calendar (when playing with public calendars related to Ottawa) I found the Ottawa Mac User group&#39;s calendar and discovered that
+a) they exist
+b) they hold monthly meetings in nice Irish pub at the Market 
+The group is actually named Bytown Mac User&#39;s group, for the reasons explained on the Web site or here.
+So I decided to go there. I thought - what the heck, worst thing that can happen that I will have a glass of Guinness at the pub I never visited before, which is not a bad thing at all.</description>
+    </item>
+    
+    <item>
+      <title>Programmer&#39;s classification</title>
+      <link>https://miroadamy.com/posts/2007-03-03-programmers-classification/</link>
+      <pubDate>Sat, 03 Mar 2007 22:00:04 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-03-programmers-classification/</guid>
+      <description>Gabo sent me this link - it is some half-joke half serious knock-off of the Myers-Briggs personality classification. Same as in case of MB, it gives you four letters. Unlike in MB, the letters are different:
+Instead of E/I - Extroversion or Introversion, N/S (iNtuitive / Sensing), T/F (Thinking/Feeling) and J/P (Judging/Perceiving),
+it classifies you either as D/P - Doer or Planner, L/H - Low or High level programmer, S/T - Solo or Team programmer and C/B Conservative/liBeral.</description>
+    </item>
+    
+    <item>
+      <title>Webbits 2007-05</title>
+      <link>https://miroadamy.com/posts/2007-02-27-webbits-2007-05/</link>
+      <pubDate>Tue, 27 Feb 2007 21:52:10 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-27-webbits-2007-05/</guid>
+      <description>It is not Friday today and I am obviously late with next link collection. Somehow I have completely missed the weekend - so much was happening at work that I had barely had time to notice what is going on on the Web. My Google Reader is overflowing with new links and there are lots of new links in delicious. Let&#39;s start.
+Merlin Mann of 43folders started to do videopodcasts - have a look (in the second edition he interviews Jonathan Coulton, famous creator of the Code Monkey song).</description>
+    </item>
+    
+    <item>
+      <title>Good book on coding and software development</title>
+      <link>https://miroadamy.com/posts/2007-02-25-good-book-on-coding-and-software-development/</link>
+      <pubDate>Sun, 25 Feb 2007 23:23:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-25-good-book-on-coding-and-software-development/</guid>
+      <description>I have picked it two days ago in Chapters - Code Craft by Pete Goodliffe. Somehow similar in topics covered as the Rapid Development or From Coder to Developer - but newer. Divided into 6 parts:
+Part I - At the codeface - defensive programming techniques, naming, formatting, commenting, error handling
+Part II - The secret life of code - code contruction tools, testing and debugging methods, building
+Part III - The Shape of the code - code design, architecture, source code growth and decay over time</description>
+    </item>
+    
+    <item>
+      <title>Webbits 2007-04</title>
+      <link>https://miroadamy.com/posts/2007-02-16-webbits-2007-04/</link>
+      <pubDate>Fri, 16 Feb 2007 23:56:40 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-16-webbits-2007-04/</guid>
+      <description>It is Friday again, time to clean up the link cache. I&#39;ll try to make this a Friday affair and stick with weekly schedule.
+The DRM is having hard time: after Steve Jobs article about how DRM is bad, EMI announcement of considering dropping the DRM, another of Net celebrities - cryptography legend Bruce Schneier (of Applied Crypography and Blowfish fame) wrote an article for Forbes Why Vista DRM Is Bad for you.</description>
+    </item>
+    
+    <item>
+      <title>Many ways how to &#34;Get a Mac&#34;</title>
+      <link>https://miroadamy.com/posts/2007-02-13-many-ways-how-to-get-a-mac/</link>
+      <pubDate>Tue, 13 Feb 2007 23:45:52 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-13-many-ways-how-to-get-a-mac/</guid>
+      <description>I found out by accident that the famous Get a Mac ads exists in many versions:
+Some nations have their own actors
+http://www.apple.com/uk/getamac/ads/
+http://www.apple.com/jp/getamac/ads/
+Other have only just language version of Long &amp;amp;&amp;amp; Hodgman act
+http://www.apple.com/de/getamac/ads/
+http://www.apple.com/fr/getamac/ads/
+http://www.apple.com/it/getamac/ads/
+http://www.apple.com/es/getamac/
+The Austria and German speaking part of Switzerland are using German version of the ads (no surprise there) - http://www.apple.com/chde/getamac/ - and the francophone part of Switzerland uses the French version. As it looks like, Italian and Romansch speaking Swiss do not count :-(</description>
+    </item>
+    
+    <item>
+      <title>NAS Odyssey: Up and running</title>
+      <link>https://miroadamy.com/posts/2007-02-12-nas-odyssey-up-and-running/</link>
+      <pubDate>Mon, 12 Feb 2007 23:31:55 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-12-nas-odyssey-up-and-running/</guid>
+      <description>After lots of attempts (see here, here and here), I have finally resolved my disk space problems and the RAID-5 NAS server is up and running since about two weeks now. I have stayed with Fedora 6, successfully installed Samba, configured the shares and copied all family JPEG&#39;s, videos, MP3&#39;s etc onto the huge 907 GB large RAID5 share. The old NSLU2 is still dead - I did not have any time to try to re-flash it, but all content of it&#39;s disk was without any issues readable by the new server (the NSLU2 was using ext3 filesystem) so I did not even have to try to use backups.</description>
+    </item>
+    
+    <item>
+      <title>Who is the most successful programmer of the world ?</title>
+      <link>https://miroadamy.com/posts/2007-02-11-who-is-the-most-successful-programmer-of-the-world/</link>
+      <pubDate>Sun, 11 Feb 2007 23:52:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-11-who-is-the-most-successful-programmer-of-the-world/</guid>
+      <description>Depending on how you define success, you may get different answer to the question above.
+If you choose for the success criteria:
+- amount of money made by programming AND
+- number of people using the product AND
+- impact on the community at large
+the answer is probably Charles (Karoly) Simonyi, Hungarian born ex-Microsoft employee, billionaire, astronaut and original author of Microsoft Word.
+True, there certainly are people that made more money than him and their fortune is closely related to software - but unlike Simonyi none of them was actively programming for major part of their career.</description>
+    </item>
+    
+    <item>
+      <title>Math is fun</title>
+      <link>https://miroadamy.com/posts/2007-02-10-math-is-fun/</link>
+      <pubDate>Sat, 10 Feb 2007 23:23:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-10-math-is-fun/</guid>
+      <description>I&#39;ve stumbled upon this page, full of math jokes. Many of them are IMHO really good and extremly funny (your mileage may vary, though).
+My favorite few:
+Two male mathematicians are in a bar. The first one says to the second that the average person knows very little about basic mathematics. The second one disagrees, and claims that most people can cope with a reasonable amount of math.
+The first mathematician goes off to the washroom, and in his absence the second calls over the waitress.</description>
+    </item>
+    
+    <item>
+      <title>Blogs of the week (9-Feb)</title>
+      <link>https://miroadamy.com/posts/2007-02-09-blogs-of-the-week-9-feb/</link>
+      <pubDate>Fri, 09 Feb 2007 19:51:46 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-09-blogs-of-the-week-9-feb/</guid>
+      <description>1) Bruce Schneier
+Bruce is author of several excellent books on cryptography, from very easy, thriller like read to a classic work Applied Cryptograhy (highly recommended). The blog goes back to 2004 and is fascinating read.
+2) Paul Thurrott
+Paul is the Windows guy from Windows Weekly podcast (recommended) who also runs the Winsupersite . He is one of the few people who focus on Microsoft technology and still keep balanced, fair view of the affairs.</description>
+    </item>
+    
+    <item>
+      <title>Webbits - 2007-03</title>
+      <link>https://miroadamy.com/posts/2007-02-08-webbits-2007-03/</link>
+      <pubDate>Thu, 08 Feb 2007 21:46:44 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-08-webbits-2007-03/</guid>
+      <description>How to extend the life of the Vista trial period to 120 days: Technically, if you try to use Ultimate Edition (which is legally allowed to use in VM) nothing really can prevent an unscrupulous user to keep using Vista for free - for the price of re-installing the VM every 120 days ...
+Few Mac goodies: Adium is out in version 1.0 - get it here - more details on http://adiumx.</description>
+    </item>
+    
+    <item>
+      <title>Webbits - 2007-02</title>
+      <link>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</link>
+      <pubDate>Sun, 04 Feb 2007 23:38:11 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</guid>
+      <description>Time to clean up the link cache once again.
+Obviously, most of the news on Techsites are Vista related. Web Worker&#39;s daily gives you 10 reasons why to upgrade to Vista and 10 reasons why not. MacHouse comments on complicated upgrade paths and Brian Briggs offers decision chart for the updgradees.
+General spirit - compared to the launch of Windows 95 - is fairly cynical. The italian Mac bloggers sums it up: Niente di nuovo in Vista.</description>
+    </item>
+    
+    <item>
+      <title>Nice resource on TCP/IP and Networking</title>
+      <link>https://miroadamy.com/posts/2007-02-03-nice-resource-on-tcpip-and-networking/</link>
+      <pubDate>Sat, 03 Feb 2007 23:26:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-03-nice-resource-on-tcpip-and-networking/</guid>
+      <description>As of today, I am at podcast #26 of Security Now! and Steve with Leo are have started their &#34;foundation series&#34; on How Internet works. It is really great and enjoyable topic, nicely and very enjoyably presented. Given the delivery format limitation (voice without possibility of adding any drawing), there is of course limit on the amount of details that can be presented. Being a curious creature, I wanted to dig little bit deeper into &#34;</description>
+    </item>
+    
+    <item>
+      <title>Mac is the way to enlightenment</title>
+      <link>https://miroadamy.com/posts/2007-01-28-mac-is-the-way-to-enlightenment/</link>
+      <pubDate>Sun, 28 Jan 2007 11:55:46 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-28-mac-is-the-way-to-enlightenment/</guid>
+      <description>Even Dalai-lama is using it. See the proof -http://flickr.com/photos/timsimpson/255420579/
+Note for Gabo - it looks like Macbook Pro :-).</description>
+    </item>
+    
+    <item>
+      <title>Evergreen Security Now!</title>
+      <link>https://miroadamy.com/posts/2007-01-25-evergreen-security-now/</link>
+      <pubDate>Thu, 25 Jan 2007 23:07:26 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-25-evergreen-security-now/</guid>
+      <description>I have started to listen the Security Now! podcasts from the very beginning - sometimes in summer 2005. Unlike some news-and-rumours podcasts that sound kind of weird if you listen them month later, this one did not loose a bit of it&#39;s freshness. Even listening the story of Sony Rootkit discovery again was very entertaining. I am now at first &#34;mod-4&#34; Q&amp;amp;A podcast, Number 16.
+Every time I listen to Steve Gibson, one of two things happens.</description>
+    </item>
+    
+    <item>
+      <title>Too good to be true ?</title>
+      <link>https://miroadamy.com/posts/2007-01-19-too-good-to-be-true/</link>
+      <pubDate>Fri, 19 Jan 2007 23:08:20 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-19-too-good-to-be-true/</guid>
+      <description>Since over 1 month I am using Web based tools for calendar, email, task management, bookmark management and note taking. One problem that these tools have is that as soon as your connection goes down, you are done. Game over. Few days ago I have discovered Scrybe, a tool which maybe can address this problem. Unfortunately, I cannot tell from my own experience, because the system is in private Beta and does allow you to register.</description>
+    </item>
+    
+    <item>
+      <title>Improve your English, use spellchecking !</title>
+      <link>https://miroadamy.com/posts/2007-01-17-improve-your-english-use-spellchecking/</link>
+      <pubDate>Wed, 17 Jan 2007 23:06:27 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-17-improve-your-english-use-spellchecking/</guid>
+      <description>For Jack, Manju and Michel: here is the poem we talked about.
+Eye have a spelling chequer
+It came with my pea sea
+It plainly marques four my revue
+Miss steaks eye kin knot sea.
+Eye strike a key and type a word
+And weight four it two say
+Weather eye am wrong oar write
+It shows me strait a weigh.
+As soon as a mist ache is maid
+It nose bee fore two long</description>
+    </item>
+    
+    <item>
+      <title>From latest podcasts</title>
+      <link>https://miroadamy.com/posts/2007-01-12-from-latest-podcasts/</link>
+      <pubDate>Fri, 12 Jan 2007 23:56:57 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-12-from-latest-podcasts/</guid>
+      <description>Lot&#39;s of things happening this week - Macworld and CES generated lots of activity in podcasts. Macbreak has interesting series of interviews done (mostly) by Leo Laporte and Merlin Mann with various people from Macworld. If you are interested how the author of Cocoalicious looks like in flesh, go and grab the few Macbreak episodes. There is also interesting interview with creators of the Modbook (Macbook based tablet), the Omni group, makers of the great OmniOutliner who recently release OmniPlan.</description>
+    </item>
+    
+    <item>
+      <title>Repetition is the mother of ... the Web</title>
+      <link>https://miroadamy.com/posts/2007-01-11-repetition-is-the-mother-of-the-web/</link>
+      <pubDate>Thu, 11 Jan 2007 21:39:50 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-11-repetition-is-the-mother-of-the-web/</guid>
+      <description>I had a discussion few days ago with a friend of mine on blogging. The topic was that as soon as something happens on the Net, thousands and sometimes even more people are writing, posting, discussing and blogging about the very same topic. A sort of information tidal wave that spreads across the cyberspace. Which was according to my friend huge waste of time and energy. Generally, he meant, from a whole community perspective, it makes no sense to write about something unless there is reasonable chance you will be saying something very unique that nobody else will likely say - otherwise it adds no value, just clutters the content by repeating and rephrasing the already said.</description>
+    </item>
+    
+    <item>
+      <title>Vocabulary test</title>
+      <link>https://miroadamy.com/posts/2007-01-10-vocabulary-test/</link>
+      <pubDate>Wed, 10 Jan 2007 23:49:25 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-10-vocabulary-test/</guid>
+      <description>Just out of morbid curiosity I did the test, here is the result :-)
+ Your Vocabulary Score: B-
+   You have a zealous love for the English language, and many find your vocabulary edifying.
+Don&#39;t fret that you didn&#39;t get every word right, your vocabulary can be easily ameliorated!
+   How&#39;s Your Vocabulary?</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2007-01-09-quote-of-the-day-3/</link>
+      <pubDate>Tue, 09 Jan 2007 23:37:59 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-09-quote-of-the-day-3/</guid>
+      <description>From today&#39;s Steve Jobs&#39; keynote at Macworld 2007:
+&#34;I skate to where the puck is going to be, not to where it has been. &#34;
+Wayne Gretzky
+I guess everybody is going to write about iPhone - which is OK because it is indeed very interesting gadget and it stole the show. To bad it will be 6 more months until it will be available in the US and (my best hopes) 8-9 months to have it here in Canada.</description>
+    </item>
+    
+    <item>
+      <title>Sony eReader - first impressions</title>
+      <link>https://miroadamy.com/posts/2007-01-03-sony-ereader-first-impression/</link>
+      <pubDate>Wed, 03 Jan 2007 23:12:07 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-03-sony-ereader-first-impression/</guid>
+      <description>I have got my eReader on 30th December, so after few days of playing with it, here are first impressions. I managed to read one book and played with it quite a bit, but I am still learning.
+The quality of the display and &#34;electronic paper&#34; look and feel is great. It actually looks like paper, not like screen. The non-glossy texture surface has same visibility from every angle and it really reads like paper.</description>
+    </item>
+    
+    <item>
+      <title>Looking back on 2006</title>
+      <link>https://miroadamy.com/posts/2007-01-01-looking-back-on-2006/</link>
+      <pubDate>Mon, 01 Jan 2007 21:46:33 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-01-looking-back-on-2006/</guid>
+      <description>The 2006 was truly amazing year. We have accomplished so much - we have created the West end development centre, brought in and started several projects, completed phase 1 of employee conversion, started benefits program, ESOP program, redefined the company visual presence, grew the business and the company size considerably and created foundation for future growth.
+Most important achievemnt is the fun factor - I am again looking forward to go to work - and again since the Montage days the synergy is coming back.</description>
+    </item>
+    
+    <item>
+      <title>Sales as Con Art - or welcome to Direct Energy flat rate plan</title>
+      <link>https://miroadamy.com/posts/2006-12-28-sales-as-con-art-or-welcome-to-direct-energy-flat-rate-plan/</link>
+      <pubDate>Thu, 28 Dec 2006 21:59:16 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-28-sales-as-con-art-or-welcome-to-direct-energy-flat-rate-plan/</guid>
+      <description>During over 8 years living on this continent I&#39;ve developed reasonably thick skin in dealing with business calls, unsolicited mailings and other annoyances of aggressive selling. I was pretty sure nothing can make me really upset. Up until yesterday. Thanks to amazing capability of the Direct Energy sales force who does not take No for an answer.
+But let&#39;s start from the beginning. About 3 weeks ago I started to get frequent calls from Direct Energy about their flat rate plan.</description>
+    </item>
+    
+    <item>
+      <title>Got the Sony reader :-)</title>
+      <link>https://miroadamy.com/posts/2006-12-24-got-the-sony-reader/</link>
+      <pubDate>Sun, 24 Dec 2006 11:24:11 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-24-got-the-sony-reader/</guid>
+      <description>Despite Sony&#39;s attempt to ignore non-US markets and leave Canadians in the cold (pun intended, even if it is still above zero), I have become a proud owner of the wonderful gadget for all eBooks fans. I still do not have it physically, so I cannot put it under the tree. It is coming next week, when my friend who now enjoys the vacation down in the south returns. He was not only very kind to buy one for me too, but he also wrote a wonderfull review which he is going to post on the Net.</description>
+    </item>
+    
+    <item>
+      <title>Statistics are fun</title>
+      <link>https://miroadamy.com/posts/2006-12-23-statistics-are-fun/</link>
+      <pubDate>Sat, 23 Dec 2006 23:42:10 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-23-statistics-are-fun/</guid>
+      <description>I have discovered recently the nice feature of Wordpress - Dashboard which shows number of visits, but also shows incoming links and search phrases the people used to land on my blog. Sometimes, they provide really interesting and surprising insights. Of course, I do not see who they are or where the visitors are coming from - so no privacy concerns.
+Because of my first name (which is btw abreviated form of Miroslav), I am getting some visits from the people interested in the works of Joan Miró - spanish/catalan artist.</description>
+    </item>
+    
+    <item>
+      <title>Few more podcasts</title>
+      <link>https://miroadamy.com/posts/2006-12-21-few-more-podcasts/</link>
+      <pubDate>Thu, 21 Dec 2006 23:38:31 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-21-few-more-podcasts/</guid>
+      <description>Unfortunately, as of previous Sunday I have run out of the backlog in Security Now! episodes, which means that with all three of my favorite podcasts (Twit, Windows Weekly and Security Now!), I am pretty much dependent on their weekly releases. This is a problem, because the sum of 5-7 weekly commutes to work and back (about 15 minutes one way) plus about 40 minutes in a gym every day equals to about 6 hours of required podcast quality content, and the new episodes of three podcasts above cover barely half of it.</description>
+    </item>
+    
+    <item>
+      <title>Surfmania</title>
+      <link>https://miroadamy.com/posts/2006-12-19-surfmania/</link>
+      <pubDate>Tue, 19 Dec 2006 22:19:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-19-surfmania/</guid>
+      <description>Few good links I&#39;ve received from friends:
+- Interesting satelite images of Earth;
+- New way how to discover / browse music - http://www.musicovery.com/
+- All Web 2.0 sites directory, implemented Web 2.0 way
+- On-line media conversion tool. Great for converting MP3 to ringtones :-)
+- If you fly often, the SeatGuru will help you choose good seats and avoid bad ones
+- interesting slow motion videos - http://www.redlake.com/gallery/videos/RDT.aspx</description>
+    </item>
+    
+    <item>
+      <title>Disappearing act of computer magazines</title>
+      <link>https://miroadamy.com/posts/2006-12-17-disappearing-act-of-computer-magazines/</link>
+      <pubDate>Sun, 17 Dec 2006 23:30:24 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-17-disappearing-act-of-computer-magazines/</guid>
+      <description>On my way home from the office (yes, I know, technically it was Sunday) I stopped at my favorite Chapters store just to check what is new. First stop is always magazines, partially because it is right next to the entrance, partially because it is on the shortest path to Starbucks counter inside Chapters. For many years, there used to be two shelves with computer magazines. Now there is only one.</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2006-12-14-quote-of-the-day-2/</link>
+      <pubDate>Thu, 14 Dec 2006 20:49:18 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-14-quote-of-the-day-2/</guid>
+      <description>Thought of the day:
+... Too much to learn. Too much bandwidth crowding the channels of communication. We can’t listen fast enough. We’re left standing on our tiptoes all the time
+ Greg Bear, The Darwin&#39;s Radio
+This does not sound very optimistic, which is quite representative. I am down with bad headache, cannot really think straight, spending time sleeping, reading a book (above) and surfing the Web.
+I found out that I made it to Ottawa Blogger&#39;s list and learned a new word: splogger</description>
+    </item>
+    
+    <item>
+      <title>Unknown celebrity</title>
+      <link>https://miroadamy.com/posts/2006-12-10-unknown-celebrity/</link>
+      <pubDate>Sun, 10 Dec 2006 13:50:12 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-10-unknown-celebrity/</guid>
+      <description>Yes, I know, the title sounds like oxymoron and to certain degree, it is. What it should maybe say is Person who should have been celebrity ...
+I am not going anywere close to movies or entertainment industry with this. There are more than enough sites, blogs and gossip channels out there that look at life of movie stars or singers. I will stay within the world of computers and technology, which has its own heros and celebrities, albeit known in smaller groups.</description>
+    </item>
+    
+    <item>
+      <title>Too many ebooks, too little time</title>
+      <link>https://miroadamy.com/posts/2006-12-08-too-many-ebooks-too-little-time/</link>
+      <pubDate>Fri, 08 Dec 2006 23:11:21 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-08-too-many-ebooks-too-little-time/</guid>
+      <description>http://manybooks.net/. &#39;nough said.</description>
+    </item>
+    
+    <item>
+      <title>Security now</title>
+      <link>https://miroadamy.com/posts/2006-12-02-security-now/</link>
+      <pubDate>Sat, 02 Dec 2006 20:38:04 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-02-security-now/</guid>
+      <description>After listening for over week to Security Now! podcast (thanks, Steve, thanks Leo and happy birthday), I&#39;ve decided to actually do something about the security on computers around. I started to scanning my home network using &#34;Shields Up&#34; and was happy to found that the only open port was SSH, exactly as I thought I configured it.
+As next step, I followed the advice from this podcast and used my hosts file to block out ads servers and other internet vermins.</description>
+    </item>
+    
+    <item>
+      <title>Podcast du jour</title>
+      <link>https://miroadamy.com/posts/2006-11-28-podcast-du-jour/</link>
+      <pubDate>Tue, 28 Nov 2006 22:21:13 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-11-28-podcast-du-jour/</guid>
+      <description>This is for Gabo, Derek, Steve and others who talked to me about podcasts and about which podcasts are worth listening to.
+Since I bought Nano2, I spend lot&#39;s of time listening to podcasts. Pretty much all driving time, walking time and time in the gym is spend listening to wide selection of topics and to people producing them.
+Here is my current list plus some additional recommendations:
+1) TWIT and all around Leo Laporte.</description>
+    </item>
+    
+    <item>
+      <title>Weekend nuggets</title>
+      <link>https://miroadamy.com/posts/2006-11-26-weekend-nuggets/</link>
+      <pubDate>Sun, 26 Nov 2006 21:27:43 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-11-26-weekend-nuggets/</guid>
+      <description>Technically, it was Sunday so rather than working or reading some serious stuff, I have decided to take a long walk (to catch up with lot&#39;s of new podcasts downloaded yesterday) and to surf the net just for fun. Here is some of the interesting discoveries:
+There was a rumor on the net that some Indian student in Kerala discovered a way how to store over 450 GB of data on a sheet of paper.</description>
+    </item>
+    
+    <item>
+      <title>Are blogs the threat for professional journalists ?</title>
+      <link>https://miroadamy.com/posts/2006-11-25-are-blogs-the-threat-for-professional-journalists/</link>
+      <pubDate>Sat, 25 Nov 2006 23:28:32 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-11-25-are-blogs-the-threat-for-professional-journalists/</guid>
+      <description>Thanks to 6 hours difference, I usually read tomorrow edition of Slovak and Czech newspapers on the Net one day ahead. Most of them switches to new edition at midnight, which is 6PM our time. I am doing this for several years already. What is different between now and 2-3 years ago is what I read. While before it were mostly articles written by journalists and news industry professionals, now I read mostly blogs.</description>
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2006-09-08-quote-of-the-day/</link>
+      <pubDate>Fri, 08 Sep 2006 00:02:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-09-08-quote-of-the-day/</guid>
+      <description>Testing by itself does not improve software quality. Test results are an indicator of quality, but in and of themselves, they don&#39;t improve it. Trying to improve software quality by increasing the amount of testing is like trying to lose weight by weighing yourself more often.
+What you eat before you step onto the scale determines how much you will weigh, and the software development techniques you use determine how many errors testing will find.</description>
+    </item>
+    
+    <item>
+      <title>Internal: Free books to a good home :-)</title>
+      <link>https://miroadamy.com/posts/2006-09-03-internal-free-books-to-a-good-home/</link>
+      <pubDate>Sun, 03 Sep 2006 23:26:16 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-09-03-internal-free-books-to-a-good-home/</guid>
+      <description>Again, I need to make some space on a shelf and I simply cannot throw away a book ... This time I have decided to reduce my Java bookshelf to allow new (mostly .NET books) come in. No, I am not abandoning Java - but for next 8-12 months I am very likely fully booked in .NET projects, and after that, it will be time to upgrage to new sets of books for Java 1.</description>
+    </item>
+    
+    <item>
+      <title>Road to Mac I: Hard Decisions</title>
+      <link>https://miroadamy.com/posts/2006-08-22-road-to-mac-i-hard-decisions/</link>
+      <pubDate>Tue, 22 Aug 2006 22:53:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-22-road-to-mac-i-hard-decisions/</guid>
+      <description>January - July 2006 This is the story of a journey travelled quite often these days. It describes discoveries, joys and frustrations of one long time Windows user learning how to use Mac OS-X. Many have done this before, many have blogged about it.
+The reason why I am writing this down is mostly to remember, and as well because I can. One of the assumes uses of the new MacBook was creative writing so I guess I am trying fulfill the promise to myself.</description>
+    </item>
+    
+    <item>
+      <title>On blogs, bloggers, blogging</title>
+      <link>https://miroadamy.com/posts/2006-08-22-on-blogs-bloggers-blogging/</link>
+      <pubDate>Tue, 22 Aug 2006 07:42:55 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-22-on-blogs-bloggers-blogging/</guid>
+      <description>If you would ask me to pick one technology phenomenon that had the largest impact on and was the most characteristic for the technology during the years 1995-2000, my answer would be “Web, of course”. For the years 2000-2003 I’d vote for eCommerce, online applications and collaboration (like Google, eBay, Amazon and many others). And for the last 3 years, I would definitely pick online communities and blogs.
+Blogs are like tsunami that is changing the landscape of online content.</description>
+    </item>
+    
+    <item>
+      <title>Hello world!</title>
+      <link>https://miroadamy.com/posts/2006-08-19-hello-world-2/</link>
+      <pubDate>Sat, 19 Aug 2006 18:24:13 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-19-hello-world-2/</guid>
+      <description>Since R&amp;amp;K published the The Book, the title above became de-facto standard way how to start anything. Which is one of the two reasons why I used it as title for this very first entry. The second reason is that the friendly folks from to Wordpress.com have created the title and the first blog entry for me.</description>
     </item>
     
   </channel>

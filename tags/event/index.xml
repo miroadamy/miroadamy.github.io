@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>event on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/event/</link>
+    <description>Recent content in event on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 17 Apr 2008 09:50:06 -0400</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/event/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Heroes Happened ... here</title>
+      <link>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</link>
+      <pubDate>Thu, 17 Apr 2008 09:50:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</guid>
+      <description>Last week I attended one day event organized by Microsoft named Heroes Happens Here. It is series of introduction targeting new products: Windows Server 2008 (not out yet) SQL Server 2008 (not out yet) and Visual Studio 2008 (out and well).
+I do not do much Microsoft development these days - my world is currently rather unevenly divided between Java (about 70 %), Web-ish technologies (XHTML, CSS, JavaScript, some Ruby) and OS-X (Objective C) which I am trying to squeeze in and get finally started.</description>
+    </item>
+    
+    <item>
+      <title>Unify Tour 2007 and Open Source</title>
+      <link>https://miroadamy.com/posts/2007-04-19-unify-tour-2007-and-open-source/</link>
+      <pubDate>Thu, 19 Apr 2007 23:44:16 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-19-unify-tour-2007-and-open-source/</guid>
+      <description>This week was full with attending the demos and workshops. On Tuesday, I spent half day on the Microsoft Unify Tour 2007. I planned to be there full day but an important business meeting made me change the plan. Fortunately, the sessions should be available recorded on the Web, so I will be able to check them later. The topic was bang-on - considering that we are in final phase of large project, using distributed network of SQL Server 2005 installations with replication and location was same as usual.</description>
+    </item>
+    
+    <item>
+      <title>Ottawa Mac User&#39;s group meeting</title>
+      <link>https://miroadamy.com/posts/2007-03-04-ottawa-mac-users-group-meeting/</link>
+      <pubDate>Sun, 04 Mar 2007 17:02:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-04-ottawa-mac-users-group-meeting/</guid>
+      <description>Thanks to exploring the Google calendar (when playing with public calendars related to Ottawa) I found the Ottawa Mac User group&#39;s calendar and discovered that
+a) they exist
+b) they hold monthly meetings in nice Irish pub at the Market 
+The group is actually named Bytown Mac User&#39;s group, for the reasons explained on the Web site or here.
+So I decided to go there. I thought - what the heck, worst thing that can happen that I will have a glass of Guinness at the pub I never visited before, which is not a bad thing at all.</description>
+    </item>
+    
+  </channel>
+</rss>

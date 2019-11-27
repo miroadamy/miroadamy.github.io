@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>media on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/media/</link>
+    <description>Recent content in media on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 16 Feb 2007 23:56:40 -0500</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/media/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Webbits 2007-04</title>
+      <link>https://miroadamy.com/posts/2007-02-16-webbits-2007-04/</link>
+      <pubDate>Fri, 16 Feb 2007 23:56:40 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-16-webbits-2007-04/</guid>
+      <description>It is Friday again, time to clean up the link cache. I&#39;ll try to make this a Friday affair and stick with weekly schedule.
+The DRM is having hard time: after Steve Jobs article about how DRM is bad, EMI announcement of considering dropping the DRM, another of Net celebrities - cryptography legend Bruce Schneier (of Applied Crypography and Blowfish fame) wrote an article for Forbes Why Vista DRM Is Bad for you.</description>
+    </item>
+    
+    <item>
+      <title>Webbits - 2007-03</title>
+      <link>https://miroadamy.com/posts/2007-02-08-webbits-2007-03/</link>
+      <pubDate>Thu, 08 Feb 2007 21:46:44 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-08-webbits-2007-03/</guid>
+      <description>How to extend the life of the Vista trial period to 120 days: Technically, if you try to use Ultimate Edition (which is legally allowed to use in VM) nothing really can prevent an unscrupulous user to keep using Vista for free - for the price of re-installing the VM every 120 days ...
+Few Mac goodies: Adium is out in version 1.0 - get it here - more details on http://adiumx.</description>
+    </item>
+    
+    <item>
+      <title>Webbits - 2007-02</title>
+      <link>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</link>
+      <pubDate>Sun, 04 Feb 2007 23:38:11 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</guid>
+      <description>Time to clean up the link cache once again.
+Obviously, most of the news on Techsites are Vista related. Web Worker&#39;s daily gives you 10 reasons why to upgrade to Vista and 10 reasons why not. MacHouse comments on complicated upgrade paths and Brian Briggs offers decision chart for the updgradees.
+General spirit - compared to the launch of Windows 95 - is fairly cynical. The italian Mac bloggers sums it up: Niente di nuovo in Vista.</description>
+    </item>
+    
+    <item>
+      <title>Statistics are fun</title>
+      <link>https://miroadamy.com/posts/2006-12-23-statistics-are-fun/</link>
+      <pubDate>Sat, 23 Dec 2006 23:42:10 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-23-statistics-are-fun/</guid>
+      <description>I have discovered recently the nice feature of Wordpress - Dashboard which shows number of visits, but also shows incoming links and search phrases the people used to land on my blog. Sometimes, they provide really interesting and surprising insights. Of course, I do not see who they are or where the visitors are coming from - so no privacy concerns.
+Because of my first name (which is btw abreviated form of Miroslav), I am getting some visits from the people interested in the works of Joan Miró - spanish/catalan artist.</description>
+    </item>
+    
+    <item>
+      <title>Surfmania</title>
+      <link>https://miroadamy.com/posts/2006-12-19-surfmania/</link>
+      <pubDate>Tue, 19 Dec 2006 22:19:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-19-surfmania/</guid>
+      <description>Few good links I&#39;ve received from friends:
+- Interesting satelite images of Earth;
+- New way how to discover / browse music - http://www.musicovery.com/
+- All Web 2.0 sites directory, implemented Web 2.0 way
+- On-line media conversion tool. Great for converting MP3 to ringtones :-)
+- If you fly often, the SeatGuru will help you choose good seats and avoid bad ones
+- interesting slow motion videos - http://www.redlake.com/gallery/videos/RDT.aspx</description>
+    </item>
+    
+    <item>
+      <title>Disappearing act of computer magazines</title>
+      <link>https://miroadamy.com/posts/2006-12-17-disappearing-act-of-computer-magazines/</link>
+      <pubDate>Sun, 17 Dec 2006 23:30:24 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-17-disappearing-act-of-computer-magazines/</guid>
+      <description>On my way home from the office (yes, I know, technically it was Sunday) I stopped at my favorite Chapters store just to check what is new. First stop is always magazines, partially because it is right next to the entrance, partially because it is on the shortest path to Starbucks counter inside Chapters. For many years, there used to be two shelves with computer magazines. Now there is only one.</description>
+    </item>
+    
+    <item>
+      <title>Weekend special</title>
+      <link>https://miroadamy.com/posts/2006-12-16-weekend-special/</link>
+      <pubDate>Sat, 16 Dec 2006 18:47:37 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-16-weekend-special/</guid>
+      <description>Weekend time again. As few times before, here are few discoveries from the Web:
+Google is pushing Internet Explorer 7. Their own version, using new Internet Explorer Administration Kit. It is not really different version - just configured with Google as default search engine and Google toolbar. Nothing that little more experienced user would not do himself. I am not sure how successfull this will be - but I am pretty sure that this was not what Microsoft had in mind how this tools should be used for.</description>
+    </item>
+    
+  </channel>
+</rss>

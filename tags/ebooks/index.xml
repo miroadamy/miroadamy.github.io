@@ -6,19 +6,78 @@
     <description>Recent content in ebooks on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Apr 2007 22:42:58 -0400</lastBuildDate>
+    <lastBuildDate>Thu, 11 Oct 2007 23:51:23 -0400</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/ebooks/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>One more reason to like TWIT</title>
-      <link>https://miroadamy.com/posts/2007-04-23-one-more-reason-to-like-twit/</link>
-      <pubDate>Mon, 23 Apr 2007 22:42:58 -0400</pubDate>
+      <title>iPod touch - first impressions</title>
+      <link>https://miroadamy.com/posts/2007-10-11-ipod-touch-first-impressions/</link>
+      <pubDate>Thu, 11 Oct 2007 23:51:23 -0400</pubDate>
       
-      <guid>https://miroadamy.com/posts/2007-04-23-one-more-reason-to-like-twit/</guid>
-      <description>As it happens, both my most favorite podcasters - Leo Laporte as well as Steve Gibson are passionate e-book readers. They have both purchased and are (mostly) happy users of the Sony PRS-500 aka Sony Reader in addition to several other platforms - (Palm, Pocket PC). In the latest podcasts - both in TWIT as well as Security Now!, the eBooks and eReader got quite some publicity :-).
-Both had similar experience with PDF format on PRS-500 as myself - but Steve mentioned the PDF re-flowing the document to make it better suites for small screen - something I have looked into but did not get it working quite right.</description>
+      <guid>https://miroadamy.com/posts/2007-10-11-ipod-touch-first-impressions/</guid>
+      <description>No, I have not bought it yet, to big disappointment of Gabo and Shane - sorry guys. I wanted to buy it but all FutureShop stores in Ottawa are hopelessly sold out and on-line delivery is 7-10 business days - which I hope I will beat if these guys get new shipment (maybe tomorrow ?).
+I played with two demo pieces though for about 30 minutes, and here are the first impressions:</description>
+    </item>
+    
+    <item>
+      <title>Experiment with Sony Reader battery life</title>
+      <link>https://miroadamy.com/posts/2007-09-19-experiment-with-sony-reader-battery-life/</link>
+      <pubDate>Wed, 19 Sep 2007 22:00:42 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-19-experiment-with-sony-reader-battery-life/</guid>
+      <description>After returning from holidays with completely drained PRS 500 (see field test blog entry), I have decided to test what is the battery life of the fully charged reader without any usage at all. It was easy as I was pretty busy after being away 3 weeks.
+The reader was fully charged on 29th of August (24 hrs with wall charger). After that, I did not use it at all, only checked every 2-3 days the status (the reader was switched off except this brief check).</description>
+    </item>
+    
+    <item>
+      <title>Field test of Sony eReader</title>
+      <link>https://miroadamy.com/posts/2007-09-17-field-test-of-sony-ereader/</link>
+      <pubDate>Mon, 17 Sep 2007 23:00:41 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-17-field-test-of-sony-ereader/</guid>
+      <description>One of the many gadgets I have packed for the summer vacation was of course Sony Reader and SD card with nice selection of texts. It was fresh and fully charged, so I assumed that I will be well prepared for the gaps in program during the following three weeks ahead of us and for the long flights over Atlantic.
+Obviously, the flight was first moment where Reader was used. During the 7 hours, I spent about 3-4 hours reading.</description>
+    </item>
+    
+    <item>
+      <title>Sony eReader - charging problem fixed ?</title>
+      <link>https://miroadamy.com/posts/2007-08-06-sony-ereader-charging-problem-fixed/</link>
+      <pubDate>Mon, 06 Aug 2007 01:32:11 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-08-06-sony-ereader-charging-problem-fixed/</guid>
+      <description>With the latest software update (I am now on 1.0.3), one of the issues to be fixed was the &#34;charging indicator behaviour&#34;. Looks like it was indeed the software bug. After upgrade, the indicator jumped to full 4 bars and stayed there. Beforehand, I had usually only 3 bars regardless how long it was charged.
+Time will tell - I am taking the reader with me to Italy to get some mileage out of it, during transatlantic flight .</description>
+    </item>
+    
+    <item>
+      <title>Strange charging behaviour of Sony Reader</title>
+      <link>https://miroadamy.com/posts/2007-06-04-strange-charging-behaviour-of-sony-reader/</link>
+      <pubDate>Mon, 04 Jun 2007 22:41:12 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-04-strange-charging-behaviour-of-sony-reader/</guid>
+      <description>Despite pretty impressive battery life - which is btw *nowhere* in the range of advertised 7500 page turns - over period of few months I have noted that the charging of the reader behaves kind of funny. Sometimes, even after being plugged-in for 24 hours, the battery indicator stubbornly stays on two squares out of four. Other times, right after connecting, it jumps right to full charge.
+It is hard to really measure these things as the battery depletion is very slow on reading and I do not really listen to music on this device (that&#39;s what iPods are for).</description>
+    </item>
+    
+    <item>
+      <title>More on Sony Reader</title>
+      <link>https://miroadamy.com/posts/2007-01-27-more-on-sony-reader/</link>
+      <pubDate>Sat, 27 Jan 2007 20:24:16 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-27-more-on-sony-reader/</guid>
+      <description>I have been living with my Sony eReader for almost a month now and managed to read about two full books. If not the time crush in biometric project, I would have probably read much more than just two books - nevertheless, I do have some real life experience with the device.
+First - the claimed battery life of 7500 page turns is BS. I have observed real battery life about 15-20 hours, so unless you manage to turn about 500 pages per hour, it just does not add up.</description>
+    </item>
+    
+    <item>
+      <title>Got the Sony reader :-)</title>
+      <link>https://miroadamy.com/posts/2006-12-24-got-the-sony-reader/</link>
+      <pubDate>Sun, 24 Dec 2006 11:24:11 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-24-got-the-sony-reader/</guid>
+      <description>Despite Sony&#39;s attempt to ignore non-US markets and leave Canadians in the cold (pun intended, even if it is still above zero), I have become a proud owner of the wonderful gadget for all eBooks fans. I still do not have it physically, so I cannot put it under the tree. It is coming next week, when my friend who now enjoys the vacation down in the south returns. He was not only very kind to buy one for me too, but he also wrote a wonderfull review which he is going to post on the Net.</description>
     </item>
     
   </channel>

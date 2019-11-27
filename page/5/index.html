@@ -121,7 +121,9 @@
     <h1 class="post-title"><a class="post-link" href="/posts/2016-02-18-access-aws-servers/">Accessing internal AWS servers directly from Mac</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2016-02-18 </span>
-      
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
         <span class="more-meta"> 804 words </span>
         <span class="more-meta"> 4 mins read </span>
     </div>
@@ -144,7 +146,9 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
     <h1 class="post-title"><a class="post-link" href="/posts/2015-12-22-p4merge/">p4merge as default file compare for PathFinder</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2015-12-22 </span>
-      
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
         <span class="more-meta"> 36 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
@@ -186,6 +190,33 @@ How to use it  Select 2 files, right click, compare from context menu In dual mo
 
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-15-acc-in-vm/">Starting ACC in VM</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-07-15 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 192 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      The ACC is installed in default location: ~/ATG/ACC11.1
+This does not work OOTB. You must set 2 additional ENV properties
+1 2 3 4  cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp;   Starting from dyn/admin The start in separate VM works OK.
+Start in server VM brings errors message very often complaining of malformed Help URL. The issue is documented here: http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg - for JBOSS.
+I tried to add the protocol.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-07-15-acc-in-vm/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2015-15-07-git-history/">How to truncate Git history</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2015-07-14 </span>
@@ -206,31 +237,6 @@ How it works Starting repo (training):
     </div>
     <div class="read-more">
       <a href="/posts/2015-15-07-git-history/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-08-keepass-cli/">Accessing Keepass information from command line</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-07-08 </span>
-      <div class="post-category">
-          <a href="/categories/tools/"> tools </a>
-          </div>
-        <span class="more-meta"> 666 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      This is mainly for Linux and Mac as they do not have good client.
-It requires relatively modern Perl - 5.1x should work. I have
-1 2 3  ➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail)   Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-07-08-keepass-cli/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

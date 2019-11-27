@@ -6,10 +6,23 @@
     <description>Recent content in linux on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 04 Apr 2014 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Sep 2014 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to access shared folder in Linux guest in VirtualBox</title>
+      <link>https://miroadamy.com/posts/2014-09-23-shared-folder/</link>
+      <pubDate>Tue, 23 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-23-shared-folder/</guid>
+      <description>Make sure the VBOx extensions are installed.
+Go here for details:
+Add share In VirtualBox, Device add transient shared folder:
+This one has made available path /Users/Shared/ATG-11 under the name ATG-11
+Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x.</description>
+    </item>
     
     <item>
       <title>How to install Chrome in Centos 6.5</title>
@@ -45,6 +58,26 @@ Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install f
       <description>1) make sure the DNS works 1 2 3 4 5 6  sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1   2) check that you have ntpd installed  cat /etc/ntp.conf
  3) make it work in all 1 2  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
  5) Start service / restart  sudo /sbin/service ntpd start</description>
+    </item>
+    
+    <item>
+      <title>Linux vs Windows - great comparison</title>
+      <link>https://miroadamy.com/posts/2008-08-22-linux-vs-windows-great-comparison/</link>
+      <pubDate>Fri, 22 Aug 2008 23:35:47 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-22-linux-vs-windows-great-comparison/</guid>
+      <description>I have been &#34;living in a command line&#34; for last few weeks. Pretty refreshing experience. As result, I had to google a lot, especially when it comes to e.g. subtle differences between tar options on Ubuntu Linux and Open Solaris ... While doing that, I somehow stumbled upon this great writeup on cultural differences between Linux and Windows. Nicely written, no flamewars - obviously pro-Linux, but no Microsoft or Windows bashing and lots of insight.</description>
+    </item>
+    
+    <item>
+      <title>.NET on Linux faster than on Windows ? Hmm</title>
+      <link>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</link>
+      <pubDate>Wed, 27 Jun 2007 22:28:29 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</guid>
+      <description>An interesting article on JavaLobby caught my eye today: Do .NET Applications Run Better on Java?
+
+Normally, knowing the not exactly impartial focus of the Java centric site such as JavaLobby or theserverside.com, one should be careful when reading how much Java outperforms .NET. The bias works the other way too - just look at the Theserverside.net or other .NET centric side how much is C# superior :-). With that in mind, I looked atthe technical report.</description>
     </item>
     
   </channel>

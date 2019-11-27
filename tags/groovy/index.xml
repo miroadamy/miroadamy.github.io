@@ -6,10 +6,33 @@
     <description>Recent content in groovy on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 16 May 2014 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 04 Nov 2014 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/groovy/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ATG Repository structure visualizer</title>
+      <link>https://miroadamy.com/posts/2014-11-04-atg-repo-visualizer/</link>
+      <pubDate>Tue, 04 Nov 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-11-04-atg-repo-visualizer/</guid>
+      <description>The groovy script does parse the XML files (scraped from dyn-admin, or output of the XML combine) and produces file in the syntax of Plant UML - http://plantuml.sourceforge.net
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62  if (args.</description>
+    </item>
+    
+    <item>
+      <title>Recreate txt base graph generator</title>
+      <link>https://miroadamy.com/posts/2014-09-09-redo-graph/</link>
+      <pubDate>Tue, 09 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-09-redo-graph/</guid>
+      <description>Graphviz This time using brew
+1 2 3 4 5 6 7 8  ➜ DPS brew install graphviz ==&amp;gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz ######################################################################## 100.0% ==&amp;gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz 🍺 /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M ➜ DPS dot -V dot - graphviz version 2.38.0 (20140413.2041) ➜ DPS   Schema Spy From http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/
+To /opt/diagram
+Run:
+ diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training</description>
+    </item>
     
     <item>
       <title>ATG Groovy TDD</title>

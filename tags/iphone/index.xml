@@ -6,10 +6,20 @@
     <description>Recent content in iPhone on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 09 Sep 2008 02:08:08 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 02 Jan 2009 11:34:20 -0500</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/iphone/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Weird Rogers 3G network error - fixed ?</title>
+      <link>https://miroadamy.com/posts/2009-01-02-weird-rogers-3g-network-error-fixed/</link>
+      <pubDate>Fri, 02 Jan 2009 11:34:20 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-01-02-weird-rogers-3g-network-error-fixed/</guid>
+      <description>Just tried out to switch the iPhone to automatic Date and Time setting with 3G on. The time jumped from 11:31 to 11:30 (my iPhone was about 1 minute too fast) and STAYED THERE.
+This could mean that the issue is finally fixed. Can anybody confirm that ?</description>
+    </item>
     
     <item>
       <title>Calendar synchronization between iPhone, Google calendars and iCal</title>

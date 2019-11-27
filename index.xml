@@ -282,6 +282,19 @@ How to use it  Select 2 files, right click, compare from context menu In dual mo
     </item>
     
     <item>
+      <title>Starting ACC in VM</title>
+      <link>https://miroadamy.com/posts/2015-07-15-acc-in-vm/</link>
+      <pubDate>Wed, 15 Jul 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-07-15-acc-in-vm/</guid>
+      <description>The ACC is installed in default location: ~/ATG/ACC11.1
+This does not work OOTB. You must set 2 additional ENV properties
+1 2 3 4  cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp;amp;   Starting from dyn/admin The start in separate VM works OK.
+Start in server VM brings errors message very often complaining of malformed Help URL. The issue is documented here: http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg - for JBOSS.
+I tried to add the protocol.</description>
+    </item>
+    
+    <item>
       <title>How to truncate Git history</title>
       <link>https://miroadamy.com/posts/2015-15-07-git-history/</link>
       <pubDate>Tue, 14 Jul 2015 11:22:48 +0800</pubDate>
@@ -291,6 +304,17 @@ How to use it  Select 2 files, right click, compare from context menu In dual mo
 Works well for mostly linear history (aka Git used for diff-ing of the catalog feeds).
 How it works Starting repo (training):
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  ➜ test git:(master) git last fe4e396 2015-07-13 | Fix for BuildInfo in TDD, database connectivity works (HEAD, origin/dynamovies/main, master) [Miro Adamy] f1b8636 2015-07-13 | Tables and database creation [Miro Adamy] d4c182b 2015-07-13 | Added template of dynamovies module - with empty UI.</description>
+    </item>
+    
+    <item>
+      <title>How to get information about all ATG components</title>
+      <link>https://miroadamy.com/posts/2015-07-12-component-report/</link>
+      <pubDate>Sun, 12 Jul 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-07-12-component-report/</guid>
+      <description>How to get information about all ATG Nucleus components Dyn Admin has useful feature - Configuration reporter: http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml
+There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes
+1 2 3 4 5 6  -rw-r--r-- 1 miro 2.</description>
     </item>
     
     <item>
@@ -394,12 +418,34 @@ Here is the script
     </item>
     
     <item>
+      <title>ATG Repository structure visualizer</title>
+      <link>https://miroadamy.com/posts/2014-11-04-atg-repo-visualizer/</link>
+      <pubDate>Tue, 04 Nov 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-11-04-atg-repo-visualizer/</guid>
+      <description>The groovy script does parse the XML files (scraped from dyn-admin, or output of the XML combine) and produces file in the syntax of Plant UML - http://plantuml.sourceforge.net
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62  if (args.</description>
+    </item>
+    
+    <item>
       <title>Replace BSD grep with GNU grep</title>
       <link>https://miroadamy.com/posts/2014-11-02-bsd-grep-gnu/</link>
       <pubDate>Sun, 02 Nov 2014 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2014-11-02-bsd-grep-gnu/</guid>
       <description>If annoyed with: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  ➜ ~ echo $PATH | tr &amp;#39;:&amp;#39; &amp;#39;\n&amp;#39; /usr/local/opt/coreutils/libexec/gnubin /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin /opt/ant/bin /opt/groovy/bin /opt/gradle/bin /Users/miro/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /usr/texbin # YEs I am using GNU core utils but grep is not there # The issue ➜ ~ grep --version grep (BSD grep) 2.</description>
+    </item>
+    
+    <item>
+      <title>Dealing with &#39;Java Runtime SE 6&#39; required error</title>
+      <link>https://miroadamy.com/posts/2014-10-14-java6required/</link>
+      <pubDate>Tue, 14 Oct 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-10-14-java6required/</guid>
+      <description>When trying to start DBeaver (http://dbeaver.jkiss.org) I got this
+I do have Java 7 installed:
+1 2 3 4 5 6 7 8  ➜ Contents java -version java version &amp;#34;1.7.0_55&amp;#34; Java(TM) SE Runtime Environment (build 1.7.0_55-b13) Java HotSpot(TM) 64-Bit Server VM (build 24.55-b03, mixed mode) ➜ Contents which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java   which should be a superset. But it is not.
+Solution Oracle seems to screw up the PLIST capabilities in JAva7 install</description>
     </item>
     
     <item>
@@ -410,6 +456,136 @@ Here is the script
       <guid>https://miroadamy.com/posts/2014-10-03-keepas-node/</guid>
       <description>See https://github.com/gesellix/keepass-node
 1 2  ➜ keepass-node git:(master) pwd /Users/miro/src/PLG/keepass-node   Install 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107  ➜ keepass-node git:(master) ✗ sudo npm install Password: &amp;gt; dejavu@0.</description>
+    </item>
+    
+    <item>
+      <title>Gitbits - Get committer lists</title>
+      <link>https://miroadamy.com/posts/2014-09-29-gitbits/</link>
+      <pubDate>Mon, 29 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-29-gitbits/</guid>
+      <description>With emails (Unix only) 1 2 3 4 5 6 7  ➜ dev1 git:(miro-ui) ✗ git log --raw | grep &amp;#34;^Author: &amp;#34; | sort | uniq -c 9 Author: Brendan Smith &amp;lt;Brendan.Smith@thinkwrap.com&amp;gt; 22 Author: Kai Cheng &amp;lt;kai.cheng@thinkwrap.com&amp;gt; 97 Author: Miro Adamy &amp;lt;miro.adamy@thinkwrap.com&amp;gt; 49 Author: Training VM &amp;lt;training-vm@thinkwrap.com&amp;gt; 24 Author: Your Name &amp;lt;your.name@thinkwrap.com&amp;gt;   Pure git 1 2 3 4 5 6 7  ➜ dev1 git:(miro-ui) ✗ git shortlog -sen 97 Miro Adamy &amp;lt;miro.</description>
+    </item>
+    
+    <item>
+      <title>How to access shared folder in Linux guest in VirtualBox</title>
+      <link>https://miroadamy.com/posts/2014-09-23-shared-folder/</link>
+      <pubDate>Tue, 23 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-23-shared-folder/</guid>
+      <description>Make sure the VBOx extensions are installed.
+Go here for details:
+Add share In VirtualBox, Device add transient shared folder:
+This one has made available path /Users/Shared/ATG-11 under the name ATG-11
+Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x.</description>
+    </item>
+    
+    <item>
+      <title>Git bit of the day</title>
+      <link>https://miroadamy.com/posts/2014-09-22-gitbit/</link>
+      <pubDate>Mon, 22 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-22-gitbit/</guid>
+      <description>Question from email:  how do I merge 1 file from master -&amp;gt; LIVE
+ Answer You cannot. Merge operation creates new commit that has 2 or more parents and will always join full histories of the branches.
+You can however:
+ replicate all changes done in single commit to different branch - this is &amp;ldquo;cherry pick&amp;rdquo; take state of single file from different branch into current branch  How to replicate all changes done in single commit to different branch - &amp;ldquo;cherry pick&amp;rdquo; Say you have latest commit in master that contains change to two files you need.</description>
+    </item>
+    
+    <item>
+      <title>logstash - known error</title>
+      <link>https://miroadamy.com/posts/2014-09-16-logstash-error/</link>
+      <pubDate>Tue, 16 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-16-logstash-error/</guid>
+      <description>I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
+Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE
+What should work:
+1 2 3 4 5  grok { match =&amp;gt; [&amp;#34;message&amp;#34;, &amp;#34;regex to parse severity&amp;#34;], match =&amp;gt; [&amp;#34;message&amp;#34;, &amp;#34;regex to parse server IP&amp;#34;], match =&amp;gt; [&amp;#34;message&amp;#34;, &amp;#34;regex to parse user&amp;#34;] }   What needs to be done instead
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33  You _should_ be able to do exactly what you listed at the bottom of your email, except that you&amp;#39;d need `break_on_match =&amp;gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches.</description>
+    </item>
+    
+    <item>
+      <title>Recreate txt base graph generator</title>
+      <link>https://miroadamy.com/posts/2014-09-09-redo-graph/</link>
+      <pubDate>Tue, 09 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-09-redo-graph/</guid>
+      <description>Graphviz This time using brew
+1 2 3 4 5 6 7 8  ➜ DPS brew install graphviz ==&amp;gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz ######################################################################## 100.0% ==&amp;gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz 🍺 /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M ➜ DPS dot -V dot - graphviz version 2.38.0 (20140413.2041) ➜ DPS   Schema Spy From http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/
+To /opt/diagram
+Run:
+ diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training</description>
+    </item>
+    
+    <item>
+      <title>Better dynadmin</title>
+      <link>https://miroadamy.com/posts/2014-09-04-better-dynadmin/</link>
+      <pubDate>Thu, 04 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-04-better-dynadmin/</guid>
+      <description>Source of the fix is https://github.com/jc7447/BetterDynAdmin. This is to capture the installation process and provide backup in case the tool disappears.
+The pages generated by DynAdmin are actually not coming from a JSP or JHTML pages. The HTML you see is generated by hardcoded servlets. Each Nucleus component has assigned Admin servet, which is called when DynAdmin is trying to render the page.
+The improvent here are user scripts - running inside Firefox or Chrome, utilizing infrastructure provided by Greasemonkey extension (FF) or Tampermonkey (Chrome).</description>
+    </item>
+    
+    <item>
+      <title>ATG &#43; JBoss rant</title>
+      <link>https://miroadamy.com/posts/2014-09-03-atg-rant/</link>
+      <pubDate>Wed, 03 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-03-atg-rant/</guid>
+      <description>Symptoms restarting after kill -9 of CSC instance does not succeed. The server never starts, the WAR files are not deployed properly, socket 8080 is open but nobody answers (not even with wget on localhost).
+The exception: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95  &amp;#34;main&amp;#34; prio=10 tid=0x0000000051a39000 nid=0x30fb in Object.</description>
+    </item>
+    
+    <item>
+      <title>Few gitbits</title>
+      <link>https://miroadamy.com/posts/2014-09-03-gitbits/</link>
+      <pubDate>Wed, 03 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-03-gitbits/</guid>
+      <description>Show branches and tags in log  git log &amp;ndash;oneline &amp;ndash;decorate
+ Even better - all branches with graph  git log &amp;ndash;oneline &amp;ndash;decorate &amp;ndash;all &amp;ndash;graph
+ Highlight words instead of lines  git diff &amp;ndash;word-diff HEAD~~~ HEAD~~
+ Also works in git log -p and git show
+Better status  git status -sb
+ Compare with gs == git status
+Find a name 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git name-rev --name-only 73c762c remotes/origin/2013-10-22-LIVE~3   Find which branch has a commit 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26  ➜ simstore-atg git:(master) ✗ git branch --contains 73c762c LIVE LIVE-140430 LIVE2 LIVE3 LIVE4 PATCH-ORS-140605 PATCH-ORS-140616 feature_us_shipping * master ➜ simstore-atg git:(master) ✗ git branch --contains 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 ➜ simstore-atg git:(master) ✗ git pull Updating ed81557.</description>
+    </item>
+    
+    <item>
+      <title>Tutorial on Elastic</title>
+      <link>https://miroadamy.com/posts/2014-08-28-elastic-tutorial/</link>
+      <pubDate>Thu, 28 Aug 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-08-28-elastic-tutorial/</guid>
+      <description>Running elastic (see Elastic search and Kibana - getting started)
+ Use case: building a employee directory for Megacorp
+  each document - type of &amp;lsquo;employee&amp;rsquo; everything in megacorp index  Populating 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  # Delete the `megacorp` index in case it already exists DELETE /megacorp # Index document 1, type &amp;#34;employee&amp;#34;, in the # &amp;#34;megacorp&amp;#34; index PUT /megacorp/employee/1 { &amp;#34;first_name&amp;#34; : &amp;#34;John&amp;#34;, &amp;#34;last_name&amp;#34; : &amp;#34;Smith&amp;#34;, &amp;#34;age&amp;#34; : 25, &amp;#34;about&amp;#34; : &amp;#34;I love to go rock climbing&amp;#34;, &amp;#34;interests&amp;#34;: [ &amp;#34;sports&amp;#34;, &amp;#34;music&amp;#34; ] } # Index two more documents PUT /megacorp/employee/2 { &amp;#34;first_name&amp;#34; : &amp;#34;Jane&amp;#34;, &amp;#34;last_name&amp;#34; : &amp;#34;Smith&amp;#34;, &amp;#34;age&amp;#34; : 32, &amp;#34;about&amp;#34; : &amp;#34;I like to collect rock albums&amp;#34;, &amp;#34;interests&amp;#34;: [ &amp;#34;music&amp;#34; ] } PUT /megacorp/employee/3 { &amp;#34;first_name&amp;#34; : &amp;#34;Douglas&amp;#34;, &amp;#34;last_name&amp;#34; : &amp;#34;Fir&amp;#34;, &amp;#34;age&amp;#34; : 35, &amp;#34;about&amp;#34;: &amp;#34;I like to build cabinets&amp;#34;, &amp;#34;interests&amp;#34;: [ &amp;#34;forestry&amp;#34; ] }   In server</description>
+    </item>
+    
+    <item>
+      <title>Elastic search and Kibana - getting started</title>
+      <link>https://miroadamy.com/posts/2014-08-27-es1/</link>
+      <pubDate>Wed, 27 Aug 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-08-27-es1/</guid>
+      <description>#Installation:
+See [](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_installing_elasticsearch.html)
+1 2 3  curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION   Marvel is management plugin - console about cluster. Install:
+1 2 3 4  ./bin/plugin -i elasticsearch/marvel/latest # disable data collection for local cluster echo &amp;#39;marvel.agent.enabled: false&amp;#39; &amp;gt;&amp;gt; ./config/elasticsearch.yml   Test Startup log:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  ➜ elasticsearch-1.</description>
+    </item>
+    
+    <item>
+      <title>Finding out the class in ATG installation</title>
+      <link>https://miroadamy.com/posts/2014-08-26-find-class/</link>
+      <pubDate>Tue, 26 Aug 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-08-26-find-class/</guid>
+      <description>Java approach Use the real time search with this JAR - https://jarscan.com/
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  ➜ scripts git:(authoring) ✗ java -jar ~/bin/jarscan.jar ========================= JarScan written by Geoff Yaworski gyaworski@hotmail.com Version 2.0 ========================= Usage: java -jar jarscan.jar [-help | /?] [-dir directory name] [-zip] [-showProgress] &amp;lt;-files | -class | -package&amp;gt; &amp;lt;search string 1&amp;gt; [search string 2] [search string n] Help: -help or /?</description>
     </item>
     
     <item>
@@ -438,6 +614,18 @@ The script tested:
     </item>
     
     <item>
+      <title>Folder action to autorename screenshots</title>
+      <link>https://miroadamy.com/posts/2014-04-22-autorename-screenshots/</link>
+      <pubDate>Tue, 22 Apr 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-04-22-autorename-screenshots/</guid>
+      <description> Move the location of the screenshots I do not want to have ~/Desktop polluted with files. Thus
+1 2 3  mkdir -p ~/Documents/Screenshots defaults write com.apple.screencapture location ~/Documents/Screenshots killall SystemUIServer   Test the screenshot - it does it
+Automator based auto-rename  Create Folder action for ~/Documents/Screenshots  It has 3 actions
+1 2 3  s/Screen Shots // s/./-/g s/ at /_/  </description>
+    </item>
+    
+    <item>
       <title>How to install Chrome in Centos 6.5</title>
       <link>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</link>
       <pubDate>Fri, 04 Apr 2014 11:22:48 +0800</pubDate>
@@ -447,6 +635,18 @@ The script tested:
 sudo vim /etc/yum.repos.d/google.repo
 Add following content to this file
 1 2 3 4 5 6  [google] name=Google baseurl=http://dl.google.com/linux/rpm/stable/$basearch enabled=1 gpgcheck=1 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub   Step 2: Install/Update Google Chrome Richard Lloid provided an shell script to grab libraries from a more recent Linux distro, put them in a tree (/opt/google/chrome/lib) exclusively picked up by Google Chrome and then you can indeed run Google Chrome on CentOS 6.</description>
+    </item>
+    
+    <item>
+      <title>Gitolite permissions setup</title>
+      <link>https://miroadamy.com/posts/2014-04-02-gitolite-permissions/</link>
+      <pubDate>Wed, 02 Apr 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-04-02-gitolite-permissions/</guid>
+      <description>This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
+How gitolite works Repository permission structure This is general format of repo definition
+1 2 3  REPO NAME rule line rule line   for example
+1 2 3 4 5 6 7 8  @staff = dilbert alice wally bob repo foo RW+ = dilbert # line 1 RW+ dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5   The Rule line has format:</description>
     </item>
     
     <item>
@@ -697,6 +897,26 @@ Finding out Git on MBP:
 Starting point: hybris-platform-4.7.1.zip
 Install point: /opt/hybris-platform/hybris-platform-4.7.1
 Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all.</description>
+    </item>
+    
+    <item>
+      <title>Gitolite Administration Guide</title>
+      <link>https://miroadamy.com/posts/2012-08-06-gitilite-admin/</link>
+      <pubDate>Mon, 06 Aug 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-08-06-gitilite-admin/</guid>
+      <description>How to setup new client You need to be pensieve admin to do this. You will have to login as service user (non-host account) and su to root.
+ create new Linux user on pensieve setup gitolite:  git clone &amp;lt;git://github.com/sitaramc/gitolite&amp;gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln  add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub  get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &amp;lt;client@pensieve.</description>
+    </item>
+    
+    <item>
+      <title>Using Gitolite for code sharing setup</title>
+      <link>https://miroadamy.com/posts/2012-06-21-gitolite-setup/</link>
+      <pubDate>Thu, 21 Jun 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-06-21-gitolite-setup/</guid>
+      <description>General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
+Main features  multiple users each user represent a client:  e.g. users client1   Users are separated by Unix permissions:  access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes  Inside each user, there are multiple projects.</description>
     </item>
     
     <item>

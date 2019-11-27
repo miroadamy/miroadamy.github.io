@@ -57,6 +57,15 @@
     </item>
     
     <item>
+      <title>plaintext</title>
+      <link>https://miroadamy.com/tags/plaintext/</link>
+      <pubDate>Fri, 22 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/plaintext/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>jekyll</title>
       <link>https://miroadamy.com/tags/jekyll/</link>
       <pubDate>Wed, 20 Nov 2019 23:22:48 +0800</pubDate>
@@ -192,6 +201,15 @@
     </item>
     
     <item>
+      <title>dynadmin</title>
+      <link>https://miroadamy.com/tags/dynadmin/</link>
+      <pubDate>Sun, 12 Jul 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/dynadmin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>commandline</title>
       <link>https://miroadamy.com/tags/commandline/</link>
       <pubDate>Wed, 08 Jul 2015 11:22:48 +0800</pubDate>
@@ -248,9 +266,126 @@
     <item>
       <title>groovy</title>
       <link>https://miroadamy.com/tags/groovy/</link>
-      <pubDate>Fri, 16 May 2014 11:22:48 +0800</pubDate>
+      <pubDate>Tue, 04 Nov 2014 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/groovy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>plantuml</title>
+      <link>https://miroadamy.com/tags/plantuml/</link>
+      <pubDate>Tue, 04 Nov 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/plantuml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://miroadamy.com/tags/linux/</link>
+      <pubDate>Tue, 23 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualbox</title>
+      <link>https://miroadamy.com/tags/virtualbox/</link>
+      <pubDate>Tue, 23 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/virtualbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elk</title>
+      <link>https://miroadamy.com/tags/elk/</link>
+      <pubDate>Tue, 16 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/elk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logs</title>
+      <link>https://miroadamy.com/tags/logs/</link>
+      <pubDate>Tue, 16 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/logs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>logstash</title>
+      <link>https://miroadamy.com/tags/logstash/</link>
+      <pubDate>Tue, 16 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/logstash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>documentation</title>
+      <link>https://miroadamy.com/tags/documentation/</link>
+      <pubDate>Tue, 09 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/documentation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graphviz</title>
+      <link>https://miroadamy.com/tags/graphviz/</link>
+      <pubDate>Tue, 09 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/graphviz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://miroadamy.com/tags/tools/</link>
+      <pubDate>Thu, 04 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elastic</title>
+      <link>https://miroadamy.com/tags/elastic/</link>
+      <pubDate>Thu, 28 Aug 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/elastic/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>search</title>
+      <link>https://miroadamy.com/tags/search/</link>
+      <pubDate>Thu, 28 Aug 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://miroadamy.com/tags/tutorial/</link>
+      <pubDate>Thu, 28 Aug 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>elasticsearch</title>
+      <link>https://miroadamy.com/tags/elasticsearch/</link>
+      <pubDate>Wed, 27 Aug 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/elasticsearch/</guid>
       <description></description>
     </item>
     
@@ -264,20 +399,11 @@
     </item>
     
     <item>
-      <title>linux</title>
-      <link>https://miroadamy.com/tags/linux/</link>
-      <pubDate>Fri, 04 Apr 2014 11:22:48 +0800</pubDate>
+      <title>applescript</title>
+      <link>https://miroadamy.com/tags/applescript/</link>
+      <pubDate>Tue, 22 Apr 2014 11:22:48 +0800</pubDate>
       
-      <guid>https://miroadamy.com/tags/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>virtualbox</title>
-      <link>https://miroadamy.com/tags/virtualbox/</link>
-      <pubDate>Tue, 11 Mar 2014 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/virtualbox/</guid>
+      <guid>https://miroadamy.com/tags/applescript/</guid>
       <description></description>
     </item>
     
@@ -354,15 +480,6 @@
     </item>
     
     <item>
-      <title>tools</title>
-      <link>https://miroadamy.com/tags/tools/</link>
-      <pubDate>Tue, 08 Jan 2013 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>hybris</title>
       <link>https://miroadamy.com/tags/hybris/</link>
       <pubDate>Fri, 17 Aug 2012 11:22:48 +0800</pubDate>
@@ -372,20 +489,29 @@
     </item>
     
     <item>
-      <title>plaintext</title>
-      <link>https://miroadamy.com/tags/plaintext/</link>
-      <pubDate>Sat, 07 Apr 2012 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/plaintext/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>wiki</title>
       <link>https://miroadamy.com/tags/wiki/</link>
       <pubDate>Sat, 07 Apr 2012 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/wiki/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>agile</title>
+      <link>https://miroadamy.com/tags/agile/</link>
+      <pubDate>Wed, 15 Feb 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/agile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://miroadamy.com/tags/windows/</link>
+      <pubDate>Mon, 25 Jan 2010 10:33:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/windows/</guid>
       <description></description>
     </item>
     
@@ -419,7 +545,7 @@
     <item>
       <title>iPhone</title>
       <link>https://miroadamy.com/tags/iphone/</link>
-      <pubDate>Tue, 09 Sep 2008 02:08:08 -0400</pubDate>
+      <pubDate>Fri, 02 Jan 2009 11:34:20 -0500</pubDate>
       
       <guid>https://miroadamy.com/tags/iphone/</guid>
       <description></description>
@@ -431,6 +557,87 @@
       <pubDate>Tue, 02 Sep 2008 23:33:30 -0400</pubDate>
       
       <guid>https://miroadamy.com/tags/objectivec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>canada</title>
+      <link>https://miroadamy.com/tags/canada/</link>
+      <pubDate>Sat, 23 Aug 2008 22:57:15 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/canada/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ottawa</title>
+      <link>https://miroadamy.com/tags/ottawa/</link>
+      <pubDate>Tue, 05 Aug 2008 23:30:04 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ottawa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>event</title>
+      <link>https://miroadamy.com/tags/event/</link>
+      <pubDate>Thu, 17 Apr 2008 09:50:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/event/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microsoft&#34;</title>
+      <link>https://miroadamy.com/tags/microsoft/</link>
+      <pubDate>Thu, 17 Apr 2008 09:50:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ebooks</title>
+      <link>https://miroadamy.com/tags/ebooks/</link>
+      <pubDate>Thu, 11 Oct 2007 23:51:23 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ebooks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gadgets</title>
+      <link>https://miroadamy.com/tags/gadgets/</link>
+      <pubDate>Thu, 11 Oct 2007 23:51:23 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/gadgets/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dot-net</title>
+      <link>https://miroadamy.com/tags/dot-net/</link>
+      <pubDate>Thu, 27 Sep 2007 23:00:05 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/dot-net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>quotes</title>
+      <link>https://miroadamy.com/tags/quotes/</link>
+      <pubDate>Tue, 25 Sep 2007 00:02:18 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/quotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>languages</title>
+      <link>https://miroadamy.com/tags/languages/</link>
+      <pubDate>Mon, 03 Sep 2007 19:58:15 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/languages/</guid>
       <description></description>
     </item>
     
@@ -462,11 +669,146 @@
     </item>
     
     <item>
-      <title>ebooks</title>
-      <link>https://miroadamy.com/tags/ebooks/</link>
-      <pubDate>Mon, 23 Apr 2007 22:42:58 -0400</pubDate>
+      <title>photo</title>
+      <link>https://miroadamy.com/tags/photo/</link>
+      <pubDate>Tue, 10 Jul 2007 22:33:32 -0400</pubDate>
       
-      <guid>https://miroadamy.com/tags/ebooks/</guid>
+      <guid>https://miroadamy.com/tags/photo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>podcast</title>
+      <link>https://miroadamy.com/tags/podcast/</link>
+      <pubDate>Fri, 27 Apr 2007 22:48:29 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/podcast/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>people</title>
+      <link>https://miroadamy.com/tags/people/</link>
+      <pubDate>Wed, 11 Apr 2007 23:39:47 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/people/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>quote</title>
+      <link>https://miroadamy.com/tags/quote/</link>
+      <pubDate>Sat, 10 Mar 2007 20:07:05 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/quote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>quality</title>
+      <link>https://miroadamy.com/tags/quality/</link>
+      <pubDate>Wed, 21 Feb 2007 23:57:37 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/quality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>book</title>
+      <link>https://miroadamy.com/tags/book/</link>
+      <pubDate>Sun, 18 Feb 2007 19:33:36 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/book/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>media</title>
+      <link>https://miroadamy.com/tags/media/</link>
+      <pubDate>Fri, 16 Feb 2007 23:56:40 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/media/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>math</title>
+      <link>https://miroadamy.com/tags/math/</link>
+      <pubDate>Sat, 10 Feb 2007 23:23:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>podcasts</title>
+      <link>https://miroadamy.com/tags/podcasts/</link>
+      <pubDate>Sat, 03 Feb 2007 23:26:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/podcasts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>firefox</title>
+      <link>https://miroadamy.com/tags/firefox/</link>
+      <pubDate>Fri, 26 Jan 2007 23:57:24 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/firefox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gtd</title>
+      <link>https://miroadamy.com/tags/gtd/</link>
+      <pubDate>Sun, 31 Dec 2006 23:48:11 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/gtd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ui</title>
+      <link>https://miroadamy.com/tags/ui/</link>
+      <pubDate>Wed, 20 Dec 2006 23:09:25 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ui/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pocketpc</title>
+      <link>https://miroadamy.com/tags/pocketpc/</link>
+      <pubDate>Mon, 18 Dec 2006 22:06:18 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/pocketpc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hardware</title>
+      <link>https://miroadamy.com/tags/hardware/</link>
+      <pubDate>Tue, 05 Dec 2006 23:36:51 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/hardware/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>c-sharp</title>
+      <link>https://miroadamy.com/tags/c-sharp/</link>
+      <pubDate>Mon, 04 Dec 2006 22:54:43 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/c-sharp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>browsers</title>
+      <link>https://miroadamy.com/tags/browsers/</link>
+      <pubDate>Fri, 17 Nov 2006 21:37:47 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/browsers/</guid>
       <description></description>
     </item>
     

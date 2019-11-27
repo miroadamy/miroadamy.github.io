@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tutorial on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/tutorial/</link>
+    <description>Recent content in tutorial on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 28 Aug 2014 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tutorial on Elastic</title>
+      <link>https://miroadamy.com/posts/2014-08-28-elastic-tutorial/</link>
+      <pubDate>Thu, 28 Aug 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-08-28-elastic-tutorial/</guid>
+      <description>Running elastic (see Elastic search and Kibana - getting started)
+ Use case: building a employee directory for Megacorp
+  each document - type of &amp;lsquo;employee&amp;rsquo; everything in megacorp index  Populating 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  # Delete the `megacorp` index in case it already exists DELETE /megacorp # Index document 1, type &amp;#34;employee&amp;#34;, in the # &amp;#34;megacorp&amp;#34; index PUT /megacorp/employee/1 { &amp;#34;first_name&amp;#34; : &amp;#34;John&amp;#34;, &amp;#34;last_name&amp;#34; : &amp;#34;Smith&amp;#34;, &amp;#34;age&amp;#34; : 25, &amp;#34;about&amp;#34; : &amp;#34;I love to go rock climbing&amp;#34;, &amp;#34;interests&amp;#34;: [ &amp;#34;sports&amp;#34;, &amp;#34;music&amp;#34; ] } # Index two more documents PUT /megacorp/employee/2 { &amp;#34;first_name&amp;#34; : &amp;#34;Jane&amp;#34;, &amp;#34;last_name&amp;#34; : &amp;#34;Smith&amp;#34;, &amp;#34;age&amp;#34; : 32, &amp;#34;about&amp;#34; : &amp;#34;I like to collect rock albums&amp;#34;, &amp;#34;interests&amp;#34;: [ &amp;#34;music&amp;#34; ] } PUT /megacorp/employee/3 { &amp;#34;first_name&amp;#34; : &amp;#34;Douglas&amp;#34;, &amp;#34;last_name&amp;#34; : &amp;#34;Fir&amp;#34;, &amp;#34;age&amp;#34; : 35, &amp;#34;about&amp;#34;: &amp;#34;I like to build cabinets&amp;#34;, &amp;#34;interests&amp;#34;: [ &amp;#34;forestry&amp;#34; ] }   In server</description>
+    </item>
+    
+  </channel>
+</rss>

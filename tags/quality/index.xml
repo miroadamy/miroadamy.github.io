@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>quality on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/quality/</link>
+    <description>Recent content in quality on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 21 Feb 2007 23:57:37 -0500</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/quality/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hiring programmers - or Degrees of Done</title>
+      <link>https://miroadamy.com/posts/2007-02-21-hiring-a-programmer-or-degrees-of-done/</link>
+      <pubDate>Wed, 21 Feb 2007 23:57:37 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-21-hiring-a-programmer-or-degrees-of-done/</guid>
+      <description>Back in old country, I once had a programmer working for me who made himself famous with the following quote:
+&#34;I have fixed that bug, do you want me to compile it too ?&#34;.
+ In his mind, he was done as soon as he identified the bug and put the fix in the code. All the rest was trivial and unimportant routine.
+During last 20 years I have worked with many very different developers and learned the hard way, how very many different meanings the word &#34;</description>
+    </item>
+    
+  </channel>
+</rss>

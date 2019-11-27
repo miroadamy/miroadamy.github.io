@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>event on Miro&#39;s World</title>
+    <link>https://miroadamy.com/categories/event/</link>
+    <description>Recent content in event on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 17 Apr 2008 09:50:06 -0400</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/categories/event/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Heroes Happened ... here</title>
+      <link>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</link>
+      <pubDate>Thu, 17 Apr 2008 09:50:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</guid>
+      <description>Last week I attended one day event organized by Microsoft named Heroes Happens Here. It is series of introduction targeting new products: Windows Server 2008 (not out yet) SQL Server 2008 (not out yet) and Visual Studio 2008 (out and well).
+I do not do much Microsoft development these days - my world is currently rather unevenly divided between Java (about 70 %), Web-ish technologies (XHTML, CSS, JavaScript, some Ruby) and OS-X (Objective C) which I am trying to squeeze in and get finally started.</description>
+    </item>
+    
+  </channel>
+</rss>

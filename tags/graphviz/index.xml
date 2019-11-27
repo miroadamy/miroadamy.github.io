@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>graphviz on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/graphviz/</link>
+    <description>Recent content in graphviz on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 09 Sep 2014 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/graphviz/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Recreate txt base graph generator</title>
+      <link>https://miroadamy.com/posts/2014-09-09-redo-graph/</link>
+      <pubDate>Tue, 09 Sep 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-09-09-redo-graph/</guid>
+      <description>Graphviz This time using brew
+1 2 3 4 5 6 7 8  ➜ DPS brew install graphviz ==&amp;gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz ######################################################################## 100.0% ==&amp;gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz 🍺 /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M ➜ DPS dot -V dot - graphviz version 2.38.0 (20140413.2041) ➜ DPS   Schema Spy From http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/
+To /opt/diagram
+Run:
+ diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training</description>
+    </item>
+    
+  </channel>
+</rss>

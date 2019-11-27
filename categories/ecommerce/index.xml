@@ -6,10 +6,23 @@
     <description>Recent content in ecommerce on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 17 Aug 2012 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 24 Mar 2016 12:57:35 -0500</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/categories/ecommerce/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Starting ACC (ATG Control Centre) on OS-X</title>
+      <link>https://miroadamy.com/posts/2016-03-24-acc-on-osx/</link>
+      <pubDate>Thu, 24 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2016-03-24-acc-on-osx/</guid>
+      <description>Copy the installation of ACC for respective version from a Linux VM:
+The startup script in bin/startClient will fail, because it cannot determine which Java to use to run the app.
+It is trying to determine Unix flavour, failing that defaults to Solaris and ends up with invalid settings.
+Fix Set the variable JAVA_VM to path to executable command on your system.
+1 2 3 4 5  which java java is /Library/Java/JavaVirtualMachines/jdk1.</description>
+    </item>
     
     <item>
       <title>Installing and running &#39;naked&#39; hybris platform</title>

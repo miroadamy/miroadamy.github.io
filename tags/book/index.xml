@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>book on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/book/</link>
+    <description>Recent content in book on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 18 Feb 2007 19:33:36 -0500</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/book/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>DotNet Development Toolbox</title>
+      <link>https://miroadamy.com/posts/2007-02-18-dotnet-development-toolbox/</link>
+      <pubDate>Sun, 18 Feb 2007 19:33:36 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-18-dotnet-development-toolbox/</guid>
+      <description>I have recently picked very interesting book that I have read about year ago, from Mike Gunderloy named Coder to Developer, with subtitle Tools and Strategies for Delivering Your Software. It is an excellent book and I highly recommend to give it a look if you are in software development business on Microsoft platform. Easy read, practical, useful.When I was reading it back in 2006, it was before we have set up own development lab and started the biometric project.</description>
+    </item>
+    
+  </channel>
+</rss>

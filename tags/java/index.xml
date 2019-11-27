@@ -32,6 +32,28 @@
     </item>
     
     <item>
+      <title>Dealing with &#39;Java Runtime SE 6&#39; required error</title>
+      <link>https://miroadamy.com/posts/2014-10-14-java6required/</link>
+      <pubDate>Tue, 14 Oct 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-10-14-java6required/</guid>
+      <description>When trying to start DBeaver (http://dbeaver.jkiss.org) I got this
+I do have Java 7 installed:
+1 2 3 4 5 6 7 8  ➜ Contents java -version java version &amp;#34;1.7.0_55&amp;#34; Java(TM) SE Runtime Environment (build 1.7.0_55-b13) Java HotSpot(TM) 64-Bit Server VM (build 24.55-b03, mixed mode) ➜ Contents which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java   which should be a superset. But it is not.
+Solution Oracle seems to screw up the PLIST capabilities in JAva7 install</description>
+    </item>
+    
+    <item>
+      <title>Finding out the class in ATG installation</title>
+      <link>https://miroadamy.com/posts/2014-08-26-find-class/</link>
+      <pubDate>Tue, 26 Aug 2014 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-08-26-find-class/</guid>
+      <description>Java approach Use the real time search with this JAR - https://jarscan.com/
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  ➜ scripts git:(authoring) ✗ java -jar ~/bin/jarscan.jar ========================= JarScan written by Geoff Yaworski gyaworski@hotmail.com Version 2.0 ========================= Usage: java -jar jarscan.jar [-help | /?] [-dir directory name] [-zip] [-showProgress] &amp;lt;-files | -class | -package&amp;gt; &amp;lt;search string 1&amp;gt; [search string 2] [search string n] Help: -help or /?</description>
+    </item>
+    
+    <item>
       <title>Binding DashDoc with editors and Eclipse</title>
       <link>https://miroadamy.com/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/</link>
       <pubDate>Tue, 31 Dec 2013 00:57:35 -0500</pubDate>
@@ -366,17 +388,6 @@ The message is a bit confusing, because after peeking into spring.</description>
       
       <guid>https://miroadamy.com/posts/2007-09-06-fresh-cup-of-java/</guid>
       <description>Hi, all Java gurus inside and outside of Thinknostic - I have a very interesting problem. Imagine the following situation: we have three existing Java Web applications, written back in 2000/2001, based on open source libraries of that time: Struts 0.9/1.0 and JSP 1.x (no JSTL) with Tiles for Web layer, Apache Torque for ORM, early version of Quartz for job scheduling, Jasper Reports for PDF reports and Freemarker as template engine for email creation.</description>
-    </item>
-    
-    <item>
-      <title>.NET on Linux faster than on Windows ? Hmm</title>
-      <link>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</link>
-      <pubDate>Wed, 27 Jun 2007 22:28:29 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</guid>
-      <description>An interesting article on JavaLobby caught my eye today: Do .NET Applications Run Better on Java?
-
-Normally, knowing the not exactly impartial focus of the Java centric site such as JavaLobby or theserverside.com, one should be careful when reading how much Java outperforms .NET. The bias works the other way too - just look at the Theserverside.net or other .NET centric side how much is C# superior :-). With that in mind, I looked atthe technical report.</description>
     </item>
     
     <item>
