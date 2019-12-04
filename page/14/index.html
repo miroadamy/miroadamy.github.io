@@ -118,6 +118,29 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-24-screenshot-cli/">How to make screenshot from command line</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-09-24 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 64 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      How to make screenshot from command line 1 2 3 4 5 6 7  platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk   First one is &ldquo;interactive&rdquo; - Cmd-Shift-3 with selection tool, second is full screen
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-09-24-screenshot-cli/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2013-09-16-vbox-shared-folder/">Case sensitivity and VirtualBox shared folder</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2013-09-16 </span>
@@ -216,29 +239,6 @@ Motivation - issues with VMs VMs are great - they allow &ldquo;packaged&rdquo; d
     </div>
     <div class="read-more">
       <a href="/posts/2013-04-22-atg-development/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-04-09-bash/">Pattern for test sourcing the script</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-04-09 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 75 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  # Test if it is sourced or not if [[ $0 != .*bash ]]; then echo Please source it: . $0 exit 1 fi res=`gradle --version &gt;/dev/null 2&gt;&amp;1; echo $? ` if [[ $res == &#34;0&#34; ]]; then echo Have gradle: `which gradle` gradle --version else export GRADLE_HOME=~/opt/gradle export PATH=$PATH:$GRADLE_HOME/bin echo No Gradle, adding - `which gradle` gradle --version fi  
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-04-09-bash/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

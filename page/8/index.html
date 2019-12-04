@@ -118,6 +118,32 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-03-10-git-log-output-less/">How to keep git log and less output on the screen</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-03-10 </span>
+      <div class="post-category">
+          <a href="/categories/lifehacks/"> lifehacks </a>
+          </div>
+        <span class="more-meta"> 129 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.
+Just for git commands:
+1  git config --global --replace-all core.pager &#34;less -iXFR&#34;   For less globally (including git) - add to .bashrc / .zshrc / etc:
+1  export LESS=-iXFR   The options we set for less are:
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-03-10-git-log-output-less/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2015-02-16-grasshoper/">New image that expresses my new undefined job title</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2015-02-16 </span>
@@ -210,32 +236,6 @@ Here is the script
     </div>
     <div class="read-more">
       <a href="/posts/2014-11-02-bsd-grep-gnu/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-10-14-java6required/">Dealing with &#39;Java Runtime SE 6&#39; required error</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-10-14 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 176 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      When trying to start DBeaver (http://dbeaver.jkiss.org) I got this
-I do have Java 7 installed:
-1 2 3 4 5 6 7 8  ➜ Contents java -version java version &#34;1.7.0_55&#34; Java(TM) SE Runtime Environment (build 1.7.0_55-b13) Java HotSpot(TM) 64-Bit Server VM (build 24.55-b03, mixed mode) ➜ Contents which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java   which should be a superset. But it is not.
-Solution Oracle seems to screw up the PLIST capabilities in JAva7 install
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-10-14-java6required/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

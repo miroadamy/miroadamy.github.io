@@ -6,10 +6,22 @@
     <description>Recent content in atg on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 24 Mar 2016 12:57:35 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 10 Feb 2018 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/atg/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ATG Module Diagram Generator</title>
+      <link>https://miroadamy.com/posts/2018-02-10-atgdiagram/</link>
+      <pubDate>Sat, 10 Feb 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-02-10-atgdiagram/</guid>
+      <description>I have found local clone of this repo while cleaning up the disk. The source was originally residing in private repo on Bitbucket which I moved to GitHub: https://github.com/miroadamy/atgdiagram
+What it does Groovy scripts:
+ https://github.com/miroadamy/atgdiagram/blob/master/src/listATGModules.groovy https://github.com/miroadamy/atgdiagram/blob/master/src/ATGModule.groovy  that scan local ATG installation, discover modules and generate the PlantUML file representing it, for example - https://github.com/miroadamy/atgdiagram/blob/master/uml/test2.uml
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65  Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.</description>
+    </item>
     
     <item>
       <title>Starting ACC (ATG Control Centre) on OS-X</title>

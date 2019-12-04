@@ -118,6 +118,32 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-04-22-autorename-screenshots/">Folder action to autorename screenshots</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-04-22 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 59 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+       Move the location of the screenshots I do not want to have ~/Desktop polluted with files. Thus
+1 2 3  mkdir -p ~/Documents/Screenshots defaults write com.apple.screencapture location ~/Documents/Screenshots killall SystemUIServer   Test the screenshot - it does it
+Automator based auto-rename  Create Folder action for ~/Documents/Screenshots  It has 3 actions
+1 2 3  s/Screen Shots // s/./-/g s/ at /_/  
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-04-22-autorename-screenshots/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2014-04-04-install-chrome-centos6/">How to install Chrome in Centos 6.5</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2014-04-04 </span>
@@ -215,33 +241,6 @@ Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install f
     </div>
     <div class="read-more">
       <a href="/posts/2013-12-31-difference-between-matching-and-simple-git-push/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/">Binding DashDoc with editors and Eclipse</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-12-31 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 263 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      If you use DashDoc (see http://kapeli.com/dash), it can be integrated with editor or Eclipse to allow automatically find selected text in Dash documentation sets:
-Sublime Text This is easy - there is DashDoc plugin - https://sublime.wbond.net/packages/DashDoc
-The plugin is OS-X specific, because the DashDoc is
- Start Package Control (Cmd-Shift-P) select Install Package (type Install) select DashDoc  The Ctrl-H does the search
-Eclipse There is opensource plugin for it at https://github.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
