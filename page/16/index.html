@@ -118,6 +118,61 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2012-11-12-trello/">Discovered Trello</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-11-12 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 73 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Finally a todo/task/project management system that is very good fit.
+Here is why:
+ is pretty visually modern and dynamic UI has Web back-end (usable from Linux VM) has decent iPhone app allows checklists (multiple) allows color coding Markdown support ecosystem  There is Gmello that allows create card from GMail, plus few others that seem to bridge the gap between Evernote, System XYZ and Trello
+http://trello.com
+Courtesy of Fog Creek / Joel Spolsky&rsquo;s company
+    </div>
+    <div class="read-more">
+      <a href="/posts/2012-11-12-trello/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2012-10-07-macvim/">Custom build of MacVim with file drawer - pure bliss</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-10-07 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 91 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      OK, NERDTree plugin IS great, but this is awesome.
+Alloy made custom version of MacVim with file drawer: see https://github.com/alloy/macvim/wiki/Building
+It is available in source - so you have to compile it yourselves. But if you do not want to, I did it and the binary is attached, built with these features:
+ ./configure &ndash;with-feature=huge &ndash;enable-rubyinterp &ndash;enable-pythoninterp &ndash;enable-perlinterp &ndash;enable-cscope
+ Archive is attached: MacVim.zip
+If you want to get my set of plugins and customizations, it is on GitHub: - https://github.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2012-10-07-macvim/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2012-09-21-post/">Fixing Git plugin for Sublime Text 2</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2012-09-21 </span>
@@ -187,55 +242,6 @@ Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-pla
     </div>
     <div class="read-more">
       <a href="/posts/2012-08-06-gitilite-admin/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-06-21-gitolite-setup/">Using Gitolite for code sharing setup</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-06-21 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 5139 words </span>
-        <span class="more-meta"> 25 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
-Main features  multiple users each user represent a client:  e.g. users client1   Users are separated by Unix permissions:  access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes  Inside each user, there are multiple projects.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2012-06-21-gitolite-setup/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-05-29-admin-tool-goodies/">Admin tool goodies</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-05-29 </span>
-      <div class="post-category">
-          <a href="/categories/tools/"> tools </a>
-          </div>
-        <span class="more-meta"> 1597 words </span>
-        <span class="more-meta"> 8 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &hellip; again.
-Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
-1 2 3 4 5 6 7 8 9 10  547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2012-05-29-admin-tool-goodies/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

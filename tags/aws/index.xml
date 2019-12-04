@@ -24,6 +24,16 @@ The Video URLs Channel 1  https://www.</description>
     </item>
     
     <item>
+      <title>Creating Kubernetes Cluster in AWS from scratch with kops</title>
+      <link>https://miroadamy.com/posts/2018-05-07-k8s-from-scratch-kops/</link>
+      <pubDate>Mon, 07 May 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-05-07-k8s-from-scratch-kops/</guid>
+      <description>This describes creation of K8s cluster in AWS environment from scratch as done for microservices based eCommerce project.
+Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed - https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html CLI credentials (secret key + api Key) - https://docs.aws.amazon.com/cli/latest/reference/iam/index.html Kubectl and Kops local install ** see https://github.com/kubernetes/kops and https://kubernetes.io/docs/tasks/tools/install-kubectl/  Test of access 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ etc git:(feature/kubernetes) aws --version aws-cli/1.</description>
+    </item>
+    
+    <item>
       <title>Install AWS CLI on Mac</title>
       <link>https://miroadamy.com/posts/2017-11-14-install-aws-cli-mac/</link>
       <pubDate>Tue, 14 Nov 2017 14:22:48 +0800</pubDate>

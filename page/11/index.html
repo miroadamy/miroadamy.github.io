@@ -118,6 +118,57 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-08-27-es1/">Elastic search and Kibana - getting started</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-08-27 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 698 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      #Installation:
+See [](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_installing_elasticsearch.html)
+1 2 3  curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION   Marvel is management plugin - console about cluster. Install:
+1 2 3 4  ./bin/plugin -i elasticsearch/marvel/latest # disable data collection for local cluster echo &#39;marvel.agent.enabled: false&#39; &gt;&gt; ./config/elasticsearch.yml   Test Startup log:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  ➜ elasticsearch-1.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-08-27-es1/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-08-26-find-class/">Finding out the class in ATG installation</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-08-26 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 1094 words </span>
+        <span class="more-meta"> 6 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Java approach Use the real time search with this JAR - https://jarscan.com/
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  ➜ scripts git:(authoring) ✗ java -jar ~/bin/jarscan.jar ========================= JarScan written by Geoff Yaworski gyaworski@hotmail.com Version 2.0 ========================= Usage: java -jar jarscan.jar [-help | /?] [-dir directory name] [-zip] [-showProgress] &lt;-files | -class | -package&gt; &lt;search string 1&gt; [search string 2] [search string n] Help: -help or /?
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-08-26-find-class/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2014-08-22-jekyll-clean-theme/">Third time is a charm</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2014-08-22 </span>
@@ -191,58 +242,6 @@ Automator based auto-rename  Create Folder action for ~/Documents/Screenshots  I
     </div>
     <div class="read-more">
       <a href="/posts/2014-04-22-autorename-screenshots/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-04-04-install-chrome-centos6/">How to install Chrome in Centos 6.5</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-04-04 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 207 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      How to install Chrome in Centos 6.5 Step 1. Add Google Yum Repository Create a new yum repository using below instructions.
-sudo vim /etc/yum.repos.d/google.repo
-Add following content to this file
-1 2 3 4 5 6  [google] name=Google baseurl=http://dl.google.com/linux/rpm/stable/$basearch enabled=1 gpgcheck=1 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub   Step 2: Install/Update Google Chrome Richard Lloid provided an shell script to grab libraries from a more recent Linux distro, put them in a tree (/opt/google/chrome/lib) exclusively picked up by Google Chrome and then you can indeed run Google Chrome on CentOS 6.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-04-04-install-chrome-centos6/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-04-02-gitolite-permissions/">Gitolite permissions setup</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-04-02 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 1548 words </span>
-        <span class="more-meta"> 8 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
-How gitolite works Repository permission structure This is general format of repo definition
-1 2 3  REPO NAME rule line rule line   for example
-1 2 3 4 5 6 7 8  @staff = dilbert alice wally bob repo foo RW+ = dilbert # line 1 RW+ dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5   The Rule line has format:
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-04-02-gitolite-permissions/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

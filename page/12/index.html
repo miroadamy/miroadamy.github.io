@@ -118,6 +118,58 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-04-04-install-chrome-centos6/">How to install Chrome in Centos 6.5</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-04-04 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 207 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      How to install Chrome in Centos 6.5 Step 1. Add Google Yum Repository Create a new yum repository using below instructions.
+sudo vim /etc/yum.repos.d/google.repo
+Add following content to this file
+1 2 3 4 5 6  [google] name=Google baseurl=http://dl.google.com/linux/rpm/stable/$basearch enabled=1 gpgcheck=1 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub   Step 2: Install/Update Google Chrome Richard Lloid provided an shell script to grab libraries from a more recent Linux distro, put them in a tree (/opt/google/chrome/lib) exclusively picked up by Google Chrome and then you can indeed run Google Chrome on CentOS 6.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-04-04-install-chrome-centos6/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-04-02-gitolite-permissions/">Gitolite permissions setup</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-04-02 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 1548 words </span>
+        <span class="more-meta"> 8 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
+How gitolite works Repository permission structure This is general format of repo definition
+1 2 3  REPO NAME rule line rule line   for example
+1 2 3 4 5 6 7 8  @staff = dilbert alice wally bob repo foo RW+ = dilbert # line 1 RW+ dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5   The Rule line has format:
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-04-02-gitolite-permissions/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2014-03-11-sshf-in-vm/">Installation of sshfs in the new VM</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2014-03-11 </span>
@@ -190,56 +242,6 @@ Eclipse There is opensource plugin for it at https://github.
     </div>
     <div class="read-more">
       <a href="/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-12-31-httpsgithub-comradegastmiroadamy-dot-comwiki/">Miro&#39;s World 2.0</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-12-31 </span>
-      <div class="post-category">
-          <a href="/categories/general/"> general </a>
-          </div>
-        <span class="more-meta"> 63 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      The continuation of the old Wordpress blog with more agreeable tools: Github Wiki + Gollum, Markdown and Git.
-My old blog at Miro&rsquo;s World has been kinda neglected in last two years. I have written several entries and published them only internally. I have decided now to pull those of the entries that do not contain customer references, code or customer IP out.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-12-31-httpsgithub-comradegastmiroadamy-dot-comwiki/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-10-16-endeca-oracle/">Endeca start scripts - Oracle way</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-10-16 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 297 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I have ported the Oracle VM style management scripts into the Loyalty VM.
-The scripts are in the loyalty-endeca Git repo, originally in eVoucher branch but also merged into edc
-1 2 3 4 5 6 7 8 9 10  [tkuser@vm-lo1-hpr-ma endeca]$ ls -1 total 28 dev-check-environment.sh* dev-deploy-endeca-app.sh* dev-endeca-environmet.ini* dev-remove-endeca-app.sh* endeca-control* endeca-vars.txt* README.md* RewardsEndc/   dev-endeca-environmet.ini This is environment setting script.
-1 2 3 4 5 6 7 8 9 10 11  ### MUST BE SOURCED IN source dev-endeca-environmet.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-10-16-endeca-oracle/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

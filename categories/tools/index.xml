@@ -6,10 +6,21 @@
     <description>Recent content in tools on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 08 Jul 2015 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 24 Oct 2018 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Useful tool for Dockerhub</title>
+      <link>https://miroadamy.com/posts/2018-10-24-dockerhub-tool/</link>
+      <pubDate>Wed, 24 Oct 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-10-24-dockerhub-tool/</guid>
+      <description>Skopeo I have stumbled upon this tool: https://github.com/containers/skopeo - command line tools for manipulation with Docker images and Docker image registries.
+It can work with OCI images as well as the original Docker v2 images.
+Installation 1  brew install skopeo   Usage 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.</description>
+    </item>
     
     <item>
       <title>Accessing Keepass information from command line</title>

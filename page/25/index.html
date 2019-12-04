@@ -118,6 +118,56 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2009-01-09-vmware-and-slow-clocks-take-2/">VMWare and slow clocks - take 2</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2009-01-09 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 193 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      The centos 4.x we are using as platform for the VMWare VMs (yes, I know there is version 5, but we need to be compliant with RHEL 4.x because of the ATG requirements) installs by default the NTP client.
+Here is sequence of steps that needs to be performed to enable automatic synchronization of the clocks.
+1) make sure the DNS works
+1 2  cat /etc/resolv.conf sudo vi /etc/resolv.conf   and check that nameservers point to something meaningfull, e.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2009-01-09-vmware-and-slow-clocks-take-2/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2009-01-04-vmware-and-slow-clocks/">VMWare and slow clocks</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2009-01-04 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 131 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I have noticed recently that most of our VMWare instances (and we are running decent fleet of them for the ATG Lab as well as internal system) if left without time synchronization, will loose get late quite a bit: some of them as much as hour or more a week.
+Unix date command unfortunately belongs to those commands that I am having troubles to remember and everytime I have to use it with parameters, I end up googling for examples .
+    </div>
+    <div class="read-more">
+      <a href="/posts/2009-01-04-vmware-and-slow-clocks/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2009-01-02-weird-rogers-3g-network-error-fixed/">Weird Rogers 3G network error - fixed ?</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2009-01-02 </span>
@@ -187,61 +237,6 @@ The Clock application showed what was wrong (this snapshot was taken on Sunday, 
     </div>
     <div class="read-more">
       <a href="/posts/2008-12-16-weird-rogers-3g-network-error/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-12-01-chapters-goes-mac/">Chapters goes Mac</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-12-01 </span>
-      <div class="post-category">
-          <a href="/categories/general/"> general </a>
-          </div>
-        <span class="more-meta"> 79 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I have noticed few of this beauties in Kanata Chapters. Nice replacement for the beaten up CRT terminals that used to be around. They somehow looked right and familiar from the distance.
-
-Beautiful screen, with touch capability.
-Nice presentation and user interface.
-
-The keyboard with unique personality.
-And after looking closer, it was very obvious why:
-
-Proper keyboard simply must have Command key ;-)
-PS:I am sorry for bad quality of pictures - iPhone camera under bad light conditions.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-12-01-chapters-goes-mac/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-11-24-fix-for-sender-address-is-invalid-error-on-iphone-3g/">Fix for &#39;Sender address is invalid&#39; error on iPhone 3G</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-11-24 </span>
-      <div class="post-category">
-          <a href="/categories/lifehacks/"> lifehacks </a>
-          </div>
-        <span class="more-meta"> 214 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I started to have this error about week ago, out of the blue. I was not aware of making any changes, but suddenly could not reply to an email, send new email or even forward existing email in the iPhone default Mail application. I am using GMail account and because other clients on different platforms worked OK, I suspected either Rogers or Apple. I was trying several possible fixes (and used Safari and Gmail web access - which is not much fun).
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-11-24-fix-for-sender-address-is-invalid-error-on-iphone-3g/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
