@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>30daychallenge on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/30daychallenge/</link>
+    <description>Recent content in 30daychallenge on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 06 Dec 2019 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/30daychallenge/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>30 day commit challenge</title>
+      <link>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</link>
+      <pubDate>Fri, 06 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</guid>
+      <description>My work in last few years took my away from practical coding towards DevOps. Despite the increased role of IaaC in our DevOps, this often means living in iTerm and AWS console with interaction not being captured in any form.
+On writing side, lots of my output shifted from code towards writing text in Wiki&amp;rsquo;s, GoogleDocs and more and more in Slack messages. The code I write are short one-liners or small scripts with very short life span.</description>
+    </item>
+    
+  </channel>
+</rss>

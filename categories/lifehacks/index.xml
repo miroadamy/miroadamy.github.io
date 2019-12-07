@@ -6,10 +6,30 @@
     <description>Recent content in lifehacks on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 10 Mar 2015 00:57:35 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 06 Dec 2019 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/categories/lifehacks/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>30 day commit challenge</title>
+      <link>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</link>
+      <pubDate>Fri, 06 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</guid>
+      <description>My work in last few years took my away from practical coding towards DevOps. Despite the increased role of IaaC in our DevOps, this often means living in iTerm and AWS console with interaction not being captured in any form.
+On writing side, lots of my output shifted from code towards writing text in Wiki&amp;rsquo;s, GoogleDocs and more and more in Slack messages. The code I write are short one-liners or small scripts with very short life span.</description>
+    </item>
+    
+    <item>
+      <title>BOTD - Blog of the Day</title>
+      <link>https://miroadamy.com/posts/2019-12-05-silvias-blog/</link>
+      <pubDate>Thu, 05 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-05-silvias-blog/</guid>
+      <description>Today&amp;rsquo;s blog of the day is a special one. It does not deal with cloud, DevOps or distributed systems. The theme of the blog is travel, life of digital nomad and observations on life from a perspective of a smart young woman, working as Online English teacher and travelling a lot while doing so - https://bookandtravel.blog/
+What makes this blog dear and interesting to me is that it&amp;rsquo;s author is my daughter Silvia.</description>
+    </item>
     
     <item>
       <title>How to keep git log and less output on the screen</title>

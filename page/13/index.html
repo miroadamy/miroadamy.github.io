@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2019-11-27T20:24:21+00:00" />
+<meta property="og:updated_time" content="2019-12-07T17:47:33+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -116,6 +116,57 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-03-11-sshf-in-vm/">Installation of sshfs in the new VM</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-03-11 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 89 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
+Get the &lsquo;epel&rsquo; repos 1 2 3  wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm   Validate
+1 2 3 4  $ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo   It if good idea to enable the remi by default
+sudo vim /etc/yum.repos.d/remi.repo
+Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap   Using Mount the host directory
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-03-11-sshf-in-vm/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-12-31-difference-between-matching-and-simple-git-push/">Difference between matching and simple Git push</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-12-31 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 769 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I started to see this message in some of my Git environments
+1 2 3 4 5 6 7 8 9 10 11  Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. To squelch this message and maintain the current behavior after the default changes, use: git config --global push.default matching To squelch this message and adopt the new behavior now, use: git config --global push.default simple    This is collection of information gathered from Stackoverflow, Git docs and various internet sources.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-12-31-difference-between-matching-and-simple-git-push/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/">Binding DashDoc with editors and Eclipse</a></h1>
@@ -189,54 +240,6 @@ The scripts are in the loyalty-endeca Git repo, originally in eVoucher branch bu
     </div>
     <div class="read-more">
       <a href="/posts/2013-10-16-endeca-oracle/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-26-git-push-matching-simple/">Difference between matching and simple - Git push</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-09-26 </span>
-      <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
-          </div>
-        <span class="more-meta"> 734 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Git message
-1 2 3 4 5 6 7 8 9 10  Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. To squelch this message and maintain the current behavior after the default changes, use: git config --global push.default matching To squelch this message and adopt the new behavior now, use: git config --global push.default simple   Options for push.default
-1 2 3 4 5  nothing - do not push anything.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-09-26-git-push-matching-simple/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-25-sublime-text-macro-timestamp/">Sublime text macro to insert timestamp</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-09-25 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> Programming </a>
-          </div>
-        <span class="more-meta"> 75 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-09-25-sublime-text-macro-timestamp/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

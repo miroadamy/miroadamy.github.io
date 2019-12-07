@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2019-11-27T20:24:21+00:00" />
+<meta property="og:updated_time" content="2019-12-07T17:47:33+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -116,6 +116,59 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-08-22-jekyll-clean-theme/">Third time is a charm</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-08-22 </span>
+      <div class="post-category">
+          <a href="/categories/general/"> general </a>
+          </div>
+        <span class="more-meta"> 383 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      As part of &ldquo;back to basics&rdquo; software minimalism movement, I have exported the old Wordpress blog and loaded it into Jekyll with intention to publish it on my Github
+This contains almost 10 years worth of history of my posts, plus few not yet previously unpublished posts.
+It is based on Jekyll Clean theme, created by Scott Emmons - see it / get it from github.
+If you are interested in the Jekyll Clean theme:
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-08-22-jekyll-clean-theme/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-05-16-atg-groovy-tdd/">ATG Groovy TDD</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-05-16 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 72 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Got it working. It is a bit rough around the edges, but functional.
+The two components
+ http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyDemoScript/ http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyScriptRunner/  The are not started via Initial, but that is not a problem.
+The script tested:
+1 2 3 4 5 6 7 8 9  class ThatsGroovyDude implements com.thinkwrap.twatg.script.RunnableScript { atg.nucleus.Nucleus nuc = atg.nucleus.Nucleus.getGlobalNucleus(); public String run() { String s = &#34;&#34;; nuc.configPathNames.each { s += &#34;${it}\n&#34; } return &#34;Hello World!
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-05-16-atg-groovy-tdd/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2014-04-22-autorename-screenshots/">Folder action to autorename screenshots</a></h1>
@@ -190,57 +243,6 @@ How gitolite works Repository permission structure This is general format of rep
     </div>
     <div class="read-more">
       <a href="/posts/2014-04-02-gitolite-permissions/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-03-11-sshf-in-vm/">Installation of sshfs in the new VM</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-03-11 </span>
-      <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
-          </div>
-        <span class="more-meta"> 89 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
-Get the &lsquo;epel&rsquo; repos 1 2 3  wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm   Validate
-1 2 3 4  $ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo   It if good idea to enable the remi by default
-sudo vim /etc/yum.repos.d/remi.repo
-Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap   Using Mount the host directory
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-03-11-sshf-in-vm/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-12-31-difference-between-matching-and-simple-git-push/">Difference between matching and simple Git push</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-12-31 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 769 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I started to see this message in some of my Git environments
-1 2 3 4 5 6 7 8 9 10 11  Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. To squelch this message and maintain the current behavior after the default changes, use: git config --global push.default matching To squelch this message and adopt the new behavior now, use: git config --global push.default simple    This is collection of information gathered from Stackoverflow, Git docs and various internet sources.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-12-31-difference-between-matching-and-simple-git-push/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

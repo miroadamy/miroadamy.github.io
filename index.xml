@@ -6,7 +6,7 @@
     <description>Recent content on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 27 Nov 2019 20:24:21 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Dec 2019 17:47:33 +0000</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,14 +26,34 @@ Contact Email me - firstname dot lastname, at Sergei&amp;rsquo;s and Larry&amp;r
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Wed, 27 Nov 2019 20:24:21 +0000</pubDate>
+      <pubDate>Sat, 07 Dec 2019 17:47:33 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
       <description>Status Hugo Static Site Generator v0.59.1/extended darwin/amd64 BuildDate: unknown
 Pygments version 2.4.2, &amp;copy; 2006-2019 by Georg Brandl.
-Blog commit: c1e137a5d2cff2355cde57c12a51ff9d1341e64e
+Blog commit: d060dcc680c2f9f592ecc644b180d57a1f6987da
 Theme commit: d39d3e443953caea05510b19fdd7a259c71a0ab3
-Published: &amp;ldquo;2019-11-27T20:24:21Z&amp;rdquo;</description>
+Published: &amp;ldquo;2019-12-07T17:47:33Z&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>30 day commit challenge</title>
+      <link>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</link>
+      <pubDate>Fri, 06 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</guid>
+      <description>My work in last few years took my away from practical coding towards DevOps. Despite the increased role of IaaC in our DevOps, this often means living in iTerm and AWS console with interaction not being captured in any form.
+On writing side, lots of my output shifted from code towards writing text in Wiki&amp;rsquo;s, GoogleDocs and more and more in Slack messages. The code I write are short one-liners or small scripts with very short life span.</description>
+    </item>
+    
+    <item>
+      <title>BOTD - Blog of the Day</title>
+      <link>https://miroadamy.com/posts/2019-12-05-silvias-blog/</link>
+      <pubDate>Thu, 05 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-05-silvias-blog/</guid>
+      <description>Today&amp;rsquo;s blog of the day is a special one. It does not deal with cloud, DevOps or distributed systems. The theme of the blog is travel, life of digital nomad and observations on life from a perspective of a smart young woman, working as Online English teacher and travelling a lot while doing so - https://bookandtravel.blog/
+What makes this blog dear and interesting to me is that it&amp;rsquo;s author is my daughter Silvia.</description>
     </item>
     
     <item>
