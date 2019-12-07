@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2019-12-07T17:59:44+00:00" />
+<meta property="og:updated_time" content="2019-12-07T22:37:08+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -118,58 +118,61 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2009-02-23-the-myth-of-premium-hardware-or-why-ottawa-needs-apple-store/">The myth of premium hardware or why Ottawa needs Apple Store</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2011-02-03-linux-time/">Configuring permanent time updates for Linux</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2009-02-23 </span>
+      <span class="post-time"> 2011-02-03 </span>
       <div class="post-category">
-          <a href="/categories/general/"> general </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 489 words </span>
-        <span class="more-meta"> 3 mins read </span>
+        <span class="more-meta"> 66 words </span>
+        <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Back in November 2007, when I was buying Macbook Pro, I did order the AppleCare option, which added several hundred dollars to already pretty expensive notebook price. For moment I was tempted to go without it - after all, Apple makes top grade, high quality hardware and considering pretty low failure rate I have seen with my Windows based notebooks between 1998-2006, why to pay more ? Little did I know how much mileage will I get from the extra cost :-(.
+      1) make sure the DNS works 1 2 3 4 5 6  sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1   2) check that you have ntpd installed  cat /etc/ntp.conf
+ 3) make it work in all 1 2  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
+ 5) Start service / restart  sudo /sbin/service ntpd start
     </div>
     <div class="read-more">
-      <a href="/posts/2009-02-23-the-myth-of-premium-hardware-or-why-ottawa-needs-apple-store/" class="read-more-link">Read more...</a>
+      <a href="/posts/2011-02-03-linux-time/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2009-02-18-its-alive/">It&#39;s alive !</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2011-01-30-bye-bye-twitter/">Bye bye Twitter</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2009-02-18 </span>
+      <span class="post-time"> 2011-01-30 </span>
       <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          <a href="/categories/startup-life/"> startup-life </a>
+          <a href="/categories/lifehacks/"> lifehacks </a>
           </div>
-        <span class="more-meta"> 549 words </span>
-        <span class="more-meta"> 3 mins read </span>
+        <span class="more-meta"> 256 words </span>
+        <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      I was aching to blog about this since December 18th, when our system quietly and gently slipped into public visibility. Marked as Beta (thanks, Google for making this a legitimate way how to go live) it comfortably made it through Christmas shopping season into 2009.
-Now when the site has been announced and mentioned few times in the media, I guess it's OK to mention it here too.
-What is "
+      I have came to a conclusion that I do have too much stuff in my life.
+Too much and too little and the same time.
+Too much information. Too many interruptions and distractions. Too little time to think.
+Too much consumption of information and not enough time to process it and do anything meaningful with it - learn from it or create something new.
+The only way how to get out of the self-digged hole is to start cutting.
     </div>
     <div class="read-more">
-      <a href="/posts/2009-02-18-its-alive/" class="read-more-link">Read more...</a>
+      <a href="/posts/2011-01-30-bye-bye-twitter/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2009-02-07-how-to-un-stuck-unsuccessful-os-x-upgrade/">How to un-stuck unsuccessful OS-X upgrade</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2010-11-24-podcast-recommendation/">Podcast recommendation</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2009-02-07 </span>
+      <span class="post-time"> 2010-11-24 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
@@ -180,62 +183,58 @@ What is "
   
   <div class="post-content">
     <div class="post-summary">
-      Here is the context: in order to upgrade iLife 08 to iLife'09 (which is very nice, btw), I had to install 10.5.6 upgrade. And according Murphy's law, one of the 2 GB DIMM's in my MacBook Pro went bad exactly during the OS-X upgrade process.
-It had two rather unpleasant consequences:
- some of the patch files got downloaded and saved in corrupted state   The machine did not boot back after restart  The second problem was fixed by replacing the bad DIMM, but the first caused that upgrade to 10.
+      I have find new podcast that I want to share with you. It is called "This Developer's Life" and is produced by well known digerati Scott Hanselman and Rob Conery.
+I listen to a lot of podcasts, about 50 % of them produced by Leo Laporte's TWIT Network (This Week in Tech, Macbreak, This Week in Google, FLOSS Weekly and occasional Security Now).
+What I like about Leo's network is professionalism of audio production, usually good and interesting panel with topics that are worth listening to.
     </div>
     <div class="read-more">
-      <a href="/posts/2009-02-07-how-to-un-stuck-unsuccessful-os-x-upgrade/" class="read-more-link">Read more...</a>
+      <a href="/posts/2010-11-24-podcast-recommendation/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2009-01-09-vmware-and-slow-clocks-take-2/">VMWare and slow clocks - take 2</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2010-02-24-jsp-compiler-configuration-in-jboss-4-2-x-for-atg/">JSP compiler configuration in JBoss 4.2.x for ATG</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2009-01-09 </span>
+      <span class="post-time"> 2010-02-24 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 193 words </span>
+        <span class="more-meta"> 8 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      The centos 4.x we are using as platform for the VMWare VMs (yes, I know there is version 5, but we need to be compliant with RHEL 4.x because of the ATG requirements) installs by default the NTP client.
-Here is sequence of steps that needs to be performed to enable automatic synchronization of the clocks.
-1) make sure the DNS works
-1 2  cat /etc/resolv.conf sudo vi /etc/resolv.conf   and check that nameservers point to something meaningfull, e.
+      The post is on corporate blog - http://blog.thinkwrap.com/blog/2010/2/24/jsp-compiler-configuration-in-jboss-42x-for-atg.html
     </div>
     <div class="read-more">
-      <a href="/posts/2009-01-09-vmware-and-slow-clocks-take-2/" class="read-more-link">Read more...</a>
+      <a href="/posts/2010-02-24-jsp-compiler-configuration-in-jboss-4-2-x-for-atg/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2009-01-04-vmware-and-slow-clocks/">VMWare and slow clocks</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2010-01-26-thanks-for-all-the-adds/">Thanks for all the adds</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2009-01-04 </span>
+      <span class="post-time"> 2010-01-26 </span>
       <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
+          <a href="/categories/lifehacks/"> lifehacks </a>
           </div>
-        <span class="more-meta"> 131 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 473 words </span>
+        <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      I have noticed recently that most of our VMWare instances (and we are running decent fleet of them for the ATG Lab as well as internal system) if left without time synchronization, will loose get late quite a bit: some of them as much as hour or more a week.
-Unix date command unfortunately belongs to those commands that I am having troubles to remember and everytime I have to use it with parameters, I end up googling for examples .
+      As regular listener to multiple TWIT Network podcasts (This Week In tech, Macbreak Weekly, This Week in Google, Free Libre Opensource Software, Security Now, Windows Weekly) I am very much aware of all the advertisers that keep Leo and the gang in business and make the podcast's stream going. I have even acted upon several of the ads: we are customer of SquareSpace.com (the corporate blog runs on that platform), GoToMeeting is regular part of day-to-day business - we have several accounts and use it regularly for meetings.
     </div>
     <div class="read-more">
-      <a href="/posts/2009-01-04-vmware-and-slow-clocks/" class="read-more-link">Read more...</a>
+      <a href="/posts/2010-01-26-thanks-for-all-the-adds/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

@@ -30,20 +30,29 @@
     </item>
     
     <item>
+      <title>general</title>
+      <link>https://miroadamy.com/categories/general/</link>
+      <pubDate>Tue, 26 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://miroadamy.com/categories/life/</link>
+      <pubDate>Sun, 24 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>programming</title>
       <link>https://miroadamy.com/categories/programming/</link>
       <pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>general</title>
-      <link>https://miroadamy.com/categories/general/</link>
-      <pubDate>Fri, 22 Nov 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/categories/general/</guid>
       <description></description>
     </item>
     
@@ -66,9 +75,18 @@
     </item>
     
     <item>
+      <title>jokes</title>
+      <link>https://miroadamy.com/categories/jokes/</link>
+      <pubDate>Thu, 12 Sep 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/jokes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>tools</title>
       <link>https://miroadamy.com/categories/tools/</link>
-      <pubDate>Wed, 24 Oct 2018 11:22:48 +0800</pubDate>
+      <pubDate>Sun, 10 Feb 2019 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/tools/</guid>
       <description></description>
@@ -89,15 +107,6 @@
       <pubDate>Wed, 15 Feb 2012 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/startup-life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jokes</title>
-      <link>https://miroadamy.com/categories/jokes/</link>
-      <pubDate>Mon, 03 Sep 2007 19:58:15 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/categories/jokes/</guid>
       <description></description>
     </item>
     

@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2019-12-07T17:59:44+00:00" />
+<meta property="og:updated_time" content="2019-12-07T22:37:08+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -118,129 +118,125 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-05-13-homelessness-over/">Homelessness is over, moved in</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-25-sublime-text-macro-timestamp/">Sublime text macro to insert timestamp</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2012-05-13 </span>
+      <span class="post-time"> 2013-09-25 </span>
       <div class="post-category">
-          <a href="/categories/technology/"> technology </a>
+          <a href="/categories/programming/"> Programming </a>
           </div>
-        <span class="more-meta"> 266 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Being two weeks without &ldquo;permanent computer home&rdquo; and living among old Helios, MacMini, temp repair and Web was interesting experience. I certainly remember most of my Web passwords (again).
-Got my new MacBook Pro replacement yesterday. Pretty sweet upgrade: quad-core i7 @ 2.4, 8 GB RAM, 750 GB HDD 7200 RPM, Thunderbolt. Noticeably faster but also a bit louder - runs fans more often, maybe it is just while Spotlight does index everything ?
-    </div>
-    <div class="read-more">
-      <a href="/posts/2012-05-13-homelessness-over/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-04-15-github/">GitHub identity mixup</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-04-15 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 79 words </span>
+        <span class="more-meta"> 75 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      After I created the ThinkWrap GitHub account and uploaded the public key, this key got somehow bound to GitHub identity &lsquo;madamy&rsquo;
-I had to add user madamy to my public GitHub repo - where I keep the dot-files - https://github.com/radegast/dotvim
-This may be an issue for people that have their own private accounts - the key management is the key.
-This article is useful:
- http://sealedabstract.com/code/github-ssh-with-multiple-identities-the-slightly-more-definitive-guide/ http://net.tutsplus.com/tutorials/tools-and-tips/how-to-work-with-github-and-multiple-accounts/  Alternative Use https for forking , instead read/write ssh.
+      Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see
     </div>
     <div class="read-more">
-      <a href="/posts/2012-04-15-github/" class="read-more-link">Read more...</a>
+      <a href="/posts/2013-09-25-sublime-text-macro-timestamp/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-04-09-macvim-git/">Using MacVim as git editor</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-24-screenshot-cli/">How to make screenshot from command line</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2012-04-09 </span>
+      <span class="post-time"> 2013-09-24 </span>
       <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
+          <a href="/categories/technology/"> Technology </a>
           </div>
-        <span class="more-meta"> 23 words </span>
+        <span class="more-meta"> 64 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Add this to .bashrc  export GIT_EDITOR=&lsquo;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &lsquo;
- The key is -f, without it git will abort because of empty commit message.
+      How to make screenshot from command line 1 2 3 4 5 6 7  platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk   First one is &ldquo;interactive&rdquo; - Cmd-Shift-3 with selection tool, second is full screen
     </div>
     <div class="read-more">
-      <a href="/posts/2012-04-09-macvim-git/" class="read-more-link">Read more...</a>
+      <a href="/posts/2013-09-24-screenshot-cli/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-04-08-quickview/">How to make unregistered files work in Quick View on OS-X</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-16-vbox-shared-folder/">Case sensitivity and VirtualBox shared folder</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2012-04-08 </span>
+      <span class="post-time"> 2013-09-16 </span>
       <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
+          <a href="/categories/technology/"> Technology </a>
           </div>
-        <span class="more-meta"> 73 words </span>
+        <span class="more-meta"> 104 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Out of the box Quick View (press Space in Finder) behaviour on unregistered files is not very useful: it shows huge Unix icon instead of content of file.
-This is default for files like Makefile or build.gradle
-This plugin makes it go away and show text file for all UTIs that are plain text: http://whomwah.github.com/qlstephen/
-Installation: * open the DMG file * copy QLStephen.qlgenerator to /Users/&lt;&lt;USERNAME&gt;&gt;/Library/QuickLook/QLStephen.qlgenerator
-That&rsquo;s it.
-Now it looks like this:
+      Case sensitivity and VirtualBox shared folder Weird but true behaviour:
+I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
+1  touch zz zZ   creates two files, both &ldquo;inside VM&rdquo; ~/development/ATG/platform-edc as well as in OS-X.
+If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
+The command
     </div>
     <div class="read-more">
-      <a href="/posts/2012-04-08-quickview/" class="read-more-link">Read more...</a>
+      <a href="/posts/2013-09-16-vbox-shared-folder/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-04-07-gollum/">GitHub &#43; Gollum vs BitBucket Wiki</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-05-mc-color-scheme/">Usable mc color scheme</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2012-04-07 </span>
+      <span class="post-time"> 2013-09-05 </span>
       <div class="post-category">
-          <a href="/categories/technology/"> technology </a>
+          <a href="/categories/technology/"> Technology </a>
           </div>
-        <span class="more-meta"> 85 words </span>
+        <span class="more-meta"> 11 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      both Wikis are backed by Git repo both allow local edit  Gollum See https://github.com/github/gollum#readme
-Installation: http://alblue.bandlem.com/2011/05/git-tip-of-week-gollum.html
- sudo gem install gollum
- Running 1 2 3  git init TestWiki gollum --page-file-dir wiki TestWiki openurl http://localhost:4567   Parsers - separate install 1 2  gem install rdiscount gem install wikicloth   Get Wiki for repo 1 2 3 4 5 6  git clone URL URL: - git@github.
+       Usable mc color scheme Edit
+~/.mc/ini
+insert
+1 2  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   
     </div>
     <div class="read-more">
-      <a href="/posts/2012-04-07-gollum/" class="read-more-link">Read more...</a>
+      <a href="/posts/2013-09-05-mc-color-scheme/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-03-show-lock-screen-indicator/">Show lock screen indicator in OS-X menu</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-09-03 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 50 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Show lock screen indicator in OS-X menu After HDD reinstall I lost most of my customizations (by choice decided NOT to restore from TM).
+The Lock in menu is provided by KeyChain Access, not by System Preferences.
+Open &lsquo;KeyChain Access&rsquo; -&gt; Preferences, select &lsquo;Show keychain status&rsquo;
+and it is back:
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-09-03-show-lock-screen-indicator/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

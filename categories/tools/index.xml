@@ -6,10 +6,22 @@
     <description>Recent content in tools on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 24 Oct 2018 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 10 Feb 2019 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/categories/tools/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SSL Poke</title>
+      <link>https://miroadamy.com/posts/2019-02-10-ssl-poke/</link>
+      <pubDate>Sun, 10 Feb 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-02-10-ssl-poke/</guid>
+      <description>Cybersource Testing Tool Java utility that we used before when we were debugging the TLS 1.2 issues.
+It needs to be compiled with JDK 1.8 - ideally the same one that runs in production and then run like:
+1  java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443   replace api.cybersource.com with whatever the cybersource endpoint needs to be.
+If the utility responds with &amp;lsquo;Successfully connected’, it was able to handshake with the SSL server and establish the secure connection.</description>
+    </item>
     
     <item>
       <title>Useful tool for Dockerhub</title>

@@ -32,6 +32,25 @@ What makes this blog dear and interesting to me is that it&amp;rsquo;s author is
     </item>
     
     <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2019-11-26-totd/</link>
+      <pubDate>Tue, 26 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-26-totd/</guid>
+      <description> Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.  ― Marcus Aurelius , Meditations
+ </description>
+    </item>
+    
+    <item>
+      <title>November in Valencia</title>
+      <link>https://miroadamy.com/posts/2019-11-24-valencia/</link>
+      <pubDate>Sun, 24 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-24-valencia/</guid>
+      <description>Lovely November day in Valencia</description>
+    </item>
+    
+    <item>
       <title>Building Hugo as well on GitLab pages</title>
       <link>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</link>
       <pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
@@ -65,6 +84,18 @@ The Githup pages repo contains generated static site, with index.</description>
     </item>
     
     <item>
+      <title>Thought of the day</title>
+      <link>https://miroadamy.com/posts/2019-11-14-totd/</link>
+      <pubDate>Thu, 14 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-14-totd/</guid>
+      <description>“The older you get, the more quiet you become.
+Life humbles you so deeply as you age. You realize how much nonsense you’ve wasted time on.”
+&amp;mdash; Vala Afshar (@ValaAfshar) November 14, 2019 
+Adding screenshot in case the account disappears</description>
+    </item>
+    
+    <item>
       <title>All Day DevOps 2019</title>
       <link>https://miroadamy.com/posts/2019-11-07-all-day-devops/</link>
       <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
@@ -74,6 +105,181 @@ The Githup pages repo contains generated static site, with index.</description>
 The tracks:
  Keynotes Cultural Change DevSecOps SRE CI/CD Everything Cloud  The complete list is here: https://www.alldaydevops.com/2019-live-schedule - the play button points to the block video.
 The Video URLs Channel 1  https://www.</description>
+    </item>
+    
+    <item>
+      <title>AWS Inspection</title>
+      <link>https://miroadamy.com/posts/2019-10-03-aws-inspection/</link>
+      <pubDate>Thu, 03 Oct 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-10-03-aws-inspection/</guid>
+      <description>Bunch of one-liners for AWS .. so that I find them faster next time
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &amp;#39;.Reservations[].Instances[] | &amp;#34;\n&amp;#34; + .InstanceId + &amp;#34; : &amp;#34; + .KeyName + &amp;#34; =&amp;gt; &amp;#34; + .PublicIpAddress + &amp;#34; | &amp;#34; + .PublicDnsName, .Tags[] as $tt | &amp;#34; ... &amp;#34; + $tt.</description>
+    </item>
+    
+    <item>
+      <title>Pyrenees</title>
+      <link>https://miroadamy.com/posts/2019-09-29-pyrenees/</link>
+      <pubDate>Sun, 29 Sep 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-09-29-pyrenees/</guid>
+      <description> Finally, we got to visit the mountains in the North - Pyrenees.
+Specifically this place: https://benasque.com/en
+Short version I liked it. Great hikes, very good food. Excellent hotel
+Long version     </description>
+    </item>
+    
+    <item>
+      <title>Spanish and Catalan</title>
+      <link>https://miroadamy.com/posts/2019-09-12-post/</link>
+      <pubDate>Thu, 12 Sep 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-09-12-post/</guid>
+      <description>The current weather in Valencia summed up: https://www.youtube.com/watch?v=j2VHUP7R2CY
+ Note for my friends who think Catalan is more or less same as Spanish: go for it and translate :-)</description>
+    </item>
+    
+    <item>
+      <title>Welcome back present</title>
+      <link>https://miroadamy.com/posts/2019-09-03-bloom/</link>
+      <pubDate>Tue, 03 Sep 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-09-03-bloom/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>Cafe Eleven</title>
+      <link>https://miroadamy.com/posts/2019-08-29-post/</link>
+      <pubDate>Thu, 29 Aug 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-08-29-post/</guid>
+      <description>Cafe and books. &amp;lsquo;nough said &amp;hellip;
+ </description>
+    </item>
+    
+    <item>
+      <title>Favorite places</title>
+      <link>https://miroadamy.com/posts/2019-08-25-foldvari/</link>
+      <pubDate>Sun, 25 Aug 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-08-25-foldvari/</guid>
+      <description>I discovered this place rather late - at the end of my vacations.
+Maybe it was better so, otherwise I would my vacation here :-)
+https://spectator.sme.sk/c/22160317/bookworms-get-a-sanctuary-in-the-slovak-national-gallery.html
+I&amp;rsquo;ll be back !!!
+ </description>
+    </item>
+    
+    <item>
+      <title>Je me souviens</title>
+      <link>https://miroadamy.com/posts/2019-08-21-august/</link>
+      <pubDate>Wed, 21 Aug 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-08-21-august/</guid>
+      <description>On 21 August 1968, the occupation army of Soviet Union with satelites invaded Czechoslovakia.
+ </description>
+    </item>
+    
+    <item>
+      <title>Family vacation</title>
+      <link>https://miroadamy.com/posts/2019-08-03-post/</link>
+      <pubDate>Sat, 03 Aug 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-08-03-post/</guid>
+      <description>After long time both we and both our children are in the same place.
+Precious family time.
+ </description>
+    </item>
+    
+    <item>
+      <title>Finland Män</title>
+      <link>https://miroadamy.com/posts/2019-07-18-finland-man/</link>
+      <pubDate>Tue, 16 Jul 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-07-18-finland-man/</guid>
+      <description>Lost and then found again - here:https://angrytouristblog.blogspot.com/2015/10/rejoice-finland-man-is-back.html
+Here is the copy, just in case
+Rejoice! The Finland Män is back! Source
+Finland Män Not Like Smalltalk. Is Horror.
+Finland Män not kän underständ smalltalk. When kuud silense, samwan open mouth, silense destroid, why do tis?
+One time Finland Män ko tu bar. Finland Män sit ät kounter, entshoi trink, look onli mopile phone. Is kuud silense. Then kam womän nekst tu Finland Män.</description>
+    </item>
+    
+    <item>
+      <title>Company picnic</title>
+      <link>https://miroadamy.com/posts/2019-07-06-picnic/</link>
+      <pubDate>Sat, 06 Jul 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-07-06-picnic/</guid>
+      <description>with great paella.
+ </description>
+    </item>
+    
+    <item>
+      <title>Tim Hortons in Valencia</title>
+      <link>https://miroadamy.com/posts/2019-06-23-tim-hortons/</link>
+      <pubDate>Sun, 23 Jun 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-06-23-tim-hortons/</guid>
+      <description>I have my doubts whether it will survive. It is next to Starbucks (one of several, albeit nothing like Toronto) so there is competition for tourists looking for the familiar logo.
+As for locals, Spanish coffee culture is quite different, and if I am allowed to say so - Spanish coffee is both better AND less expensive as
+So let&amp;rsquo;s hope Timbits will save the day. Who could resist deep fried sugary dough, eh ?</description>
+    </item>
+    
+    <item>
+      <title>Visit in Canada</title>
+      <link>https://miroadamy.com/posts/2019-05-25-ottawa/</link>
+      <pubDate>Sun, 26 May 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-05-25-ottawa/</guid>
+      <description>I did quick 2 week visit to Canada.
+I spent some time with our son and daughter-in-law, visited many dear friends and places in the city and nature, worked for couple of days in the office and met new colleagues and even met current my boss for the first time in 3D. I must say, he is taller than in Zoom :-D
+I also visited our ex-cat with her new human servants and as expected, Lucy duly ignored me.</description>
+    </item>
+    
+    <item>
+      <title>AWS Summit Madrid</title>
+      <link>https://miroadamy.com/posts/2019-05-07-aws-summit/</link>
+      <pubDate>Tue, 07 May 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-05-07-aws-summit/</guid>
+      <description>One day round trip Valencia to Madrid and back.
+It is 350 km, but AVE (high velocity train) makes it in 1.5 hr. Take that, Via Rail !!
+Travelling at 300 km/h is unreal. It is actually quieter and more smooth than Canadian train at 80 - all that makes the speed believable is the velocity display and view out of the window when train goes around something closer to the rails.</description>
+    </item>
+    
+    <item>
+      <title>Jupyter notebook with Bash kernel</title>
+      <link>https://miroadamy.com/posts/2019-03-16-jupyter-bash/</link>
+      <pubDate>Sat, 16 Mar 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-03-16-jupyter-bash/</guid>
+      <description>Adding Bash to Tensorflow notebook I commented out PHP and C++ stuff that I do not really need:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73  FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;amp;&amp;amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;amp;&amp;amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github.</description>
+    </item>
+    
+    <item>
+      <title>SSL Poke</title>
+      <link>https://miroadamy.com/posts/2019-02-10-ssl-poke/</link>
+      <pubDate>Sun, 10 Feb 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-02-10-ssl-poke/</guid>
+      <description>Cybersource Testing Tool Java utility that we used before when we were debugging the TLS 1.2 issues.
+It needs to be compiled with JDK 1.8 - ideally the same one that runs in production and then run like:
+1  java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443   replace api.cybersource.com with whatever the cybersource endpoint needs to be.
+If the utility responds with &amp;lsquo;Successfully connected’, it was able to handshake with the SSL server and establish the secure connection.</description>
+    </item>
+    
+    <item>
+      <title>Gitbits</title>
+      <link>https://miroadamy.com/posts/2019-01-14-gitbits/</link>
+      <pubDate>Mon, 14 Jan 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-01-14-gitbits/</guid>
+      <description>Two small utilities I have places into ~/bin:
+git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
+1 2 3 4 5 6 7 8 9  #!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; | less   Example 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.</description>
     </item>
     
     <item>

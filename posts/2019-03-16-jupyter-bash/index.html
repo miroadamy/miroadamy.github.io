@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Jupyter notebook with Bash kernel - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Adding Bash to Tensorflow notebook I commented out PHP and C&#43;&#43; stuff that I do not really need:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73  FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;amp;&amp;amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;amp;&amp;amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2019-03-16-jupyter-bash/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Jupyter notebook with Bash kernel" />
+<meta property="og:description" content="Adding Bash to Tensorflow notebook I commented out PHP and C&#43;&#43; stuff that I do not really need:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73  FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;&amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2019-03-16-jupyter-bash/" />
+<meta property="article:published_time" content="2019-03-16T11:22:48+08:00" />
+<meta property="article:modified_time" content="2019-03-16T11:22:48+08:00" />
+<meta itemprop="name" content="Jupyter notebook with Bash kernel">
+<meta itemprop="description" content="Adding Bash to Tensorflow notebook I commented out PHP and C&#43;&#43; stuff that I do not really need:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73  FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;&amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github.">
+
+
+<meta itemprop="datePublished" content="2019-03-16T11:22:48&#43;08:00" />
+<meta itemprop="dateModified" content="2019-03-16T11:22:48&#43;08:00" />
+<meta itemprop="wordCount" content="407">
+
+
+
+<meta itemprop="keywords" content="python,jupyter,bash," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Jupyter notebook with Bash kernel"/>
+<meta name="twitter:description" content="Adding Bash to Tensorflow notebook I commented out PHP and C&#43;&#43; stuff that I do not really need:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73  FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;&amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Jupyter notebook with Bash kernel</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-03-16 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+          <span class="more-meta"> 407 words </span>
+          <span class="more-meta"> 2 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#adding-bash-to-tensorflow-notebook">Adding Bash to Tensorflow notebook</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="adding-bash-to-tensorflow-notebook">Adding Bash to Tensorflow notebook</h2>
+
+<p>I commented out PHP and C++ stuff that I do not really need:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">FROM jupyter/tensorflow-notebook
+
+USER root
+# install dependencies 
+RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \
+    php-cli php-dev php-pear \
+    pkg-config \
+    &amp;&amp; apt-get clean
+#    rm -rf /var/lib/apt/lists/*
+
+# install zeromq and zmq php extension 
+#RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;&amp; \
+#    tar -xvf zeromq-4.1.5.tar.gz &amp;&amp; \
+#    cd zeromq-* &amp;&amp; \
+#    ./configure &amp;&amp; make &amp;&amp; make install &amp;&amp; \
+#    printf &#34;\n&#34; | pecl install zmq-beta &amp;&amp; \
+#    echo &#34;extension=zmq.so&#34; &gt; /etc/php/7.0/cli/conf.d/zmq.ini
+
+# install PHP composer
+#RUN wget https://getcomposer.org/installer -O composer-setup.php &amp;&amp; \
+#    wget https://litipk.github.io/Jupyter-PHP-Installer/dist/jupyter-php-installer.phar &amp;&amp; \
+#    php composer-setup.php &amp;&amp; \
+#    php ./jupyter-php-installer.phar -vvv install &amp;&amp; \
+#    mv composer.phar /usr/local/bin/composer &amp;&amp; \
+#    rm -rf zeromq-* jupyter-php* &amp;&amp; \
+#    rm composer-setup.php
+
+# install ijavascript
+#RUN apt-get install -yq nodejs npm libzmq3-dev node-gyp &amp;&amp; \
+#    npm install -g ijavascript &amp;&amp; \
+#    ijs --ijs-install=global
+
+#RUN cd .. &amp;&amp; \
+#    apt-get install -yq --no-install-recommends cmake &amp;&amp; \
+#    wget https://raw.githubusercontent.com/root-mirror/cling/master/tools/packaging/cpt.py &amp;&amp; \
+#    chmod +x cpt.py &amp;&amp; \
+#    ./cpt.py --check-requirements &amp;&amp; ./cpt.py --create-dev-env Debug --with-workdir=./cling/
+
+#RUN cd .. &amp;&amp; \
+#    wget https://root.cern.ch/download/cling/cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \
+#    tar -xvjf cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \
+#    rm cling_*.tar.bz2 &amp;&amp; \
+#    mv cling_* cling
+
+#RUN cd .. &amp;&amp; \
+#    ln -s $(pwd)/cling/bin/* /usr/bin/ &amp;&amp; \
+#    cd cling/share/cling/Jupyter/kernel &amp;&amp; \
+#    pip install -e . &amp;&amp; \
+#    jupyter-kernelspec install cling-cpp17 &amp;&amp; \
+#    jupyter-kernelspec install cling-cpp14 &amp;&amp; \
+#    jupyter-kernelspec install cling-cpp11
+
+RUN chown -R $NB_USER /home/$NB_USER &amp;&amp; \
+    rm -rf /home/$NB_USER/.local/share/jupyter
+
+# install java jre for h2o
+RUN apt-get install -yq openjdk-8-jre
+
+# Reset user from jupyter/base-notebook
+USER $NB_USER
+
+# install jupyter-bash
+RUN /opt/conda/bin/pip install --no-cache-dir bash_kernel
+RUN /opt/conda/bin/python -m bash_kernel.install
+
+# install h2o
+RUN /opt/conda/bin/pip install --no-cache-dir --upgrade h2o &amp;&amp; \
+    /opt/conda/bin/pip install --no-cache-dir --upgrade pandas
+
+# disable authentication
+RUN mkdir -p .jupyter
+RUN echo &#34;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py
+RUN echo &#34;c.NotebookApp.token = &#39;&#39;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py</pre></td></tr></table>
+</div>
+</div>
+<p>Source: <a href="https://bitbucket.org/snippets/klassify/Ee9Myk/jupyter-notebook-with-bash-kernel">https://bitbucket.org/snippets/klassify/Ee9Myk/jupyter-notebook-with-bash-kernel</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-03-16
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          <a href="/tags/jupyter/">jupyter</a>
+          <a href="/tags/bash/">bash</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2019-05-07-aws-summit/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">AWS Summit Madrid</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2019-02-10-ssl-poke/">
+            <span class="next-text nav-default">SSL Poke</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

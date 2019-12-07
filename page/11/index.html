@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2019-12-07T17:59:44+00:00" />
+<meta property="og:updated_time" content="2019-12-07T22:37:08+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -118,129 +118,123 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-03-atg-rant/">ATG &#43; JBoss rant</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-08-keepass-cli/">Accessing Keepass information from command line</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2014-09-03 </span>
+      <span class="post-time"> 2015-07-08 </span>
       <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
+          <a href="/categories/tools/"> tools </a>
           </div>
-        <span class="more-meta"> 576 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Symptoms restarting after kill -9 of CSC instance does not succeed. The server never starts, the WAR files are not deployed properly, socket 8080 is open but nobody answers (not even with wget on localhost).
-The exception: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95  &#34;main&#34; prio=10 tid=0x0000000051a39000 nid=0x30fb in Object.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-09-03-atg-rant/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-03-gitbits/">Few gitbits</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-03 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 373 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Show branches and tags in log  git log &ndash;oneline &ndash;decorate
- Even better - all branches with graph  git log &ndash;oneline &ndash;decorate &ndash;all &ndash;graph
- Highlight words instead of lines  git diff &ndash;word-diff HEAD~~~ HEAD~~
- Also works in git log -p and git show
-Better status  git status -sb
- Compare with gs == git status
-Find a name 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git name-rev --name-only 73c762c remotes/origin/2013-10-22-LIVE~3   Find which branch has a commit 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26  ➜ simstore-atg git:(master) ✗ git branch --contains 73c762c LIVE LIVE-140430 LIVE2 LIVE3 LIVE4 PATCH-ORS-140605 PATCH-ORS-140616 feature_us_shipping * master ➜ simstore-atg git:(master) ✗ git branch --contains 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 ➜ simstore-atg git:(master) ✗ git pull Updating ed81557.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-09-03-gitbits/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-08-28-elastic-tutorial/">Tutorial on Elastic</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-08-28 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 2329 words </span>
-        <span class="more-meta"> 11 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Running elastic (see Elastic search and Kibana - getting started)
- Use case: building a employee directory for Megacorp
-  each document - type of &lsquo;employee&rsquo; everything in megacorp index  Populating 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  # Delete the `megacorp` index in case it already exists DELETE /megacorp # Index document 1, type &#34;employee&#34;, in the # &#34;megacorp&#34; index PUT /megacorp/employee/1 { &#34;first_name&#34; : &#34;John&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 25, &#34;about&#34; : &#34;I love to go rock climbing&#34;, &#34;interests&#34;: [ &#34;sports&#34;, &#34;music&#34; ] } # Index two more documents PUT /megacorp/employee/2 { &#34;first_name&#34; : &#34;Jane&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 32, &#34;about&#34; : &#34;I like to collect rock albums&#34;, &#34;interests&#34;: [ &#34;music&#34; ] } PUT /megacorp/employee/3 { &#34;first_name&#34; : &#34;Douglas&#34;, &#34;last_name&#34; : &#34;Fir&#34;, &#34;age&#34; : 35, &#34;about&#34;: &#34;I like to build cabinets&#34;, &#34;interests&#34;: [ &#34;forestry&#34; ] }   In server
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-08-28-elastic-tutorial/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-08-27-es1/">Elastic search and Kibana - getting started</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-08-27 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 698 words </span>
+        <span class="more-meta"> 666 words </span>
         <span class="more-meta"> 4 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      #Installation:
-See [](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_installing_elasticsearch.html)
-1 2 3  curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION   Marvel is management plugin - console about cluster. Install:
-1 2 3 4  ./bin/plugin -i elasticsearch/marvel/latest # disable data collection for local cluster echo &#39;marvel.agent.enabled: false&#39; &gt;&gt; ./config/elasticsearch.yml   Test Startup log:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  ➜ elasticsearch-1.
+      This is mainly for Linux and Mac as they do not have good client.
+It requires relatively modern Perl - 5.1x should work. I have
+1 2 3  ➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail)   Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.
     </div>
     <div class="read-more">
-      <a href="/posts/2014-08-27-es1/" class="read-more-link">Read more...</a>
+      <a href="/posts/2015-07-08-keepass-cli/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-08-26-find-class/">Finding out the class in ATG installation</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-07-osx-web/">Setting up a local web server on a Mac</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2014-08-26 </span>
+      <span class="post-time"> 2015-07-07 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
+          <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 1094 words </span>
-        <span class="more-meta"> 6 mins read </span>
+        <span class="more-meta"> 25 words </span>
+        <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Java approach Use the real time search with this JAR - https://jarscan.com/
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  ➜ scripts git:(authoring) ✗ java -jar ~/bin/jarscan.jar ========================= JarScan written by Geoff Yaworski gyaworski@hotmail.com Version 2.0 ========================= Usage: java -jar jarscan.jar [-help | /?] [-dir directory name] [-zip] [-showProgress] &lt;-files | -class | -package&gt; &lt;search string 1&gt; [search string 2] [search string n] Help: -help or /?
+      See
+ Setting up a local web server on OS X 10.9 &ldquo;Mavericks&rdquo; Setting up a local web server on OS X 10.10 &ldquo;Yosemite&rdquo;  Meta-List
+https://discussions.apple.com/docs/DOC-3083
     </div>
     <div class="read-more">
-      <a href="/posts/2014-08-26-find-class/" class="read-more-link">Read more...</a>
+      <a href="/posts/2015-07-07-osx-web/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-06-18-jenkins-git/">How to fix Jenkins build issues related to Git connectivity</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-06-18 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 455 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like
+1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-06-18-jenkins-git/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-05-22-ssh-issue/">How to solve &#39;Agent admitted failure to sign using the key&#39;</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-05-22 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 387 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      After re-creating the SSH key, I got the above error from Gitolite.
+Full trace:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57  ➜ TWC ssh -v thinkwrap@pensieve.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-05-22-ssh-issue/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-04-11-jboss-shutdown/">Fixing the shutdown problem with JBoss</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-04-11 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 359 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Observed at QA environment. During automated shutdown sequence, the exception was thrown:
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  $ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-04-11-jboss-shutdown/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

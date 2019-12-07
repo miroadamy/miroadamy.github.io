@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2019-12-07T17:59:44+00:00" />
+<meta property="og:updated_time" content="2019-12-07T22:37:08+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -118,121 +118,127 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2007-12-28-jruby-trunk-issues-with-jdbc-connectivity/">JRuby trunk - issues with JDBC connectivity</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-03-10-versioning-with-spring-and-ant/">Versioning with Spring and Ant</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2007-12-28 </span>
+      <span class="post-time"> 2008-03-10 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 407 words </span>
+        <span class="more-meta"> 439 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      This is post is NOT about version control in the sense of source code control. It addresses the issue how to easily tell which version of the Web application is running as well make sure that the same version is reflected in the snapshots performed by Ant. We have used this approach on several applications and found it quite useful.
+The version I talk about is not the automatically generated version from VCS system (such as SVN revision).
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-03-10-versioning-with-spring-and-ant/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-03-07-ibatis-date-null-values-and-oracle/">iBatis, Date null values and Oracle</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-03-07 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 360 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Following the book on JRuby I am discovering small differences when trying the examples. After installing activerecord-jdbc gem which is available in version 0.5, the shoplet application fails with Rails 2.0, as soon as you click on the 'About your application environment' link.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38  =&gt; Booting Mongrel (use &#39;script/server webrick&#39; to force WEBrick) =&gt; Rails application starting on http://0.
+      I better blog this before I forget what was the issue :-).
+During daily run of unit tests, I started to receive this (very well explained) exception:
+[sourcecode language='xml']
+org.springframework.jdbc.UncategorizedSQLException: SqlMapClient operation; uncategorized SQLException for SQL []; SQL state [null]; error code [17004];
+--- The error occurred while applying a parameter map.
+--- Check the APPROVAL_TASK.insert-InlineParameterMap.
+--- Check the parameter mapping for the 'scheduledDate' property.
+--- Cause: java.sql.SQLException: Invalid column type; nested exception is com.
     </div>
     <div class="read-more">
-      <a href="/posts/2007-12-28-jruby-trunk-issues-with-jdbc-connectivity/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-03-07-ibatis-date-null-values-and-oracle/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2007-12-27-ipod-touch-which-to-choose-8gb-or-16gb/">iPod Touch: which to choose - 8GB or 16GB ?</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-03-05-how-to-generate-and-send-emails-using-spring-and-velocity/">How to generate and send emails using Spring and Velocity</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2007-12-27 </span>
-      
-        <span class="more-meta"> 705 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      A friend asked me this question today - and here is my take on it (slightly expanded) answer to his email :-):
-Hi Shane
-I have purchased the 8 GB because I had no choice - the 16 GB versions were sold out at the Futureshop at the time, and I was too impatient to wait for two more weeks until delivered from Apple Online store :-).
-From usage perspective - whether 8 GB is enough really depends how much video you plan to put on.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2007-12-27-ipod-touch-which-to-choose-8gb-or-16gb/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2007-12-23-installation-of-mongrel-gem-on-jruby/">Installation of Mongrel gem on JRuby</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2007-12-23 </span>
+      <span class="post-time"> 2008-03-05 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 173 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 1049 words </span>
+        <span class="more-meta"> 5 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      I bought the Ola Bini&rsquo;s eBook on JRuby and started to work through the examples. The installation of the Mongrel gem in JRuby (trunk revision 5341 fails with the following error code:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  $ jruby -S gem install -y mongrel&gt; INFO: `gem install -y` is now default and will be removed&gt; INFO: use --ignore-dependencies to install only the gems you list&gt; Building native extensions.
+      Testing applications that communicate using email is more challenging than e.g. testing database access. Thanks to GMail and Spring, it can be done pretty easily.
+Here is the scoop: I need to generate email notifying users about business events and after sending the email, store the content in the database. In real environment you will use corporate SMTP server and real email addresses of real people.
+For development we can avoid bothering and spamming our customers by few simple tricks.
     </div>
     <div class="read-more">
-      <a href="/posts/2007-12-23-installation-of-mongrel-gem-on-jruby/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-03-05-how-to-generate-and-send-emails-using-spring-and-velocity/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2007-12-22-fix-for-the-stalled-downloads-in-leopard/">Fix for the stalled downloads in Leopard</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-02-25-spring-propertyplaceholderconfigurer-with-velocity/">Spring PropertyPlaceholderConfigurer with Velocity</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2007-12-22 </span>
-      
-        <span class="more-meta"> 202 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I was experiencing the occasional weird behaviour on downloading large files in Leopard: the download would stall, but after stopping/restarting (which can be done in Safari and iTunes), the download would continue. It was not very consistent, and I suspected the NAT router or even Rogers - some sites were occasionally having this problem, while other sites would not.
-While playing with JRuby over the weekend, this happened again and pretty much prevented the gem installation - because the multi-megabyte gem index would not download from http://gems.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2007-12-22-fix-for-the-stalled-downloads-in-leopard/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2007-12-20-joels-gems/">Joel&#39;s gems</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2007-12-20 </span>
+      <span class="post-time"> 2008-02-25 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 97 words </span>
+        <span class="more-meta"> 171 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      One of the most readable, original blogers out there, writing on software development practice and techniques - Joel Spolsky - published an excellent 3 part Talk at Yale: Part1, Part2 and Part3.
-You will find out:
-- what two computer science courses were most useful in his university studies
-(one that was not really a comp-sci and one he decided to drop)
-- why is it tough to be an in-house programmer
+      Part of the configuration magic is (one of several) Spring post-processors, that allows load the property file or files and refer to the values in these files inside XML configuration files. The rationale behind these is that property files are much easier to edit that possibly huge XML config file and using property values prevents repeating same value over and over again. With this approach, the following configuration:
+[sourcecode language='xml']
     </div>
     <div class="read-more">
-      <a href="/posts/2007-12-20-joels-gems/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-02-25-spring-propertyplaceholderconfigurer-with-velocity/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-02-23-oracle-sqldeveloper-and-mystery-of-the-missing-host/">Oracle SQLDeveloper and mystery of the missing host</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-02-23 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 193 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      If you work with Oracle database, a very good tool you should not ignore is the Oracle SQL Developer. It gives you much more power when it comes to manipulating data or managing database. I use most of the time MyEclipseIDE plugins, but when I need e.g. export data, the SQLDeveloper is way to go.
+Today I tried it for first time on the Mac. I started to configure and database connection and was completely confused by the error message "
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-02-23-oracle-sqldeveloper-and-mystery-of-the-missing-host/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

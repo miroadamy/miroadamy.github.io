@@ -57,6 +57,42 @@
     </item>
     
     <item>
+      <title>quotes</title>
+      <link>https://miroadamy.com/tags/quotes/</link>
+      <pubDate>Tue, 26 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/quotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stoicism</title>
+      <link>https://miroadamy.com/tags/stoicism/</link>
+      <pubDate>Tue, 26 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/stoicism/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spain</title>
+      <link>https://miroadamy.com/tags/spain/</link>
+      <pubDate>Sun, 24 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/spain/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>valencia</title>
+      <link>https://miroadamy.com/tags/valencia/</link>
+      <pubDate>Sun, 24 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/valencia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>git</title>
       <link>https://miroadamy.com/tags/git/</link>
       <pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
@@ -111,7 +147,16 @@
     </item>
     
     <item>
-      <title>aws</title>
+      <title>twitter</title>
+      <link>https://miroadamy.com/tags/twitter/</link>
+      <pubDate>Thu, 14 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/twitter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AWS</title>
       <link>https://miroadamy.com/tags/aws/</link>
       <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
       
@@ -134,6 +179,159 @@
       <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cloud</title>
+      <link>https://miroadamy.com/tags/cloud/</link>
+      <pubDate>Thu, 03 Oct 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/cloud/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>oneliners</title>
+      <link>https://miroadamy.com/tags/oneliners/</link>
+      <pubDate>Thu, 03 Oct 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/oneliners/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>travel</title>
+      <link>https://miroadamy.com/tags/travel/</link>
+      <pubDate>Sun, 29 Sep 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/travel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>spanish</title>
+      <link>https://miroadamy.com/tags/spanish/</link>
+      <pubDate>Thu, 12 Sep 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/spanish/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bratislava</title>
+      <link>https://miroadamy.com/tags/bratislava/</link>
+      <pubDate>Thu, 29 Aug 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/bratislava/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slovakia</title>
+      <link>https://miroadamy.com/tags/slovakia/</link>
+      <pubDate>Thu, 29 Aug 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/slovakia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>history</title>
+      <link>https://miroadamy.com/tags/history/</link>
+      <pubDate>Wed, 21 Aug 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/history/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>canada</title>
+      <link>https://miroadamy.com/tags/canada/</link>
+      <pubDate>Sun, 26 May 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/canada/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ottawa</title>
+      <link>https://miroadamy.com/tags/ottawa/</link>
+      <pubDate>Sun, 26 May 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ottawa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>madrid</title>
+      <link>https://miroadamy.com/tags/madrid/</link>
+      <pubDate>Tue, 07 May 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/madrid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>summit</title>
+      <link>https://miroadamy.com/tags/summit/</link>
+      <pubDate>Tue, 07 May 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/summit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>https://miroadamy.com/tags/bash/</link>
+      <pubDate>Sat, 16 Mar 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jupyter</title>
+      <link>https://miroadamy.com/tags/jupyter/</link>
+      <pubDate>Sat, 16 Mar 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/jupyter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://miroadamy.com/tags/python/</link>
+      <pubDate>Sat, 16 Mar 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>java</title>
+      <link>https://miroadamy.com/tags/java/</link>
+      <pubDate>Sun, 10 Feb 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssl</title>
+      <link>https://miroadamy.com/tags/ssl/</link>
+      <pubDate>Sun, 10 Feb 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ssl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tools</title>
+      <link>https://miroadamy.com/tags/tools/</link>
+      <pubDate>Mon, 14 Jan 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/tools/</guid>
       <description></description>
     </item>
     
@@ -210,15 +408,6 @@
     </item>
     
     <item>
-      <title>java</title>
-      <link>https://miroadamy.com/tags/java/</link>
-      <pubDate>Thu, 23 Nov 2017 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/java/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>monitoring</title>
       <link>https://miroadamy.com/tags/monitoring/</link>
       <pubDate>Thu, 23 Nov 2017 11:22:48 +0800</pubDate>
@@ -233,15 +422,6 @@
       <pubDate>Thu, 23 Nov 2017 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/virtualization/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>cloud</title>
-      <link>https://miroadamy.com/tags/cloud/</link>
-      <pubDate>Tue, 14 Nov 2017 14:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/cloud/</guid>
       <description></description>
     </item>
     
@@ -399,15 +579,6 @@
     </item>
     
     <item>
-      <title>tools</title>
-      <link>https://miroadamy.com/tags/tools/</link>
-      <pubDate>Thu, 04 Sep 2014 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/tools/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>elastic</title>
       <link>https://miroadamy.com/tags/elastic/</link>
       <pubDate>Thu, 28 Aug 2014 11:22:48 +0800</pubDate>
@@ -507,15 +678,6 @@
     </item>
     
     <item>
-      <title>bash</title>
-      <link>https://miroadamy.com/tags/bash/</link>
-      <pubDate>Tue, 09 Apr 2013 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/bash/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>editor</title>
       <link>https://miroadamy.com/tags/editor/</link>
       <pubDate>Sun, 03 Mar 2013 11:22:48 +0800</pubDate>
@@ -606,24 +768,6 @@
     </item>
     
     <item>
-      <title>canada</title>
-      <link>https://miroadamy.com/tags/canada/</link>
-      <pubDate>Sat, 23 Aug 2008 22:57:15 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/tags/canada/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ottawa</title>
-      <link>https://miroadamy.com/tags/ottawa/</link>
-      <pubDate>Tue, 05 Aug 2008 23:30:04 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/tags/ottawa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>event</title>
       <link>https://miroadamy.com/tags/event/</link>
       <pubDate>Thu, 17 Apr 2008 09:50:06 -0400</pubDate>
@@ -665,15 +809,6 @@
       <pubDate>Thu, 27 Sep 2007 23:00:05 -0400</pubDate>
       
       <guid>https://miroadamy.com/tags/dot-net/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>quotes</title>
-      <link>https://miroadamy.com/tags/quotes/</link>
-      <pubDate>Tue, 25 Sep 2007 00:02:18 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/tags/quotes/</guid>
       <description></description>
     </item>
     

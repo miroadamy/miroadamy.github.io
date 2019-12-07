@@ -23,6 +23,17 @@ I had 3 challenges to overcome related to co-existence of GH and GL versions:
     </item>
     
     <item>
+      <title>Gitbits</title>
+      <link>https://miroadamy.com/posts/2019-01-14-gitbits/</link>
+      <pubDate>Mon, 14 Jan 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-01-14-gitbits/</guid>
+      <description>Two small utilities I have places into ~/bin:
+git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
+1 2 3 4 5 6 7 8 9  #!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; | less   Example 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.</description>
+    </item>
+    
+    <item>
       <title>Storing sensitive information in Git</title>
       <link>https://miroadamy.com/posts/2017-05-15-sensitive-git/</link>
       <pubDate>Wed, 17 May 2017 11:22:48 +0800</pubDate>

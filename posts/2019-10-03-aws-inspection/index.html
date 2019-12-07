@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>AWS Inspection - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Bunch of one-liners for AWS .. so that I find them faster next time
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &amp;#39;.Reservations[].Instances[] | &amp;#34;\n&amp;#34; &#43; .InstanceId &#43; &amp;#34; : &amp;#34; &#43; .KeyName &#43; &amp;#34; =&amp;gt; &amp;#34; &#43; .PublicIpAddress &#43; &amp;#34; | &amp;#34; &#43; .PublicDnsName, .Tags[] as $tt | &amp;#34; ... &amp;#34; &#43; $tt." /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2019-10-03-aws-inspection/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="AWS Inspection" />
+<meta property="og:description" content="Bunch of one-liners for AWS .. so that I find them faster next time
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2019-10-03-aws-inspection/" />
+<meta property="article:published_time" content="2019-10-03T11:22:48+08:00" />
+<meta property="article:modified_time" content="2019-10-03T11:22:48+08:00" />
+<meta itemprop="name" content="AWS Inspection">
+<meta itemprop="description" content="Bunch of one-liners for AWS .. so that I find them faster next time
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.">
+
+
+<meta itemprop="datePublished" content="2019-10-03T11:22:48&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-03T11:22:48&#43;08:00" />
+<meta itemprop="wordCount" content="507">
+
+
+
+<meta itemprop="keywords" content="AWS,cloud,oneliners," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="AWS Inspection"/>
+<meta name="twitter:description" content="Bunch of one-liners for AWS .. so that I find them faster next time
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt."/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">AWS Inspection</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-03 </span>
+        <div class="post-category">
+            <a href="/categories/devops/"> DevOps </a>
+            </div>
+          <span class="more-meta"> 507 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#bunch-of-one-liners-for-aws">Bunch of one-liners for AWS</a></li>
+<li><a href="#how-many-instances-of-each-type-do-i-have-and-in-what-states">How many instances of each type do I have, and in what states?</a></li>
+<li><a href="#what-cidrs-have-ingress-access-to-which-ports">What CIDRs have Ingress Access to which Ports?</a></li>
+<li><a href="#which-services-am-i-using">Which Services am I using?</a></li>
+<li><a href="#cidr-access-to-ports">CIDR access to ports</a></li>
+<li><a href="#lambda-runtimes">Lambda runtimes</a></li>
+<li><a href="#memory-size">Memory size</a></li>
+<li><a href="#lambda-environment-variables">Lambda Environment variables</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="bunch-of-one-liners-for-aws">Bunch of one-liners for AWS</h2>
+
+<p>.. so that I find them faster next time</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; + .InstanceId + &#34;  :  &#34; + .KeyName + &#34;  =&gt;  &#34; + .PublicIpAddress + &#34; | &#34; + .PublicDnsName,  .Tags[] as $tt | &#34;  ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39;
+
+aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId + &#34;  :  &#34; + .Placement.AvailabilityZone + &#34;  =&gt;  &#34; + .PublicIpAddress&#39;
+
+aws iam list-group-policies --group-name kops
+
+aws ec2 describe-vpcs | jq &#39;.Vpcs[] | .VpcId + &#34; &#34; + .CidrBlock&#39;
+
+aws iam list-users | jq &#39;.Users[].UserName&#39;
+
+aws --output=json --region=ca-central-1 ec2 describe-vpcs | jq -r &#39;.Vpcs[] | .VpcId + &#34; &#34; + .CidrBlock,.Tags[] as $tt | &#34;  .. &#34; + $tt.Key +&#34;:&#34;+$tt.Value&#39;
+
+
+aws ec2 describe-vpcs | jq -e --raw-output &#39;.Vpcs[] | &#34;\n&#34; + .VpcId + &#34;  :  &#34; + .CidrBlock,  .Tags[] as $tt | &#34;  ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39;
+
+aws ec2 describe-subnets | jq -e --raw-output &#39;.Subnets[] | &#34;\n&#34; + .VpcId + &#34;  :  &#34; + .CidrBlock +&#34; : &#34; + .AvailabilityZone,  .Tags[] as $tt | &#34;  ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39;
+
+aws ec2 authorize-security-group-ingress --group-id sg-bfa45bd4 --protocol tcp --port 31672 --cidr 204.101.219.210/31</pre></td></tr></table>
+</div>
+</div>
+<h2 id="how-many-instances-of-each-type-do-i-have-and-in-what-states">How many instances of each type do I have, and in what states?</h2>
+
+<ul>
+<li><p>Considering buying reserved instances or thinking about migrating to a newly introduced class?</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34;</pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<h2 id="what-cidrs-have-ingress-access-to-which-ports">What CIDRs have Ingress Access to which Ports?</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma"># This is helpful when you need to perform a survey or audit of your system boundaries. While such a task isn’t ever “easy”, it can go more smoothly with with a summary:
+
+aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39;</pre></td></tr></table>
+</div>
+</div>
+<h2 id="which-services-am-i-using">Which Services am I using?</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31  --granularity MONTHLY --metrics UsageQuantity --group-by Type=DIMENSION,Key=SERVICE | jq &#39;.ResultsByTime[].Groups[] | select(.Metrics.UsageQuantity.Amount &gt; 0) | .Keys[0]&#39;
+
+
+# How much they cost
+aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31  --granularity MONTHLY --metrics USAGE_QUANTITY BLENDED_COST  --group-by Type=DIMENSION,Key=SERVICE | jq &#39;[ .ResultsByTime[].Groups[] | select(.Metrics.BlendedCost.Amount &gt; &#34;0&#34;) | { (.Keys[0]): .Metrics.BlendedCost } ] | sort_by(.Amount) | add&#39;
+
+# Instances running
+
+aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34;</pre></td></tr></table>
+</div>
+</div>
+<h2 id="cidr-access-to-ports">CIDR access to ports</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39;</pre></td></tr></table>
+</div>
+</div>
+<h2 id="lambda-runtimes">Lambda runtimes</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ runtime:.[0].Runtime, functions:[.[]|.FunctionName] }
+]&#34;</pre></td></tr></table>
+</div>
+</div>
+<h2 id="memory-size">Memory size</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ (.[0].Runtime): [.[]|{ name: .FunctionName, timeout: .Timeout, memory: .MemorySize }] }]&#34;</pre></td></tr></table>
+</div>
+</div>
+<h2 id="lambda-environment-variables">Lambda Environment variables</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">aws lambda list-functions | jq -r &#39;[.Functions[]|{name: .FunctionName, env: .Environment.Variables}]|.[]|select(.env|length &gt; 0)&#39;</pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-10-03
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2019 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/aws/">AWS</a>
+          <a href="/tags/cloud/">cloud</a>
+          <a href="/tags/oneliners/">oneliners</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2019-11-07-all-day-devops/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">All Day DevOps 2019</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2019-09-29-pyrenees/">
+            <span class="next-text nav-default">Pyrenees</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

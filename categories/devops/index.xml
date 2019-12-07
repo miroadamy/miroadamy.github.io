@@ -24,6 +24,27 @@ The Video URLs Channel 1  https://www.</description>
     </item>
     
     <item>
+      <title>AWS Inspection</title>
+      <link>https://miroadamy.com/posts/2019-10-03-aws-inspection/</link>
+      <pubDate>Thu, 03 Oct 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-10-03-aws-inspection/</guid>
+      <description>Bunch of one-liners for AWS .. so that I find them faster next time
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &amp;#39;.Reservations[].Instances[] | &amp;#34;\n&amp;#34; + .InstanceId + &amp;#34; : &amp;#34; + .KeyName + &amp;#34; =&amp;gt; &amp;#34; + .PublicIpAddress + &amp;#34; | &amp;#34; + .PublicDnsName, .Tags[] as $tt | &amp;#34; ... &amp;#34; + $tt.</description>
+    </item>
+    
+    <item>
+      <title>Gitbits</title>
+      <link>https://miroadamy.com/posts/2019-01-14-gitbits/</link>
+      <pubDate>Mon, 14 Jan 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-01-14-gitbits/</guid>
+      <description>Two small utilities I have places into ~/bin:
+git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
+1 2 3 4 5 6 7 8 9  #!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; | less   Example 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.</description>
+    </item>
+    
+    <item>
       <title>Useful tool for Dockerhub</title>
       <link>https://miroadamy.com/posts/2018-10-24-dockerhub-tool/</link>
       <pubDate>Wed, 24 Oct 2018 11:22:48 +0800</pubDate>

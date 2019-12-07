@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>oneliners on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/oneliners/</link>
+    <description>Recent content in oneliners on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 03 Oct 2019 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/oneliners/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AWS Inspection</title>
+      <link>https://miroadamy.com/posts/2019-10-03-aws-inspection/</link>
+      <pubDate>Thu, 03 Oct 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-10-03-aws-inspection/</guid>
+      <description>Bunch of one-liners for AWS .. so that I find them faster next time
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &amp;#39;.Reservations[].Instances[] | &amp;#34;\n&amp;#34; + .InstanceId + &amp;#34; : &amp;#34; + .KeyName + &amp;#34; =&amp;gt; &amp;#34; + .PublicIpAddress + &amp;#34; | &amp;#34; + .PublicDnsName, .Tags[] as $tt | &amp;#34; ... &amp;#34; + $tt.</description>
+    </item>
+    
+  </channel>
+</rss>

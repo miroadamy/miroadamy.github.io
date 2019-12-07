@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2019-12-07T17:59:44+00:00" />
+<meta property="og:updated_time" content="2019-12-07T22:37:08+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -118,126 +118,115 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/">Spring 2 MVC and ResourceBundleViewResolver problem</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-04-07-trying-out-groovy-with-oracle-database/">Trying out Groovy with Oracle database</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2008-01-24 </span>
+      <span class="post-time"> 2008-04-07 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 129 words </span>
+        <span class="more-meta"> 815 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      There is a saying that necessity is the mother of invention. Such necessity happened last week and forced me to try out the Groovy language.
+The trigger was need for creating good data set for testing changes in a full text search. I had to locate few hundred of obsolete technical documents to be used as test data, dump the metadata as well as the BLOB data to disc, create INSERT sql scripts and loader that would from Ant pre-load the database with the test set and insert the BLOB's.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-04-07-trying-out-groovy-with-oracle-database/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-04-02-couple-of-new-podcasts/">Couple of new podcasts</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-04-02 </span>
+      
+        <span class="more-meta"> 429 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      With the walking season almost upon us (so far only walks by streets, for the Ottawa River Pathway one still needs a snowshoes), it is time to replenish the stock of listening material. Here are some of the about 10 new podcasts that I tried out recently and decided to keep:
+1) Pragmatic Programmers podcast. That was a pleasant find (thanks Milos). The topics covered are very wide - as are topics covered by the books.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-04-02-couple-of-new-podcasts/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-03-29-blue-screen-of-the-death-on-a-mac/">Blue screen of the death on a Mac</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-03-29 </span>
+      
+        <span class="more-meta"> 105 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      This one took some time to figure out - it is one of those problems that are obvious after you know the solution but hard to see beforehand.
-I had the ResourceBundleViewResolver configured with Tiles 2, like this:
-[code language='xml']
-[/code]
-and the view.properties was:
-[code language='xml']
-parent-view.(class)=org.springframework.web.servlet.view.JstlView
-parent-view.(abstract)=true
-about.url=/WEB-INF/jsp/about.jsp
-form.url=/WEB-INF/jsp/form.jsp
-list.url=/WEB-INF/jsp/list.jsp
-[/code]
-It kept givin exception saying that /WEB-INF/jsp/list.jsp does not exist. Which it did. I tried couple of things, no result.
+      Here it comes, first occurence: one of my VM's BSOD-ed on me yesterday.
+To be completely fair, I did have experienced an occurrence of something similar twice in last moths: after wake up from sleep, the screen was collection of the color pixels, completely unreadable. After reboot, everything was normal.
+I found out that the issue may be related to the "safesleep" mode. For now, I disabled the mode by
     </div>
     <div class="read-more">
-      <a href="/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-03-29-blue-screen-of-the-death-on-a-mac/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-20-using-ibatis-with-abator/">Using iBatis with Abator</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-03-26-finally-over-16/">Finally over 16 :-)</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2008-01-20 </span>
+      <span class="post-time"> 2008-03-26 </span>
+      
+        <span class="more-meta"> 64 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I did not even notice that the visit counter left the 16 bit domain sometimes during last few days. Now it shows about 67 000 visits. Honestly, I am pleasantly surprised how many people found this blog worthy their time :-). Thanks to you all ...
+Next boundary is of course 128K, 256K, 512K hits and finally a "Megahit". But that's far far away.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-03-26-finally-over-16/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-03-25-rails-2-really-good-tutorial/">Rails 2 - really good tutorial</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-03-25 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 457 words </span>
-        <span class="more-meta"> 3 mins read </span>
+        <span class="more-meta"> 43 words </span>
+        <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      I am back to Java and on mission of re-discovering Spring coolness - and in awe how much was added since 1.2 to current 2.5.1. Thanks, SpringSource and hundreds of contributors.
-Data layer of the current project is based on iBatis and Spring DAO. We have decided to try out the Abator tool from Apache (part of the iBatis suite) to generate initial version of data mapping (as we inherited the database schema).
+      Akita published two part tutorial that leads you through building the famous 15 minute blog application in Rails 2.0. Read the parts one and two - or follow the screencast by the same author.
+Thanks a lot, Akita - very nicely done !
     </div>
     <div class="read-more">
-      <a href="/posts/2008-01-20-using-ibatis-with-abator/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-16-steves-latest/">Steve&#39;s latest ...</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-01-16 </span>
-      
-        <span class="more-meta"> 947 words </span>
-        <span class="more-meta"> 5 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Of course, I mean the other Steve, Steve Jobs. My world is revolving around few Steves. Steve Jobs is usually Steve Nr. 2 - and no, Joel - the Steve #1 is definitely not Ballmer :-). But every year, for two brief occasions - Macworld and WWDC - Steve Jobs becomes Steve #1 for very large amount of people.
-I was waiting with this post full day to allow the new-ity of the keynote sink in and reality distortion field to evaporate .
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-01-16-steves-latest/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-14-the-best-gtd-tool-is-still-a-wiki-part-ii/">The best GTD tool is still a Wiki - part II</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-01-14 </span>
-      
-        <span class="more-meta"> 590 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Continuation of this post.
-As every TiddlyWiki, the main building block of the MGTDTW (MonkeyGTD TiddlyWiki, if you are wondering what kind of monstrous acronym is that) is a tiddler. And the only one building block because everything is a tiddler. How does this map to the GTD approach ?
-The GTD workflow works with projects, contexts and actions. Action (or task or todo) is smallest building stone. The actions in GTD are really small actions.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-01-14-the-best-gtd-tool-is-still-a-wiki-part-ii/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-11-safari-books-online-and-lyndacom-on-ipod-touch/">Safari Books Online and Lynda.com on iPod Touch</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-01-11 </span>
-      
-        <span class="more-meta"> 258 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Last few weeks I have been using one application on iTouch much more than before: YouTube. Within my how wireless network, I can have an access to the videos on YouTube without sitting behind the computer - for example while walking on treadmill (I recommend walking slowly) or on a sofa :-).
-Very interesting videos and actually worth the time spent on them are Google technical talks from Google channel. Few examples of videos I watched and liked:
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-01-11-safari-books-online-and-lyndacom-on-ipod-touch/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-03-25-rails-2-really-good-tutorial/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

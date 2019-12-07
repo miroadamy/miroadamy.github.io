@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>stoicism on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/stoicism/</link>
+    <description>Recent content in stoicism on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 26 Nov 2019 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/stoicism/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2019-11-26-totd/</link>
+      <pubDate>Tue, 26 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-26-totd/</guid>
+      <description> Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.  ― Marcus Aurelius , Meditations
+ </description>
+    </item>
+    
+  </channel>
+</rss>
