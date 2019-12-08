@@ -6,7 +6,7 @@
     <description>Recent content on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 07 Dec 2019 22:37:08 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 13:26:59 +0000</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,14 +26,14 @@ Contact Email me - firstname dot lastname, at Sergei&amp;rsquo;s and Larry&amp;r
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Sat, 07 Dec 2019 22:37:08 +0000</pubDate>
+      <pubDate>Sun, 08 Dec 2019 13:26:59 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
       <description>Status Hugo Static Site Generator v0.59.1/extended darwin/amd64 BuildDate: unknown
 Pygments version 2.4.2, &amp;copy; 2006-2019 by Georg Brandl.
-Blog commit: d5b0b4f211674324a920a2fb7ac4f0ae509114a6
+Blog commit: b201a0ecee1b89d095cba1b0544f55621be97c3b
 Theme commit: d39d3e443953caea05510b19fdd7a259c71a0ab3
-Published: &amp;ldquo;2019-12-07T22:37:08Z&amp;rdquo;</description>
+Published: &amp;ldquo;2019-12-08T13:26:59Z&amp;rdquo;</description>
     </item>
     
     <item>
@@ -318,6 +318,26 @@ But let&amp;rsquo;s take things in order. First location - Barcelona. Hard to pi
     </item>
     
     <item>
+      <title>AWS Certified Developer - Associate</title>
+      <link>https://miroadamy.com/posts/2018-11-28-aws/</link>
+      <pubDate>Sun, 28 Oct 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-11-28-aws/</guid>
+      <description>Got the second certification today
+https://www.certmetrics.com/amazon/public/badge.aspx?i=2&amp;amp;t=c&amp;amp;d=2018-11-28&amp;amp;ci=AWS00261816</description>
+    </item>
+    
+    <item>
+      <title>Happy birthday Czechoslovakia</title>
+      <link>https://miroadamy.com/posts/2018-11-17-panpan/</link>
+      <pubDate>Sun, 28 Oct 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-11-17-panpan/</guid>
+      <description>Czechoslovakia would be 100 today 1918-10-28 - 1992-12-31 We (both nations) we lucky to separate paths the peaceful way and at the end of the day, both countries are in the EU, NATO and relations between Czechs and Slovak are probably the best ever because the quarrels over budget and transfers ended.
+It is a bit nostalgic though, admitting that we were the last naturally bilingual generation that could read a book and a week later not to be 100% sure whether it was in Czech or in Slovak.</description>
+    </item>
+    
+    <item>
       <title>Useful tool for Dockerhub</title>
       <link>https://miroadamy.com/posts/2018-10-24-dockerhub-tool/</link>
       <pubDate>Wed, 24 Oct 2018 11:22:48 +0800</pubDate>
@@ -326,6 +346,90 @@ But let&amp;rsquo;s take things in order. First location - Barcelona. Hard to pi
       <description>Skopeo I have stumbled upon this tool: https://github.com/containers/skopeo - command line tools for manipulation with Docker images and Docker image registries.
 It can work with OCI images as well as the original Docker v2 images.
 Installation 1  brew install skopeo   Usage 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.</description>
+    </item>
+    
+    <item>
+      <title>Google Wifi</title>
+      <link>https://miroadamy.com/posts/2018-10-23-google-wifi/</link>
+      <pubDate>Tue, 23 Oct 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-10-23-google-wifi/</guid>
+      <description>Installed Google Wifi - three access points. Finally I have good coverage on both floors of the appartment including the upper terrace and will be able to work at night outside during hot summer nights when temperature does not drop under 25.
+The setup was supereasy and iOS app is very well made and gives interesting insights.
+Happy.</description>
+    </item>
+    
+    <item>
+      <title>Mission (almost) accomplished</title>
+      <link>https://miroadamy.com/posts/2018-10-02-spanish/</link>
+      <pubDate>Tue, 02 Oct 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-10-02-spanish/</guid>
+      <description>It&amp;rsquo;s been five years since I started toying with idea to learn first romance language in my collection - despite living in Canada for over 18 years, I never picked up French.
+The learning was slow during 2014 and 2015 (just summer school in Spain and Duolingo) - but it accelerated a lot in last 2 years.
+Fast forward to now: on Sunday while watching Prime (https://en.wikipedia.org/wiki/Prime_(film)) we have decided to switch from English to Spanish (with Spanish subtitles) to enjoy the movie better than in original.</description>
+    </item>
+    
+    <item>
+      <title>Road Trip</title>
+      <link>https://miroadamy.com/posts/2018-09-15-road-trip/</link>
+      <pubDate>Thu, 06 Sep 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-09-15-road-trip/</guid>
+      <description>I took 3 days off and decided to explore the North of Spain, namely Cantabria and Asturias.
+It was awesome and beautiful. Asturias reminded me of Switzerland, with beautiful alpine style nature, great food, very friendly locals speaking language one can understand :-) (I kinda do understand certain versions of Schwyzzertütsch when spoken slowly - but it is a challenge).
+Unlike Switzerland, it is not überexpensive.
+Here are the pictures.</description>
+    </item>
+    
+    <item>
+      <title>Simonyi Karoly in Valencia</title>
+      <link>https://miroadamy.com/posts/2018-09-06-simonyi/</link>
+      <pubDate>Thu, 06 Sep 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-09-06-simonyi/</guid>
+      <description>One of the Microsoft old-timer bilionaries, Charles Simonyi, Hungarian born software engineer, famous for his Hungarian naming notation - who would not remember lpstrzDescription or wFlag - is visiting Valencia on his yacht Skat.
+Those who do not write code (or better said - did not write code 20 years ago) may be familiar with his other contribution - Microsoft Word, something I feel much less positive about than lpstrzDescription.</description>
+    </item>
+    
+    <item>
+      <title>This made my day</title>
+      <link>https://miroadamy.com/posts/2018-07-31-spanish/</link>
+      <pubDate>Tue, 31 Jul 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-07-31-spanish/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Per core licensing</title>
+      <link>https://miroadamy.com/posts/2018-06-25-oracle/</link>
+      <pubDate>Mon, 25 Jun 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-06-25-oracle/</guid>
+      <description>If one uses Oracle per core licensing strategy in cloud:</description>
+    </item>
+    
+    <item>
+      <title>AWS Certified Solution Architect - Associate</title>
+      <link>https://miroadamy.com/posts/2018-06-07-aws/</link>
+      <pubDate>Thu, 07 Jun 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-06-07-aws/</guid>
+      <description>Step 1 done.
+https://www.certmetrics.com/amazon/public/badge.aspx?i=1&amp;amp;t=c&amp;amp;d=2018-06-06&amp;amp;ci=AWS00261816&amp;amp;fbclid=IwAR2K8B4FyKWVstBZXCXn5GhYX9iRyB4U2q8l2ROrM_16m-rlclioalnp0O4
+And now dilemma: go deeper into AWS or look around what Google and Azure have to offer ?
+So many clouds, so little time &amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Blog of the day - Tapas Forever</title>
+      <link>https://miroadamy.com/posts/2018-06-03-botd/</link>
+      <pubDate>Thu, 07 Jun 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-06-03-botd/</guid>
+      <description>Fellow Canadian describes his path to Spain
+https://tapasforever.com/</description>
     </item>
     
     <item>
@@ -339,6 +443,37 @@ Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed
     </item>
     
     <item>
+      <title>Remembering Karel Kryl</title>
+      <link>https://miroadamy.com/posts/2018-04-12-karel/</link>
+      <pubDate>Thu, 12 Apr 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-04-12-karel/</guid>
+      <description>He would be 74 today.
+Poet, singer, master of Czech language and symbol of resistance during dark years 1968-1989.
+ </description>
+    </item>
+    
+    <item>
+      <title>Europanto</title>
+      <link>https://miroadamy.com/posts/2018-03-05-poly/</link>
+      <pubDate>Tue, 06 Mar 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-03-05-poly/</guid>
+      <description>This is how my mind often works, triggered by using 4 languages every day and 5-6 every week</description>
+    </item>
+    
+    <item>
+      <title>Spring is in the air</title>
+      <link>https://miroadamy.com/posts/2018-02-26-almonds/</link>
+      <pubDate>Mon, 26 Feb 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-02-26-almonds/</guid>
+      <description>Hiking trip - El Barranc de L&amp;rsquo;Infern. (Ruta de los 6000 escalones) - https://es.wikiloc.com/rutas-senderismo/vall-de-laguar-la-catedral-del-senderismo-pr-v-147-el-barranc-de-linfern-ruta-de-los-6000-escalones-11632646
+Seeing almods in bloom was added benefit.
+ </description>
+    </item>
+    
+    <item>
       <title>ATG Module Diagram Generator</title>
       <link>https://miroadamy.com/posts/2018-02-10-atgdiagram/</link>
       <pubDate>Sat, 10 Feb 2018 11:22:48 +0800</pubDate>
@@ -348,6 +483,17 @@ Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed
 What it does Groovy scripts:
  https://github.com/miroadamy/atgdiagram/blob/master/src/listATGModules.groovy https://github.com/miroadamy/atgdiagram/blob/master/src/ATGModule.groovy  that scan local ATG installation, discover modules and generate the PlantUML file representing it, for example - https://github.com/miroadamy/atgdiagram/blob/master/uml/test2.uml
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65  Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.</description>
+    </item>
+    
+    <item>
+      <title>Christmas in Canada</title>
+      <link>https://miroadamy.com/posts/2017-01-26-canada/</link>
+      <pubDate>Fri, 26 Jan 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2017-01-26-canada/</guid>
+      <description>We have visited Canada for the winter season.
+It was very nice to see old friends and family.
+  </description>
     </item>
     
     <item>

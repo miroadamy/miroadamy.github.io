@@ -10,14 +10,14 @@
   
   <url>
     <loc>https://miroadamy.com/</loc>
-    <lastmod>2019-12-07T22:37:08+00:00</lastmod>
+    <lastmod>2019-12-08T13:26:59+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://miroadamy.com/status/</loc>
-    <lastmod>2019-12-07T22:37:08+00:00</lastmod>
+    <lastmod>2019-12-08T13:26:59+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -548,6 +548,20 @@
   </url>
   
   <url>
+    <loc>https://miroadamy.com/posts/2018-11-28-aws/</loc>
+    <lastmod>2018-10-28T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-11-17-panpan/</loc>
+    <lastmod>2018-10-28T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://miroadamy.com/tags/commandline/</loc>
     <lastmod>2018-10-24T11:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -557,6 +571,83 @@
   <url>
     <loc>https://miroadamy.com/posts/2018-10-24-dockerhub-tool/</loc>
     <lastmod>2018-10-24T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/google/</loc>
+    <lastmod>2018-10-23T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-10-23-google-wifi/</loc>
+    <lastmod>2018-10-23T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/hardware/</loc>
+    <lastmod>2018-10-23T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-10-02-spanish/</loc>
+    <lastmod>2018-10-02T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/events/</loc>
+    <lastmod>2018-09-06T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-09-15-road-trip/</loc>
+    <lastmod>2018-09-06T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-09-06-simonyi/</loc>
+    <lastmod>2018-09-06T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-07-31-spanish/</loc>
+    <lastmod>2018-07-31T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-06-25-oracle/</loc>
+    <lastmod>2018-06-25T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-06-07-aws/</loc>
+    <lastmod>2018-06-07T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-06-03-botd/</loc>
+    <lastmod>2018-06-07T11:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -578,6 +669,62 @@
   <url>
     <loc>https://miroadamy.com/tags/kubernetes/</loc>
     <lastmod>2018-05-07T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/czechoslovakia/</loc>
+    <lastmod>2018-04-12T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-04-12-karel/</loc>
+    <lastmod>2018-04-12T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/czech/</loc>
+    <lastmod>2018-03-06T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/english/</loc>
+    <lastmod>2018-03-06T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-03-05-poly/</loc>
+    <lastmod>2018-03-06T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/german/</loc>
+    <lastmod>2018-03-06T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/slovak/</loc>
+    <lastmod>2018-03-06T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2018-02-26-almonds/</loc>
+    <lastmod>2018-02-26T11:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -613,6 +760,13 @@
   <url>
     <loc>https://miroadamy.com/tags/plantuml/</loc>
     <lastmod>2018-02-10T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2017-01-26-canada/</loc>
+    <lastmod>2018-01-26T11:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4232,13 +4386,6 @@
   <url>
     <loc>https://miroadamy.com/posts/2006-12-06-feotd-stealther/</loc>
     <lastmod>2006-12-06T22:14:17-05:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/tags/hardware/</loc>
-    <lastmod>2006-12-05T23:36:51-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

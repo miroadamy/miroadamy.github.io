@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>events on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/events/</link>
+    <description>Recent content in events on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 06 Sep 2018 11:22:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://miroadamy.com/tags/events/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Simonyi Karoly in Valencia</title>
+      <link>https://miroadamy.com/posts/2018-09-06-simonyi/</link>
+      <pubDate>Thu, 06 Sep 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-09-06-simonyi/</guid>
+      <description>One of the Microsoft old-timer bilionaries, Charles Simonyi, Hungarian born software engineer, famous for his Hungarian naming notation - who would not remember lpstrzDescription or wFlag - is visiting Valencia on his yacht Skat.
+Those who do not write code (or better said - did not write code 20 years ago) may be familiar with his other contribution - Microsoft Word, something I feel much less positive about than lpstrzDescription.</description>
+    </item>
+    
+  </channel>
+</rss>
