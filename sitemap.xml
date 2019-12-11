@@ -10,14 +10,63 @@
   
   <url>
     <loc>https://miroadamy.com/</loc>
-    <lastmod>2019-12-09T22:01:15+00:00</lastmod>
+    <lastmod>2019-12-11T17:01:21+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://miroadamy.com/status/</loc>
-    <lastmod>2019-12-09T22:01:15+00:00</lastmod>
+    <lastmod>2019-12-11T17:01:21+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/</loc>
+    <lastmod>2019-12-11T21:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/devops/</loc>
+    <lastmod>2019-12-11T21:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/hacking/</loc>
+    <lastmod>2019-12-11T21:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2019-12-11-hackernoon/</loc>
+    <lastmod>2019-12-11T21:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/</loc>
+    <lastmod>2019-12-11T21:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/security/</loc>
+    <lastmod>2019-12-11T21:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/</loc>
+    <lastmod>2019-12-11T21:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44,28 +93,7 @@
   </url>
   
   <url>
-    <loc>https://miroadamy.com/categories/</loc>
-    <lastmod>2019-12-06T11:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://miroadamy.com/categories/lifehacks/</loc>
-    <lastmod>2019-12-06T11:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/posts/</loc>
-    <lastmod>2019-12-06T11:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/tags/</loc>
     <lastmod>2019-12-06T11:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -255,13 +283,6 @@
   
   <url>
     <loc>https://miroadamy.com/tags/aws/</loc>
-    <lastmod>2019-11-07T11:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/categories/devops/</loc>
     <lastmod>2019-11-07T11:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1739,13 +1760,6 @@
   
   <url>
     <loc>https://miroadamy.com/posts/2009-07-24-facebook-domain-type-in-hack/</loc>
-    <lastmod>2009-07-24T19:00:56-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/tags/security/</loc>
     <lastmod>2009-07-24T19:00:56-04:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

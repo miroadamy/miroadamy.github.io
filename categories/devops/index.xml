@@ -6,10 +6,22 @@
     <description>Recent content in devops on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 07 Nov 2019 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 11 Dec 2019 21:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/categories/devops/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>On harvesting credit card numbers and passwords</title>
+      <link>https://miroadamy.com/posts/2019-12-11-hackernoon/</link>
+      <pubDate>Wed, 11 Dec 2019 21:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-11-hackernoon/</guid>
+      <description>This is the scariest thing I have read since spring 2018:
+https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5
+written by @david.gilbertson.
+It pretty sure what he describes is actually happening, has been happening before he described it and will be happening going on - just obviously not in the named module. The ecosystem of Node modules is so vast and so unstable that considerable number of project do not do enough to catch behaviour like this.</description>
+    </item>
     
     <item>
       <title>All Day DevOps 2019</title>
