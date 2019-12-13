@@ -22,28 +22,6 @@
     </item>
     
     <item>
-      <title>Current Hugo setup on Github Pages</title>
-      <link>https://miroadamy.com/posts/2019-11-22-hugo-setup/</link>
-      <pubDate>Fri, 22 Nov 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2019-11-22-hugo-setup/</guid>
-      <description>How does the blog setup and publishing work Before I forget, here is how the current configuration works.
-There are two repositories at play:
- source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io  The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
-The Githup pages repo contains generated static site, with index.</description>
-    </item>
-    
-    <item>
-      <title>From Jekyll to Hugo</title>
-      <link>https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/</link>
-      <pubDate>Wed, 20 Nov 2019 23:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/</guid>
-      <description>I have decided to consolidate all piecemeal versions of my blogpost uder one roof and at the same to do these four things
- technology upgrade - from Jekyll to Hugo visual refresh of the page review tagging and categorization merge hidden posts from Wikis to one place  Why Hugo replaced Jekyll The version 3 of my blog (see below for a bit of history) has been hosted on Github pages and using the default static site generators - Jekyll.</description>
-    </item>
-    
-    <item>
       <title>Happy birthday Czechoslovakia</title>
       <link>https://miroadamy.com/posts/2018-11-17-panpan/</link>
       <pubDate>Sun, 28 Oct 2018 11:22:48 +0800</pubDate>
@@ -72,18 +50,6 @@ Fast forward to now: on Sunday while watching Prime (https://en.wikipedia.org/wi
       <guid>https://miroadamy.com/posts/2018-09-06-simonyi/</guid>
       <description>One of the Microsoft old-timer bilionaries, Charles Simonyi, Hungarian born software engineer, famous for his Hungarian naming notation - who would not remember lpstrzDescription or wFlag - is visiting Valencia on his yacht Skat.
 Those who do not write code (or better said - did not write code 20 years ago) may be familiar with his other contribution - Microsoft Word, something I feel much less positive about than lpstrzDescription.</description>
-    </item>
-    
-    <item>
-      <title>New image that expresses my new undefined job title</title>
-      <link>https://miroadamy.com/posts/2015-02-16-grasshoper/</link>
-      <pubDate>Mon, 16 Feb 2015 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2015-02-16-grasshoper/</guid>
-      <description>That is what I do - jump from project to project to topic to project. And back.
-It is uncertain how good is all this - but as they say:
- &amp;ldquo;If you cannot do something right, learn to enjoy doing it poorly&amp;rdquo;
- </description>
     </item>
     
     <item>

@@ -54,7 +54,7 @@
 
 
 
-<meta itemprop="keywords" content="os-x,editors," />
+<meta itemprop="keywords" content="osx,editors," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sublime text macro to insert timestamp"/>
 <meta name="twitter:description" content="Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see"/>
@@ -220,7 +220,7 @@ platform-edc $</pre></td></tr></table>
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/os-x/">os-x</a>
+          <a href="/tags/osx/">osx</a>
           <a href="/tags/editors/">editors</a>
           </div>
       <nav class="post-nav">

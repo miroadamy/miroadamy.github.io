@@ -80,6 +80,15 @@ How to use it  Select 2 files, right click, compare from context menu In dual mo
     </item>
     
     <item>
+      <title>Docker - getting started</title>
+      <link>https://miroadamy.com/posts/2015-12-11-docker-starting/</link>
+      <pubDate>Fri, 11 Dec 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-12-11-docker-starting/</guid>
+      <description>After the reboot 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55  docker version Client: Version: 1.9.1 API version: 1.21 Go version: go1.</description>
+    </item>
+    
+    <item>
       <title>How to keep git log and less output on the screen</title>
       <link>https://miroadamy.com/posts/2015-03-10-git-log-output-less/</link>
       <pubDate>Tue, 10 Mar 2015 00:57:35 -0500</pubDate>
@@ -126,6 +135,72 @@ Sublime Text This is easy - there is DashDoc plugin - https://sublime.wbond.net/
 The plugin is OS-X specific, because the DashDoc is
  Start Package Control (Cmd-Shift-P) select Install Package (type Install) select DashDoc  The Ctrl-H does the search
 Eclipse There is opensource plugin for it at https://github.</description>
+    </item>
+    
+    <item>
+      <title>Difference between matching and simple - Git push</title>
+      <link>https://miroadamy.com/posts/2013-09-26-git-push-matching-simple/</link>
+      <pubDate>Thu, 26 Sep 2013 21:02:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-09-26-git-push-matching-simple/</guid>
+      <description>Git message
+1 2 3 4 5 6 7 8 9 10  Git 2.0 from &amp;#39;matching&amp;#39; to &amp;#39;simple&amp;#39;. To squelch this message and maintain the current behavior after the default changes, use: git config --global push.default matching To squelch this message and adopt the new behavior now, use: git config --global push.default simple   Options for push.default
+1 2 3 4 5  nothing - do not push anything.</description>
+    </item>
+    
+    <item>
+      <title>Sublime text macro to insert timestamp</title>
+      <link>https://miroadamy.com/posts/2013-09-25-sublime-text-macro-timestamp/</link>
+      <pubDate>Wed, 25 Sep 2013 16:12:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-09-25-sublime-text-macro-timestamp/</guid>
+      <description>Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&amp;#34;%Y-%m-%d_%H:%M:%S&amp;#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see</description>
+    </item>
+    
+    <item>
+      <title>How to make screenshot from command line</title>
+      <link>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</link>
+      <pubDate>Tue, 24 Sep 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</guid>
+      <description>How to make screenshot from command line 1 2 3 4 5 6 7  platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk   First one is &amp;ldquo;interactive&amp;rdquo; - Cmd-Shift-3 with selection tool, second is full screen</description>
+    </item>
+    
+    <item>
+      <title>Case sensitivity and VirtualBox shared folder</title>
+      <link>https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/</link>
+      <pubDate>Mon, 16 Sep 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/</guid>
+      <description>Case sensitivity and VirtualBox shared folder Weird but true behaviour:
+I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
+1  touch zz zZ   creates two files, both &amp;ldquo;inside VM&amp;rdquo; ~/development/ATG/platform-edc as well as in OS-X.
+If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
+The command</description>
+    </item>
+    
+    <item>
+      <title>Usable mc color scheme</title>
+      <link>https://miroadamy.com/posts/2013-09-05-mc-color-scheme/</link>
+      <pubDate>Thu, 05 Sep 2013 21:32:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-09-05-mc-color-scheme/</guid>
+      <description> Usable mc color scheme Edit
+~/.mc/ini
+insert
+1 2  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   </description>
+    </item>
+    
+    <item>
+      <title>Show lock screen indicator in OS-X menu</title>
+      <link>https://miroadamy.com/posts/2013-09-03-show-lock-screen-indicator/</link>
+      <pubDate>Tue, 03 Sep 2013 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-09-03-show-lock-screen-indicator/</guid>
+      <description>Show lock screen indicator in OS-X menu After HDD reinstall I lost most of my customizations (by choice decided NOT to restore from TM).
+The Lock in menu is provided by KeyChain Access, not by System Preferences.
+Open &amp;lsquo;KeyChain Access&amp;rsquo; -&amp;gt; Preferences, select &amp;lsquo;Show keychain status&amp;rsquo;
+and it is back:</description>
     </item>
     
     <item>

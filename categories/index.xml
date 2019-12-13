@@ -57,15 +57,6 @@
     </item>
     
     <item>
-      <title>programming</title>
-      <link>https://miroadamy.com/categories/programming/</link>
-      <pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/categories/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>events</title>
       <link>https://miroadamy.com/categories/events/</link>
       <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
@@ -84,6 +75,15 @@
     </item>
     
     <item>
+      <title>programming</title>
+      <link>https://miroadamy.com/categories/programming/</link>
+      <pubDate>Sat, 16 Mar 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>tools</title>
       <link>https://miroadamy.com/categories/tools/</link>
       <pubDate>Sun, 10 Feb 2019 11:22:48 +0800</pubDate>
@@ -98,6 +98,15 @@
       <pubDate>Wed, 23 Mar 2016 12:57:35 -0500</pubDate>
       
       <guid>https://miroadamy.com/categories/technology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>startuplife</title>
+      <link>https://miroadamy.com/categories/startuplife/</link>
+      <pubDate>Mon, 16 Feb 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/startuplife/</guid>
       <description></description>
     </item>
     

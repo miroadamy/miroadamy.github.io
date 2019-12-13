@@ -83,15 +83,6 @@ Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install f
     </item>
     
     <item>
-      <title>How to make screenshot from command line</title>
-      <link>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</link>
-      <pubDate>Tue, 24 Sep 2013 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</guid>
-      <description>How to make screenshot from command line 1 2 3 4 5 6 7  platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk   First one is &amp;ldquo;interactive&amp;rdquo; - Cmd-Shift-3 with selection tool, second is full screen</description>
-    </item>
-    
-    <item>
       <title>Case sensitivity and VirtualBox shared folder</title>
       <link>https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/</link>
       <pubDate>Mon, 16 Sep 2013 11:22:48 +0800</pubDate>

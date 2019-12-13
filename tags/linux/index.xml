@@ -6,10 +6,21 @@
     <description>Recent content in linux on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Sep 2014 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 May 2016 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Learning resources for Linux and Command line</title>
+      <link>https://miroadamy.com/posts/2016-05-30-linux-resources/</link>
+      <pubDate>Mon, 30 May 2016 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2016-05-30-linux-resources/</guid>
+      <description>This quick summary to answer Megha Maiya&amp;rsquo;s question - I am adding to the Wiki in case it can be expanded later useful for somebody else:
+ expanded later useful for somebody else  Free resources There is HUGE amount of resources available for Linux and Unix out there. The issue is select those reasonably good
+ List of lists: https://github.com/learnbyexample/scripting_course/blob/master/Linux_curated_resources.md http://ryanstutorials.net/, specially http://ryanstutorials.net/linuxtutorial/ and http://ryanstutorials.net/linuxtutorial/ http://www.tutorialspoint.com/unix/unix-getting-started.htm (bash scripting) - https://bash.</description>
+    </item>
     
     <item>
       <title>How to access shared folder in Linux guest in VirtualBox</title>

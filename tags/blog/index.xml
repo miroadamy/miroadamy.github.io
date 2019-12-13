@@ -22,6 +22,16 @@ On writing side, lots of my output shifted from code towards writing text in Wik
     </item>
     
     <item>
+      <title>BOTD - Blog of the Day</title>
+      <link>https://miroadamy.com/posts/2019-12-05-silvias-blog/</link>
+      <pubDate>Thu, 05 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-05-silvias-blog/</guid>
+      <description>Today&amp;rsquo;s blog of the day is a special one. It does not deal with cloud, DevOps or distributed systems. The theme of the blog is travel, life of digital nomad and observations on life from a perspective of a smart young woman, working as Online English teacher and travelling a lot while doing so - https://bookandtravel.blog/
+What makes this blog dear and interesting to me is that it&amp;rsquo;s author is my daughter Silvia.</description>
+    </item>
+    
+    <item>
       <title>Building Hugo as well on GitLab pages</title>
       <link>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</link>
       <pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
@@ -52,6 +62,18 @@ The Githup pages repo contains generated static site, with index.</description>
       <guid>https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/</guid>
       <description>I have decided to consolidate all piecemeal versions of my blogpost uder one roof and at the same to do these four things
  technology upgrade - from Jekyll to Hugo visual refresh of the page review tagging and categorization merge hidden posts from Wikis to one place  Why Hugo replaced Jekyll The version 3 of my blog (see below for a bit of history) has been hosted on Github pages and using the default static site generators - Jekyll.</description>
+    </item>
+    
+    <item>
+      <title>New image that expresses my new undefined job title</title>
+      <link>https://miroadamy.com/posts/2015-02-16-grasshoper/</link>
+      <pubDate>Mon, 16 Feb 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-02-16-grasshoper/</guid>
+      <description>That is what I do - jump from project to project to topic to project. And back.
+It is uncertain how good is all this - but as they say:
+ &amp;ldquo;If you cannot do something right, learn to enjoy doing it poorly&amp;rdquo;
+ </description>
     </item>
     
     <item>
