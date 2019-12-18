@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>On harvesting credit card numbers and passwords - Miro&#39;s World</title>
+  <title>30 day commit challenge - Checkpoint 1 - Miro&#39;s World</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,10 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="This is the scariest thing I have read since spring 2018:
-https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5
-written by @david.gilbertson.
-It pretty sure what he describes is actually happening, has been happening before he described it and will be happening going on - just obviously not in the named module. The ecosystem of Node modules is so vast and so unstable that considerable number of project do not do enough to catch behaviour like this." /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Time to make checkpoint number 1 - it is day 11 of 30.
+So far - out of this 11 days I have 10 days with commits. The missing day was fully dedicated to working on presentation and documentation, that unfortunately ends up Confluence and Google Doc, not in some proper textual format (read: Markdown or RestructuredText) backed by a repository.
+Stuff that I worked on:
+ some minor updates to resume (added AWS badges, fixed some typos) notes from certification courses &#43; code fragments scripts for automation of documents / ebooks backup from iCloud to local drives  Most commits went to documentation / practice code for my project &amp;ldquo;Many ways to Kubernetes&amp;rdquo; where I play with building up K8s clusters using different approaches." /><meta name="keywords" content="blog, Miro" />
 
 
 
@@ -29,7 +29,7 @@ It pretty sure what he describes is actually happening, has been happening befor
 <meta name="generator" content="Hugo 0.59.1 with theme even" />
 
 
-<link rel="canonical" href="https://miroadamy.com/posts/2019-12-11-hackernoon/" />
+<link rel="canonical" href="https://miroadamy.com/posts/2019-12-17-30-day-commit-challenge-1/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,35 +41,35 @@ It pretty sure what he describes is actually happening, has been happening befor
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="On harvesting credit card numbers and passwords" />
-<meta property="og:description" content="This is the scariest thing I have read since spring 2018:
-https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5
-written by @david.gilbertson.
-It pretty sure what he describes is actually happening, has been happening before he described it and will be happening going on - just obviously not in the named module. The ecosystem of Node modules is so vast and so unstable that considerable number of project do not do enough to catch behaviour like this." />
+<meta property="og:title" content="30 day commit challenge - Checkpoint 1" />
+<meta property="og:description" content="Time to make checkpoint number 1 - it is day 11 of 30.
+So far - out of this 11 days I have 10 days with commits. The missing day was fully dedicated to working on presentation and documentation, that unfortunately ends up Confluence and Google Doc, not in some proper textual format (read: Markdown or RestructuredText) backed by a repository.
+Stuff that I worked on:
+ some minor updates to resume (added AWS badges, fixed some typos) notes from certification courses &#43; code fragments scripts for automation of documents / ebooks backup from iCloud to local drives  Most commits went to documentation / practice code for my project &ldquo;Many ways to Kubernetes&rdquo; where I play with building up K8s clusters using different approaches." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2019-12-11-hackernoon/" />
-<meta property="article:published_time" content="2019-12-11T21:22:48+08:00" />
-<meta property="article:modified_time" content="2019-12-11T21:22:48+08:00" />
-<meta itemprop="name" content="On harvesting credit card numbers and passwords">
-<meta itemprop="description" content="This is the scariest thing I have read since spring 2018:
-https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5
-written by @david.gilbertson.
-It pretty sure what he describes is actually happening, has been happening before he described it and will be happening going on - just obviously not in the named module. The ecosystem of Node modules is so vast and so unstable that considerable number of project do not do enough to catch behaviour like this.">
+<meta property="og:url" content="https://miroadamy.com/posts/2019-12-17-30-day-commit-challenge-1/" />
+<meta property="article:published_time" content="2019-12-17T11:22:48+08:00" />
+<meta property="article:modified_time" content="2019-12-17T11:22:48+08:00" />
+<meta itemprop="name" content="30 day commit challenge - Checkpoint 1">
+<meta itemprop="description" content="Time to make checkpoint number 1 - it is day 11 of 30.
+So far - out of this 11 days I have 10 days with commits. The missing day was fully dedicated to working on presentation and documentation, that unfortunately ends up Confluence and Google Doc, not in some proper textual format (read: Markdown or RestructuredText) backed by a repository.
+Stuff that I worked on:
+ some minor updates to resume (added AWS badges, fixed some typos) notes from certification courses &#43; code fragments scripts for automation of documents / ebooks backup from iCloud to local drives  Most commits went to documentation / practice code for my project &ldquo;Many ways to Kubernetes&rdquo; where I play with building up K8s clusters using different approaches.">
 
 
-<meta itemprop="datePublished" content="2019-12-11T21:22:48&#43;08:00" />
-<meta itemprop="dateModified" content="2019-12-11T21:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="369">
+<meta itemprop="datePublished" content="2019-12-17T11:22:48&#43;08:00" />
+<meta itemprop="dateModified" content="2019-12-17T11:22:48&#43;08:00" />
+<meta itemprop="wordCount" content="247">
 
 
 
-<meta itemprop="keywords" content="security,hacking," />
+<meta itemprop="keywords" content="blog,30daychallenge," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="On harvesting credit card numbers and passwords"/>
-<meta name="twitter:description" content="This is the scariest thing I have read since spring 2018:
-https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5
-written by @david.gilbertson.
-It pretty sure what he describes is actually happening, has been happening before he described it and will be happening going on - just obviously not in the named module. The ecosystem of Node modules is so vast and so unstable that considerable number of project do not do enough to catch behaviour like this."/>
+<meta name="twitter:title" content="30 day commit challenge - Checkpoint 1"/>
+<meta name="twitter:description" content="Time to make checkpoint number 1 - it is day 11 of 30.
+So far - out of this 11 days I have 10 days with commits. The missing day was fully dedicated to working on presentation and documentation, that unfortunately ends up Confluence and Google Doc, not in some proper textual format (read: Markdown or RestructuredText) backed by a repository.
+Stuff that I worked on:
+ some minor updates to resume (added AWS badges, fixed some typos) notes from certification courses &#43; code fragments scripts for automation of documents / ebooks backup from iCloud to local drives  Most commits went to documentation / practice code for my project &ldquo;Many ways to Kubernetes&rdquo; where I play with building up K8s clusters using different approaches."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -136,14 +136,14 @@ It pretty sure what he describes is actually happening, has been happening befor
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">On harvesting credit card numbers and passwords</h1>
+      <h1 class="post-title">30 day commit challenge - Checkpoint 1</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2019-12-11 </span>
+        <span class="post-time"> 2019-12-17 </span>
         <div class="post-category">
-            <a href="/categories/devops/"> devops </a>
+            <a href="/categories/lifehacks/"> lifehacks </a>
             </div>
-          <span class="more-meta"> 369 words </span>
+          <span class="more-meta"> 247 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -156,27 +156,25 @@ It pretty sure what he describes is actually happening, has been happening befor
   </div>
 </div>
     <div class="post-content">
-      <p>This is the scariest thing I have read since spring 2018:</p>
+      <p>Time to make checkpoint number 1 - it is day 11 of 30.</p>
 
-<p><a href="https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5">https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5</a></p>
+<p>So far - out of this 11 days I have 10 days with commits. The missing day was fully dedicated to working on presentation and documentation, that unfortunately ends up Confluence and Google Doc, not in some proper textual format (read: Markdown or RestructuredText) backed by a repository.</p>
 
-<p>written by @david.gilbertson.</p>
+<p>Stuff that I worked on:</p>
 
-<p>It pretty sure what he describes is actually happening, has been happening before he described it and will be happening going on - just obviously not in the named module. The ecosystem of Node modules is so vast and so unstable that considerable number of project do not do enough to catch behaviour like this.</p>
+<ul>
+<li>some minor updates to resume (added AWS badges, fixed some typos)</li>
+<li>notes from certification courses + code fragments</li>
+<li>scripts for automation of documents / ebooks backup from iCloud to local drives</li>
+</ul>
 
-<p>Why is this important: security is not optional and project budgets simply do not count on extensive investigation over transitive closure of all dependencies. What makes it even worse, it is not a job that can be done and checked off for the duration of the product. Unless the depencies and their dependencies are frozen, it is very easy to grab newer version of a second or third level dependency that may infected.</p>
+<p>Most commits went to documentation / practice code for my project &ldquo;Many ways to Kubernetes&rdquo; where I play with building up K8s clusters using different approaches. So far I did the &ldquo;Kubernetes the hard way&rdquo; - following the course from Linux Academy (<a href="https://linuxacademy.com/cp/modules/view/id/221">https://linuxacademy.com/cp/modules/view/id/221</a>),</p>
 
-<p>And also, it is not Node issue only. I can imagine Python will suffer same issues with its ecosystem as rich and as dynamic as it is today. Not everybody is using pipenv and freezing the library versions. And the same can be true for Java and JARs.</p>
+<p>This repo - <a href="https://gitlab.com/plg-containers/kubernetes-the-hard-way">https://gitlab.com/plg-containers/kubernetes-the-hard-way</a> (<a href="https://plg-containers.gitlab.io/kubernetes-the-hard-way/">https://plg-containers.gitlab.io/kubernetes-the-hard-way/</a>) - is not public for now, as I need to make sure I am not violating any IP when building on code fragments from the course. Once I have time to review it, I will switch it to public.</p>
 
-<p>Docker of course add completely different level to this by shipping binary images which can contain pretty much anything. Unless you use commercially scanned and validated images, verify SHA1 and review every source docker file and every package installed, you are not safe.</p>
+<p>I have also played with several ways how Rancher can be set up and it is quite intriguing, considering the fact that it can be deployed as extension on top of proper K8s cluster as well as to start on Docker host and simulate the cluster by running K8s components in the Docker containers.</p>
 
-<p>Reviewing dockerfile is not enough - as it is trivial to run clean and safe container, install something malicious and the commit the changes. If you cleverly tag the container, it may be picked up and spread.</p>
-
-<p>One does not really need to doctor the image - all that is necessary is to find an exploit in useful Linux utility and then search which docker images installed it - and which images are using the contaminated one as base</p>
-
-<p>And when Kubernetes really becomes &ldquo;OS of the cloud&rdquo;, the new opportunities will emerges. Just check how many system or infrastructure containers you have when you install Istio, Dashboard, ArgoCD, Traefik etc etc. Can you be sure you trust these and know what is really running inside your cluster ?</p>
-
-<p>We are living in dangerous times.</p>
+<p>To sum it up: so far 10:1. Moving on.</p>
 
     </div>
 
@@ -188,7 +186,7 @@ It pretty sure what he describes is actually happening, has been happening befor
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2019-12-11
+        2019-12-17
         
     </span>
   </p>
@@ -200,17 +198,13 @@ It pretty sure what he describes is actually happening, has been happening befor
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/security/">security</a>
-          <a href="/tags/hacking/">hacking</a>
+          <a href="/tags/blog/">blog</a>
+          <a href="/tags/30daychallenge/">30daychallenge</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/posts/2019-12-17-30-day-commit-challenge-1/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">30 day commit challenge - Checkpoint 1</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/posts/2019-12-06-30-day-commit-challenge/">
-            <span class="next-text nav-default">30 day commit challenge</span>
+        
+        <a class="next" href="/posts/2019-12-11-hackernoon/">
+            <span class="next-text nav-default">On harvesting credit card numbers and passwords</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

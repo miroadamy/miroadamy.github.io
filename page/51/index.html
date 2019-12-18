@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2019-12-13T22:56:30+00:00" />
+<meta property="og:updated_time" content="2019-12-18T19:51:04+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -116,6 +116,41 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/">Spring 2 MVC and ResourceBundleViewResolver problem</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-01-24 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 129 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      This one took some time to figure out - it is one of those problems that are obvious after you know the solution but hard to see beforehand.
+I had the ResourceBundleViewResolver configured with Tiles 2, like this:
+[code language='xml']
+[/code]
+and the view.properties was:
+[code language='xml']
+parent-view.(class)=org.springframework.web.servlet.view.JstlView
+parent-view.(abstract)=true
+about.url=/WEB-INF/jsp/about.jsp
+form.url=/WEB-INF/jsp/form.jsp
+list.url=/WEB-INF/jsp/list.jsp
+[/code]
+It kept givin exception saying that /WEB-INF/jsp/list.jsp does not exist. Which it did. I tried couple of things, no result.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2008-01-20-using-ibatis-with-abator/">Using iBatis with Abator</a></h1>
@@ -203,28 +238,6 @@ Very interesting videos and actually worth the time spent on them are Google tec
     </div>
     <div class="read-more">
       <a href="/posts/2008-01-11-safari-books-online-and-lyndacom-on-ipod-touch/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-07-sony-ereader-format-lrf-viewer-for-the-mac-linux-and-windows/">Sony eReader format (LRF) viewer for the Mac, Linux and Windows</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-01-07 </span>
-      
-        <span class="more-meta"> 176 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Thanks to Kovid Goyal, the Sony Reader's very own terrible software (iTunes wannabe) can very soon be decommissioned from my software collection. The libprs500 project, multi-platform solution written in Python works very well and allows to move data between Sony and your Mac / Linux / Windows. The UI is actually pretty decent, considering that it is not native Cocoa app:
-You can also edit metadata, which is very important because of the limited screen space on PRS500.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2008-01-07-sony-ereader-format-lrf-viewer-for-the-mac-linux-and-windows/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
