@@ -6,7 +6,7 @@
     <description>Recent content on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 18 Dec 2019 19:51:04 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 Jan 2020 20:05:26 +0000</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,14 +26,24 @@ Resume My current resume is available online or can be downloaded from here as P
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Wed, 18 Dec 2019 19:51:04 +0000</pubDate>
+      <pubDate>Wed, 15 Jan 2020 20:05:26 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
       <description>Status Hugo Static Site Generator v0.59.1/extended darwin/amd64 BuildDate: unknown
 Pygments version 2.4.2, &amp;copy; 2006-2019 by Georg Brandl.
-Blog commit: 0ccaef5b9549880d594e19df9e8672b43c6d10bc
+Blog commit: 70f5150c9f954ca21f68dd4a476bfeeace6a37de
 Theme commit: d39d3e443953caea05510b19fdd7a259c71a0ab3
-Published: &amp;ldquo;2019-12-18T19:51:04Z&amp;rdquo;</description>
+Published: &amp;ldquo;2020-01-15T20:05:26Z&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Kubernetes client server version mismatch</title>
+      <link>https://miroadamy.com/posts/2020-01-15-kubectl/</link>
+      <pubDate>Wed, 15 Jan 2020 21:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2020-01-15-kubectl/</guid>
+      <description>Symptoms I was doing update on Kubernetes cluster I had not touch in a while when I noticed weird behaviour:
+ the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5  ➜ .</description>
     </item>
     
     <item>

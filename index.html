@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2019-12-18T19:51:04+00:00" />
+<meta property="og:updated_time" content="2020-01-15T20:05:26+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -116,6 +116,30 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2020-01-15-kubectl/">Kubernetes client server version mismatch</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-01-15 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 691 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Symptoms I was doing update on Kubernetes cluster I had not touch in a while when I noticed weird behaviour:
+ the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5  ➜ .
+    </div>
+    <div class="read-more">
+      <a href="/posts/2020-01-15-kubectl/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2019-12-17-30-day-commit-challenge-1/">30 day commit challenge - Checkpoint 1</a></h1>
@@ -217,30 +241,6 @@ What makes this blog dear and interesting to me is that it&rsquo;s author is my 
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-11-26-totd/">Quote of the day</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-11-26 </span>
-      <div class="post-category">
-          <a href="/categories/general/"> general </a>
-          </div>
-        <span class="more-meta"> 23 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-       Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.  ― Marcus Aurelius , Meditations
- 
-    </div>
-    <div class="read-more">
-      <a href="/posts/2019-11-26-totd/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -285,7 +285,7 @@ What makes this blog dear and interesting to me is that it&rsquo;s author is my 
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2019
+    2020
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
