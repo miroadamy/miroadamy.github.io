@@ -10,28 +10,63 @@
   
   <url>
     <loc>https://miroadamy.com/</loc>
-    <lastmod>2020-01-15T20:05:26+00:00</lastmod>
+    <lastmod>2020-01-21T14:02:49+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://miroadamy.com/status/</loc>
-    <lastmod>2020-01-15T20:05:26+00:00</lastmod>
+    <lastmod>2020-01-21T14:02:49+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://miroadamy.com/categories/</loc>
-    <lastmod>2020-01-15T21:22:48+08:00</lastmod>
+    <lastmod>2020-01-18T11:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://miroadamy.com/categories/devops/</loc>
-    <lastmod>2020-01-15T21:22:48+08:00</lastmod>
+    <lastmod>2020-01-18T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/kubernetes/</loc>
+    <lastmod>2020-01-18T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/</loc>
+    <lastmod>2020-01-18T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/rancher/</loc>
+    <lastmod>2020-01-18T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2020-01-18-rancher-cli/</loc>
+    <lastmod>2020-01-18T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/</loc>
+    <lastmod>2020-01-18T11:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44,28 +79,7 @@
   </url>
   
   <url>
-    <loc>https://miroadamy.com/tags/kubernetes/</loc>
-    <lastmod>2020-01-15T21:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://miroadamy.com/posts/2020-01-15-kubectl/</loc>
-    <lastmod>2020-01-15T21:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/posts/</loc>
-    <lastmod>2020-01-15T21:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/tags/</loc>
     <lastmod>2020-01-15T21:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

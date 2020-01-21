@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Jan 2020 21:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jan 2020 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://miroadamy.com/tags/kubernetes/</link>
+      <pubDate>Sat, 18 Jan 2020 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rancher</title>
+      <link>https://miroadamy.com/tags/rancher/</link>
+      <pubDate>Sat, 18 Jan 2020 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/rancher/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>k8s</title>
@@ -17,15 +35,6 @@
       <pubDate>Wed, 15 Jan 2020 21:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/k8s/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubernetes</title>
-      <link>https://miroadamy.com/tags/kubernetes/</link>
-      <pubDate>Wed, 15 Jan 2020 21:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     
@@ -183,7 +192,7 @@
     </item>
     
     <item>
-      <title>AWS</title>
+      <title>aws</title>
       <link>https://miroadamy.com/tags/aws/</link>
       <pubDate>Thu, 07 Nov 2019 11:22:48 +0800</pubDate>
       

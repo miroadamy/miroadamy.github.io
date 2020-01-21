@@ -6,10 +6,20 @@
     <description>Recent content in devops on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 15 Jan 2020 21:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 18 Jan 2020 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/categories/devops/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Rancher CLI vs kubectl</title>
+      <link>https://miroadamy.com/posts/2020-01-18-rancher-cli/</link>
+      <pubDate>Sat, 18 Jan 2020 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2020-01-18-rancher-cli/</guid>
+      <description>Accessing Rancher cluster After creation, you can access the K8s cluster running Rancher by saving the config file available from the console and using standard kubectl command
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE NAME READY STATUS RESTARTS AGE cattle-system cattle-cluster-agent-5c98cb979f-bbhxf 1/1 Running 0 5d23h cattle-system cattle-node-agent-dwnxk 1/1 Running 0 5d23h cattle-system kube-api-auth-d4zgq 1/1 Running 0 5d23h ingress-nginx default-http-backend-67cf578fc4-grmsw 1/1 Running 0 5d23h ingress-nginx nginx-ingress-controller-mpnmb 1/1 Running 0 5d23h kube-system canal-jw85q 2/2 Running 0 5d23h kube-system coredns-5c59fd465f-47q5z 1/1 Running 0 5d23h kube-system coredns-autoscaler-d765c8497-sm5xf 1/1 Running 0 5d23h kube-system metrics-server-64f6dffb84-bp864 1/1 Running 0 5d23h kube-system rke-coredns-addon-deploy-job-95qnk 0/1 Completed 0 5d23h kube-system rke-ingress-controller-deploy-job-brv7w 0/1 Completed 0 5d23h kube-system rke-metrics-addon-deploy-job-tvt89 0/1 Completed 0 5d23h kube-system rke-network-plugin-deploy-job-7rqcr 0/1 Completed 0 5d23h   The same information (and much more) is available using rancher CLI.</description>
+    </item>
     
     <item>
       <title>Kubernetes client server version mismatch</title>

@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2020-01-15T20:05:26+00:00" />
+<meta property="og:updated_time" content="2020-01-21T14:02:49+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -116,6 +116,30 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2012-06-21-gitolite-setup/">Using Gitolite for code sharing setup</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-06-21 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 5139 words </span>
+        <span class="more-meta"> 25 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
+Main features  multiple users each user represent a client:  e.g. users client1   Users are separated by Unix permissions:  access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes  Inside each user, there are multiple projects.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2012-06-21-gitolite-setup/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2012-05-29-admin-tool-goodies/">Admin tool goodies</a></h1>
@@ -212,34 +236,6 @@ This article is useful:
     </div>
     <div class="read-more">
       <a href="/posts/2012-04-09-macvim-git/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-04-08-quickview/">How to make unregistered files work in Quick View on OS-X</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-04-08 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 73 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Out of the box Quick View (press Space in Finder) behaviour on unregistered files is not very useful: it shows huge Unix icon instead of content of file.
-This is default for files like Makefile or build.gradle
-This plugin makes it go away and show text file for all UTIs that are plain text: http://whomwah.github.com/qlstephen/
-Installation: * open the DMG file * copy QLStephen.qlgenerator to /Users/&lt;&lt;USERNAME&gt;&gt;/Library/QuickLook/QLStephen.qlgenerator
-That&rsquo;s it.
-Now it looks like this:
-    </div>
-    <div class="read-more">
-      <a href="/posts/2012-04-08-quickview/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2020-01-15T20:05:26+00:00" />
+<meta property="og:updated_time" content="2020-01-21T14:02:49+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -116,6 +116,32 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-15-07-git-history/">How to truncate Git history</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-07-14 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 735 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      The general idea 1 2 3 4 5 6  #!/bin/bash # Parameter: tag or sha1 git checkout --orphan temp $1 git commit -m &#34;Truncated history&#34; git rebase --onto temp $1 master git branch -D temp   Requires Git 1.8+
+Works well for mostly linear history (aka Git used for diff-ing of the catalog feeds).
+How it works Starting repo (training):
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  ➜ test git:(master) git last fe4e396 2015-07-13 | Fix for BuildInfo in TDD, database connectivity works (HEAD, origin/dynamovies/main, master) [Miro Adamy] f1b8636 2015-07-13 | Tables and database creation [Miro Adamy] d4c182b 2015-07-13 | Added template of dynamovies module - with empty UI.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-15-07-git-history/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2015-07-12-component-report/">How to get information about all ATG components</a></h1>
@@ -211,31 +237,6 @@ https://discussions.apple.com/docs/DOC-3083
     </div>
     <div class="read-more">
       <a href="/posts/2015-06-18-jenkins-git/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-05-22-ssh-issue/">How to solve &#39;Agent admitted failure to sign using the key&#39;</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-05-22 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 387 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      After re-creating the SSH key, I got the above error from Gitolite.
-Full trace:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57  ➜ TWC ssh -v thinkwrap@pensieve.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-05-22-ssh-issue/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
