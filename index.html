@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2020-01-21T14:02:49+00:00" />
+<meta property="og:updated_time" content="2020-02-18T00:36:40+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -116,6 +116,31 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2020-01-19-kubectl-version/">Kubectl client and server version mismatch</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-01-19 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 672 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Accessing Rancher cluster I was doing update on Kubernetes cluster I had not touch in a while when I noticed weird behaviour:
+ the output of get command was incomplete the -o wide option had no effect on the command output  (IP addresses are masked)
+1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-xx-xx-xx.ca-central-1.compute.internal 613d ip-172-xx-xx-xx.ca-central-1.compute.internal 628d ip-172-xx-xx-xx.ca-central-1.compute.internal 558d   and
+    </div>
+    <div class="read-more">
+      <a href="/posts/2020-01-19-kubectl-version/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2020-01-18-rancher-cli/">Rancher CLI vs kubectl</a></h1>
@@ -212,30 +237,6 @@ It pretty sure what he describes is actually happening, has been happening befor
     </div>
     <div class="read-more">
       <a href="/posts/2019-12-11-hackernoon/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-12-06-30-day-commit-challenge/">30 day commit challenge</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-12-06 </span>
-      <div class="post-category">
-          <a href="/categories/lifehacks/"> lifehacks </a>
-          </div>
-        <span class="more-meta"> 386 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      My work in last few years took my away from practical coding towards DevOps. Despite the increased role of IaaC in our DevOps, this often means living in iTerm and AWS console with interaction not being captured in any form.
-On writing side, lots of my output shifted from code towards writing text in Wiki&rsquo;s, GoogleDocs and more and more in Slack messages. The code I write are short one-liners or small scripts with very short life span.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2019-12-06-30-day-commit-challenge/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

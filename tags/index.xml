@@ -6,15 +6,33 @@
     <description>Recent content in Tags on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Jan 2020 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 19 Jan 2020 11:12:38 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>k8s</title>
+      <link>https://miroadamy.com/tags/k8s/</link>
+      <pubDate>Sun, 19 Jan 2020 11:12:38 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubectl</title>
+      <link>https://miroadamy.com/tags/kubectl/</link>
+      <pubDate>Sun, 19 Jan 2020 11:12:38 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/kubectl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>kubernetes</title>
       <link>https://miroadamy.com/tags/kubernetes/</link>
-      <pubDate>Sat, 18 Jan 2020 11:22:48 +0800</pubDate>
+      <pubDate>Sun, 19 Jan 2020 11:12:38 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/kubernetes/</guid>
       <description></description>
@@ -26,15 +44,6 @@
       <pubDate>Sat, 18 Jan 2020 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/rancher/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>k8s</title>
-      <link>https://miroadamy.com/tags/k8s/</link>
-      <pubDate>Wed, 15 Jan 2020 21:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/k8s/</guid>
       <description></description>
     </item>
     

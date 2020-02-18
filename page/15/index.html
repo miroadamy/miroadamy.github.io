@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
 
-<meta property="og:updated_time" content="2020-01-21T14:02:49+00:00" />
+<meta property="og:updated_time" content="2020-02-18T00:36:40+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
@@ -116,6 +116,30 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-06-18-jenkins-git/">How to fix Jenkins build issues related to Git connectivity</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-06-18 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 455 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like
+1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-06-18-jenkins-git/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2015-05-22-ssh-issue/">How to solve &#39;Agent admitted failure to sign using the key&#39;</a></h1>
@@ -213,32 +237,6 @@ Just for git commands:
     </div>
     <div class="read-more">
       <a href="/posts/2015-03-10-git-log-output-less/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-02-16-grasshoper/">New image that expresses my new undefined job title</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-02-16 </span>
-      <div class="post-category">
-          <a href="/categories/startuplife/"> startuplife </a>
-          </div>
-        <span class="more-meta"> 42 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      That is what I do - jump from project to project to topic to project. And back.
-It is uncertain how good is all this - but as they say:
- &ldquo;If you cannot do something right, learn to enjoy doing it poorly&rdquo;
- 
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-02-16-grasshoper/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
