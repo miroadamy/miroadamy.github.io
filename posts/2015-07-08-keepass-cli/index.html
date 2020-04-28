@@ -25,7 +25,7 @@ It requires relatively modern Perl - 5.1x should work. I have
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2015-07-08-keepass-cli/" />
@@ -52,16 +52,13 @@ It requires relatively modern Perl - 5.1x should work. I have
 <meta itemprop="description" content="This is mainly for Linux and Mac as they do not have good client.
 It requires relatively modern Perl - 5.1x should work. I have
 1 2 3  ➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail)   Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.">
-
-
 <meta itemprop="datePublished" content="2015-07-08T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2015-07-08T11:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="666">
 
 
 
-<meta itemprop="keywords" content="keepass,commandline,perl," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="keepass,commandline,perl," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Accessing Keepass information from command line"/>
 <meta name="twitter:description" content="This is mainly for Linux and Mac as they do not have good client.
 It requires relatively modern Perl - 5.1x should work. I have
@@ -148,62 +145,59 @@ It requires relatively modern Perl - 5.1x should work. I have
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>This is mainly for Linux and Mac as they do not have good client.</p>
-
 <p>It requires relatively modern Perl - 5.1x should work. I have</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  ~  perl --version
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  ~  perl --version
 This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level
-(with 2 registered patches, see perl -V for more detail)</pre></td></tr></table>
+(with 2 registered patches, see perl -V for more detail)
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Get the kpcli distribution
+</div><p>Get the kpcli distribution
 Download from Sourceforge - <a href="http://sourceforge.net/projects/kpcli/">http://sourceforge.net/projects/kpcli/</a> or get the attached script kpcli-3.0.pl</p>
-
 <p>Make it executable and put it on the path:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">mv ~/Downloads/kpcli-3.0.pl ~/bin
-chmod +x ~/bin/kpcli-3.0.pl</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">mv ~/Downloads/kpcli-3.0.pl ~/bin
+chmod +x ~/bin/kpcli-3.0.pl
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>It will not work out of the box unless you install few Perl modules.</p>
-
+</div><p>It will not work out of the box unless you install few Perl modules.</p>
 <p>Easiest way is to use cpanm, which is installed using cpan</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"># Run CPAN and let it configure itself if run for the first time
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Run CPAN and let it configure itself if run for the first time
 cpan
   
 # install cpanm using cpan
-sudo cpan App::cpanminus</pre></td></tr></table>
+sudo cpan App::cpanminus
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Now we can use cpanm to proceed</p>
+</div><p>Now we can use cpanm to proceed</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -219,9 +213,9 @@ sudo cpan App::cpanminus</pre></td></tr></table>
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">sudo cpanm Crypt::Rijndael
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo cpanm Crypt::Rijndael
 sudo cpanm Sort::Naturally
 sudo cpanm Term::ShellUI
 sudo cpanm File::KeePass
@@ -236,13 +230,13 @@ sudo cpanm Clipboard
 sudo cpanm Capture:Tiny
 sudo cpanm Capture::Tiny
   
-~/bin/kpcli-3.0.pl --help</pre></td></tr></table>
+~/bin/kpcli-3.0.pl --help
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Now it can be run and open file. After opening you can navigate in the password file as in file system (try pwd, cd, ls) and copy password to clipboard (try h)</p>
+</div><p>Now it can be run and open file. After opening you can navigate in the password file as in file system (try pwd, cd, ls) and copy password to clipboard (try h)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -290,9 +284,9 @@ sudo cpanm Capture::Tiny
 </span><span class="lnt">46
 </span><span class="lnt">47
 </span><span class="lnt">48
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  Sites git:(master) ✗ ~/bin/kpcli-3.0.pl --kdb ~/PASSWORDS/PAL.kdbx
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  Sites git:(master) ✗ ~/bin/kpcli-3.0.pl --kdb ~/PASSWORDS/PAL.kdbx
 Please provide the master password: *************************
 KeePass CLI (kpcli-3.0) v3.0 is ready for operation.
 Type &#39;help&#39; for a description of available commands.
@@ -339,10 +333,10 @@ kpcli-3.0:/&gt; h
       xw -- Copy URL (www) to clipboard: xw &lt;entry path|number&gt;
       xx -- Clear the clipboard: xx
 Type &#34;help &lt;command&gt;&#34; for more detailed help on a command.
-kpcli-3.0:/&gt;</pre></td></tr></table>
+kpcli-3.0:/&gt;
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Enjoy</p>
+</div><p>Enjoy</p>
 
     </div>
 

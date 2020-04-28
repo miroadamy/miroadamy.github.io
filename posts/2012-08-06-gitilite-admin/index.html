@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="How to setup new client You need to be pensieve admin to do this. You will have to login as service user (non-host account) and su to root.
- create new Linux user on pensieve setup gitolite:  git clone &amp;lt;git://github.com/sitaramc/gitolite&amp;gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln  add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub  get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &amp;lt;client@pensieve." /><meta name="keywords" content="blog, Miro" />
+ create new Linux user on pensieve setup gitolite:  git clone &amp;lt;git://github.com/sitaramc/gitolite&amp;gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln   add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub   get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &amp;lt;client@pensieve." /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2012-08-06-gitilite-admin/" />
@@ -41,27 +41,24 @@
 
 <meta property="og:title" content="Gitolite Administration Guide" />
 <meta property="og:description" content="How to setup new client You need to be pensieve admin to do this. You will have to login as service user (non-host account) and su to root.
- create new Linux user on pensieve setup gitolite:  git clone &lt;git://github.com/sitaramc/gitolite&gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln  add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub  get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &lt;client@pensieve." />
+ create new Linux user on pensieve setup gitolite:  git clone &lt;git://github.com/sitaramc/gitolite&gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln   add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub   get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &lt;client@pensieve." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2012-08-06-gitilite-admin/" />
 <meta property="article:published_time" content="2012-08-06T11:22:48+08:00" />
 <meta property="article:modified_time" content="2012-08-06T11:22:48+08:00" />
 <meta itemprop="name" content="Gitolite Administration Guide">
 <meta itemprop="description" content="How to setup new client You need to be pensieve admin to do this. You will have to login as service user (non-host account) and su to root.
- create new Linux user on pensieve setup gitolite:  git clone &lt;git://github.com/sitaramc/gitolite&gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln  add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub  get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &lt;client@pensieve.">
-
-
+ create new Linux user on pensieve setup gitolite:  git clone &lt;git://github.com/sitaramc/gitolite&gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln   add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub   get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &lt;client@pensieve.">
 <meta itemprop="datePublished" content="2012-08-06T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2012-08-06T11:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="485">
 
 
 
-<meta itemprop="keywords" content="gitolite,git," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="gitolite,git," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Gitolite Administration Guide"/>
 <meta name="twitter:description" content="How to setup new client You need to be pensieve admin to do this. You will have to login as service user (non-host account) and su to root.
- create new Linux user on pensieve setup gitolite:  git clone &lt;git://github.com/sitaramc/gitolite&gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln  add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub  get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &lt;client@pensieve."/>
+ create new Linux user on pensieve setup gitolite:  git clone &lt;git://github.com/sitaramc/gitolite&gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln   add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub   get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &lt;client@pensieve."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -145,96 +142,82 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#how-to-setup-new-client">How to setup new client</a></li>
-</ul></li>
-<li><a href="#project-administration">Project administration</a>
-<ul>
-<li>
-<ul>
-<li><a href="#how-to-add-new-repository">How to add new repository</a></li>
-<li><a href="#how-to-add-new-user-to-your-project">How to add new user to your project</a></li>
-<li><a href="#how-to-administer-access-rights-for-a-repository">How to administer access rights for a repository</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#how-to-setup-new-client">How to setup new client</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#how-to-add-new-repository">How to add new repository</a></li>
+        <li><a href="#how-to-add-new-user-to-your-project">How to add new user to your project</a></li>
+        <li><a href="#how-to-administer-access-rights-for-a-repository">How to administer access rights for a repository</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h2 id="how-to-setup-new-client">How to setup new client</h2>
-
+      <h2 id="how-to-setup-new-client">How to setup new client</h2>
 <p>You need to be <strong>pensieve admin</strong> to do this.
 You will have to login as service user (non-host account) and su to root.</p>
-
 <ul>
 <li>create new Linux user on pensieve</li>
 <li>setup gitolite:
-
 <ul>
 <li><code>git clone &lt;git://github.com/sitaramc/gitolite&gt;</code></li>
 <li><code>mkdir bin; export PATH=$PATH:~/bin</code></li>
 <li><code>gitolite/install -ln</code></li>
-</ul></li>
+</ul>
+</li>
 <li>add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)
-
 <ul>
 <li><code>gitolite setup -pk miro.pub</code></li>
-</ul></li>
+</ul>
+</li>
 <li>get public key for the client account admin and add it (there can be multiple admins)</li>
 <li>clone the gitolite-admin repo from workstation whose pub key was added
-
 <ul>
 <li><code>git clone &lt;client@pensieve.thinkwrap&gt;.[com:gitolite-admin.git](http://comgitolite-admin.git/)</code></li>
-<li>add the key to the repo</li>
+<li>add the key to the repo
+<ul>
 <li><code>cd gitolite-admin</code></li>
 <li><code>cp ~/mykey.pub keydir</code></li>
 <li><code>vim conf/gitolite conf</code></li>
 <li>add the newly added account admit to repos, create new repos if required</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <p>All gitolite installs are independent so modification in one hosting user have zero impact on others.</p>
-
 <h1 id="project-administration">Project administration</h1>
-
 <p>This assumes that you are account administrator - your public key has write (push) priviledge to gitolite-admin repository for your account.</p>
-
 <p>If this is not true, please ask pensieve admin to add you to the account first - you must have access to gitolite-admin repo for your clients account</p>
-
 <p>Clone the gitolite-admin repo:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">git clone ACCOUNT@pensieve.thinkwrap.com:gitolite-admin.git</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone ACCOUNT@pensieve.thinkwrap.com:gitolite-admin.git
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Make sure you use proper account name for the URL.</p>
-
+</div><p>Make sure you use proper account name for the URL.</p>
 <p>All administration tasks are performed upon this gitolite-admin repo. By pushing the committed changes upstream, gitolite will &ldquo;replay&rdquo; and execute the changes.</p>
-
 <p>There are three types of changes:</p>
-
 <ul>
 <li>add new users/remove users</li>
 <li>create new repositories</li>
 <li>administer access of users to repositories</li>
 </ul>
-
 <h3 id="how-to-add-new-repository">How to add new repository</h3>
-
 <p>Go to gitolite-admin repository clone and edit the cong/gitolite.conf file</p>
-
 <p>Add new repo name with access rights - example:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -249,9 +232,9 @@ You will have to login as service user (non-host account) and su to root.</p>
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cat gitolite-admin/conf/gitolite.conf 
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cat gitolite-admin/conf/gitolite.conf 
  
 repo gitolite-admin
     RW+     =   miro
@@ -265,43 +248,36 @@ repo tmsp-dev
     RW+     = @all
  
 repo testing
-    RW+     =   @all</pre></td></tr></table>
+    RW+     =   @all
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Each block starting with &ldquo;repo&rdquo; defines new repository.</p>
-
+</div><p>Each block starting with &ldquo;repo&rdquo; defines new repository.</p>
 <p>Add new block to file, e.g. foobar</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">... PREVIOUS REPOS ...
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">... PREVIOUS REPOS ...
 repo foobar
     RW+     =  developer1
-    R       =  @all</pre></td></tr></table>
+    R       =  @all
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Commit and push.</p>
-
+</div><p>Commit and push.</p>
 <p>Gitolite will create new repository (located at <code>$HOSTING_USER_HOME/repositories/foobar.git</code>), make it available for push ONLY to developer1, allow everybody (all defined developers with public keys) to pull.</p>
-
 <p>The URL of the repo will be <code>HOSTING_USER_NAME@pensieve.thinkwrap.com:foobar.git</code> Note that there is no repositories (or .git) in the URL. The later is optional.</p>
-
 <h3 id="how-to-add-new-user-to-your-project">How to add new user to your project</h3>
-
 <ul>
 <li>Get the public key from the developer to be added</li>
 <li>Make sure the naming convention works: if the name of the user (comment at the end of the file) is dev123@noteboook, store it in file dev123.pub.</li>
 <li>Add it to gitolite-admin/keydir (or subdirectory if there is a name conflict)</li>
 <li>Perform local commit and push</li>
 </ul>
-
 <h3 id="how-to-administer-access-rights-for-a-repository">How to administer access rights for a repository</h3>
-
 <ul>
 <li>make sure all users are added to the hosting account (see above)</li>
 <li>edit and push the <code>gitolite-admin/conf/gitolite.conf</code></li>

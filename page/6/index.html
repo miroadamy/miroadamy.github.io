@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -44,12 +44,9 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-
-<meta property="og:updated_time" content="2020-02-18T00:36:40+00:00" />
+<meta property="og:updated_time" content="2020-04-28T19:35:50+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
 <meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
 
@@ -116,6 +113,31 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2019-06-23-tim-hortons/">Tim Hortons in Valencia</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-06-23 </span>
+      <div class="post-category">
+          <a href="/categories/life/"> life </a>
+          </div>
+        <span class="more-meta"> 79 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I have my doubts whether it will survive. It is next to Starbucks (one of several, albeit nothing like Toronto) so there is competition for tourists looking for the familiar logo.
+As for locals, Spanish coffee culture is quite different, and if I am allowed to say so - Spanish coffee is both better AND less expensive as
+So let&rsquo;s hope Timbits will save the day. Who could resist deep fried sugary dough, eh ?
+    </div>
+    <div class="read-more">
+      <a href="/posts/2019-06-23-tim-hortons/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2019-05-25-ottawa/">Visit in Canada</a></h1>
@@ -212,31 +234,6 @@ If the utility responds with &lsquo;Successfully connected’, it was able to ha
     </div>
     <div class="read-more">
       <a href="/posts/2019-02-10-ssl-poke/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-01-14-gitbits/">Gitbits</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-01-14 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> DevOps </a>
-          </div>
-        <span class="more-meta"> 300 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Two small utilities I have places into ~/bin:
-git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
-1 2 3 4 5 6 7 8 9  #!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less   Example 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2019-01-14-gitbits/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

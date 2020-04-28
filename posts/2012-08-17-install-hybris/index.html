@@ -26,7 +26,7 @@ Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-pla
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2012-08-17-install-hybris/" />
@@ -55,16 +55,13 @@ Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-pla
 Starting point: hybris-platform-4.7.1.zip
 Install point: /opt/hybris-platform/hybris-platform-4.7.1
 Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all.">
-
-
 <meta itemprop="datePublished" content="2012-08-17T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2012-08-17T11:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="925">
 
 
 
-<meta itemprop="keywords" content="hybris,ecommerce," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="hybris,ecommerce," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Installing and running &#39;naked&#39; hybris platform"/>
 <meta name="twitter:description" content="Installing and running &ldquo;naked&rdquo; hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
 Starting point: hybris-platform-4.7.1.zip
@@ -153,38 +150,30 @@ Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-pla
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#installing-and-running-naked-hybris-platform">Installing and running &ldquo;naked&rdquo; hybris platform</a>
-<ul>
-<li><a href="#start-with-hsqldb">Start (with HSQLdb)</a></li>
-<li><a href="#list-of-modules-that-goes-up">List of modules that goes up:</a></li>
-<li><a href="#initialization-log">Initialization log</a>
-<ul>
-<li><a href="#exploring">Exploring</a></li>
-<li><a href="#rest-client">REST Client</a></li>
-<li><a href="#admin-cockpit">Admin Cockpit</a></li>
-<li><a href="#virtual-jdbc">Virtual JDBC</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#start-with-hsqldb">Start (with HSQLdb)</a></li>
+    <li><a href="#list-of-modules-that-goes-up">List of modules that goes up:</a></li>
+    <li><a href="#initialization-log">Initialization log</a>
+      <ul>
+        <li><a href="#exploring">Exploring</a></li>
+        <li><a href="#rest-client">REST Client</a></li>
+        <li><a href="#admin-cockpit">Admin Cockpit</a></li>
+        <li><a href="#virtual-jdbc">Virtual JDBC</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h1 id="installing-and-running-naked-hybris-platform">Installing and running &ldquo;naked&rdquo; hybris platform</h1>
-
+      <h1 id="installing-and-running-naked-hybris-platform">Installing and running &ldquo;naked&rdquo; hybris platform</h1>
 <p>Log of an exercise to install and start the Hybris without all those fancy modules</p>
-
 <p>Starting point: <code>hybris-platform-4.7.1.zip</code></p>
-
 <p>Install point: <code>/opt/hybris-platform/hybris-platform-4.7.1</code></p>
-
 <h2 id="start-with-hsqldb">Start (with HSQLdb)</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -194,9 +183,9 @@ Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-pla
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">~ $ cd /opt/hybris-platform/hybris-platform-4.7.1
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">~ $ cd /opt/hybris-platform/hybris-platform-4.7.1
 hybris-platform-4.7.1 $ cd bin/platform/
 platform $ pwd
 /opt/hybris-platform/hybris-platform-4.7.1/bin/platform
@@ -205,13 +194,13 @@ platform $ pwd
 platform $ . ./setantenv.sh
 Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2
 Apache Ant(TM) version 1.8.2 compiled on April 21 2011
-platform $ ant clean all | tee ant-clean-all.log</pre></td></tr></table>
+platform $ ant clean all | tee ant-clean-all.log
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>=&gt; Select <code>develop</code></p>
+</div><p>=&gt; Select <code>develop</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -236,9 +225,9 @@ platform $ ant clean all | tee ant-clean-all.log</pre></td></tr></table>
 </span><span class="lnt">23
 </span><span class="lnt">24
 </span><span class="lnt">25
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">....
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">....
 ....
    
    [echo] [jspcompile] compiling.. /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/work/Catalina/localhost/hmc
@@ -262,15 +251,14 @@ all:
      [echo] Build finished on 17-August-2012 19:43:22.
      [echo]        
 BUILD SUCCESSFUL
-Total time: 1 minute 26 seconds</pre></td></tr></table>
+Total time: 1 minute 26 seconds
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Goto <a href="http://localhost:9001/">http://localhost:9001/</a> - redirects to <a href="http://localhost:9001/platform/init">http://localhost:9001/platform/init</a></p>
-
+</div><p>Goto http://localhost:9001/ - redirects to http://localhost:9001/platform/init</p>
 <h2 id="list-of-modules-that-goes-up">List of modules that goes up:</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -293,9 +281,9 @@ Total time: 1 minute 26 seconds</pre></td></tr></table>
 </span><span class="lnt">21
 </span><span class="lnt">22
 </span><span class="lnt">23
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">core
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">core
 hmc
 servicelayer
 task
@@ -317,13 +305,13 @@ comments
 cockpit
 mcc
 advancedsavedquery
-admincockpit</pre></td></tr></table>
+admincockpit
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="initialization-log">Initialization log</h2>
+</div><h2 id="initialization-log">Initialization log</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -403,9 +391,9 @@ admincockpit</pre></td></tr></table>
 </span><span class="lnt">78
 </span><span class="lnt">79
 </span><span class="lnt">80
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Initialization
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Initialization
 Dropping ALL tables ...
  
 Initialize system ...
@@ -484,16 +472,14 @@ Creating project data for advancedsavedquery ...
 Creating project data for admincockpit ...
  
  
-FINISHED. The initialization took: 0d 00h:01m:08s:235ms</pre></td></tr></table>
+FINISHED. The initialization took: 0d 00h:01m:08s:235ms
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="exploring">Exploring</h3>
-
+</div><h3 id="exploring">Exploring</h3>
 <ul>
 <li>look at the configuration parameters under <a href="http://localhost:9001/platform/config">http://localhost:9001/platform/config</a></li>
 <li>logging - <a href="http://localhost:9001/platform/log4j">http://localhost:9001/platform/log4j</a></li>
 <li>All loaded extensions - with their Web apps: <a href="http://localhost:9001/platform/extensions">http://localhost:9001/platform/extensions</a>
-
 <ul>
 <li><a href="http://localhost:9001/virtualjdbc/">http://localhost:9001/virtualjdbc/</a></li>
 <li>AdminCockpit: <a href="http://localhost:9001/admincockpit/index.zul">http://localhost:9001/admincockpit/index.zul</a></li>
@@ -501,76 +487,71 @@ FINISHED. The initialization took: 0d 00h:01m:08s:235ms</pre></td></tr></table>
 <li>Hybris Management Console - <a href="http://localhost:9001/hmc/hybris?wid=MC0x0&amp;prgrequest=true&amp;MC0x2_!DISPLAY=MC0x12">http://localhost:9001/hmc/hybris?wid=MC0x0&amp;prgrequest=true&amp;MC0x2_!DISPLAY=MC0x12</a></li>
 <li>Maintenance page: <a href="http://localhost:9001/maintenance/">http://localhost:9001/maintenance/</a></li>
 <li>Medias (??) <a href="http://localhost:9001/medias/">http://localhost:9001/medias/</a></li>
-<li>WS - <a href="http://localhost:9001/ws410/">http://localhost:9001/ws410/</a></li>
+<li>WS - <a href="http://localhost:9001/ws410/">http://localhost:9001/ws410/</a>
+<ul>
 <li>Sample data must be loaded ? Q: How do I load sample data ?</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
 <h3 id="rest-client">REST Client</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ cd /opt/restClient/
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd /opt/restClient/
 restClient $ ll
 total 44280
 -rw-r--r--@ 1 miro  staff   8.4M 17 Aug 20:15 restclient-cli-2.5-jar-with-dependencies.jar
 -rw-r--r--@ 1 miro  staff    13M 17 Aug 20:16 restclient-ui-2.5-jar-with-dependencies.jar
-restClient $ java -jar restclient-ui-2.5-jar-with-dependencies.jar</pre></td></tr></table>
+restClient $ java -jar restclient-ui-2.5-jar-with-dependencies.jar
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>must enter admin/nimda into tool</p>
-
+</div><p>must enter admin/nimda into tool</p>
 <p>Follow <a href="http://localhost:9001/ws410/rest/countries">http://localhost:9001/ws410/rest/countries</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;
 &lt;countries xmlns:ns2=&#34;http://wadl.dev.java.net/2009/02&#34; uri=&#34;http://localhost:9001/ws410/rest/countries&#34;&gt;
 &lt;country isocode=&#34;DE&#34; pk=&#34;8796093055010&#34; uri=&#34;http://localhost:9001/ws410/rest/countries/DE&#34;/&gt;
-&lt;/countries&gt;</pre></td></tr></table>
+&lt;/countries&gt;
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Interesting catalog tool - comparison:</p>
-
+</div><p>Interesting catalog tool - comparison:</p>
 <ul>
 <li><a href="http://localhost:9001/hmc/hybris?wid=MC1x745&amp;prgrequest=true&amp;null">http://localhost:9001/hmc/hybris?wid=MC1x745&amp;prgrequest=true&amp;null</a></li>
 </ul>
-
 <h3 id="admin-cockpit">Admin Cockpit</h3>
-
 <p><a href="http://localhost:9001/admincockpit/index.zul">http://localhost:9001/admincockpit/index.zul</a></p>
-
 <h3 id="virtual-jdbc">Virtual JDBC</h3>
-
 <p>Available at <a href="http://localhost:9001/virtualjdbc/">http://localhost:9001/virtualjdbc/</a></p>
-
 <p>This extension offers the functionality to connect to a database using a virtual JDBC connection.
 This allows to create reports in real-time on live data without risks of corrupting data.</p>
-
 <p>To connect via HTTP the jdbc url looks like:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">[jdbc:hybris:sql:http://localhost:9001/virtualjdbc/service]()
-[jdbc:hybris:flexiblesearch:http://localhost:9001/virtualjdbc/service;tenant=master]()</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[jdbc:hybris:sql:http://localhost:9001/virtualjdbc/service]()
+[jdbc:hybris:flexiblesearch:http://localhost:9001/virtualjdbc/service;tenant=master]()
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Detailed documentation can be found at <a href="https://wiki.hybris.com/x/waEFAw">virtualjdbc Extension</a>.</p>
+</div><p>Detailed documentation can be found at <a href="https://wiki.hybris.com/x/waEFAw">virtualjdbc Extension</a>.</p>
 
     </div>
 

@@ -26,7 +26,7 @@ For more on that plugin see:
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2013-02-23-perf-quicklook-lion/" />
@@ -55,16 +55,13 @@ For more on that plugin see:
 It turned out that on of the QuickLook plugins, installed originally way back in Leopard and brought ahead with TimeMachine restores could have been the reason: the QLStephen.
 For more on that plugin see:
  http://whomwah.github.com/qlstephen/ https://github.com/whomwah/qlstephen  To remove the plugin, go to ~/Library/QuickLook and delete the file (it is the bundle) QLStephen.">
-
-
 <meta itemprop="datePublished" content="2013-02-23T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2013-02-23T11:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="1149">
 
 
 
-<meta itemprop="keywords" content="osx," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="osx," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Performance issues with Quicklook in OS-X Lion"/>
 <meta name="twitter:description" content="I have been experiencing issues with Quicklook (press Space on file in Finder or Pathfinder) for some time: it took several second, sometimes 10-15 to show content of simple 1K large property file.
 It turned out that on of the QuickLook plugins, installed originally way back in Leopard and brought ahead with TimeMachine restores could have been the reason: the QLStephen.
@@ -152,40 +149,30 @@ For more on that plugin see:
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>I have been experiencing issues with Quicklook (press Space on file in Finder or Pathfinder) for some time:
 it took several second, sometimes 10-15 to show content of simple 1K large property file.</p>
-
 <p>It turned out that on of the QuickLook plugins, installed originally way back in Leopard and brought ahead with TimeMachine restores could have been the reason: the QLStephen.</p>
-
 <p>For more on that plugin see:</p>
-
 <ul>
 <li><a href="http://whomwah.github.com/qlstephen/">http://whomwah.github.com/qlstephen/</a></li>
 <li><a href="https://github.com/whomwah/qlstephen">https://github.com/whomwah/qlstephen</a></li>
 </ul>
-
 <p>To remove the plugin, go to <code>~/Library/QuickLook</code> and delete the file (it is the bundle) <code>QLStephen.qlgenerator</code>.</p>
-
 <p>Optionally, you may want to restart the QuickLook daemon:</p>
-
 <blockquote>
 <p>qlmanage -r</p>
 </blockquote>
-
 <p>See man <code>qlmanage</code> or <code>qlmanage --help</code> for more details</p>
-
 <p>After doing that, the response time on property files, XML and others went down to about 1 sec, which is more like one would expect on quad-core 8GB system</p>
-
 <p>Btw, the plugin system and the whole UTI seems to be approaching messyness of Registry.</p>
-
 <p>Here is what I see when I run the</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">  1
+<pre class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -377,9 +364,9 @@ it took several second, sometimes 10-15 to show content of simple 1K large prope
 </span><span class="lnt">190
 </span><span class="lnt">191
 </span><span class="lnt">192
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><span class="nx">qlmanage</span> <span class="o">-</span><span class="nx">m</span> <span class="nx">plugins</span> <span class="p">|</span> <span class="nx">sort</span> <span class="p">|</span> <span class="nx">pbcopy</span>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="nx">qlmanage</span> <span class="o">-</span><span class="nx">m</span> <span class="nx">plugins</span> <span class="p">|</span> <span class="nx">sort</span> <span class="p">|</span> <span class="nx">pbcopy</span>
   
   
  
@@ -570,7 +557,8 @@ it took several second, sometimes 10-15 to show content of simple 1K large prope
   <span class="nx">public</span><span class="p">.</span><span class="nx">x509</span><span class="o">-</span><span class="nx">printable</span><span class="o">-</span><span class="nx">encoded</span><span class="o">-</span><span class="nx">archive</span> <span class="o">-</span><span class="p">&gt;</span> <span class="o">/</span><span class="nx">System</span><span class="o">/</span><span class="nx">Library</span><span class="o">/</span><span class="nx">QuickLook</span><span class="o">/</span><span class="nx">Security</span><span class="p">.</span><span class="nf">qlgenerator</span> <span class="p">(</span><span class="mf">55022.6</span><span class="p">)</span>
   <span class="nx">public</span><span class="p">.</span><span class="nx">xhtml</span> <span class="o">-</span><span class="p">&gt;</span> <span class="o">/</span><span class="nx">System</span><span class="o">/</span><span class="nx">Library</span><span class="o">/</span><span class="nx">QuickLook</span><span class="o">/</span><span class="nx">Web</span><span class="p">.</span><span class="nf">qlgenerator</span> <span class="p">(</span><span class="mf">500.18</span><span class="p">)</span>
   <span class="nx">public</span><span class="p">.</span><span class="nx">xml</span> <span class="o">-</span><span class="p">&gt;</span> <span class="o">/</span><span class="nx">Users</span><span class="o">/</span><span class="nx">miro</span><span class="o">/</span><span class="nx">Library</span><span class="o">/</span><span class="nx">QuickLook</span><span class="o">/</span><span class="nx">QLColorCode</span><span class="p">.</span><span class="nf">qlgenerator</span> <span class="p">(</span><span class="mf">2.0.1</span><span class="p">)</span>
-  <span class="nx">public</span><span class="p">.</span><span class="nx">zip</span><span class="o">-</span><span class="nx">archive</span> <span class="o">-</span><span class="p">&gt;</span> <span class="o">/</span><span class="nx">Users</span><span class="o">/</span><span class="nx">miro</span><span class="o">/</span><span class="nx">Library</span><span class="o">/</span><span class="nx">QuickLook</span><span class="o">/</span><span class="nx">BetterZipQL</span><span class="p">.</span><span class="nf">qlgenerator</span> <span class="p">(</span><span class="mf">1.2</span><span class="p">)</span></pre></td></tr></table>
+  <span class="nx">public</span><span class="p">.</span><span class="nx">zip</span><span class="o">-</span><span class="nx">archive</span> <span class="o">-</span><span class="p">&gt;</span> <span class="o">/</span><span class="nx">Users</span><span class="o">/</span><span class="nx">miro</span><span class="o">/</span><span class="nx">Library</span><span class="o">/</span><span class="nx">QuickLook</span><span class="o">/</span><span class="nx">BetterZipQL</span><span class="p">.</span><span class="nf">qlgenerator</span> <span class="p">(</span><span class="mf">1.2</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>

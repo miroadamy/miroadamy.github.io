@@ -25,7 +25,7 @@ Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2012-05-29-admin-tool-goodies/" />
@@ -52,16 +52,13 @@ Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-
 <meta itemprop="description" content="tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &hellip; again.
 Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
 1 2 3 4 5 6 7 8 9 10  547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups.">
-
-
 <meta itemprop="datePublished" content="2012-05-29T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2012-05-29T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="1597">
+<meta itemprop="wordCount" content="1596">
 
 
 
-<meta itemprop="keywords" content="commandline,osx," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="commandline,osx," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Admin tool goodies"/>
 <meta name="twitter:description" content="tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &hellip; again.
 Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
@@ -139,7 +136,7 @@ Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-
         <div class="post-category">
             <a href="/categories/tools/"> tools </a>
             </div>
-          <span class="more-meta"> 1597 words </span>
+          <span class="more-meta"> 1596 words </span>
           <span class="more-meta"> 8 mins read </span>
         
       </div>
@@ -149,28 +146,25 @@ Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#tmutil">tmutil</a></li>
-<li><a href="#diff">Diff</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#tmutil">tmutil</a>
+      <ul>
+        <li><a href="#here-is-why">here is why:</a></li>
+      </ul>
+    </li>
+    <li><a href="#diff">Diff</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h2 id="tmutil">tmutil</h2>
-
+      <h2 id="tmutil">tmutil</h2>
 <p>The tmutil - everything to know about Time machine backups.
 For example, why is the MBP backing up 4.3 GB &hellip; again.</p>
-
 <p>Lion only. See <a href="http://www.macgurulounge.com/see-which-files-time-machine-backed-up/">http://www.macgurulounge.com/see-which-files-time-machine-backed-up/</a> for Snow Leopard and before.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -180,9 +174,9 @@ For example, why is the MBP backing up 4.3 GB &hellip; again.</p>
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">547  tmutil
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">547  tmutil
 548  tmutil help
 549  tmutil help listbackups
 550  tmutil listbackups
@@ -191,13 +185,13 @@ For example, why is the MBP backing up 4.3 GB &hellip; again.</p>
 553  tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/
 554  tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-130159/
 555  tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449
-556  tmutil compare /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449</pre></td></tr></table>
+556  tmutil compare /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>### here is why:</p>
+</div><h3 id="here-is-why">here is why:</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">  1
+<pre class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -398,9 +392,9 @@ For example, why is the MBP backing up 4.3 GB &hellip; again.</p>
 </span><span class="lnt">199
 </span><span class="lnt">200
 </span><span class="lnt">201
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"> ~ $ tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-13
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">~ $ tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-13
 2012-05-27-130159/ 2012-05-27-131532/
 ~ $ tmutil compare /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449
 ! 5.4K    (mtime)               /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449/Macintosh HD/Library/Application Support/CrashPlan/conf/service.model
@@ -600,15 +594,14 @@ For example, why is the MBP backing up 4.3 GB &hellip; again.</p>
 -------------------------------------
 Added:         475.1M
 Removed:       30.1M
-Changed:       1.2G</pre></td></tr></table>
+Changed:       1.2G
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="diff">Diff</h2>
-
+</div><h2 id="diff">Diff</h2>
 <p>Which libs are in that Ant81 and not in Ant71 ?</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -639,9 +632,9 @@ Changed:       1.2G</pre></td></tr></table>
 </span><span class="lnt">29
 </span><span class="lnt">30
 </span><span class="lnt">31
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">[tkuser@jenkins2 opt]$ diff -q apache-ant-1.7.1/lib apache-ant-1.8.2/lib | grep jar | more
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@jenkins2 opt]$ diff -q apache-ant-1.7.1/lib apache-ant-1.8.2/lib | grep jar | more
 Files apache-ant-1.7.1/lib/ant-antlr.jar and apache-ant-1.8.2/lib/ant-antlr.jar differ
 Files apache-ant-1.7.1/lib/ant-apache-bcel.jar and apache-ant-1.8.2/lib/ant-apache-bcel.jar differ
 Files apache-ant-1.7.1/lib/ant-apache-bsf.jar and apache-ant-1.8.2/lib/ant-apache-bsf.jar differ
@@ -671,7 +664,8 @@ Only in apache-ant-1.7.1/lib: ant-trax.jar
 Only in apache-ant-1.7.1/lib: ant-weblogic.jar
 Only in apache-ant-1.7.1/lib: jsch-0.1.44.jar
 Only in apache-ant-1.7.1/lib: xercesImpl.jar
-Only in apache-ant-1.7.1/lib: xml-apis.jar</pre></td></tr></table>
+Only in apache-ant-1.7.1/lib: xml-apis.jar
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>

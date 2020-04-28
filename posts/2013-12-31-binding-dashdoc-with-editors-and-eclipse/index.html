@@ -27,7 +27,7 @@ Eclipse There is opensource plugin for it at https://github." /><meta name="keyw
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/" />
@@ -58,16 +58,13 @@ Sublime Text This is easy - there is DashDoc plugin - https://sublime.wbond.net/
 The plugin is OS-X specific, because the DashDoc is
  Start Package Control (Cmd-Shift-P) select Install Package (type Install) select DashDoc  The Ctrl-H does the search
 Eclipse There is opensource plugin for it at https://github.">
-
-
 <meta itemprop="datePublished" content="2013-12-31T00:57:35-05:00" />
 <meta itemprop="dateModified" content="2013-12-31T00:57:35-05:00" />
 <meta itemprop="wordCount" content="263">
 
 
 
-<meta itemprop="keywords" content="osx,java,vim," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="osx,java,vim," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Binding DashDoc with editors and Eclipse"/>
 <meta name="twitter:description" content="If you use DashDoc (see http://kapeli.com/dash), it can be integrated with editor or Eclipse to allow automatically find selected text in Dash documentation sets:
 Sublime Text This is easy - there is DashDoc plugin - https://sublime.wbond.net/packages/DashDoc
@@ -157,80 +154,61 @@ Eclipse There is opensource plugin for it at https://github."/>
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#sublime-text">Sublime Text</a></li>
-<li><a href="#eclipse">Eclipse</a></li>
-<li><a href="#vim">Vim</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#sublime-text">Sublime Text</a></li>
+        <li><a href="#eclipse">Eclipse</a></li>
+        <li><a href="#vim">Vim</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>If you use DashDoc (see <a href="http://kapeli.com/dash">http://kapeli.com/dash</a>), it can be integrated with editor or Eclipse to allow automatically find selected text in Dash documentation sets:</p>
-
+      <p>If you use DashDoc (see <a href="http://kapeli.com/dash),">http://kapeli.com/dash),</a> it can be integrated with editor or Eclipse to allow automatically find selected text in Dash documentation sets:</p>
 <h3 id="sublime-text">Sublime Text</h3>
-
-<p>This is easy - there is DashDoc plugin - <a href="https://sublime.wbond.net/packages/DashDoc">https://sublime.wbond.net/packages/DashDoc</a><br />
+<p>This is easy - there is DashDoc plugin - <a href="https://sublime.wbond.net/packages/DashDoc">https://sublime.wbond.net/packages/DashDoc</a><br>
 The plugin is OS-X specific, because the DashDoc is</p>
-
 <ul>
 <li>Start Package Control (Cmd-Shift-P)</li>
 <li>select Install Package (type Install)</li>
 <li>select DashDoc</li>
 </ul>
-
 <p>The Ctrl-H does the search</p>
-
 <h3 id="eclipse">Eclipse</h3>
-
 <p>There is opensource plugin for it at <a href="https://github.com/justinkb/DashLookup#readme">https://github.com/justinkb/DashLookup#readme</a>.</p>
-
 <ul>
 <li>clone the repo - <a href="https://github.com/justinkb/DashLookup#readme">https://github.com/justinkb/DashLookup#readme</a></li>
 <li>Open Eclipse and Import project to Workspace</li>
 <li>Build it</li>
 <li>Select &lsquo;Export deployable plugin and Fragments&rsquo; and install to host:</li>
 </ul>
-
-<p><img src="/images/binding-dashdoc-with-editors-and-eclipse_5.png" alt="" /></p>
-
-<p><img src="/images/binding-dashdoc-with-editors-and-eclipse_4.png" alt="" /></p>
-
-<p><img src="/images/binding-dashdoc-with-editors-and-eclipse_3.png" alt="" /></p>
-
-<p><img src="/images/binding-dashdoc-with-editors-and-eclipse_2.png" alt="" /></p>
-
+<p><img src="/images/binding-dashdoc-with-editors-and-eclipse_5.png" alt=""></p>
+<p><img src="/images/binding-dashdoc-with-editors-and-eclipse_4.png" alt=""></p>
+<p><img src="/images/binding-dashdoc-with-editors-and-eclipse_3.png" alt=""></p>
+<p><img src="/images/binding-dashdoc-with-editors-and-eclipse_2.png" alt=""></p>
 <p>Bind the command DashLookup (Preferences -&gt; General -&gt; Keys) to keys of your choice</p>
-
 <h3 id="vim">Vim</h3>
-
 <p>See <a href="https://github.com/rizzatti/dash.vim#readme">https://github.com/rizzatti/dash.vim#readme</a></p>
-
 <p>I am using Pathogen, so</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">cd ~/.vim/bundle
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd ~/.vim/bundle
 git clone https://github.com/rizzatti/funcoo.vim.git
-git clone https://github.com/rizzatti/dash.vim.git</pre></td></tr></table>
+git clone https://github.com/rizzatti/dash.vim.git
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The submodule file needs to be edited with these locations:</p>
+</div><p>The submodule file needs to be edited with these locations:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -256,9 +234,9 @@ git clone https://github.com/rizzatti/dash.vim.git</pre></td></tr></table>
 </span><span class="lnt">24
 </span><span class="lnt">25
 </span><span class="lnt">26
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">.vim $ cat .gitmodules | pbcopy
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">.vim $ cat .gitmodules | pbcopy
  
 [submodule &#34;bundle/vim-fugitive&#34;]
 	path = bundle/vim-fugitive
@@ -283,23 +261,22 @@ git clone https://github.com/rizzatti/dash.vim.git</pre></td></tr></table>
 [submodule &#34;bundle/dash.vim&#34;]
 	path = bundle/dash.vim
 	url = https://github.com/rizzatti/dash.vim.git
-	ignore = untracked</pre></td></tr></table>
+	ignore = untracked
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The new command is :Dash and the mapping to search word under cursor is</p>
+</div><p>The new command is :Dash and the mapping to search word under cursor is</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">:nmap &lt;silent&gt; &lt;leader&gt;d &lt;Plug&gt;DashSearch
-:nmap &lt;silent&gt; &lt;leader&gt;D &lt;Plug&gt;DashGlobalSearch</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">:nmap &lt;silent&gt; &lt;leader&gt;d &lt;Plug&gt;DashSearch
+:nmap &lt;silent&gt; &lt;leader&gt;D &lt;Plug&gt;DashGlobalSearch
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><img src="/images/binding-dashdoc-with-editors-and-eclipse_1.png" alt="" /></p>
-
-<p>The leader is &lsquo;\&rsquo;</p>
+</div><p><img src="/images/binding-dashdoc-with-editors-and-eclipse_1.png" alt=""></p>
+<p>The leader is &lsquo;'</p>
 
     </div>
 

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -44,12 +44,9 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-
-<meta property="og:updated_time" content="2020-02-18T00:36:40+00:00" />
+<meta property="og:updated_time" content="2020-04-28T19:35:50+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
 <meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
 
@@ -118,6 +115,32 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-10-14-java6required/">Dealing with &#39;Java Runtime SE 6&#39; required error</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-10-14 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 177 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      When trying to start DBeaver (http://dbeaver.jkiss.org) I got this
+I do have Java 7 installed:
+1 2 3 4 5 6 7 8  ➜ Contents java -version java version &#34;1.7.0_55&#34; Java(TM) SE Runtime Environment (build 1.7.0_55-b13) Java HotSpot(TM) 64-Bit Server VM (build 24.55-b03, mixed mode) ➜ Contents which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java   which should be a superset. But it is not.
+Solution Oracle seems to screw up the PLIST capabilities in JAva7 install
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-10-14-java6required/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2014-10-03-keepas-node/">Keepass-Node install</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2014-10-03 </span>
@@ -182,7 +205,7 @@
 Go here for details:
 Add share In VirtualBox, Device add transient shared folder:
 This one has made available path /Users/Shared/ATG-11 under the name ATG-11
-Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x.
+Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x. 1 root 272 Sep 12 16:02 ATG11-docs -rw-rw-r--.
     </div>
     <div class="read-more">
       <a href="/posts/2014-09-23-shared-folder/" class="read-more-link">Read more...</a>
@@ -198,7 +221,7 @@ Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /me
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 501 words </span>
+        <span class="more-meta"> 497 words </span>
         <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
@@ -212,33 +235,6 @@ You can however:
     </div>
     <div class="read-more">
       <a href="/posts/2014-09-22-gitbit/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-16-logstash-error/">logstash - known error</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-16 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 326 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
-Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE
-What should work:
-1 2 3 4 5  grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] }   What needs to be done instead
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33  You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-09-16-logstash-error/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -44,12 +44,9 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-
-<meta property="og:updated_time" content="2020-02-18T00:36:40+00:00" />
+<meta property="og:updated_time" content="2020-04-28T19:35:50+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
 <meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
 
@@ -118,13 +115,38 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2019-11-23-gitlab-hugo/">Building Hugo as well on GitLab pages</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-11-23 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 573 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Parallel building challenges Unlike Github, Gitlab considers Hugo blogs first class citizens and does not impose any restrictions on repo naming.
+I had 3 challenges to overcome related to co-existence of GH and GL versions:
+ I need to use same repo for both GH and GL the submodule link for public does not work on GL the site root is different - I have no custom domain forward for GitLab  Using same repo To separate the GH and GL, I have added 2 remotes to repo and special branch gitlab-pages.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2019-11-23-gitlab-hugo/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2019-11-22-hugo-setup/">Current Hugo setup on Github Pages</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2019-11-22 </span>
       <div class="post-category">
           <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 1550 words </span>
+        <span class="more-meta"> 1553 words </span>
         <span class="more-meta"> 8 mins read </span>
     </div>
   </header>
@@ -174,17 +196,14 @@ The Githup pages repo contains generated static site, with index.
       <div class="post-category">
           <a href="/categories/life/"> life </a>
           </div>
-        <span class="more-meta"> 40 words </span>
+        <span class="more-meta"> 7 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      “The older you get, the more quiet you become.
-Life humbles you so deeply as you age. You realize how much nonsense you’ve wasted time on.”
-&mdash; Vala Afshar (@ValaAfshar) November 14, 2019 
-Adding screenshot in case the account disappears
+      Adding screenshot in case the account disappears
     </div>
     <div class="read-more">
       <a href="/posts/2019-11-14-totd/" class="read-more-link">Read more...</a>
@@ -215,30 +234,6 @@ The Video URLs Channel 1  https://www.
     </div>
     <div class="read-more">
       <a href="/posts/2019-11-07-all-day-devops/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-10-03-aws-inspection/">AWS Inspection</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-10-03 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> DevOps </a>
-          </div>
-        <span class="more-meta"> 507 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Bunch of one-liners for AWS .. so that I find them faster next time
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; + .InstanceId + &#34; : &#34; + .KeyName + &#34; =&gt; &#34; + .PublicIpAddress + &#34; | &#34; + .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; + $tt.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2019-10-03-aws-inspection/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

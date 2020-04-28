@@ -20,14 +20,15 @@
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
 1  touch zz zZ   creates two files, both &amp;ldquo;inside VM&amp;rdquo; ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
-The command" /><meta name="keywords" content="blog, Miro" />
+The command
+1 2  cd ~/development/ATG/platform-edc touch zz zZ   will create just single file." /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/" />
@@ -47,7 +48,8 @@ The command" /><meta name="keywords" content="blog, Miro" />
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
 1  touch zz zZ   creates two files, both &ldquo;inside VM&rdquo; ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
-The command" />
+The command
+1 2  cd ~/development/ATG/platform-edc touch zz zZ   will create just single file." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/" />
 <meta property="article:published_time" content="2013-09-16T11:22:48+08:00" />
@@ -57,23 +59,22 @@ The command" />
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
 1  touch zz zZ   creates two files, both &ldquo;inside VM&rdquo; ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
-The command">
-
-
+The command
+1 2  cd ~/development/ATG/platform-edc touch zz zZ   will create just single file.">
 <meta itemprop="datePublished" content="2013-09-16T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2013-09-16T11:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="104">
 
 
 
-<meta itemprop="keywords" content="osx,virtualbox," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="osx,virtualbox," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Case sensitivity and VirtualBox shared folder"/>
 <meta name="twitter:description" content="Case sensitivity and VirtualBox shared folder Weird but true behaviour:
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
 1  touch zz zZ   creates two files, both &ldquo;inside VM&rdquo; ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
-The command"/>
+The command
+1 2  cd ~/development/ATG/platform-edc touch zz zZ   will create just single file."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -156,46 +157,35 @@ The command"/>
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#case-sensitivity-and-virtualbox-shared-folder">Case sensitivity and VirtualBox shared folder</a></li>
-</ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h1 id="case-sensitivity-and-virtualbox-shared-folder">Case sensitivity and VirtualBox shared folder</h1>
-
+      <h1 id="case-sensitivity-and-virtualbox-shared-folder">Case sensitivity and VirtualBox shared folder</h1>
 <p>Weird but true behaviour:</p>
-
 <p>I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">touch zz zZ</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">touch zz zZ
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>creates two files, both &ldquo;inside VM&rdquo; <code>~/development/ATG/platform-edc</code> as well as in OS-X.</p>
-
+</div><p>creates two files, both &ldquo;inside VM&rdquo; <code>~/development/ATG/platform-edc</code> as well as in OS-X.</p>
 <p>If the VM is suspended and resumed, it looses the case sensitivity inside the VM.</p>
-
 <p>The command</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">cd ~/development/ATG/platform-edc
-touch zz zZ</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd ~/development/ATG/platform-edc
+touch zz zZ
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>will create just single file. Outside the VM, in OS-X file system is still case sensitive.</p>
-
+</div><p>will create just single file. Outside the VM, in OS-X file system is still case sensitive.</p>
 <p>It looks as if the wake-up remounted the volumen and normal HFS+ instead of HFSX</p>
 
     </div>

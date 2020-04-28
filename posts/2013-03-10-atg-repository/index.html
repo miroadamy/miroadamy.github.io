@@ -26,7 +26,7 @@ The item definition:
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2013-03-10-atg-repository/" />
@@ -55,16 +55,13 @@ The item definition:
 =&gt; (let&rsquo;s not start discussion why this is not part of the pricelists).
 The item definition:
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  &lt;item-descriptor name=&#34;discountTypePriceList&#34; display-name=&#34;Discount Type Price List&#34; item-cache-size=&#34;1000&#34; query-cache-size=&#34;1000&#34; display-property=&#34;discountType&#34;&gt; &lt;table name=&#34;CPLXB2B_DISCOUNT_PRICE_LIST&#34; type=&#34;primary&#34; id-column-name=&#34;DISCOUNT_PRICELIST_ID&#34; &gt; &lt;property name=&#34;discountType&#34; data-type=&#34;enumerated&#34; column-name=&#34;DISCOUNT_TYPE&#34; default=&#34;Base&#34; queryable=&#34;true&#34; category=&#34;Discount Price List&#34; display-name=&#34;Discount Type&#34; &gt; &lt;attribute name=&#34;useCodeForValue&#34; value=&#34;false&#34;/&gt; &lt;option value=&#34;Base&#34; code=&#34;0&#34;/&gt; &lt;option value=&#34;Silver&#34; code=&#34;1&#34;/&gt; &lt;option value=&#34;Gold&#34; code=&#34;2&#34;/&gt; &lt;option value=&#34;Platinum&#34; code=&#34;3&#34;/&gt; &lt;/property&gt; &lt;property name=&#34;priceListId&#34; column-name=&#34;PRICE_LIST_ID&#34; repository=&#34;/atg/commerce/pricing/priceLists/PriceLists&#34; item-type=&#34;priceList&#34; display-name=&#34;List Price List&#34; required=&#34;true&#34; category=&#34;Discount Price List&#34;/&gt; &lt;property name=&#34;salePriceListId&#34; column-name=&#34;SALE_PRICE_LIST_ID&#34; repository=&#34;/atg/commerce/pricing/priceLists/PriceLists&#34; item-type=&#34;priceList&#34; display-name=&#34;Sale Price List&#34; category=&#34;Discount Price List&#34;/&gt; &lt;property name=&#34;startDate&#34; column-name=&#34;START_DATE&#34; data-type=&#34;timestamp&#34; display-name=&#34;Start Date&#34; category=&#34;Discount Price List&#34;/&gt; &lt;property name=&#34;endDate&#34; column-name=&#34;END_DATE&#34; data-type=&#34;timestamp&#34; display-name=&#34;End Date&#34; category=&#34;Discount Price List&#34;/&gt; &lt;/table&gt; &lt;/item-descriptor&gt;   When I tried deployment with this, I got error">
-
-
 <meta itemprop="datePublished" content="2013-03-10T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2013-03-10T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="681">
+<meta itemprop="wordCount" content="679">
 
 
 
-<meta itemprop="keywords" content="atg,ecommerce," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="atg,ecommerce," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ATG Repository item linking and versioned repos"/>
 <meta name="twitter:description" content="We have versioned repository ClientProvinceRepository that defines discount types based on account category pricelist and accounts - discountTypePriceList
 =&gt; (let&rsquo;s not start discussion why this is not part of the pricelists).
@@ -143,7 +140,7 @@ The item definition:
         <div class="post-category">
             <a href="/categories/programming/"> programming </a>
             </div>
-          <span class="more-meta"> 681 words </span>
+          <span class="more-meta"> 679 words </span>
           <span class="more-meta"> 4 mins read </span>
         
       </div>
@@ -153,30 +150,24 @@ The item definition:
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#questions">Questions</a></li>
-<li><a href="#note">Note</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#questions">Questions</a></li>
+        <li><a href="#note">Note</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>We have versioned repository ClientProvinceRepository that defines discount types based on account category pricelist and accounts - discountTypePriceList</p>
-
+      <p>We have versioned repository ClientProvinceRepository that defines discount types based on account category pricelist and accounts - discountTypePriceList</p>
 <p>=&gt; (let&rsquo;s not start discussion why this is not part of the pricelists).</p>
-
 <p>The item definition:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -192,9 +183,9 @@ The item definition:
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">&lt;item-descriptor name=&#34;discountTypePriceList&#34; display-name=&#34;Discount Type Price List&#34; item-cache-size=&#34;1000&#34; query-cache-size=&#34;1000&#34; display-property=&#34;discountType&#34;&gt;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;item-descriptor name=&#34;discountTypePriceList&#34; display-name=&#34;Discount Type Price List&#34; item-cache-size=&#34;1000&#34; query-cache-size=&#34;1000&#34; display-property=&#34;discountType&#34;&gt;
     &lt;table name=&#34;CPLXB2B_DISCOUNT_PRICE_LIST&#34; type=&#34;primary&#34; id-column-name=&#34;DISCOUNT_PRICELIST_ID&#34; &gt;
         &lt;property name=&#34;discountType&#34; data-type=&#34;enumerated&#34; column-name=&#34;DISCOUNT_TYPE&#34; default=&#34;Base&#34; queryable=&#34;true&#34; category=&#34;Discount Price List&#34; display-name=&#34;Discount Type&#34; &gt;
               &lt;attribute name=&#34;useCodeForValue&#34; value=&#34;false&#34;/&gt;
@@ -209,13 +200,13 @@ The item definition:
         &lt;property name=&#34;endDate&#34; column-name=&#34;END_DATE&#34; data-type=&#34;timestamp&#34; display-name=&#34;End Date&#34; category=&#34;Discount Price List&#34;/&gt;
     &lt;/table&gt;
      
-&lt;/item-descriptor&gt;</pre></td></tr></table>
+&lt;/item-descriptor&gt;
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>When I tried deployment with this, I got error</p>
+</div><p>When I tried deployment with this, I got error</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -226,9 +217,9 @@ The item definition:
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">13:39:28,476 INFO  [DeploymentManager] The property named priceListId in the /client/b2b/commerce/province/repository/clientProvinceRepository_production repository has a reference to another repository /atg/commerce/pricing/priceLists/PriceLists. Be sure that the foreign property reference is configured correctly in the destination repository. The reference needs to point to the mapped destination repository and not the repository that is mapped in the source.
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">13:39:28,476 INFO  [DeploymentManager] The property named priceListId in the /client/b2b/commerce/province/repository/clientProvinceRepository_production repository has a reference to another repository /atg/commerce/pricing/priceLists/PriceLists. Be sure that the foreign property reference is configured correctly in the destination repository. The reference needs to point to the mapped destination repository and not the repository that is mapped in the source.
 13:39:28,478 ERROR [DeploymentManager]
 atg.repository.RepositoryException: A repository misconfiguration has been detected. The property named priceListId in the /client/b2b/commerce/province/repository/clientProvinceRepository_production destination repository has a reference to source repository /atg/commerce/pricing/priceLists/PriceLists. This property has a reference to a foreign repository which should be configured to a destination repository and not a source repository.
         at atg.deployment.repository.ReferenceItemGenerator.generateDummyItems(ReferenceItemGenerator.java:254)
@@ -238,15 +229,14 @@ atg.repository.RepositoryException: A repository misconfiguration has been detec
         at atg.deployment.repository.ReferenceItemGenerator.generateDummyItems(ReferenceItemGenerator.java:254)
         at atg.deployment.repository.RepositoryWorkerThread.preDeploymentPhase(RepositoryWorkerThread.java:536)
         at atg.deployment.DeploymentWorkerThread.run(DeploymentWorkerThread.java:310)
- message = An error occurred during the pre-deployment phase time = 2013-03-09  atg.deployment.DeploymentFailure@30b36590</pre></td></tr></table>
+ message = An error occurred during the pre-deployment phase time = 2013-03-09  atg.deployment.DeploymentFailure@30b36590
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>What this means (in my interpretation) is that in MGMT node the <code>/atg/commerce/pricing/priceLists/PriceLists</code> is actually source repo (versioned), and the destination is <code>/atg/commerce/pricing/priceLists/PriceLists_production</code>.</p>
-
+</div><p>What this means (in my interpretation) is that in MGMT node the <code>/atg/commerce/pricing/priceLists/PriceLists</code> is actually source repo (versioned), and the destination is <code>/atg/commerce/pricing/priceLists/PriceLists_production</code>.</p>
 <p>I added the following to the MGMT configuration - replaced the item descriptor with references to non-versioned repository <code>/client-ca/config/client/b2b/commerce/province/repository/clientProvinceRepository.xml</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -262,9 +252,9 @@ atg.repository.RepositoryException: A repository misconfiguration has been detec
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">&lt;item-descriptor name=&#34;discountTypePriceList&#34; display-name=&#34;Discount Type Price List&#34; item-cache-size=&#34;1000&#34; query-cache-size=&#34;1000&#34; display-property=&#34;discountType&#34; xml-combine=&#34;replace&#34;&gt;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;item-descriptor name=&#34;discountTypePriceList&#34; display-name=&#34;Discount Type Price List&#34; item-cache-size=&#34;1000&#34; query-cache-size=&#34;1000&#34; display-property=&#34;discountType&#34; xml-combine=&#34;replace&#34;&gt;
     &lt;table name=&#34;CPLXB2B_DISCOUNT_PRICE_LIST&#34; type=&#34;primary&#34; id-column-name=&#34;DISCOUNT_PRICELIST_ID&#34; &gt;
         &lt;property name=&#34;discountType&#34; data-type=&#34;enumerated&#34; column-name=&#34;DISCOUNT_TYPE&#34; default=&#34;Base&#34; queryable=&#34;true&#34; category=&#34;Discount Price List&#34; display-name=&#34;Discount Type&#34; &gt;
               &lt;attribute name=&#34;useCodeForValue&#34; value=&#34;false&#34;/&gt;
@@ -279,49 +269,46 @@ atg.repository.RepositoryException: A repository misconfiguration has been detec
         &lt;property name=&#34;endDate&#34; column-name=&#34;END_DATE&#34; data-type=&#34;timestamp&#34; display-name=&#34;End Date&#34; category=&#34;Discount Price List&#34;/&gt;
     &lt;/table&gt;
      
-&lt;/item-descriptor&gt;</pre></td></tr></table>
+&lt;/item-descriptor&gt;
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>This allowed the deployement to go through, however, now I see these in log file during deployment:</p>
+</div><p>This allowed the deployement to go through, however, now I see these in log file during deployment:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">19:48:54,966 INFO  [DeploymentManager] The property named priceListId in the /client/b2b/commerce/province/repository/clientProvinceRepository_production repository has a reference to another repository /atg/commerce/pricing/priceLists/PriceLists_production. Be sure that the foreign property reference is configured correctly in the destination repository. The reference needs to point to the mapped destination repository and not the repository that is mapped in the source.
-19:48:54,966 INFO  [DeploymentManager] The property named priceListId in the /client/b2b/commerce/province/repository/clientProvinceRepository_production versioned repository references the unversioned repository  /atg/commerce/pricing/priceLists/PriceLists_production. Verify that all the data in the unversioned repository exists on the target server, otherwise deployments which reference this data will fail.</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">19:48:54,966 INFO  [DeploymentManager] The property named priceListId in the /client/b2b/commerce/province/repository/clientProvinceRepository_production repository has a reference to another repository /atg/commerce/pricing/priceLists/PriceLists_production. Be sure that the foreign property reference is configured correctly in the destination repository. The reference needs to point to the mapped destination repository and not the repository that is mapped in the source.
+19:48:54,966 INFO  [DeploymentManager] The property named priceListId in the /client/b2b/commerce/province/repository/clientProvinceRepository_production versioned repository references the unversioned repository  /atg/commerce/pricing/priceLists/PriceLists_production. Verify that all the data in the unversioned repository exists on the target server, otherwise deployments which reference this data will fail.
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="questions">Questions</h3>
-
+</div><h3 id="questions">Questions</h3>
 <ol>
-<li>How serious is the message ?
-2) Is there better way ?
-3) If yes, what is proper way to deal with this (other than moving the item to pricelists repo ?)</li>
+<li>How serious is the message ?</li>
 </ol>
-
+<ol start="2">
+<li>Is there better way ?</li>
+<li>If yes, what is proper way to deal with this (other than moving the item to pricelists repo ?)</li>
+</ol>
 <h3 id="note">Note</h3>
-
 <p>As Joel pointed out (thanks), I have checked the <code>RepositoryMapper</code> and found that client does not have one.</p>
-
 <p>This is how it is configured in client2:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Users/miro/src/TWC/client2/Management/config/atg/repository/ProductionRepositoryMapper.properties:
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Users/miro/src/TWC/client2/Management/config/atg/repository/ProductionRepositoryMapper.properties:
     1: repositoryMappings+=\
     2  /client2/repository/ContentRepository=/client2/repository/ContentRepository_production,\
-    3  /client2/repository/OperationsRepository=/client2/repository/OperationsRepository_production</pre></td></tr></table>
+    3  /client2/repository/OperationsRepository=/client2/repository/OperationsRepository_production
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>All client has is the OOTB values in this, no custom repos were (ever) added.</p>
-
+</div><p>All client has is the OOTB values in this, no custom repos were (ever) added.</p>
 <p>This guide <a href="http://docs.oracle.com/cd/E23507_01/Platform.20073/ATGBCCAdminGuide/html/s0203configuringforeignrepositoryrefe01.html">http://docs.oracle.com/cd/E23507_01/Platform.20073/ATGBCCAdminGuide/html/s0203configuringforeignrepositoryrefe01.html</a> explains what and hows.</p>
 
     </div>

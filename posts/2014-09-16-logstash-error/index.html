@@ -27,7 +27,7 @@ What should work:
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-09-16-logstash-error/" />
@@ -58,16 +58,13 @@ Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE
 What should work:
 1 2 3 4 5  grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] }   What needs to be done instead
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33  You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches.">
-
-
 <meta itemprop="datePublished" content="2014-09-16T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2014-09-16T11:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="326">
 
 
 
-<meta itemprop="keywords" content="logs,logstash,elk," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="logs,logstash,elk," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="logstash - known error"/>
 <meta name="twitter:description" content="I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
 Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE
@@ -156,36 +153,34 @@ What should work:
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>I have been trying to make this work for about 1.5 hr.
 Looks like there is open bug - <a href="https://logstash.jira.com/browse/LOGSTASH-703">https://logstash.jira.com/browse/LOGSTASH-703</a></p>
-
 <p>Helpful link: <a href="https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE">https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE</a></p>
-
 <p>What should work:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">grok {
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">grok {
    match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;],
    match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;],
    match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;]
-}</pre></td></tr></table>
+}
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>What needs to be done instead</p>
+</div><p>What needs to be done instead</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -218,9 +213,9 @@ Looks like there is open bug - <a href="https://logstash.jira.com/browse/LOGSTAS
 </span><span class="lnt">31
 </span><span class="lnt">32
 </span><span class="lnt">33
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">You _should_ be able to do exactly what you listed at the bottom of your email, 
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">You _should_ be able to do exactly what you listed at the bottom of your email, 
 except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message 
 instead of just parsing the first one that matches. 
 Unfortunately, due to a bug (https://logstash.jira.com/browse/LOGSTASH-703), 
@@ -252,7 +247,8 @@ grok {
  
  
  
-~Greg Mefford</pre></td></tr></table>
+~Greg Mefford
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>

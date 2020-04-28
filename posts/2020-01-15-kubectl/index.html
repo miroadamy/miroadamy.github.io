@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Symptoms I was doing update on Kubernetes cluster I had not touch in a while when I noticed weird behaviour:
- the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5  ➜ ." /><meta name="keywords" content="blog, Miro" />
+ the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5 6  ➜ ." /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2020-01-15-kubectl/" />
@@ -41,27 +41,24 @@
 
 <meta property="og:title" content="Kubernetes client server version mismatch" />
 <meta property="og:description" content="Symptoms I was doing update on Kubernetes cluster I had not touch in a while when I noticed weird behaviour:
- the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5  ➜ ." />
+ the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5 6  ➜ ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2020-01-15-kubectl/" />
 <meta property="article:published_time" content="2020-01-15T21:22:48+08:00" />
 <meta property="article:modified_time" content="2020-01-15T21:22:48+08:00" />
 <meta itemprop="name" content="Kubernetes client server version mismatch">
 <meta itemprop="description" content="Symptoms I was doing update on Kubernetes cluster I had not touch in a while when I noticed weird behaviour:
- the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5  ➜ .">
-
-
+ the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5 6  ➜ .">
 <meta itemprop="datePublished" content="2020-01-15T21:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2020-01-15T21:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="691">
+<meta itemprop="wordCount" content="694">
 
 
 
-<meta itemprop="keywords" content="kubernetes,k8s," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="kubernetes,k8s," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Kubernetes client server version mismatch"/>
 <meta name="twitter:description" content="Symptoms I was doing update on Kubernetes cluster I had not touch in a while when I noticed weird behaviour:
- the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5  ➜ ."/>
+ the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5 6  ➜ ."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -135,7 +132,7 @@
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 691 words </span>
+          <span class="more-meta"> 694 words </span>
           <span class="more-meta"> 4 mins read </span>
         
       </div>
@@ -145,74 +142,67 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#symptoms">Symptoms</a>
-<ul>
-<li><a href="#example">Example</a>
-<ul>
-<li><a href="#the-get-nodes-command-is-incomplete">The get nodes command is incomplete</a></li>
-<li><a href="#the-o-wide-has-no-effect">The <code>-o wide</code> has no effect</a></li>
-<li><a href="#same-behaviour-can-be-seen-for-pods-svc-etc">Same behaviour can be seen for pods, svc etc</a></li>
-<li><a href="#however-the-o-yaml-format-works">However, the <code>-o yaml</code> format works</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#root-cause-and-solution">Root cause and solution</a></li>
-</ul>
+  <ul>
+    <li><a href="#example">Example</a>
+      <ul>
+        <li><a href="#the-get-nodes-command-is-incomplete">The get nodes command is incomplete</a></li>
+        <li><a href="#the--o-wide-has-no-effect">The <code>-o wide</code> has no effect</a></li>
+        <li><a href="#same-behaviour-can-be-seen-for-pods-svc-etc">Same behaviour can be seen for pods, svc etc</a></li>
+        <li><a href="#however-the--o-yaml-format-works">However, the <code>-o yaml</code> format works</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h1 id="symptoms">Symptoms</h1>
-
+      <h1 id="symptoms">Symptoms</h1>
 <p>I was doing update on Kubernetes cluster I had not touch in a while when I noticed weird behaviour:</p>
-
 <ul>
 <li>the output of <code>get</code> command was incomplete</li>
 <li>the <code>-o wide</code> option had no effect on the command output</li>
 </ul>
-
 <h2 id="example">Example</h2>
-
 <h3 id="the-get-nodes-command-is-incomplete">The get nodes command is incomplete</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes
 NAME                                             AGE
 ip-172-20-33-51.ca-central-1.compute.internal    613d
 ip-172-20-55-121.ca-central-1.compute.internal   628d
-ip-172-20-85-9.ca-central-1.compute.internal     558d</pre></td></tr></table>
+ip-172-20-85-9.ca-central-1.compute.internal     558d
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="the-o-wide-has-no-effect">The <code>-o wide</code> has no effect</h3>
+</div><h3 id="the--o-wide-has-no-effect">The <code>-o wide</code> has no effect</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span><span class="lnt">6
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes -o wide
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes -o wide
 NAME                                             AGE
 ip-172-20-33-51.ca-central-1.compute.internal    613d
 ip-172-20-55-121.ca-central-1.compute.internal   628d
-ip-172-20-85-9.ca-central-1.compute.internal     558d</pre></td></tr></table>
+ip-172-20-85-9.ca-central-1.compute.internal     558d
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="same-behaviour-can-be-seen-for-pods-svc-etc">Same behaviour can be seen for pods, svc etc</h3>
+</div><h3 id="same-behaviour-can-be-seen-for-pods-svc-etc">Same behaviour can be seen for pods, svc etc</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -236,9 +226,10 @@ ip-172-20-85-9.ca-central-1.compute.internal     558d</pre></td></tr></table>
 </span><span class="lnt">22
 </span><span class="lnt">23
 </span><span class="lnt">24
-</span></pre></td>
+</span><span class="lnt">25
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get pods | head -3
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get pods | head -3
 NAME                                   AGE
 admin-deployment-c47f669fb-cnf2d       95d
 admin-deployment-c47f669fb-qtldc       95d
@@ -261,13 +252,14 @@ bestbuy      488d
 ➜  .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get deploy -o wide | head -3
 NAME                  AGE
 admin-deployment      503d
-bestbuy-deployment    488d</pre></td></tr></table>
+bestbuy-deployment    488d
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="however-the-o-yaml-format-works">However, the <code>-o yaml</code> format works</h3>
+</div><h3 id="however-the--o-yaml-format-works">However, the <code>-o yaml</code> format works</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -280,9 +272,9 @@ bestbuy-deployment    488d</pre></td></tr></table>
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get pods -o yaml | head -10
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get pods -o yaml | head -10
 apiVersion: v1
 items:
 - apiVersion: v1
@@ -294,30 +286,30 @@ items:
         admin&#39;
     creationTimestamp: &#34;2019-10-12T01:30:33Z&#34;
     ....
-    ....</pre></td></tr></table>
+    ....
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="root-cause-and-solution">Root cause and solution</h1>
-
+</div><h1 id="root-cause-and-solution">Root cause and solution</h1>
 <p>The cluster was built in 2018 using <code>kops</code> and has not been upgraded since. While we were working on other projects, the local <code>kubectl</code> was upgraded few times and and currently the client is newer than server.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span><span class="lnt">4
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat version
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+➜  .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat version
 Client Version: version.Info{Major:&#34;1&#34;, Minor:&#34;16&#34;, GitVersion:&#34;v1.16.3&#34;, GitCommit:&#34;b3cbbae08ec52a7fc73d334838e18d17e8512749&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2019-11-14T04:24:34Z&#34;, GoVersion:&#34;go1.12.13&#34;, Compiler:&#34;gc&#34;, Platform:&#34;darwin/amd64&#34;}
-Server Version: version.Info{Major:&#34;1&#34;, Minor:&#34;9&#34;, GitVersion:&#34;v1.9.3&#34;, GitCommit:&#34;d2835416544f298c919e2ead3be3d0864b52323b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-02-07T11:55:20Z&#34;, GoVersion:&#34;go1.9.2&#34;, Compiler:&#34;gc&#34;, Platform:&#34;linux/amd64&#34;}</pre></td></tr></table>
+Server Version: version.Info{Major:&#34;1&#34;, Minor:&#34;9&#34;, GitVersion:&#34;v1.9.3&#34;, GitCommit:&#34;d2835416544f298c919e2ead3be3d0864b52323b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-02-07T11:55:20Z&#34;, GoVersion:&#34;go1.9.2&#34;, Compiler:&#34;gc&#34;, Platform:&#34;linux/amd64&#34;}
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The newer version of client does not seem to work with older server version - it would look like regression testing was not 100% complete.</p>
-
+</div><p>The newer version of client does not seem to work with older server version - it would look like regression testing was not 100% complete.</p>
 <p>I started to install older versions of the clients, going backwards. The version 1.11.7 from January 2019 works OK</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -325,20 +317,21 @@ Server Version: version.Info{Major:&#34;1&#34;, Minor:&#34;9&#34;, GitVersion:&#
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">VER=v1.11.7
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">VER=v1.11.7
 curl -LO https://storage.googleapis.com/kubernetes-release/release/${VER}/bin/darwin/amd64/kubectl
 mv kubectl kubectl1117
 chmod +x kubectl1117
 
 ➜  .kube git:(master) ✗ ./kubectl1117 --kubeconfig dropship-dev-uat version
 Client Version: version.Info{Major:&#34;1&#34;, Minor:&#34;11&#34;, GitVersion:&#34;v1.11.7&#34;, GitCommit:&#34;65ecaf0671341311ce6aea0edab46ee69f65d59e&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2019-01-24T19:32:00Z&#34;, GoVersion:&#34;go1.10.7&#34;, Compiler:&#34;gc&#34;, Platform:&#34;darwin/amd64&#34;}
-Server Version: version.Info{Major:&#34;1&#34;, Minor:&#34;9&#34;, GitVersion:&#34;v1.9.3&#34;, GitCommit:&#34;d2835416544f298c919e2ead3be3d0864b52323b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-02-07T11:55:20Z&#34;, GoVersion:&#34;go1.9.2&#34;, Compiler:&#34;gc&#34;, Platform:&#34;linux/amd64&#34;}</pre></td></tr></table>
+Server Version: version.Info{Major:&#34;1&#34;, Minor:&#34;9&#34;, GitVersion:&#34;v1.9.3&#34;, GitCommit:&#34;d2835416544f298c919e2ead3be3d0864b52323b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-02-07T11:55:20Z&#34;, GoVersion:&#34;go1.9.2&#34;, Compiler:&#34;gc&#34;, Platform:&#34;linux/amd64&#34;}
+</code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -360,9 +353,9 @@ Server Version: version.Info{Major:&#34;1&#34;, Minor:&#34;9&#34;, GitVersion:&#
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  .kube git:(master) ✗ ./kubectl1117 --kubeconfig dropship-dev-uat get nodes
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  .kube git:(master) ✗ ./kubectl1117 --kubeconfig dropship-dev-uat get nodes
 NAME                                             STATUS    ROLES     AGE       VERSION
 ip-172-20-33-51.ca-central-1.compute.internal    Ready     node      1y        v1.9.3
 ip-172-20-55-121.ca-central-1.compute.internal   Ready     master    1y        v1.9.3
@@ -383,11 +376,10 @@ admin-deployment-c47f669fb-qtldc       1/1       Running            0          9
 ➜  .kube git:(master) ✗ ./kubectl1117 --kubeconfig dropship-dev-uat get pods -o wide | head -3
 NAME                                   READY     STATUS             RESTARTS   AGE       IP             NODE                                            NOMINATED NODE
 admin-deployment-c47f669fb-cnf2d       1/1       Running            0          95d       100.96.5.136   ip-172-20-85-9.ca-central-1.compute.internal    &lt;none&gt;
-admin-deployment-c47f669fb-qtldc       1/1       Running            0          95d       100.96.4.211   ip-172-20-33-51.ca-central-1.compute.internal   &lt;none&gt;</pre></td></tr></table>
+admin-deployment-c47f669fb-qtldc       1/1       Running            0          95d       100.96.4.211   ip-172-20-33-51.ca-central-1.compute.internal   &lt;none&gt;
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The alternative solution (better one) would be upgrading the cluster to latest version of Kubernetes. However, this is much more time consuming and it would require to bring all clusters to same version - DEV, UAT and PROD and would require thorough testing. This quick workaround allowed us to move ahead.</p>
-
+</div><p>The alternative solution (better one) would be upgrading the cluster to latest version of Kubernetes. However, this is much more time consuming and it would require to bring all clusters to same version - DEV, UAT and PROD and would require thorough testing. This quick workaround allowed us to move ahead.</p>
 <p>Writting it down in case somebody else has same issue.</p>
 
     </div>

@@ -6,7 +6,7 @@
     <description>Recent content in editor on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 03 Mar 2013 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 25 Sep 2013 16:12:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/editor/index.xml" rel="self" type="application/rss+xml" />
     
@@ -17,7 +17,7 @@
       <pubDate>Sun, 03 Mar 2013 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2013-03-03-dotvim/</guid>
-      <description>New MacMini 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63  MacMini:~ mediaserver$ mkdir .</description>
+      <description>New MacMini 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63  MacMini:~ mediaserver$ mkdir .vim MacMini:~ mediaserver$ git clone git@github.</description>
     </item>
     
   </channel>

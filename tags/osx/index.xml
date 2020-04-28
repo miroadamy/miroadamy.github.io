@@ -43,8 +43,7 @@ Fix Set the variable JAVA_VM to path to executable command on your system.
       <guid>https://miroadamy.com/posts/2016-03-20-gitinspector/</guid>
       <description>Git project statistic tool Python based, requires Python 2.6+
 Works OOTB on Mac
-Installation  Download TAR from Github unzipped to /opt
-1 2 3 4 5 6 7 8 9  ➜ ll /opt/gitinspector-0.3.2 total 52K -rw-r--r-- 1 miro 999 Jul 29 2013 DESCRIPTION.txt -rw-r--r-- 1 miro 32K Jun 14 2013 LICENSE.txt -rw-r--r-- 1 miro 78 Jul 2 2013 MANIFEST.in -rw-r--r-- 1 miro 681 Jan 13 2014 README.txt drwxr-xr-x 45 miro 1.</description>
+Installation  Download TAR from Github unzipped to /opt  1 2 3 4 5 6 7 8 9  ➜ ll /opt/gitinspector-0.3.2 total 52K -rw-r--r-- 1 miro 999 Jul 29 2013 DESCRIPTION.txt -rw-r--r-- 1 miro 32K Jun 14 2013 LICENSE.txt -rw-r--r-- 1 miro 78 Jul 2 2013 MANIFEST.in -rw-r--r-- 1 miro 681 Jan 13 2014 README.txt drwxr-xr-x 45 miro 1.</description>
     </item>
     
     <item>
@@ -55,7 +54,7 @@ Installation  Download TAR from Github unzipped to /opt
       <guid>https://miroadamy.com/posts/2016-03-16-docker-machine-error-after-upgrade/</guid>
       <description>I had to upgrade docker toolbox on Yosemite to get latest docker-compose additions.
 After installing the new package, I was not able to connect to docker machine:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ ~ docker-machine status Stopped ➜ ~ docker-machine start default Starting &amp;#34;default&amp;#34;... (default) Check network to re-create if needed... (default) Waiting for an IP... Machine &amp;#34;default&amp;#34; was started.</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ ~ docker-machine status Stopped ➜ ~ docker-machine start default Starting &amp;#34;default&amp;#34;... (default) Check network to re-create if needed... (default) Waiting for an IP... Machine &amp;#34;default&amp;#34; was started. Waiting for SSH to be available.</description>
     </item>
     
     <item>
@@ -75,7 +74,7 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
       <pubDate>Tue, 22 Dec 2015 12:57:35 -0500</pubDate>
       
       <guid>https://miroadamy.com/posts/2015-12-22-p4merge/</guid>
-      <description> p4merge as default file compare for PathFinder Set the tool in File Comparison
+      <description>p4merge as default file compare for PathFinder Set the tool in File Comparison
 How to use it  Select 2 files, right click, compare from context menu In dual mode, select one file on each side, compare  </description>
     </item>
     
@@ -85,7 +84,7 @@ How to use it  Select 2 files, right click, compare from context menu In dual mo
       <pubDate>Fri, 11 Dec 2015 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2015-12-11-docker-starting/</guid>
-      <description>After the reboot 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55  docker version Client: Version: 1.9.1 API version: 1.21 Go version: go1.</description>
+      <description>After the reboot 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55  docker version Client: Version: 1.9.1 API version: 1.21 Go version: go1.4.3 Git commit: a34a1d5 Built: Fri Nov 20 17:56:04 UTC 2015 OS/Arch: darwin/amd64 Cannot connect to the Docker daemon.</description>
     </item>
     
     <item>
@@ -118,10 +117,10 @@ Solution Oracle seems to screw up the PLIST capabilities in JAva7 install</descr
       <pubDate>Tue, 22 Apr 2014 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2014-04-22-autorename-screenshots/</guid>
-      <description> Move the location of the screenshots I do not want to have ~/Desktop polluted with files. Thus
+      <description>Move the location of the screenshots I do not want to have ~/Desktop polluted with files. Thus
 1 2 3  mkdir -p ~/Documents/Screenshots defaults write com.apple.screencapture location ~/Documents/Screenshots killall SystemUIServer   Test the screenshot - it does it
 Automator based auto-rename  Create Folder action for ~/Documents/Screenshots  It has 3 actions
-1 2 3  s/Screen Shots // s/./-/g s/ at /_/  </description>
+1 2 3  s/Screen Shots // s/./-/g s/ at /_/   </description>
     </item>
     
     <item>
@@ -154,7 +153,7 @@ Eclipse There is opensource plugin for it at https://github.</description>
       <pubDate>Wed, 25 Sep 2013 16:12:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2013-09-25-sublime-text-macro-timestamp/</guid>
-      <description>Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&amp;#34;%Y-%m-%d_%H:%M:%S&amp;#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see</description>
+      <description>Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&amp;#34;%Y-%m-%d_%H:%M:%S&amp;#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see</description>
     </item>
     
     <item>
@@ -176,7 +175,8 @@ Eclipse There is opensource plugin for it at https://github.</description>
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
 1  touch zz zZ   creates two files, both &amp;ldquo;inside VM&amp;rdquo; ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
-The command</description>
+The command
+1 2  cd ~/development/ATG/platform-edc touch zz zZ   will create just single file.</description>
     </item>
     
     <item>
@@ -185,10 +185,10 @@ The command</description>
       <pubDate>Thu, 05 Sep 2013 21:32:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2013-09-05-mc-color-scheme/</guid>
-      <description> Usable mc color scheme Edit
+      <description>Usable mc color scheme Edit
 ~/.mc/ini
 insert
-1 2  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   </description>
+1 2 3  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   </description>
     </item>
     
     <item>
@@ -265,7 +265,7 @@ Got my new MacBook Pro replacement yesterday. Pretty sweet upgrade: quad-core i7
       <pubDate>Mon, 09 Apr 2012 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2012-04-09-macvim-git/</guid>
-      <description>Add this to .bashrc  export GIT_EDITOR=&amp;lsquo;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &amp;lsquo;
+      <description>Add this to .bashrc  export GIT_EDITOR=&amp;rsquo;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &#39;
  The key is -f, without it git will abort because of empty commit message.</description>
     </item>
     
@@ -278,8 +278,8 @@ Got my new MacBook Pro replacement yesterday. Pretty sweet upgrade: quad-core i7
       <description>Out of the box Quick View (press Space in Finder) behaviour on unregistered files is not very useful: it shows huge Unix icon instead of content of file.
 This is default for files like Makefile or build.gradle
 This plugin makes it go away and show text file for all UTIs that are plain text: http://whomwah.github.com/qlstephen/
-Installation: * open the DMG file * copy QLStephen.qlgenerator to /Users/&amp;lt;&amp;lt;USERNAME&amp;gt;&amp;gt;/Library/QuickLook/QLStephen.qlgenerator
-That&amp;rsquo;s it.
+Installation:
+ open the DMG file copy QLStephen.qlgenerator to /Users/&amp;lt;&amp;lt;USERNAME&amp;gt;&amp;gt;/Library/QuickLook/QLStephen.qlgenerator  That&amp;rsquo;s it.
 Now it looks like this:</description>
     </item>
     
@@ -673,8 +673,7 @@ Next day, after I arrived to the office in the morning, Gabo was already there.<
       <pubDate>Sat, 26 Aug 2006 11:16:10 -0400</pubDate>
       
       <guid>https://miroadamy.com/posts/2006-08-26-road-to-mac-v-feeling-happy/</guid>
-      <description>See also part I, part II and part III and Part IV
-August 13th I have discovered wonderful thing today. I was experimenting with my PocketPC (Toshiba e830) and switched on Bluetooth. Mac discovered the device OK - all I had to do was to follow the wizard Setup Bluetooth device, under Bluetooth menulet (the strange B icon upper right). I have entered the code Mac suggested on PPC and they new about each other.</description>
+      <description>See also part I, part IIand part IIIand Part IVAugust 13th </description>
     </item>
     
     <item>
@@ -683,8 +682,7 @@ August 13th I have discovered wonderful thing today. I was experimenting with my
       <pubDate>Fri, 25 Aug 2006 22:51:19 -0400</pubDate>
       
       <guid>https://miroadamy.com/posts/2006-08-25-14-road-to-mac-iv/</guid>
-      <description>See also part I, part II and part III
-August 10th That Spotlight thing is just freaking fantastic :-). After few days of work, accumulating some files, emails etc, just for fun I typed Gabo’s last name to Command-Space search box. I did not even finish typing and first results were coming in the result list: all emails exchanged with Gabo, saved chats, text documents and as “best hit” Gabo’s contact card.</description>
+      <description>See also part I, part IIand part IIIAugust 10th </description>
     </item>
     
     <item>
@@ -693,9 +691,7 @@ August 10th That Spotlight thing is just freaking fantastic :-). After few days 
       <pubDate>Thu, 24 Aug 2006 21:00:09 -0400</pubDate>
       
       <guid>https://miroadamy.com/posts/2006-08-24-road-to-mac-iii-the-culture-shock/</guid>
-      <description>See also part I and part II
-August 3rd This is my second day with Mac, writing in TextEdit as I have not installed any other editor (yet). Still learning, do not want to install lot of junk before I find out proper ways how to do things. Time to learn how things are in the Brave New World ….
-First surprises and unexpected culture shocks: How do I get around ?</description>
+      <description>See also part Iand part IIAugust 3rd </description>
     </item>
     
     <item>
@@ -704,8 +700,7 @@ First surprises and unexpected culture shocks: How do I get around ?</descriptio
       <pubDate>Wed, 23 Aug 2006 21:22:13 -0400</pubDate>
       
       <guid>https://miroadamy.com/posts/2006-08-23-road-to-mac-ii-ive-got-a-macbook/</guid>
-      <description>See part I
-July 25th - August 2nd After ordering, I received two emails from Apple, confirming the order. It took 3 days until the order finally got shipped from China (where else, of course) on Friday, July 28th and the estimate for delivery was 5-8 business days. I have received the tracking number and was able to track how my Macbook was moving around the globe: starting from Shizou, China on 28th, arriving to USA, Anchorage, Alaska one day later.</description>
+      <description>July 25th - August 2nd </description>
     </item>
     
     <item>
@@ -724,8 +719,7 @@ July 25th - August 2nd After ordering, I received two emails from Apple, confirm
       <pubDate>Tue, 22 Aug 2006 22:53:06 -0400</pubDate>
       
       <guid>https://miroadamy.com/posts/2006-08-22-road-to-mac-i-hard-decisions/</guid>
-      <description>January - July 2006 This is the story of a journey travelled quite often these days. It describes discoveries, joys and frustrations of one long time Windows user learning how to use Mac OS-X. Many have done this before, many have blogged about it.
-The reason why I am writing this down is mostly to remember, and as well because I can. One of the assumes uses of the new MacBook was creative writing so I guess I am trying fulfill the promise to myself.</description>
+      <description>January - July 2006 </description>
     </item>
     
   </channel>

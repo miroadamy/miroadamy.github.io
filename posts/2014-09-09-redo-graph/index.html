@@ -27,7 +27,7 @@ Run:
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-09-09-redo-graph/" />
@@ -58,16 +58,13 @@ Run:
 To /opt/diagram
 Run:
  diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training">
-
-
 <meta itemprop="datePublished" content="2014-09-09T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2014-09-09T11:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="386">
 
 
 
-<meta itemprop="keywords" content="commandline,plaintext,documentation,groovy,atg,graphviz," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="commandline,plaintext,documentation,groovy,atg,graphviz," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Recreate txt base graph generator"/>
 <meta name="twitter:description" content="Graphviz This time using brew
 1 2 3 4 5 6 7 8  ➜ DPS brew install graphviz ==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz ######################################################################## 100.0% ==&gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz 🍺 /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M ➜ DPS dot -V dot - graphviz version 2.38.0 (20140413.2041) ➜ DPS   Schema Spy From http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/
@@ -157,31 +154,25 @@ Run:
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#graphviz">Graphviz</a></li>
-<li><a href="#schema-spy">Schema Spy</a></li>
-<li><a href="#plantuml">PlantUML</a>
-<ul>
-<li><a href="#command-line">Command Line</a></li>
-<li><a href="#from-groovy">From Groovy</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#examples">Examples:</a></li>
-</ul>
+  <ul>
+    <li><a href="#graphviz">Graphviz</a></li>
+    <li><a href="#schema-spy">Schema Spy</a></li>
+    <li><a href="#plantuml">PlantUML</a>
+      <ul>
+        <li><a href="#command-line">Command Line</a></li>
+        <li><a href="#from-groovy">From Groovy</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h2 id="graphviz">Graphviz</h2>
-
+      <h2 id="graphviz">Graphviz</h2>
 <p>This time using brew</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -189,50 +180,38 @@ Run:
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  DPS  brew install graphviz
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  DPS  brew install graphviz
 ==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz
 ######################################################################## 100.0%
 ==&gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz
 🍺  /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M
 ➜  DPS  dot -V
 dot - graphviz version 2.38.0 (20140413.2041)
-➜  DPS</pre></td></tr></table>
+➜  DPS
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="schema-spy">Schema Spy</h2>
-
+</div><h2 id="schema-spy">Schema Spy</h2>
 <p>From <a href="http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/">http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/</a></p>
-
 <p>To <code>/opt/diagram</code></p>
-
 <p>Run:</p>
-
 <blockquote>
 <p>diagram  java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training</p>
 </blockquote>
-
 <p>It produces HTML documentation for tables</p>
-
-<p><img src="/images/graph-1.jpeg" alt="" />
-<img src="/images/graph-2.jpeg" alt="" />
-<img src="/images/graph-3.jpeg" alt="" /></p>
-
+<p><img src="/images/graph-1.jpeg" alt="">
+<img src="/images/graph-2.jpeg" alt="">
+<img src="/images/graph-3.jpeg" alt=""></p>
 <p>Size is about 51 M for a small ATG install</p>
-
 <h2 id="plantuml">PlantUML</h2>
-
 <p>Also installed in /opt/diagram</p>
-
 <p><a href="http://plantuml.sourceforge.net/running.html">http://plantuml.sourceforge.net/running.html</a></p>
-
 <p>See <a href="http://www.planttext.com">http://www.planttext.com</a></p>
-
 <h3 id="command-line">Command Line</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -240,24 +219,23 @@ dot - graphviz version 2.38.0 (20140413.2041)
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">You can also run PlantUML using the following command :java -jar plantuml.jar file1 file2 file3
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">You can also run PlantUML using the following command :java -jar plantuml.jar file1 file2 file3
  
 This will look for @startuml into file1, file2 and file3. (For each diagram, it will create a .png file).
 For processing a whole directory, you can use:
 java -jar plantuml.jar &#34;c:/directory1&#34; &#34;c:/directory2&#34;
  
 This command will search for @startuml and @enduml into .c, .h, .cpp, .txt, .pu, .tex, .html, .htm or .java files of the c:/directory directory. 
-(For each diagram, it will create a .png file).</pre></td></tr></table>
+(For each diagram, it will create a .png file).
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="from-groovy">From Groovy</h3>
-
+</div><h3 id="from-groovy">From Groovy</h3>
 <p>Since calling Java from Groovy is pretty simple, the only thinks to do is to copy PlantUML.jar file to the classpath (for exemple, ../Groovy/Groovy-1.7.6/lib directory).The following script print the current PlantUML version, and encode a URL:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -268,9 +246,9 @@ This command will search for @startuml and @enduml into .c, .h, .cpp, .txt, .pu,
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"> 
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"> 
 println net.sourceforge.plantuml.version.Version.version() 
 println net.sourceforge.plantuml.code.TranscoderUtil.getDefaultTranscoder().encode(&#34;Bob-&gt;Alice:hello&#34;)
  
@@ -280,13 +258,13 @@ If you want to generate an image from a description:
 s = new net.sourceforge.plantuml.SourceStringReader(&#34;@startuml\nBob-&gt;Alice:hello\n@enduml&#34;)
 FileOutputStream file = new FileOutputStream(&#34;c:/testGroovy2.png&#34;)
 s.generateImage(file);
-file.close()</pre></td></tr></table>
+file.close()
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="examples">Examples:</h1>
+</div><h1 id="examples">Examples:</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -300,9 +278,9 @@ file.close()</pre></td></tr></table>
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">@startuml
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">@startuml
 start
 if (multiprocessor?) then (yes)
   fork
@@ -315,13 +293,13 @@ else (monoproc)
   :Treatment 2;
 endif
  
-@enduml</pre></td></tr></table>
+@enduml
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><img src="/images/graph-4.png" alt="" /></p>
+</div><p><img src="/images/graph-4.png" alt=""></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -348,9 +326,9 @@ endif
 </span><span class="lnt">25
 </span><span class="lnt">26
 </span><span class="lnt">27
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><span class="err">@</span><span class="nx">startuml</span>
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="err">@</span><span class="nx">startuml</span>
 <span class="kn">package</span> <span class="s">&#34;Some Group&#34;</span> <span class="p">{</span>
   <span class="nx">HTTP</span> <span class="o">-</span> <span class="p">[</span><span class="nx">First</span> <span class="nx">Component</span><span class="p">]</span>
   <span class="p">[</span><span class="nx">Another</span> <span class="nx">Component</span><span class="p">]</span>
@@ -376,10 +354,10 @@ endif
 <span class="p">[</span><span class="nx">Another</span> <span class="nx">Component</span><span class="p">]</span> <span class="o">--</span><span class="p">&gt;</span> <span class="p">[</span><span class="nx">Example</span> <span class="mi">1</span><span class="p">]</span>
 <span class="p">[</span><span class="nx">Example</span> <span class="mi">1</span><span class="p">]</span> <span class="o">--</span><span class="p">&gt;</span> <span class="p">[</span><span class="nx">Folder</span> <span class="mi">3</span><span class="p">]</span>
 <span class="p">[</span><span class="nx">Folder</span> <span class="mi">3</span><span class="p">]</span> <span class="o">--</span><span class="p">&gt;</span> <span class="p">[</span><span class="nx">Frame</span> <span class="mi">4</span><span class="p">]</span>
-<span class="err">@</span><span class="nx">enduml</span></pre></td></tr></table>
+<span class="err">@</span><span class="nx">enduml</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><img src="/images/graph-5.png" alt="" /></p>
+</div><p><img src="/images/graph-5.png" alt=""></p>
 
     </div>
 

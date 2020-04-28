@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -44,12 +44,9 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-
-<meta property="og:updated_time" content="2020-02-18T00:36:40+00:00" />
+<meta property="og:updated_time" content="2020-04-28T19:35:50+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
 <meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
 
@@ -118,6 +115,32 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-03-10-git-log-output-less/">How to keep git log and less output on the screen</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-03-10 </span>
+      <div class="post-category">
+          <a href="/categories/lifehacks/"> lifehacks </a>
+          </div>
+        <span class="more-meta"> 129 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.
+Just for git commands:
+1  git config --global --replace-all core.pager &#34;less -iXFR&#34;   For less globally (including git) - add to .bashrc / .zshrc / etc:
+1  export LESS=-iXFR   The options we set for less are:
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-03-10-git-log-output-less/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2015-02-16-grasshoper/">New image that expresses my new undefined job title</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2015-02-16 </span>
@@ -150,7 +173,7 @@ It is uncertain how good is all this - but as they say:
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 902 words </span>
+        <span class="more-meta"> 903 words </span>
         <span class="more-meta"> 5 mins read </span>
     </div>
   </header>
@@ -159,7 +182,7 @@ It is uncertain how good is all this - but as they say:
     <div class="post-summary">
       This one goes beyond git, but is very useful. Ruby script that produces this:
 Here is the script
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236  #!
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227 228 229 230 231 232 233 234 235 236 237  #!
     </div>
     <div class="read-more">
       <a href="/posts/2015-02-05-unmerged/" class="read-more-link">Read more...</a>
@@ -199,43 +222,17 @@ Here is the script
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 215 words </span>
+        <span class="more-meta"> 216 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      If annoyed with: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  ➜ ~ echo $PATH | tr &#39;:&#39; &#39;\n&#39; /usr/local/opt/coreutils/libexec/gnubin /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin /opt/ant/bin /opt/groovy/bin /opt/gradle/bin /Users/miro/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /usr/texbin # YEs I am using GNU core utils but grep is not there # The issue ➜ ~ grep --version grep (BSD grep) 2.
+      If annoyed with: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23  ➜ ~ echo $PATH | tr &#39;:&#39; &#39;\n&#39; /usr/local/opt/coreutils/libexec/gnubin /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin /opt/ant/bin /opt/groovy/bin /opt/gradle/bin /Users/miro/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /usr/texbin # YEs I am using GNU core utils but grep is not there # The issue ➜ ~ grep --version grep (BSD grep) 2.
     </div>
     <div class="read-more">
       <a href="/posts/2014-11-02-bsd-grep-gnu/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-10-14-java6required/">Dealing with &#39;Java Runtime SE 6&#39; required error</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-10-14 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 176 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      When trying to start DBeaver (http://dbeaver.jkiss.org) I got this
-I do have Java 7 installed:
-1 2 3 4 5 6 7 8  ➜ Contents java -version java version &#34;1.7.0_55&#34; Java(TM) SE Runtime Environment (build 1.7.0_55-b13) Java HotSpot(TM) 64-Bit Server VM (build 24.55-b03, mixed mode) ➜ Contents which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java   which should be a superset. But it is not.
-Solution Oracle seems to screw up the PLIST capabilities in JAva7 install
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-10-14-java6required/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

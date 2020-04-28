@@ -57,7 +57,7 @@ I tried to add the protocol.</description>
       <guid>https://miroadamy.com/posts/2015-07-12-component-report/</guid>
       <description>How to get information about all ATG Nucleus components Dyn Admin has useful feature - Configuration reporter: http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml
 There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes
-1 2 3 4 5 6  -rw-r--r-- 1 miro 2.</description>
+1 2 3 4 5 6  -rw-r--r-- 1 miro 2.2M Jul 12 14:07 bean1 -rw-r--r-- 1 miro 2.</description>
     </item>
     
     <item>
@@ -159,8 +159,7 @@ The item definition:
       <description>Notes from weekend hack: Project is in Bitbucket - https://bitbucket.org/miroadamy/atgdiagram/overview
 Run in Diagrams/ATGDiagram
 1 2 3 4  Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStore.eStore &amp;gt;uml/test2.uml Radegast:ATGDiagram miro$ ./processUml.sh uml/test2.uml Radegast:ATGDiagram miro$ open uml/test2.png Radegast:ATGDiagram miro$   =&amp;gt; Output test2.uml
- the &amp;lsquo;.&amp;rsquo; in names is converted to &amp;lsquo;_&amp;rsquo; - GraphViz does not like it the &amp;lsquo;-&amp;rsquo; in names detto
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65  Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.</description>
+ the &amp;lsquo;.&amp;rsquo; in names is converted to &amp;lsquo;_&amp;rsquo; - GraphViz does not like it the &amp;lsquo;-&amp;rsquo; in names detto  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65  Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.</description>
     </item>
     
     <item>
@@ -189,8 +188,7 @@ What is &#34;</description>
       <pubDate>Thu, 08 Nov 2007 15:56:30 -0500</pubDate>
       
       <guid>https://miroadamy.com/posts/2007-11-08-installing-atg-on-fedora-core/</guid>
-      <description>Trying to install ATG on the Linux platform turned out to be not completely hickup-free. The default installer died with the following message:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  $ ./ATG2007.1.bin&amp;gt; Preparing to install...&amp;gt; Extracting the installation resources from the installer archive...&amp;gt; Configuring the installer for this system&amp;#39;s environment...&amp;gt; awk: error while loading shared libraries: libdl.so.2: cannot open shared object file: No such file or directory&amp;gt; dirname: error while loading shared libraries: libc.</description>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14  $ ./ATG2007.1.bin&amp;gt; Preparing to install...&amp;gt; Extracting the installation resources from the installer archive...&amp;gt; Configuring the installer for this system&amp;#39;s environment...&amp;gt; awk: error while loading shared libraries: libdl.so.2: cannot open shared object file: No such file or directory&amp;gt; dirname: error while loading shared libraries: libc.so.6: cannot open shared object file: No such file or directory&amp;gt; /bin/ls: error while loading shared libraries: librt.</description>
     </item>
     
   </channel>

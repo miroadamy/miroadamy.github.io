@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2015-04-11-jboss-shutdown/" />
@@ -49,16 +49,13 @@
 <meta itemprop="name" content="Fixing the shutdown problem with JBoss">
 <meta itemprop="description" content="Observed at QA environment. During automated shutdown sequence, the exception was thrown:
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  $ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.">
-
-
 <meta itemprop="datePublished" content="2015-04-11T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2015-04-11T11:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="359">
 
 
 
-<meta itemprop="keywords" content="java,jboss," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="java,jboss," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fixing the shutdown problem with JBoss"/>
 <meta name="twitter:description" content="Observed at QA environment. During automated shutdown sequence, the exception was thrown:
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  $ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax."/>
@@ -144,14 +141,14 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>Observed at QA environment. During automated shutdown sequence, the exception was thrown:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -178,9 +175,9 @@
 </span><span class="lnt">25
 </span><span class="lnt">26
 </span><span class="lnt">27
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ bin/gdi-qa-com1.sh stop
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ bin/gdi-qa-com1.sh stop
 JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099
 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]]
     at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763)
@@ -206,17 +203,15 @@ Caused by: java.net.ConnectException: Connection refused
     at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:82)
     at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:301)
     ... 5 more
-To watch the log: tail -f /var/log/atg/gdi-qa-com1.log</pre></td></tr></table>
+To watch the log: tail -f /var/log/atg/gdi-qa-com1.log
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The conflict of 1099 between Endeca and ATG was resolved according <code>Fixing port conflict on 1099 between out-of-the-box Endeca and JBOSS</code> - the actual port was 11199</p>
-
-<p><img src="/images/jboss-fix-1.png" alt="" /></p>
-
+</div><p>The conflict of 1099 between Endeca and ATG was resolved according <code>Fixing port conflict on 1099 between out-of-the-box Endeca and JBOSS</code> - the actual port was 11199</p>
+<p><img src="/images/jboss-fix-1.png" alt=""></p>
 <p>The environment variable for JBOSS instance were OK</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -236,9 +231,9 @@ To watch the log: tail -f /var/log/atg/gdi-qa-com1.log</pre></td></tr></table>
 </span><span class="lnt">18
 </span><span class="lnt">19
 </span><span class="lnt">20
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">[jboss@gdi-app-l1 ~]$ env | grep JBOSS
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[jboss@gdi-app-l1 ~]$ env | grep JBOSS
 JBOSS_COM2_CONSOLE=/var/log/atg/gdi-qa-com2.log
 JBOSS_LDR_CONF=gdi-qa-ldr
 JBOSS_HOME=/opt/jboss/jboss-as
@@ -257,36 +252,32 @@ JBOSS_LDR_ADMINPORT=1399
 JBOSS_LDR_HOST=0.0.0.0
 JBOSS_COM1_ADMINPORT=1099
 JBOSS_COM1_CONF=gdi-qa-com1
-JBOSS_COM2_CONF=gdi-qa-com2</pre></td></tr></table>
+JBOSS_COM2_CONF=gdi-qa-com2
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>but these are used only for shutdown.</p>
-
+</div><p>but these are used only for shutdown.</p>
 <p>The actual port used for communication was:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">[jboss@gdi-app-l1 gdi-qa-com1]$ sudo netstat -tulpn | grep 27745 | grep 1099
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[jboss@gdi-app-l1 gdi-qa-com1]$ sudo netstat -tulpn | grep 27745 | grep 1099
 tcp        0      0 0.0.0.0:11099               0.0.0.0:*                   LISTEN      27745/java
 [jboss@gdi-app-l1 gdi-qa-com1]$ sudo netstat -tulpn | grep 27745 | grep 109
 tcp        0      0 0.0.0.0:11098               0.0.0.0:*                   LISTEN      27745/java
-tcp        0      0 0.0.0.0:11099               0.0.0.0:*                   LISTEN      27745/java</pre></td></tr></table>
+tcp        0      0 0.0.0.0:11099               0.0.0.0:*                   LISTEN      27745/java
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>This port is set in JBOSS file</p>
-
+</div><p>This port is set in JBOSS file</p>
 <blockquote>
 <p>[jboss@gdi-app-l1 gdi-qa-com1]$ vim ./conf/bindingservice.beans/META-INF/bindings-jboss-beans.xml</p>
 </blockquote>
-
 <p>I have switched both 11098 and 11099 to 1098 and 1099.</p>
-
 <p>Afterwards, the shutdown works OK</p>
 
     </div>

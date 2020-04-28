@@ -25,7 +25,7 @@ I had 3 challenges to overcome related to co-existence of GH and GL versions:
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2019-11-23-gitlab-hugo/" />
@@ -52,16 +52,13 @@ I had 3 challenges to overcome related to co-existence of GH and GL versions:
 <meta itemprop="description" content="Parallel building challenges Unlike Github, Gitlab considers Hugo blogs first class citizens and does not impose any restrictions on repo naming.
 I had 3 challenges to overcome related to co-existence of GH and GL versions:
  I need to use same repo for both GH and GL the submodule link for public does not work on GL the site root is different - I have no custom domain forward for GitLab  Using same repo To separate the GH and GL, I have added 2 remotes to repo and special branch gitlab-pages.">
-
-
 <meta itemprop="datePublished" content="2019-11-23T22:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2019-11-23T22:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="570">
+<meta itemprop="wordCount" content="573">
 
 
 
-<meta itemprop="keywords" content="git,blog,hugo,github,gitlab," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="git,blog,hugo,github,gitlab," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Building Hugo as well on GitLab pages"/>
 <meta name="twitter:description" content="Parallel building challenges Unlike Github, Gitlab considers Hugo blogs first class citizens and does not impose any restrictions on repo naming.
 I had 3 challenges to overcome related to co-existence of GH and GL versions:
@@ -139,7 +136,7 @@ I had 3 challenges to overcome related to co-existence of GH and GL versions:
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 570 words </span>
+          <span class="more-meta"> 573 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -149,67 +146,51 @@ I had 3 challenges to overcome related to co-existence of GH and GL versions:
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#parallel-building-challenges">Parallel building challenges</a>
-<ul>
-<li><a href="#using-same-repo">Using same repo</a></li>
-<li><a href="#publishing-process-and-public">Publishing process and <code>public</code></a></li>
-<li><a href="#removing-the-submodules">Removing the submodules</a></li>
-</ul></li>
-<li><a href="#result">Result</a></li>
-</ul>
+  <ul>
+    <li><a href="#using-same-repo">Using same repo</a></li>
+    <li><a href="#publishing-process-and-public">Publishing process and <code>public</code></a></li>
+    <li><a href="#removing-the-submodules">Removing the submodules</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h1 id="parallel-building-challenges">Parallel building challenges</h1>
-
+      <h1 id="parallel-building-challenges">Parallel building challenges</h1>
 <p>Unlike Github, Gitlab considers Hugo blogs first class citizens and does not impose any restrictions on repo naming.</p>
-
 <p>I had 3 challenges to overcome related to co-existence of GH and GL versions:</p>
-
 <ol>
 <li>I need to use same repo for both GH and GL</li>
 <li>the submodule link for <code>public</code> does not work on GL</li>
 <li>the site root is different - I have no custom domain forward for GitLab</li>
 </ol>
-
 <h2 id="using-same-repo">Using same repo</h2>
-
 <p>To separate the GH and GL, I have added 2 remotes to repo and special branch <code>gitlab-pages</code>.</p>
-
 <p>So the local repo looks like this:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  miroadamy.com git:(master) ✗ git remote -v -v
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  miroadamy.com git:(master) ✗ git remote -v -v
 github  git@github.com:miroadamy/miroadamy.com.git (fetch)
 github  git@github.com:miroadamy/miroadamy.com.git (push)
 origin  git@gitlab.com:miro.adamy/miroadamy.com.git (fetch)
-origin  git@gitlab.com:miro.adamy/miroadamy.com.git (push)</pre></td></tr></table>
+origin  git@gitlab.com:miro.adamy/miroadamy.com.git (push)
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The branch <code>gitlab-pages</code> is &ldquo;superset&rdquo; of master. This means that I am always merging <code>master =&gt; gitlab-pages</code> but never the other way around.</p>
-
+</div><p>The branch <code>gitlab-pages</code> is &ldquo;superset&rdquo; of master. This means that I am always merging <code>master =&gt; gitlab-pages</code> but never the other way around.</p>
 <p>The consequence is that GL version can have more posts than GH and as GL version is private, it is OK.</p>
-
 <h2 id="publishing-process-and-public">Publishing process and <code>public</code></h2>
-
 <p>GL allows simple pipeline that generates the site into <code>public</code> folder. The submodule does not need to exist.
 Actually, it cannot exists, as it would be breaking the build.</p>
-
 <p>Here is the file <code>.gitlab-ci.yml</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -223,9 +204,11 @@ Actually, it cannot exists, as it would be breaking the build.</p>
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span></pre></td>
+</span><span class="lnt">15
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">image: monachus/hugo
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+image: monachus/hugo
 
 variables:
   GIT_SUBMODULE_STRATEGY: recursive
@@ -238,17 +221,15 @@ pages:
     paths:
     - public
   only:
-  - gitlab-pages</pre></td></tr></table>
+  - gitlab-pages
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The pipeline runs ONLY for gitlab-pages branch and resulting pages can be seen at <a href="https://miro.adamy.gitlab.io/miroadamy.com/">https://miro.adamy.gitlab.io/miroadamy.com/</a> (this is currently private).</p>
-
+</div><p>The pipeline runs ONLY for gitlab-pages branch and resulting pages can be seen at <a href="https://miro.adamy.gitlab.io/miroadamy.com/">https://miro.adamy.gitlab.io/miroadamy.com/</a> (this is currently private).</p>
 <h2 id="removing-the-submodules">Removing the submodules</h2>
-
 <p>I used this as opportunity to clean the unused themes from the blog:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -296,9 +277,10 @@ pages:
 </span><span class="lnt">46
 </span><span class="lnt">47
 </span><span class="lnt">48
-</span></pre></td>
+</span><span class="lnt">49
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"># Step 1 - deinit repos
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Step 1 - deinit repos
 
 ➜  miroadamy.com git:(gitlab-pages) ✗ git submodule deinit themes/ananke
 Cleared directory &#39;themes/ananke&#39;
@@ -345,19 +327,19 @@ To THIS
 
 git add -u
 git commit 
-git push</pre></td></tr></table>
-</div>
-</div>
-<h1 id="result">Result</h1>
+git push
 
+</code></pre></td></tr></table>
+</div>
+</div><h1 id="result">Result</h1>
 <ul>
 <li>publishing to GH works as before =&gt; run &lsquo;./publish.sh&rsquo;</li>
 <li>publishing to GL happens on any push to branch &lsquo;gitlab-pages&rsquo;</li>
-
-<li><p>getting changes from GH to GL:</p>
+<li>getting changes from GH to GL:</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -369,9 +351,10 @@ git push</pre></td></tr></table>
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span></pre></td>
+</span><span class="lnt">13
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"># Sync up master on both
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Sync up master on both
 git checkout master
 git pull github
 git push origin master
@@ -382,11 +365,11 @@ git pull origin
 git merge master
 git push origin gitlab-pages
 # optionally, may want to push to GH as well
-git push github gitlab-pages</pre></td></tr></table>
-</div>
-</div></li>
-</ul>
+git push github gitlab-pages
 
+</code></pre></td></tr></table>
+</div>
+</div>
     </div>
 
     <div class="post-copyright">

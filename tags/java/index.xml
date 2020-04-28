@@ -30,7 +30,7 @@ If the utility responds with &amp;lsquo;Successfully connected’, it was able t
       
       <guid>https://miroadamy.com/posts/2017-11-23-visual-vm/</guid>
       <description>The idea / motivation In order to run VisualVM from predefined configuration you need to point the app to the user directory. This directory takes about 20MB, but 90% of the the content is actually generated or repeated.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.0K tw-sl/update 104K tw-sl/update_tracking 11M tw-sl/var ➜ 4devops-visualvm git:(master) du -sh tw-wool/* 248K tw-wool/config 7.</description>
     </item>
     
     <item>
@@ -281,8 +281,7 @@ First important setting in Fusion is to use the &#39;NAT&#39; option rather than
       <pubDate>Fri, 28 Dec 2007 22:24:37 -0500</pubDate>
       
       <guid>https://miroadamy.com/posts/2007-12-28-jruby-trunk-issues-with-jdbc-connectivity/</guid>
-      <description>Following the book on JRuby I am discovering small differences when trying the examples. After installing activerecord-jdbc gem which is available in version 0.5, the shoplet application fails with Rails 2.0, as soon as you click on the &#39;About your application environment&#39; link.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38  =&amp;gt; Booting Mongrel (use &amp;#39;script/server webrick&amp;#39; to force WEBrick) =&amp;gt; Rails application starting on http://0.</description>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38  =&amp;gt; Booting Mongrel (use &amp;#39;script/server webrick&amp;#39; to force WEBrick) =&amp;gt; Rails application starting on http://0.0.0.0:3000 =&amp;gt; Call with -d to detach =&amp;gt; Ctrl-C to shutdown server ** Starting Mongrel listening at 0.</description>
     </item>
     
     <item>
@@ -291,8 +290,7 @@ First important setting in Fusion is to use the &#39;NAT&#39; option rather than
       <pubDate>Sun, 23 Dec 2007 20:22:50 -0500</pubDate>
       
       <guid>https://miroadamy.com/posts/2007-12-23-installation-of-mongrel-gem-on-jruby/</guid>
-      <description>I bought the Ola Bini&amp;rsquo;s eBook on JRuby and started to work through the examples. The installation of the Mongrel gem in JRuby (trunk revision 5341 fails with the following error code:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  $ jruby -S gem install -y mongrel&amp;gt; INFO: `gem install -y` is now default and will be removed&amp;gt; INFO: use --ignore-dependencies to install only the gems you list&amp;gt; Building native extensions.</description>
+      <description></description>
     </item>
     
     <item>
@@ -312,7 +310,7 @@ If you are in corporate space that is keen on &#34;standards&#34;, the compariso
       <pubDate>Wed, 12 Dec 2007 23:55:20 -0500</pubDate>
       
       <guid>https://miroadamy.com/posts/2007-12-12-an-advice-to-a-fellow-developer-1/</guid>
-      <description>We are recently interviewing quite a lot in anticipation of the great things coming. It is sort of similar task as we did year and something ago, but I enjoy this round much better. This time, rather than &#34;we have to assemble the project team ASAP&#34;, we have the luxury of longer term view and focus more on hiring the people that will be great match to the company culture, will be with us for longer period and will grow with the company.</description>
+      <description></description>
     </item>
     
     <item>
@@ -331,8 +329,7 @@ Grande Salto is exactly what I did. Without too much preparation or notice. Sinc
       <pubDate>Thu, 08 Nov 2007 15:56:30 -0500</pubDate>
       
       <guid>https://miroadamy.com/posts/2007-11-08-installing-atg-on-fedora-core/</guid>
-      <description>Trying to install ATG on the Linux platform turned out to be not completely hickup-free. The default installer died with the following message:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  $ ./ATG2007.1.bin&amp;gt; Preparing to install...&amp;gt; Extracting the installation resources from the installer archive...&amp;gt; Configuring the installer for this system&amp;#39;s environment...&amp;gt; awk: error while loading shared libraries: libdl.so.2: cannot open shared object file: No such file or directory&amp;gt; dirname: error while loading shared libraries: libc.</description>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14  $ ./ATG2007.1.bin&amp;gt; Preparing to install...&amp;gt; Extracting the installation resources from the installer archive...&amp;gt; Configuring the installer for this system&amp;#39;s environment...&amp;gt; awk: error while loading shared libraries: libdl.so.2: cannot open shared object file: No such file or directory&amp;gt; dirname: error while loading shared libraries: libc.so.6: cannot open shared object file: No such file or directory&amp;gt; /bin/ls: error while loading shared libraries: librt.</description>
     </item>
     
     <item>

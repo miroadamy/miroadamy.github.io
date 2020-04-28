@@ -31,7 +31,7 @@ What should work:
       
       <guid>https://miroadamy.com/posts/2014-08-27-es1/</guid>
       <description>#Installation:
-See [](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_installing_elasticsearch.html)
+See 
 1 2 3  curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION   Marvel is management plugin - console about cluster. Install:
 1 2 3 4  ./bin/plugin -i elasticsearch/marvel/latest # disable data collection for local cluster echo &amp;#39;marvel.agent.enabled: false&amp;#39; &amp;gt;&amp;gt; ./config/elasticsearch.yml   Test Startup log:
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  ➜ elasticsearch-1.</description>

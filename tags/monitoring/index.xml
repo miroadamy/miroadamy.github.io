@@ -18,7 +18,7 @@
       
       <guid>https://miroadamy.com/posts/2017-11-23-visual-vm/</guid>
       <description>The idea / motivation In order to run VisualVM from predefined configuration you need to point the app to the user directory. This directory takes about 20MB, but 90% of the the content is actually generated or repeated.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.0K tw-sl/update 104K tw-sl/update_tracking 11M tw-sl/var ➜ 4devops-visualvm git:(master) du -sh tw-wool/* 248K tw-wool/config 7.</description>
     </item>
     
   </channel>

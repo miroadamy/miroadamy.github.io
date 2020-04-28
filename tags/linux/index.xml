@@ -32,7 +32,7 @@
 Go here for details:
 Add share In VirtualBox, Device add transient shared folder:
 This one has made available path /Users/Shared/ATG-11 under the name ATG-11
-Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x.</description>
+Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x. 1 root 272 Sep 12 16:02 ATG11-docs -rw-rw-r--.</description>
     </item>
     
     <item>
@@ -42,7 +42,7 @@ Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /me
       
       <guid>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</guid>
       <description>How to install Chrome in Centos 6.5 Step 1. Add Google Yum Repository Create a new yum repository using below instructions.
-sudo vim /etc/yum.repos.d/google.repo
+ sudo vim /etc/yum.repos.d/google.repo
 Add following content to this file
 1 2 3 4 5 6  [google] name=Google baseurl=http://dl.google.com/linux/rpm/stable/$basearch enabled=1 gpgcheck=1 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub   Step 2: Install/Update Google Chrome Richard Lloid provided an shell script to grab libraries from a more recent Linux distro, put them in a tree (/opt/google/chrome/lib) exclusively picked up by Google Chrome and then you can indeed run Google Chrome on CentOS 6.</description>
     </item>
@@ -67,7 +67,7 @@ Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install f
       
       <guid>https://miroadamy.com/posts/2011-02-03-linux-time/</guid>
       <description>1) make sure the DNS works 1 2 3 4 5 6  sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1   2) check that you have ntpd installed  cat /etc/ntp.conf
- 3) make it work in all 1 2  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
+ 3) make it work in all 1 2 3  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
  5) Start service / restart  sudo /sbin/service ntpd start</description>
     </item>
     

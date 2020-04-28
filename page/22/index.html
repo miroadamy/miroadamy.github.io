@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -44,12 +44,9 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-
-<meta property="og:updated_time" content="2020-02-18T00:36:40+00:00" />
+<meta property="og:updated_time" content="2020-04-28T19:35:50+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
 <meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
 
@@ -118,6 +115,29 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-24-screenshot-cli/">How to make screenshot from command line</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-09-24 </span>
+      <div class="post-category">
+          <a href="/categories/lifehacks/"> lifehacks </a>
+          </div>
+        <span class="more-meta"> 64 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      How to make screenshot from command line 1 2 3 4 5 6 7  platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk   First one is &ldquo;interactive&rdquo; - Cmd-Shift-3 with selection tool, second is full screen
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-09-24-screenshot-cli/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2013-09-16-vbox-shared-folder/">Case sensitivity and VirtualBox shared folder</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2013-09-16 </span>
@@ -136,6 +156,7 @@ I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted 
 1  touch zz zZ   creates two files, both &ldquo;inside VM&rdquo; ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
 The command
+1 2  cd ~/development/ATG/platform-edc touch zz zZ   will create just single file.
     </div>
     <div class="read-more">
       <a href="/posts/2013-09-16-vbox-shared-folder/" class="read-more-link">Read more...</a>
@@ -151,17 +172,17 @@ The command
       <div class="post-category">
           <a href="/categories/technology/"> Technology </a>
           </div>
-        <span class="more-meta"> 11 words </span>
+        <span class="more-meta"> 12 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-       Usable mc color scheme Edit
+      Usable mc color scheme Edit
 ~/.mc/ini
 insert
-1 2  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   
+1 2 3  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   
     </div>
     <div class="read-more">
       <a href="/posts/2013-09-05-mc-color-scheme/" class="read-more-link">Read more...</a>
@@ -216,32 +237,6 @@ Motivation - issues with VMs VMs are great - they allow &ldquo;packaged&rdquo; d
     </div>
     <div class="read-more">
       <a href="/posts/2013-04-22-atg-development/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-04-13-git-conflict/">Merge conflict with deleted file</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-04-13 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 360 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I was merging the branch that removed / consolidated bunch of duplicate JSP files (corporate-ui-cleanup).
-In the meantime in master, some minor UI changes were made to these files whose content was now elsewhere.
-Quick trick how to resolve it fast:
-Show branch 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  CineplexB2B $ git show-branch !
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-04-13-git-conflict/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

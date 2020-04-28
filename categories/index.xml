@@ -6,7 +6,7 @@
     <description>Recent content in Categories on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 19 Jan 2020 11:12:38 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2020 11:24:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>devops</title>
       <link>https://miroadamy.com/categories/devops/</link>
-      <pubDate>Sun, 19 Jan 2020 11:12:38 +0800</pubDate>
+      <pubDate>Tue, 31 Mar 2020 11:24:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>startup-life</title>
+      <link>https://miroadamy.com/categories/startup-life/</link>
+      <pubDate>Tue, 31 Mar 2020 11:24:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/startup-life/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://miroadamy.com/categories/life/</link>
+      <pubDate>Tue, 17 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/life/</guid>
       <description></description>
     </item>
     
@@ -44,15 +62,6 @@
       <pubDate>Tue, 26 Nov 2019 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/general/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>life</title>
-      <link>https://miroadamy.com/categories/life/</link>
-      <pubDate>Sun, 24 Nov 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/categories/life/</guid>
       <description></description>
     </item>
     
@@ -107,15 +116,6 @@
       <pubDate>Mon, 16 Feb 2015 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/startuplife/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>startup-life</title>
-      <link>https://miroadamy.com/categories/startup-life/</link>
-      <pubDate>Wed, 15 Feb 2012 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/categories/startup-life/</guid>
       <description></description>
     </item>
     

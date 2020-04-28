@@ -26,7 +26,7 @@ Just for git commands:
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2015-03-10-git-log-output-less/" />
@@ -55,16 +55,13 @@ Just for git commands:
 Just for git commands:
 1  git config --global --replace-all core.pager &#34;less -iXFR&#34;   For less globally (including git) - add to .bashrc / .zshrc / etc:
 1  export LESS=-iXFR   The options we set for less are:">
-
-
 <meta itemprop="datePublished" content="2015-03-10T00:57:35-05:00" />
 <meta itemprop="dateModified" content="2015-03-10T00:57:35-05:00" />
 <meta itemprop="wordCount" content="129">
 
 
 
-<meta itemprop="keywords" content="osx,git," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="osx,git," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to keep git log and less output on the screen"/>
 <meta name="twitter:description" content="When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.
 Just for git commands:
@@ -152,46 +149,45 @@ Just for git commands:
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.</p>
-
 <p>Just for git commands:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">git config --global --replace-all core.pager &#34;less -iXFR&#34;</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">git config --global --replace-all core.pager &#34;less -iXFR&#34;
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>For less globally (including git) - add to .bashrc / .zshrc / etc:</p>
+</div><p>For less globally (including git) - add to .bashrc / .zshrc / etc:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">export LESS=-iXFR</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">export LESS=-iXFR
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The options we set for less are:</p>
+</div><p>The options we set for less are:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">* -i - ignore case when searching (but respect case if search term contains uppercase letters)
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">* -i - ignore case when searching (but respect case if search term contains uppercase letters)
 * -X - do not clear screen on exit
 * -F - exit if text is less then one screen long
-* -R - was on by default on my system, something related to colors</pre></td></tr></table>
+* -R - was on by default on my system, something related to colors
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Source: <a href="http://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html">http://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html</a></p>
+</div><p>Source: <a href="http://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html">http://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html</a></p>
 
     </div>
 

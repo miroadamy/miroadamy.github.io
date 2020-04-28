@@ -21,7 +21,7 @@
 Go here for details:
 Add share In VirtualBox, Device add transient shared folder:
 This one has made available path /Users/Shared/ATG-11 under the name ATG-11
-Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x.</description>
+Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x. 1 root 272 Sep 12 16:02 ATG11-docs -rw-rw-r--.</description>
     </item>
     
     <item>
@@ -56,7 +56,8 @@ Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install f
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
 1  touch zz zZ   creates two files, both &amp;ldquo;inside VM&amp;rdquo; ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
-The command</description>
+The command
+1 2  cd ~/development/ATG/platform-edc touch zz zZ   will create just single file.</description>
     </item>
     
     <item>
@@ -65,10 +66,10 @@ The command</description>
       <pubDate>Thu, 05 Sep 2013 21:32:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2013-09-05-mc-color-scheme/</guid>
-      <description> Usable mc color scheme Edit
+      <description>Usable mc color scheme Edit
 ~/.mc/ini
 insert
-1 2  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   </description>
+1 2 3  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   </description>
     </item>
     
     <item>

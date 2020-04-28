@@ -6,10 +6,20 @@
     <description>Recent content in devops on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 19 Jan 2020 11:12:38 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2020 11:24:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/categories/devops/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>History of Faith</title>
+      <link>https://miroadamy.com/posts/2020-03-31-history-of-faith/</link>
+      <pubDate>Tue, 31 Mar 2020 11:24:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2020-03-31-history-of-faith/</guid>
+      <description>The beginnings Once upon a time - actually, in late 2017-early 2018 - there was a QA/DevOps engineer named José who liked containers, Docker and worked for a company named Thinkwrap (that soon would become Pivotree) in Valencia, Spain.
+José was responsible (among other things) for setting up integration and QA environments for multiple Hybris projects. Such environment, when being built in traditional way (from physical servers or VMs), normally requires quite a few pieces:</description>
+    </item>
     
     <item>
       <title>Kubectl client and server version mismatch</title>
@@ -39,7 +49,7 @@
       
       <guid>https://miroadamy.com/posts/2020-01-15-kubectl/</guid>
       <description>Symptoms I was doing update on Kubernetes cluster I had not touch in a while when I noticed weird behaviour:
- the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5  ➜ .</description>
+ the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5 6  ➜ .</description>
     </item>
     
     <item>
@@ -117,7 +127,7 @@ The Video URLs Channel 1  https://www.</description>
       <guid>https://miroadamy.com/posts/2019-01-14-gitbits/</guid>
       <description>Two small utilities I have places into ~/bin:
 git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
-1 2 3 4 5 6 7 8 9  #!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; | less   Example 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.</description>
+1 2 3 4 5 6 7 8 9 10  #!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; | less   Example 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.</description>
     </item>
     
     <item>
@@ -180,7 +190,7 @@ Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed
       
       <guid>https://miroadamy.com/posts/2017-11-23-visual-vm/</guid>
       <description>The idea / motivation In order to run VisualVM from predefined configuration you need to point the app to the user directory. This directory takes about 20MB, but 90% of the the content is actually generated or repeated.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.0K tw-sl/update 104K tw-sl/update_tracking 11M tw-sl/var ➜ 4devops-visualvm git:(master) du -sh tw-wool/* 248K tw-wool/config 7.</description>
     </item>
     
     <item>
@@ -211,7 +221,7 @@ Everybody who clones the repository - every developer has access to this informa
       <pubDate>Wed, 10 May 2017 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2017-05-10-remote-svn/</guid>
-      <description>This is based on J.&amp;rsquo;s&amp;rsquo; question in Slack:
+      <description>This is based on J.&amp;lsquo;s&amp;rsquo; question in Slack:
  Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
  The setup (as I understand it):
  on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly  Options Use git-svn bridge Git client allows to &amp;ldquo;pretend&amp;rdquo; it is SVN and pull/push against remote SVN repo</description>
@@ -224,8 +234,7 @@ Everybody who clones the repository - every developer has access to this informa
       
       <guid>https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/</guid>
       <description>Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
-User setup  List all keys in Gitolite must have access to Gitolite admin interface
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.</description>
+User setup  List all keys in Gitolite must have access to Gitolite admin interface  1 2 3 4 5 6 7 8 9 10 11 12 13 14  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.</description>
     </item>
     
     <item>
@@ -284,7 +293,7 @@ Fix Set the variable JAVA_VM to path to executable command on your system.
       <guid>https://miroadamy.com/posts/2016-03-16-docker-machine-error-after-upgrade/</guid>
       <description>I had to upgrade docker toolbox on Yosemite to get latest docker-compose additions.
 After installing the new package, I was not able to connect to docker machine:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ ~ docker-machine status Stopped ➜ ~ docker-machine start default Starting &amp;#34;default&amp;#34;... (default) Check network to re-create if needed... (default) Waiting for an IP... Machine &amp;#34;default&amp;#34; was started.</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ ~ docker-machine status Stopped ➜ ~ docker-machine start default Starting &amp;#34;default&amp;#34;... (default) Check network to re-create if needed... (default) Waiting for an IP... Machine &amp;#34;default&amp;#34; was started. Waiting for SSH to be available.</description>
     </item>
     
     <item>
@@ -304,7 +313,7 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
       <pubDate>Fri, 11 Dec 2015 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2015-12-11-docker-starting/</guid>
-      <description>After the reboot 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55  docker version Client: Version: 1.9.1 API version: 1.21 Go version: go1.</description>
+      <description>After the reboot 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55  docker version Client: Version: 1.9.1 API version: 1.21 Go version: go1.4.3 Git commit: a34a1d5 Built: Fri Nov 20 17:56:04 UTC 2015 OS/Arch: darwin/amd64 Cannot connect to the Docker daemon.</description>
     </item>
     
     <item>
@@ -340,7 +349,7 @@ How it works Starting repo (training):
       <guid>https://miroadamy.com/posts/2015-07-12-component-report/</guid>
       <description>How to get information about all ATG Nucleus components Dyn Admin has useful feature - Configuration reporter: http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml
 There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes
-1 2 3 4 5 6  -rw-r--r-- 1 miro 2.</description>
+1 2 3 4 5 6  -rw-r--r-- 1 miro 2.2M Jul 12 14:07 bean1 -rw-r--r-- 1 miro 2.</description>
     </item>
     
     <item>
@@ -415,7 +424,7 @@ Solution Oracle seems to screw up the PLIST capabilities in JAva7 install</descr
 Go here for details:
 Add share In VirtualBox, Device add transient shared folder:
 This one has made available path /Users/Shared/ATG-11 under the name ATG-11
-Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x.</description>
+Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x. 1 root 272 Sep 12 16:02 ATG11-docs -rw-rw-r--.</description>
     </item>
     
     <item>
@@ -473,7 +482,7 @@ The improvent here are user scripts - running inside Firefox or Chrome, utilizin
       
       <guid>https://miroadamy.com/posts/2014-08-27-es1/</guid>
       <description>#Installation:
-See [](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_installing_elasticsearch.html)
+See 
 1 2 3  curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION   Marvel is management plugin - console about cluster. Install:
 1 2 3 4  ./bin/plugin -i elasticsearch/marvel/latest # disable data collection for local cluster echo &amp;#39;marvel.agent.enabled: false&amp;#39; &amp;gt;&amp;gt; ./config/elasticsearch.yml   Test Startup log:
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  ➜ elasticsearch-1.</description>
@@ -496,7 +505,7 @@ See [](http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_instal
       
       <guid>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</guid>
       <description>How to install Chrome in Centos 6.5 Step 1. Add Google Yum Repository Create a new yum repository using below instructions.
-sudo vim /etc/yum.repos.d/google.repo
+ sudo vim /etc/yum.repos.d/google.repo
 Add following content to this file
 1 2 3 4 5 6  [google] name=Google baseurl=http://dl.google.com/linux/rpm/stable/$basearch enabled=1 gpgcheck=1 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub   Step 2: Install/Update Google Chrome Richard Lloid provided an shell script to grab libraries from a more recent Linux distro, put them in a tree (/opt/google/chrome/lib) exclusively picked up by Google Chrome and then you can indeed run Google Chrome on CentOS 6.</description>
     </item>
@@ -520,7 +529,7 @@ How gitolite works Repository permission structure This is general format of rep
       
       <guid>https://miroadamy.com/posts/2013-12-31-difference-between-matching-and-simple-git-push/</guid>
       <description>I started to see this message in some of my Git environments
-1 2 3 4 5 6 7 8 9 10 11  Git 2.0 from &amp;#39;matching&amp;#39; to &amp;#39;simple&amp;#39;. To squelch this message and maintain the current behavior after the default changes, use: git config --global push.default matching To squelch this message and adopt the new behavior now, use: git config --global push.default simple    This is collection of information gathered from Stackoverflow, Git docs and various internet sources.</description>
+1 2 3 4 5 6 7 8 9 10 11  Git 2.0 from &amp;#39;matching&amp;#39; to &amp;#39;simple&amp;#39;. To squelch this message and maintain the current behavior after the default changes, use: git config --global push.default matching To squelch this message and adopt the new behavior now, use: git config --global push.default simple   This is collection of information gathered from Stackoverflow, Git docs and various internet sources.</description>
     </item>
     
     <item>
@@ -542,7 +551,7 @@ Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-pla
       
       <guid>https://miroadamy.com/posts/2012-08-06-gitilite-admin/</guid>
       <description>How to setup new client You need to be pensieve admin to do this. You will have to login as service user (non-host account) and su to root.
- create new Linux user on pensieve setup gitolite:  git clone &amp;lt;git://github.com/sitaramc/gitolite&amp;gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln  add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub  get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &amp;lt;client@pensieve.</description>
+ create new Linux user on pensieve setup gitolite:  git clone &amp;lt;git://github.com/sitaramc/gitolite&amp;gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln   add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub   get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &amp;lt;client@pensieve.</description>
     </item>
     
     <item>
@@ -552,7 +561,7 @@ Start (with HSQLdb) 1 2 3 4 5 6 7 8 9 10  ~ $ cd /opt/hybris-platform/hybris-pla
       
       <guid>https://miroadamy.com/posts/2012-06-21-gitolite-setup/</guid>
       <description>General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
-Main features  multiple users each user represent a client:  e.g. users client1   Users are separated by Unix permissions:  access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes  Inside each user, there are multiple projects.</description>
+Main features  multiple users each user represent a client:  e.g. users client1    Users are separated by Unix permissions:  access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes  Inside each user, there are multiple projects.</description>
     </item>
     
     <item>
@@ -562,7 +571,7 @@ Main features  multiple users each user represent a client:  e.g. users client1 
       
       <guid>https://miroadamy.com/posts/2011-02-03-linux-time/</guid>
       <description>1) make sure the DNS works 1 2 3 4 5 6  sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1   2) check that you have ntpd installed  cat /etc/ntp.conf
- 3) make it work in all 1 2  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
+ 3) make it work in all 1 2 3  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
  5) Start service / restart  sudo /sbin/service ntpd start</description>
     </item>
     

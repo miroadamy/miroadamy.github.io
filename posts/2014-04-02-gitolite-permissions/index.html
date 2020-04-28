@@ -26,7 +26,7 @@ How gitolite works Repository permission structure This is general format of rep
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-04-02-gitolite-permissions/" />
@@ -55,16 +55,13 @@ How gitolite works Repository permission structure This is general format of rep
 How gitolite works Repository permission structure This is general format of repo definition
 1 2 3  REPO NAME rule line rule line   for example
 1 2 3 4 5 6 7 8  @staff = dilbert alice wally bob repo foo RW&#43; = dilbert # line 1 RW&#43; dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5   The Rule line has format:">
-
-
 <meta itemprop="datePublished" content="2014-04-02T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2014-04-02T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="1548">
+<meta itemprop="wordCount" content="1547">
 
 
 
-<meta itemprop="keywords" content="git,gitolite," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="git,gitolite," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Gitolite permissions setup"/>
 <meta name="twitter:description" content="This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
 How gitolite works Repository permission structure This is general format of repo definition
@@ -143,7 +140,7 @@ How gitolite works Repository permission structure This is general format of rep
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 1548 words </span>
+          <span class="more-meta"> 1547 words </span>
           <span class="more-meta"> 8 mins read </span>
         
       </div>
@@ -153,53 +150,47 @@ How gitolite works Repository permission structure This is general format of rep
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#how-gitolite-works">How gitolite works</a>
-<ul>
-<li><a href="#repository-permission-structure">Repository permission structure</a></li>
-<li><a href="#evaluation-of-access">Evaluation of access</a></li>
-<li><a href="#pre-git-phase-read-access">Pre-git phase (read access)</a></li>
-<li><a href="#write-access">Write access</a></li>
-</ul></li>
-<li><a href="#enforcing-the-access-rights">Enforcing the access rights</a></li>
-<li><a href="#template-for-repository-rights">Template for repository rights</a>
-<ul>
-<li><a href="#groups">Groups</a></li>
-</ul></li>
-<li><a href="#sources-credits-attributions">Sources, credits, attributions:</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#how-gitolite-works">How gitolite works</a>
+      <ul>
+        <li><a href="#repository-permission-structure">Repository permission structure</a></li>
+        <li><a href="#evaluation-of-access">Evaluation of access</a></li>
+        <li><a href="#pre-git-phase-read-access">Pre-git phase (read access)</a></li>
+        <li><a href="#write-access">Write access</a></li>
+      </ul>
+    </li>
+    <li><a href="#enforcing-the-access-rights">Enforcing the access rights</a></li>
+    <li><a href="#template-for-repository-rights">Template for repository rights</a>
+      <ul>
+        <li><a href="#groups">Groups</a></li>
+      </ul>
+    </li>
+    <li><a href="#sources-credits-attributions">Sources, credits, attributions:</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads</p>
-
+      <p>This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads</p>
 <h2 id="how-gitolite-works">How gitolite works</h2>
-
 <h3 id="repository-permission-structure">Repository permission structure</h3>
-
 <p>This is general format of repo definition</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">REPO NAME
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">REPO NAME
    rule line
-   rule line</pre></td></tr></table>
+   rule line
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>for example</p>
+</div><p>for example</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -207,66 +198,59 @@ How gitolite works Repository permission structure This is general format of rep
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">@staff          =   dilbert alice wally bob
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">@staff          =   dilbert alice wally bob
  
 repo foo
     RW+         =   dilbert     # line 1
     RW+ dev     =   alice       # line 2
     -           =   wally       # line 3
     RW  temp/   =   @staff      # line 4
-    R           =   ashok       # line 5</pre></td></tr></table>
+    R           =   ashok       # line 5
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The Rule line has format:</p>
-
+</div><p>The Rule line has format:</p>
 <p><code>&lt;permission&gt; &lt;zero or more refexes&gt; = &lt;one or more users/user groups&gt;</code></p>
-
 <p>Permission:</p>
-
 <ul>
 <li>R - read (clone, fetch)</li>
 <li>RW - write (push)</li>
 <li>RW+ - forced write - push that overwrites the server side</li>
-<li>- =&gt; indicates to DENY access</li>
+<li>
+<ul>
+<li>=&gt; indicates to DENY access</li>
 </ul>
-
+</li>
+</ul>
 <p>REFEX:</p>
-
 <ul>
 <li>regular expression specifying branch or tag</li>
-<li>&rsquo; &lsquo; - space is every branch</li>
+<li>' ' - space is every branch</li>
 <li>&lsquo;master$&rsquo; - any branch whose name ends on master</li>
-<li>&rsquo;^LIVE&rsquo; - any branch starting on &lsquo;LIVE&rsquo;</li>
-<li>&rsquo;^FOO$&rsquo; - branch named exactly &lsquo;foo&rsquo;.
-
+<li>&lsquo;^LIVE&rsquo; - any branch starting on &lsquo;LIVE&rsquo;</li>
+<li>&lsquo;^FOO$&rsquo; - branch named exactly &lsquo;foo&rsquo;.
 <ul>
 <li>the &lsquo;FOO&rsquo; will match, &lsquo;FOOBAR&rsquo; will not</li>
-</ul></li>
+</ul>
+</li>
 <li>&lsquo;FOO&rsquo; - branch that matches &lsquo;FOO&rsquo;
-
 <ul>
 <li>both &lsquo;FOO&rsquo; and &lsquo;FOOBAR&rsquo; will match</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>USers or groups:</p>
-
 <ul>
 <li>names of users (pub key files) or groups (defined with @- sign)</li>
 </ul>
-
 <h3 id="evaluation-of-access">Evaluation of access</h3>
-
 <p>Because information may be in multiple files (includes etc), Gitolates accumulates the permissions and creates effective permission FIRST.</p>
-
 <p>This is documented in <a href="http://gitolite.com/gitolite/rules.html#rule-accum">http://gitolite.com/gitolite/rules.html#rule-accum</a>. Here is an example</p>
-
 <p>This:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -297,9 +281,9 @@ repo foo
 </span><span class="lnt">29
 </span><span class="lnt">30
 </span><span class="lnt">31
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">1  # we have 3 specifically named FOSS projects, but we also consider any
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">1  # we have 3 specifically named FOSS projects, but we also consider any
  2  # project in the foss/ directory to be FOSS.
  3  @FOSS-projects  =   git gitolite linux foss/..*
  
@@ -329,72 +313,57 @@ repo foo
 22      RW+ =   sitaram
 23      ...some other rules...
  
-24  ...etc...</pre></td></tr></table>
+24  ...etc...
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>gets collapsed to this for the &lsquo;gitolite&rsquo; repo</p>
+</div><p>gets collapsed to this for the &lsquo;gitolite&rsquo; repo</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">13      R   =   @all            # since it is a member of @FOSS-projects
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">13      R   =   @all            # since it is a member of @FOSS-projects
 16      R   =   @bosses         # since every repo is a member of @all anyway
 22      RW+ =   sitaram         # from the gitolite-specific ruleset
-23      ...some other rules...  # from the gitolite-specific ruleset</pre></td></tr></table>
+23      ...some other rules...  # from the gitolite-specific ruleset
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>This accumulation happens BEFORE any check is done</p>
-
+</div><p>This accumulation happens BEFORE any check is done</p>
 <h3 id="pre-git-phase-read-access">Pre-git phase (read access)</h3>
-
 <p>To check if user has access rights to particular repo, all accumulated rules for that repo and that user are scanned.</p>
-
 <p>If Gitolite finds rule with &lsquo;R&rsquo; access, it is permitted. For each rule:</p>
-
 <ul>
 <li>skip the rule if it does not apply to this user</li>
 <li>if the rule contains an &ldquo;R&rdquo; (i.e., it is &ldquo;R&rdquo;, &ldquo;RW&rdquo;, or any variant of &ldquo;RW&rdquo;), allow access and stop checking rules</li>
 </ul>
-
 <p>If no rule ends with a decision, (&ldquo;fallthru&rdquo;), deny access</p>
-
 <p>By default, the DENY rules (one with &lsquo;-&rsquo; are ignored for Read access UNLESS YOU SPECIFY the &lsquo;deny-rule&rsquo; option. Do not do that.</p>
-
 <p>Details are at <a href="http://gitolite.com/gitolite/rules.html#access-rules">http://gitolite.com/gitolite/rules.html#access-rules</a></p>
-
 <h3 id="write-access">Write access</h3>
-
 <p>This is what we actually want: make sure that only designated people can push against protected branches.</p>
-
 <p>Write access is checked twice, once before passing control to git-receive-pack, and once from within the update hook.</p>
-
 <p>The first check is identical to the one for read access, except of course the permission field must contain a &ldquo;W&rdquo;. As before, deny rules are ignored, and you can override that using the <a href="http://gitolite.com/gitolite/rules.html#deny-rules">deny-rules</a> option. The <a href="http://gitolite.com/gitolite/refex.html">refex</a> field is also ignored, because at this point we don&rsquo;t know what refs are going to be pushed.</p>
-
 <p>The <strong>second check</strong> happens from within the update hook. Deny rules <em>are</em> considered, which in turn means the <em>sequence</em> of the rules matters.</p>
-
 <p>Here&rsquo;s how the actual rule matching happens:</p>
-
 <ul>
 <li>go through the <a href="http://gitolite.com/gitolite/rules.html#rule-accum">accumulated</a> rule list for the repo in the sequence they appear in the conf file</li>
 <li>for each rule:
-
 <ul>
 <li>skip the rule if it does not apply to this user</li>
 <li>If the ref does not match the <a href="http://gitolite.com/gitolite/refex.html">refex</a>, skip the rule</li>
 <li>If it&rsquo;s a deny rule, deny access and stop checking rules</li>
 <li>If the permission field matches the specific <a href="http://gitolite.com/gitolite/write-types.html">type of write</a> operation, allow access and stop checking rules</li>
-</ul></li>
+</ul>
+</li>
 <li>If no rule ends with a decision, (&ldquo;fallthru&rdquo;), deny access</li>
 </ul>
-
 <p>Because this is deeply logical, but not necessary intuitive, here are few examples:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -402,159 +371,133 @@ repo foo
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">@QA_team    =   QA_guy QA_gal
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">@QA_team    =   QA_guy QA_gal
 @Lead_devs  =   sitaram dilbert
 @devs       =   @Lead_devs alice wally
   
 repo    foo
     RW  refs/tags/v[0-9]        =   @QA_team
     RW+                         =   @Lead_devs
-    RW  dev/                    =   @devs</pre></td></tr></table>
+    RW  dev/                    =   @devs
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>A member of the QA team can only push tags which start with <code>v</code>, followed by a digit (optionally followed by anything else). This allows them to tag repository, but not actually commit new code.</p>
-
+</div><p>A member of the QA team can only push tags which start with <code>v</code>, followed by a digit (optionally followed by anything else). This allows them to tag repository, but not actually commit new code.</p>
 <p>A lead dev can push or rewind just about anything. (When you don’t supply a pattern between the permissions and the <code>=</code> sign, it means it matches any ref.)</p>
-
 <p>A normal dev can only push branches whose name starts with <code>dev/</code>.</p>
-
 <p>All of these will have read access because deny rules do not work during that phase.</p>
-
 <p>An example with deny rules.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">repo    bar
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">repo    bar
     RW+ master                  =   @Lead_devs  # line 1
     -   master                  =   @devs       # line 2
-    RW+                         =   @devs       # line 3</pre></td></tr></table>
+    RW+                         =   @devs       # line 3
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>This example shows how to protect forced-rewind to anybody but Lead_devs group.</p>
-
+</div><p>This example shows how to protect forced-rewind to anybody but Lead_devs group.</p>
 <p>When a normal dev (not a lead dev) tries to rewind-write to “master”, the first matching rule is Line 2, which says “deny”. If a lead dev tries it, though, Line 1 (which comes before Line 2) matches, and allows the access.</p>
-
 <p>Just as an exercise, think about what happens if you switch Lines 1 and 2. Since “lead” devs are also members of <code>@dev</code>, they will be denied any write access to “master” since the deny rule will be matched first!)</p>
-
 <p>Devs will have read access to master because the deny rules are ignored during Read check.</p>
-
 <p>Here is a problematic one:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"># Gitolite permission test
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Gitolite permission test
  repo gitolite-permission-test
     RW master$     = dev1 lead tester
     RW LIVE$       = lead
     R LIVE$        = dev1 tester
     R vmonly$      = lead
-    RW vmonly$     = dev1 tester</pre></td></tr></table>
+    RW vmonly$     = dev1 tester
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Here we want allow only for lead to push against LIVE and only for dev1 and tester against &lsquo;vmonly&rsquo;, while all can push against master.</p>
-
+</div><p>Here we want allow only for lead to push against LIVE and only for dev1 and tester against &lsquo;vmonly&rsquo;, while all can push against master.</p>
 <p>This works OK, HOWEVER - nobody can create any new branch. Let&rsquo;s say lead creates UAT branch. The tests against rules will fail as none of the rules matches UAT.</p>
-
 <p>Correct way how to achieve this would be</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"># Gitolite permission test
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Gitolite permission test
  repo gitolite-permission-test
     RW LIVE$       = lead
     RW vmonly$     = dev1 tester
     - LIVE$        = dev1 tester
     - vmonly$      = lead
-    RW             = @all</pre></td></tr></table>
+    RW             = @all
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Remember - read access is allowed because deny rules are ignored (we have no option set).</p>
-
+</div><p>Remember - read access is allowed because deny rules are ignored (we have no option set).</p>
 <p>If lead is trying to push against &lsquo;vmonly&rsquo;, line 5 will stop him. If lead tries to push LIVE, it is allowed by explicit rule #1</p>
-
 <p>If dev1 or tester will try to push against vmonly, the rule #2 allows it. If they try to push against LIVE, rule #3 stops them</p>
-
 <p>If anybody tries to push against master or any branch other than LIVE or vmonly, the rule #5 will permit proceeding.</p>
-
 <p>This is pretty much how we will implement it.</p>
-
 <h2 id="enforcing-the-access-rights">Enforcing the access rights</h2>
-
 <p>The process of enforcement will consist of</p>
-
 <ul>
 <li>defining the groups</li>
 <li>defining the protected branches</li>
 <li>testing</li>
 </ul>
-
 <p>The general pattern is</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">repo gitolite-permission-test
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">repo gitolite-permission-test
     RW PROTECTED-BRANCH     = @privileged-group
     - PROTECTED-BRANCH      = @read-only-group
 ... repeat for all branches / groups
-    RW                      = @all</pre></td></tr></table>
+    RW                      = @all
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="template-for-repository-rights">Template for repository rights</h2>
-
+</div><h2 id="template-for-repository-rights">Template for repository rights</h2>
 <h3 id="groups">Groups</h3>
-
 <p>In each Gitolite config, we will define</p>
-
 <ul>
 <li>developers = all that have read/write access to all non-privileged branches</li>
 <li>leads = non-rewind access to all branches</li>
 <li>readonly = read only access (this is Jenkins, Crucible and those without actual push access)</li>
 <li>admins = full access (rewind)</li>
 </ul>
-
 <p>There always</p>
-
 <p>The protected branches are (for now)</p>
-
 <ul>
 <li>LIVE - anything containing LIVE</li>
 </ul>
-
 <p>Later on, we may add UAT - some projects may want to run the UAT branches via</p>
-
 <p>So the template is</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -566,9 +509,9 @@ repo    foo
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">@admins     = miro admin2.name
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">@admins     = miro admin2.name
 @developers = dev1.name dev2.name
 @leads      = lead1.name lead2.name
 @readonly   = jenkins2 crucible
@@ -579,17 +522,13 @@ repo repo1 repo2
     RW LIVE       =  @leads
     - LIVE        =  @developers
     RW            =  @developers
-    R             =  @readonly</pre></td></tr></table>
+    R             =  @readonly
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>There is also automagically defined &lsquo;@all&rsquo; group.</p>
-
+</div><p>There is also automagically defined &lsquo;@all&rsquo; group.</p>
 <p>This should NOT be used - because it grants access to any uploaded key in keydir/ without having the named user listed in one of the groups above.</p>
-
 <p>Slowly, we will migrate the existing repos to this structure.</p>
-
 <h2 id="sources-credits-attributions">Sources, credits, attributions:</h2>
-
 <ul>
 <li><a href="http://gitolite.com/gitolite/rules.html#access-rules">http://gitolite.com/gitolite/rules.html#access-rules</a></li>
 <li><a href="http://gitolite.com/gitolite/master-toc.html">http://gitolite.com/gitolite/master-toc.html</a></li>

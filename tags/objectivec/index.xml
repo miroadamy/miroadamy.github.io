@@ -28,8 +28,7 @@ The solution is easy - rename the darn Point to something like TKPoint ... at le
       <pubDate>Mon, 01 Sep 2008 22:34:57 -0400</pubDate>
       
       <guid>https://miroadamy.com/posts/2008-09-01-xcode-annoyances/</guid>
-      <description>I have started to seriously play with Objective C and XCode about week ago. So far it was very pleasant experience. I really like the language - feels like Ruby (or Smalltalk if you want) with rocket launcher: very powerful, blastingly fast and dangerous like hell. No array boundary checks as in Java :-).
-The XCode was not bad experience either. Here my very long Eclipse and Visual Studio history is going a bit in the way, as the things often works quite different.</description>
+      <description>1 2 3  PM Xcode[34563] *** Terminating app due to uncaught exception &amp;#39;NSInvalidArgumentException&amp;#39;, reason: &amp;#39; *** -[NSAutoreleasePool stopObservingModelObject:]: unrecognized selector sent to instance 0x32da240&amp;#39;   </description>
     </item>
     
     <item>

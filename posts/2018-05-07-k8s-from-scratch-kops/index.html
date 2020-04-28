@@ -24,7 +24,7 @@ Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2018-05-07-k8s-from-scratch-kops/" />
@@ -49,16 +49,13 @@ Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed
 <meta itemprop="name" content="Creating Kubernetes Cluster in AWS from scratch with kops">
 <meta itemprop="description" content="This describes creation of K8s cluster in AWS environment from scratch as done for microservices based eCommerce project.
 Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed - https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html CLI credentials (secret key &#43; api Key) - https://docs.aws.amazon.com/cli/latest/reference/iam/index.html Kubectl and Kops local install ** see https://github.com/kubernetes/kops and https://kubernetes.io/docs/tasks/tools/install-kubectl/  Test of access 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ etc git:(feature/kubernetes) aws --version aws-cli/1.">
-
-
 <meta itemprop="datePublished" content="2018-05-07T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2018-05-07T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="3582">
+<meta itemprop="wordCount" content="3583">
 
 
 
-<meta itemprop="keywords" content="aws,kubernetes,kops," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="aws,kubernetes,kops," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Creating Kubernetes Cluster in AWS from scratch with kops"/>
 <meta name="twitter:description" content="This describes creation of K8s cluster in AWS environment from scratch as done for microservices based eCommerce project.
 Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed - https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html CLI credentials (secret key &#43; api Key) - https://docs.aws.amazon.com/cli/latest/reference/iam/index.html Kubectl and Kops local install ** see https://github.com/kubernetes/kops and https://kubernetes.io/docs/tasks/tools/install-kubectl/  Test of access 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ etc git:(feature/kubernetes) aws --version aws-cli/1."/>
@@ -135,7 +132,7 @@ Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed
         <div class="post-category">
             <a href="/categories/devops/"> DevOps </a>
             </div>
-          <span class="more-meta"> 3582 words </span>
+          <span class="more-meta"> 3583 words </span>
           <span class="more-meta"> 17 mins read </span>
         
       </div>
@@ -145,34 +142,27 @@ Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#pre-requisites">Pre-requisites</a></li>
-<li><a href="#test-of-access">Test of access</a></li>
-<li><a href="#set-the-environment-variables">Set the environment variables</a></li>
-<li><a href="#create-kops-iam-group-attach-policies">Create kops IAM group + attach policies</a></li>
-<li><a href="#create-kops-user">Create kops user</a></li>
-<li><a href="#s3-buckets">S3 Buckets</a></li>
-<li><a href="#set-up-cluster-using-kops">Set up cluster using kops</a></li>
-</ul></li>
-<li><a href="#creating-the-clusters">Creating the clusters</a>
-<ul>
-<li><a href="#preview">Preview</a></li>
-<li><a href="#actual-creation">Actual creation</a></li>
-<li><a href="#validation">Validation</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#pre-requisites">Pre-requisites</a></li>
+    <li><a href="#test-of-access">Test of access</a></li>
+    <li><a href="#set-the-environment-variables">Set the environment variables</a></li>
+    <li><a href="#create-kops-iam-group--attach-policies">Create kops IAM group + attach policies</a></li>
+    <li><a href="#create-kops-user">Create kops user</a></li>
+    <li><a href="#s3-buckets">S3 Buckets</a></li>
+    <li><a href="#set-up-cluster-using-kops">Set up cluster using kops</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#preview">Preview</a></li>
+    <li><a href="#actual-creation">Actual creation</a></li>
+    <li><a href="#validation">Validation</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>This describes creation of K8s cluster in AWS environment from scratch as done for microservices based eCommerce project.</p>
-
+      <p>This describes creation of K8s cluster in AWS environment from scratch as done for microservices based eCommerce project.</p>
 <h2 id="pre-requisites">Pre-requisites</h2>
-
 <ul>
 <li>AWS account access - IAM with Admin privileges</li>
 <li>AWS CLI installed - <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html">https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html</a></li>
@@ -180,11 +170,10 @@ Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed
 <li>Kubectl and Kops local install
 ** see <a href="https://github.com/kubernetes/kops">https://github.com/kubernetes/kops</a> and <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">https://kubernetes.io/docs/tasks/tools/install-kubectl/</a></li>
 </ul>
-
 <h2 id="test-of-access">Test of access</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -198,9 +187,9 @@ Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  etc git:(feature/kubernetes) aws --version
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  etc git:(feature/kubernetes) aws --version
 aws-cli/1.11.180 Python/3.6.4 Darwin/17.5.0 botocore/1.7.38
  
 ➜  etc git:(feature/kubernetes) kubectl version
@@ -213,15 +202,14 @@ Version 1.9.0
 ➜  etc git:(feature/kubernetes) aws --profile twfulfill-miro iam list-users | jq &#39;.Users[].UserName&#39;
 .. DELETED ...
 &#34;twfulfillment.prod.miro.adamy&#34;
-....</pre></td></tr></table>
+....
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="set-the-environment-variables">Set the environment variables</h2>
-
+</div><h2 id="set-the-environment-variables">Set the environment variables</h2>
 <p>These will be used by subsequent kops / aws commands</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -232,9 +220,9 @@ Version 1.9.0
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  etc git:(feature/kubernetes) export AWS_ACCESS_KEY_ID=&lt;YOUR-ACCESS-KEY&gt;
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  etc git:(feature/kubernetes) export AWS_ACCESS_KEY_ID=&lt;YOUR-ACCESS-KEY&gt;
 ➜  etc git:(feature/kubernetes) export AWS_SECRET_ACCESS_KEY=&lt;YOUR-SECRET-KEY&gt;
  
 ## Optional - if using ~/.aws/config + ~/.aws/credentials
@@ -244,13 +232,13 @@ Version 1.9.0
 ➜  etc git:(feature/kubernetes) env | grep AWS_
 AWS_ACCESS_KEY_ID=.....
 AWS_SECRET_ACCESS_KEY=S..................t
-AWS_PROFILE=twfulfill-miro</pre></td></tr></table>
+AWS_PROFILE=twfulfill-miro
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="create-kops-iam-group-attach-policies">Create kops IAM group + attach policies</h2>
+</div><h2 id="create-kops-iam-group--attach-policies">Create kops IAM group + attach policies</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -306,9 +294,9 @@ AWS_PROFILE=twfulfill-miro</pre></td></tr></table>
 </span><span class="lnt">54
 </span><span class="lnt">55
 </span><span class="lnt">56
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  etc git:(feature/kubernetes) aws iam create-group --group-name kops
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  etc git:(feature/kubernetes) aws iam create-group --group-name kops
 {
     &#34;Group&#34;: {
         &#34;Path&#34;: &#34;/&#34;,
@@ -363,13 +351,13 @@ AWS_PROFILE=twfulfill-miro</pre></td></tr></table>
 ➜  etc git:(feature/kubernetes) aws iam list-group-policies --group-name kops
 {
     &#34;PolicyNames&#34;: []
-}</pre></td></tr></table>
+}
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="create-kops-user">Create kops user</h2>
+</div><h2 id="create-kops-user">Create kops user</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -408,9 +396,9 @@ AWS_PROFILE=twfulfill-miro</pre></td></tr></table>
 </span><span class="lnt">37
 </span><span class="lnt">38
 </span><span class="lnt">39
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">## Before
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">## Before
 ➜  etc git:(feature/kubernetes) aws iam list-users | jq &#34;.Users[].UserName&#34; 
 &#34;twfulfillment.prod.miro.adamy&#34;
 ... DELETED ...
@@ -448,19 +436,16 @@ AWS_PROFILE=twfulfill-miro</pre></td></tr></table>
             &#34;CreateDate&#34;: &#34;2018-05-07T15:13:38Z&#34;
         }
     ]
-}</pre></td></tr></table>
+}
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="s3-buckets">S3 Buckets</h2>
-
+</div><h2 id="s3-buckets">S3 Buckets</h2>
 <p>Kops needs dedicated S3 bucket to store artifacts.</p>
-
 <p>We will create one for each environment now: DEV, UAT, PROD.</p>
-
 <p>Naming convention: PROJECT-k8s-ENVIRONMENT</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -525,9 +510,9 @@ AWS_PROFILE=twfulfill-miro</pre></td></tr></table>
 </span><span class="lnt">63
 </span><span class="lnt">64
 </span><span class="lnt">65
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">## List existing buckets
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">## List existing buckets
 ➜  etc git:(feature/kubernetes) aws s3api list-buckets
 {
     &#34;Buckets&#34;: [],
@@ -591,17 +576,15 @@ AWS_PROFILE=twfulfill-miro</pre></td></tr></table>
 ➜  etc git:(feature/kubernetes) aws s3api get-bucket-versioning --bucket twfulfillment-k8s-prod
 {
     &#34;Status&#34;: &#34;Enabled&#34;
-}</pre></td></tr></table>
+}
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="set-up-cluster-using-kops">Set up cluster using kops</h2>
-
+</div><h2 id="set-up-cluster-using-kops">Set up cluster using kops</h2>
 <p>From now on, make SURE the AWS_xxx env variables are defined.</p>
-
 <p>Generate key pairs</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -623,9 +606,9 @@ AWS_PROFILE=twfulfill-miro</pre></td></tr></table>
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  etc git:(feature/kubernetes) cd k8s
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  etc git:(feature/kubernetes) cd k8s
 ➜  k8s git:(feature/kubernetes) ll
  
 ## Location of keys for DEV and UAT. See
@@ -646,28 +629,25 @@ total 48
 -rw-------  1 miro  staff   1.6K  7 May 17:42 twfulfillment-prod-ssh
 -rw-r--r--  1 miro  staff   404B  7 May 17:42 twfulfillment-prod-ssh.pub
 -rw-------  1 miro  staff   1.6K  7 May 17:42 twfulfillment-uat-ssh
--rw-r--r--  1 miro  staff   403B  7 May 17:42 twfulfillment-uat-ssh.pub</pre></td></tr></table>
+-rw-r--r--  1 miro  staff   403B  7 May 17:42 twfulfillment-uat-ssh.pub
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="creating-the-clusters">Creating the clusters</h1>
-
+</div><h1 id="creating-the-clusters">Creating the clusters</h1>
 <p>We will be creating 2 clusters in us-east-1</p>
-
 <p>The instances used will be 3x t2.medium per cluster - 1x master + 2 worker nodes. We need t2.medium for Java processes and Kuberneters recommends the master to be at least t2.medium (or t2.large for larger number of worker nodes).</p>
-
 <p>The command</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">kops create cluster --zones us-east-1a,us-east-1b --name twfulfillment-uat.k8s.local --ssh-public-key=./twfulfillment-uat-ssh.pub --state=s3://twfulfillment-k8s-uat --kubernetes-version 1.9.3 --node-count 2 --node-size t2.medium --master-size t2.medium</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">kops create cluster --zones us-east-1a,us-east-1b --name twfulfillment-uat.k8s.local --ssh-public-key=./twfulfillment-uat-ssh.pub --state=s3://twfulfillment-k8s-uat --kubernetes-version 1.9.3 --node-count 2 --node-size t2.medium --master-size t2.medium
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="preview">Preview</h2>
+</div><h2 id="preview">Preview</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">  1
+<pre class="chroma"><code><span class="lnt">  1
 </span><span class="lnt">  2
 </span><span class="lnt">  3
 </span><span class="lnt">  4
@@ -1061,9 +1041,9 @@ total 48
 </span><span class="lnt">392
 </span><span class="lnt">393
 </span><span class="lnt">394
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  k8s git:(feature/kubernetes) kops create cluster --zones us-east-1a,us-east-1b --name twfulfillment-uat.k8s.local --ssh-public-key=./twfulfillment-uat-ssh.pub --state=s3://twfulfillment-k8s-uat --kubernetes-version 1.9.3 --node-count 2 --node-size t2.medium --master-size t2.medium
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  k8s git:(feature/kubernetes) kops create cluster --zones us-east-1a,us-east-1b --name twfulfillment-uat.k8s.local --ssh-public-key=./twfulfillment-uat-ssh.pub --state=s3://twfulfillment-k8s-uat --kubernetes-version 1.9.3 --node-count 2 --node-size t2.medium --master-size t2.medium
 I0507 18:22:46.988689   59427 create_cluster.go:1318] Using SSH public key: ./twfulfillment-uat-ssh.pub
 I0507 18:22:48.416794   59427 create_cluster.go:472] Inferred --cloud=aws from zone &#34;us-east-1a&#34;
 I0507 18:22:49.245107   59427 subnets.go:184] Assigned CIDR 172.20.32.0/19 to subnet us-east-1a
@@ -1456,13 +1436,13 @@ Suggestions:
  * edit your node instance group: kops edit ig --name=twfulfillment-uat.k8s.local nodes
  * edit your master instance group: kops edit ig --name=twfulfillment-uat.k8s.local master-us-east-1a
  
-Finally configure your cluster with: kops update cluster twfulfillment-uat.k8s.local --yes</pre></td></tr></table>
+Finally configure your cluster with: kops update cluster twfulfillment-uat.k8s.local --yes
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="actual-creation">Actual creation</h2>
+</div><h2 id="actual-creation">Actual creation</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1514,9 +1494,9 @@ Finally configure your cluster with: kops update cluster twfulfillment-uat.k8s.l
 </span><span class="lnt">50
 </span><span class="lnt">51
 </span><span class="lnt">52
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  k8s git:(feature/kubernetes) kops get cluster
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  k8s git:(feature/kubernetes) kops get cluster
  
 State Store: Required value: Please set the --state flag or export KOPS_STATE_STORE.
 A valid value follows the format s3://&lt;bucket&gt;.
@@ -1567,13 +1547,13 @@ Suggestions:
  * list nodes: kubectl get nodes --show-labels
  * ssh to the master: ssh -i ~/.ssh/id_rsa admin@api.twfulfillment-uat.k8s.local
  * the admin user is specific to Debian. If not using Debian please use the appropriate user based on your OS.
- * read about installing addons at: https://github.com/kubernetes/kops/blob/master/docs/addons.md.</pre></td></tr></table>
+ * read about installing addons at: https://github.com/kubernetes/kops/blob/master/docs/addons.md.
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="validation">Validation</h2>
+</div><h2 id="validation">Validation</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1618,9 +1598,9 @@ Suggestions:
 </span><span class="lnt">43
 </span><span class="lnt">44
 </span><span class="lnt">45
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  k8s git:(feature/kubernetes) kubectl cluster-info
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  k8s git:(feature/kubernetes) kubectl cluster-info
 Kubernetes master is running at https://api-twfulfillment-uat-k8s-hqhbfl-2093835009.us-east-1.elb.amazonaws.com
  
 To further debug and diagnose cluster problems, use &#39;kubectl cluster-info dump&#39;.
@@ -1664,13 +1644,13 @@ ip-172-20-89-163.ec2.internal   Ready     node      2m        v1.9.3    34.201.1
 &#34;i-064d2261b5610715f  :  us-east-1b  =&gt;  &#34;
 &#34;i-034013fb3730e284b  :  us-east-1e  =&gt;  54.162.224.243&#34;
 &#34;i-09268120fd4b2b95d  :  us-east-1b  =&gt;  34.234.234.77&#34;
-&#34;i-007a536fedbdd74bc  :  us-east-1b  =&gt;  34.201.19.66&#34;</pre></td></tr></table>
+&#34;i-007a536fedbdd74bc  :  us-east-1b  =&gt;  34.201.19.66&#34;
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>We repeat the process for DEV environment cluster</p>
+</div><p>We repeat the process for DEV environment cluster</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1736,9 +1716,10 @@ ip-172-20-89-163.ec2.internal   Ready     node      2m        v1.9.3    34.201.1
 </span><span class="lnt">64
 </span><span class="lnt">65
 </span><span class="lnt">66
-</span></pre></td>
+</span><span class="lnt">67
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  k8s git:(feature/kubernetes) ✗ kops create cluster --zones us-east-1c,us-east-1d --name twfulfillment-dev.k8s.local --ssh-public-key=./twfulfillment-dev-ssh.pub --state=s3://twfulfillment-k8s-dev --kubernetes-version 1.9.3 --node-count 2 --node-size t2.medium --master-size t2.medium
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  k8s git:(feature/kubernetes) ✗ kops create cluster --zones us-east-1c,us-east-1d --name twfulfillment-dev.k8s.local --ssh-public-key=./twfulfillment-dev-ssh.pub --state=s3://twfulfillment-k8s-dev --kubernetes-version 1.9.3 --node-count 2 --node-size t2.medium --master-size t2.medium
 I0507 18:43:22.701155   59817 create_cluster.go:1318] Using SSH public key: ./twfulfillment-dev-ssh.pub
 I0507 18:43:24.217861   59817 create_cluster.go:472] Inferred --cloud=aws from zone &#34;us-east-1c&#34;
 I0507 18:43:25.002584   59817 subnets.go:184] Assigned CIDR 172.20.32.0/19 to subnet us-east-1c
@@ -1803,14 +1784,13 @@ ip-172-20-82-210.ec2.internal   Ready     node      50s       v1.9.3    34.224.7
 &#34;i-034013fb3730e284b  :  dockercloud-2a3769a0-fa94-458c-9e19-b4da1525ece8  =&gt;  54.162.224.243&#34;
 &#34;i-00fba10c6d2e2e9bb  :  kubernetes.twfulfillment-dev.k8s.local-3c:05:ac:2d:75:14:21:fa:ab:98:c7:3d:9d:68:8d:1d  =&gt;  54.159.165.112&#34;
 &#34;i-09268120fd4b2b95d  :  dockercloud-2a3769a0-fa94-458c-9e19-b4da1525ece8  =&gt;  34.234.234.77&#34;
-&#34;i-007a536fedbdd74bc  :  kubernetes.twfulfillment-uat.k8s.local-c9:e4:2e:2e:a7:6d:f9:4b:d8:20:56:80:3b:2c:12:01  =&gt;  34.201.19.66&#34;</pre></td></tr></table>
-</div>
-</div>
-<p>Kubectl in local docker now will show multiple options</p>
+&#34;i-007a536fedbdd74bc  :  kubernetes.twfulfillment-uat.k8s.local-c9:e4:2e:2e:a7:6d:f9:4b:d8:20:56:80:3b:2c:12:01  =&gt;  34.201.19.66&#34;
 
-<p><img src="/images/2018-05-07_18-45-52.png" alt="" /></p>
-
-<p>link to a <a href="/posts/2014-08-28-elastic-tutorial/">post</a></p>
+</code></pre></td></tr></table>
+</div>
+</div><p>Kubectl in local docker now will show multiple options</p>
+<p><img src="/images/2018-05-07_18-45-52.png" alt=""></p>
+<p>link to a <!-- raw HTML omitted -->post<!-- raw HTML omitted --></p>
 
     </div>
 

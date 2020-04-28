@@ -25,7 +25,7 @@ Finding out Git on MBP:
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2012-09-21-post/" />
@@ -52,16 +52,13 @@ Finding out Git on MBP:
 <meta itemprop="description" content="After update, the ST2 started to complain about missing git command.
 Finding out Git on MBP:
 1 2 3 4 5 6 7 8 9 10 11 12 13 14  platform $ which git git is /usr/bin/git git is /usr/local/bin/git platform $ git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/bin/git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/local/bin/git --version git version 1.7.3.2   Fix the the Package file in /Users/miro/Library/Application Support/Sublime Text 2/Packages/Git - Git.">
-
-
 <meta itemprop="datePublished" content="2012-09-21T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2012-09-21T11:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="127">
 
 
 
-<meta itemprop="keywords" content="editors,osx,git,tools," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="editors,osx,git,tools," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fixing Git plugin for Sublime Text 2"/>
 <meta name="twitter:description" content="After update, the ST2 started to complain about missing git command.
 Finding out Git on MBP:
@@ -148,16 +145,15 @@ Finding out Git on MBP:
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>After update, the ST2 started to complain about missing git command.</p>
-
 <p>Finding out Git on MBP:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -171,9 +167,9 @@ Finding out Git on MBP:
 </span><span class="lnt">12
 </span><span class="lnt">13
 </span><span class="lnt">14
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">platform $ which git
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">platform $ which git
 git is /usr/bin/git
 git is /usr/local/bin/git
  
@@ -186,13 +182,13 @@ git version 1.7.7.5 (Apple Git-26)
  
  
 platform $ /usr/local/bin/git --version
-git version 1.7.3.2</pre></td></tr></table>
+git version 1.7.3.2
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Fix the the Package file in /Users/miro/Library/Application Support/Sublime Text 2/Packages/Git - Git.sublime-settings (it is JSON file)</p>
+</div><p>Fix the the Package file in /Users/miro/Library/Application Support/Sublime Text 2/Packages/Git - Git.sublime-settings (it is JSON file)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -200,19 +196,19 @@ git version 1.7.3.2</pre></td></tr></table>
 </span><span class="lnt">6
 </span><span class="lnt">7
 </span><span class="lnt">8
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">{
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">{
     // save before running commands
     &#34;save_first&#34;: true
  
     // if present, use this command instead of plain &#34;git&#34;
     // e.g. &#34;/Users/kemayo/bin/git&#34; or &#34;C:\bin\git.exe&#34;
     ,&#34;git_command&#34;: &#34;/usr/local/bin/git&#34;
-....</pre></td></tr></table>
+....
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Also, I had to delete the <code>*.sublime_session</code> from <code>/Users/miro/Library/Application Support/Sublime Text 2/Settings</code></p>
+</div><p>Also, I had to delete the <code>*.sublime_session</code> from <code>/Users/miro/Library/Application Support/Sublime Text 2/Settings</code></p>
 
     </div>
 

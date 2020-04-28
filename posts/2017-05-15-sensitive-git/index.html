@@ -25,7 +25,7 @@ Everybody who clones the repository - every developer has access to this informa
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2017-05-15-sensitive-git/" />
@@ -52,16 +52,13 @@ Everybody who clones the repository - every developer has access to this informa
 <meta itemprop="description" content="The purpose of this is to evaluate options and suggest possible approaches for handling the sensitive information in Git repositories such as database credentials, API credentials, passwords, keys, certificates etc. Joel asked this question a few weeks ago - this is part of Milos&rsquo;s security awareness program.
 The issue Git repos store in cleartext all credentials, that may also be including PROD credentials.
 Everybody who clones the repository - every developer has access to this information that should have been shared only with the support team that has legitimate access to production.">
-
-
 <meta itemprop="datePublished" content="2017-05-17T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2017-05-17T11:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="1000">
 
 
 
-<meta itemprop="keywords" content="git," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="git," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Storing sensitive information in Git"/>
 <meta name="twitter:description" content="The purpose of this is to evaluate options and suggest possible approaches for handling the sensitive information in Git repositories such as database credentials, API credentials, passwords, keys, certificates etc. Joel asked this question a few weeks ago - this is part of Milos&rsquo;s security awareness program.
 The issue Git repos store in cleartext all credentials, that may also be including PROD credentials.
@@ -149,76 +146,53 @@ Everybody who clones the repository - every developer has access to this informa
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#the-issue">The issue</a></li>
-<li><a href="#previous-attempts-to-solve-this">Previous attempts to solve this</a>
-<ul>
-<li><a href="#extracting-the-information-from-source-code">Extracting the information from source code</a></li>
-<li><a href="#using-two-repositories">Using two repositories</a></li>
-</ul></li>
-</ul></li>
-<li><a href="#research">Research</a>
-<ul>
-<li><a href="#there-are-two-main-approaches-to-the-issue">There are two main approaches to the issue:</a>
-<ul>
-<li><a href="#exclude-the-secret-information-and-deliver-using-different-channel">Exclude the secret information and deliver using different channel</a>
-<ul>
-<li><a href="#the-issues-with-this-approach">The issues with this approach</a></li>
-</ul></li>
-<li><a href="#encryption">Encryption</a>
-<ul>
-<li><a href="#requirements-for-this-to-work-ok-are">Requirements for this to work OK are</a></li>
-<li><a href="#challenges-with-this-approach">Challenges with this approach</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><a href="#suggested-approach">Suggested approach</a>
-<ul>
-<li><a href="#reusing-existing-solution-poc">Reusing existing solution POC</a></li>
-<li><a href="#poc-of-two-independent-repos-with-layered-approach">POC of two independent repos with layered approach</a>
-<ul>
-<li><a href="#the-key-features-of-the-solution">The key features of the solution</a></li>
-<li><a href="#why-this-is-better-than-what-we-tried-before">Why this is better than what we tried before:</a></li>
-</ul></li>
-<li><a href="#next-steps">Next steps</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#the-issue">The issue</a></li>
+    <li><a href="#previous-attempts-to-solve-this">Previous attempts to solve this</a>
+      <ul>
+        <li><a href="#extracting-the-information-from-source-code">Extracting the information from source code</a></li>
+        <li><a href="#using-two-repositories">Using two repositories</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#there-are-two-main-approaches-to-the-issue">There are two main approaches to the issue:</a>
+      <ul>
+        <li><a href="#exclude-the-secret-information-and-deliver-using-different-channel">Exclude the secret information and deliver using different channel</a></li>
+        <li><a href="#encryption">Encryption</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#reusing-existing-solution-poc">Reusing existing solution POC</a></li>
+    <li><a href="#poc-of-two-independent-repos-with-layered-approach">POC of two independent repos with layered approach</a>
+      <ul>
+        <li><a href="#the-key-features-of-the-solution">The key features of the solution</a></li>
+        <li><a href="#why-this-is-better-than-what-we-tried-before">Why this is better than what we tried before:</a></li>
+      </ul>
+    </li>
+    <li><a href="#next-steps">Next steps</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>The purpose of this is to evaluate options and suggest possible approaches for handling the sensitive information in Git repositories such as database credentials, API credentials, passwords, keys, certificates etc. Joel asked this question a few weeks ago - this is part of Milos&rsquo;s security awareness program.</p>
-
+      <p>The purpose of this is to evaluate options and suggest possible approaches for handling the sensitive information in Git repositories such as database credentials, API credentials, passwords, keys, certificates etc. Joel asked this question a few weeks ago - this is part of Milos&rsquo;s security awareness program.</p>
 <h2 id="the-issue">The issue</h2>
-
 <p>Git repos store in cleartext all credentials, that may also be including PROD credentials.</p>
-
 <p>Everybody who clones the repository - every developer has access to this information that should have been shared only with the support team that has legitimate access to production.</p>
-
 <p>This is especially sensitive when project includes external parties that are collaborating on the project (partner development companies or subcontractors).</p>
-
 <h2 id="previous-attempts-to-solve-this">Previous attempts to solve this</h2>
-
 <p>We have tried to address this in two ways with mixed success, using these approaches:</p>
-
 <h3 id="extracting-the-information-from-source-code">Extracting the information from source code</h3>
-
 <p>The issue with this was necessity of manual steps on deployment, increased risk of human errors and more costly / fragile deployment process. Not only was this against the direction we wanted to go (DevOps and automation - towards continuous integration), it also removed version tracking and history from those critically important artifact</p>
-
 <h3 id="using-two-repositories">Using two repositories</h3>
-
 <p>In a nutshell, in addition to &ldquo;full&rdquo; repo with all files (including secret files), there was a copy of the repository (dev-repo), containing a subset of the commits that had those sensitive files removed from history and from current worktree.</p>
-
 <p>Because of the way how Git internally works (the history is a tree of commits which are immutable), the dev-repo must always be a subset of full repo - all commits in dev-repo must eventually exist in full repo, but not the other way around.</p>
-
 <p>The idea was that only the team lead / senior internal dev team would use the full repo, while everybody else would have access only to dev-repo.</p>
-
 <p><em>The main difficulties of this were</em></p>
-
 <ul>
 <li>this approach required a complex and fragile manual merge from two upstream repos</li>
 <li>Git does not really support the concept of keeping two remotes non-synchronized</li>
@@ -228,13 +202,9 @@ Everybody who clones the repository - every developer has access to this informa
 <li>it was initially very labour intensive / costly to set-up two repositories so that the above process worked OK</li>
 <li>it did not 100% solve the problem as part of the DEV team still had full access to all credentials</li>
 </ul>
-
 <h1 id="research">Research</h1>
-
 <p>I spent some time googling what others facing same challenge do.</p>
-
 <p>Some of the relevant links:</p>
-
 <ul>
 <li><a href="http://www.twinbit.it/en/blog/storing-sensitive-data-git-repository-using-git-crypt">http://www.twinbit.it/en/blog/storing-sensitive-data-git-repository-using-git-crypt</a></li>
 <li><a href="http://blog.arvidandersson.se/2013/06/10/credentials-in-git-repos">http://blog.arvidandersson.se/2013/06/10/credentials-in-git-repos</a></li>
@@ -244,50 +214,33 @@ Everybody who clones the repository - every developer has access to this informa
 <li><a href="https://www.agwa.name/projects/git-crypt/">https://www.agwa.name/projects/git-crypt/</a></li>
 <li><a href="https://github.com/moby/moby/issues/13490">https://github.com/moby/moby/issues/13490</a> - this is about Docker but still relevant</li>
 </ul>
-
 <h2 id="there-are-two-main-approaches-to-the-issue">There are two main approaches to the issue:</h2>
-
 <h3 id="exclude-the-secret-information-and-deliver-using-different-channel">Exclude the secret information and deliver using different channel</h3>
-
 <p>Basically, our attempt #1. The methods used either special property file or environment variables.</p>
-
 <h4 id="the-issues-with-this-approach">The issues with this approach</h4>
-
 <ul>
 <li>it requires changes in the source code as the values need to be retrieved from the other channel (e.g. read from file or accessed from ENV)</li>
 <li>it does not address maintaining the history / changes of the sensitive information. The file needs to be delivered /managed somehow or the .bash_profile needs to be managed</li>
 <li>the code retrieving the secret info may have issues / does not work well in heterogenous environment (developers using Windows, Macs, PROD using Linux)</li>
 </ul>
-
 <h3 id="encryption">Encryption</h3>
-
 <p>This approach encrypts some of the files and decrypts them only in target environments.</p>
-
 <h4 id="requirements-for-this-to-work-ok-are">Requirements for this to work OK are</h4>
-
 <ul>
 <li>small number of files encrypted</li>
 <li>the secret files for different environment must be separated by path - e.g. connection credentials for DEV or QA or UAT must be available without decrypting the PROD specific file</li>
 <li>it must work with our build systems (ant/Jenkins based)</li>
 </ul>
-
 <h4 id="challenges-with-this-approach">Challenges with this approach</h4>
-
 <ul>
 <li>we need to make sure that the PROD credentials get decrypted before or during the deployment process. This can be performed either on the build server (assuming that they are properly secured) or in the PROD environment</li>
 <li>encryption / decryption key management</li>
 </ul>
-
 <h1 id="suggested-approach">Suggested approach</h1>
-
 <p>I suggest looking into two possible directions</p>
-
 <h2 id="reusing-existing-solution-poc">Reusing existing solution POC</h2>
-
 <p>Judging by the research, the promising approach seems to be open source project <a href="https://www.agwa.name/projects/git-crypt/">https://www.agwa.name/projects/git-crypt/</a></p>
-
 <p>We need to do a proof of concept that will answer the following questions:</p>
-
 <ul>
 <li>does it work as described?</li>
 <li>is there any performance impact with repos ~ 1GB size?</li>
@@ -297,35 +250,22 @@ Everybody who clones the repository - every developer has access to this informa
 <li>is there any issue with performing decryption from the PROD server (sysutil)?</li>
 <li>what is the key management logistic / process?</li>
 </ul>
-
 <h2 id="poc-of-two-independent-repos-with-layered-approach">POC of two independent repos with layered approach</h2>
-
 <p>This is a combination of removing the files (replacing with dummy credentials for PROD) and utilizing second - secret repository for protected resources.</p>
-
 <h3 id="the-key-features-of-the-solution">The key features of the solution</h3>
-
 <p>We do use two independent repositories.</p>
-
 <p>The main repo contains placeholders for the protected files and is available to developers. The second repo contains only protected files, unencrypted, in pathnames corresponding to file locations in the first repo. This secret repo is available only to support or secured build server.</p>
-
 <p>The build on non-PROD environment will work as before - connectivity to PROD would be prevented by false / fake credentials</p>
-
 <p>The build in PROD would use the main repo, clone the secret repo in the different place and superimpose / overwrite files</p>
-
 <p>The idea is very similar to the layered file system Docker uses - implemented by physical copy.</p>
-
 <p>The script that will perform the overwrite will be part of the secret repo and will expect parameter - path to the root of the main repository</p>
-
 <h3 id="why-this-is-better-than-what-we-tried-before">Why this is better than what we tried before:</h3>
-
 <ul>
 <li>there is no complex and fragile manual merge-sync required</li>
 <li>no danger of cross-copying commits - both repos are maintained separately</li>
 <li>no key management overhead</li>
 </ul>
-
 <h2 id="next-steps">Next steps</h2>
-
 <ul>
 <li>review / feedback</li>
 <li>POC for git-crypt</li>

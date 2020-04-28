@@ -24,7 +24,7 @@ One option would be to write a document that contails IP&amp;rsquo;s of the mach
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2008-08-25-easy-access-to-log-files/" />
@@ -49,16 +49,13 @@ One option would be to write a document that contails IP&rsquo;s of the machines
 <meta itemprop="name" content="Easy access to log files">
 <meta itemprop="description" content="Here is the scoop: I need to provide access to multiple log files spread across multiple directories of multiple machines. For example - the JBoss log files and nohup.out, ATG log files, and so on - so that the testers can see what happened on server side when something looks fishy on front end.
 One option would be to write a document that contails IP&rsquo;s of the machines, create user accounts, make sure that they have just enough access rights to see the files but not disturb anything else &hellip;">
-
-
 <meta itemprop="datePublished" content="2008-08-25T22:04:04-04:00" />
 <meta itemprop="dateModified" content="2008-08-25T22:04:04-04:00" />
-<meta itemprop="wordCount" content="269">
+<meta itemprop="wordCount" content="243">
 
 
 
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Easy access to log files"/>
 <meta name="twitter:description" content="Here is the scoop: I need to provide access to multiple log files spread across multiple directories of multiple machines. For example - the JBoss log files and nohup.out, ATG log files, and so on - so that the testers can see what happened on server side when something looks fishy on front end.
 One option would be to write a document that contails IP&rsquo;s of the machines, create user accounts, make sure that they have just enough access rights to see the files but not disturb anything else &hellip;"/>
@@ -135,7 +132,7 @@ One option would be to write a document that contails IP&rsquo;s of the machines
         <div class="post-category">
             <a href="/categories/programming/"> programming </a>
             </div>
-          <span class="more-meta"> 269 words </span>
+          <span class="more-meta"> 243 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -144,26 +141,20 @@ One option would be to write a document that contails IP&rsquo;s of the machines
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>Here is the scoop: I need to provide access to multiple log files spread across multiple directories of multiple machines. For example - the JBoss log files and nohup.out, ATG log files, and so on - so that the testers can see what happened on server side when something looks fishy on front end.</p>
-
 <p>One option would be to write a document that contails IP&rsquo;s of the machines, create user accounts, make sure that they have just enough access rights to see the files but not disturb anything else &hellip;</p>
-
 <p>Other option is to leverage the already installed Python across all the servers. I wish it was Ruby, but one cannot have everything.</p>
-
 <p>On each machine, I created directory - e.g.</p>
-
 <p><code>~/webaccess</code></p>
-
 <p>and made symbolic links to all log files or log directories required.</p>
-
 <p>Then I placed this python script into the directory:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -184,9 +175,9 @@ One option would be to write a document that contails IP&rsquo;s of the machines
 </span><span class="lnt">19
 </span><span class="lnt">20
 </span><span class="lnt">21
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">#!/usr/bin/python
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#!/usr/bin/python
 
 import SimpleHTTPServer
 import SocketServer
@@ -206,22 +197,17 @@ Handler.extensions_map.update({
 httpd = SocketServer.TCPServer((&#34;&#34;, PORT), Handler)
 
 print &#34;serving at port&#34;, PORT
-httpd.serve_forever()</pre></td></tr></table>
+httpd.serve_forever()
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>and started it as</p>
-
+</div><p>and started it as</p>
 <p><code>nohup ./simpleserver.py &amp;</code></p>
-
 <p>From this moment on, all files linked (actually all files in subtree of server directory) are accessible by going to</p>
-
 <p><code>http://SERVERNAME:9999/</code></p>
-
 <ul>
-<li>which shows directory listing for linked files.</p>
-<p>On one of the machine, I have placed additional file - index.html that contained links to all other server names.</p>
-<p>Thanks to <a href="http://effbot.org/librarybook/simplehttpserver.htm" target="_blank">this page</a> for inspiration.</p></li>
+<li>which shows directory listing for linked files.<!-- raw HTML omitted --></li>
 </ul>
+<!-- raw HTML omitted -->
 
     </div>
 

@@ -17,10 +17,10 @@
       <pubDate>Tue, 22 Apr 2014 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2014-04-22-autorename-screenshots/</guid>
-      <description> Move the location of the screenshots I do not want to have ~/Desktop polluted with files. Thus
+      <description>Move the location of the screenshots I do not want to have ~/Desktop polluted with files. Thus
 1 2 3  mkdir -p ~/Documents/Screenshots defaults write com.apple.screencapture location ~/Documents/Screenshots killall SystemUIServer   Test the screenshot - it does it
 Automator based auto-rename  Create Folder action for ~/Documents/Screenshots  It has 3 actions
-1 2 3  s/Screen Shots // s/./-/g s/ at /_/  </description>
+1 2 3  s/Screen Shots // s/./-/g s/ at /_/   </description>
     </item>
     
   </channel>

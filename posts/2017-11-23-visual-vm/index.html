@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="The idea / motivation In order to run VisualVM from predefined configuration you need to point the app to the user directory. This directory takes about 20MB, but 90% of the the content is actually generated or repeated.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4." /><meta name="keywords" content="blog, Miro" />
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.0K tw-sl/update 104K tw-sl/update_tracking 11M tw-sl/var ➜ 4devops-visualvm git:(master) du -sh tw-wool/* 248K tw-wool/config 7." /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2017-11-23-visual-vm/" />
@@ -41,27 +41,24 @@
 
 <meta property="og:title" content="VisualVM inside Docker container" />
 <meta property="og:description" content="The idea / motivation In order to run VisualVM from predefined configuration you need to point the app to the user directory. This directory takes about 20MB, but 90% of the the content is actually generated or repeated.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4." />
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.0K tw-sl/update 104K tw-sl/update_tracking 11M tw-sl/var ➜ 4devops-visualvm git:(master) du -sh tw-wool/* 248K tw-wool/config 7." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2017-11-23-visual-vm/" />
 <meta property="article:published_time" content="2017-11-23T11:22:48+08:00" />
 <meta property="article:modified_time" content="2017-11-23T11:22:48+08:00" />
 <meta itemprop="name" content="VisualVM inside Docker container">
 <meta itemprop="description" content="The idea / motivation In order to run VisualVM from predefined configuration you need to point the app to the user directory. This directory takes about 20MB, but 90% of the the content is actually generated or repeated.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.">
-
-
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.0K tw-sl/update 104K tw-sl/update_tracking 11M tw-sl/var ➜ 4devops-visualvm git:(master) du -sh tw-wool/* 248K tw-wool/config 7.">
 <meta itemprop="datePublished" content="2017-11-23T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2017-11-23T11:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="595">
 
 
 
-<meta itemprop="keywords" content="docker,virtualization,java,monitoring," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="docker,virtualization,java,monitoring," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="VisualVM inside Docker container"/>
 <meta name="twitter:description" content="The idea / motivation In order to run VisualVM from predefined configuration you need to point the app to the user directory. This directory takes about 20MB, but 90% of the the content is actually generated or repeated.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4."/>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.0K tw-sl/update 104K tw-sl/update_tracking 11M tw-sl/var ➜ 4devops-visualvm git:(master) du -sh tw-wool/* 248K tw-wool/config 7."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -145,26 +142,20 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#the-idea-motivation">The idea / motivation</a></li>
-<li><a href="#quick-and-dirty-solution">Quick and dirty solution</a></li>
-<li><a href="#how-to-use-it">How to use it</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#the-idea--motivation">The idea / motivation</a></li>
+    <li><a href="#quick-and-dirty-solution">Quick and dirty solution</a></li>
+    <li><a href="#how-to-use-it">How to use it</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h2 id="the-idea-motivation">The idea / motivation</h2>
-
+      <h2 id="the-idea--motivation">The idea / motivation</h2>
 <p>In order to run VisualVM from predefined configuration you need to point the app to the user directory. This directory takes about 20MB, but 90% of the the content is actually generated or repeated.</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -182,9 +173,9 @@
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  4devops-visualvm git:(master) du -sh tw-sl/*
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  4devops-visualvm git:(master) du -sh tw-sl/*
 244K    tw-sl/config
 7.3M    tw-sl/modules
  52K    tw-sl/repository
@@ -201,13 +192,13 @@
  11M    tw-wool/var
 
 ➜  4devops-visualvm git:(master) du -sh tw-wool
- 19M    tw-wool</pre></td></tr></table>
+ 19M    tw-wool
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The only part that is specific and worthy of maintaining in the Git repo is repository</p>
+</div><p>The only part that is specific and worthy of maintaining in the Git repo is repository</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -243,9 +234,9 @@
 </span><span class="lnt">34
 </span><span class="lnt">35
 </span><span class="lnt">36
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  4devops-visualvm git:(master) du -sh tw-wool/repository/*
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  4devops-visualvm git:(master) du -sh tw-wool/repository/*
  16K    tw-wool/repository/hosts
  44K    tw-wool/repository/jmxapplications
  
@@ -280,51 +271,43 @@ tw-wool/repository
     └── 1445526765731.jmx
         └── jmxapplication.properties
  
-13 directories, 15 files</pre></td></tr></table>
+13 directories, 15 files
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>which contains the hosts and JMX app definitions</p>
-
+</div><p>which contains the hosts and JMX app definitions</p>
 <p>Ideally, we would want to have Docker container that would encapsulate the VisualVM install and provide as external volume only the configuration part. This part is small enough (and textual) so that it can be maintained efficiently in Git while the common and generated files(rest of the 20MB) will be inside container</p>
-
 <h2 id="quick-and-dirty-solution">Quick and dirty solution</h2>
-
 <p>For this to work, we need Docker container capable of running GUI application and efficient client access
 (e.g. VNC)</p>
-
 <p>Starting point is <a href="https://github.com/ConSol/docker-headless-vnc-container">https://github.com/ConSol/docker-headless-vnc-container</a></p>
-
 <p>I have tested the container and selected xfce+ubuntu for start</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
 </span><span class="lnt">7
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  ~ docker run -d -p 5901:5901 -p 6901:6901 -e VNC_RESOLUTION=800x600 consol/ubuntu-icewm-vnc
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  ~ docker run -d -p 5901:5901 -p 6901:6901 -e VNC_RESOLUTION=800x600 consol/ubuntu-icewm-vnc
  
 ➜  ~ docker run -d -p 5901:5901 -p 6901:6901 consol/centos-xfce-vnc
  
 Connect with JollyFastVNCPro - port 5901 / vncpassword
 or
-http://localhost:6901/</pre></td></tr></table>
+http://localhost:6901/
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>I have installed inside this container visualVM, ssh client using docker exec and made commit (actually, 3 commits).</p>
-
+</div><p>I have installed inside this container visualVM, ssh client using docker exec and made commit (actually, 3 commits).</p>
 <p>The result is available at thinkwrap/ubuntu-xfce-vnc-visualvm:v3 (private image)</p>
-
 <h2 id="how-to-use-it">How to use it</h2>
-
 <p>Create local directory for the shared information containing only hosts and JMX property files. Here is mine</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -341,9 +324,9 @@ http://localhost:6901/</pre></td></tr></table>
 </span><span class="lnt">15
 </span><span class="lnt">16
 </span><span class="lnt">17
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">➜  test-config tree sim-prod
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  test-config tree sim-prod
 sim-prod
 └── repository
     ├── hosts
@@ -359,31 +342,26 @@ sim-prod
 ➜  test-config ll
 total 32
 -rw-r--r--@ 1 miro  staff    16K 19 Nov 20:43 hosts-file
-drwxr-xr-x  3 miro  staff    96B 19 Nov 20:35 sim-prod</pre></td></tr></table>
+drwxr-xr-x  3 miro  staff    96B 19 Nov 20:35 sim-prod
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Also, copy the /etc/hosts file as hosts-file so that Docker uses your known mappings</p>
-
+</div><p>Also, copy the /etc/hosts file as hosts-file so that Docker uses your known mappings</p>
 <p>Start container with desired resolution and 2 volumes - one for mapped config and one for hostfile</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">test-config docker run -d -p 5901:5901 -p 6901:6901 -e VNC_RESOLUTION=800x600 -v /Users/miro/src/DEVOPS/test-config/sim-prod/repository:/headless/.visualvm/1.3.8/repository -v /Users/miro/src/DEVOPS/test-config/hosts-file:/etc/hosts thinkwrap/ubuntu-xfce-vnc-visualvm:v3
-e12adcb030a5706f246253ccc93823920a0494b5ae962eb54b8ce2b9627bdbc4</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">test-config docker run -d -p 5901:5901 -p 6901:6901 -e VNC_RESOLUTION=800x600 -v /Users/miro/src/DEVOPS/test-config/sim-prod/repository:/headless/.visualvm/1.3.8/repository -v /Users/miro/src/DEVOPS/test-config/hosts-file:/etc/hosts thinkwrap/ubuntu-xfce-vnc-visualvm:v3
+e12adcb030a5706f246253ccc93823920a0494b5ae962eb54b8ce2b9627bdbc4
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Connect via Web or via VNC client (use vncpassword as vnc password). Degree of uglyness will depend on the client used. The URL to connect to is localhost:5901.</p>
-
+</div><p>Connect via Web or via VNC client (use vncpassword as vnc password). Degree of uglyness will depend on the client used. The URL to connect to is localhost:5901.</p>
 <p>On Mac, you can use OOTB Share Screen app with URL vnc://localhost:5901</p>
-
-<p><img src="/images/visvm-1.webp" alt="" /></p>
-
+<p><img src="/images/visvm-1.webp" alt=""></p>
 <p>Start VisualVM using shortcut - note that provided config is loaded</p>
-
-<p><img src="/images/visvm-2.webp" alt="" /></p>
+<p><img src="/images/visvm-2.webp" alt=""></p>
 
     </div>
 

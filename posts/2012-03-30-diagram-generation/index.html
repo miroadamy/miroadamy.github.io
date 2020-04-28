@@ -16,16 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="GraphViz  installed from package See http://www.graphviz.org/
-1 2 3 4 5 6  Radegast:diagrams miro$ dot -V dot - graphviz version 2.28.0 (20110509.1545) Radegast:diagrams miro$ which dot dot is /usr/local/bin/dot    SchemaSpy  installed in /opt/diagrams see http://schemaspy.sourceforge.net/
-1 2 3 4 5 6 7 8 9 10 11 12  Radegast:schemaSpy miro$ java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/java/jdbc/mysql-connector-java-5.1.7-bin.jar -t mysql -o library -host localhost -u twt_dX_core -db twt_dX_core -p twt_dX_core Using database properties: [." /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="GraphViz  installed from package See http://www.graphviz.org/  1 2 3 4 5 6  Radegast:diagrams miro$ dot -V dot - graphviz version 2.28.0 (20110509.1545) Radegast:diagrams miro$ which dot dot is /usr/local/bin/dot   SchemaSpy  installed in /opt/diagrams see http://schemaspy.sourceforge.net/  1 2 3 4 5 6 7 8 9 10 11 12  Radegast:schemaSpy miro$ java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/java/jdbc/mysql-connector-java-5.1.7-bin.jar -t mysql -o library -host localhost -u twt_dX_core -db twt_dX_core -p twt_dX_core Using database properties: [." /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2012-03-30-diagram-generation/" />
@@ -41,31 +39,22 @@
 
 
 <meta property="og:title" content="Diagram generation - plain text approach" />
-<meta property="og:description" content="GraphViz  installed from package See http://www.graphviz.org/
-1 2 3 4 5 6  Radegast:diagrams miro$ dot -V dot - graphviz version 2.28.0 (20110509.1545) Radegast:diagrams miro$ which dot dot is /usr/local/bin/dot    SchemaSpy  installed in /opt/diagrams see http://schemaspy.sourceforge.net/
-1 2 3 4 5 6 7 8 9 10 11 12  Radegast:schemaSpy miro$ java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/java/jdbc/mysql-connector-java-5.1.7-bin.jar -t mysql -o library -host localhost -u twt_dX_core -db twt_dX_core -p twt_dX_core Using database properties: [." />
+<meta property="og:description" content="GraphViz  installed from package See http://www.graphviz.org/  1 2 3 4 5 6  Radegast:diagrams miro$ dot -V dot - graphviz version 2.28.0 (20110509.1545) Radegast:diagrams miro$ which dot dot is /usr/local/bin/dot   SchemaSpy  installed in /opt/diagrams see http://schemaspy.sourceforge.net/  1 2 3 4 5 6 7 8 9 10 11 12  Radegast:schemaSpy miro$ java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/java/jdbc/mysql-connector-java-5.1.7-bin.jar -t mysql -o library -host localhost -u twt_dX_core -db twt_dX_core -p twt_dX_core Using database properties: [." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2012-03-30-diagram-generation/" />
 <meta property="article:published_time" content="2012-03-30T11:22:48+08:00" />
 <meta property="article:modified_time" content="2012-03-30T11:22:48+08:00" />
 <meta itemprop="name" content="Diagram generation - plain text approach">
-<meta itemprop="description" content="GraphViz  installed from package See http://www.graphviz.org/
-1 2 3 4 5 6  Radegast:diagrams miro$ dot -V dot - graphviz version 2.28.0 (20110509.1545) Radegast:diagrams miro$ which dot dot is /usr/local/bin/dot    SchemaSpy  installed in /opt/diagrams see http://schemaspy.sourceforge.net/
-1 2 3 4 5 6 7 8 9 10 11 12  Radegast:schemaSpy miro$ java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/java/jdbc/mysql-connector-java-5.1.7-bin.jar -t mysql -o library -host localhost -u twt_dX_core -db twt_dX_core -p twt_dX_core Using database properties: [.">
-
-
+<meta itemprop="description" content="GraphViz  installed from package See http://www.graphviz.org/  1 2 3 4 5 6  Radegast:diagrams miro$ dot -V dot - graphviz version 2.28.0 (20110509.1545) Radegast:diagrams miro$ which dot dot is /usr/local/bin/dot   SchemaSpy  installed in /opt/diagrams see http://schemaspy.sourceforge.net/  1 2 3 4 5 6 7 8 9 10 11 12  Radegast:schemaSpy miro$ java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/java/jdbc/mysql-connector-java-5.1.7-bin.jar -t mysql -o library -host localhost -u twt_dX_core -db twt_dX_core -p twt_dX_core Using database properties: [.">
 <meta itemprop="datePublished" content="2012-03-30T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2012-03-30T11:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="364">
 
 
 
-<meta itemprop="keywords" content="tools,plaintext," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="tools,plaintext," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Diagram generation - plain text approach"/>
-<meta name="twitter:description" content="GraphViz  installed from package See http://www.graphviz.org/
-1 2 3 4 5 6  Radegast:diagrams miro$ dot -V dot - graphviz version 2.28.0 (20110509.1545) Radegast:diagrams miro$ which dot dot is /usr/local/bin/dot    SchemaSpy  installed in /opt/diagrams see http://schemaspy.sourceforge.net/
-1 2 3 4 5 6 7 8 9 10 11 12  Radegast:schemaSpy miro$ java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/java/jdbc/mysql-connector-java-5.1.7-bin.jar -t mysql -o library -host localhost -u twt_dX_core -db twt_dX_core -p twt_dX_core Using database properties: [."/>
+<meta name="twitter:description" content="GraphViz  installed from package See http://www.graphviz.org/  1 2 3 4 5 6  Radegast:diagrams miro$ dot -V dot - graphviz version 2.28.0 (20110509.1545) Radegast:diagrams miro$ which dot dot is /usr/local/bin/dot   SchemaSpy  installed in /opt/diagrams see http://schemaspy.sourceforge.net/  1 2 3 4 5 6 7 8 9 10 11 12  Radegast:schemaSpy miro$ java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/java/jdbc/mysql-connector-java-5.1.7-bin.jar -t mysql -o library -host localhost -u twt_dX_core -db twt_dX_core -p twt_dX_core Using database properties: [."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -149,59 +138,51 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#graphviz">GraphViz</a></li>
-<li><a href="#schemaspy">SchemaSpy</a></li>
-<li><a href="#plantuml">PlantUML</a></li>
-<li><a href="#plantuml-dependency-reverse-engineering">PlantUML Dependency Reverse Engineering</a>
-<ul>
-<li><a href="#running-it-from-ant-source-tree">Running it from Ant source tree</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#graphviz">GraphViz</a></li>
+    <li><a href="#schemaspy">SchemaSpy</a></li>
+    <li><a href="#plantuml">PlantUML</a></li>
+    <li><a href="#plantuml-dependency-reverse-engineering">PlantUML Dependency Reverse Engineering</a>
+      <ul>
+        <li><a href="#running-it-from-ant-source-tree">Running it from Ant source tree</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h2 id="graphviz">GraphViz</h2>
-
+      <h2 id="graphviz">GraphViz</h2>
 <ul>
 <li>installed from package</li>
-
-<li><p>See <a href="http://www.graphviz.org/">http://www.graphviz.org/</a></p>
+<li>See <a href="http://www.graphviz.org/">http://www.graphviz.org/</a></li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span><span class="lnt">6
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Radegast:diagrams miro$ dot -V
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Radegast:diagrams miro$ dot -V
 dot - graphviz version 2.28.0 (20110509.1545)
  
  
 Radegast:diagrams miro$ which dot
-dot is /usr/local/bin/dot</pre></td></tr></table>
+dot is /usr/local/bin/dot
+</code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-
-<h2 id="schemaspy">SchemaSpy</h2>
-
+</div><h2 id="schemaspy">SchemaSpy</h2>
 <ul>
 <li>installed in /opt/diagrams</li>
-
-<li><p>see <a href="http://schemaspy.sourceforge.net/">http://schemaspy.sourceforge.net/</a></p>
+<li>see <a href="http://schemaspy.sourceforge.net/">http://schemaspy.sourceforge.net/</a></li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -213,11 +194,11 @@ dot is /usr/local/bin/dot</pre></td></tr></table>
 </span><span class="lnt">10
 </span><span class="lnt">11
 </span><span class="lnt">12
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Radegast:schemaSpy miro$ java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/java/jdbc/mysql-connector-java-5.1.7-bin.jar -t mysql -o library -host localhost -u twt_dX_core -db twt_dX_core -p twt_dX_core
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Radegast:schemaSpy miro$ java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/java/jdbc/mysql-connector-java-5.1.7-bin.jar -t mysql -o library -host localhost -u twt_dX_core -db twt_dX_core -p twt_dX_core
 Using database properties:
-[./schemaSpy_5.0.0.jar]/net/sourceforge/schemaspy/dbTypes/mysql.properties
+  [./schemaSpy_5.0.0.jar]/net/sourceforge/schemaspy/dbTypes/mysql.properties
 Gathering schema details....................................................................................................................................................................................................................................................................................................................................................(36sec)
 Writing/graphing summary.....
 .......(353sec)
@@ -226,22 +207,19 @@ Wrote relationship details of 337 tables/views to directory &#39;library&#39; in
 View the results by opening library/index.html
 Radegast:schemaSpy miro$
 Radegast:schemaSpy miro$ ll
-total 904</pre></td></tr></table>
+total 904
+</code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-
-<h2 id="plantuml">PlantUML</h2>
-
+</div><h2 id="plantuml">PlantUML</h2>
 <ul>
 <li>installed in /opt/diagrams</li>
 <li>manual is attached: PlantUML Language Reference Guide.pdf</li>
 <li>See <a href="http://plantuml.sourceforge.net/classes.html">http://plantuml.sourceforge.net/classes.html</a></li>
-
-<li><p>in /opt/plantUML-DEMO/ there are sample files</p>
+<li>in /opt/plantUML-DEMO/ there are sample files</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -263,42 +241,38 @@ total 904</pre></td></tr></table>
 </span><span class="lnt">20
 </span><span class="lnt">21
 </span><span class="lnt">22
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">@startuml img/sequence_img009.png   
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">@startuml img/sequence_img009.png   
   
 Alice -&gt; Bob: Authentication Request
 alt successful case
-Bob -&gt; Alice: Authentication Accepted
+    Bob -&gt; Alice: Authentication Accepted
      
 else some kind of failure
-Bob -&gt; Alice: Authentication Failure
+    Bob -&gt; Alice: Authentication Failure
  
-group My own label
-Alice -&gt; Log : Log attack start
-    loop 1000       times
-        Alice -&gt; Bob: DNS Attack
+    group My own label
+    Alice -&gt; Log : Log attack start
+        loop 1000       times
+            Alice -&gt; Bob: DNS Attack
+        end
+    Alice -&gt; Log : Log attack end
     end
-Alice -&gt; Log : Log attack end
-end
      
 else Another type of failure
-Bob -&gt; Alice: Please repeat
+   Bob -&gt; Alice: Please repeat
     
 end
-@enduml</pre></td></tr></table>
+@enduml
+</code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-
-<p><img src="/images/sequence_img009.png" alt="" /></p>
-
+</div><p><img src="/images/sequence_img009.png" alt=""></p>
 <h2 id="plantuml-dependency-reverse-engineering">PlantUML Dependency Reverse Engineering</h2>
-
 <p>Processes source code and generates the PlantUML Class description file</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -311,9 +285,9 @@ end
 </span><span class="lnt">11
 </span><span class="lnt">12
 </span><span class="lnt">13
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">You can run PlantUML Dependency using the following simplest command :
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">You can run PlantUML Dependency using the following simplest command :
 java -jar plantuml-dependency-1.0.1.jar -o plantuml.txt
  
 This will look for all java source files into the current directory recursively, creating a plantuml.txt file describing the PlantUML class diagram description. 
@@ -325,24 +299,25 @@ To filter source files to parse, you can use ANT patterns to include or exclude 
 java -jar plantuml-dependency-1.0.1.jar -i **/*Test*.java -e **/*Generated*.java
   
 To change the output file path, you can use :
-java -jar plantuml-dependency-1.0.1.jar -o &#34;/directory1/test-plantuml.txt&#34;</pre></td></tr></table>
+java -jar plantuml-dependency-1.0.1.jar -o &#34;/directory1/test-plantuml.txt&#34;
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="running-it-from-ant-source-tree">Running it from Ant source tree</h3>
+</div><h3 id="running-it-from-ant-source-tree">Running it from Ant source tree</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">Radegast:platUml-DEMO miro$ java -jar ../plantuml-dependency-1.1.0-jar-with-dependencies.jar -b /Users/miro/src/apache-ant-1.8.1/src/main -o ant-sources.txt
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">Radegast:platUml-DEMO miro$ java -jar ../plantuml-dependency-1.1.0-jar-with-dependencies.jar -b /Users/miro/src/apache-ant-1.8.1/src/main -o ant-sources.txt
 
 ## ... edit ant-sources.txt to include img/target.png and make it smaller
   
-java -Xmx3096m -jar ../plantuml.jar ant-sources.txt</pre></td></tr></table>
+java -Xmx3096m -jar ../plantuml.jar ant-sources.txt
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>

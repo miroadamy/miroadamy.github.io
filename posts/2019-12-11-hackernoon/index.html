@@ -26,7 +26,7 @@ It pretty sure what he describes is actually happening, has been happening befor
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2019-12-11-hackernoon/" />
@@ -55,16 +55,13 @@ It pretty sure what he describes is actually happening, has been happening befor
 https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5
 written by @david.gilbertson.
 It pretty sure what he describes is actually happening, has been happening before he described it and will be happening going on - just obviously not in the named module. The ecosystem of Node modules is so vast and so unstable that considerable number of project do not do enough to catch behaviour like this.">
-
-
 <meta itemprop="datePublished" content="2019-12-11T21:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2019-12-11T21:22:48&#43;08:00" />
 <meta itemprop="wordCount" content="369">
 
 
 
-<meta itemprop="keywords" content="security,hacking," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="security,hacking," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="On harvesting credit card numbers and passwords"/>
 <meta name="twitter:description" content="This is the scariest thing I have read since spring 2018:
 https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5
@@ -152,30 +149,20 @@ It pretty sure what he describes is actually happening, has been happening befor
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>This is the scariest thing I have read since spring 2018:</p>
-
 <p><a href="https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5">https://hackernoon.com/im-harvesting-credit-card-numbers-and-passwords-from-your-site-here-s-how-9a8cb347c5b5</a></p>
-
 <p>written by @david.gilbertson.</p>
-
 <p>It pretty sure what he describes is actually happening, has been happening before he described it and will be happening going on - just obviously not in the named module. The ecosystem of Node modules is so vast and so unstable that considerable number of project do not do enough to catch behaviour like this.</p>
-
 <p>Why is this important: security is not optional and project budgets simply do not count on extensive investigation over transitive closure of all dependencies. What makes it even worse, it is not a job that can be done and checked off for the duration of the product. Unless the depencies and their dependencies are frozen, it is very easy to grab newer version of a second or third level dependency that may infected.</p>
-
 <p>And also, it is not Node issue only. I can imagine Python will suffer same issues with its ecosystem as rich and as dynamic as it is today. Not everybody is using pipenv and freezing the library versions. And the same can be true for Java and JARs.</p>
-
 <p>Docker of course add completely different level to this by shipping binary images which can contain pretty much anything. Unless you use commercially scanned and validated images, verify SHA1 and review every source docker file and every package installed, you are not safe.</p>
-
 <p>Reviewing dockerfile is not enough - as it is trivial to run clean and safe container, install something malicious and the commit the changes. If you cleverly tag the container, it may be picked up and spread.</p>
-
 <p>One does not really need to doctor the image - all that is necessary is to find an exploit in useful Linux utility and then search which docker images installed it - and which images are using the contaminated one as base</p>
-
 <p>And when Kubernetes really becomes &ldquo;OS of the cloud&rdquo;, the new opportunities will emerges. Just check how many system or infrastructure containers you have when you install Istio, Dashboard, ArgoCD, Traefik etc etc. Can you be sure you trust these and know what is really running inside your cluster ?</p>
-
 <p>We are living in dangerous times.</p>
 
     </div>

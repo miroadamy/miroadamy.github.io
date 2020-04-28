@@ -25,7 +25,7 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2016-02-18-access-aws-servers/" />
@@ -52,16 +52,13 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
 <meta itemprop="description" content="Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.
 The credit for finding out about approach is blog post by James McOrmond - VPN over SSH - who is using this neat trick from Linux for quite some time.
 The software mentioned https://github.com/apenwarr/sshuttle supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).">
-
-
 <meta itemprop="datePublished" content="2016-02-18T00:57:35-05:00" />
 <meta itemprop="dateModified" content="2016-02-18T00:57:35-05:00" />
 <meta itemprop="wordCount" content="804">
 
 
 
-<meta itemprop="keywords" content="osx,git," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="osx,git," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Accessing internal AWS servers directly from Mac"/>
 <meta name="twitter:description" content="Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.
 The credit for finding out about approach is blog post by James McOrmond - VPN over SSH - who is using this neat trick from Linux for quite some time.
@@ -149,51 +146,36 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#how-it-works">How it works</a></li>
-<li><a href="#other-useful-tricks">Other useful tricks</a>
-<ul>
-<li><a href="#redirect-the-dns-as-well">Redirect the DNS as well</a></li>
-<li><a href="#exclude-some-traffic">Exclude some traffic</a></li>
-<li><a href="#redirect-only-some-traffic">Redirect ONLY some traffic</a></li>
-<li><a href="#few-helpers">Few helpers</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#how-it-works">How it works</a></li>
+        <li><a href="#other-useful-tricks">Other useful tricks</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.</p>
-
+      <p>Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.</p>
 <p>The credit for finding out about approach is blog post by James McOrmond - VPN over SSH - who is using this neat trick from Linux for quite some time.</p>
-
 <p>The software mentioned <a href="https://github.com/apenwarr/sshuttle">https://github.com/apenwarr/sshuttle</a> supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).</p>
-
 <p>This <a href="https://github.com/jagheterfredrik/sshuttle">version</a> seems to work on 10.10  - but Homebrew is better anyway.</p>
-
 <p>Fortunately, in the meantime somebody created brew cask, so to install functioning version run</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">brew install sshuttle</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">brew install sshuttle
+</code></pre></td></tr></table>
 </div>
-</div>
-<h3 id="how-it-works">How it works</h3>
-
+</div><h3 id="how-it-works">How it works</h3>
 <p>Options available</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -221,9 +203,9 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
 </span><span class="lnt">26
 </span><span class="lnt">27
 </span><span class="lnt">28
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">~  sshuttle
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">~  sshuttle
 error: at least one subnet, subnet file, or -N expected
 usage: sshuttle [-l [ip:]port] [-r [username@]sshserver[:port]] &lt;subnets...&gt;
    or: sshuttle --firewall &lt;port&gt; &lt;subnets...&gt;
@@ -250,76 +232,64 @@ usage: sshuttle [-l [ip:]port] [-r [username@]sshserver[:port]] &lt;subnets...&g
     --pidfile ...         pidfile name (only if using --daemon) [./sshuttle.pid]
     --server              (internal use only)
     --firewall            (internal use only)
-    --hostwatch           (internal use only)</pre></td></tr></table>
+    --hostwatch           (internal use only)
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>This is example from UAT environment in the clpud.</p>
-
+</div><p>This is example from UAT environment in the clpud.</p>
 <p>The externally visible box is uat-nat. If I ssh to this box, I am able to see the uat-mgmt box running BCC (which is otherwise inaccessible). I cannot however create ssh tunnel from uat-nat to uat-mgmt exposing 8080 port on mgmt, because this port would not be allowed for external access.</p>
-
 <p>Instead, I can use the sshuttle to direct all (or some) network traffic from local mac to the uat-nat box:</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">sshuttle  -vr miro.adamy@uat-nat 0/0</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle  -vr miro.adamy@uat-nat 0/0
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>The -v flag means verbose - you will see the communication in the command line</p>
-
+</div><p>The -v flag means verbose - you will see the communication in the command line</p>
 <p>It asks for 2 passwords:</p>
-
 <ul>
 <li>first, sudo password on local Mac</li>
 <li>then login password for the user on remote host (unless you have installed public key)</li>
 </ul>
-
 <p>After this, you can access the hosts inside AWS using internal IP address - e.g. access BCC on uat-mgmt :</p>
-
-<p><img src="/images/aws-sshuttle.png" alt="BCC inside AWS" /></p>
-
+<p><img src="/images/aws-sshuttle.png" alt="BCC inside AWS"></p>
 <p>Keep in mind that only TCP and DNS is redirected, UDP, ICMP etc is not.</p>
-
 <h3 id="other-useful-tricks">Other useful tricks</h3>
-
 <p>Source: <a href="http://teohm.com/blog/2012/04/01/using-sshuttle-in-daily-work/">http://teohm.com/blog/2012/04/01/using-sshuttle-in-daily-work/</a></p>
-
 <h4 id="redirect-the-dns-as-well">Redirect the DNS as well</h4>
-
 <p>uses ssh_server from ~/.ssh/config</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">sshuttle --dns -vr ssh_server 0/0</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle --dns -vr ssh_server 0/0
+</code></pre></td></tr></table>
 </div>
-</div>
-<h4 id="exclude-some-traffic">Exclude some traffic</h4>
+</div><h4 id="exclude-some-traffic">Exclude some traffic</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">sshuttle --dns -vr ssh_server -x 121.9.204.0/24 -x 61.135.196.21 0/0</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle --dns -vr ssh_server -x 121.9.204.0/24 -x 61.135.196.21 0/0
+</code></pre></td></tr></table>
 </div>
-</div>
-<h4 id="redirect-only-some-traffic">Redirect ONLY some traffic</h4>
+</div><h4 id="redirect-only-some-traffic">Redirect ONLY some traffic</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">sshuttle -vr ssh_server 121.9.204.0/24 61.135.196.21</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle -vr ssh_server 121.9.204.0/24 61.135.196.21
+</code></pre></td></tr></table>
 </div>
-</div>
-<h4 id="few-helpers">Few helpers</h4>
-
+</div><h4 id="few-helpers">Few helpers</h4>
 <p>(after some search found at )</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -367,9 +337,9 @@ usage: sshuttle [-l [ip:]port] [-r [username@]sshserver[:port]] &lt;subnets...&g
 </span><span class="lnt">46
 </span><span class="lnt">47
 </span><span class="lnt">48
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"># sshuttle helpers
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># sshuttle helpers
  
 # set default SSH server:
 #   user@hostname or a host in ~/.ssh/config
@@ -416,7 +386,8 @@ function tnlbut() {
 #
 function vpnto() {
   sshuttle -HNvr $1;
-}</pre></td></tr></table>
+}
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>

@@ -19,7 +19,7 @@
       <guid>https://miroadamy.com/posts/2016-03-23-gitbits2/</guid>
       <description>Using the Scala source repo to demonstrate - see Github
 Show merged and unmerged branches This command allows you to show all local branches merged / unmerged to current branch
-1 2 3 4 5  ➜ scala git:(2.12.x) git branch -a --merged * 2.12.x remotes/origin/2.11.x remotes/origin/2.12.x remotes/origin/HEAD -&amp;gt; origin/2.12.x  1 2 3 4 5 6 7  ➜ scala git:(2.12.x) git branch -a --no-merged remotes/origin/2.10.x remotes/origin/2.8.x remotes/origin/2.9.x remotes/origin/DarkDimius-patch-1 remotes/origin/gh-pages remotes/origin/legacy/msil   This shows you all local branches merged into named branch:</description>
+1 2 3 4 5  ➜ scala git:(2.12.x) git branch -a --merged * 2.12.x remotes/origin/2.11.x remotes/origin/2.12.x remotes/origin/HEAD -&amp;gt; origin/2.12.x   1 2 3 4 5 6 7  ➜ scala git:(2.12.x) git branch -a --no-merged remotes/origin/2.10.x remotes/origin/2.8.x remotes/origin/2.9.x remotes/origin/DarkDimius-patch-1 remotes/origin/gh-pages remotes/origin/legacy/msil   This shows you all local branches merged into named branch:</description>
     </item>
     
     <item>
@@ -54,8 +54,7 @@ Show committer activity - whole project (output shortened to first 20 lines)
       <guid>https://miroadamy.com/posts/2016-03-20-gitinspector/</guid>
       <description>Git project statistic tool Python based, requires Python 2.6+
 Works OOTB on Mac
-Installation  Download TAR from Github unzipped to /opt
-1 2 3 4 5 6 7 8 9  ➜ ll /opt/gitinspector-0.3.2 total 52K -rw-r--r-- 1 miro 999 Jul 29 2013 DESCRIPTION.txt -rw-r--r-- 1 miro 32K Jun 14 2013 LICENSE.txt -rw-r--r-- 1 miro 78 Jul 2 2013 MANIFEST.in -rw-r--r-- 1 miro 681 Jan 13 2014 README.txt drwxr-xr-x 45 miro 1.</description>
+Installation  Download TAR from Github unzipped to /opt  1 2 3 4 5 6 7 8 9  ➜ ll /opt/gitinspector-0.3.2 total 52K -rw-r--r-- 1 miro 999 Jul 29 2013 DESCRIPTION.txt -rw-r--r-- 1 miro 32K Jun 14 2013 LICENSE.txt -rw-r--r-- 1 miro 78 Jul 2 2013 MANIFEST.in -rw-r--r-- 1 miro 681 Jan 13 2014 README.txt drwxr-xr-x 45 miro 1.</description>
     </item>
     
     <item>
@@ -92,7 +91,8 @@ Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install f
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
 1  touch zz zZ   creates two files, both &amp;ldquo;inside VM&amp;rdquo; ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
-The command</description>
+The command
+1 2  cd ~/development/ATG/platform-edc touch zz zZ   will create just single file.</description>
     </item>
     
     <item>
@@ -101,10 +101,10 @@ The command</description>
       <pubDate>Thu, 05 Sep 2013 21:32:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2013-09-05-mc-color-scheme/</guid>
-      <description> Usable mc color scheme Edit
+      <description>Usable mc color scheme Edit
 ~/.mc/ini
 insert
-1 2  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   </description>
+1 2 3  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   </description>
     </item>
     
     <item>
@@ -490,8 +490,7 @@ Next day, after I arrived to the office in the morning, Gabo was already there.<
       <pubDate>Sat, 26 Aug 2006 11:16:10 -0400</pubDate>
       
       <guid>https://miroadamy.com/posts/2006-08-26-road-to-mac-v-feeling-happy/</guid>
-      <description>See also part I, part II and part III and Part IV
-August 13th I have discovered wonderful thing today. I was experimenting with my PocketPC (Toshiba e830) and switched on Bluetooth. Mac discovered the device OK - all I had to do was to follow the wizard Setup Bluetooth device, under Bluetooth menulet (the strange B icon upper right). I have entered the code Mac suggested on PPC and they new about each other.</description>
+      <description>See also part I, part IIand part IIIand Part IVAugust 13th </description>
     </item>
     
     <item>
@@ -500,8 +499,7 @@ August 13th I have discovered wonderful thing today. I was experimenting with my
       <pubDate>Fri, 25 Aug 2006 22:51:19 -0400</pubDate>
       
       <guid>https://miroadamy.com/posts/2006-08-25-14-road-to-mac-iv/</guid>
-      <description>See also part I, part II and part III
-August 10th That Spotlight thing is just freaking fantastic :-). After few days of work, accumulating some files, emails etc, just for fun I typed Gabo’s last name to Command-Space search box. I did not even finish typing and first results were coming in the result list: all emails exchanged with Gabo, saved chats, text documents and as “best hit” Gabo’s contact card.</description>
+      <description>See also part I, part IIand part IIIAugust 10th </description>
     </item>
     
     <item>
@@ -510,9 +508,7 @@ August 10th That Spotlight thing is just freaking fantastic :-). After few days 
       <pubDate>Thu, 24 Aug 2006 21:00:09 -0400</pubDate>
       
       <guid>https://miroadamy.com/posts/2006-08-24-road-to-mac-iii-the-culture-shock/</guid>
-      <description>See also part I and part II
-August 3rd This is my second day with Mac, writing in TextEdit as I have not installed any other editor (yet). Still learning, do not want to install lot of junk before I find out proper ways how to do things. Time to learn how things are in the Brave New World ….
-First surprises and unexpected culture shocks: How do I get around ?</description>
+      <description>See also part Iand part IIAugust 3rd </description>
     </item>
     
     <item>
@@ -521,8 +517,7 @@ First surprises and unexpected culture shocks: How do I get around ?</descriptio
       <pubDate>Wed, 23 Aug 2006 21:22:13 -0400</pubDate>
       
       <guid>https://miroadamy.com/posts/2006-08-23-road-to-mac-ii-ive-got-a-macbook/</guid>
-      <description>See part I
-July 25th - August 2nd After ordering, I received two emails from Apple, confirming the order. It took 3 days until the order finally got shipped from China (where else, of course) on Friday, July 28th and the estimate for delivery was 5-8 business days. I have received the tracking number and was able to track how my Macbook was moving around the globe: starting from Shizou, China on 28th, arriving to USA, Anchorage, Alaska one day later.</description>
+      <description>July 25th - August 2nd </description>
     </item>
     
     <item>

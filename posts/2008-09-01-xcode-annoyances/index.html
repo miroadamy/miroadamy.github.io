@@ -16,15 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="I have started to seriously play with Objective C and XCode about week ago. So far it was very pleasant experience. I really like the language - feels like Ruby (or Smalltalk if you want) with rocket launcher: very powerful, blastingly fast and dangerous like hell. No array boundary checks as in Java :-).
-The XCode was not bad experience either. Here my very long Eclipse and Visual Studio history is going a bit in the way, as the things often works quite different." /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="1 2 3  PM Xcode[34563] *** Terminating app due to uncaught exception &amp;#39;NSInvalidArgumentException&amp;#39;, reason: &amp;#39; *** -[NSAutoreleasePool stopObservingModelObject:]: unrecognized selector sent to instance 0x32da240&amp;#39;   " /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.59.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2008-09-01-xcode-annoyances/" />
@@ -40,28 +39,22 @@ The XCode was not bad experience either. Here my very long Eclipse and Visual St
 
 
 <meta property="og:title" content="XCode annoyances" />
-<meta property="og:description" content="I have started to seriously play with Objective C and XCode about week ago. So far it was very pleasant experience. I really like the language - feels like Ruby (or Smalltalk if you want) with rocket launcher: very powerful, blastingly fast and dangerous like hell. No array boundary checks as in Java :-).
-The XCode was not bad experience either. Here my very long Eclipse and Visual Studio history is going a bit in the way, as the things often works quite different." />
+<meta property="og:description" content="1 2 3  PM Xcode[34563] *** Terminating app due to uncaught exception &#39;NSInvalidArgumentException&#39;, reason: &#39; *** -[NSAutoreleasePool stopObservingModelObject:]: unrecognized selector sent to instance 0x32da240&#39;   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2008-09-01-xcode-annoyances/" />
 <meta property="article:published_time" content="2008-09-01T22:34:57-04:00" />
 <meta property="article:modified_time" content="2008-09-01T22:34:57-04:00" />
 <meta itemprop="name" content="XCode annoyances">
-<meta itemprop="description" content="I have started to seriously play with Objective C and XCode about week ago. So far it was very pleasant experience. I really like the language - feels like Ruby (or Smalltalk if you want) with rocket launcher: very powerful, blastingly fast and dangerous like hell. No array boundary checks as in Java :-).
-The XCode was not bad experience either. Here my very long Eclipse and Visual Studio history is going a bit in the way, as the things often works quite different.">
-
-
+<meta itemprop="description" content="1 2 3  PM Xcode[34563] *** Terminating app due to uncaught exception &#39;NSInvalidArgumentException&#39;, reason: &#39; *** -[NSAutoreleasePool stopObservingModelObject:]: unrecognized selector sent to instance 0x32da240&#39;   ">
 <meta itemprop="datePublished" content="2008-09-01T22:34:57-04:00" />
 <meta itemprop="dateModified" content="2008-09-01T22:34:57-04:00" />
-<meta itemprop="wordCount" content="312">
+<meta itemprop="wordCount" content="24">
 
 
 
-<meta itemprop="keywords" content="objectivec," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="objectivec," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="XCode annoyances"/>
-<meta name="twitter:description" content="I have started to seriously play with Objective C and XCode about week ago. So far it was very pleasant experience. I really like the language - feels like Ruby (or Smalltalk if you want) with rocket launcher: very powerful, blastingly fast and dangerous like hell. No array boundary checks as in Java :-).
-The XCode was not bad experience either. Here my very long Eclipse and Visual Studio history is going a bit in the way, as the things often works quite different."/>
+<meta name="twitter:description" content="1 2 3  PM Xcode[34563] *** Terminating app due to uncaught exception &#39;NSInvalidArgumentException&#39;, reason: &#39; *** -[NSAutoreleasePool stopObservingModelObject:]: unrecognized selector sent to instance 0x32da240&#39;   "/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -135,8 +128,8 @@ The XCode was not bad experience either. Here my very long Eclipse and Visual St
         <div class="post-category">
             <a href="/categories/programming/"> programming </a>
             </div>
-          <span class="more-meta"> 312 words </span>
-          <span class="more-meta"> 2 mins read </span>
+          <span class="more-meta"> 24 words </span>
+          <span class="more-meta"> 1 min read </span>
         
       </div>
     </header>
@@ -144,30 +137,24 @@ The XCode was not bad experience either. Here my very long Eclipse and Visual St
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
-      <p>I have started to seriously play with Objective C and XCode about week ago. So far it was very pleasant experience. I really like the language - feels like Ruby (or Smalltalk if you want) with rocket launcher: very powerful, blastingly fast and dangerous like hell. No array boundary checks as in Java :-).</p>
-<p>The XCode was not bad experience either. Here my very long Eclipse and Visual Studio history is going a bit in the way, as the things often works quite different. Not necessarily worse, but different. It would be too early to judge it - not before I get more proficient in both Objective-C and XCode and learn more Cocoa goodness.</p>
-<p>Two things however are so annoying, that I have to mention them right now:</p>
-<p>1) Setting breakpoints was gamble - sometimes it worked, sometimes it did not. I could not figure out why, until I found <a href="http://kleymeyer.typepad.com/blog/2007/09/problem-with-br.html" target="_blank">here</a> that you must in Preferences -&gt; Debug switch off the 'Lazy loading symbols'. After re-entering the breakpoints, I finally got it to behave as expected.</p>
-<p>2) Trying to add existing files to a projects crashes the XCode with the following:</p>
-<p><img class="alignnone size-full wp-image-536" src="{{ site.baseurl }}/images/picture-11.png" alt="" width="450" height="194" /></p>
-<p>The console window shows error:</p>
+      <!-- raw HTML omitted -->
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span></pre></td>
+</span><span class="lnt">3
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">PM Xcode[34563] *** Terminating app due to uncaught exception &#39;NSInvalidArgumentException&#39;, reason: &#39;
-*** -[NSAutoreleasePool stopObservingModelObject:]: unrecognized selector sent to instance 0x32da240&#39;</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">PM Xcode[34563] *** Terminating app due to uncaught exception &#39;NSInvalidArgumentException&#39;, reason: &#39;
+*** -[NSAutoreleasePool stopObservingModelObject:]: unrecognized selector sent to instance 0x32da240&#39;
+
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>which is clearly a bug. I tried to reboot (it was about time after running for over two weeks anyway), no help.</p>
-Weird is that I remember doing that before without any problems ... Workaround is use drag and drop, of course, but I wish Apple would fix this Really Soon, as it is plainly embarrassing ...</p>
-<p>I have seen crashes like this in Visual Studio, but Eclipse was rock solid environment despite the very complex plugins ecosystem, so it is hard to go back to use something blowing under your hands ...</p>
+</div><!-- raw HTML omitted -->
 
     </div>
 

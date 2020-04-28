@@ -18,8 +18,7 @@
       
       <guid>https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/</guid>
       <description>Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
-User setup  List all keys in Gitolite must have access to Gitolite admin interface
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.</description>
+User setup  List all keys in Gitolite must have access to Gitolite admin interface  1 2 3 4 5 6 7 8 9 10 11 12 13 14  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.</description>
     </item>
     
   </channel>
