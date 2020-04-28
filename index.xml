@@ -6,7 +6,7 @@
     <description>Recent content on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Apr 2020 20:59:40 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 21:06:22 +0000</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,20 +19,21 @@
       <guid>https://miroadamy.com/about/</guid>
       <description>About me This is personal blog of Miro Adamy.
 Im am DevOps/Cloud engineer, living in beautiful Valencia, Spain and spending my days designing and creating software systems for living and pleasure, reading books, surfing Web, walking, thinking and enjoying life with my family
-Resume My current resume is available online or can be downloaded from here as PDFContact Email me - firstname dot lastname, at Sergei&amp;rsquo;s and Larry&amp;rsquo;s company&amp;rsquo;s email</description>
+Resume My current resume is available online or can be downloaded from here as PDF
+Contact Email me - firstname dot lastname, at Sergei&amp;rsquo;s and Larry&amp;rsquo;s company&amp;rsquo;s email</description>
     </item>
     
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Tue, 28 Apr 2020 20:59:40 +0000</pubDate>
+      <pubDate>Tue, 28 Apr 2020 21:06:22 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
       <description>Status Hugo Static Site Generator v0.68.3/extended darwin/amd64 BuildDate: unknown
 Pygments version 2.4.2, (c) 2006-2019 by Georg Brandl.
-Blog commit: 1b134087e040df8251470b7c2016cfaa04ea0336
+Blog commit: ebf68d19256faf36e99bbd0de1f27a4f2b6dcda2
 Theme commit: d39d3e443953caea05510b19fdd7a259c71a0ab3
-Published: &amp;ldquo;2020-04-28T20:59:40Z&amp;rdquo;</description>
+Published: &amp;ldquo;2020-04-28T21:06:22Z&amp;rdquo;</description>
     </item>
     
     <item>
