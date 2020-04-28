@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-04-28T19:35:50+00:00" />
+<meta property="og:updated_time" content="2020-04-28T20:59:40+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,32 +113,6 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-04-13-git-conflict/">Merge conflict with deleted file</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-04-13 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 360 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I was merging the branch that removed / consolidated bunch of duplicate JSP files (corporate-ui-cleanup).
-In the meantime in master, some minor UI changes were made to these files whose content was now elsewhere.
-Quick trick how to resolve it fast:
-Show branch 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21  CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data with XML only: no constraints and tax_id (unused field) nullable !
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-04-13-git-conflict/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2013-04-09-bash/">Pattern for test sourcing the script</a></h1>
@@ -233,6 +207,32 @@ Here is how that list looks like after reorder :-) I care only for the first 11 
     </div>
     <div class="read-more">
       <a href="/posts/2013-03-03-dotvim/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-02-23-perf-quicklook-lion/">Performance issues with Quicklook in OS-X Lion</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-02-23 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 1149 words </span>
+        <span class="more-meta"> 6 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I have been experiencing issues with Quicklook (press Space on file in Finder or Pathfinder) for some time: it took several second, sometimes 10-15 to show content of simple 1K large property file.
+It turned out that on of the QuickLook plugins, installed originally way back in Leopard and brought ahead with TimeMachine restores could have been the reason: the QLStephen.
+For more on that plugin see:
+ http://whomwah.github.com/qlstephen/ https://github.com/whomwah/qlstephen  To remove the plugin, go to ~/Library/QuickLook and delete the file (it is the bundle) QLStephen.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-02-23-perf-quicklook-lion/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

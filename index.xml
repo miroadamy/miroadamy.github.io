@@ -6,7 +6,7 @@
     <description>Recent content on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Apr 2020 19:35:50 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2020 20:59:40 +0000</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -25,14 +25,14 @@ Resume My current resume is available online or can be downloaded from here as P
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Tue, 28 Apr 2020 19:35:50 +0000</pubDate>
+      <pubDate>Tue, 28 Apr 2020 20:59:40 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
       <description>Status Hugo Static Site Generator v0.68.3/extended darwin/amd64 BuildDate: unknown
 Pygments version 2.4.2, (c) 2006-2019 by Georg Brandl.
-Blog commit: 3ecfa7b6cc70ff47cbbe329c2dde7355a5f740bc
+Blog commit: 1b134087e040df8251470b7c2016cfaa04ea0336
 Theme commit: d39d3e443953caea05510b19fdd7a259c71a0ab3
-Published: &amp;ldquo;2020-04-28T19:35:50Z&amp;rdquo;</description>
+Published: &amp;ldquo;2020-04-28T20:59:40Z&amp;rdquo;</description>
     </item>
     
     <item>
@@ -64,16 +64,6 @@ José was responsible (among other things) for setting up integration and QA env
       <guid>https://miroadamy.com/posts/2020-01-18-rancher-cli/</guid>
       <description>Accessing Rancher cluster After creation, you can access the K8s cluster running Rancher by saving the config file available from the console and using standard kubectl command
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE NAME READY STATUS RESTARTS AGE cattle-system cattle-cluster-agent-5c98cb979f-bbhxf 1/1 Running 0 5d23h cattle-system cattle-node-agent-dwnxk 1/1 Running 0 5d23h cattle-system kube-api-auth-d4zgq 1/1 Running 0 5d23h ingress-nginx default-http-backend-67cf578fc4-grmsw 1/1 Running 0 5d23h ingress-nginx nginx-ingress-controller-mpnmb 1/1 Running 0 5d23h kube-system canal-jw85q 2/2 Running 0 5d23h kube-system coredns-5c59fd465f-47q5z 1/1 Running 0 5d23h kube-system coredns-autoscaler-d765c8497-sm5xf 1/1 Running 0 5d23h kube-system metrics-server-64f6dffb84-bp864 1/1 Running 0 5d23h kube-system rke-coredns-addon-deploy-job-95qnk 0/1 Completed 0 5d23h kube-system rke-ingress-controller-deploy-job-brv7w 0/1 Completed 0 5d23h kube-system rke-metrics-addon-deploy-job-tvt89 0/1 Completed 0 5d23h kube-system rke-network-plugin-deploy-job-7rqcr 0/1 Completed 0 5d23h   The same information (and much more) is available using rancher CLI.</description>
-    </item>
-    
-    <item>
-      <title>Kubernetes client server version mismatch</title>
-      <link>https://miroadamy.com/posts/2020-01-15-kubectl/</link>
-      <pubDate>Wed, 15 Jan 2020 21:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2020-01-15-kubectl/</guid>
-      <description>Symptoms I was doing update on Kubernetes cluster I had not touch in a while when I noticed weird behaviour:
- the output of get command was incomplete the -o wide option had no effect on the command output  Example The get nodes command is incomplete 1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-20-33-51.ca-central-1.compute.internal 613d ip-172-20-55-121.ca-central-1.compute.internal 628d ip-172-20-85-9.ca-central-1.compute.internal 558d   The -o wide has no effect 1 2 3 4 5 6  ➜ .</description>
     </item>
     
     <item>
