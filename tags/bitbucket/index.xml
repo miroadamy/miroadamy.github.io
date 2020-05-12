@@ -6,10 +6,20 @@
     <description>Recent content in bitbucket on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 02 Nov 2016 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2020 22:34:38 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/bitbucket/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using SSH keys with multiple Bitbucket accounts</title>
+      <link>https://miroadamy.com/posts/2020-05-12-bitbucket-keys/</link>
+      <pubDate>Tue, 12 May 2020 22:34:38 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2020-05-12-bitbucket-keys/</guid>
+      <description>I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
+With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification.</description>
+    </item>
     
     <item>
       <title>Process for transferring Git repo from Gitolite to Bitbucket</title>
@@ -18,7 +28,7 @@
       
       <guid>https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/</guid>
       <description>Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
-User setup  List all keys in Gitolite must have access to Gitolite admin interface  1 2 3 4 5 6 7 8 9 10 11 12 13 14  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.</description>
+User setup  List all keys in Gitolite must have access to Gitolite admin interface  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2.</description>
     </item>
     
   </channel>

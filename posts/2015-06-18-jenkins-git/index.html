@@ -17,7 +17,8 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &amp;lsquo;git status&amp;rsquo; in that directory. If you see something like
-1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded." /><meta name="keywords" content="blog, Miro" />
+-bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253 the git repo is corrupted and needs to be reloaded.
+Step 1 - Get the remote repo URL -bash-3." /><meta name="keywords" content="blog, Miro" />
 
 
 
@@ -41,24 +42,27 @@
 
 <meta property="og:title" content="How to fix Jenkins build issues related to Git connectivity" />
 <meta property="og:description" content="Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like
-1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded." />
+-bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253 the git repo is corrupted and needs to be reloaded.
+Step 1 - Get the remote repo URL -bash-3." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2015-06-18-jenkins-git/" />
 <meta property="article:published_time" content="2015-06-18T11:22:48+08:00" />
 <meta property="article:modified_time" content="2015-06-18T11:22:48+08:00" />
 <meta itemprop="name" content="How to fix Jenkins build issues related to Git connectivity">
 <meta itemprop="description" content="Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like
-1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded.">
+-bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253 the git repo is corrupted and needs to be reloaded.
+Step 1 - Get the remote repo URL -bash-3.">
 <meta itemprop="datePublished" content="2015-06-18T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2015-06-18T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="455">
+<meta itemprop="wordCount" content="407">
 
 
 
 <meta itemprop="keywords" content="git,jenkins," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to fix Jenkins build issues related to Git connectivity"/>
 <meta name="twitter:description" content="Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like
-1 2  -bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253   the git repo is corrupted and needs to be reloaded."/>
+-bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253 the git repo is corrupted and needs to be reloaded.
+Step 1 - Get the remote repo URL -bash-3."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -132,8 +136,8 @@
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 455 words </span>
-          <span class="more-meta"> 3 mins read </span>
+          <span class="more-meta"> 407 words </span>
+          <span class="more-meta"> 2 mins read </span>
         
       </div>
     </header>
@@ -162,66 +166,27 @@
 <li>go to <code>/home/projects/workspace/PROJECTNAME</code> directory</li>
 </ul>
 <p>This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">-bash-3.2$ git status
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">-bash-3.2$ git status
 fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253
-</code></pre></td></tr></table>
-</div>
-</div><p>the git repo is corrupted and needs to be reloaded.</p>
+</code></pre></div><p>the git repo is corrupted and needs to be reloaded.</p>
 <h1 id="step-1---get-the-remote-repo-url">Step 1 - Get the remote repo URL</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">-bash-3.2$ git remote -v
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">-bash-3.2$ git remote -v
 origin  client@pensieve.thinkwrap.com:client-store.git (fetch)
 origin  client@pensieve.thinkwrap.com:client-store.git (push)
-</code></pre></td></tr></table>
-</div>
-</div><h1 id="step-2---clone-the-repo-to-tmp-location">Step 2 - Clone the repo to /tmp location</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">-bash-3.2$ git clone client@pensieve.thinkwrap.com:client-store.git /tmp/client-store
+</code></pre></div><h1 id="step-2---clone-the-repo-to-tmp-location">Step 2 - Clone the repo to /tmp location</h1>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">-bash-3.2$ git clone client@pensieve.thinkwrap.com:client-store.git /tmp/client-store
 Cloning into /tmp/client-store...
 remote: Counting objects: 129011, done.
 remote: Compressing objects: 100% (36403/36403), done.
 remote: Total 129011 (delta 80801), reused 124811 (delta 77481)
 Receiving objects: 100% (129011/129011), 250.76 MiB | 30.13 MiB/s, done.
 Resolving deltas: 100% (80801/80801), done.
-</code></pre></td></tr></table>
-</div>
-</div><p>The directory you clone into must not exist</p>
+</code></pre></div><p>The directory you clone into must not exist</p>
 <h1 id="step-3---erase-corrupted-git-repo">Step 3 - Erase corrupted &lsquo;.git&rsquo; repo</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">-bash-3.2$ pwd
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">-bash-3.2$ pwd
 /home/projects/workspace/PROJECTNAME
 -bash-3.2$ rm -rf .git/
-</code></pre></td></tr></table>
-</div>
-</div><h1 id="step-4---move-the-fresly-cloned-git-directory">Step 4 - move the fresly cloned &lsquo;.git&rsquo; directory</h1>
+</code></pre></div><h1 id="step-4---move-the-fresly-cloned-git-directory">Step 4 - move the fresly cloned &lsquo;.git&rsquo; directory</h1>
 <p>We will steal the &lsquo;.git&rsquo; from the clone in /tmp/DIR</p>
 <blockquote>
 <p>-bash-3.2$ mv /tmp/client-store/.git .</p>
@@ -229,39 +194,7 @@ Resolving deltas: 100% (80801/80801), done.
 <h1 id="step-5---resynchronize-git-and-file-tree">Step 5 - resynchronize &lsquo;.git&rsquo; and file tree</h1>
 <p>It is important to make sure that file tree does not have any modifications against the &lsquo;.git&rsquo;.</p>
 <p>Simplest way is:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">-bash-3.2$ git status
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">-bash-3.2$ git status
 # On branch master
 # Changes not staged for commit:
 #   (use &#34;git add/rm &lt;file&gt;...&#34; to update what will be committed)
@@ -289,26 +222,13 @@ Resolving deltas: 100% (80801/80801), done.
 #
 #   target/
 no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)
-</code></pre></td></tr></table>
-</div>
-</div><p>As you see, this one does. We will blow it away. We are on branch master and use hard reset to remove all changes.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">-bash-3.2$ git reset --hard HEAD
+</code></pre></div><p>As you see, this one does. We will blow it away. We are on branch master and use hard reset to remove all changes.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">-bash-3.2$ git reset --hard HEAD
 HEAD is now at 0a7f6c9 Client-824: Error handling
   
 -bash-3.2$ git pull
 Already up-to-date.
-</code></pre></td></tr></table>
-</div>
-</div><p>Now there are no local changes.</p>
+</code></pre></div><p>Now there are no local changes.</p>
 <p>If your task is using different branch - that does not matter because Jenkins is using checkouts using absolute sha-1 anyway and as long there are no local modifications that would prevent this checkout it will work.</p>
 
     </div>

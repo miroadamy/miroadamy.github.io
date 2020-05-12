@@ -17,7 +17,9 @@
       <pubDate>Wed, 25 Sep 2013 16:12:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2013-09-25-sublime-text-macro-timestamp/</guid>
-      <description>Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&amp;#34;%Y-%m-%d_%H:%M:%S&amp;#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see</description>
+      <description>Sublime text macro to insert timestamp platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&amp;#34;%Y-%m-%d_%H:%M:%S&amp;#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $ Documentation - see
+Installation: Add this to Keybindings / User
+![](/images/2013-09-23_8.02.19 PM.png)</description>
     </item>
     
     <item>
@@ -28,7 +30,8 @@
       <guid>https://miroadamy.com/posts/2012-09-21-post/</guid>
       <description>After update, the ST2 started to complain about missing git command.
 Finding out Git on MBP:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  platform $ which git git is /usr/bin/git git is /usr/local/bin/git platform $ git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/bin/git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/local/bin/git --version git version 1.7.3.2   Fix the the Package file in /Users/miro/Library/Application Support/Sublime Text 2/Packages/Git - Git.</description>
+platform $ which git git is /usr/bin/git git is /usr/local/bin/git platform $ git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/bin/git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/local/bin/git --version git version 1.7.3.2 Fix the the Package file in /Users/miro/Library/Application Support/Sublime Text 2/Packages/Git - Git.sublime-settings (it is JSON file)
+{ // save before running commands &amp;#34;save_first&amp;#34;: true // if present, use this command instead of plain &amp;#34;git&amp;#34; // e.</description>
     </item>
     
   </channel>

@@ -18,7 +18,7 @@
       
       <guid>https://miroadamy.com/posts/2015-04-11-jboss-shutdown/</guid>
       <description>Observed at QA environment. During automated shutdown sequence, the exception was thrown:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27  $ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &amp;#34;main&amp;#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.</description>
+$ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &amp;#34;main&amp;#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org.</description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@
       
       <guid>https://miroadamy.com/posts/2014-09-03-atg-rant/</guid>
       <description>Symptoms restarting after kill -9 of CSC instance does not succeed. The server never starts, the WAR files are not deployed properly, socket 8080 is open but nobody answers (not even with wget on localhost).
-The exception: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95  &amp;#34;main&amp;#34; prio=10 tid=0x0000000051a39000 nid=0x30fb in Object.</description>
+The exception: &amp;#34;main&amp;#34; prio=10 tid=0x0000000051a39000 nid=0x30fb in Object.wait() [0x00002b5df9d6c000] java.lang.Thread.State: TIMED_WAITING (on object monitor) at java.lang.Object.wait(Native Method) - waiting on &amp;lt;0x00000007e36ae9d0&amp;gt; (a atg.service.lockmanager.ClientLockEntry) at atg.service.lockmanager.ClientLockEntry.acquireWriteLock(ClientLockEntry.java:399) - locked &amp;lt;0x00000007e36ae9d0&amp;gt; (a atg.service.lockmanager.ClientLockEntry) at atg.service.lockmanager.ClientLockManager.acquireWriteLock(ClientLockManager.java:1137) at atg.repository.search.indexing.ConfigStatePersister.acquireLock(ConfigStatePersister.java:1844) at atg.</description>
     </item>
     
   </channel>

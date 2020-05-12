@@ -51,7 +51,7 @@ One option would be to write a document that contails IP&rsquo;s of the machines
 One option would be to write a document that contails IP&rsquo;s of the machines, create user accounts, make sure that they have just enough access rights to see the files but not disturb anything else &hellip;">
 <meta itemprop="datePublished" content="2008-08-25T22:04:04-04:00" />
 <meta itemprop="dateModified" content="2008-08-25T22:04:04-04:00" />
-<meta itemprop="wordCount" content="243">
+<meta itemprop="wordCount" content="222">
 
 
 
@@ -132,7 +132,7 @@ One option would be to write a document that contails IP&rsquo;s of the machines
         <div class="post-category">
             <a href="/categories/programming/"> programming </a>
             </div>
-          <span class="more-meta"> 243 words </span>
+          <span class="more-meta"> 222 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -152,32 +152,7 @@ One option would be to write a document that contails IP&rsquo;s of the machines
 <p><code>~/webaccess</code></p>
 <p>and made symbolic links to all log files or log directories required.</p>
 <p>Then I placed this python script into the directory:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">#!/usr/bin/python
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">#!/usr/bin/python
 
 import SimpleHTTPServer
 import SocketServer
@@ -198,9 +173,7 @@ httpd = SocketServer.TCPServer((&#34;&#34;, PORT), Handler)
 
 print &#34;serving at port&#34;, PORT
 httpd.serve_forever()
-</code></pre></td></tr></table>
-</div>
-</div><p>and started it as</p>
+</code></pre></div><p>and started it as</p>
 <p><code>nohup ./simpleserver.py &amp;</code></p>
 <p>From this moment on, all files linked (actually all files in subtree of server directory) are accessible by going to</p>
 <p><code>http://SERVERNAME:9999/</code></p>

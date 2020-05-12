@@ -19,8 +19,8 @@
       <guid>https://miroadamy.com/posts/2013-10-16-endeca-oracle/</guid>
       <description>I have ported the Oracle VM style management scripts into the Loyalty VM.
 The scripts are in the loyalty-endeca Git repo, originally in eVoucher branch but also merged into edc
-1 2 3 4 5 6 7 8 9 10  [tkuser@vm-lo1-hpr-ma endeca]$ ls -1 total 28 dev-check-environment.sh* dev-deploy-endeca-app.sh* dev-endeca-environmet.ini* dev-remove-endeca-app.sh* endeca-control* endeca-vars.txt* README.md* RewardsEndc/   dev-endeca-environmet.ini This is environment setting script.
-1 2 3 4 5 6 7 8 9 10 11  ### MUST BE SOURCED IN source dev-endeca-environmet.</description>
+[tkuser@vm-lo1-hpr-ma endeca]$ ls -1 total 28 dev-check-environment.sh* dev-deploy-endeca-app.sh* dev-endeca-environmet.ini* dev-remove-endeca-app.sh* endeca-control* endeca-vars.txt* README.md* RewardsEndc/ dev-endeca-environmet.ini This is environment setting script.
+### MUST BE SOURCED IN source dev-endeca-environmet.ini ## or . dev-endeca-environmet.ini ## NEVER ./dev-endeca-environmet.ini endeca-control Main script that manages three components of the system named:</description>
     </item>
     
   </channel>

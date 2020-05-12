@@ -17,7 +17,7 @@
       <pubDate>Sun, 03 Mar 2013 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2013-03-03-dotvim/</guid>
-      <description>New MacMini 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63  MacMini:~ mediaserver$ mkdir .vim MacMini:~ mediaserver$ git clone git@github.</description>
+      <description>New MacMini MacMini:~ mediaserver$ mkdir .vim MacMini:~ mediaserver$ git clone git@github.com:radegast/dotvim.git .vim Cloning into &amp;#39;.vim&amp;#39;... The authenticity of host &amp;#39;github.com (207.97.227.239)&amp;#39; can&amp;#39;t be established. RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48. Are you sure you want to continue connecting (yes/no)? yes Warning: Permanently added &amp;#39;github.com,207.97.227.239&amp;#39; (RSA) to the list of known hosts. remote: Counting objects: 367, done. remote: Compressing objects: 100% (309/309), done. remote: Total 367 (delta 58), reused 335 (delta 26) Receiving objects: 100% (367/367), 512.</description>
     </item>
     
   </channel>

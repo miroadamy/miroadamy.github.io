@@ -19,7 +19,8 @@
       <guid>https://miroadamy.com/posts/2020-01-19-kubectl-version/</guid>
       <description>Accessing Rancher cluster I was doing update on Kubernetes cluster I had not touch in a while when I noticed weird behaviour:
  the output of get command was incomplete the -o wide option had no effect on the command output  (IP addresses are masked)
-1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-xx-xx-xx.ca-central-1.compute.internal 613d ip-172-xx-xx-xx.ca-central-1.compute.internal 628d ip-172-xx-xx-xx.ca-central-1.compute.internal 558d   and</description>
+➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-xx-xx-xx.ca-central-1.compute.internal 613d ip-172-xx-xx-xx.ca-central-1.compute.internal 628d ip-172-xx-xx-xx.ca-central-1.compute.internal 558d and
+➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes -o wide NAME AGE ip-172-xx-xx-xx.</description>
     </item>
     
   </channel>

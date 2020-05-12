@@ -57,7 +57,7 @@ The tracks:
 The Video URLs Channel 1  https://www.">
 <meta itemprop="datePublished" content="2019-11-07T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2019-11-07T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="604">
+<meta itemprop="wordCount" content="479">
 
 
 
@@ -141,7 +141,7 @@ The Video URLs Channel 1  https://www."/>
             <a href="/categories/devops/"> devops </a>
             <a href="/categories/events/"> events </a>
             </div>
-          <span class="more-meta"> 604 words </span>
+          <span class="more-meta"> 479 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -239,24 +239,7 @@ The Video URLs Channel 1  https://www."/>
 <h3 id="1000-am---can-kubernetes-keep-a-secret---omer-levi-hevroni">10:00 AM - Can Kubernetes Keep a Secret? - Omer Levi Hevroni</h3>
 <p>Link - <a href="https://www.youtube.com/watch?v=xtNx1t6lxQE">https://www.youtube.com/watch?v=xtNx1t6lxQE</a></p>
 <p>Addresses issue we are having: Secret in YAML =&gt; base 64 =&gt; not secure =&gt; not in Git</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Evaluated:
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Evaluated:
 
 Helm Secrets
 Sealed Secrets
@@ -269,24 +252,15 @@ Helm secrets = Mozila Mops
 Required: Gitops, Native, secure
 vaultproject.io =&gt; $$$, access control, no gitops flow =&gt; imperfect
 Travis encrypted secrets =&gt; only for given repo
-</code></pre></td></tr></table>
-</div>
-</div><p>SOLUTION: Kamus =&gt; Soluto (Kamus == secret in Hebrew)
+</code></pre></div><p>SOLUTION: Kamus =&gt; Soluto (Kamus == secret in Hebrew)
 <a href="https://github.com/Soluto/kamus">https://github.com/Soluto/kamus</a></p>
 <ul>
 <li>encrypt secrets for specific app, only that can decrypt it =&gt; on AWS KMS, HSM support</li>
 <li>CRD support</li>
 <li>Application identity: service account, token</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">helm install kamus soluto/kamus
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="1100-am---what-you-see-is-what-you-get-for-aws-infrastructure---anton-babenko">11:00 AM - What You See Is What You Get For AWS Infrastructure - Anton Babenko</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">helm install kamus soluto/kamus
+</code></pre></div><h3 id="1100-am---what-you-see-is-what-you-get-for-aws-infrastructure---anton-babenko">11:00 AM - What You See Is What You Get For AWS Infrastructure - Anton Babenko</h3>
 <p>Awesome extension of Cloudcraft.io that genarates Terraform and Terragrunt code</p>
 <ul>
 <li><a href="https://www.youtube.com/watch?v=xtNx1t6lxQE">https://www.youtube.com/watch?v=xtNx1t6lxQE</a></li>
@@ -303,122 +277,7 @@ Travis encrypted secrets =&gt; only for given repo
 </ul>
 <h1 id="bunch-of-notes-and-links">Bunch of notes and links</h1>
 <p>(should be sorted out - work in progress, saving them here)</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">  1
-</span><span class="lnt">  2
-</span><span class="lnt">  3
-</span><span class="lnt">  4
-</span><span class="lnt">  5
-</span><span class="lnt">  6
-</span><span class="lnt">  7
-</span><span class="lnt">  8
-</span><span class="lnt">  9
-</span><span class="lnt"> 10
-</span><span class="lnt"> 11
-</span><span class="lnt"> 12
-</span><span class="lnt"> 13
-</span><span class="lnt"> 14
-</span><span class="lnt"> 15
-</span><span class="lnt"> 16
-</span><span class="lnt"> 17
-</span><span class="lnt"> 18
-</span><span class="lnt"> 19
-</span><span class="lnt"> 20
-</span><span class="lnt"> 21
-</span><span class="lnt"> 22
-</span><span class="lnt"> 23
-</span><span class="lnt"> 24
-</span><span class="lnt"> 25
-</span><span class="lnt"> 26
-</span><span class="lnt"> 27
-</span><span class="lnt"> 28
-</span><span class="lnt"> 29
-</span><span class="lnt"> 30
-</span><span class="lnt"> 31
-</span><span class="lnt"> 32
-</span><span class="lnt"> 33
-</span><span class="lnt"> 34
-</span><span class="lnt"> 35
-</span><span class="lnt"> 36
-</span><span class="lnt"> 37
-</span><span class="lnt"> 38
-</span><span class="lnt"> 39
-</span><span class="lnt"> 40
-</span><span class="lnt"> 41
-</span><span class="lnt"> 42
-</span><span class="lnt"> 43
-</span><span class="lnt"> 44
-</span><span class="lnt"> 45
-</span><span class="lnt"> 46
-</span><span class="lnt"> 47
-</span><span class="lnt"> 48
-</span><span class="lnt"> 49
-</span><span class="lnt"> 50
-</span><span class="lnt"> 51
-</span><span class="lnt"> 52
-</span><span class="lnt"> 53
-</span><span class="lnt"> 54
-</span><span class="lnt"> 55
-</span><span class="lnt"> 56
-</span><span class="lnt"> 57
-</span><span class="lnt"> 58
-</span><span class="lnt"> 59
-</span><span class="lnt"> 60
-</span><span class="lnt"> 61
-</span><span class="lnt"> 62
-</span><span class="lnt"> 63
-</span><span class="lnt"> 64
-</span><span class="lnt"> 65
-</span><span class="lnt"> 66
-</span><span class="lnt"> 67
-</span><span class="lnt"> 68
-</span><span class="lnt"> 69
-</span><span class="lnt"> 70
-</span><span class="lnt"> 71
-</span><span class="lnt"> 72
-</span><span class="lnt"> 73
-</span><span class="lnt"> 74
-</span><span class="lnt"> 75
-</span><span class="lnt"> 76
-</span><span class="lnt"> 77
-</span><span class="lnt"> 78
-</span><span class="lnt"> 79
-</span><span class="lnt"> 80
-</span><span class="lnt"> 81
-</span><span class="lnt"> 82
-</span><span class="lnt"> 83
-</span><span class="lnt"> 84
-</span><span class="lnt"> 85
-</span><span class="lnt"> 86
-</span><span class="lnt"> 87
-</span><span class="lnt"> 88
-</span><span class="lnt"> 89
-</span><span class="lnt"> 90
-</span><span class="lnt"> 91
-</span><span class="lnt"> 92
-</span><span class="lnt"> 93
-</span><span class="lnt"> 94
-</span><span class="lnt"> 95
-</span><span class="lnt"> 96
-</span><span class="lnt"> 97
-</span><span class="lnt"> 98
-</span><span class="lnt"> 99
-</span><span class="lnt">100
-</span><span class="lnt">101
-</span><span class="lnt">102
-</span><span class="lnt">103
-</span><span class="lnt">104
-</span><span class="lnt">105
-</span><span class="lnt">106
-</span><span class="lnt">107
-</span><span class="lnt">108
-</span><span class="lnt">109
-</span><span class="lnt">110
-</span><span class="lnt">111
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">Concourse - deliver, extensible with bash
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Concourse - deliver, extensible with bash
 Helm
 
 https://github.com/Darillium/addo-demo
@@ -529,9 +388,7 @@ https://github.com/m-reza-rahman/javaee-docker
 
 3 Musketeers: Jenkins, Terraform, Vault
 https://youtu.be/PVli8qvXgkM?t=5725
-</code></pre></td></tr></table>
-</div>
-</div>
+</code></pre></div>
     </div>
 
     <div class="post-copyright">

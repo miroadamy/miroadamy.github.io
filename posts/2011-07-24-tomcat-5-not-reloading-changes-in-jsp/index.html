@@ -48,7 +48,7 @@
 <meta itemprop="description" content="Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that. I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application.">
 <meta itemprop="datePublished" content="2011-07-24T17:33:34-04:00" />
 <meta itemprop="dateModified" content="2011-07-24T17:33:34-04:00" />
-<meta itemprop="wordCount" content="522">
+<meta itemprop="wordCount" content="513">
 
 
 
@@ -128,7 +128,7 @@
         <div class="post-category">
             <a href="/categories/programming/"> programming </a>
             </div>
-          <span class="more-meta"> 522 words </span>
+          <span class="more-meta"> 513 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -148,20 +148,7 @@ The most logical explanation would be that I am editing different file than relo
 <p>Really weird.</p>
 <p>Few more experiments showed that no change to any JSP page under jsp-examples was visible. Removing JSP page caused 404 error as expected, but as soon as the page was there, it reappeared in original pristine version.
 At this point, I started to suspect there is something fishy with the jsp-examples application itself. And it was. Brief check of the web.xml showed that it is quite long (24K) and that it contains declaration:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;servlet&gt;
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;servlet&gt;
   &lt;servlet-name&gt;org.apache.jsp.jsp2.el.basic_002dcomparisons_jsp&lt;/servlet-name&gt;
   &lt;servlet-class&gt;org.apache.jsp.jsp2.el.basic_002dcomparisons_jsp&lt;/servlet-class&gt;
 &lt;/servlet&gt;
@@ -170,9 +157,7 @@ At this point, I started to suspect there is something fishy with the jsp-exampl
   &lt;servlet-name&gt;org.apache.jsp.jsp2.el.basic_002dcomparisons_jsp&lt;/servlet-name&gt;
   &lt;url-pattern&gt;/jsp2/el/basic-comparisons.jsp&lt;/url-pattern&gt;
 &lt;/servlet-mapping&gt;
-</code></pre></td></tr></table>
-</div>
-</div><p>and suddenly it all made sense.</p>
+</code></pre></div><p>and suddenly it all made sense.</p>
 <p>As long as the JSP file was present (Tomcat checks), it&rsquo;s content was completely ignored and the request for /jsp2/el/basic-comparisons.jsp was served by COMPILED class /webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/jsp2/el/basic_002dcomparisons_jsp.class - which of course did not contain any of the JSP file changes. When I removed file, Tomcat reported 404 a- the check for file existence comes before check for URL mapping apparently.</p>
 <p>Moral of the story: being lazy causes one has to do more work but often learns something new. Had I created fresh new WebApp, none of these mappings were present and I would never realized what is Tomcat 5 doing behind the scenes.</p>
 <p>Btw, in Tomcat 6 the mappings are gone and everything behaves as expected.

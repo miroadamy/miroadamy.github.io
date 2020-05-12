@@ -28,7 +28,7 @@ The solution is easy - rename the darn Point to something like TKPoint ... at le
       <pubDate>Mon, 01 Sep 2008 22:34:57 -0400</pubDate>
       
       <guid>https://miroadamy.com/posts/2008-09-01-xcode-annoyances/</guid>
-      <description>1 2 3  PM Xcode[34563] *** Terminating app due to uncaught exception &amp;#39;NSInvalidArgumentException&amp;#39;, reason: &amp;#39; *** -[NSAutoreleasePool stopObservingModelObject:]: unrecognized selector sent to instance 0x32da240&amp;#39;   </description>
+      <description>PM Xcode[34563] *** Terminating app due to uncaught exception &amp;#39;NSInvalidArgumentException&amp;#39;, reason: &amp;#39; *** -[NSAutoreleasePool stopObservingModelObject:]: unrecognized selector sent to instance 0x32da240&amp;#39; </description>
     </item>
     
     <item>

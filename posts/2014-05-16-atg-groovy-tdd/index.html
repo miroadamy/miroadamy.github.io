@@ -20,7 +20,7 @@
 The two components
  http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyDemoScript/ http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyScriptRunner/  The are not started via Initial, but that is not a problem.
 The script tested:
-1 2 3 4 5 6 7 8 9  class ThatsGroovyDude implements com.thinkwrap.twatg.script.RunnableScript { atg.nucleus.Nucleus nuc = atg.nucleus.Nucleus.getGlobalNucleus(); public String run() { String s = &amp;#34;&amp;#34;; nuc.configPathNames.each { s &#43;= &amp;#34;${it}\n&amp;#34; } return &amp;#34;Hello World!" /><meta name="keywords" content="blog, Miro" />
+class ThatsGroovyDude implements com.thinkwrap.twatg.script.RunnableScript { atg.nucleus.Nucleus nuc = atg.nucleus.Nucleus.getGlobalNucleus(); public String run() { String s = &amp;#34;&amp;#34;; nuc.configPathNames.each { s &#43;= &amp;#34;${it}\n&amp;#34; } return &amp;#34;Hello World!\n\n&amp;#34; &#43; s; } } " /><meta name="keywords" content="blog, Miro" />
 
 
 
@@ -47,7 +47,7 @@ The script tested:
 The two components
  http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyDemoScript/ http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyScriptRunner/  The are not started via Initial, but that is not a problem.
 The script tested:
-1 2 3 4 5 6 7 8 9  class ThatsGroovyDude implements com.thinkwrap.twatg.script.RunnableScript { atg.nucleus.Nucleus nuc = atg.nucleus.Nucleus.getGlobalNucleus(); public String run() { String s = &#34;&#34;; nuc.configPathNames.each { s &#43;= &#34;${it}\n&#34; } return &#34;Hello World!" />
+class ThatsGroovyDude implements com.thinkwrap.twatg.script.RunnableScript { atg.nucleus.Nucleus nuc = atg.nucleus.Nucleus.getGlobalNucleus(); public String run() { String s = &#34;&#34;; nuc.configPathNames.each { s &#43;= &#34;${it}\n&#34; } return &#34;Hello World!\n\n&#34; &#43; s; } } " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2014-05-16-atg-groovy-tdd/" />
 <meta property="article:published_time" content="2014-05-16T11:22:48+08:00" />
@@ -57,10 +57,10 @@ The script tested:
 The two components
  http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyDemoScript/ http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyScriptRunner/  The are not started via Initial, but that is not a problem.
 The script tested:
-1 2 3 4 5 6 7 8 9  class ThatsGroovyDude implements com.thinkwrap.twatg.script.RunnableScript { atg.nucleus.Nucleus nuc = atg.nucleus.Nucleus.getGlobalNucleus(); public String run() { String s = &#34;&#34;; nuc.configPathNames.each { s &#43;= &#34;${it}\n&#34; } return &#34;Hello World!">
+class ThatsGroovyDude implements com.thinkwrap.twatg.script.RunnableScript { atg.nucleus.Nucleus nuc = atg.nucleus.Nucleus.getGlobalNucleus(); public String run() { String s = &#34;&#34;; nuc.configPathNames.each { s &#43;= &#34;${it}\n&#34; } return &#34;Hello World!\n\n&#34; &#43; s; } } ">
 <meta itemprop="datePublished" content="2014-05-16T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2014-05-16T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="72">
+<meta itemprop="wordCount" content="63">
 
 
 
@@ -70,7 +70,7 @@ The script tested:
 The two components
  http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyDemoScript/ http://localhost:8080/dyn/admin/nucleus/thinkwrap/twatg/script/GroovyScriptRunner/  The are not started via Initial, but that is not a problem.
 The script tested:
-1 2 3 4 5 6 7 8 9  class ThatsGroovyDude implements com.thinkwrap.twatg.script.RunnableScript { atg.nucleus.Nucleus nuc = atg.nucleus.Nucleus.getGlobalNucleus(); public String run() { String s = &#34;&#34;; nuc.configPathNames.each { s &#43;= &#34;${it}\n&#34; } return &#34;Hello World!"/>
+class ThatsGroovyDude implements com.thinkwrap.twatg.script.RunnableScript { atg.nucleus.Nucleus nuc = atg.nucleus.Nucleus.getGlobalNucleus(); public String run() { String s = &#34;&#34;; nuc.configPathNames.each { s &#43;= &#34;${it}\n&#34; } return &#34;Hello World!\n\n&#34; &#43; s; } } "/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -144,7 +144,7 @@ The script tested:
         <div class="post-category">
             <a href="/categories/programming/"> programming </a>
             </div>
-          <span class="more-meta"> 72 words </span>
+          <span class="more-meta"> 63 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -165,20 +165,7 @@ The script tested:
 </ul>
 <p>The are not started via Initial, but that is not a problem.</p>
 <p>The script tested:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">ThatsGroovyDude</span> <span class="kd">implements</span> <span class="n">com</span><span class="o">.</span><span class="na">thinkwrap</span><span class="o">.</span><span class="na">twatg</span><span class="o">.</span><span class="na">script</span><span class="o">.</span><span class="na">RunnableScript</span> <span class="o">{</span>
+<div class="highlight"><pre class="chroma"><code class="language-java" data-lang="java"><span class="kd">class</span> <span class="nc">ThatsGroovyDude</span> <span class="kd">implements</span> <span class="n">com</span><span class="o">.</span><span class="na">thinkwrap</span><span class="o">.</span><span class="na">twatg</span><span class="o">.</span><span class="na">script</span><span class="o">.</span><span class="na">RunnableScript</span> <span class="o">{</span>
     <span class="n">atg</span><span class="o">.</span><span class="na">nucleus</span><span class="o">.</span><span class="na">Nucleus</span> <span class="n">nuc</span> <span class="o">=</span> <span class="n">atg</span><span class="o">.</span><span class="na">nucleus</span><span class="o">.</span><span class="na">Nucleus</span><span class="o">.</span><span class="na">getGlobalNucleus</span><span class="o">();</span>
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
   
@@ -187,9 +174,7 @@ The script tested:
        <span class="k">return</span> <span class="s">&#34;Hello World!\n\n&#34;</span> <span class="o">+</span> <span class="n">s</span><span class="o">;</span>
    <span class="o">}</span>
 <span class="o">}</span>
-</code></pre></td></tr></table>
-</div>
-</div><p><img src="/images/atg-tdd-groovy.png" alt=""></p>
+</code></pre></div><p><img src="/images/atg-tdd-groovy.png" alt=""></p>
 <p><img src="/images/atg-tdd-groovy-2.png" alt=""></p>
 
     </div>

@@ -6,10 +6,20 @@
     <description>Recent content in ssh on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 22 May 2015 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 May 2020 22:34:38 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Using SSH keys with multiple Bitbucket accounts</title>
+      <link>https://miroadamy.com/posts/2020-05-12-bitbucket-keys/</link>
+      <pubDate>Tue, 12 May 2020 22:34:38 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2020-05-12-bitbucket-keys/</guid>
+      <description>I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
+With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification.</description>
+    </item>
     
     <item>
       <title>How to solve &#39;Agent admitted failure to sign using the key&#39;</title>
@@ -19,7 +29,7 @@
       <guid>https://miroadamy.com/posts/2015-05-22-ssh-issue/</guid>
       <description>After re-creating the SSH key, I got the above error from Gitolite.
 Full trace:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57  ➜ TWC ssh -v thinkwrap@pensieve.</description>
+➜ TWC ssh -v thinkwrap@pensieve.thinkwrap.com OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013 debug1: Reading configuration data /etc/ssh/ssh_config debug1: Applying options for * debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22. debug1: Connection established. debug1: identity file /home/thinkwrap/.ssh/identity type -1 debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1 debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1 debug1: identity file /home/thinkwrap/.</description>
     </item>
     
     <item>
@@ -43,7 +53,7 @@ This article is useful:
       <guid>https://miroadamy.com/posts/2012-03-21-remote-origin/</guid>
       <description>Issue In dotvim repo, I used readonly URL for cloning the repository. Now I have created local branch ( linux-vm ) to track Linux specific font settings and need them to push up.
 After creating new SSH pair and adding to GitHub, does not work
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42  [tkuser@cplx-dev-vf .</description>
+[tkuser@cplx-dev-vf .vim]$ git status # On branch linux-vm nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm fatal: remote error: You can&amp;#39;t push to git://github.</description>
     </item>
     
   </channel>

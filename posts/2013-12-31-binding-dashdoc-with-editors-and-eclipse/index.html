@@ -60,7 +60,7 @@ The plugin is OS-X specific, because the DashDoc is
 Eclipse There is opensource plugin for it at https://github.">
 <meta itemprop="datePublished" content="2013-12-31T00:57:35-05:00" />
 <meta itemprop="dateModified" content="2013-12-31T00:57:35-05:00" />
-<meta itemprop="wordCount" content="263">
+<meta itemprop="wordCount" content="232">
 
 
 
@@ -144,7 +144,7 @@ Eclipse There is opensource plugin for it at https://github."/>
         <div class="post-category">
             <a href="/categories/programming/"> programming </a>
             </div>
-          <span class="more-meta"> 263 words </span>
+          <span class="more-meta"> 232 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -193,50 +193,11 @@ The plugin is OS-X specific, because the DashDoc is</p>
 <h3 id="vim">Vim</h3>
 <p>See <a href="https://github.com/rizzatti/dash.vim#readme">https://github.com/rizzatti/dash.vim#readme</a></p>
 <p>I am using Pathogen, so</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">cd ~/.vim/bundle
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd ~/.vim/bundle
 git clone https://github.com/rizzatti/funcoo.vim.git
 git clone https://github.com/rizzatti/dash.vim.git
-</code></pre></td></tr></table>
-</div>
-</div><p>The submodule file needs to be edited with these locations:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">.vim $ cat .gitmodules | pbcopy
+</code></pre></div><p>The submodule file needs to be edited with these locations:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">.vim $ cat .gitmodules | pbcopy
  
 [submodule &#34;bundle/vim-fugitive&#34;]
 	path = bundle/vim-fugitive
@@ -262,20 +223,10 @@ git clone https://github.com/rizzatti/dash.vim.git
 	path = bundle/dash.vim
 	url = https://github.com/rizzatti/dash.vim.git
 	ignore = untracked
-</code></pre></td></tr></table>
-</div>
-</div><p>The new command is :Dash and the mapping to search word under cursor is</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">:nmap &lt;silent&gt; &lt;leader&gt;d &lt;Plug&gt;DashSearch
+</code></pre></div><p>The new command is :Dash and the mapping to search word under cursor is</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">:nmap &lt;silent&gt; &lt;leader&gt;d &lt;Plug&gt;DashSearch
 :nmap &lt;silent&gt; &lt;leader&gt;D &lt;Plug&gt;DashGlobalSearch
-</code></pre></td></tr></table>
-</div>
-</div><p><img src="/images/binding-dashdoc-with-editors-and-eclipse_1.png" alt=""></p>
+</code></pre></div><p><img src="/images/binding-dashdoc-with-editors-and-eclipse_1.png" alt=""></p>
 <p>The leader is &lsquo;'</p>
 
     </div>

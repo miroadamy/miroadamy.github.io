@@ -19,7 +19,7 @@
       <guid>https://miroadamy.com/posts/2019-02-10-ssl-poke/</guid>
       <description>Cybersource Testing Tool Java utility that we used before when we were debugging the TLS 1.2 issues.
 It needs to be compiled with JDK 1.8 - ideally the same one that runs in production and then run like:
-1  java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443   replace api.cybersource.com with whatever the cybersource endpoint needs to be.
+java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443 replace api.cybersource.com with whatever the cybersource endpoint needs to be.
 If the utility responds with &amp;lsquo;Successfully connected’, it was able to handshake with the SSL server and establish the secure connection.</description>
     </item>
     

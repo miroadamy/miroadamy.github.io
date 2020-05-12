@@ -18,7 +18,7 @@
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Two small utilities I have places into ~/bin:
 git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
-1 2 3 4 5 6 7 8 9 10  #!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; | less   Example 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst." /><meta name="keywords" content="blog, Miro" />
+#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst." /><meta name="keywords" content="blog, Miro" />
 
 
 
@@ -43,7 +43,7 @@ git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/gi
 <meta property="og:title" content="Gitbits" />
 <meta property="og:description" content="Two small utilities I have places into ~/bin:
 git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
-1 2 3 4 5 6 7 8 9 10  #!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less   Example 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst." />
+#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2019-01-14-gitbits/" />
 <meta property="article:published_time" content="2019-01-14T11:22:48+08:00" />
@@ -51,10 +51,10 @@ git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/gi
 <meta itemprop="name" content="Gitbits">
 <meta itemprop="description" content="Two small utilities I have places into ~/bin:
 git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
-1 2 3 4 5 6 7 8 9 10  #!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less   Example 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.">
+#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.">
 <meta itemprop="datePublished" content="2019-01-14T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2019-01-14T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="302">
+<meta itemprop="wordCount" content="255">
 
 
 
@@ -62,7 +62,7 @@ git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/gi
 <meta name="twitter:title" content="Gitbits"/>
 <meta name="twitter:description" content="Two small utilities I have places into ~/bin:
 git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
-1 2 3 4 5 6 7 8 9 10  #!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less   Example 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst."/>
+#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -136,7 +136,7 @@ git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/gi
         <div class="post-category">
             <a href="/categories/devops/"> DevOps </a>
             </div>
-          <span class="more-meta"> 302 words </span>
+          <span class="more-meta"> 255 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -156,21 +156,7 @@ git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/gi
       <p>Two small utilities I have places into <code>~/bin</code>:</p>
 <h1 id="git-attic">git-attic</h1>
 <p>Source: <a href="https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic">https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic</a></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh
 </span><span class="cp"></span><span class="c1"># git-attic [-M] [PATH] - list deleted files of Git repositories</span>
 #
 <span class="c1"># Use -M to not show renamed files, and other git-log options as you like.</span>
@@ -180,28 +166,8 @@ git log --raw --no-renames --date<span class="o">=</span>short --format<span cla
 </span><span class="s1">       /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39;</span> <span class="p">|</span>
   less
 
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="example">Example</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; |
+</code></pre></div><h2 id="example">Example</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; |
   awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 }
        /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39;
 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.rst
@@ -215,38 +181,9 @@ git log --raw --no-renames --date<span class="o">=</span>short --format<span cla
 2019-11-17 7911114^:src/certificates/ca.csr
 2019-11-17 7911114^:src/certificates/ca.pem
 2019-11-17 7911114^:src/certificates/copy-certificates-to-servers.sh
-</code></pre></td></tr></table>
-</div>
-</div><h1 id="git-trail">git trail</h1>
+</code></pre></div><h1 id="git-trail">git trail</h1>
 <p>I cannot remember where is this one from :-(</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh -e
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh -e
 </span><span class="cp"></span><span class="c1"># git trail [-r] [-t] [COMMIT] - show all branching points in Git history</span>
 
 <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span> -r <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">shift</span> <span class="o">||</span> <span class="nv">REMOTES</span><span class="o">=</span><span class="s2">&#34;-e refs/remotes/&#34;</span>
@@ -269,9 +206,7 @@ git log --raw --no-renames --date<span class="o">=</span>short --format<span cla
 </span><span class="s2">        }
 </span><span class="s2">      } 
 </span><span class="s2">
-</span></code></pre></td></tr></table>
-</div>
-</div>
+</span></code></pre></div>
     </div>
 
     <div class="post-copyright">

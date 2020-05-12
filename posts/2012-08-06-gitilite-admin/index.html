@@ -51,7 +51,7 @@
  create new Linux user on pensieve setup gitolite:  git clone &lt;git://github.com/sitaramc/gitolite&gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln   add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub   get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &lt;client@pensieve.">
 <meta itemprop="datePublished" content="2012-08-06T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2012-08-06T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="485">
+<meta itemprop="wordCount" content="465">
 
 
 
@@ -132,7 +132,7 @@
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 485 words </span>
+          <span class="more-meta"> 465 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -196,15 +196,8 @@ You will have to login as service user (non-host account) and su to root.</p>
 <p>This assumes that you are account administrator - your public key has write (push) priviledge to gitolite-admin repository for your account.</p>
 <p>If this is not true, please ask pensieve admin to add you to the account first - you must have access to gitolite-admin repo for your clients account</p>
 <p>Clone the gitolite-admin repo:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone ACCOUNT@pensieve.thinkwrap.com:gitolite-admin.git
-</code></pre></td></tr></table>
-</div>
-</div><p>Make sure you use proper account name for the URL.</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone ACCOUNT@pensieve.thinkwrap.com:gitolite-admin.git
+</code></pre></div><p>Make sure you use proper account name for the URL.</p>
 <p>All administration tasks are performed upon this gitolite-admin repo. By pushing the committed changes upstream, gitolite will &ldquo;replay&rdquo; and execute the changes.</p>
 <p>There are three types of changes:</p>
 <ul>
@@ -215,26 +208,7 @@ You will have to login as service user (non-host account) and su to root.</p>
 <h3 id="how-to-add-new-repository">How to add new repository</h3>
 <p>Go to gitolite-admin repository clone and edit the cong/gitolite.conf file</p>
 <p>Add new repo name with access rights - example:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cat gitolite-admin/conf/gitolite.conf 
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cat gitolite-admin/conf/gitolite.conf 
  
 repo gitolite-admin
     RW+     =   miro
@@ -249,25 +223,13 @@ repo tmsp-dev
  
 repo testing
     RW+     =   @all
-</code></pre></td></tr></table>
-</div>
-</div><p>Each block starting with &ldquo;repo&rdquo; defines new repository.</p>
+</code></pre></div><p>Each block starting with &ldquo;repo&rdquo; defines new repository.</p>
 <p>Add new block to file, e.g. foobar</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">... PREVIOUS REPOS ...
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">... PREVIOUS REPOS ...
 repo foobar
     RW+     =  developer1
     R       =  @all
-</code></pre></td></tr></table>
-</div>
-</div><p>Commit and push.</p>
+</code></pre></div><p>Commit and push.</p>
 <p>Gitolite will create new repository (located at <code>$HOSTING_USER_HOME/repositories/foobar.git</code>), make it available for push ONLY to developer1, allow everybody (all defined developers with public keys) to pull.</p>
 <p>The URL of the repo will be <code>HOSTING_USER_NAME@pensieve.thinkwrap.com:foobar.git</code> Note that there is no repositories (or .git) in the URL. The later is optional.</p>
 <h3 id="how-to-add-new-user-to-your-project">How to add new user to your project</h3>

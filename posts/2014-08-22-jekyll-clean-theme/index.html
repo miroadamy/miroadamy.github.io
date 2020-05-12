@@ -57,7 +57,7 @@ It is based on Jekyll Clean theme, created by Scott Emmons - see it / get it fro
 If you are interested in the Jekyll Clean theme:">
 <meta itemprop="datePublished" content="2014-08-22T16:25:06-07:00" />
 <meta itemprop="dateModified" content="2014-08-22T16:25:06-07:00" />
-<meta itemprop="wordCount" content="379">
+<meta itemprop="wordCount" content="361">
 
 
 
@@ -140,7 +140,7 @@ If you are interested in the Jekyll Clean theme:"/>
         <div class="post-category">
             <a href="/categories/general/"> general </a>
             </div>
-          <span class="more-meta"> 379 words </span>
+          <span class="more-meta"> 361 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -166,42 +166,14 @@ created by Scott Emmons - see it / get it from <a href="https://github.com/scott
 <h1 id="migration-process">Migration process</h1>
 <p>I exported the Wordpress using Admin export tool - which produced the huge XML file.</p>
 <p>I forked the jekyll-clean and made sure it works</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ git clone git@github.com:miroadamy/jekyll-now.git
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ git clone git@github.com:miroadamy/jekyll-now.git
 $ cd jekyll-now
 $ jekyll build
 $ jekyll serve
 $ git remote add upstream git@github.com:scotte/jekyll-clean.git
-</code></pre></td></tr></table>
-</div>
-</div><p>The last one is to allow getting fixes from Scott.</p>
+</code></pre></div><p>The last one is to allow getting fixes from Scott.</p>
 <p>Then I installed importer and few required gems to run the import</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo gem install jekyll-paginate
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo gem install jekyll-paginate
 $ sudo gem install github-pages
 $ sudo gem install jekyll-import
 $ sudo gem install hpricot
@@ -214,9 +186,7 @@ $ git checkout -b master
 $ git push origin master
 $ git add .
 $ git commit -m &#34;Imported the old Wordpress blog from miroadamy.com&#34;
-</code></pre></td></tr></table>
-</div>
-</div><p>Now browse to http://127.0.0.1:4000</p>
+</code></pre></div><p>Now browse to http://127.0.0.1:4000</p>
 <h1 id="disqus-comments">Disqus Comments</h1>
 <p>I have not set up comments yet as
 <a href="https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions">documented here</a>.</p>

@@ -18,8 +18,8 @@
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.
 Just for git commands:
-1  git config --global --replace-all core.pager &amp;#34;less -iXFR&amp;#34;   For less globally (including git) - add to .bashrc / .zshrc / etc:
-1  export LESS=-iXFR   The options we set for less are:" /><meta name="keywords" content="blog, Miro" />
+git config --global --replace-all core.pager &amp;#34;less -iXFR&amp;#34; For less globally (including git) - add to .bashrc / .zshrc / etc:
+export LESS=-iXFR The options we set for less are:" /><meta name="keywords" content="blog, Miro" />
 
 
 
@@ -44,8 +44,8 @@ Just for git commands:
 <meta property="og:title" content="How to keep git log and less output on the screen" />
 <meta property="og:description" content="When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.
 Just for git commands:
-1  git config --global --replace-all core.pager &#34;less -iXFR&#34;   For less globally (including git) - add to .bashrc / .zshrc / etc:
-1  export LESS=-iXFR   The options we set for less are:" />
+git config --global --replace-all core.pager &#34;less -iXFR&#34; For less globally (including git) - add to .bashrc / .zshrc / etc:
+export LESS=-iXFR The options we set for less are:" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2015-03-10-git-log-output-less/" />
 <meta property="article:published_time" content="2015-03-10T00:57:35-05:00" />
@@ -53,11 +53,11 @@ Just for git commands:
 <meta itemprop="name" content="How to keep git log and less output on the screen">
 <meta itemprop="description" content="When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.
 Just for git commands:
-1  git config --global --replace-all core.pager &#34;less -iXFR&#34;   For less globally (including git) - add to .bashrc / .zshrc / etc:
-1  export LESS=-iXFR   The options we set for less are:">
+git config --global --replace-all core.pager &#34;less -iXFR&#34; For less globally (including git) - add to .bashrc / .zshrc / etc:
+export LESS=-iXFR The options we set for less are:">
 <meta itemprop="datePublished" content="2015-03-10T00:57:35-05:00" />
 <meta itemprop="dateModified" content="2015-03-10T00:57:35-05:00" />
-<meta itemprop="wordCount" content="129">
+<meta itemprop="wordCount" content="123">
 
 
 
@@ -65,8 +65,8 @@ Just for git commands:
 <meta name="twitter:title" content="How to keep git log and less output on the screen"/>
 <meta name="twitter:description" content="When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.
 Just for git commands:
-1  git config --global --replace-all core.pager &#34;less -iXFR&#34;   For less globally (including git) - add to .bashrc / .zshrc / etc:
-1  export LESS=-iXFR   The options we set for less are:"/>
+git config --global --replace-all core.pager &#34;less -iXFR&#34; For less globally (including git) - add to .bashrc / .zshrc / etc:
+export LESS=-iXFR The options we set for less are:"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -140,7 +140,7 @@ Just for git commands:
         <div class="post-category">
             <a href="/categories/lifehacks/"> lifehacks </a>
             </div>
-          <span class="more-meta"> 129 words </span>
+          <span class="more-meta"> 123 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -155,39 +155,15 @@ Just for git commands:
     <div class="post-content">
       <p>When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.</p>
 <p>Just for git commands:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">git config --global --replace-all core.pager &#34;less -iXFR&#34;
-</code></pre></td></tr></table>
-</div>
-</div><p>For less globally (including git) - add to .bashrc / .zshrc / etc:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">export LESS=-iXFR
-</code></pre></td></tr></table>
-</div>
-</div><p>The options we set for less are:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">* -i - ignore case when searching (but respect case if search term contains uppercase letters)
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git config --global --replace-all core.pager &#34;less -iXFR&#34;
+</code></pre></div><p>For less globally (including git) - add to .bashrc / .zshrc / etc:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">export LESS=-iXFR
+</code></pre></div><p>The options we set for less are:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">* -i - ignore case when searching (but respect case if search term contains uppercase letters)
 * -X - do not clear screen on exit
 * -F - exit if text is less then one screen long
 * -R - was on by default on my system, something related to colors
-</code></pre></td></tr></table>
-</div>
-</div><p>Source: <a href="http://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html">http://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html</a></p>
+</code></pre></div><p>Source: <a href="http://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html">http://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html</a></p>
 
     </div>
 

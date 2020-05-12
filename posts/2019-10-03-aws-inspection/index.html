@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Bunch of one-liners for AWS .. so that I find them faster next time
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &amp;#39;.Reservations[].Instances[] | &amp;#34;\n&amp;#34; &#43; .InstanceId &#43; &amp;#34; : &amp;#34; &#43; .KeyName &#43; &amp;#34; =&amp;gt; &amp;#34; &#43; .PublicIpAddress &#43; &amp;#34; | &amp;#34; &#43; .PublicDnsName, .Tags[] as $tt | &amp;#34; ... &amp;#34; &#43; $tt." /><meta name="keywords" content="blog, Miro" />
+aws --output=json ec2 describe-instances | jq -r &amp;#39;.Reservations[].Instances[] | &amp;#34;\n&amp;#34; &#43; .InstanceId &#43; &amp;#34; : &amp;#34; &#43; .KeyName &#43; &amp;#34; =&amp;gt; &amp;#34; &#43; .PublicIpAddress &#43; &amp;#34; | &amp;#34; &#43; .PublicDnsName, .Tags[] as $tt | &amp;#34; ... &amp;#34; &#43; $tt.Key &#43;&amp;#34;:&amp;#34;&#43; $tt.Value&amp;#39; aws ec2 describe-instances | jq &amp;#39;.Reservations[].Instances[] | .InstanceId &#43; &amp;#34; : &amp;#34; &#43; .Placement.AvailabilityZone &#43; &amp;#34; =&amp;gt; &amp;#34; &#43; ." /><meta name="keywords" content="blog, Miro" />
 
 
 
@@ -41,24 +41,24 @@
 
 <meta property="og:title" content="AWS Inspection" />
 <meta property="og:description" content="Bunch of one-liners for AWS .. so that I find them faster next time
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt." />
+aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId &#43; &#34; : &#34; &#43; .Placement.AvailabilityZone &#43; &#34; =&gt; &#34; &#43; ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2019-10-03-aws-inspection/" />
 <meta property="article:published_time" content="2019-10-03T11:22:48+08:00" />
 <meta property="article:modified_time" content="2019-10-03T11:22:48+08:00" />
 <meta itemprop="name" content="AWS Inspection">
 <meta itemprop="description" content="Bunch of one-liners for AWS .. so that I find them faster next time
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.">
+aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId &#43; &#34; : &#34; &#43; .Placement.AvailabilityZone &#43; &#34; =&gt; &#34; &#43; .">
 <meta itemprop="datePublished" content="2019-10-03T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-03T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="509">
+<meta itemprop="wordCount" content="471">
 
 
 
 <meta itemprop="keywords" content="AWS,cloud,oneliners," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="AWS Inspection"/>
 <meta name="twitter:description" content="Bunch of one-liners for AWS .. so that I find them faster next time
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt."/>
+aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId &#43; &#34; : &#34; &#43; .Placement.AvailabilityZone &#43; &#34; =&gt; &#34; &#43; ."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -132,7 +132,7 @@
         <div class="post-category">
             <a href="/categories/devops/"> DevOps </a>
             </div>
-          <span class="more-meta"> 509 words </span>
+          <span class="more-meta"> 471 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -158,29 +158,7 @@
     <div class="post-content">
       <h2 id="bunch-of-one-liners-for-aws">Bunch of one-liners for AWS</h2>
 <p>.. so that I find them faster next time</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; + .InstanceId + &#34;  :  &#34; + .KeyName + &#34;  =&gt;  &#34; + .PublicIpAddress + &#34; | &#34; + .PublicDnsName,  .Tags[] as $tt | &#34;  ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39;
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; + .InstanceId + &#34;  :  &#34; + .KeyName + &#34;  =&gt;  &#34; + .PublicIpAddress + &#34; | &#34; + .PublicDnsName,  .Tags[] as $tt | &#34;  ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39;
 
 aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId + &#34;  :  &#34; + .Placement.AvailabilityZone + &#34;  =&gt;  &#34; + .PublicIpAddress&#39;
 
@@ -198,50 +176,18 @@ aws ec2 describe-vpcs | jq -e --raw-output &#39;.Vpcs[] | &#34;\n&#34; + .VpcId 
 aws ec2 describe-subnets | jq -e --raw-output &#39;.Subnets[] | &#34;\n&#34; + .VpcId + &#34;  :  &#34; + .CidrBlock +&#34; : &#34; + .AvailabilityZone,  .Tags[] as $tt | &#34;  ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39;
 
 aws ec2 authorize-security-group-ingress --group-id sg-bfa45bd4 --protocol tcp --port 31672 --cidr 204.101.219.210/31
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="how-many-instances-of-each-type-do-i-have-and-in-what-states">How many instances of each type do I have, and in what states?</h2>
+</code></pre></div><h2 id="how-many-instances-of-each-type-do-i-have-and-in-what-states">How many instances of each type do I have, and in what states?</h2>
 <ul>
 <li>Considering buying reserved instances or thinking about migrating to a newly introduced class?</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34;
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="what-cidrs-have-ingress-access-to-which-ports">What CIDRs have Ingress Access to which Ports?</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># This is helpful when you need to perform a survey or audit of your system boundaries. While such a task isn’t ever “easy”, it can go more smoothly with with a summary:
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34;
+</code></pre></div><h2 id="what-cidrs-have-ingress-access-to-which-ports">What CIDRs have Ingress Access to which Ports?</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># This is helpful when you need to perform a survey or audit of your system boundaries. While such a task isn’t ever “easy”, it can go more smoothly with with a summary:
 
 aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39;
 
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="which-services-am-i-using">Which Services am I using?</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31  --granularity MONTHLY --metrics UsageQuantity --group-by Type=DIMENSION,Key=SERVICE | jq &#39;.ResultsByTime[].Groups[] | select(.Metrics.UsageQuantity.Amount &gt; 0) | .Keys[0]&#39;
+</code></pre></div><h2 id="which-services-am-i-using">Which Services am I using?</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31  --granularity MONTHLY --metrics UsageQuantity --group-by Type=DIMENSION,Key=SERVICE | jq &#39;.ResultsByTime[].Groups[] | select(.Metrics.UsageQuantity.Amount &gt; 0) | .Keys[0]&#39;
 
 
 # How much they cost
@@ -250,49 +196,17 @@ aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31  --granu
 # Instances running
 
 aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34;
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="cidr-access-to-ports">CIDR access to ports</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39;
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="lambda-runtimes">Lambda runtimes</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ runtime:.[0].Runtime, functions:[.[]|.FunctionName] }
+</code></pre></div><h2 id="cidr-access-to-ports">CIDR access to ports</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39;
+</code></pre></div><h2 id="lambda-runtimes">Lambda runtimes</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ runtime:.[0].Runtime, functions:[.[]|.FunctionName] }
 ]&#34;
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="memory-size">Memory size</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ (.[0].Runtime): [.[]|{ name: .FunctionName, timeout: .Timeout, memory: .MemorySize }] }]&#34;
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="lambda-environment-variables">Lambda Environment variables</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">aws lambda list-functions | jq -r &#39;[.Functions[]|{name: .FunctionName, env: .Environment.Variables}]|.[]|select(.env|length &gt; 0)&#39;
+</code></pre></div><h2 id="memory-size">Memory size</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ (.[0].Runtime): [.[]|{ name: .FunctionName, timeout: .Timeout, memory: .MemorySize }] }]&#34;
+</code></pre></div><h2 id="lambda-environment-variables">Lambda Environment variables</h2>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws lambda list-functions | jq -r &#39;[.Functions[]|{name: .FunctionName, env: .Environment.Variables}]|.[]|select(.env|length &gt; 0)&#39;
 
-</code></pre></td></tr></table>
-</div>
-</div>
+</code></pre></div>
     </div>
 
     <div class="post-copyright">

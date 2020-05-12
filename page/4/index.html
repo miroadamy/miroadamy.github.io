@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-04-28T21:19:45+00:00" />
+<meta property="og:updated_time" content="2020-05-12T20:27:29+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,30 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2019-10-03-aws-inspection/">AWS Inspection</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-10-03 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> DevOps </a>
+          </div>
+        <span class="more-meta"> 471 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Bunch of one-liners for AWS .. so that I find them faster next time
+aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; + .InstanceId + &#34; : &#34; + .KeyName + &#34; =&gt; &#34; + .PublicIpAddress + &#34; | &#34; + .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId + &#34; : &#34; + .Placement.AvailabilityZone + &#34; =&gt; &#34; + .
+    </div>
+    <div class="read-more">
+      <a href="/posts/2019-10-03-aws-inspection/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2019-09-29-pyrenees/">Pyrenees</a></h1>
@@ -205,32 +229,6 @@ Note for my friends who think Catalan is more or less same as Spanish: go for it
     </div>
     <div class="read-more">
       <a href="/posts/2019-08-29-post/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-08-25-foldvari/">Favorite places</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-08-25 </span>
-      <div class="post-category">
-          <a href="/categories/life/"> life </a>
-          </div>
-        <span class="more-meta"> 30 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I discovered this place rather late - at the end of my vacations.
-Maybe it was better so, otherwise I would my vacation here :-)
-https://spectator.sme.sk/c/22160317/bookworms-get-a-sanctuary-in-the-slovak-national-gallery.html
-I&rsquo;ll be back !!!
-    </div>
-    <div class="read-more">
-      <a href="/posts/2019-08-25-foldvari/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

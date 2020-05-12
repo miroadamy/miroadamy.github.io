@@ -51,7 +51,7 @@ Main features  multiple users each user represent a client:  e.g. users client1 
 Main features  multiple users each user represent a client:  e.g. users client1    Users are separated by Unix permissions:  access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes  Inside each user, there are multiple projects.">
 <meta itemprop="datePublished" content="2012-06-21T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2012-06-21T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="5140">
+<meta itemprop="wordCount" content="4713">
 
 
 
@@ -132,8 +132,8 @@ Main features  multiple users each user represent a client:  e.g. users client1 
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 5140 words </span>
-          <span class="more-meta"> 25 mins read </span>
+          <span class="more-meta"> 4713 words </span>
+          <span class="more-meta"> 23 mins read </span>
         
       </div>
     </header>
@@ -278,20 +278,7 @@ both setting up one user account and simulation of the development .</p>
 <p>This setup describes process for client1 and can be repeated for any other.</p>
 <h4 id="step-one---setup-gitolite">Step one - setup Gitolite</h4>
 <p>Gitolite is distributred as Git repo, so we clone into home directory of hosting user (==client1)</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[client1@jenkins0 ~]$ pwd
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[client1@jenkins0 ~]$ pwd
 /home/client1
 [client1@jenkins0 ~]$ git clone git://github.com/sitaramc/gitolite
 Cloning into gitolite...
@@ -300,66 +287,31 @@ remote: Compressing objects: 100% (2829/2829), done.
 remote: Total 8267 (delta 5682), reused 7848 (delta 5318)
 Receiving objects: 100% (8267/8267), 2.52 MiB | 1.12 MiB/s, done.
 Resolving deltas: 100% (5682/5682), done.
-</code></pre></td></tr></table>
-</div>
-</div><p>It creates directory &lsquo;~/gitolite&rsquo; which contains few scripts</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[client1@jenkins0 ~]$ ll
+</code></pre></div><p>It creates directory &lsquo;~/gitolite&rsquo; which contains few scripts</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[client1@jenkins0 ~]$ ll
 total 16
 drwxr-xr-x 6 client1 client1 4096 Jun 17 16:38 gitolite
 -rw-r--r-- 1 client1 client1 393 Jun 17 12:02 luke.pub
 -rw-r--r-- 1 client1 client1 401 Jun 13 16:07 miro-radegast.pub
 drwxrwxr-x 5 client1 client1 4096 Jun 17 12:09 projects
-</code></pre></td></tr></table>
-</div>
-</div><p>Pre-requisites for next step are:</p>
+</code></pre></div><p>Pre-requisites for next step are:</p>
 <ul>
 <li>existing <code>~/bin</code> directory</li>
 <li>this directory as part of PATH</li>
 </ul>
 <h4 id="create-bin-directory">Create bin directory</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[client1@jenkins0 ~]$ mkdir ~/bin
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[client1@jenkins0 ~]$ mkdir ~/bin
 [client1@jenkins0 ~]$ export PATH=$PATH:~/bin
 [client1@jenkins0 ~]$ echo $PATH
 /usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/client1/bin:/home/client1/bin
 [client1@jenkins0 ~]$
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="install-it">Install it:</h4>
+</code></pre></div><h4 id="install-it">Install it:</h4>
 <p>The install just creates symlink in <code>~/bin</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[client1@jenkins0 ~]$ gitolite/install -ln
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[client1@jenkins0 ~]$ gitolite/install -ln
 [client1@jenkins0 ~]$ ll ~/bin/
 total 0
 lrwxrwxrwx 1 client1 client1 35 Jun 17 16:40 gitolite -&gt; /home/client1/gitolite/src/gitolite
-</code></pre></td></tr></table>
-</div>
-</div><p><strong>Next part is to setup Gitolite admin account.</strong></p>
+</code></pre></div><p><strong>Next part is to setup Gitolite admin account.</strong></p>
 <p>We need a public key of the person that will be admininistering this hosting account.</p>
 <p>It must satisfy few requirements:</p>
 <ul>
@@ -371,21 +323,11 @@ lrwxrwxrwx 1 client1 client1 35 Jun 17 16:40 gitolite -&gt; /home/client1/gitoli
 <p>Inside this file, there is username@hostname - it is important that you name the file properly (I found out the hard way)</p>
 <p><code>ssh-rsa AAAAB3NzaC..... DELETED .... d9jajwIsLnJjw== miro``@Radegast``.local</code></p>
 <h4 id="add-private-key">Add private key:</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[client1@jenkins0 ~]$ gitolite setup -pk miro.pub
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[client1@jenkins0 ~]$ gitolite setup -pk miro.pub
 Initialized empty Git repository in /home/client1/repositories/gitolite-admin.git/
 Initialized empty Git repository in /home/client1/repositories/testing.git/
 [client1@jenkins0 ~]$
-</code></pre></td></tr></table>
-</div>
-</div><p>This created two Git repositories: gitolite-admin (which will be used for all administration) and test one.</p>
+</code></pre></div><p>This created two Git repositories: gitolite-admin (which will be used for all administration) and test one.</p>
 <p>It also adds user &lsquo;miro&rsquo; as admin of the gitolite with write access (push) to gitolite-admin repo</p>
 <p><strong>Under the hood:</strong></p>
 <ul>
@@ -397,25 +339,13 @@ This command causes that whenever user with this public key logs in, instead of 
 <h3 id="on-client">On Client</h3>
 <p>On workstation from which the public key originated, I will need to clone the gitolite-admin repo:</p>
 <p>I am in the temp working directory &lsquo;gitolite-on-jenkins0&rsquo;, and &lsquo;gs&rsquo; is an alias for &lsquo;git status&rsquo;</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">gitolite-on-jenkins0 $ git clone client1@192.168.16.144:gitolite-admin.git
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">gitolite-on-jenkins0 $ git clone client1@192.168.16.144:gitolite-admin.git
 Cloning into &#39;gitolite-admin&#39;...
 remote: Counting objects: 6, done.
 remote: Compressing objects: 100% (4/4), done.
 remote: Total 6 (delta 0), reused 0 (delta 0)
 Receiving objects: 100% (6/6), done.
-</code></pre></td></tr></table>
-</div>
-</div><p>Please note that I have used url &lsquo;client1@hostname&rsquo; format - not &lsquo;miro@hostname&rsquo;.
+</code></pre></div><p>Please note that I have used url &lsquo;client1@hostname&rsquo; format - not &lsquo;miro@hostname&rsquo;.
 We always connect using host identity.</p>
 <p>Here is what happens under the hood:</p>
 <ul>
@@ -433,33 +363,7 @@ This is the same key we set up on hostname</li>
 <p>Here I have added <a href="mailto:tkuser@luke.pub">tkuser@luke.pub</a> (note that this naming is OK - see Gitolite docs for details).</p>
 <p>The other file I am adding is from third VM and has weird name. I wanted to test the third format with two @ signs but get to it. Ignore this file.</p>
 <p>After copying the files, we add them in git, commit locally and push</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">gitolite-admin $ gs
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">gitolite-admin $ gs
 # On branch master
 # Untracked files:
 # (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
@@ -481,26 +385,8 @@ gitolite-admin $ git commit -m&#34;Added 2 users&#34;
 2 files changed, 2 insertions(+), 0 deletions(-)
 create mode 100644 keydir/miro.adamy+client3-dev-vf-osx@gmail.com@client3-dev-vf.pub
 create mode 100644 keydir/tkuser@luke.pub
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="next-step-will-be-editing-gitoliteconf">Next step will be editing gitolite.conf</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">gitolite-admin $ vi conf/gitolite.conf
+</code></pre></div><h4 id="next-step-will-be-editing-gitoliteconf">Next step will be editing gitolite.conf</h4>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">gitolite-admin $ vi conf/gitolite.conf
 gitolite-admin $ cat conf/gitolite.conf
 repo gitolite-admin
 RW+ = miro
@@ -512,35 +398,14 @@ RW+ = miro
 repo projectOne-Blessed
 R = tkuser
 RW+ = miro
-</code></pre></td></tr></table>
-</div>
-</div><p>I will create two repositories for project named unimaginatively &lsquo;projectOne&rsquo;.</p>
+</code></pre></div><p>I will create two repositories for project named unimaginatively &lsquo;projectOne&rsquo;.</p>
 <p>The projectOne repository (yes, I know this is not according naming convention - there should have been two repos named projectOne-tkuser, and projectOne-SomeOther developer. I will be cheating a bit and use &ldquo;projectOne&rdquo;
 as developer repository shared by two developers: tkuser@luke, and miro@radegast.</p>
 <p>User miro@radegast will be wearing second hat as integration manager and will also have access to &ldquo;blessed&rdquo; repository named &ldquo;projectOne-Blessed&rdquo;.</p>
 <p>OK, this is also not according naming convention - which I have created AFTER this exercise.</p>
 <p><em><strong>Please do what I say to do, not what I do :-D</strong></em></p>
 <p>The syntax is documented in Gitolite, but here is the idea: but just naming the repositories, they will be created when we push gitolite-admin repo.</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">gitolite-admin $ gs
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">gitolite-admin $ gs
 # On branch master
 # Your branch is ahead of &#39;origin/master&#39; by 1 commit.
 #
@@ -555,25 +420,8 @@ gitolite-admin $ git add conf/gitolite.conf
 gitolite-admin $ git commit -m&#34;Some repos&#34;
 [master 35789bb] Some repos
 1 files changed, 10 insertions(+), 0 deletions(-)
-</code></pre></td></tr></table>
-</div>
-</div><p>When we push, lost of magic happens on the other end:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">gitolite-admin $ git push
+</code></pre></div><p>When we push, lost of magic happens on the other end:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">gitolite-admin $ git push
 Counting objects: 13, done.
 Delta compression using up to 8 threads.
 Compressing objects: 100% (8/8), done.
@@ -584,96 +432,33 @@ remote: Initialized empty Git repository in /home/client1/repositories/projectOn
 remote: Initialized empty Git repository in /home/client1/repositories/projectTwo.git/
 To client1@192.168.16.144:gitolite-admin.git
 ca335c9..35789bb master -&gt; master
-</code></pre></td></tr></table>
-</div>
-</div><p>Also, worth noticing that miro.pub found its way into keydir - even if it was never added (the setup action copied it there).</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">gitolite-admin $ ll keydir/
+</code></pre></div><p>Also, worth noticing that miro.pub found its way into keydir - even if it was never added (the setup action copied it there).</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">gitolite-admin $ ll keydir/
 total 24
 -rw-r--r-- 1 miro staff 418B 17 Jun 17:04 miro.adamy+client3-dev-vf-osx@gmail.com@client3-dev-vf.pub
 -rw-r--r-- 1 miro staff 401B 17 Jun 16:54 miro.pub
 -rw-r--r-- 1 miro staff 393B 17 Jun 17:01 tkuser@luke.pub
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="time-to-simulate-some-development">Time to simulate some development.</h3>
+</code></pre></div><h3 id="time-to-simulate-some-development">Time to simulate some development.</h3>
 <p>I am still on Macbook, wearing my &ldquo;developer&rdquo; hat, go to directory where I work with client1 project and clone: (the directory is empty as we are just starting):</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">client1 $ pwd
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">client1 $ pwd
 /Users/miro/Projects/Thinkwrap/Infrastructure/git-repos/client1
 client1 $ ll
 client1 $ git clone client1@192.168.16.144:projectOne
 Cloning into &#39;projectOne&#39;...
 warning: You appear to have cloned an empty repository.
-</code></pre></td></tr></table>
-</div>
-</div><p>Again, I used &lsquo;client1@hostname&rsquo; to connect.</p>
+</code></pre></div><p>Again, I used &lsquo;client1@hostname&rsquo; to connect.</p>
 <p>Note that the url does contain just repository name, while on server side the repos are stored in folder &lsquo;repositories&rsquo; and the directory is named &lsquo;projectOne.git&rsquo;. This is OK.</p>
 <p>I will also clone the blessed repository (now wearing my Integration manager hat):</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">client1 $ git clone client1@192.168.16.144:projectOne-Blessed
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">client1 $ git clone client1@192.168.16.144:projectOne-Blessed
 Cloning into &#39;projectOne-Blessed&#39;...
 warning: You appear to have cloned an empty repository.
 client1 $ ll
 total 0
 drwxr-xr-x 3 miro staff 102B 17 Jun 17:12 projectOne
 drwxr-xr-x 3 miro staff 102B 17 Jun 17:12 projectOne-Blessed
-</code></pre></td></tr></table>
-</div>
-</div><p>Lets set up some content for the team to work on:</p>
+</code></pre></div><p>Lets set up some content for the team to work on:</p>
 <p>I work in blessed - create 2 files, commit locally and push</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">client1 $ cd projectOne-Blessed/
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">client1 $ cd projectOne-Blessed/
 projectOne-Blessed $ ll
 projectOne-Blessed $ ll ~/bin &gt;bin-dir.txt
 projectOne-Blessed $ ll .. &gt;this-dir.txt
@@ -694,39 +479,14 @@ projectOne-Blessed $ git commit -m&#34;2 files&#34;
 2 files changed, 45 insertions(+), 0 deletions(-)
 create mode 100644 bin-dir.txt
 create mode 100644 this-dir.txt
-</code></pre></td></tr></table>
-</div>
-</div><p>For the first push, you MUST specify the upstream repo and branch. Here is what happens if you do not:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">projectOne-Blessed $ git push
+</code></pre></div><p>For the first push, you MUST specify the upstream repo and branch. Here is what happens if you do not:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">projectOne-Blessed $ git push
 No refs in common and none specified; doing nothing.
 Perhaps you should specify a branch such as &#39;master&#39;.
 fatal: The remote end hung up unexpectedly
 error: failed to push some refs to &#39;client1@192.168.16.144:projectOne-Blessed&#39;
-</code></pre></td></tr></table>
-</div>
-</div><p>OK then, I will push to origin (this is where I got the blessed repo from) and push the only branch - master</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">projectOne-Blessed $ git push origin master
+</code></pre></div><p>OK then, I will push to origin (this is where I got the blessed repo from) and push the only branch - master</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">projectOne-Blessed $ git push origin master
 Counting objects: 4, done.
 Delta compression using up to 8 threads.
 Compressing objects: 100% (4/4), done.
@@ -734,38 +494,11 @@ Writing objects: 100% (4/4), 1.21 KiB, done.
 Total 4 (delta 0), reused 0 (delta 0)
 To client1@192.168.16.144:projectOne-Blessed
 * [new branch] master -&gt; master
-</code></pre></td></tr></table>
-</div>
-</div><p>Now it works.</p>
+</code></pre></div><p>Now it works.</p>
 <h4 id="second-developer">Second developer</h4>
 <p>Now, second developer joined project. I will simulate him from Luke. His name is tkuser and his public key was already added to gitolite-admin</p>
 <p>I ssh to Luke - checkout the ProjectOne, connect upstream ProjectOne-blessed, add some files / modify some</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE temp]$ git clone client1@192.168.16.144:projectOne
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE temp]$ git clone client1@192.168.16.144:projectOne
 Cloning into projectOne...
 warning: You appear to have cloned an empty repository.
 [tkuser@LUKE temp]$ cd projectOne/
@@ -786,39 +519,12 @@ After doing this, you may fix the identity used for this commit with:
 git commit --amend --reset-author
 1 files changed, 16 insertions(+), 0 deletions(-)
 create mode 100644 my-home.txt
-</code></pre></td></tr></table>
-</div>
-</div><p>From first commit (as there was never any development from Luke, I just installed Git there today), we get message that Git has trouble determining committer info and is using Thinknostic User &lt;tkuser@LUKE.(none)&gt;</p>
+</code></pre></div><p>From first commit (as there was never any development from Luke, I just installed Git there today), we get message that Git has trouble determining committer info and is using Thinknostic User &lt;tkuser@LUKE.(none)&gt;</p>
 <p><strong>We can fix this easily:</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git config --global user.name &#34;ThinkWrap User&#34;
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git config --global user.name &#34;ThinkWrap User&#34;
 [tkuser@LUKE projectOne]$ git config --global user.email tkuser.luke@thinkwrap.net
-</code></pre></td></tr></table>
-</div>
-</div><p>The next commit will be better</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git commit -m &#34;tkuser started&#34;
+</code></pre></div><p>The next commit will be better</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git commit -m &#34;tkuser started&#34;
 # On branch master
 nothing to commit (working directory clean)
  
@@ -831,53 +537,14 @@ total 8
 -rw-rw-r-- 1 tkuser tkuser 1040 Jun 17 17:17 my-home.txt
 [tkuser@LUKE projectOne]$ pwd
 /home/tkuser/temp/projectOne
-</code></pre></td></tr></table>
-</div>
-</div><p>As we see, two commits to local repo have different indentities. I could fix that by ammending the commit, and I would in real project, but lets move on:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git log
+</code></pre></div><p>As we see, two commits to local repo have different indentities. I could fix that by ammending the commit, and I would in real project, but lets move on:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git log
 commit ac419625e9bef60a8bfb4f78c676eb25b7dc85b9
 Author: Thinknostic User &lt;tkuser@LUKE.(none)&gt;
 Date: Sun Jun 17 17:18:41 2012 -0400
 tkuser started
-</code></pre></td></tr></table>
-</div>
-</div><p>OK, some more hard development:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ vim my-home.txt
+</code></pre></div><p>OK, some more hard development:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ vim my-home.txt
 [tkuser@LUKE projectOne]$ git status
 # On branch master
 # Changes not staged for commit:
@@ -899,22 +566,8 @@ commit ac419625e9bef60a8bfb4f78c676eb25b7dc85b9
 Author: Thinknostic User &lt;tkuser@LUKE.(none)&gt;
 Date: Sun Jun 17 17:18:41 2012 -0400
 tkuser started
-</code></pre></td></tr></table>
-</div>
-</div><p>Now we will share the code with the users on the CodeShare:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git push origin master
+</code></pre></div><p>Now we will share the code with the users on the CodeShare:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git push origin master
 Counting objects: 6, done.
 Delta compression using up to 8 threads.
 Compressing objects: 100% (4/4), done.
@@ -922,42 +575,16 @@ Writing objects: 100% (6/6), 867 bytes, done.
 Total 6 (delta 1), reused 0 (delta 0)
 To client1@192.168.16.144:projectOne
 * [new branch] master -&gt; master
-</code></pre></td></tr></table>
-</div>
-</div><p>What we have forgotten to do was to integrate code coming from ThinkWrap and shared in blessed repo.</p>
+</code></pre></div><p>What we have forgotten to do was to integrate code coming from ThinkWrap and shared in blessed repo.</p>
 <p>Let&rsquo;s hook up the blessed to my local repository on Luke:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git remote add blessed client1@192.168.16.144:projectOne-Blessed
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git remote add blessed client1@192.168.16.144:projectOne-Blessed
 [tkuser@LUKE projectOne]$ git remote -v
 blessed client1@192.168.16.144:projectOne-Blessed (fetch)
 blessed client1@192.168.16.144:projectOne-Blessed (push)
 origin client1@192.168.16.144:projectOne (fetch)
 origin client1@192.168.16.144:projectOne (push)
-</code></pre></td></tr></table>
-</div>
-</div><p>This is &ldquo;read-only&rdquo; link even if it does not say so. We can now fetch the changes from blessed (I could have named it anything, it is just name).</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git fetch blessed master
+</code></pre></div><p>This is &ldquo;read-only&rdquo; link even if it does not say so. We can now fetch the changes from blessed (I could have named it anything, it is just name).</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git fetch blessed master
 warning: no common commits
 remote: Counting objects: 4, done.
 remote: Compressing objects: 100% (4/4), done.
@@ -965,50 +592,16 @@ remote: Total 4 (delta 0), reused 0 (delta 0)
 Unpacking objects: 100% (4/4), done.
 From 192.168.16.144:projectOne-Blessed
 * branch master -&gt; FETCH_HEAD
-</code></pre></td></tr></table>
-</div>
-</div><p>This would be ideal situation if I want just to see what is going on, without impacting my local master.</p>
+</code></pre></div><p>This would be ideal situation if I want just to see what is going on, without impacting my local master.</p>
 <p>More practical would be to merge the changes into my master, which is what pull does. Again, for first time I must be explicit what do I want to pull - here is what happens if I am not:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git pull blessed
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git pull blessed
 From 192.168.16.144:projectOne-Blessed
 * [new branch] master -&gt; blessed/master
 You asked to pull from the remote &#39;blessed&#39;, but did not specify
 a branch. Because this is not the default configured remote
 for your current branch, you must specify a branch on the command line.
-</code></pre></td></tr></table>
-</div>
-</div><p>OK, we want master:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git pull blessed master
+</code></pre></div><p>OK, we want master:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git pull blessed master
 From 192.168.16.144:projectOne-Blessed
 * branch master -&gt; FETCH_HEAD
 Merge made by recursive.
@@ -1024,59 +617,22 @@ ESP Ghostscript 815.02 (2006-04-19)
 Copyright (C) 2004 artofcode LLC, Benicia, CA. All rights reserved.
 This software comes with NO WARRANTY: see the file PUBLIC for details.
 GS&gt;
-</code></pre></td></tr></table>
-</div>
-</div><p>Eventually, I will get annoyed by GhostScript and kill it by defining my favorite alias:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ alias gs=&#39;git status&#39;
+</code></pre></div><p>Eventually, I will get annoyed by GhostScript and kill it by defining my favorite alias:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ alias gs=&#39;git status&#39;
 [tkuser@LUKE projectOne]$ gs
 # On branch master
 # Your branch is ahead of &#39;origin/master&#39; by 2 commits.
 #
 nothing to commit (working directory clean)
-</code></pre></td></tr></table>
-</div>
-</div><p>So we are fine. All is merged, but only locally. Git indicates we need to push to origin.</p>
+</code></pre></div><p>So we are fine. All is merged, but only locally. Git indicates we need to push to origin.</p>
 <p>I have all files:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ ll
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ ll
 total 24
 -rw-rw-r-- 1 tkuser tkuser 2704 Jun 17 17:24 bin-dir.txt
 -rw-rw-r-- 1 tkuser tkuser 1070 Jun 17 17:20 my-home.txt
 -rw-rw-r-- 1 tkuser tkuser 130 Jun 17 17:24 this-dir.txt
-</code></pre></td></tr></table>
-</div>
-</div><p>Let&rsquo;s push (now there is no need to say &lsquo;master&rsquo;):</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git push origin
+</code></pre></div><p>Let&rsquo;s push (now there is no need to say &lsquo;master&rsquo;):</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git push origin
 Counting objects: 7, done.
 Delta compression using up to 8 threads.
 Compressing objects: 100% (6/6), done.
@@ -1084,66 +640,23 @@ Writing objects: 100% (6/6), 1.48 KiB, done.
 Total 6 (delta 1), reused 0 (delta 0)
 To client1@192.168.16.144:projectOne
 a6cbdf9..5d8d73b master -&gt; master
-</code></pre></td></tr></table>
-</div>
-</div><p>What would happen if I wanted to short circuit the wait for integration manager and see my changes published right away in blessed repo ? Let&rsquo;s try of Gitolite access control works:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git push blessed
+</code></pre></div><p>What would happen if I wanted to short circuit the wait for integration manager and see my changes published right away in blessed repo ? Let&rsquo;s try of Gitolite access control works:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git push blessed
 FATAL: W any projectOne-Blessed tkuser DENIED by fallthru
 (or you mis-spelled the reponame)
 fatal: The remote end hung up unexpectedly
 [tkuser@LUKE projectOne]$ cd ..
-</code></pre></td></tr></table>
-</div>
-</div><p>As it looks like, it does :-D</p>
+</code></pre></div><p>As it looks like, it does :-D</p>
 <p>I will not give up - in addition to link the blessed repo from my projectOne, I will try to clone it locally (which I can do as I have read access and push it back:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ cd ..
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ cd ..
 [tkuser@LUKE temp]$ git clone client1@192.168.16.144:projectOne-Blessed
 Cloning into projectOne-Blessed...
 remote: Counting objects: 4, done.
 remote: Compressing objects: 100% (4/4), done.
 remote: Total 4 (delta 0), reused 0 (delta 0)
 Receiving objects: 100% (4/4), done.
-</code></pre></td></tr></table>
-</div>
-</div><p>OK, let&rsquo;s hack it:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE temp]$ cd projectOne-Blessed/
+</code></pre></div><p>OK, let&rsquo;s hack it:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE temp]$ cd projectOne-Blessed/
 [tkuser@LUKE projectOne-Blessed]$ ll
 total 16
 -rw-rw-r-- 1 tkuser tkuser 2704 Jun 17 17:31 bin-dir.txt
@@ -1156,22 +669,8 @@ total 16
 # (use &#34;git reset HEAD &lt;file&gt;...&#34; to unstage)
 #
 # modified: bin-dir.txt
-</code></pre></td></tr></table>
-</div>
-</div><p>Local commit will work fine:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne-Blessed]$ git commit -m&#34;Changing Blessed&#34;
+</code></pre></div><p>Local commit will work fine:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne-Blessed]$ git commit -m&#34;Changing Blessed&#34;
 [master eefd800] Changing Blessed
 1 files changed, 2 insertions(+), 1 deletions(-)
 [tkuser@LUKE projectOne-Blessed]$ gs
@@ -1179,42 +678,19 @@ total 16
 # Your branch is ahead of &#39;origin/master&#39; by 1 commit.
 #
 nothing to commit (working directory clean)
-</code></pre></td></tr></table>
-</div>
-</div><p>But push will fail:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne-Blessed]$ git push origin
+</code></pre></div><p>But push will fail:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne-Blessed]$ git push origin
 FATAL: W any projectOne-Blessed tkuser DENIED by fallthru
 (or you mis-spelled the reponame)
 fatal: The remote end hung up unexpectedly
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="back-to-macbook-and-put-on-my-integration-manager-hat">Back to Macbook and put on my Integration Manager hat:</h3>
+</code></pre></div><h3 id="back-to-macbook-and-put-on-my-integration-manager-hat">Back to Macbook and put on my Integration Manager hat:</h3>
 <p>Int Manager on MBP - working with local clone of blessed repo</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">projectOne-Blessed $ hostname
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">projectOne-Blessed $ hostname
 Radegast.local
 projectOne-Blessed $ pwd
 /Users/miro/Projects/Thinkwrap/Infrastructure/git-repos/client1/projectOne-Blessed
 projectOne-Blessed $
-</code></pre></td></tr></table>
-</div>
-</div><p>Integration manager has better tools so I use SourceTree from Atlassian to</p>
+</code></pre></div><p>Integration manager has better tools so I use SourceTree from Atlassian to</p>
 <ul>
 <li>attach developer1 repository on CodeShare (the projectOne tkuser used), fetch the changes</li>
 <li>review them,</li>
@@ -1223,46 +699,14 @@ projectOne-Blessed $
 </ul>
 <p><img src="/images/sharing-1.png" alt=""></p>
 <h3 id="back-on-luke-i-am-tkuser-now">Back on Luke, I am tkuser now:</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git pull blessed master
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git pull blessed master
 From 192.168.16.144:projectOne-Blessed
 * branch master -&gt; FETCH_HEAD
 Already up-to-date.
-</code></pre></td></tr></table>
-</div>
-</div><p>OK, this may be surprising: how come that IM pushed changes to blessed and tkuser does not see them ?</p>
+</code></pre></div><p>OK, this may be surprising: how come that IM pushed changes to blessed and tkuser does not see them ?</p>
 <p>What happened here is that the merge in Blessed was fast forward to latest and the latest is already in projectOne rep (as it originated from there). So nothing really changed just few references were moved.</p>
 <p>We can verify that we do have the latest commit by checking the sha1</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git log
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git log
 commit 5d8d73b7f24307482edbfc4ca1328dabdfcf8353
 Merge: a6cbdf9 4ecde6e
 Author: ThinkWrap User &lt;tkuser.luke@thinkwrap.net&gt;
@@ -1280,40 +724,8 @@ commit 4ecde6eebd93448628c6475e12da380a962aecc9
 Author: Miro Adamy &lt;miro.adamy@thinkwrap.com&gt;
 Date: Sun Jun 17 17:15:04 2012 -0400
 2 files
-</code></pre></td></tr></table>
-</div>
-</div><p>Or we can even see the fancy ASCII-Artsy graph:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git log --graph
+</code></pre></div><p>Or we can even see the fancy ASCII-Artsy graph:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git log --graph
 * commit 5d8d73b7f24307482edbfc4ca1328dabdfcf8353
 |\ Merge: a6cbdf9 4ecde6e
 | | Author: ThinkWrap User &lt;tkuser.luke@thinkwrap.net&gt;
@@ -1339,34 +751,10 @@ Date: Sun Jun 17 17:18:41 2012 -0400
  
 tkuser started
 [tkuser@LUKE projectOne]$
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="sharing-external-repo-among-developers">Sharing external repo among developers</h2>
+</code></pre></div><h2 id="sharing-external-repo-among-developers">Sharing external repo among developers</h2>
 <p>For the final part, lets create scenario that does not happen if every developer has his/her own external repo on CodeShare, but which will certainly happen in the setup where multiple developer push to same external repo - kinda centralized mode.</p>
 <p>I will start by add local change to projectOne repo on MBPro by Miro. Back on Macbook:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">projectOne-Blessed $ cd ../projectOne
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">projectOne-Blessed $ cd ../projectOne
 projectOne $ ll
 total 24
 -rw-r--r-- 1 miro staff 2.6K 17 Jun 17:47 bin-dir.txt
@@ -1384,23 +772,8 @@ Writing objects: 100% (3/3), 297 bytes, done.
 Total 3 (delta 2), reused 0 (delta 0)
 To client1@192.168.16.144:projectOne
 5d8d73b..c62dd90 master -&gt; master
-</code></pre></td></tr></table>
-</div>
-</div><p>At the same time, tkuser on luke did also change something - starting from same starting code as miron on Radegast: attempt to push will this time end up with conflict</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ ll
+</code></pre></div><p>At the same time, tkuser on luke did also change something - starting from same starting code as miron on Radegast: attempt to push will this time end up with conflict</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ ll
 total 24
 -rw-rw-r-- 1 tkuser tkuser 2704 Jun 17 17:24 bin-dir.txt
 -rw-rw-r-- 1 tkuser tkuser 1070 Jun 17 17:20 my-home.txt
@@ -1409,45 +782,16 @@ total 24
 [tkuser@LUKE projectOne]$ git commit -a -m&#34;Changing my home on Luke&#34;
 [master deb5d23] Changing my home on Luke
 1 files changed, 0 insertions(+), 1 deletions(-)
-</code></pre></td></tr></table>
-</div>
-</div><p>Note that local commit is always OK, it will be the push that fails:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git push
+</code></pre></div><p>Note that local commit is always OK, it will be the push that fails:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git push
 To client1@192.168.16.144:projectOne
 ! [rejected] master -&gt; master (non-fast-forward)
 error: failed to push some refs to &#39;client1@192.168.16.144:projectOne&#39;
 To prevent you from losing history, non-fast-forward updates were rejected
 Merge the remote changes (e.g. &#39;git pull&#39;) before pushing again. See the
 &#39;Note about fast-forwards&#39; section of &#39;git push --help&#39; for details.
-</code></pre></td></tr></table>
-</div>
-</div><p>Git was nice enough to tell me what to do. Let&rsquo;s pull:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git pull
+</code></pre></div><p>Git was nice enough to tell me what to do. Let&rsquo;s pull:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git pull
 remote: Counting objects: 5, done.
 remote: Compressing objects: 100% (3/3), done.
 remote: Total 3 (delta 2), reused 0 (delta 0)
@@ -1457,23 +801,8 @@ From 192.168.16.144:projectOne
 Merge made by recursive.
 this-dir.txt | 2 +-
 1 files changed, 1 insertions(+), 1 deletions(-)
-</code></pre></td></tr></table>
-</div>
-</div><p>Merge resulted in new commit - it was done right away as there were no conflicts. We can push again:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git push
+</code></pre></div><p>Merge resulted in new commit - it was done right away as there were no conflicts. We can push again:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE projectOne]$ git push
 Counting objects: 8, done.
 Delta compression using up to 8 threads.
 Compressing objects: 100% (5/5), done.
@@ -1482,52 +811,26 @@ Total 5 (delta 2), reused 0 (delta 0)
 To client1@192.168.16.144:projectOne
 c62dd90..e031acf master -&gt; master
 [tkuser@LUKE projectOne]$
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="security-and-hackability">Security and hackability</h2>
+</code></pre></div><h2 id="security-and-hackability">Security and hackability</h2>
 <p>Last note is on security. The hacker&rsquo;s soul in tkuser wants to see what else except projectOne is on CodeShare. Let&rsquo;s log on.</p>
 <h3 id="attempt-to-bypass-the-security-by-logging-on-as-hosting-user">Attempt to bypass the security by logging on as hosting user</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE ~]$ ssh client1@192.168.16.144
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@LUKE ~]$ ssh client1@192.168.16.144
 hello tkuser, this is client1@jenkins0 running gitolite3 v3.03-34-ga171053 on git 1.7.7.1
 R W projectOne
 R projectOne-Blessed
 R W projectTwo
 R W testing
 Connection to 192.168.16.144 closed.
-</code></pre></td></tr></table>
-</div>
-</div><p>Bummer. Gitolite was nice enough to show all repos made available for the user, but rejected the login.</p>
+</code></pre></div><p>Bummer. Gitolite was nice enough to show all repos made available for the user, but rejected the login.</p>
 <p>Therefore: <strong>public key is the only supported way how to access CodeShare repo.</strong></p>
 <p>For admins and such who know the password the ssh is still there (unless we change it git-shell).</p>
 <p>I will prove this by logging in with different identity (to prevent my public key being sent) - I will use my public key I use for github:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">
 client1 $ ssh -i ~/.ssh/github_rsa.pub client1@192.168.16.144
 client1@192.168.16.144&#39;s password:
 Last login: Sun Jun 17 14:38:57 2012 from 192.168.16.108
 [client1@jenkins0 ~]$
-</code></pre></td></tr></table>
-</div>
-</div><p>In this case, it asks for password and logs me in</p>
+</code></pre></div><p>In this case, it asks for password and logs me in</p>
 <p>And that is end of the walkthrough</p>
 
     </div>

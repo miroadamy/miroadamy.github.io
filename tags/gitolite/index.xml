@@ -18,7 +18,7 @@
       
       <guid>https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/</guid>
       <description>Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
-User setup  List all keys in Gitolite must have access to Gitolite admin interface  1 2 3 4 5 6 7 8 9 10 11 12 13 14  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.</description>
+User setup  List all keys in Gitolite must have access to Gitolite admin interface  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2.</description>
     </item>
     
     <item>
@@ -29,8 +29,8 @@ User setup  List all keys in Gitolite must have access to Gitolite admin interfa
       <guid>https://miroadamy.com/posts/2014-04-02-gitolite-permissions/</guid>
       <description>This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
 How gitolite works Repository permission structure This is general format of repo definition
-1 2 3  REPO NAME rule line rule line   for example
-1 2 3 4 5 6 7 8  @staff = dilbert alice wally bob repo foo RW+ = dilbert # line 1 RW+ dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5   The Rule line has format:</description>
+REPO NAME rule line rule line for example
+@staff = dilbert alice wally bob repo foo RW+ = dilbert # line 1 RW+ dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5 The Rule line has format:</description>
     </item>
     
     <item>

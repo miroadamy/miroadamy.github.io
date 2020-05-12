@@ -54,7 +54,7 @@ I had 3 challenges to overcome related to co-existence of GH and GL versions:
  I need to use same repo for both GH and GL the submodule link for public does not work on GL the site root is different - I have no custom domain forward for GitLab  Using same repo To separate the GH and GL, I have added 2 remotes to repo and special branch gitlab-pages.">
 <meta itemprop="datePublished" content="2019-11-23T22:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2019-11-23T22:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="573">
+<meta itemprop="wordCount" content="491">
 
 
 
@@ -136,7 +136,7 @@ I had 3 challenges to overcome related to co-existence of GH and GL versions:
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 573 words </span>
+          <span class="more-meta"> 491 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -166,48 +166,18 @@ I had 3 challenges to overcome related to co-existence of GH and GL versions:
 <h2 id="using-same-repo">Using same repo</h2>
 <p>To separate the GH and GL, I have added 2 remotes to repo and special branch <code>gitlab-pages</code>.</p>
 <p>So the local repo looks like this:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  miroadamy.com git:(master) ✗ git remote -v -v
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  miroadamy.com git:(master) ✗ git remote -v -v
 github  git@github.com:miroadamy/miroadamy.com.git (fetch)
 github  git@github.com:miroadamy/miroadamy.com.git (push)
 origin  git@gitlab.com:miro.adamy/miroadamy.com.git (fetch)
 origin  git@gitlab.com:miro.adamy/miroadamy.com.git (push)
-</code></pre></td></tr></table>
-</div>
-</div><p>The branch <code>gitlab-pages</code> is &ldquo;superset&rdquo; of master. This means that I am always merging <code>master =&gt; gitlab-pages</code> but never the other way around.</p>
+</code></pre></div><p>The branch <code>gitlab-pages</code> is &ldquo;superset&rdquo; of master. This means that I am always merging <code>master =&gt; gitlab-pages</code> but never the other way around.</p>
 <p>The consequence is that GL version can have more posts than GH and as GL version is private, it is OK.</p>
 <h2 id="publishing-process-and-public">Publishing process and <code>public</code></h2>
 <p>GL allows simple pipeline that generates the site into <code>public</code> folder. The submodule does not need to exist.
 Actually, it cannot exists, as it would be breaking the build.</p>
 <p>Here is the file <code>.gitlab-ci.yml</code></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">
 image: monachus/hugo
 
 variables:
@@ -222,65 +192,10 @@ pages:
     - public
   only:
   - gitlab-pages
-</code></pre></td></tr></table>
-</div>
-</div><p>The pipeline runs ONLY for gitlab-pages branch and resulting pages can be seen at <a href="https://miro.adamy.gitlab.io/miroadamy.com/">https://miro.adamy.gitlab.io/miroadamy.com/</a> (this is currently private).</p>
+</code></pre></div><p>The pipeline runs ONLY for gitlab-pages branch and resulting pages can be seen at <a href="https://miro.adamy.gitlab.io/miroadamy.com/">https://miro.adamy.gitlab.io/miroadamy.com/</a> (this is currently private).</p>
 <h2 id="removing-the-submodules">Removing the submodules</h2>
 <p>I used this as opportunity to clean the unused themes from the blog:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Step 1 - deinit repos
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Step 1 - deinit repos
 
 ➜  miroadamy.com git:(gitlab-pages) ✗ git submodule deinit themes/ananke
 Cleared directory &#39;themes/ananke&#39;
@@ -329,32 +244,13 @@ git add -u
 git commit 
 git push
 
-</code></pre></td></tr></table>
-</div>
-</div><h1 id="result">Result</h1>
+</code></pre></div><h1 id="result">Result</h1>
 <ul>
 <li>publishing to GH works as before =&gt; run &lsquo;./publish.sh&rsquo;</li>
 <li>publishing to GL happens on any push to branch &lsquo;gitlab-pages&rsquo;</li>
 <li>getting changes from GH to GL:</li>
 </ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Sync up master on both
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Sync up master on both
 git checkout master
 git pull github
 git push origin master
@@ -367,9 +263,7 @@ git push origin gitlab-pages
 # optionally, may want to push to GH as well
 git push github gitlab-pages
 
-</code></pre></td></tr></table>
-</div>
-</div>
+</code></pre></div>
     </div>
 
     <div class="post-copyright">

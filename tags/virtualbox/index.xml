@@ -21,7 +21,7 @@
 Go here for details:
 Add share In VirtualBox, Device add transient shared folder:
 This one has made available path /Users/Shared/ATG-11 under the name ATG-11
-Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x. 1 root 272 Sep 12 16:02 ATG11-docs -rw-rw-r--.</description>
+Mount it sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x. 1 root 272 Sep 12 16:02 ATG11-docs -rw-rw-r--. 1 root 675 May 13 23:46 atg-platform-mac.userlibraries -rw-rw-r--. 1 root 787 May 13 23:17 atg-platform-vm.</description>
     </item>
     
     <item>
@@ -31,10 +31,10 @@ Mount it 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  sudo mount -t vboxsf ATG-11 /me
       
       <guid>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</guid>
       <description>Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
-Get the &amp;lsquo;epel&amp;rsquo; repos 1 2 3  wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm   Validate
-1 2 3 4  $ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo   It if good idea to enable the remi by default
+Get the &amp;lsquo;epel&amp;rsquo; repos wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm Validate
+$ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo It if good idea to enable the remi by default
 sudo vim /etc/yum.repos.d/remi.repo
-Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap   Using Mount the host directory</description>
+Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap Using Mount the host directory</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install f
       <pubDate>Tue, 24 Sep 2013 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</guid>
-      <description>How to make screenshot from command line 1 2 3 4 5 6 7  platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk   First one is &amp;ldquo;interactive&amp;rdquo; - Cmd-Shift-3 with selection tool, second is full screen</description>
+      <description>How to make screenshot from command line platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk First one is &amp;ldquo;interactive&amp;rdquo; - Cmd-Shift-3 with selection tool, second is full screen</description>
     </item>
     
     <item>
@@ -54,10 +54,10 @@ Installation 1 2 3  sudo yum --enablerepo=epel -y install fuse-sshfs # install f
       <guid>https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/</guid>
       <description>Case sensitivity and VirtualBox shared folder Weird but true behaviour:
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
-1  touch zz zZ   creates two files, both &amp;ldquo;inside VM&amp;rdquo; ~/development/ATG/platform-edc as well as in OS-X.
+touch zz zZ creates two files, both &amp;ldquo;inside VM&amp;rdquo; ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
 The command
-1 2  cd ~/development/ATG/platform-edc touch zz zZ   will create just single file.</description>
+cd ~/development/ATG/platform-edc touch zz zZ will create just single file.</description>
     </item>
     
     <item>
@@ -69,7 +69,7 @@ The command
       <description>Usable mc color scheme Edit
 ~/.mc/ini
 insert
-1 2 3  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   </description>
+[Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default </description>
     </item>
     
     <item>

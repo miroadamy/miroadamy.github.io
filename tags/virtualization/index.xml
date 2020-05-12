@@ -18,7 +18,7 @@
       
       <guid>https://miroadamy.com/posts/2017-11-23-visual-vm/</guid>
       <description>The idea / motivation In order to run VisualVM from predefined configuration you need to point the app to the user directory. This directory takes about 20MB, but 90% of the the content is actually generated or repeated.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  ➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.0K tw-sl/update 104K tw-sl/update_tracking 11M tw-sl/var ➜ 4devops-visualvm git:(master) du -sh tw-wool/* 248K tw-wool/config 7.</description>
+➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.0K tw-sl/update 104K tw-sl/update_tracking 11M tw-sl/var ➜ 4devops-visualvm git:(master) du -sh tw-wool/* 248K tw-wool/config 7.2M tw-wool/modules 60K tw-wool/repository 4.0K tw-wool/update 104K tw-wool/update_tracking 11M tw-wool/var ➜ 4devops-visualvm git:(master) du -sh tw-wool 19M tw-wool The only part that is specific and worthy of maintaining in the Git repo is repository</description>
     </item>
     
     <item>
@@ -29,9 +29,9 @@
       <guid>https://miroadamy.com/posts/2015-07-15-acc-in-vm/</guid>
       <description>The ACC is installed in default location: ~/ATG/ACC11.1
 This does not work OOTB. You must set 2 additional ENV properties
-1 2 3 4  cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp;amp;   Starting from dyn/admin The start in separate VM works OK.
+cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp;amp; Starting from dyn/admin The start in separate VM works OK.
 Start in server VM brings errors message very often complaining of malformed Help URL. The issue is documented here: http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg - for JBOSS.
-I tried to add the protocol.</description>
+I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no difference.</description>
     </item>
     
     <item>

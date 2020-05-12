@@ -54,7 +54,7 @@ The credit for finding out about approach is blog post by James McOrmond - VPN o
 The software mentioned https://github.com/apenwarr/sshuttle supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).">
 <meta itemprop="datePublished" content="2016-02-18T00:57:35-05:00" />
 <meta itemprop="dateModified" content="2016-02-18T00:57:35-05:00" />
-<meta itemprop="wordCount" content="804">
+<meta itemprop="wordCount" content="723">
 
 
 
@@ -136,7 +136,7 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 804 words </span>
+          <span class="more-meta"> 723 words </span>
           <span class="more-meta"> 4 mins read </span>
         
       </div>
@@ -163,49 +163,10 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
 <p>The software mentioned <a href="https://github.com/apenwarr/sshuttle">https://github.com/apenwarr/sshuttle</a> supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).</p>
 <p>This <a href="https://github.com/jagheterfredrik/sshuttle">version</a> seems to work on 10.10  - but Homebrew is better anyway.</p>
 <p>Fortunately, in the meantime somebody created brew cask, so to install functioning version run</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">brew install sshuttle
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="how-it-works">How it works</h3>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">brew install sshuttle
+</code></pre></div><h3 id="how-it-works">How it works</h3>
 <p>Options available</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">~  sshuttle
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">~  sshuttle
 error: at least one subnet, subnet file, or -N expected
 usage: sshuttle [-l [ip:]port] [-r [username@]sshserver[:port]] &lt;subnets...&gt;
    or: sshuttle --firewall &lt;port&gt; &lt;subnets...&gt;
@@ -233,20 +194,11 @@ usage: sshuttle [-l [ip:]port] [-r [username@]sshserver[:port]] &lt;subnets...&g
     --server              (internal use only)
     --firewall            (internal use only)
     --hostwatch           (internal use only)
-</code></pre></td></tr></table>
-</div>
-</div><p>This is example from UAT environment in the clpud.</p>
+</code></pre></div><p>This is example from UAT environment in the clpud.</p>
 <p>The externally visible box is uat-nat. If I ssh to this box, I am able to see the uat-mgmt box running BCC (which is otherwise inaccessible). I cannot however create ssh tunnel from uat-nat to uat-mgmt exposing 8080 port on mgmt, because this port would not be allowed for external access.</p>
 <p>Instead, I can use the sshuttle to direct all (or some) network traffic from local mac to the uat-nat box:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle  -vr miro.adamy@uat-nat 0/0
-</code></pre></td></tr></table>
-</div>
-</div><p>The -v flag means verbose - you will see the communication in the command line</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle  -vr miro.adamy@uat-nat 0/0
+</code></pre></div><p>The -v flag means verbose - you will see the communication in the command line</p>
 <p>It asks for 2 passwords:</p>
 <ul>
 <li>first, sudo password on local Mac</li>
@@ -259,87 +211,14 @@ usage: sshuttle [-l [ip:]port] [-r [username@]sshserver[:port]] &lt;subnets...&g
 <p>Source: <a href="http://teohm.com/blog/2012/04/01/using-sshuttle-in-daily-work/">http://teohm.com/blog/2012/04/01/using-sshuttle-in-daily-work/</a></p>
 <h4 id="redirect-the-dns-as-well">Redirect the DNS as well</h4>
 <p>uses ssh_server from ~/.ssh/config</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle --dns -vr ssh_server 0/0
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="exclude-some-traffic">Exclude some traffic</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle --dns -vr ssh_server -x 121.9.204.0/24 -x 61.135.196.21 0/0
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="redirect-only-some-traffic">Redirect ONLY some traffic</h4>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle -vr ssh_server 121.9.204.0/24 61.135.196.21
-</code></pre></td></tr></table>
-</div>
-</div><h4 id="few-helpers">Few helpers</h4>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle --dns -vr ssh_server 0/0
+</code></pre></div><h4 id="exclude-some-traffic">Exclude some traffic</h4>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle --dns -vr ssh_server -x 121.9.204.0/24 -x 61.135.196.21 0/0
+</code></pre></div><h4 id="redirect-only-some-traffic">Redirect ONLY some traffic</h4>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle -vr ssh_server 121.9.204.0/24 61.135.196.21
+</code></pre></div><h4 id="few-helpers">Few helpers</h4>
 <p>(after some search found at )</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># sshuttle helpers
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># sshuttle helpers
  
 # set default SSH server:
 #   user@hostname or a host in ~/.ssh/config
@@ -387,9 +266,7 @@ function tnlbut() {
 function vpnto() {
   sshuttle -HNvr $1;
 }
-</code></pre></td></tr></table>
-</div>
-</div>
+</code></pre></div>
     </div>
 
     <div class="post-copyright">

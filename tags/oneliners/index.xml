@@ -18,7 +18,7 @@
       
       <guid>https://miroadamy.com/posts/2019-10-03-aws-inspection/</guid>
       <description>Bunch of one-liners for AWS .. so that I find them faster next time
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  aws --output=json ec2 describe-instances | jq -r &amp;#39;.Reservations[].Instances[] | &amp;#34;\n&amp;#34; + .InstanceId + &amp;#34; : &amp;#34; + .KeyName + &amp;#34; =&amp;gt; &amp;#34; + .PublicIpAddress + &amp;#34; | &amp;#34; + .PublicDnsName, .Tags[] as $tt | &amp;#34; ... &amp;#34; + $tt.</description>
+aws --output=json ec2 describe-instances | jq -r &amp;#39;.Reservations[].Instances[] | &amp;#34;\n&amp;#34; + .InstanceId + &amp;#34; : &amp;#34; + .KeyName + &amp;#34; =&amp;gt; &amp;#34; + .PublicIpAddress + &amp;#34; | &amp;#34; + .PublicDnsName, .Tags[] as $tt | &amp;#34; ... &amp;#34; + $tt.Key +&amp;#34;:&amp;#34;+ $tt.Value&amp;#39; aws ec2 describe-instances | jq &amp;#39;.Reservations[].Instances[] | .InstanceId + &amp;#34; : &amp;#34; + .Placement.AvailabilityZone + &amp;#34; =&amp;gt; &amp;#34; + .</description>
     </item>
     
   </channel>

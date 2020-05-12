@@ -19,7 +19,8 @@
       <guid>https://miroadamy.com/posts/2015-07-08-keepass-cli/</guid>
       <description>This is mainly for Linux and Mac as they do not have good client.
 It requires relatively modern Perl - 5.1x should work. I have
-1 2 3  ➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail)   Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.</description>
+➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail) Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.0.pl
+Make it executable and put it on the path:</description>
     </item>
     
   </channel>

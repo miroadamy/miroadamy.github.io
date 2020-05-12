@@ -29,7 +29,8 @@ José was responsible (among other things) for setting up integration and QA env
       <guid>https://miroadamy.com/posts/2020-01-19-kubectl-version/</guid>
       <description>Accessing Rancher cluster I was doing update on Kubernetes cluster I had not touch in a while when I noticed weird behaviour:
  the output of get command was incomplete the -o wide option had no effect on the command output  (IP addresses are masked)
-1 2 3 4 5  ➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-xx-xx-xx.ca-central-1.compute.internal 613d ip-172-xx-xx-xx.ca-central-1.compute.internal 628d ip-172-xx-xx-xx.ca-central-1.compute.internal 558d   and</description>
+➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes NAME AGE ip-172-xx-xx-xx.ca-central-1.compute.internal 613d ip-172-xx-xx-xx.ca-central-1.compute.internal 628d ip-172-xx-xx-xx.ca-central-1.compute.internal 558d and
+➜ .kube git:(master) ✗ kubectl --kubeconfig dropship-dev-uat get nodes -o wide NAME AGE ip-172-xx-xx-xx.</description>
     </item>
     
     <item>
@@ -39,7 +40,7 @@ José was responsible (among other things) for setting up integration and QA env
       
       <guid>https://miroadamy.com/posts/2020-01-18-rancher-cli/</guid>
       <description>Accessing Rancher cluster After creation, you can access the K8s cluster running Rancher by saving the config file available from the console and using standard kubectl command
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE NAME READY STATUS RESTARTS AGE cattle-system cattle-cluster-agent-5c98cb979f-bbhxf 1/1 Running 0 5d23h cattle-system cattle-node-agent-dwnxk 1/1 Running 0 5d23h cattle-system kube-api-auth-d4zgq 1/1 Running 0 5d23h ingress-nginx default-http-backend-67cf578fc4-grmsw 1/1 Running 0 5d23h ingress-nginx nginx-ingress-controller-mpnmb 1/1 Running 0 5d23h kube-system canal-jw85q 2/2 Running 0 5d23h kube-system coredns-5c59fd465f-47q5z 1/1 Running 0 5d23h kube-system coredns-autoscaler-d765c8497-sm5xf 1/1 Running 0 5d23h kube-system metrics-server-64f6dffb84-bp864 1/1 Running 0 5d23h kube-system rke-coredns-addon-deploy-job-95qnk 0/1 Completed 0 5d23h kube-system rke-ingress-controller-deploy-job-brv7w 0/1 Completed 0 5d23h kube-system rke-metrics-addon-deploy-job-tvt89 0/1 Completed 0 5d23h kube-system rke-network-plugin-deploy-job-7rqcr 0/1 Completed 0 5d23h   The same information (and much more) is available using rancher CLI.</description>
+kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE NAME READY STATUS RESTARTS AGE cattle-system cattle-cluster-agent-5c98cb979f-bbhxf 1/1 Running 0 5d23h cattle-system cattle-node-agent-dwnxk 1/1 Running 0 5d23h cattle-system kube-api-auth-d4zgq 1/1 Running 0 5d23h ingress-nginx default-http-backend-67cf578fc4-grmsw 1/1 Running 0 5d23h ingress-nginx nginx-ingress-controller-mpnmb 1/1 Running 0 5d23h kube-system canal-jw85q 2/2 Running 0 5d23h kube-system coredns-5c59fd465f-47q5z 1/1 Running 0 5d23h kube-system coredns-autoscaler-d765c8497-sm5xf 1/1 Running 0 5d23h kube-system metrics-server-64f6dffb84-bp864 1/1 Running 0 5d23h kube-system rke-coredns-addon-deploy-job-95qnk 0/1 Completed 0 5d23h kube-system rke-ingress-controller-deploy-job-brv7w 0/1 Completed 0 5d23h kube-system rke-metrics-addon-deploy-job-tvt89 0/1 Completed 0 5d23h kube-system rke-network-plugin-deploy-job-7rqcr 0/1 Completed 0 5d23h The same information (and much more) is available using rancher CLI.</description>
     </item>
     
     <item>
@@ -49,7 +50,7 @@ José was responsible (among other things) for setting up integration and QA env
       
       <guid>https://miroadamy.com/posts/2018-05-07-k8s-from-scratch-kops/</guid>
       <description>This describes creation of K8s cluster in AWS environment from scratch as done for microservices based eCommerce project.
-Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed - https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html CLI credentials (secret key + api Key) - https://docs.aws.amazon.com/cli/latest/reference/iam/index.html Kubectl and Kops local install ** see https://github.com/kubernetes/kops and https://kubernetes.io/docs/tasks/tools/install-kubectl/  Test of access 1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ etc git:(feature/kubernetes) aws --version aws-cli/1.</description>
+Pre-requisites  AWS account access - IAM with Admin privileges AWS CLI installed - https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html CLI credentials (secret key + api Key) - https://docs.aws.amazon.com/cli/latest/reference/iam/index.html Kubectl and Kops local install ** see https://github.com/kubernetes/kops and https://kubernetes.io/docs/tasks/tools/install-kubectl/  Test of access ➜ etc git:(feature/kubernetes) aws --version aws-cli/1.11.180 Python/3.6.4 Darwin/17.5.0 botocore/1.7.38 ➜ etc git:(feature/kubernetes) kubectl version Client Version: version.</description>
     </item>
     
   </channel>

@@ -16,9 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="1) make sure the DNS works 1 2 3 4 5 6  sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1   2) check that you have ntpd installed  cat /etc/ntp.conf
- 3) make it work in all 1 2 3  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
- 5) Start service / restart  sudo /sbin/service ntpd start" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="1) make sure the DNS works sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1 2) check that you have ntpd installed  cat /etc/ntp.conf
+ 3) make it work in all /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on 4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
+ 5) Start service / restart  sudo /sbin/service ntpd start
+ " /><meta name="keywords" content="blog, Miro" />
 
 
 
@@ -41,28 +42,31 @@
 
 
 <meta property="og:title" content="Configuring permanent time updates for Linux" />
-<meta property="og:description" content="1) make sure the DNS works 1 2 3 4 5 6  sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1   2) check that you have ntpd installed  cat /etc/ntp.conf
- 3) make it work in all 1 2 3  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
- 5) Start service / restart  sudo /sbin/service ntpd start" />
+<meta property="og:description" content="1) make sure the DNS works sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1 2) check that you have ntpd installed  cat /etc/ntp.conf
+ 3) make it work in all /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on 4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
+ 5) Start service / restart  sudo /sbin/service ntpd start
+ " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2011-02-03-linux-time/" />
 <meta property="article:published_time" content="2011-02-03T11:22:48+08:00" />
 <meta property="article:modified_time" content="2011-02-03T11:22:48+08:00" />
 <meta itemprop="name" content="Configuring permanent time updates for Linux">
-<meta itemprop="description" content="1) make sure the DNS works 1 2 3 4 5 6  sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1   2) check that you have ntpd installed  cat /etc/ntp.conf
- 3) make it work in all 1 2 3  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
- 5) Start service / restart  sudo /sbin/service ntpd start">
+<meta itemprop="description" content="1) make sure the DNS works sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1 2) check that you have ntpd installed  cat /etc/ntp.conf
+ 3) make it work in all /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on 4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
+ 5) Start service / restart  sudo /sbin/service ntpd start
+ ">
 <meta itemprop="datePublished" content="2011-02-03T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2011-02-03T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="67">
+<meta itemprop="wordCount" content="58">
 
 
 
 <meta itemprop="keywords" content="linux," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Configuring permanent time updates for Linux"/>
-<meta name="twitter:description" content="1) make sure the DNS works 1 2 3 4 5 6  sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1   2) check that you have ntpd installed  cat /etc/ntp.conf
- 3) make it work in all 1 2 3  /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on   4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
- 5) Start service / restart  sudo /sbin/service ntpd start"/>
+<meta name="twitter:description" content="1) make sure the DNS works sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1 2) check that you have ntpd installed  cat /etc/ntp.conf
+ 3) make it work in all /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on 4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
+ 5) Start service / restart  sudo /sbin/service ntpd start
+ "/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -136,7 +140,7 @@
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 67 words </span>
+          <span class="more-meta"> 58 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -158,42 +162,21 @@
 </div>
     <div class="post-content">
       <h2 id="1-make-sure-the-dns-works">1) make sure the DNS works</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo vi /etc/resolv.conf
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo vi /etc/resolv.conf
 cat /etc/resolv.conf
 
 nameserver 208.67.222.222
 nameserver 208.67.220.220
 nameserver 192.168.16.1
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="2-check-that-you-have-ntpd-installed">2) check that you have ntpd installed</h2>
+</code></pre></div><h2 id="2-check-that-you-have-ntpd-installed">2) check that you have ntpd installed</h2>
 <blockquote>
 <p>cat /etc/ntp.conf</p>
 </blockquote>
 <h2 id="3-make-it-work-in-all">3) make it work in all</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">/sbin/chkconfig --list | grep ntpd
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">/sbin/chkconfig --list | grep ntpd
 sudo /sbin/chkconfig --level 2345 ntpd on
 
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="4-initial-sync">4) Initial sync</h2>
+</code></pre></div><h2 id="4-initial-sync">4) Initial sync</h2>
 <blockquote>
 <p>sudo /usr/sbin/ntpdate pool.ntp.org</p>
 </blockquote>

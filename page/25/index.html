@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-04-28T21:19:45+00:00" />
+<meta property="og:updated_time" content="2020-05-12T20:27:29+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -115,13 +115,39 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2012-08-17-install-hybris/">Installing and running &#39;naked&#39; hybris platform</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-08-17 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 775 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Installing and running &ldquo;naked&rdquo; hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
+Starting point: hybris-platform-4.7.1.zip
+Install point: /opt/hybris-platform/hybris-platform-4.7.1
+Start (with HSQLdb) ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all.log =&gt; Select develop
+    </div>
+    <div class="read-more">
+      <a href="/posts/2012-08-17-install-hybris/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2012-08-06-gitilite-admin/">Gitolite Administration Guide</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2012-08-06 </span>
       <div class="post-category">
           <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 485 words </span>
+        <span class="more-meta"> 465 words </span>
         <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
@@ -145,8 +171,8 @@
       <div class="post-category">
           <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 5140 words </span>
-        <span class="more-meta"> 25 mins read </span>
+        <span class="more-meta"> 4713 words </span>
+        <span class="more-meta"> 23 mins read </span>
     </div>
   </header>
   
@@ -169,8 +195,8 @@ Main features  multiple users each user represent a client:  e.g. users client1 
       <div class="post-category">
           <a href="/categories/tools/"> tools </a>
           </div>
-        <span class="more-meta"> 1596 words </span>
-        <span class="more-meta"> 8 mins read </span>
+        <span class="more-meta"> 1354 words </span>
+        <span class="more-meta"> 7 mins read </span>
     </div>
   </header>
   
@@ -178,7 +204,7 @@ Main features  multiple users each user represent a client:  e.g. users client1 
     <div class="post-summary">
       tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &hellip; again.
 Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
-1 2 3 4 5 6 7 8 9 10  547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups.
+547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-130159/ 555 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 556 tmutil compare /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 here is why: ~ $ tmutil uniquesize /Volumes/Radegast2-TM/Backups.
     </div>
     <div class="read-more">
       <a href="/posts/2012-05-29-admin-tool-goodies/" class="read-more-link">Read more...</a>
@@ -206,33 +232,6 @@ Got my new MacBook Pro replacement yesterday. Pretty sweet upgrade: quad-core i7
     </div>
     <div class="read-more">
       <a href="/posts/2012-05-13-homelessness-over/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-04-15-github/">GitHub identity mixup</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-04-15 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 79 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      After I created the ThinkWrap GitHub account and uploaded the public key, this key got somehow bound to GitHub identity &lsquo;madamy&rsquo;
-I had to add user madamy to my public GitHub repo - where I keep the dot-files - https://github.com/radegast/dotvim
-This may be an issue for people that have their own private accounts - the key management is the key.
-This article is useful:
- http://sealedabstract.com/code/github-ssh-with-multiple-identities-the-slightly-more-definitive-guide/ http://net.tutsplus.com/tutorials/tools-and-tips/how-to-work-with-github-and-multiple-accounts/  Alternative Use https for forking , instead read/write ssh.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2012-04-15-github/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

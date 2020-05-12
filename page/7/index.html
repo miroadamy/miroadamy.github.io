@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-04-28T21:19:45+00:00" />
+<meta property="og:updated_time" content="2020-05-12T20:27:29+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,31 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2019-01-14-gitbits/">Gitbits</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-01-14 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> DevOps </a>
+          </div>
+        <span class="more-meta"> 255 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Two small utilities I have places into ~/bin:
+git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
+#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2019-01-14-gitbits/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2018-12-07-dockercon-2018/">DockerCon 2018 - great event (with a small fly in the ointment)</a></h1>
@@ -194,8 +219,8 @@ It is a bit nostalgic though, admitting that we were the last naturally bilingua
           <a href="/categories/devops/"> DevOps </a>
           <a href="/categories/tools/"> tools </a>
           </div>
-        <span class="more-meta"> 244 words </span>
-        <span class="more-meta"> 2 mins read </span>
+        <span class="more-meta"> 187 words </span>
+        <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
@@ -203,35 +228,10 @@ It is a bit nostalgic though, admitting that we were the last naturally bilingua
     <div class="post-summary">
       Skopeo I have stumbled upon this tool: https://github.com/containers/skopeo - command line tools for manipulation with Docker images and Docker image registries.
 It can work with OCI images as well as the original Docker v2 images.
-Installation 1  brew install skopeo   Usage 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.
+Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.io/fedora { &#34;Name&#34;: &#34;docker.io/library/fedora&#34;, &#34;Digest&#34;: &#34;sha256:b41cd083421dd7aa46d619e958b75a026a5d5733f08f14ba6d53943d6106ea6d&#34;, &#34;RepoTags&#34;: [ &#34;20&#34;, &#34;21&#34;, &#34;22&#34;, &#34;23&#34;, &#34;24&#34;, &#34;25&#34;, &#34;26-modular&#34;, &#34;26&#34;, &#34;27&#34;, &#34;28&#34;, &#34;29&#34;, &#34;branched&#34;, &#34;heisenbug&#34;, &#34;latest&#34;, &#34;modular&#34;, &#34;rawhide&#34; ], &#34;Created&#34;: &#34;2018-09-07T19:20:02.
     </div>
     <div class="read-more">
       <a href="/posts/2018-10-24-dockerhub-tool/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-10-23-google-wifi/">Google Wifi</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-10-23 </span>
-      <div class="post-category">
-          <a href="/categories/lifehacks/"> lifehacks </a>
-          </div>
-        <span class="more-meta"> 58 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Installed Google Wifi - three access points. Finally I have good coverage on both floors of the appartment including the upper terrace and will be able to work at night outside during hot summer nights when temperature does not drop under 25.
-The setup was supereasy and iOS app is very well made and gives interesting insights.
-Happy.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2018-10-23-google-wifi/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

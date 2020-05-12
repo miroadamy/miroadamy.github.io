@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>SSL Poke - Miro&#39;s World</title>
+  <title>Using SSH keys with multiple Bitbucket accounts - Miro&#39;s World</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,10 +16,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="Cybersource Testing Tool Java utility that we used before when we were debugging the TLS 1.2 issues.
-It needs to be compiled with JDK 1.8 - ideally the same one that runs in production and then run like:
-java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443 replace api.cybersource.com with whatever the cybersource endpoint needs to be.
-If the utility responds with &amp;lsquo;Successfully connected’, it was able to handshake with the SSL server and establish the secure connection." /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
+With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification." /><meta name="keywords" content="blog, Miro" />
 
 
 
@@ -29,7 +27,7 @@ If the utility responds with &amp;lsquo;Successfully connected’, it was able t
 <meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
-<link rel="canonical" href="https://miroadamy.com/posts/2019-02-10-ssl-poke/" />
+<link rel="canonical" href="https://miroadamy.com/posts/2020-05-12-bitbucket-keys/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -41,32 +39,26 @@ If the utility responds with &amp;lsquo;Successfully connected’, it was able t
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="SSL Poke" />
-<meta property="og:description" content="Cybersource Testing Tool Java utility that we used before when we were debugging the TLS 1.2 issues.
-It needs to be compiled with JDK 1.8 - ideally the same one that runs in production and then run like:
-java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443 replace api.cybersource.com with whatever the cybersource endpoint needs to be.
-If the utility responds with &lsquo;Successfully connected’, it was able to handshake with the SSL server and establish the secure connection." />
+<meta property="og:title" content="Using SSH keys with multiple Bitbucket accounts" />
+<meta property="og:description" content="I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
+With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2019-02-10-ssl-poke/" />
-<meta property="article:published_time" content="2019-02-10T11:22:48+08:00" />
-<meta property="article:modified_time" content="2019-02-10T11:22:48+08:00" />
-<meta itemprop="name" content="SSL Poke">
-<meta itemprop="description" content="Cybersource Testing Tool Java utility that we used before when we were debugging the TLS 1.2 issues.
-It needs to be compiled with JDK 1.8 - ideally the same one that runs in production and then run like:
-java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443 replace api.cybersource.com with whatever the cybersource endpoint needs to be.
-If the utility responds with &lsquo;Successfully connected’, it was able to handshake with the SSL server and establish the secure connection.">
-<meta itemprop="datePublished" content="2019-02-10T11:22:48&#43;08:00" />
-<meta itemprop="dateModified" content="2019-02-10T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="83">
+<meta property="og:url" content="https://miroadamy.com/posts/2020-05-12-bitbucket-keys/" />
+<meta property="article:published_time" content="2020-05-12T22:34:38+08:00" />
+<meta property="article:modified_time" content="2020-05-12T22:34:38+08:00" />
+<meta itemprop="name" content="Using SSH keys with multiple Bitbucket accounts">
+<meta itemprop="description" content="I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
+With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification.">
+<meta itemprop="datePublished" content="2020-05-12T22:34:38&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-12T22:34:38&#43;08:00" />
+<meta itemprop="wordCount" content="295">
 
 
 
-<meta itemprop="keywords" content="java,ssl," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="SSL Poke"/>
-<meta name="twitter:description" content="Cybersource Testing Tool Java utility that we used before when we were debugging the TLS 1.2 issues.
-It needs to be compiled with JDK 1.8 - ideally the same one that runs in production and then run like:
-java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443 replace api.cybersource.com with whatever the cybersource endpoint needs to be.
-If the utility responds with &lsquo;Successfully connected’, it was able to handshake with the SSL server and establish the secure connection."/>
+<meta itemprop="keywords" content="bitbucket,git,ssh," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Using SSH keys with multiple Bitbucket accounts"/>
+<meta name="twitter:description" content="I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
+With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -133,15 +125,15 @@ If the utility responds with &lsquo;Successfully connected’, it was able to ha
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">SSL Poke</h1>
+      <h1 class="post-title">Using SSH keys with multiple Bitbucket accounts</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2019-02-10 </span>
+        <span class="post-time"> 2020-05-12 </span>
         <div class="post-category">
-            <a href="/categories/tools/"> tools </a>
+            <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 83 words </span>
-          <span class="more-meta"> 1 min read </span>
+          <span class="more-meta"> 295 words </span>
+          <span class="more-meta"> 2 mins read </span>
         
       </div>
     </header>
@@ -149,20 +141,44 @@ If the utility responds with &lsquo;Successfully connected’, it was able to ha
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#solution">Solution</a></li>
+  </ul>
+</nav>
   </div>
 </div>
     <div class="post-content">
-      <h1 id="cybersource-testing-tool">Cybersource Testing Tool</h1>
-<p>Java utility that we used before when we were debugging the TLS 1.2 issues.</p>
-<p>It needs to be compiled with JDK 1.8 - ideally the same one that runs in production and then run like:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443
-</code></pre></div><p>replace api.cybersource.com with whatever the cybersource endpoint needs to be.</p>
-<p>If the utility responds with &lsquo;Successfully connected’, it was able to handshake with the SSL server and establish the secure connection.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">javac SSLPoke
-java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443
-</code></pre></div><p>Snippet: <a href="https://bitbucket.org/snippets/thinkwrap/5j656n/sslpoke">https://bitbucket.org/snippets/thinkwrap/5j656n/sslpoke</a></p>
+      <p>I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.</p>
+<p>With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification. Time has come to split my personal identity and work identity.</p>
+<p>I have created second Bitbucket account with work email and added &lsquo;-pvt&rsquo; to my login to keep them separate, removed the old myself from work worspaces and added the new myself instead. So far so good. The problems started when I wanted to keep using git based urls and needed new keypair. One cannot register same public key with two different Bitbucket accounts, so I needed new key:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ssh-keygen -f ~/.ssh/bitbucket-pivotree
+</code></pre></div><p>but cloning did not work (for repository visible in Web UI):</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git clone -v git@bitbucket.org:thinkwrap/tw-bitbucket-admin.git
+Cloning into <span class="s1">&#39;tw-bitbucket-admin&#39;</span>...
+Forbidden
+fatal: Could not <span class="nb">read</span> from remote repository.
 
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre></div><p>An attempt to add key to ssh daemon <code>ssh-add  ~/.ssh/bitbucket-pivotree</code> did not solve the problem either.</p>
+<h2 id="solution">Solution</h2>
+<p>I had to define explicitly two different URLs for bitbucket in <code>~/.ssh/config</code> file:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Host work.bitbucket.org
+  HostName bitbucket.org
+  User git
+  IdentityFile ~/.ssh/bitbucket-pivotree
+
+Host bitbucket.org
+  HostName bitbucket.org
+  User git
+  IdentityFile ~/.ssh/id_rsa
+</code></pre></div><p>Now for cloning work repositories, I can use the</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git clone -v git@work.itbucket.org:thinkwrap/tw-bitbucket-admin.git
+</code></pre></div><p>and the work key will be automatically used.</p>
+<p>For existing - already cloned repos, here is simple way how to reset the remote URL:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git remote set-url origin <span class="k">$(</span>git remote -v <span class="p">|</span> grep fetch <span class="p">|</span> awk <span class="s1">&#39;{print $2;}&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/git@bit/git@work.bit/&#39;</span><span class="k">)</span>
+</code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -173,7 +189,7 @@ java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2019-02-10
+        2020-05-12
         
     </span>
   </p>
@@ -185,17 +201,14 @@ java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/java/">java</a>
-          <a href="/tags/ssl/">ssl</a>
+          <a href="/tags/bitbucket/">bitbucket</a>
+          <a href="/tags/git/">git</a>
+          <a href="/tags/ssh/">ssh</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/posts/2019-03-16-jupyter-bash/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Jupyter notebook with Bash kernel</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/posts/2019-01-14-gitbits/">
-            <span class="next-text nav-default">Gitbits</span>
+        
+        <a class="next" href="/posts/2020-03-31-history-of-faith/">
+            <span class="next-text nav-default">History of Faith</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>

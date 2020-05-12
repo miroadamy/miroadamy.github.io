@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Accessing Rancher cluster After creation, you can access the K8s cluster running Rancher by saving the config file available from the console and using standard kubectl command
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE NAME READY STATUS RESTARTS AGE cattle-system cattle-cluster-agent-5c98cb979f-bbhxf 1/1 Running 0 5d23h cattle-system cattle-node-agent-dwnxk 1/1 Running 0 5d23h cattle-system kube-api-auth-d4zgq 1/1 Running 0 5d23h ingress-nginx default-http-backend-67cf578fc4-grmsw 1/1 Running 0 5d23h ingress-nginx nginx-ingress-controller-mpnmb 1/1 Running 0 5d23h kube-system canal-jw85q 2/2 Running 0 5d23h kube-system coredns-5c59fd465f-47q5z 1/1 Running 0 5d23h kube-system coredns-autoscaler-d765c8497-sm5xf 1/1 Running 0 5d23h kube-system metrics-server-64f6dffb84-bp864 1/1 Running 0 5d23h kube-system rke-coredns-addon-deploy-job-95qnk 0/1 Completed 0 5d23h kube-system rke-ingress-controller-deploy-job-brv7w 0/1 Completed 0 5d23h kube-system rke-metrics-addon-deploy-job-tvt89 0/1 Completed 0 5d23h kube-system rke-network-plugin-deploy-job-7rqcr 0/1 Completed 0 5d23h   The same information (and much more) is available using rancher CLI." /><meta name="keywords" content="blog, Miro" />
+kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE NAME READY STATUS RESTARTS AGE cattle-system cattle-cluster-agent-5c98cb979f-bbhxf 1/1 Running 0 5d23h cattle-system cattle-node-agent-dwnxk 1/1 Running 0 5d23h cattle-system kube-api-auth-d4zgq 1/1 Running 0 5d23h ingress-nginx default-http-backend-67cf578fc4-grmsw 1/1 Running 0 5d23h ingress-nginx nginx-ingress-controller-mpnmb 1/1 Running 0 5d23h kube-system canal-jw85q 2/2 Running 0 5d23h kube-system coredns-5c59fd465f-47q5z 1/1 Running 0 5d23h kube-system coredns-autoscaler-d765c8497-sm5xf 1/1 Running 0 5d23h kube-system metrics-server-64f6dffb84-bp864 1/1 Running 0 5d23h kube-system rke-coredns-addon-deploy-job-95qnk 0/1 Completed 0 5d23h kube-system rke-ingress-controller-deploy-job-brv7w 0/1 Completed 0 5d23h kube-system rke-metrics-addon-deploy-job-tvt89 0/1 Completed 0 5d23h kube-system rke-network-plugin-deploy-job-7rqcr 0/1 Completed 0 5d23h The same information (and much more) is available using rancher CLI." /><meta name="keywords" content="blog, Miro" />
 
 
 
@@ -41,24 +41,24 @@
 
 <meta property="og:title" content="Rancher CLI vs kubectl" />
 <meta property="og:description" content="Accessing Rancher cluster After creation, you can access the K8s cluster running Rancher by saving the config file available from the console and using standard kubectl command
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE NAME READY STATUS RESTARTS AGE cattle-system cattle-cluster-agent-5c98cb979f-bbhxf 1/1 Running 0 5d23h cattle-system cattle-node-agent-dwnxk 1/1 Running 0 5d23h cattle-system kube-api-auth-d4zgq 1/1 Running 0 5d23h ingress-nginx default-http-backend-67cf578fc4-grmsw 1/1 Running 0 5d23h ingress-nginx nginx-ingress-controller-mpnmb 1/1 Running 0 5d23h kube-system canal-jw85q 2/2 Running 0 5d23h kube-system coredns-5c59fd465f-47q5z 1/1 Running 0 5d23h kube-system coredns-autoscaler-d765c8497-sm5xf 1/1 Running 0 5d23h kube-system metrics-server-64f6dffb84-bp864 1/1 Running 0 5d23h kube-system rke-coredns-addon-deploy-job-95qnk 0/1 Completed 0 5d23h kube-system rke-ingress-controller-deploy-job-brv7w 0/1 Completed 0 5d23h kube-system rke-metrics-addon-deploy-job-tvt89 0/1 Completed 0 5d23h kube-system rke-network-plugin-deploy-job-7rqcr 0/1 Completed 0 5d23h   The same information (and much more) is available using rancher CLI." />
+kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE NAME READY STATUS RESTARTS AGE cattle-system cattle-cluster-agent-5c98cb979f-bbhxf 1/1 Running 0 5d23h cattle-system cattle-node-agent-dwnxk 1/1 Running 0 5d23h cattle-system kube-api-auth-d4zgq 1/1 Running 0 5d23h ingress-nginx default-http-backend-67cf578fc4-grmsw 1/1 Running 0 5d23h ingress-nginx nginx-ingress-controller-mpnmb 1/1 Running 0 5d23h kube-system canal-jw85q 2/2 Running 0 5d23h kube-system coredns-5c59fd465f-47q5z 1/1 Running 0 5d23h kube-system coredns-autoscaler-d765c8497-sm5xf 1/1 Running 0 5d23h kube-system metrics-server-64f6dffb84-bp864 1/1 Running 0 5d23h kube-system rke-coredns-addon-deploy-job-95qnk 0/1 Completed 0 5d23h kube-system rke-ingress-controller-deploy-job-brv7w 0/1 Completed 0 5d23h kube-system rke-metrics-addon-deploy-job-tvt89 0/1 Completed 0 5d23h kube-system rke-network-plugin-deploy-job-7rqcr 0/1 Completed 0 5d23h The same information (and much more) is available using rancher CLI." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2020-01-18-rancher-cli/" />
 <meta property="article:published_time" content="2020-01-18T11:22:48+08:00" />
 <meta property="article:modified_time" content="2020-01-18T11:22:48+08:00" />
 <meta itemprop="name" content="Rancher CLI vs kubectl">
 <meta itemprop="description" content="Accessing Rancher cluster After creation, you can access the K8s cluster running Rancher by saving the config file available from the console and using standard kubectl command
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE NAME READY STATUS RESTARTS AGE cattle-system cattle-cluster-agent-5c98cb979f-bbhxf 1/1 Running 0 5d23h cattle-system cattle-node-agent-dwnxk 1/1 Running 0 5d23h cattle-system kube-api-auth-d4zgq 1/1 Running 0 5d23h ingress-nginx default-http-backend-67cf578fc4-grmsw 1/1 Running 0 5d23h ingress-nginx nginx-ingress-controller-mpnmb 1/1 Running 0 5d23h kube-system canal-jw85q 2/2 Running 0 5d23h kube-system coredns-5c59fd465f-47q5z 1/1 Running 0 5d23h kube-system coredns-autoscaler-d765c8497-sm5xf 1/1 Running 0 5d23h kube-system metrics-server-64f6dffb84-bp864 1/1 Running 0 5d23h kube-system rke-coredns-addon-deploy-job-95qnk 0/1 Completed 0 5d23h kube-system rke-ingress-controller-deploy-job-brv7w 0/1 Completed 0 5d23h kube-system rke-metrics-addon-deploy-job-tvt89 0/1 Completed 0 5d23h kube-system rke-network-plugin-deploy-job-7rqcr 0/1 Completed 0 5d23h   The same information (and much more) is available using rancher CLI.">
+kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE NAME READY STATUS RESTARTS AGE cattle-system cattle-cluster-agent-5c98cb979f-bbhxf 1/1 Running 0 5d23h cattle-system cattle-node-agent-dwnxk 1/1 Running 0 5d23h cattle-system kube-api-auth-d4zgq 1/1 Running 0 5d23h ingress-nginx default-http-backend-67cf578fc4-grmsw 1/1 Running 0 5d23h ingress-nginx nginx-ingress-controller-mpnmb 1/1 Running 0 5d23h kube-system canal-jw85q 2/2 Running 0 5d23h kube-system coredns-5c59fd465f-47q5z 1/1 Running 0 5d23h kube-system coredns-autoscaler-d765c8497-sm5xf 1/1 Running 0 5d23h kube-system metrics-server-64f6dffb84-bp864 1/1 Running 0 5d23h kube-system rke-coredns-addon-deploy-job-95qnk 0/1 Completed 0 5d23h kube-system rke-ingress-controller-deploy-job-brv7w 0/1 Completed 0 5d23h kube-system rke-metrics-addon-deploy-job-tvt89 0/1 Completed 0 5d23h kube-system rke-network-plugin-deploy-job-7rqcr 0/1 Completed 0 5d23h The same information (and much more) is available using rancher CLI.">
 <meta itemprop="datePublished" content="2020-01-18T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2020-01-18T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="616">
+<meta itemprop="wordCount" content="508">
 
 
 
 <meta itemprop="keywords" content="kubernetes,rancher," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rancher CLI vs kubectl"/>
 <meta name="twitter:description" content="Accessing Rancher cluster After creation, you can access the K8s cluster running Rancher by saving the config file available from the console and using standard kubectl command
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE NAME READY STATUS RESTARTS AGE cattle-system cattle-cluster-agent-5c98cb979f-bbhxf 1/1 Running 0 5d23h cattle-system cattle-node-agent-dwnxk 1/1 Running 0 5d23h cattle-system kube-api-auth-d4zgq 1/1 Running 0 5d23h ingress-nginx default-http-backend-67cf578fc4-grmsw 1/1 Running 0 5d23h ingress-nginx nginx-ingress-controller-mpnmb 1/1 Running 0 5d23h kube-system canal-jw85q 2/2 Running 0 5d23h kube-system coredns-5c59fd465f-47q5z 1/1 Running 0 5d23h kube-system coredns-autoscaler-d765c8497-sm5xf 1/1 Running 0 5d23h kube-system metrics-server-64f6dffb84-bp864 1/1 Running 0 5d23h kube-system rke-coredns-addon-deploy-job-95qnk 0/1 Completed 0 5d23h kube-system rke-ingress-controller-deploy-job-brv7w 0/1 Completed 0 5d23h kube-system rke-metrics-addon-deploy-job-tvt89 0/1 Completed 0 5d23h kube-system rke-network-plugin-deploy-job-7rqcr 0/1 Completed 0 5d23h   The same information (and much more) is available using rancher CLI."/>
+kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE NAME READY STATUS RESTARTS AGE cattle-system cattle-cluster-agent-5c98cb979f-bbhxf 1/1 Running 0 5d23h cattle-system cattle-node-agent-dwnxk 1/1 Running 0 5d23h cattle-system kube-api-auth-d4zgq 1/1 Running 0 5d23h ingress-nginx default-http-backend-67cf578fc4-grmsw 1/1 Running 0 5d23h ingress-nginx nginx-ingress-controller-mpnmb 1/1 Running 0 5d23h kube-system canal-jw85q 2/2 Running 0 5d23h kube-system coredns-5c59fd465f-47q5z 1/1 Running 0 5d23h kube-system coredns-autoscaler-d765c8497-sm5xf 1/1 Running 0 5d23h kube-system metrics-server-64f6dffb84-bp864 1/1 Running 0 5d23h kube-system rke-coredns-addon-deploy-job-95qnk 0/1 Completed 0 5d23h kube-system rke-ingress-controller-deploy-job-brv7w 0/1 Completed 0 5d23h kube-system rke-metrics-addon-deploy-job-tvt89 0/1 Completed 0 5d23h kube-system rke-network-plugin-deploy-job-7rqcr 0/1 Completed 0 5d23h The same information (and much more) is available using rancher CLI."/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -132,7 +132,7 @@
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 616 words </span>
+          <span class="more-meta"> 508 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -153,26 +153,7 @@
       <h1 id="accessing-rancher-cluster">Accessing Rancher cluster</h1>
 <p>After creation, you can access the K8s cluster running Rancher by saving the config file available from the console and using standard <code>kubectl</code> command</p>
 <p><img src="/images/rancher-console-1.png" alt=""></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces
 NAMESPACE       NAME                                      READY   STATUS      RESTARTS   AGE
 cattle-system   cattle-cluster-agent-5c98cb979f-bbhxf     1/1     Running     0          5d23h
 cattle-system   cattle-node-agent-dwnxk                   1/1     Running     0          5d23h
@@ -187,83 +168,13 @@ kube-system     rke-coredns-addon-deploy-job-95qnk        0/1     Completed   0 
 kube-system     rke-ingress-controller-deploy-job-brv7w   0/1     Completed   0          5d23h
 kube-system     rke-metrics-addon-deploy-job-tvt89        0/1     Completed   0          5d23h
 kube-system     rke-network-plugin-deploy-job-7rqcr       0/1     Completed   0          5d23h
-</code></pre></td></tr></table>
-</div>
-</div><p>The same information (and much more) is available using rancher CLI.</p>
+</code></pre></div><p>The same information (and much more) is available using rancher CLI.</p>
 <h2 id="using-rancher-cli">Using Rancher CLI</h2>
 <p>After downloading and installing Rancher CLI (see <a href="https://rancher.com/docs/rancher/v2.x/en/quick-start-guide/cli/">https://rancher.com/docs/rancher/v2.x/en/quick-start-guide/cli/</a>) we need API keys to authenticate against cluster.</p>
 <p>The URL is https://CLUSTER-IP/apikeys - see</p>
 <p><img src="/images/rancher-console-2.png" alt=""></p>
 <p>Generate new token and make sure there is NO SCOPE selected. If you generate token scoped to cluster (it seems to be the intuitively correct choice) the token will not work and will lead to this error message:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span><span class="lnt">34
-</span><span class="lnt">35
-</span><span class="lnt">36
-</span><span class="lnt">37
-</span><span class="lnt">38
-</span><span class="lnt">39
-</span><span class="lnt">40
-</span><span class="lnt">41
-</span><span class="lnt">42
-</span><span class="lnt">43
-</span><span class="lnt">44
-</span><span class="lnt">45
-</span><span class="lnt">46
-</span><span class="lnt">47
-</span><span class="lnt">48
-</span><span class="lnt">49
-</span><span class="lnt">50
-</span><span class="lnt">51
-</span><span class="lnt">52
-</span><span class="lnt">53
-</span><span class="lnt">54
-</span><span class="lnt">55
-</span><span class="lnt">56
-</span><span class="lnt">57
-</span><span class="lnt">58
-</span><span class="lnt">59
-</span><span class="lnt">60
-</span><span class="lnt">61
-</span><span class="lnt">62
-</span><span class="lnt">63
-</span><span class="lnt">64
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"> rancher login https://18.204.194.218/v3 --token token-jbh7m:4zrjfbzvqtq9lbtkzzw2pckfd8r6qd9542dhqwrr2nh6gjf4f6wtlw
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"> rancher login https://18.204.194.218/v3 --token token-jbh7m:4zrjfbzvqtq9lbtkzzw2pckfd8r6qd9542dhqwrr2nh6gjf4f6wtlw
 The authenticity of server &#39;https://18.204.194.218&#39; can&#39;t be established.
 Cert chain is : [Certificate:
     Data:
@@ -327,28 +238,8 @@ Cert chain is : [Certificate:
 Do you want to continue connecting (yes/no)? yes
 FATA[0012] Bad response statusCode [401]. Status [401 Unauthorized]. Body: [message=clusterID does not match] from [https://18.204.194.218/v3]
 
-</code></pre></td></tr></table>
-</div>
-</div><p>With <code>good token</code> == N/A as scope, the message will be</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">rancher login https://18.204.194.218/v3 --token token-k6c5s:g5sm********************************************stjv
+</code></pre></div><p>With <code>good token</code> == N/A as scope, the message will be</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">rancher login https://18.204.194.218/v3 --token token-k6c5s:g5sm********************************************stjv
 The authenticity of server &#39;https://18.204.194.218&#39; can&#39;t be established.
 Cert chain is : [Certificate:
     Data:
@@ -362,30 +253,9 @@ Do you want to continue connecting (yes/no)? yes
 INFO[0005] Saving config to /Users/miro/.rancher/cli2.json
 
 
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="using-rancher-cli-1">Using Rancher CLI</h2>
+</code></pre></div><h2 id="using-rancher-cli-1">Using Rancher CLI</h2>
 <p>After login I do not need to use kubeconfig for kubectl:</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">rancher kubectl get pods --all-namespaces
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">rancher kubectl get pods --all-namespaces
 NAMESPACE       NAME                                      READY   STATUS      RESTARTS   AGE
 cattle-system   cattle-cluster-agent-5c98cb979f-bbhxf     1/1     Running     0          5d23h
 cattle-system   cattle-node-agent-dwnxk                   1/1     Running     0          5d23h
@@ -400,9 +270,7 @@ kube-system     rke-coredns-addon-deploy-job-95qnk        0/1     Completed   0 
 kube-system     rke-ingress-controller-deploy-job-brv7w   0/1     Completed   0          5d23h
 kube-system     rke-metrics-addon-deploy-job-tvt89        0/1     Completed   0          5d23h
 kube-system     rke-network-plugin-deploy-job-7rqcr       0/1     Completed   0          5d23h
-</code></pre></td></tr></table>
-</div>
-</div>
+</code></pre></div>
     </div>
 
     <div class="post-copyright">

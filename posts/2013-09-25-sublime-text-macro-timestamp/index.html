@@ -16,7 +16,9 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&amp;#34;%Y-%m-%d_%H:%M:%S&amp;#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Sublime text macro to insert timestamp platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&amp;#34;%Y-%m-%d_%H:%M:%S&amp;#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $ Documentation - see
+Installation: Add this to Keybindings / User
+![](/images/2013-09-23_8.02.19 PM.png)" /><meta name="keywords" content="blog, Miro" />
 
 
 
@@ -39,22 +41,28 @@
 
 
 <meta property="og:title" content="Sublime text macro to insert timestamp" />
-<meta property="og:description" content="Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see" />
+<meta property="og:description" content="Sublime text macro to insert timestamp platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $ Documentation - see
+Installation: Add this to Keybindings / User
+![](/images/2013-09-23_8.02.19 PM.png)" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://miroadamy.com/posts/2013-09-25-sublime-text-macro-timestamp/" />
 <meta property="article:published_time" content="2013-09-25T16:12:48+08:00" />
 <meta property="article:modified_time" content="2013-09-25T16:12:48+08:00" />
 <meta itemprop="name" content="Sublime text macro to insert timestamp">
-<meta itemprop="description" content="Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see">
+<meta itemprop="description" content="Sublime text macro to insert timestamp platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $ Documentation - see
+Installation: Add this to Keybindings / User
+![](/images/2013-09-23_8.02.19 PM.png)">
 <meta itemprop="datePublished" content="2013-09-25T16:12:48&#43;08:00" />
 <meta itemprop="dateModified" content="2013-09-25T16:12:48&#43;08:00" />
-<meta itemprop="wordCount" content="78">
+<meta itemprop="wordCount" content="62">
 
 
 
 <meta itemprop="keywords" content="osx,editors," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sublime text macro to insert timestamp"/>
-<meta name="twitter:description" content="Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see"/>
+<meta name="twitter:description" content="Sublime text macro to insert timestamp platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $ Documentation - see
+Installation: Add this to Keybindings / User
+![](/images/2013-09-23_8.02.19 PM.png)"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -128,7 +136,7 @@
         <div class="post-category">
             <a href="/categories/programming/"> Programming </a>
             </div>
-          <span class="more-meta"> 78 words </span>
+          <span class="more-meta"> 62 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -146,27 +154,7 @@
 </div>
     <div class="post-content">
       <h1 id="sublime-text-macro-to-insert-timestamp">Sublime text macro to insert timestamp</h1>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py
  
 import sublime_plugin
 from datetime import datetime
@@ -182,9 +170,7 @@ class TimeStampCommand(sublime_plugin.TextCommand):
 
 platform-edc $
 
-</code></pre></td></tr></table>
-</div>
-</div><p>Documentation - <a href="http://docs.python.org/2/library/datetime.html#datetime.datetime">see</a></p>
+</code></pre></div><p>Documentation - <a href="http://docs.python.org/2/library/datetime.html#datetime.datetime">see</a></p>
 <h2 id="installation">Installation:</h2>
 <p>Add this to Keybindings / User</p>
 <p>![](/images/2013-09-23_8.02.19 PM.png)</p>

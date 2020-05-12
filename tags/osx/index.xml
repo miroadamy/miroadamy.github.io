@@ -32,7 +32,7 @@ Good news 2 It works for several images I tried.</description>
 The startup script in bin/startClient will fail, because it cannot determine which Java to use to run the app.
 It is trying to determine Unix flavour, failing that defaults to Solaris and ends up with invalid settings.
 Fix Set the variable JAVA_VM to path to executable command on your system.
-1 2 3 4 5  which java java is /Library/Java/JavaVirtualMachines/jdk1.</description>
+which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java export JAVA_VM=/Library/Java/JavaVirtualMachines/jdk1.</description>
     </item>
     
     <item>
@@ -43,7 +43,7 @@ Fix Set the variable JAVA_VM to path to executable command on your system.
       <guid>https://miroadamy.com/posts/2016-03-20-gitinspector/</guid>
       <description>Git project statistic tool Python based, requires Python 2.6+
 Works OOTB on Mac
-Installation  Download TAR from Github unzipped to /opt  1 2 3 4 5 6 7 8 9  ➜ ll /opt/gitinspector-0.3.2 total 52K -rw-r--r-- 1 miro 999 Jul 29 2013 DESCRIPTION.txt -rw-r--r-- 1 miro 32K Jun 14 2013 LICENSE.txt -rw-r--r-- 1 miro 78 Jul 2 2013 MANIFEST.in -rw-r--r-- 1 miro 681 Jan 13 2014 README.txt drwxr-xr-x 45 miro 1.</description>
+Installation  Download TAR from Github unzipped to /opt  ➜ ll /opt/gitinspector-0.3.2 total 52K -rw-r--r-- 1 miro 999 Jul 29 2013 DESCRIPTION.txt -rw-r--r-- 1 miro 32K Jun 14 2013 LICENSE.txt -rw-r--r-- 1 miro 78 Jul 2 2013 MANIFEST.in -rw-r--r-- 1 miro 681 Jan 13 2014 README.txt drwxr-xr-x 45 miro 1.5K Mar 20 2015 gitinspector -rw-r--r-- 1 miro 1.</description>
     </item>
     
     <item>
@@ -54,7 +54,7 @@ Installation  Download TAR from Github unzipped to /opt  1 2 3 4 5 6 7 8 9  ➜ 
       <guid>https://miroadamy.com/posts/2016-03-16-docker-machine-error-after-upgrade/</guid>
       <description>I had to upgrade docker toolbox on Yosemite to get latest docker-compose additions.
 After installing the new package, I was not able to connect to docker machine:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  ➜ ~ docker-machine status Stopped ➜ ~ docker-machine start default Starting &amp;#34;default&amp;#34;... (default) Check network to re-create if needed... (default) Waiting for an IP... Machine &amp;#34;default&amp;#34; was started. Waiting for SSH to be available.</description>
+➜ ~ docker-machine status Stopped ➜ ~ docker-machine start default Starting &amp;#34;default&amp;#34;... (default) Check network to re-create if needed... (default) Waiting for an IP... Machine &amp;#34;default&amp;#34; was started. Waiting for SSH to be available... Detecting the provisioner... Started machines may have new IP addresses.</description>
     </item>
     
     <item>
@@ -84,7 +84,7 @@ How to use it  Select 2 files, right click, compare from context menu In dual mo
       <pubDate>Fri, 11 Dec 2015 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2015-12-11-docker-starting/</guid>
-      <description>After the reboot 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55  docker version Client: Version: 1.9.1 API version: 1.21 Go version: go1.4.3 Git commit: a34a1d5 Built: Fri Nov 20 17:56:04 UTC 2015 OS/Arch: darwin/amd64 Cannot connect to the Docker daemon.</description>
+      <description>After the reboot docker version Client: Version: 1.9.1 API version: 1.21 Go version: go1.4.3 Git commit: a34a1d5 Built: Fri Nov 20 17:56:04 UTC 2015 OS/Arch: darwin/amd64 Cannot connect to the Docker daemon. Is the docker daemon running on this host? ➜ gitolite-admin git:(master) docker-machine active No active host found ➜ gitolite-admin git:(master) docker-machine env default Error checking TLS connection: default is not running. Please start it in order to use the connection settings ➜ gitolite-admin git:(master) docker-machine start Error: Expected to get one or more machine names as arguments ➜ gitolite-admin git:(master) docker-machine start default (default) Starting VM.</description>
     </item>
     
     <item>
@@ -95,8 +95,8 @@ How to use it  Select 2 files, right click, compare from context menu In dual mo
       <guid>https://miroadamy.com/posts/2015-03-10-git-log-output-less/</guid>
       <description>When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.
 Just for git commands:
-1  git config --global --replace-all core.pager &amp;#34;less -iXFR&amp;#34;   For less globally (including git) - add to .bashrc / .zshrc / etc:
-1  export LESS=-iXFR   The options we set for less are:</description>
+git config --global --replace-all core.pager &amp;#34;less -iXFR&amp;#34; For less globally (including git) - add to .bashrc / .zshrc / etc:
+export LESS=-iXFR The options we set for less are:</description>
     </item>
     
     <item>
@@ -107,8 +107,9 @@ Just for git commands:
       <guid>https://miroadamy.com/posts/2014-10-14-java6required/</guid>
       <description>When trying to start DBeaver (http://dbeaver.jkiss.org) I got this
 I do have Java 7 installed:
-1 2 3 4 5 6 7 8  ➜ Contents java -version java version &amp;#34;1.7.0_55&amp;#34; Java(TM) SE Runtime Environment (build 1.7.0_55-b13) Java HotSpot(TM) 64-Bit Server VM (build 24.55-b03, mixed mode) ➜ Contents which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java   which should be a superset. But it is not.
-Solution Oracle seems to screw up the PLIST capabilities in JAva7 install</description>
+➜ Contents java -version java version &amp;#34;1.7.0_55&amp;#34; Java(TM) SE Runtime Environment (build 1.7.0_55-b13) Java HotSpot(TM) 64-Bit Server VM (build 24.55-b03, mixed mode) ➜ Contents which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java which should be a superset. But it is not.
+Solution Oracle seems to screw up the PLIST capabilities in JAva7 install
+Go to</description>
     </item>
     
     <item>
@@ -118,9 +119,9 @@ Solution Oracle seems to screw up the PLIST capabilities in JAva7 install</descr
       
       <guid>https://miroadamy.com/posts/2014-04-22-autorename-screenshots/</guid>
       <description>Move the location of the screenshots I do not want to have ~/Desktop polluted with files. Thus
-1 2 3  mkdir -p ~/Documents/Screenshots defaults write com.apple.screencapture location ~/Documents/Screenshots killall SystemUIServer   Test the screenshot - it does it
+mkdir -p ~/Documents/Screenshots defaults write com.apple.screencapture location ~/Documents/Screenshots killall SystemUIServer Test the screenshot - it does it
 Automator based auto-rename  Create Folder action for ~/Documents/Screenshots  It has 3 actions
-1 2 3  s/Screen Shots // s/./-/g s/ at /_/   </description>
+s/Screen Shots // s/./-/g s/ at /_/ </description>
     </item>
     
     <item>
@@ -143,8 +144,8 @@ Eclipse There is opensource plugin for it at https://github.</description>
       
       <guid>https://miroadamy.com/posts/2013-09-26-git-push-matching-simple/</guid>
       <description>Git message
-1 2 3 4 5 6 7 8 9 10  Git 2.0 from &amp;#39;matching&amp;#39; to &amp;#39;simple&amp;#39;. To squelch this message and maintain the current behavior after the default changes, use: git config --global push.default matching To squelch this message and adopt the new behavior now, use: git config --global push.default simple   Options for push.default
-1 2 3 4 5  nothing - do not push anything.</description>
+Git 2.0 from &amp;#39;matching&amp;#39; to &amp;#39;simple&amp;#39;. To squelch this message and maintain the current behavior after the default changes, use: git config --global push.default matching To squelch this message and adopt the new behavior now, use: git config --global push.default simple Options for push.default
+nothing - do not push anything. matching - push all matching branches. All branches having the same name in both ends are considered to be matching.</description>
     </item>
     
     <item>
@@ -153,7 +154,9 @@ Eclipse There is opensource plugin for it at https://github.</description>
       <pubDate>Wed, 25 Sep 2013 16:12:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2013-09-25-sublime-text-macro-timestamp/</guid>
-      <description>Sublime text macro to insert timestamp 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&amp;#34;%Y-%m-%d_%H:%M:%S&amp;#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $   Documentation - see</description>
+      <description>Sublime text macro to insert timestamp platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&amp;#34;%Y-%m-%d_%H:%M:%S&amp;#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $ Documentation - see
+Installation: Add this to Keybindings / User
+![](/images/2013-09-23_8.02.19 PM.png)</description>
     </item>
     
     <item>
@@ -162,7 +165,7 @@ Eclipse There is opensource plugin for it at https://github.</description>
       <pubDate>Tue, 24 Sep 2013 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</guid>
-      <description>How to make screenshot from command line 1 2 3 4 5 6 7  platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk   First one is &amp;ldquo;interactive&amp;rdquo; - Cmd-Shift-3 with selection tool, second is full screen</description>
+      <description>How to make screenshot from command line platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk First one is &amp;ldquo;interactive&amp;rdquo; - Cmd-Shift-3 with selection tool, second is full screen</description>
     </item>
     
     <item>
@@ -173,10 +176,10 @@ Eclipse There is opensource plugin for it at https://github.</description>
       <guid>https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/</guid>
       <description>Case sensitivity and VirtualBox shared folder Weird but true behaviour:
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
-1  touch zz zZ   creates two files, both &amp;ldquo;inside VM&amp;rdquo; ~/development/ATG/platform-edc as well as in OS-X.
+touch zz zZ creates two files, both &amp;ldquo;inside VM&amp;rdquo; ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
 The command
-1 2  cd ~/development/ATG/platform-edc touch zz zZ   will create just single file.</description>
+cd ~/development/ATG/platform-edc touch zz zZ will create just single file.</description>
     </item>
     
     <item>
@@ -188,7 +191,7 @@ The command
       <description>Usable mc color scheme Edit
 ~/.mc/ini
 insert
-1 2 3  [Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default   </description>
+[Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default </description>
     </item>
     
     <item>
@@ -235,7 +238,8 @@ For more on that plugin see:
       <guid>https://miroadamy.com/posts/2012-09-21-post/</guid>
       <description>After update, the ST2 started to complain about missing git command.
 Finding out Git on MBP:
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  platform $ which git git is /usr/bin/git git is /usr/local/bin/git platform $ git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/bin/git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/local/bin/git --version git version 1.7.3.2   Fix the the Package file in /Users/miro/Library/Application Support/Sublime Text 2/Packages/Git - Git.</description>
+platform $ which git git is /usr/bin/git git is /usr/local/bin/git platform $ git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/bin/git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/local/bin/git --version git version 1.7.3.2 Fix the the Package file in /Users/miro/Library/Application Support/Sublime Text 2/Packages/Git - Git.sublime-settings (it is JSON file)
+{ // save before running commands &amp;#34;save_first&amp;#34;: true // if present, use this command instead of plain &amp;#34;git&amp;#34; // e.</description>
     </item>
     
     <item>
@@ -246,7 +250,7 @@ Finding out Git on MBP:
       <guid>https://miroadamy.com/posts/2012-05-29-admin-tool-goodies/</guid>
       <description>tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &amp;hellip; again.
 Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
-1 2 3 4 5 6 7 8 9 10  547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups.</description>
+547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-130159/ 555 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 556 tmutil compare /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 here is why: ~ $ tmutil uniquesize /Volumes/Radegast2-TM/Backups.</description>
     </item>
     
     <item>

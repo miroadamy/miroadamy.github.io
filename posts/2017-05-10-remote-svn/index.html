@@ -57,7 +57,7 @@
  on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly  Options Use git-svn bridge Git client allows to &ldquo;pretend&rdquo; it is SVN and pull/push against remote SVN repo">
 <meta itemprop="datePublished" content="2017-05-10T11:22:48&#43;08:00" />
 <meta itemprop="dateModified" content="2017-05-10T11:22:48&#43;08:00" />
-<meta itemprop="wordCount" content="569">
+<meta itemprop="wordCount" content="540">
 
 
 
@@ -140,7 +140,7 @@
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 569 words </span>
+          <span class="more-meta"> 540 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -185,27 +185,7 @@ I just need to move the git repo into svn periodically nightly</p>
 </ul>
 <h4 id="example">Example</h4>
 <p>Tracking and contributing to the trunk of a Subversion-managed project (ignoring tags and branches):</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Clone a repo (like git clone):
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Clone a repo (like git clone):
     git svn clone http://svn.example.com/project/trunk
 # Enter the newly cloned directory:
     cd trunk
@@ -221,27 +201,8 @@ I just need to move the git repo into svn periodically nightly</p>
     git svn dcommit
 # Append svn:ignore settings to the default Git exclude file:
     git svn show-ignore &gt;&gt; .git/info/exclude
-</code></pre></td></tr></table>
-</div>
-</div><p>Tracking and contributing to an entire Subversion-managed project (complete with a trunk, tags and branches):</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Clone a repo with standard SVN directory layout (like git clone):
+</code></pre></div><p>Tracking and contributing to an entire Subversion-managed project (complete with a trunk, tags and branches):</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Clone a repo with standard SVN directory layout (like git clone):
     git svn clone http://svn.example.com/project --stdlayout --prefix svn/
 # Or, if the repo uses a non-standard directory layout:
     git svn clone http://svn.example.com/project -T tr -b branch -t tag --prefix svn/
@@ -254,9 +215,7 @@ I just need to move the git repo into svn periodically nightly</p>
     git reset --hard svn/trunk
 # You may only dcommit to one branch/tag/trunk at a time.  The usage
 # of dcommit/rebase/show-ignore should be the same as above.
-</code></pre></td></tr></table>
-</div>
-</div><h3 id="using-two-independent-clients">Using two independent clients</h3>
+</code></pre></div><h3 id="using-two-independent-clients">Using two independent clients</h3>
 <p>Basically, the work tree is independently managed by SVN client that does not see content of .git directory (it is in .svnignore) and git client that sees everything, including the .svn/ directory.</p>
 <p>The workflow functions well as long as there is no or little merging on Subversion side.</p>
 <h4 id="workflow">Workflow:</h4>

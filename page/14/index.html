@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-04-28T21:19:45+00:00" />
+<meta property="og:updated_time" content="2020-05-12T20:27:29+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -115,13 +115,36 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-12-11-docker-starting/">Docker - getting started</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-12-11 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 199 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      After the reboot docker version Client: Version: 1.9.1 API version: 1.21 Go version: go1.4.3 Git commit: a34a1d5 Built: Fri Nov 20 17:56:04 UTC 2015 OS/Arch: darwin/amd64 Cannot connect to the Docker daemon. Is the docker daemon running on this host? ➜ gitolite-admin git:(master) docker-machine active No active host found ➜ gitolite-admin git:(master) docker-machine env default Error checking TLS connection: default is not running. Please start it in order to use the connection settings ➜ gitolite-admin git:(master) docker-machine start Error: Expected to get one or more machine names as arguments ➜ gitolite-admin git:(master) docker-machine start default (default) Starting VM.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-12-11-docker-starting/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2015-07-15-acc-in-vm/">Starting ACC in VM</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2015-07-15 </span>
       <div class="post-category">
           <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 192 words </span>
+        <span class="more-meta"> 177 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
@@ -130,9 +153,9 @@
     <div class="post-summary">
       The ACC is installed in default location: ~/ATG/ACC11.1
 This does not work OOTB. You must set 2 additional ENV properties
-1 2 3 4  cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp;   Starting from dyn/admin The start in separate VM works OK.
+cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp; Starting from dyn/admin The start in separate VM works OK.
 Start in server VM brings errors message very often complaining of malformed Help URL. The issue is documented here: http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg - for JBOSS.
-I tried to add the protocol.
+I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no difference.
     </div>
     <div class="read-more">
       <a href="/posts/2015-07-15-acc-in-vm/" class="read-more-link">Read more...</a>
@@ -148,17 +171,17 @@ I tried to add the protocol.
       <div class="post-category">
           <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 735 words </span>
+        <span class="more-meta"> 648 words </span>
         <span class="more-meta"> 4 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      The general idea 1 2 3 4 5 6  #!/bin/bash # Parameter: tag or sha1 git checkout --orphan temp $1 git commit -m &#34;Truncated history&#34; git rebase --onto temp $1 master git branch -D temp   Requires Git 1.8+
+      The general idea #!/bin/bash # Parameter: tag or sha1 git checkout --orphan temp $1 git commit -m &#34;Truncated history&#34; git rebase --onto temp $1 master git branch -D temp Requires Git 1.8+
 Works well for mostly linear history (aka Git used for diff-ing of the catalog feeds).
 How it works Starting repo (training):
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  ➜ test git:(master) git last fe4e396 2015-07-13 | Fix for BuildInfo in TDD, database connectivity works (HEAD, origin/dynamovies/main, master) [Miro Adamy] f1b8636 2015-07-13 | Tables and database creation [Miro Adamy] d4c182b 2015-07-13 | Added template of dynamovies module - with empty UI.
+➜ test git:(master) git last fe4e396 2015-07-13 | Fix for BuildInfo in TDD, database connectivity works (HEAD, origin/dynamovies/main, master) [Miro Adamy] f1b8636 2015-07-13 | Tables and database creation [Miro Adamy] d4c182b 2015-07-13 | Added template of dynamovies module - with empty UI.
     </div>
     <div class="read-more">
       <a href="/posts/2015-15-07-git-history/" class="read-more-link">Read more...</a>
@@ -174,8 +197,8 @@ How it works Starting repo (training):
       <div class="post-category">
           <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 967 words </span>
-        <span class="more-meta"> 5 mins read </span>
+        <span class="more-meta"> 792 words </span>
+        <span class="more-meta"> 4 mins read </span>
     </div>
   </header>
   
@@ -183,7 +206,7 @@ How it works Starting repo (training):
     <div class="post-summary">
       How to get information about all ATG Nucleus components Dyn Admin has useful feature - Configuration reporter: http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml
 There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes
-1 2 3 4 5 6  -rw-r--r-- 1 miro 2.2M Jul 12 14:07 bean1 -rw-r--r-- 1 miro 2.
+-rw-r--r-- 1 miro 2.2M Jul 12 14:07 bean1 -rw-r--r-- 1 miro 2.
     </div>
     <div class="read-more">
       <a href="/posts/2015-07-12-component-report/" class="read-more-link">Read more...</a>
@@ -199,8 +222,8 @@ There are two variations of the report: Property representation report - PRR (sh
       <div class="post-category">
           <a href="/categories/tools/"> tools </a>
           </div>
-        <span class="more-meta"> 666 words </span>
-        <span class="more-meta"> 4 mins read </span>
+        <span class="more-meta"> 592 words </span>
+        <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
@@ -208,35 +231,11 @@ There are two variations of the report: Property representation report - PRR (sh
     <div class="post-summary">
       This is mainly for Linux and Mac as they do not have good client.
 It requires relatively modern Perl - 5.1x should work. I have
-1 2 3  ➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail)   Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.
+➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail) Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.0.pl
+Make it executable and put it on the path:
     </div>
     <div class="read-more">
       <a href="/posts/2015-07-08-keepass-cli/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-07-osx-web/">Setting up a local web server on a Mac</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-07-07 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 25 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      See
- Setting up a local web server on OS X 10.9 &ldquo;Mavericks&rdquo; Setting up a local web server on OS X 10.10 &ldquo;Yosemite&rdquo;  Meta-List
-https://discussions.apple.com/docs/DOC-3083
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-07-07-osx-web/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
