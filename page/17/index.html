@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-05-12T20:27:29+00:00" />
+<meta property="og:updated_time" content="2020-05-15T19:17:54+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,33 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-11-02-bsd-grep-gnu/">Replace BSD grep with GNU grep</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-11-02 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 169 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      If annoyed with: ➜ ~ echo $PATH | tr &#39;:&#39; &#39;\n&#39; /usr/local/opt/coreutils/libexec/gnubin /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin /opt/ant/bin /opt/groovy/bin /opt/gradle/bin /Users/miro/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /usr/texbin # YEs I am using GNU core utils but grep is not there # The issue ➜ ~ grep --version grep (BSD grep) 2.5.1-FreeBSD Here is the receipt
+http://www.heystephenwood.com/2013/09/install-gnu-grep-on-mac-osx.html
+Did not install it as the issue was not with grep:
+Instead, use findInJars.sh
+➜ ~ cat ~/bin/findInJars.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-11-02-bsd-grep-gnu/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2014-10-14-java6required/">Dealing with &#39;Java Runtime SE 6&#39; required error</a></h1>
@@ -210,32 +237,6 @@ Mount it sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr
     </div>
     <div class="read-more">
       <a href="/posts/2014-09-23-shared-folder/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-22-gitbit/">Git bit of the day</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-22 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 497 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Question from email:  how do I merge 1 file from master -&gt; LIVE
- Answer You cannot. Merge operation creates new commit that has 2 or more parents and will always join full histories of the branches.
-You can however:
- replicate all changes done in single commit to different branch - this is &ldquo;cherry pick&rdquo; take state of single file from different branch into current branch  How to replicate all changes done in single commit to different branch - &ldquo;cherry pick&rdquo; Say you have latest commit in master that contains change to two files you need.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-09-22-gitbit/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

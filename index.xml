@@ -6,7 +6,7 @@
     <description>Recent content on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 May 2020 20:27:29 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 May 2020 19:17:54 +0000</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,14 +26,27 @@ Contact Email me - firstname dot lastname, at Sergei&amp;rsquo;s and Larry&amp;r
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Tue, 12 May 2020 20:27:29 +0000</pubDate>
+      <pubDate>Fri, 15 May 2020 19:17:54 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
       <description>Status Hugo Static Site Generator v0.68.3/extended darwin/amd64 BuildDate: unknown
 Pygments version 2.4.2, (c) 2006-2019 by Georg Brandl.
-Blog commit: 02974b43ff5ee99584ea1c05ec81e3b605f5fd8e
+Blog commit: 1da11fa0b6a5e6c4e20e88438f034ba7ecbfad96
 Theme commit: d39d3e443953caea05510b19fdd7a259c71a0ab3
-Published: &amp;ldquo;2020-05-12T20:27:29Z&amp;rdquo;</description>
+Published: &amp;ldquo;2020-05-15T19:17:54Z&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Accessing Terraform cloud Module registry programatically</title>
+      <link>https://miroadamy.com/posts/2020-05-14-accessing-tfcloud-api/</link>
+      <pubDate>Thu, 14 May 2020 21:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2020-05-14-accessing-tfcloud-api/</guid>
+      <description>First step is to get your personal token. Log on to Terraform Cloud, go to https://app.terraform.io/app/settings/tokens and generate new token.
+Note: it is important to save the token to safe place - this is only time you will see it.
+Export the token:
+export TFE_TOKEN=&amp;lt;THE-TOKEN-VALUE&amp;gt; The documentation for Terraform API is here
+It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described.</description>
     </item>
     
     <item>

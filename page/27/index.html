@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-05-12T20:27:29+00:00" />
+<meta property="og:updated_time" content="2020-05-15T19:17:54+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,32 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2012-04-02-atg-module-graph/">ATG module graph</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-04-02 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 318 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Notes from weekend hack: Project is in Bitbucket - https://bitbucket.org/miroadamy/atgdiagram/overview
+Run in Diagrams/ATGDiagram
+Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStore.eStore &gt;uml/test2.uml Radegast:ATGDiagram miro$ ./processUml.sh uml/test2.uml Radegast:ATGDiagram miro$ open uml/test2.png Radegast:ATGDiagram miro$ =&gt; Output test2.uml
+ the &lsquo;.&rsquo; in names is converted to &lsquo;_&rsquo; - GraphViz does not like it the &lsquo;-&rsquo; in names detto  Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2 Using /opt/ATG/ATG10.0.2 installation Dependants of module TWeStore.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2012-04-02-atg-module-graph/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2012-03-30-diagram-generation/">Diagram generation - plain text approach</a></h1>
@@ -211,29 +237,6 @@ This is an attempt to come up with better answers to the following questions:
     </div>
     <div class="read-more">
       <a href="/posts/2012-02-15-miro-manifesto/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/">Tomcat 5 not reloading changes in JSP</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2011-07-24 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 513 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that. I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

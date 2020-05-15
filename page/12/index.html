@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-05-12T20:27:29+00:00" />
+<meta property="og:updated_time" content="2020-05-15T19:17:54+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,33 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-09-05-git-update-all-local-branches/">Update all local branches in Git repo</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-09-05 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 682 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Update all local branches in Git repo Issue: The git pull updates just one current branch.
+In DevOps I am following many Git repos and need to keep up to date for all local branches.
+git ffwd-update command Source: http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches
+Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
+#!/bin/bash  main() { REMOTES=&#34;$@&#34;; if [ -z &#34;$REMOTES&#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &#34;$REMOTES&#34; | xargs -n1 echo) CLB=$(git branch -l|awk &#39;/^\*/{print $2}&#39;); echo &#34;$REMOTES&#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \  | awk &#39;/merges with remote/{print $5&#34; &#34;$1}&#39; \  | while read line; do RB=$(echo &#34;$line&#34;|cut -f1 -d&#34; &#34;); ARB=&#34;refs/remotes/$REMOTE/$RB&#34;; LB=$(echo &#34;$line&#34;|cut -f2 -d&#34; &#34;); ALB=&#34;refs/heads/$LB&#34;; NBEHIND=$(( $(git rev-list --count $ALB.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-09-05-git-update-all-local-branches/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2016-05-30-linux-resources/">Learning resources for Linux and Command line</a></h1>
@@ -212,33 +239,6 @@ Show merged and unmerged branches This command allows you to show all local bran
     </div>
     <div class="read-more">
       <a href="/posts/2016-03-23-gitbits2/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-22-git-unmerged/">Git - find unmerged commits</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-03-22 </span>
-      <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
-          </div>
-        <span class="more-meta"> 990 words </span>
-        <span class="more-meta"> 5 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      This is Ruby script I found way back and was using it since.
-The credits for creation goes to Zach Dennis. The script is decribed in his blog post
-The source is here
-Example This is beginning of very long output from Groovy source
-The code #!/usr/bin/env ruby require &#39;rubygems&#39; gem &#39;term-ansicolor&#39;, &#39;&gt;=1.0.5&#39; require &#39;term/ansicolor&#39; class GitCommit attr_reader :content def initialize(content) @content = content end def sha @content.split[1] end def to_s `git log --pretty=format:&#34;%h %ad %an - %s&#34; #{sha}~1.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-03-22-git-unmerged/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-05-12T20:27:29+00:00" />
+<meta property="og:updated_time" content="2020-05-15T19:17:54+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,30 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2017-11-23-visual-vm/">VisualVM inside Docker container</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-11-23 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 515 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      The idea / motivation In order to run VisualVM from predefined configuration you need to point the app to the user directory. This directory takes about 20MB, but 90% of the the content is actually generated or repeated.
+➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.0K tw-sl/update 104K tw-sl/update_tracking 11M tw-sl/var ➜ 4devops-visualvm git:(master) du -sh tw-wool/* 248K tw-wool/config 7.2M tw-wool/modules 60K tw-wool/repository 4.0K tw-wool/update 104K tw-wool/update_tracking 11M tw-wool/var ➜ 4devops-visualvm git:(master) du -sh tw-wool 19M tw-wool The only part that is specific and worthy of maintaining in the Git repo is repository
+    </div>
+    <div class="read-more">
+      <a href="/posts/2017-11-23-visual-vm/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2017-11-14-install-aws-cli-mac/">Install AWS CLI on Mac</a></h1>
@@ -209,33 +233,6 @@ User setup  List all keys in Gitolite must have access to Gitolite admin interfa
     </div>
     <div class="read-more">
       <a href="/posts/2016-11-02-pensieve-to-bitbucket/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-09-05-git-update-all-local-branches/">Update all local branches in Git repo</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-09-05 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 682 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Update all local branches in Git repo Issue: The git pull updates just one current branch.
-In DevOps I am following many Git repos and need to keep up to date for all local branches.
-git ffwd-update command Source: http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches
-Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
-#!/bin/bash  main() { REMOTES=&#34;$@&#34;; if [ -z &#34;$REMOTES&#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &#34;$REMOTES&#34; | xargs -n1 echo) CLB=$(git branch -l|awk &#39;/^\*/{print $2}&#39;); echo &#34;$REMOTES&#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \  | awk &#39;/merges with remote/{print $5&#34; &#34;$1}&#39; \  | while read line; do RB=$(echo &#34;$line&#34;|cut -f1 -d&#34; &#34;); ARB=&#34;refs/remotes/$REMOTE/$RB&#34;; LB=$(echo &#34;$line&#34;|cut -f2 -d&#34; &#34;); ALB=&#34;refs/heads/$LB&#34;; NBEHIND=$(( $(git rev-list --count $ALB.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-09-05-git-update-all-local-branches/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

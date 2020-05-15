@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-05-12T20:27:29+00:00" />
+<meta property="og:updated_time" content="2020-05-15T19:17:54+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,33 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-22-git-unmerged/">Git - find unmerged commits</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-03-22 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 990 words </span>
+        <span class="more-meta"> 5 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      This is Ruby script I found way back and was using it since.
+The credits for creation goes to Zach Dennis. The script is decribed in his blog post
+The source is here
+Example This is beginning of very long output from Groovy source
+The code #!/usr/bin/env ruby require &#39;rubygems&#39; gem &#39;term-ansicolor&#39;, &#39;&gt;=1.0.5&#39; require &#39;term/ansicolor&#39; class GitCommit attr_reader :content def initialize(content) @content = content end def sha @content.split[1] end def to_s `git log --pretty=format:&#34;%h %ad %an - %s&#34; #{sha}~1.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-03-22-git-unmerged/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2016-03-21-gitbits1/">Git committer activity</a></h1>
@@ -209,30 +236,6 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
     </div>
     <div class="read-more">
       <a href="/posts/2016-02-18-access-aws-servers/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-12-22-p4merge/">p4merge as default file compare for PathFinder</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-12-22 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 36 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      p4merge as default file compare for PathFinder Set the tool in File Comparison
-How to use it  Select 2 files, right click, compare from context menu In dual mode, select one file on each side, compare  
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-12-22-p4merge/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

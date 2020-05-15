@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-05-12T20:27:29+00:00" />
+<meta property="og:updated_time" content="2020-05-15T19:17:54+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,33 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2020-05-14-accessing-tfcloud-api/">Accessing Terraform cloud Module registry programatically</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-14 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> DevOps </a>
+          </div>
+        <span class="more-meta"> 336 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      First step is to get your personal token. Log on to Terraform Cloud, go to https://app.terraform.io/app/settings/tokens and generate new token.
+Note: it is important to save the token to safe place - this is only time you will see it.
+Export the token:
+export TFE_TOKEN=&lt;THE-TOKEN-VALUE&gt; The documentation for Terraform API is here
+It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2020-05-14-accessing-tfcloud-api/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2020-05-12-bitbucket-keys/">Using SSH keys with multiple Bitbucket accounts</a></h1>
@@ -208,32 +235,6 @@ kubectl --kubeconfig ./quickstart.kubeconfig get pods --all-namespaces NAMESPACE
     </div>
     <div class="read-more">
       <a href="/posts/2020-01-18-rancher-cli/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-12-17-30-day-commit-challenge-1/">30 day commit challenge - Checkpoint 1</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-12-17 </span>
-      <div class="post-category">
-          <a href="/categories/lifehacks/"> lifehacks </a>
-          </div>
-        <span class="more-meta"> 247 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Time to make checkpoint number 1 - it is day 11 of 30.
-So far - out of this 11 days I have 10 days with commits. The missing day was fully dedicated to working on presentation and documentation, that unfortunately ends up Confluence and Google Doc, not in some proper textual format (read: Markdown or RestructuredText) backed by a repository.
-Stuff that I worked on:
- some minor updates to resume (added AWS badges, fixed some typos) notes from certification courses + code fragments scripts for automation of documents / ebooks backup from iCloud to local drives  Most commits went to documentation / practice code for my project &ldquo;Many ways to Kubernetes&rdquo; where I play with building up K8s clusters using different approaches.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2019-12-17-30-day-commit-challenge-1/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

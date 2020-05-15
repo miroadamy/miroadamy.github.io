@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-05-12T20:27:29+00:00" />
+<meta property="og:updated_time" content="2020-05-15T19:17:54+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,30 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-12-31-difference-between-matching-and-simple-git-push/">Difference between matching and simple Git push</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-12-31 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 756 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I started to see this message in some of my Git environments
+Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. To squelch this message and maintain the current behavior after the default changes, use: git config --global push.default matching To squelch this message and adopt the new behavior now, use: git config --global push.default simple This is collection of information gathered from Stackoverflow, Git docs and various internet sources. Putting it together so that I do not have to google it again.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-12-31-difference-between-matching-and-simple-git-push/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/">Binding DashDoc with editors and Eclipse</a></h1>
@@ -211,31 +235,6 @@ nothing - do not push anything. matching - push all matching branches. All branc
     </div>
     <div class="read-more">
       <a href="/posts/2013-09-26-git-push-matching-simple/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-25-sublime-text-macro-timestamp/">Sublime text macro to insert timestamp</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-09-25 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> Programming </a>
-          </div>
-        <span class="more-meta"> 62 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Sublime text macro to insert timestamp platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $ Documentation - see
-Installation: Add this to Keybindings / User
-![](/images/2013-09-23_8.02.19 PM.png)
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-09-25-sublime-text-macro-timestamp/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
