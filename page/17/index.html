@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-05-15T19:17:54+00:00" />
+<meta property="og:updated_time" content="2020-06-01T22:26:06+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,30 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-11-04-atg-repo-visualizer/">ATG Repository structure visualizer</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-11-04 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 310 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      The groovy script does parse the XML files (scraped from dyn-admin, or output of the XML combine) and produces file in the syntax of Plant UML - http://plantuml.sourceforge.net
+if (args.size() == 0) { println &#34;Usage: groovy extractItems.groovy XMLFILE-IN-GSA-FORMAT.xml&#34; System.exit(1) } def gsaFile = new XmlSlurper().parseText(new File(args[0]).text) def desc = gsaFile.&#39;item-descriptor&#39; def processItemDescriptor(myDesc) { def info = [:] def tables = [] def props = [:] def descriptors = [:] for (table in myDesc.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-11-04-atg-repo-visualizer/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2014-11-02-bsd-grep-gnu/">Replace BSD grep with GNU grep</a></h1>
@@ -210,33 +234,6 @@ Go to
     </div>
     <div class="read-more">
       <a href="/posts/2014-09-29-gitbits/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-23-shared-folder/">How to access shared folder in Linux guest in VirtualBox</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-23 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 132 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Make sure the VBOx extensions are installed.
-Go here for details:
-Add share In VirtualBox, Device add transient shared folder:
-This one has made available path /Users/Shared/ATG-11 under the name ATG-11
-Mount it sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x. 1 root 272 Sep 12 16:02 ATG11-docs -rw-rw-r--. 1 root 675 May 13 23:46 atg-platform-mac.userlibraries -rw-rw-r--. 1 root 787 May 13 23:17 atg-platform-vm.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-09-23-shared-folder/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

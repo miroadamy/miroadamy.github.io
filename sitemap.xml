@@ -10,27 +10,62 @@
   
   <url>
     <loc>https://miroadamy.com/</loc>
-    <lastmod>2020-05-15T19:17:54+00:00</lastmod>
+    <lastmod>2020-06-01T22:26:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://miroadamy.com/status/</loc>
-    <lastmod>2020-05-15T19:17:54+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/posts/2020-05-14-accessing-tfcloud-api/</loc>
-    <lastmod>2020-05-14T21:22:48+08:00</lastmod>
+    <lastmod>2020-06-01T22:26:06+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://miroadamy.com/categories/</loc>
+    <lastmod>2020-05-30T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/docker/</loc>
+    <lastmod>2020-05-30T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2020-05-30-dockercon-2020/</loc>
+    <lastmod>2020-05-30T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/events/</loc>
+    <lastmod>2020-05-30T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/</loc>
+    <lastmod>2020-05-30T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/</loc>
+    <lastmod>2020-05-30T11:22:48+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2020-05-14-accessing-tfcloud-api/</loc>
     <lastmod>2020-05-14T21:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -52,20 +87,6 @@
   
   <url>
     <loc>https://miroadamy.com/tags/iaac/</loc>
-    <lastmod>2020-05-14T21:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/posts/</loc>
-    <lastmod>2020-05-14T21:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/tags/</loc>
     <lastmod>2020-05-14T21:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -401,13 +422,6 @@
   </url>
   
   <url>
-    <loc>https://miroadamy.com/categories/events/</loc>
-    <lastmod>2019-11-07T11:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://miroadamy.com/tags/gitops/</loc>
     <lastmod>2019-11-07T11:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -662,13 +676,6 @@
   <url>
     <loc>https://miroadamy.com/tags/tools/</loc>
     <lastmod>2019-01-14T11:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/tags/docker/</loc>
-    <lastmod>2018-12-07T12:57:35-05:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

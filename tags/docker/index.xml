@@ -6,10 +6,20 @@
     <description>Recent content in docker on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Dec 2018 12:57:35 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2020 11:22:48 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>DockerCon 2020</title>
+      <link>https://miroadamy.com/posts/2020-05-30-dockercon-2020/</link>
+      <pubDate>Sat, 30 May 2020 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2020-05-30-dockercon-2020/</guid>
+      <description>I had an opportunity to attend DockerCon 2018 in person - it was great experience in wonderful city - Barcelona. My notes from it are here. I missed previous year (for variety of reasons), but this year as many other tech events was purely virtual so I was able to see some part of it.
+Compared to 2018, the general tone and content of this DockerCon was quite different. In 2018 it felt like all the attention is focused on big enterprise (mainly Microsoft) and what Docker as a company is looking for best way how to hook big firms with deep pockets.</description>
+    </item>
     
     <item>
       <title>DockerCon 2018 - great event (with a small fly in the ointment)</title>

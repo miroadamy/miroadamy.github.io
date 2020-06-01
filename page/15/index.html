@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-05-15T19:17:54+00:00" />
+<meta property="og:updated_time" content="2020-06-01T22:26:06+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,31 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-12-component-report/">How to get information about all ATG components</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-07-12 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 792 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      How to get information about all ATG Nucleus components Dyn Admin has useful feature - Configuration reporter: http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml
+There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes
+-rw-r--r-- 1 miro 2.2M Jul 12 14:07 bean1 -rw-r--r-- 1 miro 2.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-07-12-component-report/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2015-07-08-keepass-cli/">Accessing Keepass information from command line</a></h1>
@@ -210,30 +235,6 @@ Full trace:
     </div>
     <div class="read-more">
       <a href="/posts/2015-05-22-ssh-issue/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-04-11-jboss-shutdown/">Fixing the shutdown problem with JBoss</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-04-11 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 307 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Observed at QA environment. During automated shutdown sequence, the exception was thrown:
-$ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-04-11-jboss-shutdown/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

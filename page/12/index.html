@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-05-15T19:17:54+00:00" />
+<meta property="og:updated_time" content="2020-06-01T22:26:06+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,30 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-11-02-pensieve-to-bitbucket/">Process for transferring Git repo from Gitolite to Bitbucket</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-11-02 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 766 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
+User setup  List all keys in Gitolite must have access to Gitolite admin interface  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-11-02-pensieve-to-bitbucket/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2016-09-05-git-update-all-local-branches/">Update all local branches in Git repo</a></h1>
@@ -213,32 +237,6 @@ which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Ho
     </div>
     <div class="read-more">
       <a href="/posts/2016-03-24-acc-on-osx/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-23-gitbits2/">Git bits 2</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-03-23 </span>
-      <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
-          </div>
-        <span class="more-meta"> 202 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Using the Scala source repo to demonstrate - see Github
-Show merged and unmerged branches This command allows you to show all local branches merged / unmerged to current branch
-➜ scala git:(2.12.x) git branch -a --merged * 2.12.x remotes/origin/2.11.x remotes/origin/2.12.x remotes/origin/HEAD -&gt; origin/2.12.x ➜ scala git:(2.12.x) git branch -a --no-merged remotes/origin/2.10.x remotes/origin/2.8.x remotes/origin/2.9.x remotes/origin/DarkDimius-patch-1 remotes/origin/gh-pages remotes/origin/legacy/msil This shows you all local branches merged into named branch:
-➜ scala git:(2.12.x) git branch -a --merged origin/2.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-03-23-gitbits2/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
