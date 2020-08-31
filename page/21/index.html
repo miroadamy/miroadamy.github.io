@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-06-01T22:26:06+00:00" />
+<meta property="og:updated_time" content="2020-08-31T17:10:31+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,32 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-04-02-gitolite-permissions/">Gitolite permissions setup</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-04-02 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 1458 words </span>
+        <span class="more-meta"> 7 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
+How gitolite works Repository permission structure This is general format of repo definition
+REPO NAME rule line rule line for example
+@staff = dilbert alice wally bob repo foo RW+ = dilbert # line 1 RW+ dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5 The Rule line has format:
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-04-02-gitolite-permissions/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2014-03-11-sshf-in-vm/">Installation of sshfs in the new VM</a></h1>
@@ -211,32 +237,6 @@ My old blog at Miro&rsquo;s World has been kinda neglected in last two years. I 
     </div>
     <div class="read-more">
       <a href="/posts/2013-12-31-httpsgithub-comradegastmiroadamy-dot-comwiki/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-10-16-endeca-oracle/">Endeca start scripts - Oracle way</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-10-16 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 239 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I have ported the Oracle VM style management scripts into the Loyalty VM.
-The scripts are in the loyalty-endeca Git repo, originally in eVoucher branch but also merged into edc
-[tkuser@vm-lo1-hpr-ma endeca]$ ls -1 total 28 dev-check-environment.sh* dev-deploy-endeca-app.sh* dev-endeca-environmet.ini* dev-remove-endeca-app.sh* endeca-control* endeca-vars.txt* README.md* RewardsEndc/ dev-endeca-environmet.ini This is environment setting script.
-### MUST BE SOURCED IN source dev-endeca-environmet.ini ## or . dev-endeca-environmet.ini ## NEVER ./dev-endeca-environmet.ini endeca-control Main script that manages three components of the system named:
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-10-16-endeca-oracle/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 May 2020 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 13:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reference Architecture as a Code</title>
+      <link>https://miroadamy.com/posts/2020-08-07-architecture-as-a-code/</link>
+      <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2020-08-07-architecture-as-a-code/</guid>
+      <description>Many shapes of Architecture According to the wise people, an architecture is the shared understanding that the expert developers/system builders/maintainers have of the system design. It&amp;rsquo;s purpose is to maximize the probability that the decisions you have to make early in a project are the right ones. It is sort of a blueprint for the future system and captures parts, relations, boundaries, constraints.
+In our business (we build and run environments and solutions for eCommerce, data management and other business activities of our customers), an important subtype of architecture is Reference Architecture.</description>
+    </item>
     
     <item>
       <title>DockerCon 2020</title>
@@ -17,8 +27,8 @@
       <pubDate>Sat, 30 May 2020 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2020-05-30-dockercon-2020/</guid>
-      <description>I had an opportunity to attend DockerCon 2018 in person - it was great experience in wonderful city - Barcelona. My notes from it are here. I missed previous year (for variety of reasons), but this year as many other tech events was purely virtual so I was able to see some part of it.
-Compared to 2018, the general tone and content of this DockerCon was quite different. In 2018 it felt like all the attention is focused on big enterprise (mainly Microsoft) and what Docker as a company is looking for best way how to hook big firms with deep pockets.</description>
+      <description>I had an opportunity to attend DockerCon 2018 in person - it was great experience in wonderful city - Barcelona. My notes from it are here. I missed previous year (for variety of reasons), but DockerCon this year (as many other tech events) was purely virtual so I was able to see some part of it.
+Compared to 2018, the general tone and content of this DockerCon was quite different. In 2018 it felt like all the attention is focused on big enterprise (mainly Microsoft related) and what Docker as a company is looking for best way how to hook big firms with deep pockets.</description>
     </item>
     
     <item>

@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-06-01T22:26:06+00:00" />
+<meta property="og:updated_time" content="2020-08-31T17:10:31+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,31 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-16-docker-machine-error-after-upgrade/">Fixing docker-machine error after upgrade</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-03-16 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 387 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I had to upgrade docker toolbox on Yosemite to get latest docker-compose additions.
+After installing the new package, I was not able to connect to docker machine:
+➜ ~ docker-machine status Stopped ➜ ~ docker-machine start default Starting &#34;default&#34;... (default) Check network to re-create if needed... (default) Waiting for an IP... Machine &#34;default&#34; was started. Waiting for SSH to be available... Detecting the provisioner... Started machines may have new IP addresses.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-03-16-docker-machine-error-after-upgrade/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2016-02-18-access-aws-servers/">Accessing internal AWS servers directly from Mac</a></h1>
@@ -208,32 +233,6 @@ I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no dif
     </div>
     <div class="read-more">
       <a href="/posts/2015-07-15-acc-in-vm/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-15-07-git-history/">How to truncate Git history</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-07-14 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 648 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      The general idea #!/bin/bash # Parameter: tag or sha1 git checkout --orphan temp $1 git commit -m &#34;Truncated history&#34; git rebase --onto temp $1 master git branch -D temp Requires Git 1.8+
-Works well for mostly linear history (aka Git used for diff-ing of the catalog feeds).
-How it works Starting repo (training):
-➜ test git:(master) git last fe4e396 2015-07-13 | Fix for BuildInfo in TDD, database connectivity works (HEAD, origin/dynamovies/main, master) [Miro Adamy] f1b8636 2015-07-13 | Tables and database creation [Miro Adamy] d4c182b 2015-07-13 | Added template of dynamovies module - with empty UI.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-15-07-git-history/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

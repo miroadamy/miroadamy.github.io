@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-06-01T22:26:06+00:00" />
+<meta property="og:updated_time" content="2020-08-31T17:10:31+00:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
@@ -113,6 +113,32 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-03-10-atg-repository/">ATG Repository item linking and versioned repos</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-03-10 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 630 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      We have versioned repository ClientProvinceRepository that defines discount types based on account category pricelist and accounts - discountTypePriceList
+=&gt; (let&rsquo;s not start discussion why this is not part of the pricelists).
+The item definition:
+&lt;item-descriptor name=&#34;discountTypePriceList&#34; display-name=&#34;Discount Type Price List&#34; item-cache-size=&#34;1000&#34; query-cache-size=&#34;1000&#34; display-property=&#34;discountType&#34;&gt; &lt;table name=&#34;CPLXB2B_DISCOUNT_PRICE_LIST&#34; type=&#34;primary&#34; id-column-name=&#34;DISCOUNT_PRICELIST_ID&#34; &gt; &lt;property name=&#34;discountType&#34; data-type=&#34;enumerated&#34; column-name=&#34;DISCOUNT_TYPE&#34; default=&#34;Base&#34; queryable=&#34;true&#34; category=&#34;Discount Price List&#34; display-name=&#34;Discount Type&#34; &gt; &lt;attribute name=&#34;useCodeForValue&#34; value=&#34;false&#34;/&gt; &lt;option value=&#34;Base&#34; code=&#34;0&#34;/&gt; &lt;option value=&#34;Silver&#34; code=&#34;1&#34;/&gt; &lt;option value=&#34;Gold&#34; code=&#34;2&#34;/&gt; &lt;option value=&#34;Platinum&#34; code=&#34;3&#34;/&gt; &lt;/property&gt; &lt;property name=&#34;priceListId&#34; column-name=&#34;PRICE_LIST_ID&#34; repository=&#34;/atg/commerce/pricing/priceLists/PriceLists&#34; item-type=&#34;priceList&#34; display-name=&#34;List Price List&#34; required=&#34;true&#34; category=&#34;Discount Price List&#34;/&gt; &lt;property name=&#34;salePriceListId&#34; column-name=&#34;SALE_PRICE_LIST_ID&#34; repository=&#34;/atg/commerce/pricing/priceLists/PriceLists&#34; item-type=&#34;priceList&#34; display-name=&#34;Sale Price List&#34; category=&#34;Discount Price List&#34;/&gt; &lt;property name=&#34;startDate&#34; column-name=&#34;START_DATE&#34; data-type=&#34;timestamp&#34; display-name=&#34;Start Date&#34; category=&#34;Discount Price List&#34;/&gt; &lt;property name=&#34;endDate&#34; column-name=&#34;END_DATE&#34; data-type=&#34;timestamp&#34; display-name=&#34;End Date&#34; category=&#34;Discount Price List&#34;/&gt; &lt;/table&gt; &lt;/item-descriptor&gt; When I tried deployment with this, I got error
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-03-10-atg-repository/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2013-03-05-german-attack/">German attack</a></h1>
@@ -209,33 +235,6 @@ http://gvmtool.net
     </div>
     <div class="read-more">
       <a href="/posts/2013-01-08-gvm/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-11-12-trello/">Discovered Trello</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-11-12 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 73 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Finally a todo/task/project management system that is very good fit.
-Here is why:
- is pretty visually modern and dynamic UI has Web back-end (usable from Linux VM) has decent iPhone app allows checklists (multiple) allows color coding Markdown support ecosystem  There is Gmello that allows create card from GMail, plus few others that seem to bridge the gap between Evernote, System XYZ and Trello
-http://trello.com
-Courtesy of Fog Creek / Joel Spolsky&rsquo;s company
-    </div>
-    <div class="read-more">
-      <a href="/posts/2012-11-12-trello/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

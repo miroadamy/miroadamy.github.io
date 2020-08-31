@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 May 2020 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 13:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Architecture</title>
+      <link>https://miroadamy.com/categories/architecture/</link>
+      <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>devops</title>
+      <link>https://miroadamy.com/categories/devops/</link>
+      <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/devops/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>events</title>
@@ -17,15 +35,6 @@
       <pubDate>Sat, 30 May 2020 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/events/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>devops</title>
-      <link>https://miroadamy.com/categories/devops/</link>
-      <pubDate>Thu, 14 May 2020 21:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/categories/devops/</guid>
       <description></description>
     </item>
     

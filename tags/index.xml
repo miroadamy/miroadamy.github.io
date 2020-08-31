@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 30 May 2020 11:22:48 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 13:00:00 +0800</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>aws</title>
+      <link>https://miroadamy.com/tags/aws/</link>
+      <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ecommerce</title>
+      <link>https://miroadamy.com/tags/ecommerce/</link>
+      <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ecommerce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iaac</title>
+      <link>https://miroadamy.com/tags/iaac/</link>
+      <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/iaac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>terraform</title>
+      <link>https://miroadamy.com/tags/terraform/</link>
+      <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/terraform/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>docker</title>
@@ -26,24 +62,6 @@
       <pubDate>Thu, 14 May 2020 21:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/cli/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>iaac</title>
-      <link>https://miroadamy.com/tags/iaac/</link>
-      <pubDate>Thu, 14 May 2020 21:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/iaac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>terraform</title>
-      <link>https://miroadamy.com/tags/terraform/</link>
-      <pubDate>Thu, 14 May 2020 21:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/terraform/</guid>
       <description></description>
     </item>
     
@@ -71,15 +89,6 @@
       <pubDate>Tue, 12 May 2020 22:34:38 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>aws</title>
-      <link>https://miroadamy.com/tags/aws/</link>
-      <pubDate>Tue, 31 Mar 2020 11:24:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/aws/</guid>
       <description></description>
     </item>
     
@@ -539,15 +548,6 @@
       <pubDate>Sat, 10 Feb 2018 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/atg/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ecommerce</title>
-      <link>https://miroadamy.com/tags/ecommerce/</link>
-      <pubDate>Sat, 10 Feb 2018 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/ecommerce/</guid>
       <description></description>
     </item>
     

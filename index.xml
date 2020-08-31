@@ -6,7 +6,7 @@
     <description>Recent content on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 01 Jun 2020 22:26:06 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Aug 2020 17:10:31 +0000</lastBuildDate>
     
 	<atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -26,14 +26,24 @@ Contact Email me - firstname dot lastname, at Sergei&amp;rsquo;s and Larry&amp;r
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Mon, 01 Jun 2020 22:26:06 +0000</pubDate>
+      <pubDate>Mon, 31 Aug 2020 17:10:31 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
       <description>Status Hugo Static Site Generator v0.68.3/extended darwin/amd64 BuildDate: unknown
 Pygments version 2.4.2, (c) 2006-2019 by Georg Brandl.
-Blog commit: 2895f4e0da00c30e037e8f4f0bf0f8840c2722e7
+Blog commit: 17ca79a837462281b36ed15c060b6665f926045e
 Theme commit: d39d3e443953caea05510b19fdd7a259c71a0ab3
-Published: &amp;ldquo;2020-06-01T22:26:06Z&amp;rdquo;</description>
+Published: &amp;ldquo;2020-08-31T17:10:31Z&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Reference Architecture as a Code</title>
+      <link>https://miroadamy.com/posts/2020-08-07-architecture-as-a-code/</link>
+      <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2020-08-07-architecture-as-a-code/</guid>
+      <description>Many shapes of Architecture According to the wise people, an architecture is the shared understanding that the expert developers/system builders/maintainers have of the system design. It&amp;rsquo;s purpose is to maximize the probability that the decisions you have to make early in a project are the right ones. It is sort of a blueprint for the future system and captures parts, relations, boundaries, constraints.
+In our business (we build and run environments and solutions for eCommerce, data management and other business activities of our customers), an important subtype of architecture is Reference Architecture.</description>
     </item>
     
     <item>
@@ -42,8 +52,8 @@ Published: &amp;ldquo;2020-06-01T22:26:06Z&amp;rdquo;</description>
       <pubDate>Sat, 30 May 2020 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2020-05-30-dockercon-2020/</guid>
-      <description>I had an opportunity to attend DockerCon 2018 in person - it was great experience in wonderful city - Barcelona. My notes from it are here. I missed previous year (for variety of reasons), but this year as many other tech events was purely virtual so I was able to see some part of it.
-Compared to 2018, the general tone and content of this DockerCon was quite different. In 2018 it felt like all the attention is focused on big enterprise (mainly Microsoft) and what Docker as a company is looking for best way how to hook big firms with deep pockets.</description>
+      <description>I had an opportunity to attend DockerCon 2018 in person - it was great experience in wonderful city - Barcelona. My notes from it are here. I missed previous year (for variety of reasons), but DockerCon this year (as many other tech events) was purely virtual so I was able to see some part of it.
+Compared to 2018, the general tone and content of this DockerCon was quite different. In 2018 it felt like all the attention is focused on big enterprise (mainly Microsoft related) and what Docker as a company is looking for best way how to hook big firms with deep pockets.</description>
     </item>
     
     <item>

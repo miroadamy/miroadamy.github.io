@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Reference Architecture as a Code - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Version control friendly approach to designing and documenting the architecture" /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2020-08-07-architecture-as-a-code/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Reference Architecture as a Code" />
+<meta property="og:description" content="Version control friendly approach to designing and documenting the architecture" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2020-08-07-architecture-as-a-code/" />
+<meta property="article:published_time" content="2020-08-10T13:00:00+08:00" />
+<meta property="article:modified_time" content="2020-08-10T13:00:00+08:00" />
+<meta itemprop="name" content="Reference Architecture as a Code">
+<meta itemprop="description" content="Version control friendly approach to designing and documenting the architecture">
+<meta itemprop="datePublished" content="2020-08-10T13:00:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-10T13:00:00&#43;08:00" />
+<meta itemprop="wordCount" content="4109">
+
+
+
+<meta itemprop="keywords" content="eCommerce,AWS,IaaC,Terraform," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Reference Architecture as a Code"/>
+<meta name="twitter:description" content="Version control friendly approach to designing and documenting the architecture"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Reference Architecture as a Code</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2020-08-10 </span>
+        <div class="post-category">
+            <a href="/categories/devops/"> DevOps </a>
+            <a href="/categories/architecture/"> Architecture </a>
+            </div>
+          <span class="more-meta"> 4109 words </span>
+          <span class="more-meta"> 20 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#many-shapes-of-architecture">Many shapes of Architecture</a></li>
+    <li><a href="#selecting-the-format">Selecting the format</a></li>
+    <li><a href="#reference-architecture-with-markdown-and-mkdocs">Reference Architecture with Markdown and MkDocs</a>
+      <ul>
+        <li><a href="#terraform-code-organization">Terraform code organization</a></li>
+        <li><a href="#repository-layout---or-what-belongs-where">Repository layout - or what belongs where</a></li>
+      </ul>
+    </li>
+    <li><a href="#reference-architecture-lifecycle">Reference Architecture Lifecycle</a>
+      <ul>
+        <li><a href="#reintegration---project-side">Reintegration - project side</a></li>
+        <li><a href="#reintegration---architecture-side">Reintegration - architecture side</a></li>
+      </ul>
+    </li>
+    <li><a href="#roi-consideration">ROI consideration</a></li>
+    <li><a href="#diagrams-markdown-friendly-way">Diagrams Markdown Friendly Way</a></li>
+    <li><a href="#binary-editor-alternatives">Binary Editor Alternatives</a>
+      <ul>
+        <li><a href="#plantuml-diagrams">PlantUML diagrams</a></li>
+        <li><a href="#aws-with-plantuml">AWS with PlantUML</a></li>
+        <li><a href="#workflow-with-plantuml">Workflow with PlantUML</a></li>
+        <li><a href="#pure-python-as-graph-dsl">Pure Python as graph DSL</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h2 id="many-shapes-of-architecture">Many shapes of Architecture</h2>
+<p>According to the <a href="https://martinfowler.com/architecture/">wise people</a>, an architecture is the shared understanding that the expert developers/system builders/maintainers have of the system design. It&rsquo;s purpose is to maximize the
+probability that the decisions you have to make early in a project are the right ones. It is sort of a blueprint for the future system and captures parts, relations, boundaries, constraints.</p>
+<p>In our business (we build and run environments and solutions for eCommerce, data management and other business activities of our customers), an important subtype of architecture is Reference Architecture. It is an architecture that serves both as a capture of best practices for a particular business case as well as a living, evolving template for creating new instances of that type of an environment. Both best practice as well as evolving features are important: the reference architecture (RA) serves as knowledge gathering in the ever changing world of cloud. As new features of AWS or Azure come, the RA needs to absorb them to incorporate latest advances and to use the best price / performance options available.</p>
+<p>Architecture can take many physical forms. Traditionally, back in the waterfall age, it used to be a long Word document, a collection of Visio drawings or combination of both. Eventually Word was replaced by Google Docs and/or Confluence, but the same idea stayed: the prose written for humans that use manual processes to transform the prose to instances of a system, usually using cloud management console or some other tool.
+With the arrival of Cloudformation and Terraform, the manual process got scripted which helped repeatability during the environment creation phase, but it also introduced a new challenge: a gap between code living in version control and documentation living in a Wiki. These two separate representations of the same idea were stored in different places, requiring different tools and different credentials - despite being managed and worked on by the same people. As a natural consequence, the documentation often got out of sync with the code and instead of making understanding better and explaining / documenting, it added confusion and stopped being useful.</p>
+<p>Some people say the special dedicated tools that hold both are the answer. Such a tool would provide a single place to hold all the information, allow creating diagrams, add documentation and maintain or generate the code. I am a bit sceptical when it comes to these kinds of solutions. I have seen good partial solution in the past (e.g. Enterprise Architect) that were delivering value, but they were limited to subset of languages and notations - e.g. UML diagrams
+and Java/C++ or object oriented languages. I am not aware of any tool I would consider full scale replacement for good documentation plus code. Some are promising - e.g. <a href="https://medium.com/faun/modules-tf-convert-visual-aws-diagram-into-terraform-configurations-e61fb0574b10">Cloudcraft plugin from Anton Babenko</a>. I imagine this can be an excellent option for a startup or small company, but does not allow us enough flexibility to fit within existing tools and backend systems we have.</p>
+<p>Rest of this blog entry will describe one possible way we are trying to overcome the documentation / code gap by using open standards, opensource tools and adhering to <a href="https://www.writethedocs.org/guide/docs-as-code/">documentation as a code</a> philosophy.</p>
+<p>As a result, we define Reference Architecture as code artifact - repository that contains both executable description (Terraform Code) as well as all the documentation explaining decisions, options and alternatives using best practices such as <a href="https://aws.amazon.com/architecture/well-architected/">WAF</a>, adapted to company and customers special needs - e.g. enforcing / standardising naming, tagging, policies and in general capturing knowledge about the system built.</p>
+<h2 id="selecting-the-format">Selecting the format</h2>
+<p>The documentation format should satisfy these requirements</p>
+<ul>
+<li>must be file oriented (not living in database) =&gt; it can goes with terraform code to same repo</li>
+<li>must be Git friendly = allow good versioning and comparison</li>
+<li>must be easy to work with for developers</li>
+<li>must be expressive enough to allow formatting for pleasant Web reading experience (unlike e.g. man or pod)</li>
+<li>must allow easy way to generate documentation for set of interconnected pages</li>
+<li>must be open, well supported with good ecosystem for tools and automation</li>
+<li>must be CI/CD friendly (using pipelines in Bitbucket/GitHub/Gitlab)</li>
+</ul>
+<p>We have ended up with a shortlist of three main contenders:</p>
+<ul>
+<li>MarkDown with MkDocs / Material Theme</li>
+<li>AsciiDoc</li>
+<li>RestructuredText with Sphinx</li>
+</ul>
+<p>After evaluating each (details of this evaluation will be published in a separate post) we ended up selecting the MarkDown.</p>
+<p>The main three reasons why we ended up selecting MarkDown were:</p>
+<ul>
+<li>familiarity - Markdown is best known format, zero learning curve</li>
+<li>MkDocs is Python based and with Material Theme competes very well with Sphinx generated sites</li>
+<li>extensibility - using Macros module allowed to solve the file include problem</li>
+</ul>
+<h2 id="reference-architecture-with-markdown-and-mkdocs">Reference Architecture with Markdown and MkDocs</h2>
+<p>To add the documentation-as-a-code to the Terraform repo (the actual code), there is very little to do.
+Absolute necessary are only two files:</p>
+<ul>
+<li><code>./mkdocs.yml</code> - defines the structure of the navigation and MkDocs configuration</li>
+<li><code>./docs/index.md</code> - default directory and one Markdown file (the name can me different than index.md)</li>
+</ul>
+<p>It is usually a good idea to add <code>requirements.txt</code> file for those users who prefer to install MkDocs locally and a shell script
+that runs MkDocs in Docker to the root:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">docker run --rm -it -p 8000:8000 -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/docs miroadamy/mkdocs-material <span class="nv">$@</span>
+</code></pre></div><p>and <code>requirements.txt</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mkdocs
+mkdocs-material
+mkdocs-minify-plugin&gt;=0.2
+mkdocs-git-revision-date-localized-plugin&gt;=0.4
+mkdocs-awesome-pages-plugin&gt;=2.2.1
+mkdocs-macros-plugin
+diagrams
+</code></pre></div><p>The last dependency is optional - only if you plan to use a Python based diagramming tool later on.</p>
+<p>The above structure is for the documentation. The Terraform code lives in folders that are dedicated to environments
+or variants of environments. The general structure of the Terraform code is:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">./ - PROD = named environment
+   - UAT  = named environment
+   - UAT-HA = named variant
+   - DEVQA = named environment
+   - modules/
+        - database/ - local module for RDS provisioning
+        - vpn/      - local module 
+   - examples/
+        - minimal/ = example of a minimal environment
+        - everything = the HA top environment example
+        - typical/ = example of most common use case
+        - typical-mysql = example specific to a particular database
+</code></pre></div><p>We use three kind of Terraform modules:</p>
+<pre><code>* platform library
+* community modules
+* local RA specific modules
+</code></pre>
+<p>The most useful are Platform Library modules. These are internal, mostly closed source modules that provide
+packaged templates for making sure that environments we build for our customers contain all necessary security a
+best practices features from the ground up. For example, proper and consistent tagging of the resources is crucial for
+proper monitoring and cost reporting, policies are super important for security, logs processing for integration with
+the monitoring tools CloudOps team uses and general structure, default variables and locals to make sure that the account works well inside our AWS organization hierarchy and Pivotree workflow.</p>
+<p>Platform library is maintained by dedicated internal team and while it is pretty comprehensive, it does not cover
+everything. We often adapt community modules, add our own extensions / bug fixes / documentation and republish
+the fork as opensource back to the community.</p>
+<p>The local RA modules often are &ldquo;second degree modules&rdquo; - the modules that are using other modules. We use them for
+making sure there is good balance between consistency among environments and respecting the DRY (don&rsquo;t repeat yourself)
+design principle.</p>
+<p>Each of the Terraform folders for environment, module or example can have it&rsquo;s own <code>docs/</code> subfolder
+where the environment/module/example specific information can reside. The main navigation can easily point to these
+pages and provide a consistent, global documentation tree.</p>
+<p>The key feature for good user experience is ability to include both Markdown fragments and code files into the compiled
+documentation - this is provided by <code>include</code> macro added in the <code>mkdocs.yml</code> combined with a &ldquo;proxy&rdquo; markdown files that
+have the name of the environment/module or example they represent and simply include the main Markdown file for that environment</p>
+<p>The file for production environment - <code>./docs/PROD.md</code> (the terraform code for production is in the <code>./PROD/</code> folder)</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">{% include &#39;PROD/docs/README.md&#39; %}
+</code></pre></div><p>Here is an example - a starter template how such architecture can look like</p>
+<p>Just the documentation portion:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  aaac-starter-template tree
+.
+├── CHANGELOG.md
+├── DEV
+│   └── docs
+│       └── README.md
+├── PROD
+│   └── docs
+│       └── README.md
+├── README.md
+├── UAT
+│   └── docs
+│       └── README.md
+├── docs
+│   ├── DEV.md
+│   ├── PROD.md
+│   ├── UAT.md
+│   ├── example-everything.md
+│   ├── example-minimal.md
+│   ├── example-typical.md
+│   ├── index.md
+│   ├── mkdocs
+│   │   ├── about.md
+│   │   ├── macros-demo1.md
+│   │   ├── markdown-demo.md
+│   │   └── snippet.md
+│   ├── module-demo-1.md
+│   └── module-demo-2.md
+├── document_server.sh
+├── examples
+│   ├── everything
+│   │   └── README.md
+│   ├── minimal
+│   │   └── README.md
+│   └── typical
+│       └── README.md
+├── mkdocs.yml
+├── modules
+│   ├── demo-1
+│   │   └── docs
+│   │       └── README.md
+│   └── demo-2
+│       └── docs
+│           └── README.md
+└── requirements.txt
+
+17 directories, 26 files
+</code></pre></div><p>This is how the navigation in the table of content looks like in the source form:</p>
+<p><img src="/images/aaac/nav-source.png" alt=""></p>
+<p>and the rendered form:</p>
+<p><img src="/images/aaac/nav-rendered.png" alt=""></p>
+<h3 id="terraform-code-organization">Terraform code organization</h3>
+<p>This topic deserves deeper discussion, but at the high level, Terraform does not care how many files is there in the &ldquo;project&rdquo;
+(which must be located in single directory), what are the file names (as long as they have <code>.tf</code> extension)
+or how is the content distributed among them.</p>
+<p>We are using our own adopted version of a naming/content allocation scheme for Terraform files that looks looks like this
+(this is an example that uses Platform library and most of the files are &ldquo;clients&rdquo; of some module):</p>
+<ul>
+<li>main.tf - the main functionality</li>
+<li>providers.tf - configuration of the AWS provider (locked version) and others</li>
+<li>version.tf - lock terraform version</li>
+<li>outputs.tf - all output produced</li>
+<li>variables.tf - declaration of all variables without default values</li>
+<li>pivotree-variables.tf - company-specific variables used for integration across sales, app services and ops</li>
+<li>locals.tf - the local definition - mainly for consistent tagging</li>
+<li>init.auto.tfvars - the predefined values of the variables with comments</li>
+<li>security-groups.tf - explicit definition of all used SG</li>
+<li>(optional) AWS-RESOURCE.net - depending on module, additional files for AWS resources (ELB, RDS, EC2 etc)</li>
+<li>docs/README.md or README.md - local documentation for this set of files only</li>
+</ul>
+<p>Here is an example of the Reference architecture repository with one module, one example and DEV environment containing
+the code for Terraform:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">.
+├── CHANGELOG.md
+├── DEV
+│   ├── docs
+│   │   └── README.md
+│   ├── init.auto.tfvars
+│   ├── locals.tf
+│   ├── main.tf
+│   ├── outputs.tf
+│   ├── pivotree-variables.tf
+│   ├── providers.tf
+│   ├── security-groups.tf
+│   ├── variables.tf
+│   ├── version.tf
+│   └── vpc-net.tf
+├── PROD
+│   └── docs
+│       └── README.md
+├── README.md
+├── UAT
+│   └── docs
+│       └── README.md
+├── docs
+│   ├── DEV.md
+│   ├── PROD.md
+│   ├── UAT.md
+│   ├── example-everything.md
+│   ├── example-minimal.md
+│   ├── example-typical.md
+│   ├── index.md
+│   ├── mkdocs
+│   │   ├── about.md
+│   │   ├── macros-demo1.md
+│   │   ├── markdown-demo.md
+│   │   └── snippet.md
+│   ├── module-demo-1.md
+│   └── module-demo-2.md
+├── document_server.sh
+├── examples
+│   ├── everything
+│   │   └── README.md
+│   ├── minimal
+│   │   └── README.md
+│   └── typical
+│       ├── README.md
+│       ├── init.auto.tfvars
+│       ├── locals.tf
+│       ├── main.tf
+│       ├── outputs.tf
+│       ├── pivotree-variables.tf
+│       ├── providers.tf
+│       ├── security-groups.tf
+│       ├── variables.tf
+│       ├── version.tf
+│       └── vpc-net.tf
+├── mkdocs.yml
+├── modules
+│   ├── demo-1
+│   │   ├── docs
+│   │   │   └── README.md
+│   │   ├── init.auto.tfvars
+│   │   ├── locals.tf
+│   │   ├── main.tf
+│   │   ├── outputs.tf
+│   │   ├── pivotree-variables.tf
+│   │   ├── providers.tf
+│   │   ├── security-groups.tf
+│   │   ├── variables.tf
+│   │   ├── version.tf
+│   │   └── vpc-net.tf
+│   └── demo-2
+│       └── docs
+│           └── README.md
+└── requirements.txt
+
+17 directories, 56 files
+
+
+</code></pre></div><h3 id="repository-layout---or-what-belongs-where">Repository layout - or what belongs where</h3>
+<p>At this stage, we have quite a few folders or locations, both for the documentation as well as for the Terraform source code,
+so the natural question is: what should be placed where.</p>
+<p>There are several ways how to address this, but the most important rule that should be kept in mind is:</p>
+<ul>
+<li>pick ONE strategy that works for your process/way of thinking</li>
+<li>document it</li>
+<li>stick to it</li>
+</ul>
+<p>Here is what we are currently at:</p>
+<p>First: <code>modules</code>. This folder is often empty and when it is not empty, it should contain <strong>internal modules</strong>. These are reusable
+ways how to build part of the solution from other modules (public or private) or from resources. These are potential incubators for
+the new library modules. It is very important to pay attention to variables and outputs of the module, as these will determine its
+usability.</p>
+<p>The documentation of the module should focus on details about variables (module parameters) and module outputs, default
+values as well as contain examples of what gets built.</p>
+<p>Next: <code>examples</code>. This is the core of Architecture as a Code - both on code as well as on documentation side. If there are
+variants of the architecture, there should be examples for each. An example is like a build for a non-existing project or a
+fictional customer. Examples should have good names and their documentation should describe the use case and decision criteria
+when the example is a good solution. At minimum, there should be 3 examples, named <code>minimal</code>, <code>everything</code> and <code>typical</code>.</p>
+<p>If the architecture repository contains internal modules, there should be enough examples for each module.</p>
+<p>Last - the <code>environment</code> folders - UAT, PROD, DEV - should contain adapted examples of the build for a particular project.
+These are (from architecture point of view) transient folders as they will &ldquo;grow and die&rdquo; many times during the architecture lifecycle.</p>
+<h2 id="reference-architecture-lifecycle">Reference Architecture Lifecycle</h2>
+<p>The main purpose of reference architecture is to support reuse and consistency between repetitive builds of the environments,
+while providing an easier way to extract changes, updates and best practices related to environment/cloud and tools evolution.</p>
+<p>The simplest approach is to start a new build with a detached copy of the latest version of a RA repository. This is very easy and fast
+but makes later consolidation harder and usually results in consolidation never happens. At the end, there is set of snowflake
+repositories with no easy way to compare them or see their evolution path.</p>
+<p>Better approach is using 2 repositories: a Project repository and an Architecture repo.</p>
+<p>Start with shallow cloning of the Architecture repository using <code>architecture</code> as origin name:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git clone --depth=1 --origin architecture ARCHITECTURE_REPO_URL
+</code></pre></div><p>Then create empty repository for the project in the Bitbucket/Github/Gitlab and add it as remote repository to the architecture clone:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git remote add origin PROJECT_REPO_URL
+</code></pre></div><p>The starting point of the new environments will be the current (<code>develop</code>) state of the architecture repo. Let&rsquo;s assume the project name
+is RA_DEMO.</p>
+<p>We will be working with multiple local branches that will be synchronized with the remote branches in these two repositories:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">develop =&gt; origin/develop - environment definition in progress
+master  =&gt; origin/master  - environment release state
+RA_DEMO =&gt; architecture/PROJECTS/RA_DEMO
+</code></pre></div><p>To set it up:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git checkout master
+git push -u origin/master
+
+git checkout -b develop
+git merge archirecture/develop
+git push -u origin/develop
+
+git checkout -b RA_DEMO
+git push -u architecture/PROJECTS/RA_DEMO
+
+</code></pre></div><p>Main work will be happening in the develop branch, pushing the changes to origin/develop.</p>
+<p>This means creating folders for ENV, adding Terraform code and documentation, testing documentation locally,
+running the code and adjusting.</p>
+<p>When the environment and documentation reaches tested state, we merge to master and push to project repository, where (eventually)
+the CI/DC pipelines will run and deploy the infrastructure.</p>
+<p>Important thing to keep in mind is avoiding reformatting and large content re-arrangement which would complicate the next phase.</p>
+<p>When the environment is ready, we may end up with some changes or additions under <code>./modules</code> or <code>./examples</code> that are worthy of keeping as
+part of next builds based on this reference architecture. This is where the reintegration step comes into place.</p>
+<h3 id="reintegration---project-side">Reintegration - project side</h3>
+<p>The goal of this phase is to make sure that worthy additions and improvements will be kept for the future builds.</p>
+<p>It starts all by switching to <code>RA_DEMO</code> branch and merging the state we need to integrate:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git checkout RA_DEMO
+git merge master
+</code></pre></div><p>Usually, the details of the build environment are of little interest for the architecture. We can remove the ENV folders, add more
+documentation or better details while working on the RA_DEMO branch, producing one or more commits on this branch. All this commit
+should be local commits - do NOT push to <code>architecture</code> yet. Sometimes we may want to consider making a ENV build a new example</p>
+<ul>
+<li>copy the TF code under <code>./examples</code>, name it accordingly and update documentation / remove customer specific data.</li>
+</ul>
+<p>Sometimes we discover issues that should be addressed on the architecture level. Adding them to <code>backlog.md</code> is great way that they will
+be available for the maintainer of the RA repo.</p>
+<p>When the state of the architecture is in desired state, we can squeeze the commits to single commit using interactive rebase (see <a href="https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History">this</a> for more details)</p>
+<p>After rebase, we can push the RA_DEMO to architecture remote:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git push 
+</code></pre></div><p>and create a pull request for Architecture repo, to merge the PROJECT/RA_DEMO to develop.</p>
+<h3 id="reintegration---architecture-side">Reintegration - architecture side</h3>
+<p>Second part of the reintegration happens completely in the Architecture repo, often by different person / team.</p>
+<p>Clone the Architecture repo, switch to newly added PROJECT/RA_DEMO branch, review the addition.</p>
+<p>Every change should be tested and independently validated. Ideally the architecture team adds dedicated tests for the new
+examples and more documentation, reviews backlog.md for list of issues / improvements suggested and creates tickets based on
+this information.</p>
+<p>If everything is OK, increase version of the RA and merge to develop - to make it available for next iteration.</p>
+<p>The starter template of the reference architecture using the above approach is available at <a href="https://github.com/miroadamy/aaac-starter-template">my Github</a></p>
+<h2 id="roi-consideration">ROI consideration</h2>
+<p>Creation and maintenance of the reference architecture is a non-trivial investment of time and resource. Not always this kind
+of effort is warranted. From our experience, here are some decision criteria when considering standardization and using this approach:</p>
+<ul>
+<li>how many environments will be created during the next month / quarter ? RA and AaaC is less useful for small number of builds over longer periods
+of time</li>
+<li>what is the platform complexity ? For highly complex platforms with complex dependencies and long implementation cycle, it makes more sense focus on smaller building blocks
+rather than on full RA</li>
+<li>what is the speed of change for the platform ? Every major release (and often minor release as well) will require updating and re-testing the RA.
+For fast changing environment, this can be too expensive</li>
+<li>what is the customer requirements variability ? If there are huge differences between the builds, the RA will need to contain large number
+of examples and variants which will make maintenance and testing more costly.</li>
+</ul>
+<p>The ideal candidates for the AaaC / RA DevOps cycle are small to medium sized solutions with small number of variants, with
+customers requirements being similar enough to fit into 3-4 cases and with large enough number of deployments for a platform
+version that allows good test coverage.</p>
+<h2 id="diagrams-markdown-friendly-way">Diagrams Markdown Friendly Way</h2>
+<p>The traditional way how to create diagram and add them to the documentation is:</p>
+<ul>
+<li>use an external tool - either a local one (Omnigraffle, Visio) or an online tool (LucidChart, Draw.IO)</li>
+<li>save source of the diagram somewhere (local drive or cloud)</li>
+<li>export the image rendering of the diagram to some image format (e.g. PNG)</li>
+<li>link the image to your documentation</li>
+</ul>
+<p>While this is easy and convenient way of doing things with very low barrier of entry, there are several disadvantage I&rsquo;d like to point out</p>
+<ul>
+<li>one must have the same version of editing software - on a proper platform if local. The challenges of sharing Omnigrafle source with Windows users (or Visio with Linux users) are non-trivial. For online tools, one must have access / license to the software.</li>
+<li>the native format is not living in the same place as the documentation - unless one uses local tools (which brings platform dependency) and life cycles of the documentation and diagrams are separate. This violates the original intention of keeping lifecycle of code and documentation together, and diagrams are fundamental part of the documentation</li>
+<li>native format is impossible to properly version control. As a consequence of the previous point, there is no easy way to tell differences between various versions of the diagram from the source and image.</li>
+<li>it is very hard to automate the rendering part to get e.g. different resolutions of the images for different media</li>
+</ul>
+<h2 id="binary-editor-alternatives">Binary Editor Alternatives</h2>
+<p>I&rsquo;d like to showcase / demo two alternatives to visual GUI editors that essentially apply the same idea as Terraform to infrastructure to the process of creating diagrams. Instead of using GUI editor (~ AWS Console) you describe the intended diagram (~ infrastructure) in an open, free Domain Specific Language PlantUML (~ Terraform) and use free, opensource and readily available tools to transform the DSL to target assets - images (~ resources). This is the approach using PlantUML</p>
+<h3 id="plantuml-diagrams">PlantUML diagrams</h3>
+<p>The <a href="https://en.wikipedia.org/wiki/PlantUML">PlantUML</a> is <a href="https://plantuml.com/">well established DSL</a> with great ecosystem and support. It allows creating wide variety of diagrams and converting them either <a href="http://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000">online</a> or in <a href="https://hub.docker.com/r/plantuml/plantuml-server/">Docker</a> or using <a href="https://plugins.jetbrains.com/plugin/7017-plantuml-integration">plugin for IDE</a></p>
+<p>There is also <a href="https://plantuml.com/stdlib">standard library of modules</a> including AWS and excellent <a href="https://crashedmind.github.io/PlantUMLHitchhikersGuide/">guide</a> with examples and details</p>
+<p>Here is a quick demo of few examples what can be done with PlatUML</p>
+<h3 id="aws-with-plantuml">AWS with PlantUML</h3>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="err">@</span><span class="nx">startuml</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">AWSCommon</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">AWSSimplified</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">Compute</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">mobile</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">general</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">GroupIcons</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+
+ <span class="nx">skinparam</span> <span class="nx">linetype</span> <span class="nx">polyline</span>
+<span class="err">&#39;</span> <span class="nx">skinparam</span> <span class="nx">linetype</span> <span class="nx">ortho</span>
+
+<span class="kn">package</span> <span class="s">&#34;AWS Cloud&#34;</span> <span class="p">{</span>
+<span class="nf">EC2</span><span class="p">(</span><span class="nx">Smadex</span><span class="p">,</span> <span class="s">&#34;Smadex Service&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nf">Users</span><span class="p">(</span><span class="nx">Users</span><span class="p">,</span> <span class="s">&#34;Users&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">TraditionalServer</span><span class="p">(</span><span class="nx">AdExchange</span><span class="p">,</span> <span class="s">&#34;Ad Exchange&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">Mobile</span><span class="p">(</span><span class="nx">Mobile</span><span class="p">,</span> <span class="s">&#34;Publisher app or web&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+
+<span class="nx">Users</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">Mobile</span><span class="p">:</span> <span class="mf">1.</span> <span class="nx">Visits</span>
+<span class="nx">Mobile</span> <span class="o">-</span><span class="nx">right</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">AdExchange</span><span class="p">:</span> <span class="mf">2.</span> <span class="nx">Start</span> <span class="nx">auction</span>
+<span class="nx">AdExchange</span> <span class="o">-</span><span class="nx">right</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">Smadex</span><span class="p">:</span> <span class="mf">3.</span> <span class="nx">Bid</span> <span class="nx">request</span> <span class="o">/</span> <span class="nx">response</span>
+<span class="nx">Smadex</span> <span class="o">-</span><span class="nx">left</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">Mobile</span><span class="p">:</span> <span class="mf">4.</span> <span class="nx">Show</span> <span class="nx">Ad</span>
+<span class="nx">Users</span> <span class="o">-</span><span class="nx">right</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">Smadex</span><span class="p">:</span> <span class="mf">5.</span> <span class="nx">Impression</span> <span class="o">/</span> <span class="nx">click</span> <span class="o">/</span> <span class="nx">install</span> <span class="o">/</span> <span class="nx">event</span> <span class="p">{</span><span class="nx">request</span> <span class="nx">id</span><span class="p">}</span>
+<span class="err">@</span><span class="nx">enduml</span>
+</code></pre></div><p><img src="/images/aaac/aws_demo_1.png" alt=""></p>
+<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="err">@</span><span class="nx">startuml</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">AWSCommon</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">AWSSimplified</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">Compute</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">mobile</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">general</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">GroupIcons</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">Storage</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">ManagementAndGovernance</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">CustomerEngagement</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">MachineLearning</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">NetworkingAndContentDelivery</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">Database</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+<span class="p">!</span><span class="nx">include</span> <span class="p">&lt;</span><span class="nx">awslib</span><span class="o">/</span><span class="nx">ApplicationIntegration</span><span class="o">/</span><span class="nx">all</span><span class="p">.</span><span class="nx">puml</span><span class="p">&gt;</span>
+
+<span class="err">&#39;</span><span class="nx">Compute</span><span class="o">/</span><span class="nx">General</span>
+<span class="err">&#39;</span><span class="nx">Storage</span><span class="o">/</span><span class="nx">SimpleStorageServiceS3</span><span class="p">.</span><span class="nx">png</span>
+<span class="err">&#39;</span><span class="nx">ApplicationIntegration</span><span class="o">/</span><span class="nx">SQS</span><span class="p">.</span><span class="nx">png</span>
+<span class="err">&#39;</span><span class="nx">Compute</span><span class="o">/</span><span class="nx">Lambda</span><span class="p">.</span><span class="nx">png</span>
+<span class="err">&#39;</span><span class="nx">Compute</span><span class="o">/</span><span class="nx">EC2</span>
+<span class="err">&#39;</span><span class="nx">ManagementAndGovernance</span><span class="o">/</span><span class="nx">CloudWatch</span><span class="p">.</span><span class="nx">png</span>
+<span class="err">&#39;</span><span class="nx">CustomerEngagement</span><span class="o">/</span><span class="nx">SESEmail</span><span class="p">.</span><span class="nx">png</span>
+<span class="err">&#39;</span><span class="nx">MachineLearning</span><span class="o">/</span><span class="nx">SageMaker</span><span class="p">.</span><span class="nx">png</span>
+<span class="err">&#39;&#39;</span><span class="nx">Mobile</span><span class="o">/</span><span class="nx">APIGateway</span><span class="p">.</span><span class="nx">png</span>
+<span class="err">&#39;</span><span class="nx">NetworkingAndContentDelivery</span><span class="o">/</span><span class="nx">APIGateway2</span><span class="p">.</span><span class="nx">png</span>
+<span class="err">&#39;</span><span class="nx">Database</span><span class="o">/</span><span class="nx">Aurora</span><span class="p">.</span><span class="nx">png</span>
+<span class="err">&#39;</span><span class="nx">ApplicationIntegration</span><span class="o">/</span><span class="nx">SQSQueue</span><span class="p">.</span><span class="nx">png</span>
+
+
+<span class="nx">skinparam</span> <span class="nx">linetype</span> <span class="nx">polyline</span>
+<span class="err">&#39;</span> <span class="nx">skinparam</span> <span class="nx">linetype</span> <span class="nx">ortho</span>
+
+<span class="err">&#39;</span><span class="nx">top</span> <span class="nx">left</span> <span class="nx">section</span>
+<span class="err">&#39;</span><span class="o">-------------------------------------------------------------</span>
+<span class="kn">package</span> <span class="nx">EC2_Instance</span> <span class="p">{</span>
+<span class="nf">General</span><span class="p">(</span><span class="nx">IngestionApp</span><span class="p">,</span> <span class="s">&#34;Ingestion App&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">General</span><span class="p">(</span><span class="nx">ChunkingApp</span><span class="p">,</span> <span class="s">&#34;Chunking Orchestration App&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nf">SimpleStorageServiceS3</span><span class="p">(</span><span class="nx">S3Staging</span><span class="p">,</span> <span class="s">&#34;Amazon S3 Staging Bucket&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">SQS</span><span class="p">(</span><span class="nx">SQSIngest</span><span class="p">,</span> <span class="s">&#34;Amazon SQS Ingest Queue&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+
+<span class="nf">Lambda</span><span class="p">(</span><span class="nx">LambdaTrigger</span><span class="p">,</span> <span class="s">&#34;AWS Lambda Trigger Function&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+
+<span class="nx">LambdaTrigger</span> <span class="o">-</span><span class="nx">up</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">IngestionApp</span>
+<span class="nx">IngestionApp</span> <span class="o">-</span><span class="nx">up</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">SQSIngest</span>
+<span class="nx">SQSIngest</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">ChunkingApp</span>
+<span class="nx">S3Staging</span> <span class="o">&lt;-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">EC2_Instance</span>
+
+<span class="err">&#39;</span><span class="nx">top</span> <span class="nx">right</span> <span class="nx">section</span>
+<span class="err">&#39;</span><span class="o">-------------------------------------------------------------</span>
+<span class="nx">together</span> <span class="p">{</span>
+<span class="nf">SQS</span><span class="p">(</span><span class="nx">SQSLargeFileQueue</span><span class="p">,</span> <span class="s">&#34;Amazon SQS Large File Queue&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">SQS</span><span class="p">(</span><span class="nx">SQSSmallFileQueue</span><span class="p">,</span> <span class="s">&#34;Amazon SQS Small File Queue&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">SQS</span><span class="p">(</span><span class="nx">SQSSingleFileQueue</span><span class="p">,</span> <span class="s">&#34;Amazon SQS Single File Queue&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+
+<span class="nf">EC2</span><span class="p">(</span><span class="nx">LargeFileChunkingAppEC2</span><span class="p">,</span> <span class="s">&#34;Large File Chunking App on EC2&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">Lambda</span><span class="p">(</span><span class="nx">LambdaSmallFileChunking</span><span class="p">,</span> <span class="s">&#34;Small File Chunking Lambda&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">Lambda</span><span class="p">(</span><span class="nx">ImageConversionLambdaFunction</span><span class="p">,</span> <span class="s">&#34;Image Conversion Lambda Function&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="err">&#39;</span><span class="nx">todo</span> <span class="nx">dashed</span> <span class="nx">line</span> <span class="nx">boundary</span>
+<span class="kn">package</span> <span class="nx">DLQ</span> <span class="p">{</span>
+<span class="nf">SQSQueue</span><span class="p">(</span><span class="nx">DLQ1</span><span class="p">,</span> <span class="s">&#34;DLQ&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">SQSQueue</span><span class="p">(</span><span class="nx">DLQ2</span><span class="p">,</span> <span class="s">&#34;DLQ&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">SQSQueue</span><span class="p">(</span><span class="nx">DLQ3</span><span class="p">,</span> <span class="s">&#34;DLQ&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="nx">ChunkingApp</span> <span class="o">-</span><span class="nx">right</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">SQSLargeFileQueue</span>
+<span class="nx">ChunkingApp</span> <span class="o">-</span><span class="nx">right</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">SQSSmallFileQueue</span>
+<span class="nx">ChunkingApp</span> <span class="o">-</span><span class="nx">right</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">SQSSingleFileQueue</span>
+
+<span class="nx">SQSLargeFileQueue</span> <span class="o">-</span><span class="nx">right</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">LargeFileChunkingAppEC2</span>
+<span class="nx">LargeFileChunkingAppEC2</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">SQSSmallFileQueue</span>
+<span class="nx">SQSSmallFileQueue</span> <span class="o">-</span><span class="nx">right</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">LambdaSmallFileChunking</span>
+<span class="nx">LambdaSmallFileChunking</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">SQSSingleFileQueue</span>
+<span class="nx">SQSSingleFileQueue</span> <span class="o">-</span><span class="nx">right</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">ImageConversionLambdaFunction</span>
+
+<span class="err">&#39;</span><span class="nx">todo</span> <span class="nx">dashed</span> <span class="nx">line</span>
+<span class="nx">SQSLargeFileQueue</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">DLQ1</span>
+<span class="nx">SQSSmallFileQueue</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">DLQ2</span>
+<span class="nx">SQSSingleFileQueue</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">DLQ3</span>
+
+
+<span class="err">&#39;</span><span class="nx">bottom</span> <span class="nx">right</span> <span class="nx">section</span>
+<span class="err">&#39;</span><span class="o">-------------------------------------------------------------</span>
+
+<span class="nf">SimpleStorageServiceS3</span><span class="p">(</span><span class="nx">S3Images</span><span class="p">,</span> <span class="s">&#34;Amazon S3 Images Bucket&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">EC2</span><span class="p">(</span><span class="nx">EC2DLQFailsafeApp</span><span class="p">,</span> <span class="s">&#34;DLQ Failsafe App on EC2&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">SQS</span><span class="p">(</span><span class="nx">SQSConvertedImageQueue</span><span class="p">,</span> <span class="s">&#34;Amazon SQS Converted Image Queue&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">Lambda</span><span class="p">(</span><span class="nx">LambdaInferenceInvocation</span><span class="p">,</span> <span class="s">&#34;Inference Invocation Lambda Function&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">Aurora</span><span class="p">(</span><span class="nx">Aurora</span><span class="p">,</span> <span class="s">&#34;Amazon Aurora&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">APIGateway</span><span class="p">(</span><span class="nx">AmazonAPIGateway</span><span class="p">,</span> <span class="s">&#34;Amazon API Gateway&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
+<span class="nf">SageMaker</span><span class="p">(</span><span class="nx">AmazonSageMaker</span><span class="p">,</span> <span class="s">&#34;Amazon SageMaker Endpoint&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
+
+<span class="nx">DLQ1</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">EC2DLQFailsafeApp</span>
+<span class="nx">DLQ2</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">EC2DLQFailsafeApp</span>
+<span class="nx">DLQ3</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">EC2DLQFailsafeApp</span>
+
+<span class="nx">EC2DLQFailsafeApp</span> <span class="o">-</span><span class="nx">right</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">S3Images</span>
+
+<span class="nx">ImageConversionLambdaFunction</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">S3Images</span>
+<span class="nx">S3Images</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">SQSConvertedImageQueue</span>
+<span class="nx">SQSConvertedImageQueue</span> <span class="o">-</span><span class="nx">left</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">LambdaInferenceInvocation</span>
+<span class="nx">LambdaInferenceInvocation</span> <span class="o">-</span><span class="nx">down</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">Aurora</span>
+<span class="nx">LambdaInferenceInvocation</span> <span class="o">&lt;-</span><span class="nx">left</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">AmazonAPIGateway</span>
+<span class="nx">AmazonAPIGateway</span> <span class="o">&lt;-</span><span class="nx">left</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">AmazonSageMaker</span>
+
+
+<span class="err">&#39;</span><span class="nx">bottom</span> <span class="nx">left</span> <span class="nx">section</span>
+<span class="err">&#39;</span><span class="o">-------------------------------------------------------------</span>
+
+<span class="nf">CloudWatch</span><span class="p">(</span><span class="nx">CloudWatch</span><span class="p">,</span> <span class="s">&#34;Amazon Cloudwatch&#34;</span><span class="p">,</span> <span class="s">&#34; &#34;</span><span class="p">)</span>
+<span class="nf">SNS</span><span class="p">(</span><span class="nx">SNS1</span><span class="p">,</span> <span class="s">&#34;Amazon SNS&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
+<span class="nf">SESEmail</span><span class="p">(</span><span class="nx">SESEmail</span><span class="p">,</span> <span class="s">&#34;Email Notification&#34;</span><span class="p">,</span> <span class="s">&#34;&#34;</span><span class="p">)</span>
+
+<span class="nx">CloudWatch</span> <span class="o">-</span><span class="nx">right</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">DLQ</span>
+<span class="nx">CloudWatch</span> <span class="o">-</span><span class="nx">left</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">SNS1</span>
+<span class="nx">SNS1</span> <span class="o">-</span><span class="nx">left</span><span class="o">-</span><span class="p">&gt;</span> <span class="nx">SESEmail</span>
+
+<span class="nx">footer</span> <span class="o">%</span><span class="nf">filename</span><span class="p">()</span> <span class="nx">rendered</span> <span class="nx">with</span> <span class="nx">PlantUML</span> <span class="nx">version</span> <span class="o">%</span><span class="nf">version</span><span class="p">()</span><span class="err">\</span><span class="nx">nThe</span> <span class="nx">Hitchhiker</span><span class="err">’</span><span class="nx">s</span> <span class="nx">Guide</span> <span class="nx">to</span> <span class="nx">PlantUML</span>
+<span class="err">@</span><span class="nx">enduml</span>
+</code></pre></div><p>( or see the source: ) - <a href="img/aaac/aws-demo-2.puml">source PUML</a>
+<img src="/images/aaac/aws_demo2_2.png" alt=""></p>
+<h3 id="workflow-with-plantuml">Workflow with PlantUML</h3>
+<p>Using PlantUML for diagrams is pretty straightforward. Assuming that you have installed <a href="https://plugins.jetbrains.com/plugin/7017-plantuml-integration">plugin</a> simply add the file with PUML extension to the project. It will be recognized and PyCharm/IntelliJ will show colored syntax with preview:</p>
+<p><img src="/images/aaac/screenshot-plugin.png" alt=""></p>
+<p>After creating the desired image, use the plugin save button to generate PNG version of the diagram and add it to the project - ideally same folder as the PUML file.</p>
+<p><img src="/images/aaac/plugin-save.png" alt=""></p>
+<p>Including the sources into documentation is very simple: you can either embedd the full source or provide link to it</p>
+<p><img src="/images/aaac/include-source.png" alt=""></p>
+<h3 id="pure-python-as-graph-dsl">Pure Python as graph DSL</h3>
+<p>Recently I have discovered different approach to specifying diagrams in a source code friendly manner. There is an open source project <a href="https://diagrams.mingrammer.com/">diagrams</a> - see also <a href="https://github.com/mingrammer/diagrams">github</a>. Good introduction to this approach is <a href="https://medium.com/swlh/infrastructure-diagrams-as-code-is-it-possible-b6bbae487f21">this blog</a>.</p>
+<p>It is elegant and beautiful.</p>
+<p>From this:
+<img src="https://diagrams.mingrammer.com/img/message_collecting_code.png" alt=""></p>
+<p>generates this</p>
+<p><img src="https://diagrams.mingrammer.com/img/message_collecting_diagram.png" alt=""></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-08-10
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2020 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/ecommerce/">eCommerce</a>
+          <a href="/tags/aws/">AWS</a>
+          <a href="/tags/iaac/">IaaC</a>
+          <a href="/tags/terraform/">Terraform</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/posts/2020-05-30-dockercon-2020/">
+            <span class="next-text nav-default">DockerCon 2020</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2020
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
