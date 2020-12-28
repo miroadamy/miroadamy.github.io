@@ -24,7 +24,7 @@ aws --output=json ec2 describe-instances | jq -r &amp;#39;.Reservations[].Instan
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2019-10-03-aws-inspection/" />
@@ -49,13 +49,14 @@ aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[
 <meta itemprop="name" content="AWS Inspection">
 <meta itemprop="description" content="Bunch of one-liners for AWS .. so that I find them faster next time
 aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId &#43; &#34; : &#34; &#43; .Placement.AvailabilityZone &#43; &#34; =&gt; &#34; &#43; .">
-<meta itemprop="datePublished" content="2019-10-03T11:22:48&#43;08:00" />
-<meta itemprop="dateModified" content="2019-10-03T11:22:48&#43;08:00" />
+<meta itemprop="datePublished" content="2019-10-03T11:22:48+08:00" />
+<meta itemprop="dateModified" content="2019-10-03T11:22:48+08:00" />
 <meta itemprop="wordCount" content="471">
 
 
 
-<meta itemprop="keywords" content="AWS,cloud,oneliners," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="AWS,cloud,oneliners," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="AWS Inspection"/>
 <meta name="twitter:description" content="Bunch of one-liners for AWS .. so that I find them faster next time
 aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId &#43; &#34; : &#34; &#43; .Placement.AvailabilityZone &#43; &#34; =&gt; &#34; &#43; ."/>

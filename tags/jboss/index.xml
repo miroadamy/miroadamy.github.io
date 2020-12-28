@@ -6,11 +6,7 @@
     <description>Recent content in jboss on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 11 Apr 2015 11:22:48 +0800</lastBuildDate>
-    
-	<atom:link href="https://miroadamy.com/tags/jboss/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 11 Apr 2015 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/jboss/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fixing the shutdown problem with JBoss</title>
       <link>https://miroadamy.com/posts/2015-04-11-jboss-shutdown/</link>

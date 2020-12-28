@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -44,9 +44,10 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-08-31T17:10:31+00:00" />
+<meta property="og:updated_time" content="2020-11-23T13:00:00+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
 <meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
 
@@ -113,6 +114,35 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-09-redo-graph/">Recreate txt base graph generator</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-09-09 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 318 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Graphviz This time using brew
+➜ DPS brew install graphviz ==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz ######################################################################## 100.0% ==&gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz 🍺 /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M ➜ DPS dot -V dot - graphviz version 2.38.0 (20140413.2041) ➜ DPS Schema Spy From http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/
+To /opt/diagram
+Run:
+ diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training
+ It produces HTML documentation for tables
+Size is about 51 M for a small ATG install
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-09-09-redo-graph/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2014-09-04-better-dynadmin/">Better dynadmin</a></h1>
@@ -212,33 +242,6 @@ Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remot
     </div>
     <div class="read-more">
       <a href="/posts/2014-08-28-elastic-tutorial/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-08-27-es1/">Elastic search and Kibana - getting started</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-08-27 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 598 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      #Installation:
-See 
-curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION Marvel is management plugin - console about cluster. Install:
-./bin/plugin -i elasticsearch/marvel/latest # disable data collection for local cluster echo &#39;marvel.agent.enabled: false&#39; &gt;&gt; ./config/elasticsearch.yml Test Startup log:
-➜ elasticsearch-1.3.2 bin/elasticsearch [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] version[1.3.2], pid[59610], build[dee175d/2014-08-13T14:29:30Z] [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] initializing ... [2014-08-27 11:17:08,338][INFO ][plugins ] [Joe Fixit] loaded [marvel], sites [marvel, kopf] [2014-08-27 11:17:10,905][INFO ][marvel.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-08-27-es1/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

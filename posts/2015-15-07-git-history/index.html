@@ -26,7 +26,7 @@ How it works Starting repo (training):
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2015-15-07-git-history/" />
@@ -55,13 +55,14 @@ How it works Starting repo (training):
 Works well for mostly linear history (aka Git used for diff-ing of the catalog feeds).
 How it works Starting repo (training):
 ➜ test git:(master) git last fe4e396 2015-07-13 | Fix for BuildInfo in TDD, database connectivity works (HEAD, origin/dynamovies/main, master) [Miro Adamy] f1b8636 2015-07-13 | Tables and database creation [Miro Adamy] d4c182b 2015-07-13 | Added template of dynamovies module - with empty UI.">
-<meta itemprop="datePublished" content="2015-07-14T11:22:48&#43;08:00" />
-<meta itemprop="dateModified" content="2015-07-14T11:22:48&#43;08:00" />
+<meta itemprop="datePublished" content="2015-07-14T11:22:48+08:00" />
+<meta itemprop="dateModified" content="2015-07-14T11:22:48+08:00" />
 <meta itemprop="wordCount" content="648">
 
 
 
-<meta itemprop="keywords" content="git," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="git," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to truncate Git history"/>
 <meta name="twitter:description" content="The general idea #!/bin/bash # Parameter: tag or sha1 git checkout --orphan temp $1 git commit -m &#34;Truncated history&#34; git rebase --onto temp $1 master git branch -D temp Requires Git 1.8&#43;
 Works well for mostly linear history (aka Git used for diff-ing of the catalog feeds).

@@ -6,11 +6,7 @@
     <description>Recent content in linux on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 May 2016 11:22:48 +0800</lastBuildDate>
-    
-	<atom:link href="https://miroadamy.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 30 May 2016 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Learning resources for Linux and Command line</title>
       <link>https://miroadamy.com/posts/2016-05-30-linux-resources/</link>

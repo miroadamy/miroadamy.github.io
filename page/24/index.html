@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -44,9 +44,10 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-08-31T17:10:31+00:00" />
+<meta property="og:updated_time" content="2020-11-23T13:00:00+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
 <meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
 
@@ -113,6 +114,29 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-04-09-bash/">Pattern for test sourcing the script</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-04-09 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 60 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      # Test if it is sourced or not if [[ $0 != .*bash ]]; then echo Please source it: . $0 exit 1 fi res=`gradle --version &gt;/dev/null 2&gt;&amp;1; echo $? ` if [[ $res == &#34;0&#34; ]]; then echo Have gradle: `which gradle` gradle --version else export GRADLE_HOME=~/opt/gradle export PATH=$PATH:$GRADLE_HOME/bin echo No Gradle, adding - `which gradle` gradle --version fi 
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-04-09-bash/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2013-03-10-atg-repository/">ATG Repository item linking and versioned repos</a></h1>
@@ -210,31 +234,6 @@ For more on that plugin see:
     </div>
     <div class="read-more">
       <a href="/posts/2013-02-23-perf-quicklook-lion/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-01-08-gvm/">GVM</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-01-08 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 172 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Installed GVM from:
-http://gvmtool.net
-~ $ curl -s get.gvmtool.net | bash Thanks for using _____/\\\\\\\\\\\\__/\\\________/\\\__/\\\\____________/\\\\_ ___/\\\//////////__\/\\\_______\/\\\_\/\\\\\\________/\\\\\\_ __/\\\_____________\//\\\______/\\\__\/\\\//\\\____/\\\//\\\_ _\/\\\____/\\\\\\\__\//\\\____/\\\___\/\\\\///\\\/\\\/_\/\\\_ _\/\\\___\/////\\\___\//\\\__/\\\____\/\\\__\///\\\/___\/\\\_ _\/\\\_______\/\\\____\//\\\/\\\_____\/\\\____\///_____\/\\\_ _\/\\\_______\/\\\_____\//\\\\\______\/\\\_____________\/\\\_ _\//\\\\\\\\\\\\/_______\//\\\_______\/\\\_____________\/\\\_ __\////////////__________\///________\///______________\///__ Will now attempt installing... Looking for a previous installation of GVM... Looking for JAVA_HOME... Validating JAVA_HOME... Looking for unzip... Looking for curl... Installing gvm scripts... Create distribution directories... Create candidate directories... Download script archive... Extract script archive... Install scripts... Make init script executable... Prime config file... Attempt update of bash profiles.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-01-08-gvm/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

@@ -27,7 +27,7 @@ Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2016-09-05-git-update-all-local-branches/" />
@@ -58,13 +58,14 @@ In DevOps I am following many Git repos and need to keep up to date for all loca
 git ffwd-update command Source: http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches
 Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
 #!/bin/bash  main() { REMOTES=&#34;$@&#34;; if [ -z &#34;$REMOTES&#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &#34;$REMOTES&#34; | xargs -n1 echo) CLB=$(git branch -l|awk &#39;/^\*/{print $2}&#39;); echo &#34;$REMOTES&#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \  | awk &#39;/merges with remote/{print $5&#34; &#34;$1}&#39; \  | while read line; do RB=$(echo &#34;$line&#34;|cut -f1 -d&#34; &#34;); ARB=&#34;refs/remotes/$REMOTE/$RB&#34;; LB=$(echo &#34;$line&#34;|cut -f2 -d&#34; &#34;); ALB=&#34;refs/heads/$LB&#34;; NBEHIND=$(( $(git rev-list --count $ALB.">
-<meta itemprop="datePublished" content="2016-09-05T11:22:48&#43;08:00" />
-<meta itemprop="dateModified" content="2016-09-05T11:22:48&#43;08:00" />
+<meta itemprop="datePublished" content="2016-09-05T11:22:48+08:00" />
+<meta itemprop="dateModified" content="2016-09-05T11:22:48+08:00" />
 <meta itemprop="wordCount" content="682">
 
 
 
-<meta itemprop="keywords" content="git," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="git," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Update all local branches in Git repo"/>
 <meta name="twitter:description" content="Update all local branches in Git repo Issue: The git pull updates just one current branch.
 In DevOps I am following many Git repos and need to keep up to date for all local branches.

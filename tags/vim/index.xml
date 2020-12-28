@@ -6,11 +6,7 @@
     <description>Recent content in vim on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 31 Dec 2013 00:57:35 -0500</lastBuildDate>
-    
-	<atom:link href="https://miroadamy.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 31 Dec 2013 00:57:35 -0500</lastBuildDate><atom:link href="https://miroadamy.com/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Binding DashDoc with editors and Eclipse</title>
       <link>https://miroadamy.com/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/</link>
@@ -39,7 +35,7 @@ Eclipse There is opensource plugin for it at https://github.</description>
       <pubDate>Mon, 09 Apr 2012 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2012-04-09-macvim-git/</guid>
-      <description>Add this to .bashrc  export GIT_EDITOR=&amp;rsquo;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &#39;
+      <description>Add this to .bashrc  export GIT_EDITOR=&#39;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &#39;
  The key is -f, without it git will abort because of empty commit message.</description>
     </item>
     

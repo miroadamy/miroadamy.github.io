@@ -6,10 +6,51 @@
     <description>Recent content in Tags on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Aug 2020 13:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2020 13:00:00 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Asciidoc</title>
+      <link>https://miroadamy.com/tags/asciidoc/</link>
+      <pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/asciidoc/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown</title>
+      <link>https://miroadamy.com/tags/markdown/</link>
+      <pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/markdown/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>Markup</title>
+      <link>https://miroadamy.com/tags/markup/</link>
+      <pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/markup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mkdocs</title>
+      <link>https://miroadamy.com/tags/mkdocs/</link>
+      <pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/mkdocs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Restructuredtext</title>
+      <link>https://miroadamy.com/tags/restructuredtext/</link>
+      <pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/restructuredtext/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>aws</title>
@@ -192,15 +233,6 @@
     </item>
     
     <item>
-      <title>quote</title>
-      <link>https://miroadamy.com/tags/quote/</link>
-      <pubDate>Tue, 26 Nov 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/quote/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>quotes</title>
       <link>https://miroadamy.com/tags/quotes/</link>
       <pubDate>Tue, 26 Nov 2019 11:22:48 +0800</pubDate>
@@ -332,15 +364,6 @@
       <pubDate>Thu, 29 Aug 2019 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/bratislava/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>slovak</title>
-      <link>https://miroadamy.com/tags/slovak/</link>
-      <pubDate>Thu, 29 Aug 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/slovak/</guid>
       <description></description>
     </item>
     
@@ -480,15 +503,6 @@
     </item>
     
     <item>
-      <title>event</title>
-      <link>https://miroadamy.com/tags/event/</link>
-      <pubDate>Thu, 06 Sep 2018 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/event/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>events</title>
       <link>https://miroadamy.com/tags/events/</link>
       <pubDate>Thu, 06 Sep 2018 11:22:48 +0800</pubDate>
@@ -507,20 +521,20 @@
     </item>
     
     <item>
-      <title>czech</title>
-      <link>https://miroadamy.com/tags/czech/</link>
-      <pubDate>Thu, 12 Apr 2018 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/czech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>czechoslovakia</title>
       <link>https://miroadamy.com/tags/czechoslovakia/</link>
       <pubDate>Thu, 12 Apr 2018 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/czechoslovakia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>czech</title>
+      <link>https://miroadamy.com/tags/czech/</link>
+      <pubDate>Tue, 06 Mar 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/czech/</guid>
       <description></description>
     </item>
     
@@ -539,6 +553,15 @@
       <pubDate>Tue, 06 Mar 2018 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/german/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slovak</title>
+      <link>https://miroadamy.com/tags/slovak/</link>
+      <pubDate>Tue, 06 Mar 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/slovak/</guid>
       <description></description>
     </item>
     
@@ -804,20 +827,20 @@
     </item>
     
     <item>
-      <title>editor</title>
-      <link>https://miroadamy.com/tags/editor/</link>
-      <pubDate>Wed, 25 Sep 2013 16:12:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/editor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>editors</title>
       <link>https://miroadamy.com/tags/editors/</link>
       <pubDate>Wed, 25 Sep 2013 16:12:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/editors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>editor</title>
+      <link>https://miroadamy.com/tags/editor/</link>
+      <pubDate>Sun, 03 Mar 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/tags/editor/</guid>
       <description></description>
     </item>
     
@@ -867,15 +890,6 @@
     </item>
     
     <item>
-      <title>book</title>
-      <link>https://miroadamy.com/tags/book/</link>
-      <pubDate>Wed, 20 May 2009 22:24:39 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/tags/book/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>books</title>
       <link>https://miroadamy.com/tags/books/</link>
       <pubDate>Wed, 20 May 2009 22:24:39 -0400</pubDate>
@@ -899,6 +913,15 @@
       <pubDate>Tue, 02 Sep 2008 23:33:30 -0400</pubDate>
       
       <guid>https://miroadamy.com/tags/objectivec/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>event</title>
+      <link>https://miroadamy.com/tags/event/</link>
+      <pubDate>Thu, 17 Apr 2008 09:50:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/tags/event/</guid>
       <description></description>
     </item>
     
@@ -984,11 +1007,29 @@
     </item>
     
     <item>
+      <title>quote</title>
+      <link>https://miroadamy.com/tags/quote/</link>
+      <pubDate>Sat, 10 Mar 2007 20:07:05 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/quote/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>quality</title>
       <link>https://miroadamy.com/tags/quality/</link>
       <pubDate>Wed, 21 Feb 2007 23:57:37 -0500</pubDate>
       
       <guid>https://miroadamy.com/tags/quality/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>book</title>
+      <link>https://miroadamy.com/tags/book/</link>
+      <pubDate>Sun, 18 Feb 2007 19:33:36 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/tags/book/</guid>
       <description></description>
     </item>
     

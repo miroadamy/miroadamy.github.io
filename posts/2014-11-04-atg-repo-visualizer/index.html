@@ -24,7 +24,7 @@ if (args.size() == 0) { println &amp;#34;Usage: groovy extractItems.groovy XMLFI
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-11-04-atg-repo-visualizer/" />
@@ -49,13 +49,14 @@ if (args.size() == 0) { println &#34;Usage: groovy extractItems.groovy XMLFILE-I
 <meta itemprop="name" content="ATG Repository structure visualizer">
 <meta itemprop="description" content="The groovy script does parse the XML files (scraped from dyn-admin, or output of the XML combine) and produces file in the syntax of Plant UML - http://plantuml.sourceforge.net
 if (args.size() == 0) { println &#34;Usage: groovy extractItems.groovy XMLFILE-IN-GSA-FORMAT.xml&#34; System.exit(1) } def gsaFile = new XmlSlurper().parseText(new File(args[0]).text) def desc = gsaFile.&#39;item-descriptor&#39; def processItemDescriptor(myDesc) { def info = [:] def tables = [] def props = [:] def descriptors = [:] for (table in myDesc.">
-<meta itemprop="datePublished" content="2014-11-04T11:22:48&#43;08:00" />
-<meta itemprop="dateModified" content="2014-11-04T11:22:48&#43;08:00" />
+<meta itemprop="datePublished" content="2014-11-04T11:22:48+08:00" />
+<meta itemprop="dateModified" content="2014-11-04T11:22:48+08:00" />
 <meta itemprop="wordCount" content="310">
 
 
 
-<meta itemprop="keywords" content="atg,groovy,plantuml," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="atg,groovy,plantuml," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ATG Repository structure visualizer"/>
 <meta name="twitter:description" content="The groovy script does parse the XML files (scraped from dyn-admin, or output of the XML combine) and produces file in the syntax of Plant UML - http://plantuml.sourceforge.net
 if (args.size() == 0) { println &#34;Usage: groovy extractItems.groovy XMLFILE-IN-GSA-FORMAT.xml&#34; System.exit(1) } def gsaFile = new XmlSlurper().parseText(new File(args[0]).text) def desc = gsaFile.&#39;item-descriptor&#39; def processItemDescriptor(myDesc) { def info = [:] def tables = [] def props = [:] def descriptors = [:] for (table in myDesc."/>

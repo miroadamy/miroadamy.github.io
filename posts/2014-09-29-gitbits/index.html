@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-09-29-gitbits/" />
@@ -46,13 +46,14 @@
 <meta property="article:modified_time" content="2014-09-29T11:22:48+08:00" />
 <meta itemprop="name" content="Gitbits - Get committer lists">
 <meta itemprop="description" content="With emails (Unix only) ➜ dev1 git:(miro-ui) ✗ git log --raw | grep &#34;^Author: &#34; | sort | uniq -c 9 Author: Brendan Smith &lt;Brendan.Smith@thinkwrap.com&gt; 22 Author: Kai Cheng &lt;kai.cheng@thinkwrap.com&gt; 97 Author: Miro Adamy &lt;miro.adamy@thinkwrap.com&gt; 49 Author: Training VM &lt;training-vm@thinkwrap.com&gt; 24 Author: Your Name &lt;your.name@thinkwrap.com&gt; Pure git ➜ dev1 git:(miro-ui) ✗ git shortlog -sen 97 Miro Adamy &lt;miro.adamy@thinkwrap.com&gt; 49 Training VM &lt;training-vm@thinkwrap.com&gt; 24 Your Name &lt;your.name@thinkwrap.com&gt; 22 Kai Cheng &lt;kai.cheng@thinkwrap.com&gt; 9 Brendan Smith &lt;Brendan.">
-<meta itemprop="datePublished" content="2014-09-29T11:22:48&#43;08:00" />
-<meta itemprop="dateModified" content="2014-09-29T11:22:48&#43;08:00" />
+<meta itemprop="datePublished" content="2014-09-29T11:22:48+08:00" />
+<meta itemprop="dateModified" content="2014-09-29T11:22:48+08:00" />
 <meta itemprop="wordCount" content="197">
 
 
 
-<meta itemprop="keywords" content="git," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="git," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Gitbits - Get committer lists"/>
 <meta name="twitter:description" content="With emails (Unix only) ➜ dev1 git:(miro-ui) ✗ git log --raw | grep &#34;^Author: &#34; | sort | uniq -c 9 Author: Brendan Smith &lt;Brendan.Smith@thinkwrap.com&gt; 22 Author: Kai Cheng &lt;kai.cheng@thinkwrap.com&gt; 97 Author: Miro Adamy &lt;miro.adamy@thinkwrap.com&gt; 49 Author: Training VM &lt;training-vm@thinkwrap.com&gt; 24 Author: Your Name &lt;your.name@thinkwrap.com&gt; Pure git ➜ dev1 git:(miro-ui) ✗ git shortlog -sen 97 Miro Adamy &lt;miro.adamy@thinkwrap.com&gt; 49 Training VM &lt;training-vm@thinkwrap.com&gt; 24 Your Name &lt;your.name@thinkwrap.com&gt; 22 Kai Cheng &lt;kai.cheng@thinkwrap.com&gt; 9 Brendan Smith &lt;Brendan."/>
 
@@ -174,7 +175,7 @@
 ...
 </code></pre></div><p>Generating the mailman start</p>
 <blockquote>
-<p>➜  pal git:(master) ✗ git shortlog -se | awk -F&rsquo;\t&rsquo; &lsquo;{print $2,$3,$2,$3}&rsquo; | sort &gt; .mailmap</p>
+<p>➜  pal git:(master) ✗ git shortlog -se | awk -F'\t' &lsquo;{print $2,$3,$2,$3}&rsquo; | sort &gt; .mailmap</p>
 </blockquote>
 <h2 id="after-mailmap">After mailmap</h2>
 <p>Output with .mailmap file</p>

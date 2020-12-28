@@ -27,7 +27,7 @@ Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPE
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-03-11-sshf-in-vm/" />
@@ -58,13 +58,14 @@ Get the &lsquo;epel&rsquo; repos wget http://dl.fedoraproject.org/pub/epel/6/x86
 $ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo It if good idea to enable the remi by default
 sudo vim /etc/yum.repos.d/remi.repo
 Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap Using Mount the host directory">
-<meta itemprop="datePublished" content="2014-03-11T11:22:48&#43;08:00" />
-<meta itemprop="dateModified" content="2014-03-11T11:22:48&#43;08:00" />
+<meta itemprop="datePublished" content="2014-03-11T11:22:48+08:00" />
+<meta itemprop="dateModified" content="2014-03-11T11:22:48+08:00" />
 <meta itemprop="wordCount" content="78">
 
 
 
-<meta itemprop="keywords" content="linux,virtualbox," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="linux,virtualbox," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Installation of sshfs in the new VM"/>
 <meta name="twitter:description" content="Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
 Get the &lsquo;epel&rsquo; repos wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm Validate

@@ -6,10 +6,15 @@
     <description>Recent content in Posts on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Aug 2020 13:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://miroadamy.com/posts/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 23 Nov 2020 13:00:00 +0800</lastBuildDate><atom:link href="https://miroadamy.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Documenting multi-repository projects</title>
+      <link>https://miroadamy.com/posts/2020-11-23-documentation-multi-repo/</link>
+      <pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2020-11-23-documentation-multi-repo/</guid>
+      <description>This blog post is a de-powerpointized version of a brownbag session in Pivotree. The goal was to increase awareness of tools and techniques for information / knowledge capture in the projects, specifically focusing on producing quality documentation so that everybody in project can access it and contribute to it, not only developers. We wanted to look at the tools that would allow engineers keep using their tools of trade (without impact on developer’s productivity) and at the same time make the information available without duplication of work to increase re-findability of information.</description>
+    </item>
     
     <item>
       <title>Reference Architecture as a Code</title>
@@ -597,7 +602,7 @@ Everybody who clones the repository - every developer has access to this informa
       <pubDate>Wed, 10 May 2017 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2017-05-10-remote-svn/</guid>
-      <description>This is based on J.&amp;lsquo;s&amp;rsquo; question in Slack:
+      <description>This is based on J.&amp;rsquo;s&#39; question in Slack:
  Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
  The setup (as I understand it):
  on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly  Options Use git-svn bridge Git client allows to &amp;ldquo;pretend&amp;rdquo; it is SVN and pull/push against remote SVN repo</description>
@@ -1451,7 +1456,7 @@ This article is useful:
       <pubDate>Mon, 09 Apr 2012 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2012-04-09-macvim-git/</guid>
-      <description>Add this to .bashrc  export GIT_EDITOR=&amp;rsquo;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &#39;
+      <description>Add this to .bashrc  export GIT_EDITOR=&#39;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &#39;
  The key is -f, without it git will abort because of empty commit message.</description>
     </item>
     
@@ -2837,9 +2842,9 @@ and the view.properties was:
 [code language=&#39;xml&#39;]
 parent-view.(class)=org.springframework.web.servlet.view.JstlView
 parent-view.(abstract)=true
-about.url=/WEB-INF/jsp/about.jsp
-form.url=/WEB-INF/jsp/form.jsp
-list.url=/WEB-INF/jsp/list.jsp
+about.url=https://miroadamy.com/WEB-INF/jsp/about.jsp
+form.url=https://miroadamy.com/WEB-INF/jsp/form.jsp
+list.url=https://miroadamy.com/WEB-INF/jsp/list.jsp
 [/code]
 It kept givin exception saying that /WEB-INF/jsp/list.jsp does not exist. Which it did. I tried couple of things, no result.</description>
     </item>

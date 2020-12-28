@@ -6,11 +6,7 @@
     <description>Recent content in commandline on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 24 Oct 2018 11:22:48 +0800</lastBuildDate>
-    
-	<atom:link href="https://miroadamy.com/tags/commandline/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 24 Oct 2018 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/commandline/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Useful tool for Dockerhub</title>
       <link>https://miroadamy.com/posts/2018-10-24-dockerhub-tool/</link>

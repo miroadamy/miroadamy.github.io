@@ -6,11 +6,7 @@
     <description>Recent content in hacking on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 11 Dec 2019 21:22:48 +0800</lastBuildDate>
-    
-	<atom:link href="https://miroadamy.com/tags/hacking/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 11 Dec 2019 21:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/hacking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>On harvesting credit card numbers and passwords</title>
       <link>https://miroadamy.com/posts/2019-12-11-hackernoon/</link>

@@ -26,7 +26,7 @@ You can however:
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-09-22-gitbit/" />
@@ -55,13 +55,14 @@ You can however:
  Answer You cannot. Merge operation creates new commit that has 2 or more parents and will always join full histories of the branches.
 You can however:
  replicate all changes done in single commit to different branch - this is &ldquo;cherry pick&rdquo; take state of single file from different branch into current branch  How to replicate all changes done in single commit to different branch - &ldquo;cherry pick&rdquo; Say you have latest commit in master that contains change to two files you need.">
-<meta itemprop="datePublished" content="2014-09-22T11:22:48&#43;08:00" />
-<meta itemprop="dateModified" content="2014-09-22T11:22:48&#43;08:00" />
+<meta itemprop="datePublished" content="2014-09-22T11:22:48+08:00" />
+<meta itemprop="dateModified" content="2014-09-22T11:22:48+08:00" />
 <meta itemprop="wordCount" content="497">
 
 
 
-<meta itemprop="keywords" content="git," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="git," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Git bit of the day"/>
 <meta name="twitter:description" content="Question from email:  how do I merge 1 file from master -&gt; LIVE
  Answer You cannot. Merge operation creates new commit that has 2 or more parents and will always join full histories of the branches.
@@ -230,7 +231,7 @@ git status =&gt; should show no changes</p>
 <li>Commit</li>
 </ol>
 <blockquote>
-<p>git commit -m &ldquo;Copied file from master&rsquo;</p>
+<p>git commit -m &ldquo;Copied file from master'</p>
 </blockquote>
 <h2 id="difference-between-cherry-pick-and-the-single-file-transfer">Difference between cherry-pick and the single file transfer</h2>
 <p>The end effect of cherry pick for commit with single file and the second way is the same: the file in LIVE has same content as in master.</p>

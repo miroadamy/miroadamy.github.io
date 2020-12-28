@@ -6,10 +6,33 @@
     <description>Recent content in Categories on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Aug 2020 13:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 23 Nov 2020 13:00:00 +0800</lastBuildDate><atom:link href="https://miroadamy.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Best Practices</title>
+      <link>https://miroadamy.com/categories/best-practices/</link>
+      <pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/best-practices/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://miroadamy.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>devops</title>
+      <link>https://miroadamy.com/categories/devops/</link>
+      <pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/devops/</guid>
+      <description></description>
+    </item>
     
+    <item>
+      <title>Documentation</title>
+      <link>https://miroadamy.com/categories/documentation/</link>
+      <pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/documentation/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Architecture</title>
@@ -17,15 +40,6 @@
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/architecture/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>devops</title>
-      <link>https://miroadamy.com/categories/devops/</link>
-      <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/categories/devops/</guid>
       <description></description>
     </item>
     
@@ -44,15 +58,6 @@
       <pubDate>Tue, 31 Mar 2020 11:24:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/startup-life/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>life</title>
-      <link>https://miroadamy.com/categories/life/</link>
-      <pubDate>Tue, 17 Dec 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/categories/life/</guid>
       <description></description>
     </item>
     
@@ -80,6 +85,15 @@
       <pubDate>Tue, 26 Nov 2019 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/general/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>life</title>
+      <link>https://miroadamy.com/categories/life/</link>
+      <pubDate>Sun, 24 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/life/</guid>
       <description></description>
     </item>
     

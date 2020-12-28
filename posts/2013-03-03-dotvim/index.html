@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2013-03-03-dotvim/" />
@@ -46,13 +46,14 @@
 <meta property="article:modified_time" content="2013-03-03T11:22:48+08:00" />
 <meta itemprop="name" content="Dot-vimming new machine">
 <meta itemprop="description" content="New MacMini MacMini:~ mediaserver$ mkdir .vim MacMini:~ mediaserver$ git clone git@github.com:radegast/dotvim.git .vim Cloning into &#39;.vim&#39;... The authenticity of host &#39;github.com (207.97.227.239)&#39; can&#39;t be established. RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48. Are you sure you want to continue connecting (yes/no)? yes Warning: Permanently added &#39;github.com,207.97.227.239&#39; (RSA) to the list of known hosts. remote: Counting objects: 367, done. remote: Compressing objects: 100% (309/309), done. remote: Total 367 (delta 58), reused 335 (delta 26) Receiving objects: 100% (367/367), 512.">
-<meta itemprop="datePublished" content="2013-03-03T11:22:48&#43;08:00" />
-<meta itemprop="dateModified" content="2013-03-03T11:22:48&#43;08:00" />
+<meta itemprop="datePublished" content="2013-03-03T11:22:48+08:00" />
+<meta itemprop="dateModified" content="2013-03-03T11:22:48+08:00" />
 <meta itemprop="wordCount" content="696">
 
 
 
-<meta itemprop="keywords" content="git,vim,editor,commandline," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="git,vim,editor,commandline," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dot-vimming new machine"/>
 <meta name="twitter:description" content="New MacMini MacMini:~ mediaserver$ mkdir .vim MacMini:~ mediaserver$ git clone git@github.com:radegast/dotvim.git .vim Cloning into &#39;.vim&#39;... The authenticity of host &#39;github.com (207.97.227.239)&#39; can&#39;t be established. RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48. Are you sure you want to continue connecting (yes/no)? yes Warning: Permanently added &#39;github.com,207.97.227.239&#39; (RSA) to the list of known hosts. remote: Counting objects: 367, done. remote: Compressing objects: 100% (309/309), done. remote: Total 367 (delta 58), reused 335 (delta 26) Receiving objects: 100% (367/367), 512."/>
 
@@ -214,12 +215,12 @@ Submodule path &#39;bundle/vim-unimpaired&#39;: checked out &#39;440629adb4051e5
 <p>It is packed in the tbz file. Move it to /usr/bin</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">MacMini:.vim mediaserver$ cat ~/Downloads/MacVim-snapshot-66/mvim
 <span class="c1">#!/bin/sh</span>
-#
+<span class="c1">#</span>
 <span class="c1"># This shell script passes all its arguments to the binary inside the</span>
 <span class="c1"># MacVim.app application bundle.  If you make links to this script as view,</span>
 <span class="c1"># gvim, etc., then it will peek at the name used to call it and set options</span>
 <span class="c1"># appropriately.</span>
-#
+<span class="c1">#</span>
 <span class="c1"># Based on a script by Wout Mertens and suggestions from Laurent Bihanic.  This</span>
 <span class="c1"># version is the fault of Benji Fisher, 16 May 2005 (with modifications by Nico</span>
 <span class="c1"># Weber and Bjorn Winckler, Aug 13 2007).</span>

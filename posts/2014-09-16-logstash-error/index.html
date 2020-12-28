@@ -27,7 +27,7 @@ You _should_ be able to do exactly what you listed at the bottom of your email, 
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-09-16-logstash-error/" />
@@ -58,13 +58,14 @@ Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE
 What should work:
 grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] } What needs to be done instead
 You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches.">
-<meta itemprop="datePublished" content="2014-09-16T11:22:48&#43;08:00" />
-<meta itemprop="dateModified" content="2014-09-16T11:22:48&#43;08:00" />
+<meta itemprop="datePublished" content="2014-09-16T11:22:48+08:00" />
+<meta itemprop="dateModified" content="2014-09-16T11:22:48+08:00" />
 <meta itemprop="wordCount" content="288">
 
 
 
-<meta itemprop="keywords" content="logs,logstash,elk," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="logs,logstash,elk," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="logstash - known error"/>
 <meta name="twitter:description" content="I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
 Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE

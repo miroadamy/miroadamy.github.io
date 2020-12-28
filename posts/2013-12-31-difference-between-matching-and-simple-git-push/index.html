@@ -24,7 +24,7 @@ Git 2.0 from &amp;#39;matching&amp;#39; to &amp;#39;simple&amp;#39;. To squelch 
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2013-12-31-difference-between-matching-and-simple-git-push/" />
@@ -55,7 +55,8 @@ Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. To squelch this message and
 
 
 
-<meta itemprop="keywords" content="git," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="git," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Difference between matching and simple Git push"/>
 <meta name="twitter:description" content="I started to see this message in some of my Git environments
 Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. To squelch this message and maintain the current behavior after the default changes, use: git config --global push.default matching To squelch this message and adopt the new behavior now, use: git config --global push.default simple This is collection of information gathered from Stackoverflow, Git docs and various internet sources. Putting it together so that I do not have to google it again."/>
@@ -186,7 +187,7 @@ Putting it together so that I do not have to google it again.</p>
 </ul>
 <p>In reality, there&rsquo;s no reason to assume a local branch&rsquo;s upstream tracking branch has the same name as the local branch itself.</p>
 <p>For example, if you work in multiple repositories or across many shared developer remotes, you often end up tracking different forks of the same branch, such as allen-master or susan-master, both of which track the master branch in Allen and Susan&rsquo;s repos, respectively. In this case, current would be the incorrect setting, because those branch names don&rsquo;t exist on their remotes. upstream, however, would work just fine.</p>
-<p>A more practical example might be tracking both a development and production repository. Your workflow might use a different mainline branch for each, but that might get confusing. Suppose you were a code integrator and wanted to track both repositories&rsquo; master branches separately.</p>
+<p>A more practical example might be tracking both a development and production repository. Your workflow might use a different mainline branch for each, but that might get confusing. Suppose you were a code integrator and wanted to track both repositories' master branches separately.</p>
 <div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git checkout -b production --track production/master
 git checkout -b development --track development/master
 </code></pre></div><p>Now you&rsquo;ve got two branches that track their respective repositories, neither of which use the masternaming convention at all. There&rsquo;s little confusion about the branch names: They explicitly describe what they track. Nevertheless, push.default = current wouldn&rsquo;t make any sense as neither remote contains a development or production branch.</p>

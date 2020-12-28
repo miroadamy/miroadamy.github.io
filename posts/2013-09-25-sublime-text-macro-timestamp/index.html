@@ -25,7 +25,7 @@ Installation: Add this to Keybindings / User
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2013-09-25-sublime-text-macro-timestamp/" />
@@ -52,13 +52,14 @@ Installation: Add this to Keybindings / User
 <meta itemprop="description" content="Sublime text macro to insert timestamp platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $ Documentation - see
 Installation: Add this to Keybindings / User
 ![](/images/2013-09-23_8.02.19 PM.png)">
-<meta itemprop="datePublished" content="2013-09-25T16:12:48&#43;08:00" />
-<meta itemprop="dateModified" content="2013-09-25T16:12:48&#43;08:00" />
+<meta itemprop="datePublished" content="2013-09-25T16:12:48+08:00" />
+<meta itemprop="dateModified" content="2013-09-25T16:12:48+08:00" />
 <meta itemprop="wordCount" content="62">
 
 
 
-<meta itemprop="keywords" content="osx,editors," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="osx,editors," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sublime text macro to insert timestamp"/>
 <meta name="twitter:description" content="Sublime text macro to insert timestamp platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $ Documentation - see
 Installation: Add this to Keybindings / User

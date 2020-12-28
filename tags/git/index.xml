@@ -6,11 +6,7 @@
     <description>Recent content in git on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 12 May 2020 22:34:38 +0800</lastBuildDate>
-    
-	<atom:link href="https://miroadamy.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 12 May 2020 22:34:38 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using SSH keys with multiple Bitbucket accounts</title>
       <link>https://miroadamy.com/posts/2020-05-12-bitbucket-keys/</link>
@@ -60,7 +56,7 @@ Everybody who clones the repository - every developer has access to this informa
       <pubDate>Wed, 10 May 2017 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2017-05-10-remote-svn/</guid>
-      <description>This is based on J.&amp;lsquo;s&amp;rsquo; question in Slack:
+      <description>This is based on J.&amp;rsquo;s&#39; question in Slack:
  Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
  The setup (as I understand it):
  on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly  Options Use git-svn bridge Git client allows to &amp;ldquo;pretend&amp;rdquo; it is SVN and pull/push against remote SVN repo</description>
@@ -393,7 +389,7 @@ This article is useful:
       <pubDate>Mon, 09 Apr 2012 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2012-04-09-macvim-git/</guid>
-      <description>Add this to .bashrc  export GIT_EDITOR=&amp;rsquo;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &#39;
+      <description>Add this to .bashrc  export GIT_EDITOR=&#39;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &#39;
  The key is -f, without it git will abort because of empty commit message.</description>
     </item>
     

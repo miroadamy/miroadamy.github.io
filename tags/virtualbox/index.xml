@@ -6,11 +6,7 @@
     <description>Recent content in virtualbox on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 23 Sep 2014 11:22:48 +0800</lastBuildDate>
-    
-	<atom:link href="https://miroadamy.com/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 23 Sep 2014 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to access shared folder in Linux guest in VirtualBox</title>
       <link>https://miroadamy.com/posts/2014-09-23-shared-folder/</link>

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -44,9 +44,10 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-08-31T17:10:31+00:00" />
+<meta property="og:updated_time" content="2020-11-23T13:00:00+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
 <meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
 
@@ -115,6 +116,31 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2017-05-15-sensitive-git/">Storing sensitive information in Git</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-05-17 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 1000 words </span>
+        <span class="more-meta"> 5 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      The purpose of this is to evaluate options and suggest possible approaches for handling the sensitive information in Git repositories such as database credentials, API credentials, passwords, keys, certificates etc. Joel asked this question a few weeks ago - this is part of Milos&rsquo;s security awareness program.
+The issue Git repos store in cleartext all credentials, that may also be including PROD credentials.
+Everybody who clones the repository - every developer has access to this information that should have been shared only with the support team that has legitimate access to production.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2017-05-15-sensitive-git/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2017-05-10-remote-svn/">Managing code in remote SVN repo</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2017-05-10 </span>
@@ -128,7 +154,7 @@
   
   <div class="post-content">
     <div class="post-summary">
-      This is based on J.&lsquo;s&rsquo; question in Slack:
+      This is based on J.&rsquo;s' question in Slack:
  Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
  The setup (as I understand it):
  on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly  Options Use git-svn bridge Git client allows to &ldquo;pretend&rdquo; it is SVN and pull/push against remote SVN repo
@@ -211,31 +237,6 @@ Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
     </div>
     <div class="read-more">
       <a href="/posts/2016-05-30-linux-resources/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-05-17-docker-osx/">Native OS-X Docker (Beta) - not quite there yet</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-05-17 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 639 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I was intrigued by convenience of using Docker natively on Mac, without dealing with differences localhost != dockerhost, so I subscribed for Beta and installed it.
-Good news 1 It can coexist with previous Docker installation (mostly) - see the note at the end. As long as you do not try to run native Docker and docker-machine at the same time, things coexist.
-Good news 2 It works for several images I tried.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-05-17-docker-osx/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

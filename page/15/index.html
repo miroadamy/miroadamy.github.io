@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -44,9 +44,10 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-08-31T17:10:31+00:00" />
+<meta property="og:updated_time" content="2020-11-23T13:00:00+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy"><meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Miro&#39;s World"/>
 <meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
 
@@ -113,6 +114,33 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-15-acc-in-vm/">Starting ACC in VM</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-07-15 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 177 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      The ACC is installed in default location: ~/ATG/ACC11.1
+This does not work OOTB. You must set 2 additional ENV properties
+cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp; Starting from dyn/admin The start in separate VM works OK.
+Start in server VM brings errors message very often complaining of malformed Help URL. The issue is documented here: http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg - for JBOSS.
+I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no difference.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-07-15-acc-in-vm/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2015-15-07-git-history/">How to truncate Git history</a></h1>
@@ -211,31 +239,6 @@ https://discussions.apple.com/docs/DOC-3083
     </div>
     <div class="read-more">
       <a href="/posts/2015-07-07-osx-web/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-06-18-jenkins-git/">How to fix Jenkins build issues related to Git connectivity</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-06-18 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 407 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like
--bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253 the git repo is corrupted and needs to be reloaded.
-Step 1 - Get the remote repo URL -bash-3.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-06-18-jenkins-git/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>

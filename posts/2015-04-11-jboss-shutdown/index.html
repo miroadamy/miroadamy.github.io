@@ -24,7 +24,7 @@ $ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/b
 
 
 
-<meta name="generator" content="Hugo 0.68.3 with theme even" />
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2015-04-11-jboss-shutdown/" />
@@ -49,13 +49,14 @@ $ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/b
 <meta itemprop="name" content="Fixing the shutdown problem with JBoss">
 <meta itemprop="description" content="Observed at QA environment. During automated shutdown sequence, the exception was thrown:
 $ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org.">
-<meta itemprop="datePublished" content="2015-04-11T11:22:48&#43;08:00" />
-<meta itemprop="dateModified" content="2015-04-11T11:22:48&#43;08:00" />
+<meta itemprop="datePublished" content="2015-04-11T11:22:48+08:00" />
+<meta itemprop="dateModified" content="2015-04-11T11:22:48+08:00" />
 <meta itemprop="wordCount" content="307">
 
 
 
-<meta itemprop="keywords" content="java,jboss," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="java,jboss," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Fixing the shutdown problem with JBoss"/>
 <meta name="twitter:description" content="Observed at QA environment. During automated shutdown sequence, the exception was thrown:
 $ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org."/>

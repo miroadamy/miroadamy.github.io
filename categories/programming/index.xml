@@ -6,11 +6,7 @@
     <description>Recent content in programming on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 16 Mar 2019 11:22:48 +0800</lastBuildDate>
-    
-	<atom:link href="https://miroadamy.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 16 Mar 2019 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Jupyter notebook with Bash kernel</title>
       <link>https://miroadamy.com/posts/2019-03-16-jupyter-bash/</link>
@@ -343,7 +339,7 @@ This article is useful:
       <pubDate>Mon, 09 Apr 2012 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2012-04-09-macvim-git/</guid>
-      <description>Add this to .bashrc  export GIT_EDITOR=&amp;rsquo;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &#39;
+      <description>Add this to .bashrc  export GIT_EDITOR=&#39;/Applications/MacVim.app/Contents/MacOS/Vim -g -f &#39;
  The key is -f, without it git will abort because of empty commit message.</description>
     </item>
     
@@ -893,9 +889,9 @@ and the view.properties was:
 [code language=&#39;xml&#39;]
 parent-view.(class)=org.springframework.web.servlet.view.JstlView
 parent-view.(abstract)=true
-about.url=/WEB-INF/jsp/about.jsp
-form.url=/WEB-INF/jsp/form.jsp
-list.url=/WEB-INF/jsp/list.jsp
+about.url=https://miroadamy.com/WEB-INF/jsp/about.jsp
+form.url=https://miroadamy.com/WEB-INF/jsp/form.jsp
+list.url=https://miroadamy.com/WEB-INF/jsp/list.jsp
 [/code]
 It kept givin exception saying that /WEB-INF/jsp/list.jsp does not exist. Which it did. I tried couple of things, no result.</description>
     </item>
