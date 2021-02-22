@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>How to mirror Github and Bitbucket repositories - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Using Bitbucket and Github API to mirror repositories" /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2021-02-17-mirroring-repos/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="How to mirror Github and Bitbucket repositories" />
+<meta property="og:description" content="Using Bitbucket and Github API to mirror repositories" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2021-02-17-mirroring-repos/" />
+<meta property="article:published_time" content="2021-02-17T13:00:00+08:00" />
+<meta property="article:modified_time" content="2021-02-17T13:00:00+08:00" />
+<meta itemprop="name" content="How to mirror Github and Bitbucket repositories">
+<meta itemprop="description" content="Using Bitbucket and Github API to mirror repositories">
+<meta itemprop="datePublished" content="2021-02-17T13:00:00+08:00" />
+<meta itemprop="dateModified" content="2021-02-17T13:00:00+08:00" />
+<meta itemprop="wordCount" content="604">
+
+
+
+<meta itemprop="keywords" content="git,github,bitbucket,python,API,shell," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to mirror Github and Bitbucket repositories"/>
+<meta name="twitter:description" content="Using Bitbucket and Github API to mirror repositories"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">How to mirror Github and Bitbucket repositories</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-02-17 </span>
+        <div class="post-category">
+            <a href="/categories/devops/"> DevOps </a>
+            <a href="/categories/version-control/"> Version Control </a>
+            <a href="/categories/howto/"> HowTo </a>
+            </div>
+          <span class="more-meta"> 604 words </span>
+          <span class="more-meta"> 3 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#assumptions">Assumptions</a></li>
+    <li><a href="#steps">Steps</a></li>
+    <li><a href="#updating">Updating</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="mirroring-large-number-of-github-or-bitbucket-repositories">Mirroring large number of GitHub or Bitbucket repositories</h1>
+<p><strong>Use case</strong>:</p>
+<p>I want to create local clone of a large number of repositories from an organization in GitHub / Bitbucket.</p>
+<h2 id="assumptions">Assumptions</h2>
+<ul>
+<li>user has SSH key registered with the GH / BB - can clone using ssh protocol</li>
+<li>user has successfully cloned at least one repo from command line before (the /etc/hosts contains host entries for BB and GH)</li>
+<li>user has modern version of Python 3 installed (3.6 or better)</li>
+<li>user has local installation of a reasonably modern Git</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<p>First I use the <code>./bb-repo-links.sh</code> and <code>./gh-repo-links.sh</code> to generate list of repositories.
+See these blog articles: <a href="/posts/2021-02-15-bitbucket-list-repos/">How to list repositories in Bitbucket</a> and <a href="/posts/2021-02-16-github-list-repos/">How to list repositories in github</a></p>
+<p>These are text files and have the structure like this:</p>
+<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">EXFO|git@bitbucket.org:thinkwrap/exfo-tw-docker-jenkins.git
+FARO|git@bitbucket.org:thinkwrap/faro-infrastructure.git
+H3|git@bitbucket.org:thinkwrap/headless-api-gateway.git
+H3|git@bitbucket.org:thinkwrap/headless-cart-service.git
+H3|git@bitbucket.org:thinkwrap/headless-catalog-service.git
+H3|git@bitbucket.org:thinkwrap/headless-connector-atg.git
+H3|git@bitbucket.org:thinkwrap/headless-connector-contentful.git
+</code></pre></div><p>The first field is the project prefix, and the second is the SSH url for cloning the repository.  They are separated by the | character.</p>
+<p>Cloning is trivial:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">python3 ./process_repos.py NAME-OF-THE-CONTROL-FILE ....
+
+</code></pre></div><p>e.g.</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">python3 ./process_repos.py pivotree_h3.bb-repo2 pvtrlabs.gh-repo 
+</code></pre></div><p>The Python script uses <code>../MIRROR</code> as the starting point for the mirrored tree.</p>
+<p>This can be changed by exporting the variable <code>MIRROR_ROOT</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">MIRROR_ROOT</span> <span class="o">=</span> <span class="s1">&#39;../MIRROR2&#39;</span>
+</code></pre></div><p>The generated structure looks like this:</p>
+<p><code>PLAFORM &gt; ACCOUNT &gt; PROJECT &gt; REPO</code></p>
+<p>where:</p>
+<ul>
+<li>PLATFORM is <code>bitbucket.org</code> or <code>github.com</code></li>
+<li>Account is organization name within the platform</li>
+<li>PROJECT is project name for Bitbucket, defaults to &lsquo;src&rsquo; for GitHub</li>
+<li>REPO is the repository name</li>
+</ul>
+<p>NOTE: the names of some projects are &lt; edited &gt;.</p>
+<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">.
+├── bitbucket.org
+│   ├── pivotree_h3
+│   │   ├── BrownBagExamples
+│   │   │   └── apigateway
+│   │   ├── DATA
+│   │   │   └── sample-data-aws
+│   │   ├── DIVE
+│   │   │   ├── customer-mgmt-api
+│   │   │   ├── data-science-practice
+...
+│   │   │   ├── pvt-admin-mgmt-api
+│   │   │   └── sagemaker-microservices
+│   │   ├── DIVE20
+│   │   │   ├── dive-data-manager
+...
+│   │   │   └── tr-sgm-duplicates-svc
+│   │   ├── DIVECX
+│   │   │   ├── dive-cx-account
+│   │   │   ├── dive-cx-account-fork
+...
+│   │   │   └── pvt-ssm-manager
+│   │   └── starter
+│   │       ├── pvt-node-module-starter
+│   │       ├── pvt-node-starter
+│   │       ├── pvt-pipeline-example
+│   │       └── pvt-sls-starter
+│   └── thinkwrap
+│       ├── &lt;PRJ&gt;-CLOUD
+│       │   └── &lt;prj&gt;-cloud
+│       ├── Admin
+│       │   └── tw-bitbucket-admin
+│       ├── &lt;PROJECT_1&gt;
+│       │   ├── &lt;prj1&gt;-infra
+│       │   └── &lt;prj1&gt;-robot
+│       ├── BOPIS
+│       │   ├── bopis_automation_platform
+│       │   └── pvt-bopis
+│       ├── &lt;PRJ2&gt;
+│       │   └── &lt;prj2&gt;-vtex-poc
+│       ├── &lt;PRJ3&gt;
+...
+│       │   └── &lt;prj4&gt;-testautomation
+│       ├── ZZZ-Archived-Repos
+│       │   └── oneclick-starter
+│       └── microbase
+│           ├── micro-alexa-search
+│           ├── micro-alexa-search-skill
+│           ├── micro-backoffice
+│           ├── micro-cart-service
+│           ├── micro-catalog-service
+│           ├── micro-customer-service
+│           ├── micro-docker-nginx
+│           ├── micro-docker-service
+│           ├── micro-oauth-service
+│           ├── micro-payment-service
+│           ├── micro-promotion-service
+│           ├── micro-recommendation-service
+│           ├── micro-stock-service
+│           ├── micro-tax-service
+│           ├── microbase
+│           └── www.microbase.io
+└── github.com
+    ├── pivotree-tech-blog
+    │   └── src
+    │       ├── hugo101
+    │       ├── pivotree-tech-blog-source-poc
+    │       ├── pivotree-tech-blog.github.io
+    │       └── story
+    ├── pvtrlabs
+    │   └── src
+    │       ├── action-skip-ci
+    │       ├── at-aws-onelogin-multiapp
+    │       ├── at-cloudhealth
+    │       ├── at-opsgenie-integrations
+....    
+    │       ├── terraform-tfe-workspace
+    │       ├── terraform-tfe-workspace-full
+    │       ├── test-limited-tfc-access
+    │       └── test-repo
+    └── thinkwrap
+        └── src
+            ├── ML-Live-Beginner
+            ├── ML-Live-Intermediate
+            ├── Tiny-Python-3.6-Notebook
+            ├── aaac-starter-template
+            ├── aws-cost-and-usage-report
+            ├── aws-ml-guide
+            ├── blast-radius
+            ├── docker-aws-cli
+            ├── docker-kubernetes-cli
+            ├── docker-kubernetes-cli-helm
+            ├── docker-node-base-pipelines
+            ├── docker-node-sls-pipelines
+            ├── docker-node-sls-pipelines-aws
+            ├── docker-python-base-pipelines
+            ├── docker-sls-cli
+            ├── docker-terraform-cli
+            ├── docker-terraform-cli-helm
+            ├── ecs-deep-dive-2018
+            ├── kubernetes-in-action
+            ├── programming-with-data
+            ├── sgviz
+            ├── ssm-parameter-store
+            ├── terraform-ecs-fargate
+            └── universal-recommender
+
+549 directories, 0 files
+
+</code></pre></div><h2 id="updating">Updating</h2>
+<p>If the Python script encounters an existing repository, it tries to do an update by fetching the remote updates. It does NOT merge.</p>
+<p><strong>NOTE</strong></p>
+<p>This was also published on <a href="https://blog.pivotree.cloud/2021-02-17-mirroring-repos/">our cloud team blog</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-02-17
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2020 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          <a href="/tags/github/">github</a>
+          <a href="/tags/bitbucket/">bitbucket</a>
+          <a href="/tags/python/">python</a>
+          <a href="/tags/api/">API</a>
+          <a href="/tags/shell/">shell</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2021-02-18-bitbucket-user-groups/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">How to monitor Bitbucket user and group permissions with API</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2021-02-16-github-list-repos/">
+            <span class="next-text nav-default">How to list Github repositories and users</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

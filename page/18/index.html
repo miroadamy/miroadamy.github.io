@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-11-23T13:00:00+08:00" />
+<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 <meta name="twitter:card" content="summary"/>
@@ -116,6 +116,109 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-02-05-unmerged/">Finding unmerged commits in all branches</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-02-05 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 666 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      This one goes beyond git, but is very useful. Ruby script that produces this:
+Here is the script
+#!/usr/bin/env ruby require &#39;rubygems&#39; gem &#39;term-ansicolor&#39;, &#39;=1.3.0&#39; require &#39;term/ansicolor&#39; class GitCommit attr_reader :content def initialize(content) @content = content end def sha @content.split[1] end def to_s `git log --pretty=format:&#34;%h %ad %an - %s&#34; #{sha}~1..#{sha}` end def unmerged? content =~ /^\+/ end def equivalent? content =~ /^\-/ end end class GitBranch attr_reader :name, :commits def initialize(name, commits) @name = name @commits = commits end def unmerged_commits commits.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-02-05-unmerged/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-11-04-atg-repo-visualizer/">ATG Repository structure visualizer</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-11-04 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 310 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      The groovy script does parse the XML files (scraped from dyn-admin, or output of the XML combine) and produces file in the syntax of Plant UML - http://plantuml.sourceforge.net
+if (args.size() == 0) { println &#34;Usage: groovy extractItems.groovy XMLFILE-IN-GSA-FORMAT.xml&#34; System.exit(1) } def gsaFile = new XmlSlurper().parseText(new File(args[0]).text) def desc = gsaFile.&#39;item-descriptor&#39; def processItemDescriptor(myDesc) { def info = [:] def tables = [] def props = [:] def descriptors = [:] for (table in myDesc.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-11-04-atg-repo-visualizer/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-11-02-bsd-grep-gnu/">Replace BSD grep with GNU grep</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-11-02 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 169 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      If annoyed with: ➜ ~ echo $PATH | tr &#39;:&#39; &#39;\n&#39; /usr/local/opt/coreutils/libexec/gnubin /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin /opt/ant/bin /opt/groovy/bin /opt/gradle/bin /Users/miro/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /usr/texbin # YEs I am using GNU core utils but grep is not there # The issue ➜ ~ grep --version grep (BSD grep) 2.5.1-FreeBSD Here is the receipt
+http://www.heystephenwood.com/2013/09/install-gnu-grep-on-mac-osx.html
+Did not install it as the issue was not with grep:
+Instead, use findInJars.sh
+➜ ~ cat ~/bin/findInJars.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-11-02-bsd-grep-gnu/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-10-14-java6required/">Dealing with &#39;Java Runtime SE 6&#39; required error</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-10-14 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 148 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      When trying to start DBeaver (http://dbeaver.jkiss.org) I got this
+I do have Java 7 installed:
+➜ Contents java -version java version &#34;1.7.0_55&#34; Java(TM) SE Runtime Environment (build 1.7.0_55-b13) Java HotSpot(TM) 64-Bit Server VM (build 24.55-b03, mixed mode) ➜ Contents which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java which should be a superset. But it is not.
+Solution Oracle seems to screw up the PLIST capabilities in JAva7 install
+Go to
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-10-14-java6required/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2014-10-03-keepas-node/">Keepass-Node install</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2014-10-03 </span>
@@ -134,109 +237,6 @@
     </div>
     <div class="read-more">
       <a href="/posts/2014-10-03-keepas-node/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-29-gitbits/">Gitbits - Get committer lists</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-29 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 197 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      With emails (Unix only) ➜ dev1 git:(miro-ui) ✗ git log --raw | grep &#34;^Author: &#34; | sort | uniq -c 9 Author: Brendan Smith &lt;Brendan.Smith@thinkwrap.com&gt; 22 Author: Kai Cheng &lt;kai.cheng@thinkwrap.com&gt; 97 Author: Miro Adamy &lt;miro.adamy@thinkwrap.com&gt; 49 Author: Training VM &lt;training-vm@thinkwrap.com&gt; 24 Author: Your Name &lt;your.name@thinkwrap.com&gt; Pure git ➜ dev1 git:(miro-ui) ✗ git shortlog -sen 97 Miro Adamy &lt;miro.adamy@thinkwrap.com&gt; 49 Training VM &lt;training-vm@thinkwrap.com&gt; 24 Your Name &lt;your.name@thinkwrap.com&gt; 22 Kai Cheng &lt;kai.cheng@thinkwrap.com&gt; 9 Brendan Smith &lt;Brendan.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-09-29-gitbits/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-23-shared-folder/">How to access shared folder in Linux guest in VirtualBox</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-23 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 132 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Make sure the VBOx extensions are installed.
-Go here for details:
-Add share In VirtualBox, Device add transient shared folder:
-This one has made available path /Users/Shared/ATG-11 under the name ATG-11
-Mount it sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x. 1 root 272 Sep 12 16:02 ATG11-docs -rw-rw-r--. 1 root 675 May 13 23:46 atg-platform-mac.userlibraries -rw-rw-r--. 1 root 787 May 13 23:17 atg-platform-vm.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-09-23-shared-folder/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-22-gitbit/">Git bit of the day</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-22 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 497 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Question from email:  how do I merge 1 file from master -&gt; LIVE
- Answer You cannot. Merge operation creates new commit that has 2 or more parents and will always join full histories of the branches.
-You can however:
- replicate all changes done in single commit to different branch - this is &ldquo;cherry pick&rdquo; take state of single file from different branch into current branch  How to replicate all changes done in single commit to different branch - &ldquo;cherry pick&rdquo; Say you have latest commit in master that contains change to two files you need.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-09-22-gitbit/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-16-logstash-error/">logstash - known error</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-16 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 288 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
-Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE
-What should work:
-grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] } What needs to be done instead
-You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-09-16-logstash-error/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -288,7 +288,7 @@ You _should_ be able to do exactly what you listed at the bottom of your email, 
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2020
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

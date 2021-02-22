@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-11-23T13:00:00+08:00" />
+<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 <meta name="twitter:card" content="summary"/>
@@ -116,6 +116,105 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2018-02-10-atgdiagram/">ATG Module Diagram Generator</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-02-10 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 301 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I have found local clone of this repo while cleaning up the disk. The source was originally residing in private repo on Bitbucket which I moved to GitHub: https://github.com/miroadamy/atgdiagram
+What it does Groovy scripts:
+ https://github.com/miroadamy/atgdiagram/blob/master/src/listATGModules.groovy https://github.com/miroadamy/atgdiagram/blob/master/src/ATGModule.groovy  that scan local ATG installation, discover modules and generate the PlantUML file representing it, for example - https://github.com/miroadamy/atgdiagram/blob/master/uml/test2.uml
+Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2 Using /opt/ATG/ATG10.0.2 installation Dependants of module TWeStore.eStore =&gt; [DCS.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2018-02-10-atgdiagram/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2017-01-26-canada/">Christmas in Canada</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2018-01-26 </span>
+      <div class="post-category">
+          <a href="/categories/travel/"> travel </a>
+          </div>
+        <span class="more-meta"> 18 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      We have visited Canada for the winter season.
+It was very nice to see old friends and family.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2017-01-26-canada/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2017-11-23-visual-vm/">VisualVM inside Docker container</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-11-23 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 515 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      The idea / motivation In order to run VisualVM from predefined configuration you need to point the app to the user directory. This directory takes about 20MB, but 90% of the the content is actually generated or repeated.
+➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.0K tw-sl/update 104K tw-sl/update_tracking 11M tw-sl/var ➜ 4devops-visualvm git:(master) du -sh tw-wool/* 248K tw-wool/config 7.2M tw-wool/modules 60K tw-wool/repository 4.0K tw-wool/update 104K tw-wool/update_tracking 11M tw-wool/var ➜ 4devops-visualvm git:(master) du -sh tw-wool 19M tw-wool The only part that is specific and worthy of maintaining in the Git repo is repository
+    </div>
+    <div class="read-more">
+      <a href="/posts/2017-11-23-visual-vm/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2017-11-14-install-aws-cli-mac/">Install AWS CLI on Mac</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-11-14 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> DevOps </a>
+          </div>
+        <span class="more-meta"> 1226 words </span>
+        <span class="more-meta"> 6 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Install AWS CLI on Mac The Mac comes with Python 2.7 and no pip
+This guide recommends upgrade to Python 3 which I want to avoid: http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html
+Unsuccesfull path - keep the Python 2.7 ➜ ~ pip --version zsh: command not found: pip ➜ ~ sudo easy_install pip Password: Searching for pip Reading https://pypi.python.org/simple/pip/ Best match: pip 9.0.1 Downloading https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9 Processing pip-9.0.1.tar.gz Writing /tmp/easy_install-QnLLJp/pip-9.0.1/setup.cfg Running pip-9.0.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-QnLLJp/pip-9.0.1/egg-dist-tmp-03hMh7 /System/Library/Frameworks/Python.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2017-11-14-install-aws-cli-mac/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2017-05-15-sensitive-git/">Storing sensitive information in Git</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2017-05-17 </span>
@@ -135,108 +234,6 @@ Everybody who clones the repository - every developer has access to this informa
     </div>
     <div class="read-more">
       <a href="/posts/2017-05-15-sensitive-git/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2017-05-10-remote-svn/">Managing code in remote SVN repo</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2017-05-10 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 540 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      This is based on J.&rsquo;s' question in Slack:
- Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
- The setup (as I understand it):
- on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly  Options Use git-svn bridge Git client allows to &ldquo;pretend&rdquo; it is SVN and pull/push against remote SVN repo
-    </div>
-    <div class="read-more">
-      <a href="/posts/2017-05-10-remote-svn/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-11-02-pensieve-to-bitbucket/">Process for transferring Git repo from Gitolite to Bitbucket</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-11-02 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 766 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
-User setup  List all keys in Gitolite must have access to Gitolite admin interface  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-11-02-pensieve-to-bitbucket/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-09-05-git-update-all-local-branches/">Update all local branches in Git repo</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-09-05 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 682 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Update all local branches in Git repo Issue: The git pull updates just one current branch.
-In DevOps I am following many Git repos and need to keep up to date for all local branches.
-git ffwd-update command Source: http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches
-Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
-#!/bin/bash  main() { REMOTES=&#34;$@&#34;; if [ -z &#34;$REMOTES&#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &#34;$REMOTES&#34; | xargs -n1 echo) CLB=$(git branch -l|awk &#39;/^\*/{print $2}&#39;); echo &#34;$REMOTES&#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \  | awk &#39;/merges with remote/{print $5&#34; &#34;$1}&#39; \  | while read line; do RB=$(echo &#34;$line&#34;|cut -f1 -d&#34; &#34;); ARB=&#34;refs/remotes/$REMOTE/$RB&#34;; LB=$(echo &#34;$line&#34;|cut -f2 -d&#34; &#34;); ALB=&#34;refs/heads/$LB&#34;; NBEHIND=$(( $(git rev-list --count $ALB.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-09-05-git-update-all-local-branches/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-05-30-linux-resources/">Learning resources for Linux and Command line</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-05-30 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 338 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      This quick summary to answer Megha Maiya&rsquo;s question - I am adding to the Wiki in case it can be expanded later useful for somebody else:
- expanded later useful for somebody else  Free resources There is HUGE amount of resources available for Linux and Unix out there. The issue is select those reasonably good
- List of lists: https://github.com/learnbyexample/scripting_course/blob/master/Linux_curated_resources.md http://ryanstutorials.net/, specially http://ryanstutorials.net/linuxtutorial/ and http://ryanstutorials.net/linuxtutorial/ http://www.tutorialspoint.com/unix/unix-getting-started.htm (bash scripting) - https://bash.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-05-30-linux-resources/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -288,7 +285,7 @@ Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2020
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

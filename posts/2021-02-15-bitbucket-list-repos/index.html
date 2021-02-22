@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>How to list Bitbucket repositories and users - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Using command line tool to access Bitbucket API - 1" /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2021-02-15-bitbucket-list-repos/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="How to list Bitbucket repositories and users" />
+<meta property="og:description" content="Using command line tool to access Bitbucket API - 1" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2021-02-15-bitbucket-list-repos/" />
+<meta property="article:published_time" content="2021-02-15T13:00:00+08:00" />
+<meta property="article:modified_time" content="2021-02-15T13:00:00+08:00" />
+<meta itemprop="name" content="How to list Bitbucket repositories and users">
+<meta itemprop="description" content="Using command line tool to access Bitbucket API - 1">
+<meta itemprop="datePublished" content="2021-02-15T13:00:00+08:00" />
+<meta itemprop="dateModified" content="2021-02-15T13:00:00+08:00" />
+<meta itemprop="wordCount" content="1187">
+
+
+
+<meta itemprop="keywords" content="git,bitbucket,API,shell," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to list Bitbucket repositories and users"/>
+<meta name="twitter:description" content="Using command line tool to access Bitbucket API - 1"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">How to list Bitbucket repositories and users</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-02-15 </span>
+        <div class="post-category">
+            <a href="/categories/devops/"> DevOps </a>
+            <a href="/categories/version-control/"> Version Control </a>
+            <a href="/categories/howto/"> HowTo </a>
+            </div>
+          <span class="more-meta"> 1187 words </span>
+          <span class="more-meta"> 6 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#setup">Setup</a></li>
+    <li><a href="#getting-list-of-organizations">Getting list of organizations</a></li>
+    <li><a href="#getting-list-of-users-for-an-organization">Getting list of users for an organization</a></li>
+    <li><a href="#retrieving-repositories-for-an-organization">Retrieving repositories for an organization</a></li>
+    <li><a href="#automation">Automation</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="how-to-list-repositories-in-bitbucket">How to list repositories in Bitbucket</h1>
+<p><strong>Use case</strong>:</p>
+<p>I want to maintain repositories in an organization in Bitbucket. To make sure I do not miss newly added ones,
+I want to use API access to retrieve the list of all repositories in the organization.</p>
+<h2 id="setup">Setup</h2>
+<p>Bitbucket requires a username and password to access the API. This information is stored in the environment variables
+<code>BBUSER</code> and <code>BBPASSWORD</code>. The <code>BBPASSWORD</code> should be an access token / app password defined in the <code>App passwords</code> section
+of the user settings:</p>
+<p><img src="/img/bbgh/app-password.png" alt="app password UI"></p>
+<p>The variable <code>BB</code> contains the Bitbucket API URL</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">BBUSER</span><span class="o">=</span>&lt;your-user-name&gt;
+<span class="nb">export</span> <span class="nv">BBPASSWORD</span><span class="o">=</span>&lt;your-user-token&gt;
+<span class="nb">export</span> <span class="nv">BB</span><span class="o">=</span><span class="s1">&#39;https://api.bitbucket.org/2.0&#39;</span>
+</code></pre></div><p>I am using a personal shortcut by creating the file <code>~/.ssh/bitbucket-token-work.secret</code> with the contents described above and importing them, unless the variables are already defined:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBUSER</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBPASSWORD</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> Using locally defined credentials from ~/.ssh/bitbucket-token-work.secret 
+. ~/.ssh/bitbucket-token-work.secret
+<span class="k">fi</span>
+
+</code></pre></div><h2 id="getting-list-of-organizations">Getting list of organizations</h2>
+<p>With the configuration done above, you can run this command:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">curl -s -u <span class="s2">&#34;</span><span class="nv">$BBUSER</span><span class="s2">:</span><span class="nv">$BBPASSWORD</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BB</span><span class="si">}</span><span class="s2">/teams?role=member&#34;</span> <span class="p">|</span> jq <span class="s1">&#39;.values[].username&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/&#34;//g&#39;</span>
+---
+thinkwrap
+tenzingcom
+pivotree_h3
+</code></pre></div><p>The output is a list of all organizations for the currently authenticated user.</p>
+<p>The full script - <code>./bb-teams.sh</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBUSER</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBPASSWORD</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> Using locally defined credentials from ~/.ssh/bitbucket-token-work.secret 
+. ~/.ssh/bitbucket-token-work.secret
+<span class="k">fi</span>
+
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBTEAMS</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+curl -s -u <span class="s2">&#34;</span><span class="nv">$BBUSER</span><span class="s2">:</span><span class="nv">$BBPASSWORD</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BB</span><span class="si">}</span><span class="s2">/teams?role=member&#34;</span> <span class="se">\
+</span><span class="se"></span>    <span class="p">|</span> jq <span class="s1">&#39;.values[].username&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/&#34;//g&#39;</span>
+<span class="k">else</span>
+  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$BBTEAMS</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+</code></pre></div><p>The output is a list of all team for the currently authenticataed user.</p>
+<p>Example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">✗ ./bb-teams.sh 
+thinkwrap
+tenzingcom
+pivotree_h3
+
+</code></pre></div><h2 id="getting-list-of-users-for-an-organization">Getting list of users for an organization</h2>
+<p>With the configuration done above, you can run this command:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">
+curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BB</span><span class="si">}</span><span class="s2">/teams/</span><span class="si">${</span><span class="nv">org</span><span class="si">}</span><span class="s2">/members&#34;</span> <span class="p">|</span> jq <span class="s1">&#39;.values[].display_name&#39;</span>
+---
+<span class="s2">&#34;Axxxxx Chxxxx&#34;</span>
+<span class="s2">&#34;Dxx Axx Oxxx&#34;</span>
+<span class="s2">&#34;Axxxx Kxx&#34;</span>
+<span class="s2">&#34;Axxxx Ixxxx Esxxxx&#34;</span>
+<span class="s2">&#34;Axxx Rxxx Exxxx&#34;</span>
+...
+</code></pre></div><p>The number of users can be large so we need to handle paging, using request parameters (the $org variable is name of the team):</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">ENTRIES</span><span class="o">=</span><span class="k">$(</span>curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BB</span><span class="si">}</span><span class="s2">/teams/</span><span class="si">${</span><span class="nv">org</span><span class="si">}</span><span class="s2">/members?limit=100&#34;</span> <span class="p">|</span> jq .size<span class="k">)</span>
+<span class="nv">PAGELEN</span><span class="o">=</span><span class="k">$(</span>curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BB</span><span class="si">}</span><span class="s2">/teams/</span><span class="si">${</span><span class="nv">org</span><span class="si">}</span><span class="s2">/members?limit=100&#34;</span> <span class="p">|</span> jq .pagelen<span class="k">)</span>
+<span class="nv">PAGES</span><span class="o">=</span><span class="k">$(</span>expr <span class="nv">$ENTRIES</span> / <span class="nv">$PAGELEN</span> <span class="s2">&#34;+&#34;</span> 1<span class="k">)</span>
+---
+<span class="nb">echo</span> <span class="nv">$org</span> <span class="nv">$ENTRIES</span> <span class="nv">$PAGELEN</span> <span class="nv">$PAGES</span>
+thinkwrap <span class="m">120</span> <span class="m">50</span> <span class="m">3</span>
+
+</code></pre></div><p>The JSON returned by <code>/teams/$org/members</code> contains 3 entries - pagelen, size and an array of records:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BB</span><span class="si">}</span><span class="s2">/teams/</span><span class="si">${</span><span class="nv">org</span><span class="si">}</span><span class="s2">/members?limit=100&#34;</span> <span class="p">|</span> jq . <span class="p">|</span> head
+<span class="o">{</span>
+  <span class="s2">&#34;pagelen&#34;</span>: 50,
+  <span class="s2">&#34;size&#34;</span>: 120,
+  <span class="s2">&#34;values&#34;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">&#34;display_name&#34;</span>: <span class="s2">&#34;Axxx Chxxxx&#34;</span>,
+      <span class="s2">&#34;has_2fa_enabled&#34;</span>: null,
+      <span class="s2">&#34;links&#34;</span>: <span class="o">{</span>
+        <span class="s2">&#34;hooks&#34;</span>: <span class="o">{</span>
+          <span class="s2">&#34;href&#34;</span>: <span class="s2">&#34;https://api.bitbucket.org/2.0/users/%7Bd6383ed0-xxxxxx-bb56d6a%7D/hooks&#34;</span>
+</code></pre></div><p>We will run the requests inside a loop to store each result in a temporary file, and then concatenate them:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBUSER</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBPASSWORD</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> Using locally defined credentials from ~/.ssh/bitbucket-token-work.secret 
+. ~/.ssh/bitbucket-token-work.secret
+<span class="k">fi</span>
+
+<span class="k">for</span> org in <span class="k">$(</span>./bb-teams.sh <span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+  <span class="nv">ENTRIES</span><span class="o">=</span><span class="k">$(</span>curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BB</span><span class="si">}</span><span class="s2">/teams/</span><span class="si">${</span><span class="nv">org</span><span class="si">}</span><span class="s2">/members?limit=100&#34;</span> <span class="p">|</span> jq .size<span class="k">)</span>
+  <span class="nv">PAGELEN</span><span class="o">=</span><span class="k">$(</span>curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BB</span><span class="si">}</span><span class="s2">/teams/</span><span class="si">${</span><span class="nv">org</span><span class="si">}</span><span class="s2">/members?limit=100&#34;</span> <span class="p">|</span> jq .pagelen<span class="k">)</span>
+  <span class="nv">PAGES</span><span class="o">=</span><span class="k">$(</span>expr <span class="nv">$ENTRIES</span> / <span class="nv">$PAGELEN</span> <span class="s2">&#34;+&#34;</span> 1<span class="k">)</span>
+
+  rm <span class="nv">$org</span>-members-*.json 
+  <span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$PAGES</span><span class="k">)</span>
+    <span class="k">do</span> 
+        curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BB</span><span class="si">}</span><span class="s2">/teams/</span><span class="si">${</span><span class="nv">org</span><span class="si">}</span><span class="s2">/members?pagelen=</span><span class="si">${</span><span class="nv">PAGELEN</span><span class="si">}</span><span class="s2">&amp;page=</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">&#34;</span> <span class="p">|</span> jq <span class="s1">&#39;.values[].display_name&#39;</span> <span class="p">|</span> tee <span class="nv">$org</span>-members-<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.json
+    <span class="k">done</span>
+  
+  rm <span class="si">${</span><span class="nv">org</span><span class="si">}</span>.users
+  cat <span class="nv">$org</span>-members-*.json  &gt;&gt; <span class="si">${</span><span class="nv">org</span><span class="si">}</span>.users
+
+  rm <span class="nv">$org</span>-members-*.json
+<span class="k">done</span>
+
+</code></pre></div><p>This script creates multiple output files <code>${org}.users</code> - e.g. <code>thinkwrap.users</code> containing the users in each group.</p>
+<h2 id="retrieving-repositories-for-an-organization">Retrieving repositories for an organization</h2>
+<p>With the configuration done above, you can run this command:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="si">${</span><span class="nv">BB</span><span class="si">}</span>/repositories/<span class="si">${</span><span class="nv">username</span><span class="si">}</span>
+</code></pre></div><p>where <code>username</code> is name of the organization or name of the user that owns the repositories.</p>
+<p>As with users, the JSON response contains 3 keys: size, pagelen and an array of values.  These need to be retrieved
+first and used in consequent calls:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Produce list of the repositories in format slug=REPO</span>
+<span class="c1"># echo curl -s -u $CREDS &#34;${BB}/${TEAM}?pagelen=${PAGELEN}&#34; </span>
+<span class="nv">ENTRIES</span><span class="o">=</span><span class="k">$(</span>curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="si">${</span><span class="nv">BB</span><span class="si">}</span>/repositories/<span class="si">${</span><span class="nv">username</span><span class="si">}</span> <span class="p">|</span> jq .size<span class="k">)</span>
+<span class="nv">PAGELEN</span><span class="o">=</span><span class="k">$(</span>curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="si">${</span><span class="nv">BB</span><span class="si">}</span>/repositories/<span class="si">${</span><span class="nv">username</span><span class="si">}</span> <span class="p">|</span> jq .pagelen<span class="k">)</span>
+<span class="nv">PAGES</span><span class="o">=</span><span class="k">$(</span>expr <span class="nv">$ENTRIES</span> / <span class="nv">$PAGELEN</span> <span class="s2">&#34;+&#34;</span> 1<span class="k">)</span>
+
+<span class="nb">echo</span> The TEAM <span class="nv">$username</span> has <span class="nv">$ENTRIES</span> repos
+
+<span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$PAGES</span><span class="k">)</span>
+    <span class="k">do</span> 
+        curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="si">${</span><span class="nv">BB</span><span class="si">}</span>/repositories/<span class="si">${</span><span class="nv">username</span><span class="si">}</span><span class="se">\?</span>page<span class="se">\=</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="se">\&amp;</span>pagelen<span class="se">\=</span><span class="si">${</span><span class="nv">PAGELEN</span><span class="si">}</span> &gt; <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-REPO-<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.json
+<span class="k">done</span>
+
+<span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$PAGES</span><span class="k">)</span> 
+<span class="k">do</span> 
+    jq <span class="s1">&#39;.values[].links.clone[].href&#39;</span> &lt; <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-REPO-<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.json <span class="p">|</span> grep -v https <span class="p">|</span> sed <span class="s1">&#39;s/&#34;//g&#39;</span> &gt; <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.repos
+<span class="k">done</span>
+
+<span class="c1"># Make sure the file is empty/none - we will append</span>
+rm -f <span class="si">${</span><span class="nv">username</span><span class="si">}</span>.bb-repos
+
+cat <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-*.repos <span class="p">|</span> sort &gt;&gt;<span class="si">${</span><span class="nv">username</span><span class="si">}</span>.bb-repos
+
+rm <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-*.repos
+
+<span class="nb">echo</span> See <span class="si">${</span><span class="nv">username</span><span class="si">}</span>.bb-repos
+</code></pre></div><p>The script first produces one temporary file per page containing repository information named <code>${username}-REPO-${i}.json</code>.
+From these files, the second loop extracts only clone links <code>.values[].links.clone[].href</code> for SSH access and stores them in a second temporary file
+named ${username}-${i}.repos. These are then concatenated and sorted, and one file per organization (or user) is generated named <code>${org}.bb-repos</code>.</p>
+<p>The script expects 1 argument - the name of the organization or user:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nb">set</span> -e
+
+<span class="nv">PROGNAME</span><span class="o">=</span><span class="k">$(</span>basename <span class="nv">$0</span><span class="k">)</span>
+
+die<span class="o">()</span> <span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$PROGNAME</span><span class="s2">: </span><span class="nv">$*</span><span class="s2">&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="o">}</span>
+
+usage<span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+        <span class="nb">echo</span> <span class="s2">&#34;Error: </span><span class="nv">$*</span><span class="s2">&#34;</span>
+    <span class="k">fi</span>
+
+    cat <span class="s">&lt;&lt; EOF
+</span><span class="s">Usage: $PROGNAME [OPTION ...] BB-TEAM-OR-USER-NAME
+</span><span class="s">Generate the list of the repositiories for given team or used
+</span><span class="s">Options:
+</span><span class="s">-h, --help             display this usage message and exit
+</span><span class="s">-d, --debug            set debug = true
+</span><span class="s">EOF</span>
+
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="o">}</span>
+
+<span class="nv">debug</span><span class="o">=</span><span class="m">0</span>
+<span class="nv">username</span><span class="o">=</span><span class="s2">&#34;undefined&#34;</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> Missing argument: BB user name or team
+    usage
+<span class="k">fi</span>
+
+<span class="k">while</span> <span class="o">[</span> <span class="nv">$#</span> -gt <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">do</span>
+    <span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
+    -h<span class="p">|</span>--help<span class="o">)</span>
+        usage
+        <span class="p">;;</span>
+    -d<span class="p">|</span>--debug<span class="o">)</span>
+        <span class="nv">debug</span><span class="o">=</span><span class="m">1</span>
+        <span class="p">;;</span>
+    -*<span class="o">)</span>
+        usage <span class="s2">&#34;Unknown option &#39;</span><span class="nv">$1</span><span class="s2">&#39;&#34;</span>
+        <span class="p">;;</span>
+    *<span class="o">)</span>
+        <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$username</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;undefined&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+            <span class="nv">username</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+        <span class="k">else</span>
+            usage <span class="s2">&#34;Too many arguments&#34;</span>
+        <span class="k">fi</span>
+        <span class="p">;;</span>
+    <span class="k">esac</span>
+    <span class="nb">shift</span>
+<span class="k">done</span>
+
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBUSER</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBPASSWORD</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+. ~/.ssh/bitbucket-token-work.secret
+<span class="k">fi</span>
+
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBUSER</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBPASSWORD</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&#34;You must export variables BBUSER and BBPASSWORD&#34;</span>
+    <span class="nb">exit</span> <span class="m">2</span>
+<span class="k">fi</span>
+
+<span class="nb">export</span> <span class="nv">CREDS</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$BBUSER</span><span class="s2">:</span><span class="nv">$BBPASSWORD</span><span class="s2">&#34;</span>
+
+<span class="c1"># Display info about the user</span>
+
+<span class="nb">echo</span> Logged on as user
+curl -s -u <span class="nv">$CREDS</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BB</span><span class="si">}</span><span class="s2">/user&#34;</span> <span class="se">\
+</span><span class="se"></span>    <span class="p">|</span> jq <span class="s1">&#39;{account_id, uuid, username, display_name, snippets: .links.snippets.href, self: .links.self.href}&#39;</span> 
+
+
+curl -s -u <span class="nv">$CREDS</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BB</span><span class="si">}</span><span class="s2">/teams/</span><span class="si">${</span><span class="nv">username</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>    <span class="p">|</span> jq <span class="s1">&#39;{ uuid, username, display_name, snippets: .links.snippets.href, self: .links.self.href}&#39;</span> <span class="se">\
+</span><span class="se"></span>    &gt; <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-team-info.json
+
+<span class="nb">echo</span> Team info - see <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-team-info.json
+
+<span class="c1"># Produce list of the repositories in format slug=REPO</span>
+<span class="nv">ENTRIES</span><span class="o">=</span><span class="k">$(</span>curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="si">${</span><span class="nv">BB</span><span class="si">}</span>/repositories/<span class="si">${</span><span class="nv">username</span><span class="si">}</span> <span class="p">|</span> jq .size<span class="k">)</span>
+<span class="nv">PAGELEN</span><span class="o">=</span><span class="k">$(</span>curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="si">${</span><span class="nv">BB</span><span class="si">}</span>/repositories/<span class="si">${</span><span class="nv">username</span><span class="si">}</span> <span class="p">|</span> jq .pagelen<span class="k">)</span>
+<span class="nv">PAGES</span><span class="o">=</span><span class="k">$(</span>expr <span class="nv">$ENTRIES</span> / <span class="nv">$PAGELEN</span> <span class="s2">&#34;+&#34;</span> 1<span class="k">)</span>
+
+<span class="nb">echo</span> The TEAM <span class="nv">$username</span> has <span class="nv">$ENTRIES</span> repos
+
+<span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$PAGES</span><span class="k">)</span>
+    <span class="k">do</span> 
+        curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="si">${</span><span class="nv">BB</span><span class="si">}</span>/repositories/<span class="si">${</span><span class="nv">username</span><span class="si">}</span><span class="se">\?</span>page<span class="se">\=</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="se">\&amp;</span>pagelen<span class="se">\=</span><span class="si">${</span><span class="nv">PAGELEN</span><span class="si">}</span> &gt; <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-REPO-<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.json
+<span class="k">done</span>
+
+<span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$PAGES</span><span class="k">)</span> 
+<span class="k">do</span> 
+    jq <span class="s1">&#39;.values[].links.clone[].href&#39;</span> &lt; <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-REPO-<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.json <span class="p">|</span> grep -v https <span class="p">|</span> sed <span class="s1">&#39;s/&#34;//g&#39;</span> &gt; <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.repos
+<span class="k">done</span>
+
+rm -f <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-REPO-*.json
+
+<span class="c1"># Make sure the file is empty/none - we will append</span>
+rm -f <span class="si">${</span><span class="nv">username</span><span class="si">}</span>.bb-repos
+
+cat <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-*.repos &gt;&gt;<span class="si">${</span><span class="nv">username</span><span class="si">}</span>.bb-repos
+
+rm <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-*.repos
+
+<span class="nb">echo</span> See <span class="si">${</span><span class="nv">username</span><span class="si">}</span>.bb-repos
+</code></pre></div><p>It also generates the <code>${org}-team-info.json</code> file with basic information about the team:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;uuid&#34;</span><span class="p">:</span> <span class="s2">&#34;{c4xxxxxxxxxxx10d612}&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;username&#34;</span><span class="p">:</span> <span class="s2">&#34;thinkwrap&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;display_name&#34;</span><span class="p">:</span> <span class="s2">&#34;Pivotree&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;snippets&#34;</span><span class="p">:</span> <span class="s2">&#34;https://api.bitbucket.org/2.0/snippets/%7Bc4xxxxxxxxxx10d612%7D&#34;</span><span class="p">,</span>
+  <span class="nt">&#34;self&#34;</span><span class="p">:</span> <span class="s2">&#34;https://api.bitbucket.org/2.0/teams/%7Bc4xxxxxxxxxxx10d612%7D&#34;</span>
+<span class="p">}</span>
+
+</code></pre></div><p>Example of the run:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">➜ ./bb-repos-info-json.sh pivotree_h3
+Logged on as user
+<span class="o">{</span>
+  <span class="s2">&#34;account_id&#34;</span>: <span class="s2">&#34;557058:xxxxxxxxx-e6ce68c69dda&#34;</span>,
+  <span class="s2">&#34;uuid&#34;</span>: <span class="s2">&#34;{d8-xxxxxxx-08}&#34;</span>,
+  <span class="s2">&#34;username&#34;</span>: <span class="s2">&#34;&lt;username&gt;&#34;</span>,
+  <span class="s2">&#34;display_name&#34;</span>: <span class="s2">&#34;Miro Adamy&#34;</span>,
+  <span class="s2">&#34;snippets&#34;</span>: <span class="s2">&#34;https://api.bitbucket.org/2.0/snippets/%7Bd8-xxxxxxx-08%7D&#34;</span>,
+  <span class="s2">&#34;self&#34;</span>: <span class="s2">&#34;https://api.bitbucket.org/2.0/users/%7Bd8-xxxxxxx-08%7D&#34;</span>
+<span class="o">}</span>
+Team info
+See pivotree_h3-team-info.json
+The TEAM pivotree_h3 has <span class="m">152</span> repos in <span class="m">16</span> pages
+See pivotree_h3.bb-repos
+</code></pre></div><h2 id="automation">Automation</h2>
+<p>The script <code>./bb-repo-links.sh</code> generates the information for all organizations:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBUSER</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBPASSWORD</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> Using locally defined credentials from ~/.ssh/bitbucket-token-work.secret 
+. ~/.ssh/bitbucket-token-work.secret
+<span class="k">fi</span>
+
+<span class="k">for</span> org in <span class="k">$(</span>./bb-teams.sh <span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+    ./bb-repos-info-json.sh <span class="nv">$org</span>
+<span class="k">done</span>
+</code></pre></div><p><strong>NOTE</strong></p>
+<p>This was also published on <a href="https://blog.pivotree.cloud/2021-02-15-bitbucket-list-repos/">our team blog post</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-02-15
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2020 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          <a href="/tags/bitbucket/">bitbucket</a>
+          <a href="/tags/api/">API</a>
+          <a href="/tags/shell/">shell</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2021-02-16-github-list-repos/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">How to list Github repositories and users</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2020-11-23-documentation-multi-repo/">
+            <span class="next-text nav-default">Documenting multi-repository projects</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

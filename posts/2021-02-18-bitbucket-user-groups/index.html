@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>How to monitor Bitbucket user and group permissions with API - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Using command line tool to access Bitbucket API - 3" /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2021-02-18-bitbucket-user-groups/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="How to monitor Bitbucket user and group permissions with API" />
+<meta property="og:description" content="Using command line tool to access Bitbucket API - 3" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2021-02-18-bitbucket-user-groups/" />
+<meta property="article:published_time" content="2021-02-18T13:00:00+08:00" />
+<meta property="article:modified_time" content="2021-02-18T13:00:00+08:00" />
+<meta itemprop="name" content="How to monitor Bitbucket user and group permissions with API">
+<meta itemprop="description" content="Using command line tool to access Bitbucket API - 3">
+<meta itemprop="datePublished" content="2021-02-18T13:00:00+08:00" />
+<meta itemprop="dateModified" content="2021-02-18T13:00:00+08:00" />
+<meta itemprop="wordCount" content="946">
+
+
+
+<meta itemprop="keywords" content="git,bitbucket,API,python,shell&#34;," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to monitor Bitbucket user and group permissions with API"/>
+<meta name="twitter:description" content="Using command line tool to access Bitbucket API - 3"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">How to monitor Bitbucket user and group permissions with API</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-02-18 </span>
+        <div class="post-category">
+            <a href="/categories/devops/"> DevOps </a>
+            <a href="/categories/version-control/"> Version Control </a>
+            <a href="/categories/howto/"> HowTo </a>
+            </div>
+          <span class="more-meta"> 946 words </span>
+          <span class="more-meta"> 5 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#setup">Setup</a></li>
+    <li><a href="#get-list-of-users">Get list of users</a></li>
+    <li><a href="#get-list-of-users-group">Get list of users group</a></li>
+    <li><a href="#getting-matrix-of-access-rights-per-repository-and-user">Getting matrix of access rights per repository and user</a>
+      <ul>
+        <li><a href="#repo_by_accessjson">REPO_BY_ACCESS.json</a></li>
+        <li><a href="#repo_by_userjson">REPO_BY_USER.json</a></li>
+        <li><a href="#user_by_accessjson">USER_BY_ACCESS.json</a></li>
+        <li><a href="#user_by_repojson">USER_BY_REPO.json</a></li>
+      </ul>
+    </li>
+    <li><a href="#examples">Examples</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="how-to-manage-users-and-groups-in-bitbucket">How to manage users and groups in Bitbucket</h1>
+<p><strong>Use case</strong>:</p>
+<p>I want to maintain users and groups and their access to repositories in an organization in Bitbucket.
+To make sure I do not miss newly changed admin access, I want to use the Bitbucket API to retrieve the list of permissions on repository basis and on user/group bases.</p>
+<h2 id="setup">Setup</h2>
+<p>Bitbucket requires a username and password to access the API. This information is stored in environment variables
+<code>BBUSER</code> and <code>BBPASSWORD</code>.  <code>BBPASSWORD</code> should be an access token / app password defined in the <code>App passwords</code> section
+of the user settings:</p>
+<p><img src="/img/bbgh/app-password.png" alt="app password UI"></p>
+<p>The variable <code>BB</code> represents the Bitbucket API URL</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">BBUSER</span><span class="o">=</span>&lt;your-user-name&gt;
+<span class="nb">export</span> <span class="nv">BBPASSWORD</span><span class="o">=</span>&lt;your-user-token&gt;
+<span class="nb">export</span> <span class="nv">BB</span><span class="o">=</span><span class="s1">&#39;https://api.bitbucket.org/2.0&#39;</span>
+</code></pre></div><p>I am using a personal shortcut by creating the file <code>~/.ssh/bitbucket-token-work.secret</code> with the contents described above and importing them, unless the variables are already defined:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBUSER</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBPASSWORD</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> Using locally defined credentials from ~/.ssh/bitbucket-token-work.secret 
+. ~/.ssh/bitbucket-token-work.secret
+<span class="k">fi</span>
+
+</code></pre></div><h2 id="get-list-of-users">Get list of users</h2>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">ENTRIES</span><span class="o">=</span><span class="k">$(</span>curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="si">${</span><span class="nv">BB</span><span class="si">}</span>/teams/<span class="si">${</span><span class="nv">org</span><span class="si">}</span>/members  <span class="p">|</span> jq .size<span class="k">)</span>
+<span class="nv">PAGELEN</span><span class="o">=</span><span class="k">$(</span>curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="si">${</span><span class="nv">BB</span><span class="si">}</span>/teams/<span class="si">${</span><span class="nv">org</span><span class="si">}</span>/members  <span class="p">|</span> jq .pagelen<span class="k">)</span>
+<span class="nv">PAGES</span><span class="o">=</span><span class="k">$(</span>expr <span class="nv">$ENTRIES</span> / <span class="nv">$PAGELEN</span> <span class="s2">&#34;+&#34;</span> 1<span class="k">)</span>
+
+
+<span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$PAGES</span><span class="k">)</span>
+    <span class="k">do</span> 
+    curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="si">${</span><span class="nv">BB</span><span class="si">}</span>/teams/<span class="si">${</span><span class="nv">org</span><span class="si">}</span>/members<span class="se">\?</span>page<span class="se">\=</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="se">\&amp;</span>pagelen<span class="se">\=</span><span class="si">${</span><span class="nv">PAGELEN</span><span class="si">}</span>  <span class="p">|</span> jq <span class="s2">&#34;.values[] | {nickname, account_id, &#34;</span>repos<span class="s2">&#34;: .links.repositories.href}&#34;</span> &gt; <span class="si">${</span><span class="nv">org</span><span class="si">}</span>-USERS-<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.json
+<span class="k">done</span>    
+---
+<span class="o">{</span>
+  <span class="s2">&#34;nickname&#34;</span>: <span class="s2">&#34;Dxxxx Sxxxx Oxxx&#34;</span>,
+  <span class="s2">&#34;account_id&#34;</span>: <span class="s2">&#34;557058:e8xxxxxxdf&#34;</span>,
+  <span class="s2">&#34;repos&#34;</span>: <span class="s2">&#34;https://api.bitbucket.org/2.0/repositories/%7B13xxxxxef4%7D&#34;</span>
+<span class="o">}</span>
+<span class="o">{</span>
+  <span class="s2">&#34;nickname&#34;</span>: <span class="s2">&#34;Dxxx Axxx&#34;</span>,
+  <span class="s2">&#34;account_id&#34;</span>: <span class="s2">&#34;55xxxxc0&#34;</span>,
+  <span class="s2">&#34;repos&#34;</span>: <span class="s2">&#34;https://api.bitbucket.org/2.0/repositories/%7Ba76xxxxc9%7D&#34;</span>
+<span class="o">}</span>
+...
+</code></pre></div><p>Alternative format is to get all 3 fields on the same line:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> https://api.bitbucket.org/2.0/workspaces/thinkwrap/permissions/repositories <span class="p">|</span> jq <span class="s1">&#39;.values[] | .repository.name + &#34;|&#34; + .user.display_name + &#34;|&#34; + .permission&#39;</span>
+---
+<span class="s2">&#34;smw-hybris|Rxxx Oxxx Rxxx|read&#34;</span>
+<span class="s2">&#34;smw-hybris|Source Bridge|admin&#34;</span>
+<span class="s2">&#34;smw-hybris|Jxxxx Fxxxx|admin&#34;</span>
+<span class="s2">&#34;smw-hybris|Yxxxx Lxxx|write&#34;</span>
+<span class="s2">&#34;smw-hybris|buildmastertw|read&#34;</span>
+....
+</code></pre></div><h2 id="get-list-of-users-group">Get list of users group</h2>
+<p>For accessing group we need to use the legacy 1.0 API. The API is down since 2019 but the group related endpoints are still supported, because Atlassian did not deliver the proper 2.0 of that endpoint implementation yet.</p>
+<p>This is the output text format for every group in ${org}</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="s2">&#34;BrownBagExamples|read|Yxxx Lxxx&#34;</span>
+<span class="s2">&#34;QA-Heroes||Dxxx Bxxx Mxxx&#34;</span>
+<span class="s2">&#34;sg-bitbucket-automation||sa-bitbucket&#34;</span>
+<span class="s2">&#34;Platform Engineers||Dxxxx Axxx;Mxxx Mxxx&#34;</span>
+<span class="s2">&#34;readonly|read|Source Bridge;Cxxxx Macxxxx;Read Only Source Access H3&#34;</span>
+<span class="s2">&#34;Developers|write|Jxxxx J. Cxxxx;Pxxxx Yxxxx;Dxxxx Dxxxx;Brendan Sxxx;Brant Mxxx;Dave Axxx;David Bxxx Mxxx;&#34;</span>
+....
+</code></pre></div><p>There are three fields separated by &lsquo;|&rsquo; - group name, default access to new repositories (should be empty for non-admin and non-service accounts), and the list of member user names (separated by a &lsquo;;').</p>
+<p>Here is the code that produces that output:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBUSER</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="o">||</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$BBPASSWORD</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> Using locally defined credentials from ~/.ssh/bitbucket-token-work.secret 
+. ~/.ssh/bitbucket-token-work.secret
+<span class="k">fi</span>
+
+<span class="k">for</span> org in <span class="k">$(</span>./bb-teams.sh <span class="k">)</span><span class="p">;</span> <span class="k">do</span>
+    curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> https://api.bitbucket.org/1.0/groups/<span class="si">${</span><span class="nv">org</span><span class="si">}</span>/ <span class="p">|</span> jq <span class="s1">&#39;.[] | .name + &#34;|&#34; + .permission + &#34;|&#34; + ([.members[].display_name] | join(&#34;;&#34;)) &#39;</span> <span class="se">\
+</span><span class="se"></span>        <span class="p">|</span> tee <span class="si">${</span><span class="nv">org</span><span class="si">}</span>-group-access.txt
+<span class="k">done</span>
+</code></pre></div><h2 id="getting-matrix-of-access-rights-per-repository-and-user">Getting matrix of access rights per repository and user</h2>
+<p>User groups are the preferred way of managing permissions. At the repository level, the effective rights is a combination of the access assigned through
+user groups and the access rights assigned directly to users - see the example</p>
+<p><img src="/img/bbgh/user-group-1.png" alt="user and group access"></p>
+<p>We will produce a matrix of the information in 2 steps: at first, we will generate a linear
+list of triplets in the form REPO-NAME|USER-NAME|access</p>
+<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">&#34;smw-hybris|Rxxx Oxxx Rxxx|read&#34;
+&#34;smw-hybris|Source Bridge|admin&#34;
+&#34;smw-hybris|Jxxxx Fxxxx|admin&#34;&#34;
+</code></pre></div><p>The API call that generates this list is</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">   curl -s --user <span class="nv">$BBUSER</span>:<span class="nv">$BBPASSWORD</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">BB</span><span class="si">}</span><span class="s2">/workspaces/</span><span class="si">${</span><span class="nv">org</span><span class="si">}</span><span class="s2">/permissions/repositories?pagelen=</span><span class="si">${</span><span class="nv">PAGELEN</span><span class="si">}</span><span class="s2">&amp;page=</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">&#34;</span> <span class="p">|</span> jq <span class="s1">&#39;.values[] | .repository.name + &#34;|&#34; + .user.display_name + &#34;|&#34; + .permission&#39;</span> <span class="p">|</span> tee <span class="si">${</span><span class="nv">org</span><span class="si">}</span>-repo-users-<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.txt
+</code></pre></div><p>The script running the call for every repository in the workspace is <code>bb-repo-user.sh</code></p>
+<p>It expects single argument - a workspace name (e.g. <code>pivotree_h3</code>) and generates file named
+<code>WORKSPACE-repo.permissions</code> (e.g. <code>pivotree_h3-repo.permissions</code>) with the structure above - sorted.</p>
+<p>It can run long time a generates large number of temporary files.</p>
+<p>It also generates output during run to see how far it proceeded.</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">./bb-repo-user.sh pivotree_h3
+
+Logged on as user
+<span class="o">{</span>
+  <span class="s2">&#34;account_id&#34;</span>: <span class="s2">&#34;55xxxxxxda&#34;</span>,
+  <span class="s2">&#34;uuid&#34;</span>: <span class="s2">&#34;{d8xxxxxx08}&#34;</span>,
+  <span class="s2">&#34;username&#34;</span>: <span class="s2">&#34;miro-adamy-PVT&#34;</span>,
+  <span class="s2">&#34;display_name&#34;</span>: <span class="s2">&#34;Miro Adamy&#34;</span>,
+  <span class="s2">&#34;snippets&#34;</span>: <span class="s2">&#34;https://api.bitbucket.org/2.0/snippets/%7Bd8dxxxxxxx08%7D&#34;</span>,
+  <span class="s2">&#34;self&#34;</span>: <span class="s2">&#34;https://api.bitbucket.org/2.0/users/%7Bd8xxxxxxxxx08%7D&#34;</span>
+<span class="o">}</span>
+<span class="nv">ENTRIES</span><span class="o">=</span>2556, <span class="nv">PAGELEN</span><span class="o">=</span>100, <span class="nv">PAGES</span><span class="o">=</span><span class="m">26</span>
+<span class="m">1</span> ... curl -s --user ...:... https://api.bitbucket.org/2.0/workspaces/pivotree_h3/permissions/repositories?pagelen<span class="o">=</span>100<span class="p">&amp;</span><span class="nv">page</span><span class="o">=</span><span class="m">1</span>
+<span class="s2">&#34;dive-data-manager|Source Bridge|read&#34;</span>
+<span class="s2">&#34;dive-data-manager|Pxxxxx Lxxxxg|admin&#34;</span>
+<span class="s2">&#34;dive-data-manager|Dxxxx Dxxxx|admin&#34;</span>
+...
+<span class="m">2</span> ... curl -s --user ...:... https://api.bitbucket.org/2.0/workspaces/pivotree_h3/permissions/repositories?pagelen<span class="o">=</span>100<span class="p">&amp;</span><span class="nv">page</span><span class="o">=</span><span class="m">2</span>
+<span class="s2">&#34;pvt-sgm-size-norm-prog|Source Bridge|read&#34;</span>
+<span class="s2">&#34;pvt-sgm-size-norm-prog|Yxxxxx Lxxxxx|read&#34;</span>
+...
+</code></pre></div><p>The second step is to generate JSON files proving different views of this data. The pythin script expects as input one or more files in the format of
+<code>WORKSPACE-repo.permissions</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">python3 generate_repo_stats.py pivotree_h3-repo.permissions
+Processed <span class="m">2556</span> lines
+</code></pre></div><p>The script creates 4 files:</p>
+<h3 id="repo_by_accessjson">REPO_BY_ACCESS.json</h3>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json">
+<span class="p">{</span>
+  <span class="nt">&#34;ApiGateway&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;admin&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&#34;Bxxxx Mxxxxx&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;Bxxxx Sxxxxx&#34;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="nt">&#34;read&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&#34;User Name2&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;User Name3&#34;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="nt">&#34;write&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&#34;User Name4&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;User Name5&#34;</span><span class="p">,</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nt">&#34;JIRA-voting&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;admin&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&#34;User Name6&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;User Name7&#34;</span><span class="p">,</span>
+
+    <span class="p">],</span>
+    <span class="nt">&#34;read&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&#34;User Name8&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;User Name9&#34;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="nt">&#34;write&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&#34;User Name1&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;User Name2&#34;</span><span class="p">,</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div><h3 id="repo_by_userjson">REPO_BY_USER.json</h3>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;ApiGateway&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;User Name1&#34;</span><span class="p">:</span> <span class="s2">&#34;admin&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;User Name2&#34;</span><span class="p">:</span> <span class="s2">&#34;read&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;Read Only Source Access H3&#34;</span><span class="p">:</span> <span class="s2">&#34;read&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;Source Bridge&#34;</span><span class="p">:</span> <span class="s2">&#34;read&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;User Name3&#34;</span><span class="p">:</span> <span class="s2">&#34;write&#34;</span>
+  <span class="p">},</span>
+  <span class="nt">&#34;JIRA-voting&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;User Name1&#34;</span><span class="p">:</span> <span class="s2">&#34;admin&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;User Name3&#34;</span><span class="p">:</span> <span class="s2">&#34;admin&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;Read Only Source Access H3&#34;</span><span class="p">:</span> <span class="s2">&#34;read&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;Source Bridge&#34;</span><span class="p">:</span> <span class="s2">&#34;read&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;User Name5&#34;</span><span class="p">:</span> <span class="s2">&#34;read&#34;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div><h3 id="user_by_accessjson">USER_BY_ACCESS.json</h3>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;User Name1&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;admin&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&#34;repo-1&#34;</span><span class="p">,</span>
+      <span class="s2">&#34;repo-2&#34;</span>
+    <span class="p">],</span>
+    <span class="nt">&#34;write&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&#34;dive-testing-service&#34;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="nt">&#34;User Name2&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;read&#34;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&#34;pvt-sls-starter&#34;</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+</code></pre></div><h3 id="user_by_repojson">USER_BY_REPO.json</h3>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+  <span class="nt">&#34;User Name1&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;repo-1&#34;</span><span class="p">:</span> <span class="s2">&#34;admin&#34;</span><span class="p">,</span>
+    <span class="nt">&#34;repo-2&#34;</span><span class="p">:</span> <span class="s2">&#34;read&#34;</span>
+  <span class="p">},</span>
+  <span class="nt">&#34;User Name2&#34;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&#34;pvt-sls-starter&#34;</span><span class="p">:</span> <span class="s2">&#34;read&#34;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="err">}</span>
+</code></pre></div><p>These can be easily processed using JQ to retrieve any type of information, and together with permission file it can be used to quickly find out answers to administration related questions</p>
+<h2 id="examples">Examples</h2>
+<p>What repos does Juan have admin ccess to ?</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell">cat *.permissions <span class="p">|</span> grep admin <span class="p">|</span> grep <span class="s1">&#39;Juan&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/&#34;//g&#39;</span> <span class="p">|</span> cut -d<span class="s1">&#39;|&#39;</span> -f1
+dive-cx-account
+dive-cx-js-sdk
+dive-cx-ui
+....
+</code></pre></div><p>Who can access repo ApiGateway</p>
+<div class="highlight"><pre class="chroma"><code class="language-shell" data-lang="shell"> cat *.permissions <span class="p">|</span> sed <span class="s1">&#39;s/&#34;//g&#39;</span> <span class="p">|</span> grep ApiGateway  <span class="p">|</span> cut -d<span class="s1">&#39;|&#39;</span> -f2,3
+User Name1<span class="p">|</span>admin
+User Name2<span class="p">|</span><span class="nb">read</span>
+Miro Adamy<span class="p">|</span>admin
+Read Only Source Access H3<span class="p">|</span><span class="nb">read</span>
+Source Bridge<span class="p">|</span><span class="nb">read</span>
+....
+</code></pre></div><p><strong>NOTE</strong></p>
+<p>This was also published on <a href="https://blog.pivotree.cloud/2021-02-18-bitbucket-user-groups/">our cloud team blog</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Miro Adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-02-18
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2020 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          <a href="/tags/bitbucket/">bitbucket</a>
+          <a href="/tags/api/">API</a>
+          <a href="/tags/python/">python</a>
+          <a href="/tags/shell/">shell&#34;</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/posts/2021-02-17-mirroring-repos/">
+            <span class="next-text nav-default">How to mirror Github and Bitbucket repositories</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

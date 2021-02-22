@@ -10,7 +10,126 @@
   
   <url>
     <loc>https://miroadamy.com/status/</loc>
-    <lastmod>2020-12-28T16:56:31+00:00</lastmod>
+    <lastmod>2021-02-22T15:55:41+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/api/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/bitbucket/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/devops/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/git/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2021-02-18-bitbucket-user-groups/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/howto/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/python/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/shell/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/categories/version-control/</loc>
+    <lastmod>2021-02-18T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/tags/github/</loc>
+    <lastmod>2021-02-17T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2021-02-17-mirroring-repos/</loc>
+    <lastmod>2021-02-17T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2021-02-16-github-list-repos/</loc>
+    <lastmod>2021-02-16T13:00:00+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://miroadamy.com/posts/2021-02-15-bitbucket-list-repos/</loc>
+    <lastmod>2021-02-15T13:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24,20 +143,6 @@
   
   <url>
     <loc>https://miroadamy.com/categories/best-practices/</loc>
-    <lastmod>2020-11-23T13:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/categories/</loc>
-    <lastmod>2020-11-23T13:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/categories/devops/</loc>
     <lastmod>2020-11-23T13:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -72,13 +177,6 @@
   </url>
   
   <url>
-    <loc>https://miroadamy.com/</loc>
-    <lastmod>2020-11-23T13:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://miroadamy.com/tags/mkdocs/</loc>
     <lastmod>2020-11-23T13:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -86,21 +184,7 @@
   </url>
   
   <url>
-    <loc>https://miroadamy.com/posts/</loc>
-    <lastmod>2020-11-23T13:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://miroadamy.com/tags/restructuredtext/</loc>
-    <lastmod>2020-11-23T13:00:00+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/tags/</loc>
     <lastmod>2020-11-23T13:00:00+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -179,20 +263,6 @@
   <url>
     <loc>https://miroadamy.com/tags/cli/</loc>
     <lastmod>2020-05-14T21:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/tags/bitbucket/</loc>
-    <lastmod>2020-05-12T22:34:38+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/tags/git/</loc>
-    <lastmod>2020-05-12T22:34:38+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -416,13 +486,6 @@
   
   <url>
     <loc>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</loc>
-    <lastmod>2019-11-23T22:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/tags/github/</loc>
     <lastmod>2019-11-23T22:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -689,13 +752,6 @@
   
   <url>
     <loc>https://miroadamy.com/categories/programming/</loc>
-    <lastmod>2019-03-16T11:22:48+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://miroadamy.com/tags/python/</loc>
     <lastmod>2019-03-16T11:22:48+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

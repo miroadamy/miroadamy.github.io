@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-11-23T13:00:00+08:00" />
+<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 <meta name="twitter:card" content="summary"/>
@@ -116,6 +116,108 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2017-05-10-remote-svn/">Managing code in remote SVN repo</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2017-05-10 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 540 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      This is based on J.&rsquo;s' question in Slack:
+ Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
+ The setup (as I understand it):
+ on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly  Options Use git-svn bridge Git client allows to &ldquo;pretend&rdquo; it is SVN and pull/push against remote SVN repo
+    </div>
+    <div class="read-more">
+      <a href="/posts/2017-05-10-remote-svn/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-11-02-pensieve-to-bitbucket/">Process for transferring Git repo from Gitolite to Bitbucket</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-11-02 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 766 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
+User setup  List all keys in Gitolite must have access to Gitolite admin interface  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-11-02-pensieve-to-bitbucket/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-09-05-git-update-all-local-branches/">Update all local branches in Git repo</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-09-05 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 682 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Update all local branches in Git repo Issue: The git pull updates just one current branch.
+In DevOps I am following many Git repos and need to keep up to date for all local branches.
+git ffwd-update command Source: http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches
+Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
+#!/bin/bash  main() { REMOTES=&#34;$@&#34;; if [ -z &#34;$REMOTES&#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &#34;$REMOTES&#34; | xargs -n1 echo) CLB=$(git branch -l|awk &#39;/^\*/{print $2}&#39;); echo &#34;$REMOTES&#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \  | awk &#39;/merges with remote/{print $5&#34; &#34;$1}&#39; \  | while read line; do RB=$(echo &#34;$line&#34;|cut -f1 -d&#34; &#34;); ARB=&#34;refs/remotes/$REMOTE/$RB&#34;; LB=$(echo &#34;$line&#34;|cut -f2 -d&#34; &#34;); ALB=&#34;refs/heads/$LB&#34;; NBEHIND=$(( $(git rev-list --count $ALB.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-09-05-git-update-all-local-branches/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-05-30-linux-resources/">Learning resources for Linux and Command line</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-05-30 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 338 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      This quick summary to answer Megha Maiya&rsquo;s question - I am adding to the Wiki in case it can be expanded later useful for somebody else:
+ expanded later useful for somebody else  Free resources There is HUGE amount of resources available for Linux and Unix out there. The issue is select those reasonably good
+ List of lists: https://github.com/learnbyexample/scripting_course/blob/master/Linux_curated_resources.md http://ryanstutorials.net/, specially http://ryanstutorials.net/linuxtutorial/ and http://ryanstutorials.net/linuxtutorial/ http://www.tutorialspoint.com/unix/unix-getting-started.htm (bash scripting) - https://bash.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-05-30-linux-resources/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2016-05-17-docker-osx/">Native OS-X Docker (Beta) - not quite there yet</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2016-05-17 </span>
@@ -135,111 +237,6 @@ Good news 2 It works for several images I tried.
     </div>
     <div class="read-more">
       <a href="/posts/2016-05-17-docker-osx/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-24-acc-on-osx/">Starting ACC (ATG Control Centre) on OS-X</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-03-24 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 101 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Copy the installation of ACC for respective version from a Linux VM:
-The startup script in bin/startClient will fail, because it cannot determine which Java to use to run the app.
-It is trying to determine Unix flavour, failing that defaults to Solaris and ends up with invalid settings.
-Fix Set the variable JAVA_VM to path to executable command on your system.
-which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java export JAVA_VM=/Library/Java/JavaVirtualMachines/jdk1.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-03-24-acc-on-osx/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-23-gitbits2/">Git bits 2</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-03-23 </span>
-      <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
-          </div>
-        <span class="more-meta"> 202 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Using the Scala source repo to demonstrate - see Github
-Show merged and unmerged branches This command allows you to show all local branches merged / unmerged to current branch
-➜ scala git:(2.12.x) git branch -a --merged * 2.12.x remotes/origin/2.11.x remotes/origin/2.12.x remotes/origin/HEAD -&gt; origin/2.12.x ➜ scala git:(2.12.x) git branch -a --no-merged remotes/origin/2.10.x remotes/origin/2.8.x remotes/origin/2.9.x remotes/origin/DarkDimius-patch-1 remotes/origin/gh-pages remotes/origin/legacy/msil This shows you all local branches merged into named branch:
-➜ scala git:(2.12.x) git branch -a --merged origin/2.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-03-23-gitbits2/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-22-git-unmerged/">Git - find unmerged commits</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-03-22 </span>
-      <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
-          </div>
-        <span class="more-meta"> 990 words </span>
-        <span class="more-meta"> 5 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      This is Ruby script I found way back and was using it since.
-The credits for creation goes to Zach Dennis. The script is decribed in his blog post
-The source is here
-Example This is beginning of very long output from Groovy source
-The code #!/usr/bin/env ruby require &#39;rubygems&#39; gem &#39;term-ansicolor&#39;, &#39;&gt;=1.0.5&#39; require &#39;term/ansicolor&#39; class GitCommit attr_reader :content def initialize(content) @content = content end def sha @content.split[1] end def to_s `git log --pretty=format:&#34;%h %ad %an - %s&#34; #{sha}~1.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-03-22-git-unmerged/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-21-gitbits1/">Git committer activity</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-03-21 </span>
-      <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
-          </div>
-        <span class="more-meta"> 670 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Git command git shortlog is very handy to see what is team activity.
-Show committer activity - whole project (output shortened to first 20 lines)
-git shortlog -sn | head -20 2991	Paul King 1757	Cedric Champeau 1615	Jochen Theodorou 1031	James Strachan 749	Guillaume Laforge 312	Roshan Dawrani 306	Jason Dillon 301	Danno Ferrin 284	Alex Tkachman 273	PascalSchumacher 230	John Wilson 217	Pascal Schumacher 204	pascalschumacher 160	Thibault Kruse 158	Jeremy Rayner 134	Russel Winder 123	Cédric Champeau 122	Hamlet D&#39;Arcy 116	Dierk Koenig 104	Pilho Kim variant (without n) has different ordering:
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-03-21-gitbits1/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -291,7 +288,7 @@ git shortlog -sn | head -20 2991	Paul King 1757	Cedric Champeau 1615	Jochen Theo
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2020
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

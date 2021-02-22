@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-11-23T13:00:00+08:00" />
+<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 <meta name="twitter:card" content="summary"/>
@@ -116,6 +116,109 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2012-04-08-quickview/">How to make unregistered files work in Quick View on OS-X</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-04-08 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 73 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Out of the box Quick View (press Space in Finder) behaviour on unregistered files is not very useful: it shows huge Unix icon instead of content of file.
+This is default for files like Makefile or build.gradle
+This plugin makes it go away and show text file for all UTIs that are plain text: http://whomwah.github.com/qlstephen/
+Installation:
+ open the DMG file copy QLStephen.qlgenerator to /Users/&lt;&lt;USERNAME&gt;&gt;/Library/QuickLook/QLStephen.qlgenerator  That&rsquo;s it.
+Now it looks like this:
+    </div>
+    <div class="read-more">
+      <a href="/posts/2012-04-08-quickview/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2012-04-07-gollum/">GitHub &#43; Gollum vs BitBucket Wiki</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-04-07 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> technology </a>
+          </div>
+        <span class="more-meta"> 74 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+       both Wikis are backed by Git repo both allow local edit  Gollum See https://github.com/github/gollum#readme
+Installation: http://alblue.bandlem.com/2011/05/git-tip-of-week-gollum.html
+ sudo gem install gollum
+ Running git init TestWiki gollum --page-file-dir wiki TestWiki openurl http://localhost:4567 Parsers - separate install gem install rdiscount gem install wikicloth Get Wiki for repo git clone URL URL: - git@github.com:radegast/dotvim.wiki.git R+W - https://radegast@github.com/radegast/dotvim.wiki.git R+W - git://github.com/radegast/dotvim.wiki.git R Pros  multiple markups supports Markdown List of all pages  Questions  How to link to page in subdir  
+    </div>
+    <div class="read-more">
+      <a href="/posts/2012-04-07-gollum/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2012-04-02-atg-module-graph/">ATG module graph</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-04-02 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 318 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Notes from weekend hack: Project is in Bitbucket - https://bitbucket.org/miroadamy/atgdiagram/overview
+Run in Diagrams/ATGDiagram
+Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStore.eStore &gt;uml/test2.uml Radegast:ATGDiagram miro$ ./processUml.sh uml/test2.uml Radegast:ATGDiagram miro$ open uml/test2.png Radegast:ATGDiagram miro$ =&gt; Output test2.uml
+ the &lsquo;.&rsquo; in names is converted to &lsquo;_&rsquo; - GraphViz does not like it the &lsquo;-&rsquo; in names detto  Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2 Using /opt/ATG/ATG10.0.2 installation Dependants of module TWeStore.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2012-04-02-atg-module-graph/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2012-03-30-diagram-generation/">Diagram generation - plain text approach</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2012-03-30 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 306 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      GraphViz  installed from package See http://www.graphviz.org/  Radegast:diagrams miro$ dot -V dot - graphviz version 2.28.0 (20110509.1545) Radegast:diagrams miro$ which dot dot is /usr/local/bin/dot SchemaSpy  installed in /opt/diagrams see http://schemaspy.sourceforge.net/  Radegast:schemaSpy miro$ java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/java/jdbc/mysql-connector-java-5.1.7-bin.jar -t mysql -o library -host localhost -u twt_dX_core -db twt_dX_core -p twt_dX_core Using database properties: [./schemaSpy_5.0.0.jar]/net/sourceforge/schemaspy/dbTypes/mysql.properties Gathering schema details....................................................................................................................................................................................................................................................................................................................................................(36sec) Writing/graphing summary..... .......(353sec) Writing/diagramming details.................................................................................................................................................................................................................................................................................................................................................(104sec) Wrote relationship details of 337 tables/views to directory &#39;library&#39; in 494 seconds.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2012-03-30-diagram-generation/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2012-03-25-few-git-tricks/">Few gitbits to remember</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2012-03-25 </span>
@@ -138,104 +241,6 @@ Create the branch experimental in the origin repository by copying the current e
     </div>
     <div class="read-more">
       <a href="/posts/2012-03-25-few-git-tricks/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-03-21-remote-origin/">How to fix the remote origin from read only</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-03-21 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 311 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Issue In dotvim repo, I used readonly URL for cloning the repository. Now I have created local branch ( linux-vm ) to track Linux specific font settings and need them to push up.
-After creating new SSH pair and adding to GitHub, does not work
-[tkuser@cplx-dev-vf .vim]$ git status # On branch linux-vm nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm fatal: remote error: You can&#39;t push to git://github.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2012-03-21-remote-origin/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-02-15-miro-manifesto/">Miro Manifesto</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2012-02-15 </span>
-      <div class="post-category">
-          <a href="/categories/technology/"> technology </a>
-          <a href="/categories/startup-life/"> startup-life </a>
-          </div>
-        <span class="more-meta"> 2360 words </span>
-        <span class="more-meta"> 12 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Miro Manifesto Original text of the memo, written in February 2012 and shared with limited audience, until it surfaced up as main them of the planning meeting in December 2012.
-This is an attempt to come up with better answers to the following questions:
- what issues and challenges I see on our way ahead from the technology point of view and what needs to be done to address them where do I see my professional and personal career go over next 12 to 18 months and in long run how to best align those two streams  In the spirit of my latest “back to the basics” obsession, it was written in Markdown format and in Vi, copied and pasted into Google Doc, btw.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2012-02-15-miro-manifesto/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/">Tomcat 5 not reloading changes in JSP</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2011-07-24 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 513 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that. I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2011-07-11-google-is-superset-of-both-facebook-and-twitter/">Google&#43; is superset of both Facebook and Twitter</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2011-07-11 </span>
-      <div class="post-category">
-          <a href="/categories/general/"> general </a>
-          </div>
-        <span class="more-meta"> 522 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      It may be too early to express opinions about something so new as Google+, but in the short few days I was playing with it, I started to like it a lot. Many bloggers consider it to be a Facebook killer - and it (unlike two previous Google attempts on social networking) eventually may become that. Conceptually, however it is much closer to Twitter than Facebook.
-The biggest difference is that in G+ there is no peer relation - "
-    </div>
-    <div class="read-more">
-      <a href="/posts/2011-07-11-google-is-superset-of-both-facebook-and-twitter/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -287,7 +292,7 @@ The biggest difference is that in G+ there is no peer relation - "
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2020
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

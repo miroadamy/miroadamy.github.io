@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-11-23T13:00:00+08:00" />
+<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 <meta name="twitter:card" content="summary"/>
@@ -116,6 +116,106 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-05-22-ssh-issue/">How to solve &#39;Agent admitted failure to sign using the key&#39;</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-05-22 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 328 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      After re-creating the SSH key, I got the above error from Gitolite.
+Full trace:
+➜ TWC ssh -v thinkwrap@pensieve.thinkwrap.com OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013 debug1: Reading configuration data /etc/ssh/ssh_config debug1: Applying options for * debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22. debug1: Connection established. debug1: identity file /home/thinkwrap/.ssh/identity type -1 debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1 debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1 debug1: identity file /home/thinkwrap/.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-05-22-ssh-issue/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-04-11-jboss-shutdown/">Fixing the shutdown problem with JBoss</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-04-11 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 307 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Observed at QA environment. During automated shutdown sequence, the exception was thrown:
+$ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-04-11-jboss-shutdown/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-03-20-git-project-stat/">Git project statistic tool</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-03-20 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 423 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Git Inspector Python based, requires Python 2.6+
+Works OOTB on Mac
+Installation  Download TAR from https://code.google.com/p/gitinspector/ unzipped to  /opt/gitinspector-0.3.2: total 52K -rw-r--r-- 1 miro 999 Jul 29 2013 DESCRIPTION.txt -rw-r--r-- 1 miro 32K Jun 14 2013 LICENSE.txt -rw-r--r-- 1 miro 78 Jul 2 2013 MANIFEST.in -rw-r--r-- 1 miro 681 Jan 13 2014 README.txt drwxr-xr-x 45 miro 1.5K Mar 20 16:06 gitinspector -rw-r--r-- 1 miro 1.9K Jan 14 2014 setup.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-03-20-git-project-stat/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-03-10-git-log-output-less/">How to keep git log and less output on the screen</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-03-10 </span>
+      <div class="post-category">
+          <a href="/categories/lifehacks/"> lifehacks </a>
+          </div>
+        <span class="more-meta"> 123 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.
+Just for git commands:
+git config --global --replace-all core.pager &#34;less -iXFR&#34; For less globally (including git) - add to .bashrc / .zshrc / etc:
+export LESS=-iXFR The options we set for less are:
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-03-10-git-log-output-less/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2015-02-16-grasshoper/">New image that expresses my new undefined job title</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2015-02-16 </span>
@@ -136,109 +236,6 @@ It is uncertain how good is all this - but as they say:
     </div>
     <div class="read-more">
       <a href="/posts/2015-02-16-grasshoper/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-02-05-unmerged/">Finding unmerged commits in all branches</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-02-05 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 666 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      This one goes beyond git, but is very useful. Ruby script that produces this:
-Here is the script
-#!/usr/bin/env ruby require &#39;rubygems&#39; gem &#39;term-ansicolor&#39;, &#39;=1.3.0&#39; require &#39;term/ansicolor&#39; class GitCommit attr_reader :content def initialize(content) @content = content end def sha @content.split[1] end def to_s `git log --pretty=format:&#34;%h %ad %an - %s&#34; #{sha}~1..#{sha}` end def unmerged? content =~ /^\+/ end def equivalent? content =~ /^\-/ end end class GitBranch attr_reader :name, :commits def initialize(name, commits) @name = name @commits = commits end def unmerged_commits commits.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-02-05-unmerged/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-11-04-atg-repo-visualizer/">ATG Repository structure visualizer</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-11-04 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 310 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      The groovy script does parse the XML files (scraped from dyn-admin, or output of the XML combine) and produces file in the syntax of Plant UML - http://plantuml.sourceforge.net
-if (args.size() == 0) { println &#34;Usage: groovy extractItems.groovy XMLFILE-IN-GSA-FORMAT.xml&#34; System.exit(1) } def gsaFile = new XmlSlurper().parseText(new File(args[0]).text) def desc = gsaFile.&#39;item-descriptor&#39; def processItemDescriptor(myDesc) { def info = [:] def tables = [] def props = [:] def descriptors = [:] for (table in myDesc.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-11-04-atg-repo-visualizer/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-11-02-bsd-grep-gnu/">Replace BSD grep with GNU grep</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-11-02 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 169 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      If annoyed with: ➜ ~ echo $PATH | tr &#39;:&#39; &#39;\n&#39; /usr/local/opt/coreutils/libexec/gnubin /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin /opt/ant/bin /opt/groovy/bin /opt/gradle/bin /Users/miro/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /usr/texbin # YEs I am using GNU core utils but grep is not there # The issue ➜ ~ grep --version grep (BSD grep) 2.5.1-FreeBSD Here is the receipt
-http://www.heystephenwood.com/2013/09/install-gnu-grep-on-mac-osx.html
-Did not install it as the issue was not with grep:
-Instead, use findInJars.sh
-➜ ~ cat ~/bin/findInJars.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-11-02-bsd-grep-gnu/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-10-14-java6required/">Dealing with &#39;Java Runtime SE 6&#39; required error</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-10-14 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 148 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      When trying to start DBeaver (http://dbeaver.jkiss.org) I got this
-I do have Java 7 installed:
-➜ Contents java -version java version &#34;1.7.0_55&#34; Java(TM) SE Runtime Environment (build 1.7.0_55-b13) Java HotSpot(TM) 64-Bit Server VM (build 24.55-b03, mixed mode) ➜ Contents which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java which should be a superset. But it is not.
-Solution Oracle seems to screw up the PLIST capabilities in JAva7 install
-Go to
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-10-14-java6required/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -290,7 +287,7 @@ Go to
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2020
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

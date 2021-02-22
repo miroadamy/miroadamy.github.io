@@ -6,7 +6,7 @@
     <description>Recent content on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 23 Nov 2020 13:00:00 +0800</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 Feb 2021 13:00:00 +0800</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://miroadamy.com/about/</link>
@@ -22,14 +22,58 @@ Contact Email me - firstname dot lastname, at Sergei&amp;rsquo;s and Larry&amp;r
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Mon, 28 Dec 2020 16:56:31 +0000</pubDate>
+      <pubDate>Mon, 22 Feb 2021 15:55:41 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
       <description>Status Hugo Static Site Generator v0.79.0/extended darwin/amd64 BuildDate: unknown
 Pygments version 2.4.2, (c) 2006-2019 by Georg Brandl.
-Blog commit: 2a5be482efa4fed663ef2cc7db87490ee5b9749b
+Blog commit: 5acfe61d66f0d99a368a0f979a11bab1fa57a8ab
 Theme commit: d39d3e443953caea05510b19fdd7a259c71a0ab3
-Published: &amp;ldquo;2020-12-28T16:56:31Z&amp;rdquo;</description>
+Published: &amp;ldquo;2021-02-22T15:55:41Z&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>How to monitor Bitbucket user and group permissions with API</title>
+      <link>https://miroadamy.com/posts/2021-02-18-bitbucket-user-groups/</link>
+      <pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2021-02-18-bitbucket-user-groups/</guid>
+      <description>How to manage users and groups in Bitbucket Use case:
+I want to maintain users and groups and their access to repositories in an organization in Bitbucket. To make sure I do not miss newly changed admin access, I want to use the Bitbucket API to retrieve the list of permissions on repository basis and on user/group bases.
+Setup Bitbucket requires a username and password to access the API. This information is stored in environment variables BBUSER and BBPASSWORD.</description>
+    </item>
+    
+    <item>
+      <title>How to mirror Github and Bitbucket repositories</title>
+      <link>https://miroadamy.com/posts/2021-02-17-mirroring-repos/</link>
+      <pubDate>Wed, 17 Feb 2021 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2021-02-17-mirroring-repos/</guid>
+      <description>Mirroring large number of GitHub or Bitbucket repositories Use case:
+I want to create local clone of a large number of repositories from an organization in GitHub / Bitbucket.
+Assumptions  user has SSH key registered with the GH / BB - can clone using ssh protocol user has successfully cloned at least one repo from command line before (the /etc/hosts contains host entries for BB and GH) user has modern version of Python 3 installed (3.</description>
+    </item>
+    
+    <item>
+      <title>How to list Github repositories and users</title>
+      <link>https://miroadamy.com/posts/2021-02-16-github-list-repos/</link>
+      <pubDate>Tue, 16 Feb 2021 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2021-02-16-github-list-repos/</guid>
+      <description>How to list repositories in GitHub Use Case:
+I want to maintain repositories in an organization in GitHub. To make sure I do not miss newly added ones, I want to use API access to retrieve the list of repositories in the organization.
+Setup GitHub requires a token to access the API. This token is stored in an environment variable github_token and can be generated in the user profile section - settings - developer settings.</description>
+    </item>
+    
+    <item>
+      <title>How to list Bitbucket repositories and users</title>
+      <link>https://miroadamy.com/posts/2021-02-15-bitbucket-list-repos/</link>
+      <pubDate>Mon, 15 Feb 2021 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2021-02-15-bitbucket-list-repos/</guid>
+      <description>How to list repositories in Bitbucket Use case:
+I want to maintain repositories in an organization in Bitbucket. To make sure I do not miss newly added ones, I want to use API access to retrieve the list of all repositories in the organization.
+Setup Bitbucket requires a username and password to access the API. This information is stored in the environment variables BBUSER and BBPASSWORD. The BBPASSWORD should be an access token / app password defined in the App passwords section of the user settings:</description>
     </item>
     
     <item>

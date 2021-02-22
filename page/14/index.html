@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-11-23T13:00:00+08:00" />
+<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 <meta name="twitter:card" content="summary"/>
@@ -116,6 +116,111 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-24-acc-on-osx/">Starting ACC (ATG Control Centre) on OS-X</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-03-24 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 101 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Copy the installation of ACC for respective version from a Linux VM:
+The startup script in bin/startClient will fail, because it cannot determine which Java to use to run the app.
+It is trying to determine Unix flavour, failing that defaults to Solaris and ends up with invalid settings.
+Fix Set the variable JAVA_VM to path to executable command on your system.
+which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java export JAVA_VM=/Library/Java/JavaVirtualMachines/jdk1.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-03-24-acc-on-osx/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-23-gitbits2/">Git bits 2</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-03-23 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 202 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Using the Scala source repo to demonstrate - see Github
+Show merged and unmerged branches This command allows you to show all local branches merged / unmerged to current branch
+➜ scala git:(2.12.x) git branch -a --merged * 2.12.x remotes/origin/2.11.x remotes/origin/2.12.x remotes/origin/HEAD -&gt; origin/2.12.x ➜ scala git:(2.12.x) git branch -a --no-merged remotes/origin/2.10.x remotes/origin/2.8.x remotes/origin/2.9.x remotes/origin/DarkDimius-patch-1 remotes/origin/gh-pages remotes/origin/legacy/msil This shows you all local branches merged into named branch:
+➜ scala git:(2.12.x) git branch -a --merged origin/2.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-03-23-gitbits2/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-22-git-unmerged/">Git - find unmerged commits</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-03-22 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 990 words </span>
+        <span class="more-meta"> 5 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      This is Ruby script I found way back and was using it since.
+The credits for creation goes to Zach Dennis. The script is decribed in his blog post
+The source is here
+Example This is beginning of very long output from Groovy source
+The code #!/usr/bin/env ruby require &#39;rubygems&#39; gem &#39;term-ansicolor&#39;, &#39;&gt;=1.0.5&#39; require &#39;term/ansicolor&#39; class GitCommit attr_reader :content def initialize(content) @content = content end def sha @content.split[1] end def to_s `git log --pretty=format:&#34;%h %ad %an - %s&#34; #{sha}~1.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-03-22-git-unmerged/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-21-gitbits1/">Git committer activity</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-03-21 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 670 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Git command git shortlog is very handy to see what is team activity.
+Show committer activity - whole project (output shortened to first 20 lines)
+git shortlog -sn | head -20 2991	Paul King 1757	Cedric Champeau 1615	Jochen Theodorou 1031	James Strachan 749	Guillaume Laforge 312	Roshan Dawrani 306	Jason Dillon 301	Danno Ferrin 284	Alex Tkachman 273	PascalSchumacher 230	John Wilson 217	Pascal Schumacher 204	pascalschumacher 160	Thibault Kruse 158	Jeremy Rayner 134	Russel Winder 123	Cédric Champeau 122	Hamlet D&#39;Arcy 116	Dierk Koenig 104	Pilho Kim variant (without n) has different ordering:
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-03-21-gitbits1/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2016-03-20-gitinspector/">Git project statistic tool</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2016-03-20 </span>
@@ -135,103 +240,6 @@ Installation  Download TAR from Github unzipped to /opt  ➜ ll /opt/gitinspecto
     </div>
     <div class="read-more">
       <a href="/posts/2016-03-20-gitinspector/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-16-docker-machine-error-after-upgrade/">Fixing docker-machine error after upgrade</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-03-16 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 387 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I had to upgrade docker toolbox on Yosemite to get latest docker-compose additions.
-After installing the new package, I was not able to connect to docker machine:
-➜ ~ docker-machine status Stopped ➜ ~ docker-machine start default Starting &#34;default&#34;... (default) Check network to re-create if needed... (default) Waiting for an IP... Machine &#34;default&#34; was started. Waiting for SSH to be available... Detecting the provisioner... Started machines may have new IP addresses.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-03-16-docker-machine-error-after-upgrade/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-02-18-access-aws-servers/">Accessing internal AWS servers directly from Mac</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-02-18 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 723 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.
-The credit for finding out about approach is blog post by James McOrmond - VPN over SSH - who is using this neat trick from Linux for quite some time.
-The software mentioned https://github.com/apenwarr/sshuttle supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).
-    </div>
-    <div class="read-more">
-      <a href="/posts/2016-02-18-access-aws-servers/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-12-22-p4merge/">p4merge as default file compare for PathFinder</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-12-22 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 36 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      p4merge as default file compare for PathFinder Set the tool in File Comparison
-How to use it  Select 2 files, right click, compare from context menu In dual mode, select one file on each side, compare  
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-12-22-p4merge/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-12-11-docker-starting/">Docker - getting started</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-12-11 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 199 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      After the reboot docker version Client: Version: 1.9.1 API version: 1.21 Go version: go1.4.3 Git commit: a34a1d5 Built: Fri Nov 20 17:56:04 UTC 2015 OS/Arch: darwin/amd64 Cannot connect to the Docker daemon. Is the docker daemon running on this host? ➜ gitolite-admin git:(master) docker-machine active No active host found ➜ gitolite-admin git:(master) docker-machine env default Error checking TLS connection: default is not running. Please start it in order to use the connection settings ➜ gitolite-admin git:(master) docker-machine start Error: Expected to get one or more machine names as arguments ➜ gitolite-admin git:(master) docker-machine start default (default) Starting VM.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-12-11-docker-starting/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -283,7 +291,7 @@ How to use it  Select 2 files, right click, compare from context menu In dual mo
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2020
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

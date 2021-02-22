@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>How to list Github repositories and users - Miro&#39;s World</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="miro adamy" /><meta name="description" content="Using command line tool to access Github/Bitbucket API - 2" /><meta name="keywords" content="blog, Miro" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.79.0 with theme even" />
+
+
+<link rel="canonical" href="https://miroadamy.com/posts/2021-02-16-github-list-repos/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="How to list Github repositories and users" />
+<meta property="og:description" content="Using command line tool to access Github/Bitbucket API - 2" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://miroadamy.com/posts/2021-02-16-github-list-repos/" />
+<meta property="article:published_time" content="2021-02-16T13:00:00+08:00" />
+<meta property="article:modified_time" content="2021-02-16T13:00:00+08:00" />
+<meta itemprop="name" content="How to list Github repositories and users">
+<meta itemprop="description" content="Using command line tool to access Github/Bitbucket API - 2">
+<meta itemprop="datePublished" content="2021-02-16T13:00:00+08:00" />
+<meta itemprop="dateModified" content="2021-02-16T13:00:00+08:00" />
+<meta itemprop="wordCount" content="726">
+
+
+
+<meta itemprop="keywords" content="git,github,api,shell," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to list Github repositories and users"/>
+<meta name="twitter:description" content="Using command line tool to access Github/Bitbucket API - 2"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Miro&#39;s World</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/posts/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Miro&#39;s World</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/posts/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">How to list Github repositories and users</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-02-16 </span>
+        <div class="post-category">
+            <a href="/categories/devops/"> devops </a>
+            <a href="/categories/version-control/"> version control </a>
+            <a href="/categories/howto/"> howto </a>
+            </div>
+          <span class="more-meta"> 726 words </span>
+          <span class="more-meta"> 4 mins read </span>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#setup">Setup</a></li>
+    <li><a href="#retrieving-the-list-of-organizations">Retrieving the list of organizations</a></li>
+    <li><a href="#retrieving-the-list-of-repositories-for-an-organization">Retrieving the list of repositories for an organization</a></li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="how-to-list-repositories-in-github">How to list repositories in GitHub</h1>
+<p><strong>Use Case</strong>:</p>
+<p>I want to maintain repositories in an organization in GitHub.  To make sure I do not miss newly added ones,
+I want to use API access to retrieve the list of repositories in the organization.</p>
+<h2 id="setup">Setup</h2>
+<p>GitHub requires a token to access the API.  This token is stored in an environment variable
+<code>github_token</code> and can be generated in the user profile section - settings - developer settings.</p>
+<p><img src="/img/bbgh/access-tokens.png" alt="app password ui"></p>
+<p>The variable <code>gh</code> represents the GitHub API URL.</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">gh</span><span class="o">=</span>https://api.github.com
+<span class="nb">export</span> <span class="nv">github_token</span><span class="o">=</span>&lt;your-secret-token&gt;
+</code></pre></div><p>I am using a personal shortcut by creating the file <code>~/.ssh/github-token.secret</code> with the content described above and importing them, unless the variables are already defined:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$github_token</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> importing the token from ~/.ssh/github-token.secret
+. ~/.ssh/github-token.secret<span class="o">)</span>
+<span class="k">fi</span>
+
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$github_token</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&#34;you must export variable github_token &#34;</span>
+    <span class="nb">exit</span> <span class="m">2</span>
+<span class="k">fi</span>
+</code></pre></div><h2 id="retrieving-the-list-of-organizations">Retrieving the list of organizations</h2>
+<p>With the configuration done above, you can run this command:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">curl -s -h <span class="s2">&#34;accept: application/vnd.github.v3+json&#34;</span> -h <span class="s2">&#34;authorization: token </span><span class="si">${</span><span class="nv">github_token</span><span class="si">}</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">gh</span><span class="si">}</span><span class="s2">/user/orgs&#34;</span> <span class="se">\
+</span><span class="se"></span>  <span class="p">|</span> jq <span class="s1">&#39;.[].login&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/&#34;//g&#39;</span>
+---
+thinkwrap
+pvtrlabs
+pivotree-tech-blog
+</code></pre></div><p>The output is list of all organizations for the currently authenticated user.</p>
+<p>the full script - <code>./gh-teams.sh</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$github_token</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> using token github_token from ~/.ssh/github-token.secret
+. ~/.ssh/github-token.secret
+<span class="k">fi</span>
+
+
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$ghteams</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+<span class="c1">#echo my teams</span>
+curl -s -h <span class="s2">&#34;accept: application/vnd.github.v3+json&#34;</span> -h <span class="s2">&#34;authorization: token </span><span class="si">${</span><span class="nv">github_token</span><span class="si">}</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">gh</span><span class="si">}</span><span class="s2">/user/orgs&#34;</span> <span class="se">\
+</span><span class="se"></span>  <span class="p">|</span> jq <span class="s1">&#39;.[].login&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/&#34;//g&#39;</span>
+<span class="k">else</span>
+ <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$ghteams</span><span class="s2">&#34;</span>
+<span class="k">fi</span>
+
+</code></pre></div><p>The output is list of all teams for the currently authenticated user.</p>
+<p>example:</p>
+<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">./gh-teams.sh
+thinkwrap
+pvtrlabs
+pivotree-tech-blog
+
+</code></pre></div><h2 id="retrieving-the-list-of-repositories-for-an-organization">Retrieving the list of repositories for an organization</h2>
+<p>With the configuration done above, you can run this command:</p>
+<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"> curl -s  -h <span class="s2">&#34;accept: application/vnd.github.v3+json&#34;</span> -h <span class="s2">&#34;authorization: token </span><span class="si">${</span><span class="nv">github_token</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>        <span class="s2">&#34;</span><span class="si">${</span><span class="nv">gh</span><span class="si">}</span><span class="s2">/orgs/</span><span class="si">${</span><span class="nv">username</span><span class="si">}</span><span class="s2">/repos?per_page=</span><span class="si">${</span><span class="nv">pagelen</span><span class="si">}</span><span class="s2">&amp;page=</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">
+</span><span class="s2">        
+</span></code></pre></div><p>where <code>username</code> is the name of the organization or user that owns the repositories.</p>
+<p>For this call we need to use paging because the default count of results GitHub returns is 30.
+We can retrieve the counts of repositories from the organization metadata.</p>
+<p>We need to loop for every page and store the JSON retrieved in temporary files.  These JSON files are
+then processed and generate the <code>.gh-repos</code> file in the same format as the BitBucket case:</p>
+<p><code>projectname|git_url</code></p>
+<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">src|git@github.com:pivotree-tech-blog/hugo101.git
+src|git@github.com:pivotree-tech-blog/pivotree-tech-blog-source-poc.git
+src|git@github.com:pivotree-tech-blog/pivotree-tech-blog.github.io.git
+src|git@github.com:pivotree-tech-blog/story.git
+</code></pre></div><p>The script expects 1 argument - the name of the organization or user:</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
+</span><span class="cp"></span><span class="nb">set</span> -e
+
+<span class="nv">progname</span><span class="o">=</span><span class="k">$(</span>basename <span class="nv">$0</span><span class="k">)</span>
+
+die<span class="o">()</span> <span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$progname</span><span class="s2">: </span><span class="nv">$*</span><span class="s2">&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="o">}</span>
+
+usage<span class="o">()</span> <span class="o">{</span>
+    <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> !<span class="o">=</span> <span class="s2">&#34;&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+        <span class="nb">echo</span> <span class="s2">&#34;error: </span><span class="nv">$*</span><span class="s2">&#34;</span>
+    <span class="k">fi</span>
+
+    cat <span class="s">&lt;&lt; eof
+</span><span class="s">usage: $progname [option ...] gh-team-or-user-name
+</span><span class="s">generate the list of the repositiories for given team or used
+</span><span class="s">options:
+</span><span class="s">-h, --help             display this usage message and exit
+</span><span class="s">-d, --debug            set debug = true
+</span><span class="s">eof</span>
+
+    <span class="nb">exit</span> <span class="m">1</span>
+<span class="o">}</span>
+
+<span class="nv">debug</span><span class="o">=</span><span class="m">0</span>
+<span class="nv">username</span><span class="o">=</span><span class="s2">&#34;undefined&#34;</span>
+
+<span class="k">if</span> <span class="o">[</span> <span class="nv">$#</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> missing argument: github team
+    usage
+<span class="k">fi</span>
+
+<span class="k">while</span> <span class="o">[</span> <span class="nv">$#</span> -gt <span class="m">0</span> <span class="o">]</span> <span class="p">;</span> <span class="k">do</span>
+    <span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
+    -h<span class="p">|</span>--help<span class="o">)</span>
+        usage
+        <span class="p">;;</span>
+    -d<span class="p">|</span>--debug<span class="o">)</span>
+        <span class="nv">debug</span><span class="o">=</span><span class="m">1</span>
+        <span class="p">;;</span>
+    -*<span class="o">)</span>
+        usage <span class="s2">&#34;unknown option &#39;</span><span class="nv">$1</span><span class="s2">&#39;&#34;</span>
+        <span class="p">;;</span>
+    *<span class="o">)</span>
+        <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$username</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;undefined&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+            <span class="nv">username</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span>
+        <span class="k">else</span>
+            usage <span class="s2">&#34;too many arguments&#34;</span>
+        <span class="k">fi</span>
+        <span class="p">;;</span>
+    <span class="k">esac</span>
+    <span class="nb">shift</span>
+<span class="k">done</span>
+
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$github_token</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+  <span class="nb">echo</span> importing the token from ~/.ssh/github-token.secret
+. ~/.ssh/github-token.secret<span class="o">)</span>
+<span class="k">fi</span>
+
+<span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$github_token</span><span class="s2">&#34;</span> <span class="o">]</span> <span class="p">;</span> <span class="k">then</span>
+    <span class="nb">echo</span> <span class="s2">&#34;you must export variable github_token &#34;</span>
+    <span class="nb">exit</span> <span class="m">2</span>
+<span class="k">fi</span>
+
+
+<span class="c1"># display info about the user</span>
+
+<span class="nb">echo</span> logged on as user
+curl -s -h  -h <span class="s2">&#34;accept: application/vnd.github.v3+json&#34;</span> -h <span class="s2">&#34;authorization: token </span><span class="si">${</span><span class="nv">github_token</span><span class="si">}</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">gh</span><span class="si">}</span><span class="s2">/user&#34;</span> <span class="se">\
+</span><span class="se"></span>  <span class="p">|</span> jq <span class="s1">&#39;{login, id, html_url, name, public_repos, total_private_repos}&#39;</span>
+
+
+curl -s -h  -h <span class="s2">&#34;accept: application/vnd.github.v3+json&#34;</span> -h <span class="s2">&#34;authorization: token </span><span class="si">${</span><span class="nv">github_token</span><span class="si">}</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">gh</span><span class="si">}</span><span class="s2">/orgs/</span><span class="si">${</span><span class="nv">username</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>    &gt; <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-ghteam-info.json
+
+<span class="nb">echo</span> team info - see <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-ghteam-info.json
+
+<span class="c1"># produce list of the repositories in format slug=repo</span>
+<span class="c1"># echo curl -s -u $creds &#34;${bb}/${team}?pagelen=${pagelen}&#34;</span>
+<span class="nv">entries</span><span class="o">=</span><span class="k">$(</span>curl -s -h  -h <span class="s2">&#34;accept: application/vnd.github.v3+json&#34;</span> -h <span class="s2">&#34;authorization: token </span><span class="si">${</span><span class="nv">github_token</span><span class="si">}</span><span class="s2">&#34;</span> <span class="s2">&#34;</span><span class="si">${</span><span class="nv">gh</span><span class="si">}</span><span class="s2">/orgs/</span><span class="si">${</span><span class="nv">username</span><span class="si">}</span><span class="s2">&#34;</span> <span class="p">|</span> jq <span class="s1">&#39;[.total_private_repos, .public_repos] | add&#39;</span><span class="k">)</span>
+<span class="nv">pagelen</span><span class="o">=</span><span class="m">100</span>
+<span class="nv">pages</span><span class="o">=</span><span class="k">$(</span>expr <span class="nv">$entries</span> / <span class="nv">$pagelen</span> <span class="s2">&#34;+&#34;</span> 1<span class="k">)</span>
+
+<span class="nb">echo</span> the team <span class="nv">$username</span> has <span class="nv">$entries</span> repos in <span class="nv">$pages</span> pages
+
+<span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$pages</span><span class="k">)</span>
+    <span class="k">do</span>
+      curl -s  -h <span class="s2">&#34;accept: application/vnd.github.v3+json&#34;</span> -h <span class="s2">&#34;authorization: token </span><span class="si">${</span><span class="nv">github_token</span><span class="si">}</span><span class="s2">&#34;</span> <span class="se">\
+</span><span class="se"></span>        <span class="s2">&#34;</span><span class="si">${</span><span class="nv">gh</span><span class="si">}</span><span class="s2">/orgs/</span><span class="si">${</span><span class="nv">username</span><span class="si">}</span><span class="s2">/repos?per_page=</span><span class="si">${</span><span class="nv">pagelen</span><span class="si">}</span><span class="s2">&amp;page=</span><span class="si">${</span><span class="nv">i</span><span class="si">}</span><span class="s2">&#34;</span> &gt; <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-repo-<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.json
+<span class="k">done</span>
+
+<span class="k">for</span> i in <span class="k">$(</span>seq <span class="m">1</span> <span class="nv">$pages</span><span class="k">)</span> 
+<span class="k">do</span> 
+    jq <span class="s1">&#39;.[].ssh_url&#39;</span> &lt; <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-repo-<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.json <span class="p">|</span> sed <span class="s1">&#39;s/&#34;//g&#39;</span> <span class="p">|</span> awk <span class="s1">&#39;{print &#34;src|&#34; $1 }&#39;</span> &gt; <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-<span class="si">${</span><span class="nv">i</span><span class="si">}</span>.repos
+<span class="k">done</span>
+
+rm -f <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-repo-*.json
+
+<span class="c1"># make sure the file is empty/none - we will append</span>
+rm -f <span class="si">${</span><span class="nv">username</span><span class="si">}</span>.gh-repos
+
+cat <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-*.repos <span class="p">|</span> sort &gt;&gt;<span class="si">${</span><span class="nv">username</span><span class="si">}</span>.gh-repos
+
+rm <span class="si">${</span><span class="nv">username</span><span class="si">}</span>-*.repos
+
+<span class="nb">echo</span> see <span class="si">${</span><span class="nv">username</span><span class="si">}</span>.gh-repos
+</code></pre></div><p><strong>NOTE</strong></p>
+<p>This was also published on <a href="https://blog.pivotree.cloud/2021-02-16-github-list-repos/">our cloud team blog</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">miro adamy</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-02-16
+        
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content">(c) 2006-2020 Miro Adamy</span>
+  </p>
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          <a href="/tags/github/">github</a>
+          <a href="/tags/api/">api</a>
+          <a href="/tags/shell/">shell</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/posts/2021-02-17-mirroring-repos/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">How to mirror Github and Bitbucket repositories</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/posts/2021-02-15-bitbucket-list-repos/">
+            <span class="next-text nav-default">How to list Bitbucket repositories and users</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
+      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
+      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
+      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
+      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
+      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2006 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">olOwOlo</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

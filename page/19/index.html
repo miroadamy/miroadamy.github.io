@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-11-23T13:00:00+08:00" />
+<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 <meta name="twitter:card" content="summary"/>
@@ -116,6 +116,109 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-29-gitbits/">Gitbits - Get committer lists</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-09-29 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 197 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      With emails (Unix only) ➜ dev1 git:(miro-ui) ✗ git log --raw | grep &#34;^Author: &#34; | sort | uniq -c 9 Author: Brendan Smith &lt;Brendan.Smith@thinkwrap.com&gt; 22 Author: Kai Cheng &lt;kai.cheng@thinkwrap.com&gt; 97 Author: Miro Adamy &lt;miro.adamy@thinkwrap.com&gt; 49 Author: Training VM &lt;training-vm@thinkwrap.com&gt; 24 Author: Your Name &lt;your.name@thinkwrap.com&gt; Pure git ➜ dev1 git:(miro-ui) ✗ git shortlog -sen 97 Miro Adamy &lt;miro.adamy@thinkwrap.com&gt; 49 Training VM &lt;training-vm@thinkwrap.com&gt; 24 Your Name &lt;your.name@thinkwrap.com&gt; 22 Kai Cheng &lt;kai.cheng@thinkwrap.com&gt; 9 Brendan Smith &lt;Brendan.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-09-29-gitbits/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-23-shared-folder/">How to access shared folder in Linux guest in VirtualBox</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-09-23 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 132 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Make sure the VBOx extensions are installed.
+Go here for details:
+Add share In VirtualBox, Device add transient shared folder:
+This one has made available path /Users/Shared/ATG-11 under the name ATG-11
+Mount it sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x. 1 root 272 Sep 12 16:02 ATG11-docs -rw-rw-r--. 1 root 675 May 13 23:46 atg-platform-mac.userlibraries -rw-rw-r--. 1 root 787 May 13 23:17 atg-platform-vm.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-09-23-shared-folder/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-22-gitbit/">Git bit of the day</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-09-22 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 497 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Question from email:  how do I merge 1 file from master -&gt; LIVE
+ Answer You cannot. Merge operation creates new commit that has 2 or more parents and will always join full histories of the branches.
+You can however:
+ replicate all changes done in single commit to different branch - this is &ldquo;cherry pick&rdquo; take state of single file from different branch into current branch  How to replicate all changes done in single commit to different branch - &ldquo;cherry pick&rdquo; Say you have latest commit in master that contains change to two files you need.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-09-22-gitbit/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-16-logstash-error/">logstash - known error</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-09-16 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 288 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
+Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE
+What should work:
+grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] } What needs to be done instead
+You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-09-16-logstash-error/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2014-09-09-redo-graph/">Recreate txt base graph generator</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2014-09-09 </span>
@@ -139,109 +242,6 @@ Size is about 51 M for a small ATG install
     </div>
     <div class="read-more">
       <a href="/posts/2014-09-09-redo-graph/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-04-better-dynadmin/">Better dynadmin</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-04 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 134 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Source of the fix is https://github.com/jc7447/BetterDynAdmin. This is to capture the installation process and provide backup in case the tool disappears.
-The pages generated by DynAdmin are actually not coming from a JSP or JHTML pages. The HTML you see is generated by hardcoded servlets. Each Nucleus component has assigned Admin servet, which is called when DynAdmin is trying to render the page.
-The improvent here are user scripts - running inside Firefox or Chrome, utilizing infrastructure provided by Greasemonkey extension (FF) or Tampermonkey (Chrome).
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-09-04-better-dynadmin/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-03-atg-rant/">ATG &#43; JBoss rant</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-03 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 469 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Symptoms restarting after kill -9 of CSC instance does not succeed. The server never starts, the WAR files are not deployed properly, socket 8080 is open but nobody answers (not even with wget on localhost).
-The exception: &#34;main&#34; prio=10 tid=0x0000000051a39000 nid=0x30fb in Object.wait() [0x00002b5df9d6c000] java.lang.Thread.State: TIMED_WAITING (on object monitor) at java.lang.Object.wait(Native Method) - waiting on &lt;0x00000007e36ae9d0&gt; (a atg.service.lockmanager.ClientLockEntry) at atg.service.lockmanager.ClientLockEntry.acquireWriteLock(ClientLockEntry.java:399) - locked &lt;0x00000007e36ae9d0&gt; (a atg.service.lockmanager.ClientLockEntry) at atg.service.lockmanager.ClientLockManager.acquireWriteLock(ClientLockManager.java:1137) at atg.repository.search.indexing.ConfigStatePersister.acquireLock(ConfigStatePersister.java:1844) at atg.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-09-03-atg-rant/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-03-gitbits/">Few gitbits</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-09-03 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 319 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Show branches and tags in log  git log &ndash;oneline &ndash;decorate
- Even better - all branches with graph  git log &ndash;oneline &ndash;decorate &ndash;all &ndash;graph
- Highlight words instead of lines  git diff &ndash;word-diff HEAD~~~ HEAD~~
- Also works in git log -p and git show
-Better status  git status -sb
- Compare with gs == git status
-Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git name-rev --name-only 73c762c remotes/origin/2013-10-22-LIVE~3 Find which branch has a commit ➜ simstore-atg git:(master) ✗ git branch --contains 73c762c LIVE LIVE-140430 LIVE2 LIVE3 LIVE4 PATCH-ORS-140605 PATCH-ORS-140616 feature_us_shipping * master ➜ simstore-atg git:(master) ✗ git branch --contains 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 ➜ simstore-atg git:(master) ✗ git pull Updating ed81557.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-09-03-gitbits/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-08-28-elastic-tutorial/">Tutorial on Elastic</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-08-28 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 1658 words </span>
-        <span class="more-meta"> 8 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Running elastic (see Elastic search and Kibana - getting started)
- Use case: building a employee directory for Megacorp
-  each document - type of &lsquo;employee&rsquo; everything in megacorp index  Populating # Delete the `megacorp` index in case it already exists DELETE /megacorp # Index document 1, type &#34;employee&#34;, in the # &#34;megacorp&#34; index PUT /megacorp/employee/1 { &#34;first_name&#34; : &#34;John&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 25, &#34;about&#34; : &#34;I love to go rock climbing&#34;, &#34;interests&#34;: [ &#34;sports&#34;, &#34;music&#34; ] } # Index two more documents PUT /megacorp/employee/2 { &#34;first_name&#34; : &#34;Jane&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 32, &#34;about&#34; : &#34;I like to collect rock albums&#34;, &#34;interests&#34;: [ &#34;music&#34; ] } PUT /megacorp/employee/3 { &#34;first_name&#34; : &#34;Douglas&#34;, &#34;last_name&#34; : &#34;Fir&#34;, &#34;age&#34; : 35, &#34;about&#34;: &#34;I like to build cabinets&#34;, &#34;interests&#34;: [ &#34;forestry&#34; ] } In server
-    </div>
-    <div class="read-more">
-      <a href="/posts/2014-08-28-elastic-tutorial/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -293,7 +293,7 @@ Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remot
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2020
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

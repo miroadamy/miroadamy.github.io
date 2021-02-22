@@ -44,7 +44,7 @@
 <meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2020-11-23T13:00:00+08:00" />
+<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
 <meta itemprop="name" content="Miro&#39;s World">
 <meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
 <meta name="twitter:card" content="summary"/>
@@ -116,6 +116,105 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-10-16-endeca-oracle/">Endeca start scripts - Oracle way</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-10-16 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 239 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      I have ported the Oracle VM style management scripts into the Loyalty VM.
+The scripts are in the loyalty-endeca Git repo, originally in eVoucher branch but also merged into edc
+[tkuser@vm-lo1-hpr-ma endeca]$ ls -1 total 28 dev-check-environment.sh* dev-deploy-endeca-app.sh* dev-endeca-environmet.ini* dev-remove-endeca-app.sh* endeca-control* endeca-vars.txt* README.md* RewardsEndc/ dev-endeca-environmet.ini This is environment setting script.
+### MUST BE SOURCED IN source dev-endeca-environmet.ini ## or . dev-endeca-environmet.ini ## NEVER ./dev-endeca-environmet.ini endeca-control Main script that manages three components of the system named:
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-10-16-endeca-oracle/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-26-git-push-matching-simple/">Difference between matching and simple - Git push</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-09-26 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 717 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Git message
+Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. To squelch this message and maintain the current behavior after the default changes, use: git config --global push.default matching To squelch this message and adopt the new behavior now, use: git config --global push.default simple Options for push.default
+nothing - do not push anything. matching - push all matching branches. All branches having the same name in both ends are considered to be matching.
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-09-26-git-push-matching-simple/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-25-sublime-text-macro-timestamp/">Sublime text macro to insert timestamp</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-09-25 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> Programming </a>
+          </div>
+        <span class="more-meta"> 62 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      Sublime text macro to insert timestamp platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $ Documentation - see
+Installation: Add this to Keybindings / User
+![](/images/2013-09-23_8.02.19 PM.png)
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-09-25-sublime-text-macro-timestamp/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-24-screenshot-cli/">How to make screenshot from command line</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-09-24 </span>
+      <div class="post-category">
+          <a href="/categories/lifehacks/"> lifehacks </a>
+          </div>
+        <span class="more-meta"> 57 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      How to make screenshot from command line platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk First one is &ldquo;interactive&rdquo; - Cmd-Shift-3 with selection tool, second is full screen
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-09-24-screenshot-cli/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/posts/2013-09-16-vbox-shared-folder/">Case sensitivity and VirtualBox shared folder</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2013-09-16 </span>
@@ -138,109 +237,6 @@ cd ~/development/ATG/platform-edc touch zz zZ will create just single file.
     </div>
     <div class="read-more">
       <a href="/posts/2013-09-16-vbox-shared-folder/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-05-mc-color-scheme/">Usable mc color scheme</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-09-05 </span>
-      <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
-          </div>
-        <span class="more-meta"> 9 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Usable mc color scheme Edit
-~/.mc/ini
-insert
-[Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default 
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-09-05-mc-color-scheme/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-03-show-lock-screen-indicator/">Show lock screen indicator in OS-X menu</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-09-03 </span>
-      <div class="post-category">
-          <a href="/categories/technology/"> Technology </a>
-          </div>
-        <span class="more-meta"> 50 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Show lock screen indicator in OS-X menu After HDD reinstall I lost most of my customizations (by choice decided NOT to restore from TM).
-The Lock in menu is provided by KeyChain Access, not by System Preferences.
-Open &lsquo;KeyChain Access&rsquo; -&gt; Preferences, select &lsquo;Show keychain status&rsquo;
-and it is back:
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-09-03-show-lock-screen-indicator/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-04-22-atg-development/">ATG Development using &#39;hidden&#39; VM</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-04-22 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 692 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.
-Inspiration for the setup came from https://www.youtube.com/watch?feature=player_embedded&amp;v=cPt_1Vga-Nk
-Motivation - issues with VMs VMs are great - they allow &ldquo;packaged&rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-04-22-atg-development/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2013-04-13-git-conflict/">Merge conflict with deleted file</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2013-04-13 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 333 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I was merging the branch that removed / consolidated bunch of duplicate JSP files (corporate-ui-cleanup).
-In the meantime in master, some minor UI changes were made to these files whose content was now elsewhere.
-Quick trick how to resolve it fast:
-Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data with XML only: no constraints and tax_id (unused field) nullable ! [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build * [bb-master] Merged in the last 5 days changes !
-    </div>
-    <div class="read-more">
-      <a href="/posts/2013-04-13-git-conflict/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -292,7 +288,7 @@ Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data w
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2020
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
