@@ -18,14 +18,15 @@
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="After re-creating the SSH key, I got the above error from Gitolite.
 Full trace:
-➜ TWC ssh -v thinkwrap@pensieve.thinkwrap.com OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013 debug1: Reading configuration data /etc/ssh/ssh_config debug1: Applying options for * debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22. debug1: Connection established. debug1: identity file /home/thinkwrap/.ssh/identity type -1 debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1 debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1 debug1: identity file /home/thinkwrap/." /><meta name="keywords" content="blog, Miro" />
+➜ TWC ssh -v thinkwrap@pensieve.thinkwrap.com OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013 debug1: Reading configuration data /etc/ssh/ssh_config debug1: Applying options for * debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22. debug1: Connection established. debug1: identity file /home/thinkwrap/.ssh/identity type -1 debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1 debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_dsa type -1 debug1: identity file /home/thinkwrap/.ssh/id_dsa-cert type -1 debug1: Remote protocol version 2.0, remote software version OpenSSH_5.3 debug1: match: OpenSSH_5.3 pat OpenSSH* debug1: Enabling compatibility mode for protocol 2.0 debug1: Local version string SSH-2.0-OpenSSH_5.3 debug1: SSH2_MSG_KEXINIT sent debug1: SSH2_MSG_KEXINIT received debug1: kex: server-&gt;client aes128-ctr hmac-md5 none debug1: kex: client-&gt;server aes128-ctr hmac-md5 none debug1: SSH2_MSG_KEX_DH_GEX_REQUEST(1024&lt;1024&lt;8192) sent debug1: expecting SSH2_MSG_KEX_DH_GEX_GROUP debug1: SSH2_MSG_KEX_DH_GEX_INIT sent debug1: expecting SSH2_MSG_KEX_DH_GEX_REPLY debug1: Host &#39;pensieve.thinkwrap.com&#39; is known and matches the RSA host key. debug1: Found key in /home/thinkwrap/.ssh/known_hosts:2 debug1: ssh_rsa_verify: signature correct debug1: SSH2_MSG_NEWKEYS sent debug1: expecting SSH2_MSG_NEWKEYS debug1: SSH2_MSG_NEWKEYS received debug1: SSH2_MSG_SERVICE_REQUEST sent debug1: SSH2_MSG_SERVICE_ACCEPT received debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password debug1: Next authentication method: gssapi-keyex debug1: No valid Key exchange context debug1: Next authentication method: gssapi-with-mic debug1: Unspecified GSS failure. Minor code may provide more information Credentials cache file &#39;/tmp/krb5cc_500&#39; not found debug1: Unspecified GSS failure. Minor code may provide more information Credentials cache file &#39;/tmp/krb5cc_500&#39; not found debug1: Unspecified GSS failure. Minor code may provide more information debug1: Unspecified GSS failure. Minor code may provide more information Credentials cache file &#39;/tmp/krb5cc_500&#39; not found debug1: Next authentication method: publickey debug1: Offering public key: /home/thinkwrap/.ssh/id_rsa debug1: Remote: Forced command: /home/thinkwrap/gitolite/src/gitolite-shell miro.adamy&#43;ATG11-TrainingVM debug1: Remote: Port forwarding disabled. debug1: Remote: X11 forwarding disabled. debug1: Remote: Agent forwarding disabled. debug1: Remote: Pty allocation disabled. debug1: Server accepts key: pkalg ssh-rsa blen 277 Agent admitted failure to sign using the key. debug1: Trying private key: /home/thinkwrap/.ssh/identity debug1: Trying private key: /home/thinkwrap/.ssh/id_dsa debug1: Next authentication method: password thinkwrap@pensieve.thinkwrap.com&#39;s password: Solution log-out, log on
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2015-05-22-ssh-issue/" />
@@ -36,34 +37,37 @@ Full trace:
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="How to solve &#39;Agent admitted failure to sign using the key&#39;" />
-<meta property="og:description" content="After re-creating the SSH key, I got the above error from Gitolite.
+<meta property="og:url" content="https://miroadamy.com/posts/2015-05-22-ssh-issue/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="How to solve &#39;Agent admitted failure to sign using the key&#39;">
+	<meta property="og:description" content="After re-creating the SSH key, I got the above error from Gitolite.
 Full trace:
-➜ TWC ssh -v thinkwrap@pensieve.thinkwrap.com OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013 debug1: Reading configuration data /etc/ssh/ssh_config debug1: Applying options for * debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22. debug1: Connection established. debug1: identity file /home/thinkwrap/.ssh/identity type -1 debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1 debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1 debug1: identity file /home/thinkwrap/." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2015-05-22-ssh-issue/" />
-<meta property="article:published_time" content="2015-05-22T11:22:48+08:00" />
-<meta property="article:modified_time" content="2015-05-22T11:22:48+08:00" />
-<meta itemprop="name" content="How to solve &#39;Agent admitted failure to sign using the key&#39;">
-<meta itemprop="description" content="After re-creating the SSH key, I got the above error from Gitolite.
+➜ TWC ssh -v thinkwrap@pensieve.thinkwrap.com OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013 debug1: Reading configuration data /etc/ssh/ssh_config debug1: Applying options for * debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22. debug1: Connection established. debug1: identity file /home/thinkwrap/.ssh/identity type -1 debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1 debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_dsa type -1 debug1: identity file /home/thinkwrap/.ssh/id_dsa-cert type -1 debug1: Remote protocol version 2.0, remote software version OpenSSH_5.3 debug1: match: OpenSSH_5.3 pat OpenSSH* debug1: Enabling compatibility mode for protocol 2.0 debug1: Local version string SSH-2.0-OpenSSH_5.3 debug1: SSH2_MSG_KEXINIT sent debug1: SSH2_MSG_KEXINIT received debug1: kex: server-&gt;client aes128-ctr hmac-md5 none debug1: kex: client-&gt;server aes128-ctr hmac-md5 none debug1: SSH2_MSG_KEX_DH_GEX_REQUEST(1024&lt;1024&lt;8192) sent debug1: expecting SSH2_MSG_KEX_DH_GEX_GROUP debug1: SSH2_MSG_KEX_DH_GEX_INIT sent debug1: expecting SSH2_MSG_KEX_DH_GEX_REPLY debug1: Host &#39;pensieve.thinkwrap.com&#39; is known and matches the RSA host key. debug1: Found key in /home/thinkwrap/.ssh/known_hosts:2 debug1: ssh_rsa_verify: signature correct debug1: SSH2_MSG_NEWKEYS sent debug1: expecting SSH2_MSG_NEWKEYS debug1: SSH2_MSG_NEWKEYS received debug1: SSH2_MSG_SERVICE_REQUEST sent debug1: SSH2_MSG_SERVICE_ACCEPT received debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password debug1: Next authentication method: gssapi-keyex debug1: No valid Key exchange context debug1: Next authentication method: gssapi-with-mic debug1: Unspecified GSS failure. Minor code may provide more information Credentials cache file &#39;/tmp/krb5cc_500&#39; not found debug1: Unspecified GSS failure. Minor code may provide more information Credentials cache file &#39;/tmp/krb5cc_500&#39; not found debug1: Unspecified GSS failure. Minor code may provide more information debug1: Unspecified GSS failure. Minor code may provide more information Credentials cache file &#39;/tmp/krb5cc_500&#39; not found debug1: Next authentication method: publickey debug1: Offering public key: /home/thinkwrap/.ssh/id_rsa debug1: Remote: Forced command: /home/thinkwrap/gitolite/src/gitolite-shell miro.adamy&#43;ATG11-TrainingVM debug1: Remote: Port forwarding disabled. debug1: Remote: X11 forwarding disabled. debug1: Remote: Agent forwarding disabled. debug1: Remote: Pty allocation disabled. debug1: Server accepts key: pkalg ssh-rsa blen 277 Agent admitted failure to sign using the key. debug1: Trying private key: /home/thinkwrap/.ssh/identity debug1: Trying private key: /home/thinkwrap/.ssh/id_dsa debug1: Next authentication method: password thinkwrap@pensieve.thinkwrap.com&#39;s password: Solution log-out, log on">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2015-05-22T11:22:48+08:00">
+		<meta property="article:modified_time" content="2015-05-22T11:22:48+08:00">
+		<meta property="article:tag" content="Ssh">
+
+	<meta itemprop="name" content="How to solve &#39;Agent admitted failure to sign using the key&#39;">
+	<meta itemprop="description" content="After re-creating the SSH key, I got the above error from Gitolite.
 Full trace:
-➜ TWC ssh -v thinkwrap@pensieve.thinkwrap.com OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013 debug1: Reading configuration data /etc/ssh/ssh_config debug1: Applying options for * debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22. debug1: Connection established. debug1: identity file /home/thinkwrap/.ssh/identity type -1 debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1 debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1 debug1: identity file /home/thinkwrap/.">
-<meta itemprop="datePublished" content="2015-05-22T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2015-05-22T11:22:48+08:00" />
-<meta itemprop="wordCount" content="328">
-
-
-
-<meta itemprop="keywords" content="ssh," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How to solve &#39;Agent admitted failure to sign using the key&#39;"/>
-<meta name="twitter:description" content="After re-creating the SSH key, I got the above error from Gitolite.
+➜ TWC ssh -v thinkwrap@pensieve.thinkwrap.com OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013 debug1: Reading configuration data /etc/ssh/ssh_config debug1: Applying options for * debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22. debug1: Connection established. debug1: identity file /home/thinkwrap/.ssh/identity type -1 debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1 debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_dsa type -1 debug1: identity file /home/thinkwrap/.ssh/id_dsa-cert type -1 debug1: Remote protocol version 2.0, remote software version OpenSSH_5.3 debug1: match: OpenSSH_5.3 pat OpenSSH* debug1: Enabling compatibility mode for protocol 2.0 debug1: Local version string SSH-2.0-OpenSSH_5.3 debug1: SSH2_MSG_KEXINIT sent debug1: SSH2_MSG_KEXINIT received debug1: kex: server-&gt;client aes128-ctr hmac-md5 none debug1: kex: client-&gt;server aes128-ctr hmac-md5 none debug1: SSH2_MSG_KEX_DH_GEX_REQUEST(1024&lt;1024&lt;8192) sent debug1: expecting SSH2_MSG_KEX_DH_GEX_GROUP debug1: SSH2_MSG_KEX_DH_GEX_INIT sent debug1: expecting SSH2_MSG_KEX_DH_GEX_REPLY debug1: Host &#39;pensieve.thinkwrap.com&#39; is known and matches the RSA host key. debug1: Found key in /home/thinkwrap/.ssh/known_hosts:2 debug1: ssh_rsa_verify: signature correct debug1: SSH2_MSG_NEWKEYS sent debug1: expecting SSH2_MSG_NEWKEYS debug1: SSH2_MSG_NEWKEYS received debug1: SSH2_MSG_SERVICE_REQUEST sent debug1: SSH2_MSG_SERVICE_ACCEPT received debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password debug1: Next authentication method: gssapi-keyex debug1: No valid Key exchange context debug1: Next authentication method: gssapi-with-mic debug1: Unspecified GSS failure. Minor code may provide more information Credentials cache file &#39;/tmp/krb5cc_500&#39; not found debug1: Unspecified GSS failure. Minor code may provide more information Credentials cache file &#39;/tmp/krb5cc_500&#39; not found debug1: Unspecified GSS failure. Minor code may provide more information debug1: Unspecified GSS failure. Minor code may provide more information Credentials cache file &#39;/tmp/krb5cc_500&#39; not found debug1: Next authentication method: publickey debug1: Offering public key: /home/thinkwrap/.ssh/id_rsa debug1: Remote: Forced command: /home/thinkwrap/gitolite/src/gitolite-shell miro.adamy&#43;ATG11-TrainingVM debug1: Remote: Port forwarding disabled. debug1: Remote: X11 forwarding disabled. debug1: Remote: Agent forwarding disabled. debug1: Remote: Pty allocation disabled. debug1: Server accepts key: pkalg ssh-rsa blen 277 Agent admitted failure to sign using the key. debug1: Trying private key: /home/thinkwrap/.ssh/identity debug1: Trying private key: /home/thinkwrap/.ssh/id_dsa debug1: Next authentication method: password thinkwrap@pensieve.thinkwrap.com&#39;s password: Solution log-out, log on">
+	<meta itemprop="datePublished" content="2015-05-22T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2015-05-22T11:22:48+08:00">
+	<meta itemprop="wordCount" content="328">
+	<meta itemprop="keywords" content="Ssh">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="How to solve &#39;Agent admitted failure to sign using the key&#39;">
+	<meta name="twitter:description" content="After re-creating the SSH key, I got the above error from Gitolite.
 Full trace:
-➜ TWC ssh -v thinkwrap@pensieve.thinkwrap.com OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013 debug1: Reading configuration data /etc/ssh/ssh_config debug1: Applying options for * debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22. debug1: Connection established. debug1: identity file /home/thinkwrap/.ssh/identity type -1 debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1 debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1 debug1: identity file /home/thinkwrap/."/>
+➜ TWC ssh -v thinkwrap@pensieve.thinkwrap.com OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013 debug1: Reading configuration data /etc/ssh/ssh_config debug1: Applying options for * debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22. debug1: Connection established. debug1: identity file /home/thinkwrap/.ssh/identity type -1 debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1 debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1 debug1: identity file /home/thinkwrap/.ssh/id_dsa type -1 debug1: identity file /home/thinkwrap/.ssh/id_dsa-cert type -1 debug1: Remote protocol version 2.0, remote software version OpenSSH_5.3 debug1: match: OpenSSH_5.3 pat OpenSSH* debug1: Enabling compatibility mode for protocol 2.0 debug1: Local version string SSH-2.0-OpenSSH_5.3 debug1: SSH2_MSG_KEXINIT sent debug1: SSH2_MSG_KEXINIT received debug1: kex: server-&gt;client aes128-ctr hmac-md5 none debug1: kex: client-&gt;server aes128-ctr hmac-md5 none debug1: SSH2_MSG_KEX_DH_GEX_REQUEST(1024&lt;1024&lt;8192) sent debug1: expecting SSH2_MSG_KEX_DH_GEX_GROUP debug1: SSH2_MSG_KEX_DH_GEX_INIT sent debug1: expecting SSH2_MSG_KEX_DH_GEX_REPLY debug1: Host &#39;pensieve.thinkwrap.com&#39; is known and matches the RSA host key. debug1: Found key in /home/thinkwrap/.ssh/known_hosts:2 debug1: ssh_rsa_verify: signature correct debug1: SSH2_MSG_NEWKEYS sent debug1: expecting SSH2_MSG_NEWKEYS debug1: SSH2_MSG_NEWKEYS received debug1: SSH2_MSG_SERVICE_REQUEST sent debug1: SSH2_MSG_SERVICE_ACCEPT received debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password debug1: Next authentication method: gssapi-keyex debug1: No valid Key exchange context debug1: Next authentication method: gssapi-with-mic debug1: Unspecified GSS failure. Minor code may provide more information Credentials cache file &#39;/tmp/krb5cc_500&#39; not found debug1: Unspecified GSS failure. Minor code may provide more information Credentials cache file &#39;/tmp/krb5cc_500&#39; not found debug1: Unspecified GSS failure. Minor code may provide more information debug1: Unspecified GSS failure. Minor code may provide more information Credentials cache file &#39;/tmp/krb5cc_500&#39; not found debug1: Next authentication method: publickey debug1: Offering public key: /home/thinkwrap/.ssh/id_rsa debug1: Remote: Forced command: /home/thinkwrap/gitolite/src/gitolite-shell miro.adamy&#43;ATG11-TrainingVM debug1: Remote: Port forwarding disabled. debug1: Remote: X11 forwarding disabled. debug1: Remote: Agent forwarding disabled. debug1: Remote: Pty allocation disabled. debug1: Server accepts key: pkalg ssh-rsa blen 277 Agent admitted failure to sign using the key. debug1: Trying private key: /home/thinkwrap/.ssh/identity debug1: Trying private key: /home/thinkwrap/.ssh/id_dsa debug1: Next authentication method: password thinkwrap@pensieve.thinkwrap.com&#39;s password: Solution log-out, log on">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -100,12 +104,21 @@ Full trace:
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -122,6 +135,7 @@ Full trace:
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -152,64 +166,64 @@ Full trace:
     <div class="post-content">
       <p>After re-creating the SSH key, I got the above error from Gitolite.</p>
 <p>Full trace:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  TWC  ssh -v thinkwrap@pensieve.thinkwrap.com
-OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013
-debug1: Reading configuration data /etc/ssh/ssh_config
-debug1: Applying options for *
-debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22.
-debug1: Connection established.
-debug1: identity file /home/thinkwrap/.ssh/identity type -1
-debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1
-debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1
-debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1
-debug1: identity file /home/thinkwrap/.ssh/id_dsa type -1
-debug1: identity file /home/thinkwrap/.ssh/id_dsa-cert type -1
-debug1: Remote protocol version 2.0, remote software version OpenSSH_5.3
-debug1: match: OpenSSH_5.3 pat OpenSSH*
-debug1: Enabling compatibility mode for protocol 2.0
-debug1: Local version string SSH-2.0-OpenSSH_5.3
-debug1: SSH2_MSG_KEXINIT sent
-debug1: SSH2_MSG_KEXINIT received
-debug1: kex: server-&gt;client aes128-ctr hmac-md5 none
-debug1: kex: client-&gt;server aes128-ctr hmac-md5 none
-debug1: SSH2_MSG_KEX_DH_GEX_REQUEST(1024&lt;1024&lt;8192) sent
-debug1: expecting SSH2_MSG_KEX_DH_GEX_GROUP
-debug1: SSH2_MSG_KEX_DH_GEX_INIT sent
-debug1: expecting SSH2_MSG_KEX_DH_GEX_REPLY
-debug1: Host &#39;pensieve.thinkwrap.com&#39; is known and matches the RSA host key.
-debug1: Found key in /home/thinkwrap/.ssh/known_hosts:2
-debug1: ssh_rsa_verify: signature correct
-debug1: SSH2_MSG_NEWKEYS sent
-debug1: expecting SSH2_MSG_NEWKEYS
-debug1: SSH2_MSG_NEWKEYS received
-debug1: SSH2_MSG_SERVICE_REQUEST sent
-debug1: SSH2_MSG_SERVICE_ACCEPT received
-debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password
-debug1: Next authentication method: gssapi-keyex
-debug1: No valid Key exchange context
-debug1: Next authentication method: gssapi-with-mic
-debug1: Unspecified GSS failure.  Minor code may provide more information
-Credentials cache file &#39;/tmp/krb5cc_500&#39; not found
-debug1: Unspecified GSS failure.  Minor code may provide more information
-Credentials cache file &#39;/tmp/krb5cc_500&#39; not found
-debug1: Unspecified GSS failure.  Minor code may provide more information
- 
-debug1: Unspecified GSS failure.  Minor code may provide more information
-Credentials cache file &#39;/tmp/krb5cc_500&#39; not found
-debug1: Next authentication method: publickey
-debug1: Offering public key: /home/thinkwrap/.ssh/id_rsa
-debug1: Remote: Forced command: /home/thinkwrap/gitolite/src/gitolite-shell miro.adamy+ATG11-TrainingVM
-debug1: Remote: Port forwarding disabled.
-debug1: Remote: X11 forwarding disabled.
-debug1: Remote: Agent forwarding disabled.
-debug1: Remote: Pty allocation disabled.
-debug1: Server accepts key: pkalg ssh-rsa blen 277
-Agent admitted failure to sign using the key.
-debug1: Trying private key: /home/thinkwrap/.ssh/identity
-debug1: Trying private key: /home/thinkwrap/.ssh/id_dsa
-debug1: Next authentication method: password
-thinkwrap@pensieve.thinkwrap.com&#39;s password:
-</code></pre></div><h1 id="solution">Solution</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  TWC  ssh -v thinkwrap@pensieve.thinkwrap.com
+</span></span><span class="line"><span class="cl">OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013
+</span></span><span class="line"><span class="cl">debug1: Reading configuration data /etc/ssh/ssh_config
+</span></span><span class="line"><span class="cl">debug1: Applying options for *
+</span></span><span class="line"><span class="cl">debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22.
+</span></span><span class="line"><span class="cl">debug1: Connection established.
+</span></span><span class="line"><span class="cl">debug1: identity file /home/thinkwrap/.ssh/identity type -1
+</span></span><span class="line"><span class="cl">debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1
+</span></span><span class="line"><span class="cl">debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1
+</span></span><span class="line"><span class="cl">debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1
+</span></span><span class="line"><span class="cl">debug1: identity file /home/thinkwrap/.ssh/id_dsa type -1
+</span></span><span class="line"><span class="cl">debug1: identity file /home/thinkwrap/.ssh/id_dsa-cert type -1
+</span></span><span class="line"><span class="cl">debug1: Remote protocol version 2.0, remote software version OpenSSH_5.3
+</span></span><span class="line"><span class="cl">debug1: match: OpenSSH_5.3 pat OpenSSH*
+</span></span><span class="line"><span class="cl">debug1: Enabling compatibility mode for protocol 2.0
+</span></span><span class="line"><span class="cl">debug1: Local version string SSH-2.0-OpenSSH_5.3
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_KEXINIT sent
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_KEXINIT received
+</span></span><span class="line"><span class="cl">debug1: kex: server-&gt;client aes128-ctr hmac-md5 none
+</span></span><span class="line"><span class="cl">debug1: kex: client-&gt;server aes128-ctr hmac-md5 none
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_KEX_DH_GEX_REQUEST(1024&lt;1024&lt;8192) sent
+</span></span><span class="line"><span class="cl">debug1: expecting SSH2_MSG_KEX_DH_GEX_GROUP
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_KEX_DH_GEX_INIT sent
+</span></span><span class="line"><span class="cl">debug1: expecting SSH2_MSG_KEX_DH_GEX_REPLY
+</span></span><span class="line"><span class="cl">debug1: Host &#39;pensieve.thinkwrap.com&#39; is known and matches the RSA host key.
+</span></span><span class="line"><span class="cl">debug1: Found key in /home/thinkwrap/.ssh/known_hosts:2
+</span></span><span class="line"><span class="cl">debug1: ssh_rsa_verify: signature correct
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_NEWKEYS sent
+</span></span><span class="line"><span class="cl">debug1: expecting SSH2_MSG_NEWKEYS
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_NEWKEYS received
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_SERVICE_REQUEST sent
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_SERVICE_ACCEPT received
+</span></span><span class="line"><span class="cl">debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password
+</span></span><span class="line"><span class="cl">debug1: Next authentication method: gssapi-keyex
+</span></span><span class="line"><span class="cl">debug1: No valid Key exchange context
+</span></span><span class="line"><span class="cl">debug1: Next authentication method: gssapi-with-mic
+</span></span><span class="line"><span class="cl">debug1: Unspecified GSS failure.  Minor code may provide more information
+</span></span><span class="line"><span class="cl">Credentials cache file &#39;/tmp/krb5cc_500&#39; not found
+</span></span><span class="line"><span class="cl">debug1: Unspecified GSS failure.  Minor code may provide more information
+</span></span><span class="line"><span class="cl">Credentials cache file &#39;/tmp/krb5cc_500&#39; not found
+</span></span><span class="line"><span class="cl">debug1: Unspecified GSS failure.  Minor code may provide more information
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">debug1: Unspecified GSS failure.  Minor code may provide more information
+</span></span><span class="line"><span class="cl">Credentials cache file &#39;/tmp/krb5cc_500&#39; not found
+</span></span><span class="line"><span class="cl">debug1: Next authentication method: publickey
+</span></span><span class="line"><span class="cl">debug1: Offering public key: /home/thinkwrap/.ssh/id_rsa
+</span></span><span class="line"><span class="cl">debug1: Remote: Forced command: /home/thinkwrap/gitolite/src/gitolite-shell miro.adamy+ATG11-TrainingVM
+</span></span><span class="line"><span class="cl">debug1: Remote: Port forwarding disabled.
+</span></span><span class="line"><span class="cl">debug1: Remote: X11 forwarding disabled.
+</span></span><span class="line"><span class="cl">debug1: Remote: Agent forwarding disabled.
+</span></span><span class="line"><span class="cl">debug1: Remote: Pty allocation disabled.
+</span></span><span class="line"><span class="cl">debug1: Server accepts key: pkalg ssh-rsa blen 277
+</span></span><span class="line"><span class="cl">Agent admitted failure to sign using the key.
+</span></span><span class="line"><span class="cl">debug1: Trying private key: /home/thinkwrap/.ssh/identity
+</span></span><span class="line"><span class="cl">debug1: Trying private key: /home/thinkwrap/.ssh/id_dsa
+</span></span><span class="line"><span class="cl">debug1: Next authentication method: password
+</span></span><span class="line"><span class="cl">thinkwrap@pensieve.thinkwrap.com&#39;s password:
+</span></span></code></pre></div><h1 id="solution">Solution</h1>
 <ol>
 <li>
 <p>log-out, log on</p>
@@ -278,7 +292,7 @@ thinkwrap@pensieve.thinkwrap.com&#39;s password:
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -296,13 +310,10 @@ thinkwrap@pensieve.thinkwrap.com&#39;s password:
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -313,7 +324,10 @@ thinkwrap@pensieve.thinkwrap.com&#39;s password:
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

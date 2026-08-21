@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -36,20 +36,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Miro&#39;s World" />
-<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
-<meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Miro&#39;s World"/>
-<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
+<meta property="og:url" content="https://miroadamy.com/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Miro&#39;s World">
+	<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+	<meta itemprop="name" content="Miro&#39;s World">
+	<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta itemprop="datePublished" content="2026-08-21T14:31:54+00:00">
+	<meta itemprop="dateModified" content="2026-08-21T14:31:54+00:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Miro&#39;s World">
+	<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,12 +91,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -108,6 +122,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -116,122 +131,617 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-09-15-road-trip/">Road Trip</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-29-gitbits/">Gitbits - Get committer lists</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2018-09-06 </span>
+      <span class="post-time"> 2014-09-29 </span>
       <div class="post-category">
-          <a href="/categories/travel/"> travel </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 70 words </span>
+        <span class="more-meta"> 197 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      I took 3 days off and decided to explore the North of Spain, namely Cantabria and Asturias.
-It was awesome and beautiful. Asturias reminded me of Switzerland, with beautiful alpine style nature, great food, very friendly locals speaking language one can understand :-) (I kinda do understand certain versions of Schwyzzertütsch when spoken slowly - but it is a challenge).
-Unlike Switzerland, it is not überexpensive.
-Here are the pictures.
+      <h1 id="with-emails-unix-only">With emails (Unix only)</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  dev1 git:(miro-ui) ✗ git log --raw | grep &#34;^Author: &#34; | sort | uniq -c
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">      9 Author: Brendan Smith &lt;Brendan.Smith@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl">     22 Author: Kai Cheng &lt;kai.cheng@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl">     97 Author: Miro Adamy &lt;miro.adamy@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl">     49 Author: Training VM &lt;training-vm@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl">     24 Author: Your Name &lt;your.name@thinkwrap.com&gt;
+</span></span></code></pre></div><h1 id="pure-git">Pure git</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  dev1 git:(miro-ui) ✗ git shortlog -sen
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">    97  Miro Adamy &lt;miro.adamy@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl">    49  Training VM &lt;training-vm@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl">    24  Your Name &lt;your.name@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl">    22  Kai Cheng &lt;kai.cheng@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl">     9  Brendan Smith &lt;Brendan.Smith@thinkwrap.com&gt;
+</span></span></code></pre></div><h1 id="mailmap-option-to-consolidate-the-variety-of-authors">Mailmap option to consolidate the variety of authors</h1>
+<h2 id="before-no-mailmap">Before (no mailmap)</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl"> 609  milos hanzel &lt;milos.hanzel@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl"> 361  brant maahs &lt;brant.maahs@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl">  69  Sullivan Tseng &lt;sullivantseng@gmail.com&gt;
+</span></span><span class="line"><span class="cl">  42  sullivan tseng &lt;sullivan.tseng@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl">  17  milos.hanzel &lt;milos.hanzel@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl">   2  Miro Adamy &lt;miro.adamy@thinkwrap.com&gt;
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></div><p>Generating the mailman start</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2018-09-15-road-trip/" class="read-more-link">Read more...</a>
+      <a href="/posts/2014-09-29-gitbits/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-09-06-simonyi/">Simonyi Karoly in Valencia</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-23-shared-folder/">How to access shared folder in Linux guest in VirtualBox</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2018-09-06 </span>
+      <span class="post-time"> 2014-09-23 </span>
       <div class="post-category">
-          <a href="/categories/general/"> general </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 80 words </span>
+        <span class="more-meta"> 132 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      One of the Microsoft old-timer bilionaries, Charles Simonyi, Hungarian born software engineer, famous for his Hungarian naming notation - who would not remember lpstrzDescription or wFlag - is visiting Valencia on his yacht Skat.
-Those who do not write code (or better said - did not write code 20 years ago) may be familiar with his other contribution - Microsoft Word, something I feel much less positive about than lpstrzDescription.
+      <p>Make sure the VBOx extensions are installed.</p>
+<p>Go here for details:</p>
+<h2 id="add-share">Add share</h2>
+<p>In VirtualBox, Device add transient shared folder:</p>
+<p><img src="/images/virt-box.png" alt=""></p>
+<p>This one has made available path /Users/Shared/ATG-11 under the name ATG-11</p>
+<h2 id="mount-it">Mount it</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo mount -t vboxsf ATG-11 /media
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">$ ll /media/Unix/
+</span></span><span class="line"><span class="cl">total 19M
+</span></span><span class="line"><span class="cl">drwxr-xr-x. 1 root  408 Sep 12 16:02 ATG11-1
+</span></span><span class="line"><span class="cl">drwxr-xr-x. 1 root  272 Sep 12 16:02 ATG11-docs
+</span></span><span class="line"><span class="cl">-rw-rw-r--. 1 root  675 May 13 23:46 atg-platform-mac.userlibraries
+</span></span><span class="line"><span class="cl">-rw-rw-r--. 1 root  787 May 13 23:17 atg-platform-vm.userlibraries
+</span></span><span class="line"><span class="cl">-rwxr--r--. 1 root  19M Feb 15  2013 jrebel-5.1.3-nosetup.zip
+</span></span><span class="line"><span class="cl">-rw-r--r--. 1 root 1020 May 15 15:36 jrebel.lic
+</span></span><span class="line"><span class="cl">-rw-r--r--. 1 root  582 May 15 14:58 rebel.xml
+</span></span><span class="line"><span class="cl">drwxr-xr-x. 1 root  272 Apr  6 01:33 security
+</span></span><span class="line"><span class="cl">drwxr-xr-x. 1 root  306 Jun  9 22:34 servers
+</span></span><span class="line"><span class="cl">-rwxr--r--. 1 root  349 Dec 17  2013 users.txt
+</span></span><span class="line"><span class="cl">drwxr-xr-x. 1 root  340 Sep  3 16:10 xrebel
+</span></span></code></pre></div>
     </div>
     <div class="read-more">
-      <a href="/posts/2018-09-06-simonyi/" class="read-more-link">Read more...</a>
+      <a href="/posts/2014-09-23-shared-folder/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-07-31-spanish/">This made my day</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-22-gitbit/">Git bit of the day</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2018-07-31 </span>
+      <span class="post-time"> 2014-09-22 </span>
       <div class="post-category">
-          <a href="/categories/jokes/"> jokes </a>
+          <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 0 words </span>
-        <span class="more-meta"> 0 mins read </span>
+        <span class="more-meta"> 497 words </span>
+        <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      
+      <h2 id="question-from-email">Question from email:</h2>
+<blockquote>
+<p>how do I merge 1 file from master -&gt; LIVE</p>
+</blockquote>
+<h2 id="answer">Answer</h2>
+<p>You cannot. Merge operation creates new commit that has 2 or more parents and will always join full histories of the branches.</p>
+<p>You can however:</p>
+<ul>
+<li>replicate all changes done in single commit to different branch - this is &ldquo;cherry pick&rdquo;</li>
+<li>take state of single file from different branch into current branch</li>
+</ul>
+<h2 id="how-to-replicate-all-changes-done-in-single-commit-to-different-branch----cherry-pick">How to replicate all changes done in single commit to different branch  - &ldquo;cherry pick&rdquo;</h2>
+<p>Say you have latest commit in master that contains change to two files you need.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2018-07-31-spanish/" class="read-more-link">Read more...</a>
+      <a href="/posts/2014-09-22-gitbit/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-06-25-oracle/">Per core licensing</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-16-logstash-error/">logstash - known error</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2018-06-25 </span>
+      <span class="post-time"> 2014-09-16 </span>
       <div class="post-category">
-          <a href="/categories/jokes/"> jokes </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 10 words </span>
+        <span class="more-meta"> 288 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I have been trying to make this work for about 1.5 hr.
+Looks like there is open bug - <a href="https://logstash.jira.com/browse/LOGSTASH-703">https://logstash.jira.com/browse/LOGSTASH-703</a></p>
+<p>Helpful link: <a href="https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE">https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE</a></p>
+<p>What should work:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">grok {
+</span></span><span class="line"><span class="cl">   match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;],
+</span></span><span class="line"><span class="cl">   match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;],
+</span></span><span class="line"><span class="cl">   match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;]
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>What needs to be done instead</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">You _should_ be able to do exactly what you listed at the bottom of your email, 
+</span></span><span class="line"><span class="cl">except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message 
+</span></span><span class="line"><span class="cl">instead of just parsing the first one that matches. 
+</span></span><span class="line"><span class="cl">Unfortunately, due to a bug (https://logstash.jira.com/browse/LOGSTASH-703), 
+</span></span><span class="line"><span class="cl">this doesn&#39;t work when you&#39;re matching against the same field in each match expression (&#34;message&#34; in your case). 
+</span></span><span class="line"><span class="cl">I was hoping to take a stab at fixing this bug (as several others have mentioned an interest in doing), 
+</span></span><span class="line"><span class="cl">but got distracted and haven&#39;t done it yet. It shouldn&#39;t be terribly hard to fix, just needs some time.
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">As a work-around, the following should work, but unfortunately the way that your tag_on_failure 
+</span></span><span class="line"><span class="cl">will end up working will be different 
+</span></span><span class="line"><span class="cl">because you have multiple Grok filters that could fail independently. 
+</span></span><span class="line"><span class="cl">It&#39;s probably slightly less efficient to do it this way because the event has to pass 
+</span></span><span class="line"><span class="cl">from one filter to the next through the pipeline, 
+</span></span><span class="line"><span class="cl">but my guess (based on absolutely no empirical data) is that it isn&#39;t significantly slower 
+</span></span><span class="line"><span class="cl">because the same work would need to be done by Regex either way, 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">there&#39;s just more LogStash in the mix this way.
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">grok {
+</span></span><span class="line"><span class="cl">   match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;]
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">grok {
+</span></span><span class="line"><span class="cl">   match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;]
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">grok {
+</span></span><span class="line"><span class="cl">   match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;]
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">~Greg Mefford
+</span></span></code></pre></div>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-09-16-logstash-error/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-09-redo-graph/">Recreate txt base graph generator</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-09-09 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 318 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="graphviz">Graphviz</h2>
+<p>This time using brew</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">DPS</span>  <span class="n">brew</span> <span class="n">install</span> <span class="n">graphviz</span>
+</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">downloads</span><span class="o">.</span><span class="n">sf</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">project</span><span class="o">/</span><span class="n">machomebrew</span><span class="o">/</span><span class="n">Bottles</span><span class="o">/</span><span class="n">graphviz</span><span class="o">-</span><span class="mf">2.38</span><span class="o">.</span><span class="mf">0.</span><span class="n">mavericks</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</span></span><span class="line"><span class="cl"><span class="c1">######################################################################## 100.0%</span>
+</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Pouring</span> <span class="n">graphviz</span><span class="o">-</span><span class="mf">2.38</span><span class="o">.</span><span class="mf">0.</span><span class="n">mavericks</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</span></span><span class="line"><span class="cl"><span class="err">🍺</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">graphviz</span><span class="o">/</span><span class="mf">2.38</span><span class="o">.</span><span class="mi">0</span><span class="p">:</span> <span class="mi">469</span> <span class="n">files</span><span class="p">,</span> <span class="mi">68</span><span class="n">M</span>
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">DPS</span>  <span class="n">dot</span> <span class="o">-</span><span class="n">V</span>
+</span></span><span class="line"><span class="cl"><span class="n">dot</span> <span class="o">-</span> <span class="n">graphviz</span> <span class="n">version</span> <span class="mf">2.38</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="mf">20140413.2041</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">DPS</span>
+</span></span></code></pre></div><h2 id="schema-spy">Schema Spy</h2>
+<p>From <a href="http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/">http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/</a></p>
+<p>To <code>/opt/diagram</code></p>
+<p>Run:</p>
+<blockquote>
+<p>diagram  java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training</p>
+</blockquote>
+<p>It produces HTML documentation for tables</p>
+<p><img src="/images/graph-1.jpeg" alt="">
+<img src="/images/graph-2.jpeg" alt="">
+<img src="/images/graph-3.jpeg" alt=""></p>
+<p>Size is about 51 M for a small ATG install</p>
+<h2 id="plantuml">PlantUML</h2>
+<p>Also installed in /opt/diagram</p>
+<p><a href="http://plantuml.sourceforge.net/running.html">http://plantuml.sourceforge.net/running.html</a></p>
+<p>See <a href="http://www.planttext.com">http://www.planttext.com</a></p>
+<h3 id="command-line">Command Line</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">You can also run PlantUML using the following command :java -jar plantuml.jar file1 file2 file3
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">This will look for @startuml into file1, file2 and file3. (For each diagram, it will create a .png file).
+</span></span><span class="line"><span class="cl">For processing a whole directory, you can use:
+</span></span><span class="line"><span class="cl">java -jar plantuml.jar &#34;c:/directory1&#34; &#34;c:/directory2&#34;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">This command will search for @startuml and @enduml into .c, .h, .cpp, .txt, .pu, .tex, .html, .htm or .java files of the c:/directory directory. 
+</span></span><span class="line"><span class="cl">(For each diagram, it will create a .png file).
+</span></span></code></pre></div><h3 id="from-groovy">From Groovy</h3>
+<p>Since calling Java from Groovy is pretty simple, the only thinks to do is to copy PlantUML.jar file to the classpath (for exemple, ../Groovy/Groovy-1.7.6/lib directory).The following script print the current PlantUML version, and encode a URL:</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-09-09-redo-graph/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-04-better-dynadmin/">Better dynadmin</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-09-04 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 134 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      If one uses Oracle per core licensing strategy in cloud:
+      <p>Source of the fix is <a href="https://github.com/jc7447/BetterDynAdmin">https://github.com/jc7447/BetterDynAdmin</a>.
+This is to capture the installation process and provide backup in case the tool disappears.</p>
+<p>The pages generated by DynAdmin are actually not coming from a JSP or JHTML pages. The HTML you see is generated by hardcoded servlets. Each Nucleus component has assigned Admin servet, which is called when DynAdmin is trying to render the page.</p>
+<p>The improvent here are user scripts - running inside Firefox or Chrome, utilizing infrastructure provided by Greasemonkey extension (FF) or Tampermonkey (Chrome).</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2018-06-25-oracle/" class="read-more-link">Read more...</a>
+      <a href="/posts/2014-09-04-better-dynadmin/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-06-07-aws/">AWS Certified Solution Architect - Associate</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-03-atg-rant/">ATG &#43; JBoss rant</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2018-06-07 </span>
+      <span class="post-time"> 2014-09-03 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> DevOps </a>
+          <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 29 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 469 words </span>
+        <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Step 1 done.
-https://www.certmetrics.com/amazon/public/badge.aspx?i=1&amp;t=c&amp;d=2018-06-06&amp;ci=AWS00261816&amp;fbclid=IwAR2K8B4FyKWVstBZXCXn5GhYX9iRyB4U2q8l2ROrM_16m-rlclioalnp0O4
-And now dilemma: go deeper into AWS or look around what Google and Azure have to offer ?
-So many clouds, so little time &hellip;
+      <h1 id="symptoms">Symptoms</h1>
+<p>restarting after kill -9 of CSC instance does not succeed. The server never starts, the WAR files are not deployed properly, socket 8080 is open but nobody answers (not even with wget on localhost).</p>
+<h2 id="the-exception">The exception:</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="s2">&#34;main&#34;</span> <span class="n">prio</span><span class="o">=</span><span class="mi">10</span> <span class="n">tid</span><span class="o">=</span><span class="mh">0x0000000051a39000</span> <span class="n">nid</span><span class="o">=</span><span class="mh">0x30fb</span> <span class="ow">in</span> <span class="ne">Object</span><span class="o">.</span><span class="n">wait</span><span class="p">()</span> <span class="p">[</span><span class="mh">0x00002b5df9d6c000</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">   <span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="n">State</span><span class="p">:</span> <span class="n">TIMED_WAITING</span> <span class="p">(</span><span class="n">on</span> <span class="n">object</span> <span class="n">monitor</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">Object</span><span class="o">.</span><span class="n">wait</span><span class="p">(</span><span class="n">Native</span> <span class="n">Method</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="n">waiting</span> <span class="n">on</span> <span class="o">&lt;</span><span class="mh">0x00000007e36ae9d0</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">a</span> <span class="n">atg</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">lockmanager</span><span class="o">.</span><span class="n">ClientLockEntry</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">lockmanager</span><span class="o">.</span><span class="n">ClientLockEntry</span><span class="o">.</span><span class="n">acquireWriteLock</span><span class="p">(</span><span class="n">ClientLockEntry</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">399</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="n">locked</span> <span class="o">&lt;</span><span class="mh">0x00000007e36ae9d0</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">a</span> <span class="n">atg</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">lockmanager</span><span class="o">.</span><span class="n">ClientLockEntry</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">lockmanager</span><span class="o">.</span><span class="n">ClientLockManager</span><span class="o">.</span><span class="n">acquireWriteLock</span><span class="p">(</span><span class="n">ClientLockManager</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1137</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">repository</span><span class="o">.</span><span class="n">search</span><span class="o">.</span><span class="n">indexing</span><span class="o">.</span><span class="n">ConfigStatePersister</span><span class="o">.</span><span class="n">acquireLock</span><span class="p">(</span><span class="n">ConfigStatePersister</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1844</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">repository</span><span class="o">.</span><span class="n">search</span><span class="o">.</span><span class="n">indexing</span><span class="o">.</span><span class="n">ConfigStatePersister</span><span class="o">$</span><span class="n">IndexingReadLockedTransactionAction</span><span class="o">.</span><span class="n">doWithTransaction</span><span class="p">(</span><span class="n">ConfigStatePersister</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">2083</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">repository</span><span class="o">.</span><span class="n">search</span><span class="o">.</span><span class="n">indexing</span><span class="o">.</span><span class="n">ConfigStatePersister</span><span class="o">.</span><span class="n">releaseAllConfigurations</span><span class="p">(</span><span class="n">ConfigStatePersister</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1545</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">repository</span><span class="o">.</span><span class="n">search</span><span class="o">.</span><span class="n">indexing</span><span class="o">.</span><span class="n">ConfigStatePersister</span><span class="o">.</span><span class="n">performAction</span><span class="p">(</span><span class="n">ConfigStatePersister</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1775</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">nucleus</span><span class="o">.</span><span class="n">Nucleus</span><span class="o">.</span><span class="n">performPostStartupActions</span><span class="p">(</span><span class="n">Nucleus</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">4336</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">nucleus</span><span class="o">.</span><span class="n">Nucleus</span><span class="o">.</span><span class="n">performPostStartupActions</span><span class="p">(</span><span class="n">Nucleus</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">4323</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">nucleus</span><span class="o">.</span><span class="n">Nucleus</span><span class="o">.&lt;</span><span class="n">init</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Nucleus</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">954</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">nucleus</span><span class="o">.</span><span class="n">Nucleus</span><span class="o">.&lt;</span><span class="n">init</span><span class="o">&gt;</span><span class="p">(</span><span class="n">Nucleus</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">717</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">nucleus</span><span class="o">.</span><span class="n">Nucleus</span><span class="o">.</span><span class="n">startNucleusCheckLicense</span><span class="p">(</span><span class="n">Nucleus</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">4144</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">nucleus</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">NucleusServlet</span><span class="o">.</span><span class="n">initBigEarNucleus</span><span class="p">(</span><span class="n">NucleusServlet</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1234</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">atg</span><span class="o">.</span><span class="n">nucleus</span><span class="o">.</span><span class="n">servlet</span><span class="o">.</span><span class="n">NucleusServlet</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="n">NucleusServlet</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">443</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">catalina</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">StandardWrapper</span><span class="o">.</span><span class="n">loadServlet</span><span class="p">(</span><span class="n">StandardWrapper</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1048</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="n">locked</span> <span class="o">&lt;</span><span class="mh">0x0000000781734f48</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">a</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">catalina</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">StandardWrapper</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">catalina</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">StandardWrapper</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">StandardWrapper</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">950</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="n">locked</span> <span class="o">&lt;</span><span class="mh">0x0000000781734f48</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">a</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">catalina</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">StandardWrapper</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">catalina</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">StandardContext</span><span class="o">.</span><span class="n">loadOnStartup</span><span class="p">(</span><span class="n">StandardContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">4122</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">catalina</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">StandardContext</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">StandardContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">4417</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="n">locked</span> <span class="o">&lt;</span><span class="mh">0x0000000781733e18</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">a</span> <span class="n">org</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">catalina</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">StandardContext</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">tomcat</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">TomcatDeployment</span><span class="o">.</span><span class="n">performDeployInternal</span><span class="p">(</span><span class="n">TomcatDeployment</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">321</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">tomcat</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">TomcatDeployment</span><span class="o">.</span><span class="n">performDeploy</span><span class="p">(</span><span class="n">TomcatDeployment</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">145</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">AbstractWarDeployment</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">AbstractWarDeployment</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">461</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="n">locked</span> <span class="o">&lt;</span><span class="mh">0x0000000780878058</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">a</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">tomcat</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">TomcatDeployment</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">WebModule</span><span class="o">.</span><span class="n">startModule</span><span class="p">(</span><span class="n">WebModule</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">118</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">-</span> <span class="n">locked</span> <span class="o">&lt;</span><span class="mh">0x0000000780878038</span><span class="o">&gt;</span> <span class="p">(</span><span class="n">a</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">WebModule</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">WebModule</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">WebModule</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">97</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="n">reflect</span><span class="o">.</span><span class="n">NativeMethodAccessorImpl</span><span class="o">.</span><span class="n">invoke0</span><span class="p">(</span><span class="n">Native</span> <span class="n">Method</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="n">reflect</span><span class="o">.</span><span class="n">NativeMethodAccessorImpl</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">NativeMethodAccessorImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">39</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">sun</span><span class="o">.</span><span class="n">reflect</span><span class="o">.</span><span class="n">DelegatingMethodAccessorImpl</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">DelegatingMethodAccessorImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">25</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">reflect</span><span class="o">.</span><span class="n">Method</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">Method</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">597</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">mx</span><span class="o">.</span><span class="n">interceptor</span><span class="o">.</span><span class="n">ReflectedDispatcher</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">ReflectedDispatcher</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">157</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">mx</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">Invocation</span><span class="o">.</span><span class="n">dispatch</span><span class="p">(</span><span class="n">Invocation</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">96</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">mx</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">Invocation</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">Invocation</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">88</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">mx</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">AbstractMBeanInvoker</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">AbstractMBeanInvoker</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">264</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">mx</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">MBeanServerImpl</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">MBeanServerImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">668</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">microcontainer</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">ServiceProxy</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">206</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="o">$</span><span class="n">Proxy38</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">Unknown</span> <span class="n">Source</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">microcontainer</span><span class="o">.</span><span class="n">StartStopLifecycleAction</span><span class="o">.</span><span class="n">installAction</span><span class="p">(</span><span class="n">StartStopLifecycleAction</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">42</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">microcontainer</span><span class="o">.</span><span class="n">StartStopLifecycleAction</span><span class="o">.</span><span class="n">installAction</span><span class="p">(</span><span class="n">StartStopLifecycleAction</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">37</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">SimpleControllerContextAction</span><span class="o">.</span><span class="n">simpleInstallAction</span><span class="p">(</span><span class="n">SimpleControllerContextAction</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">62</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">action</span><span class="o">.</span><span class="n">AccessControllerContextAction</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">AccessControllerContextAction</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">71</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractControllerContextActions</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">AbstractControllerContextActions</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">51</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractControllerContext</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">AbstractControllerContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">348</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">microcontainer</span><span class="o">.</span><span class="n">ServiceControllerContext</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">ServiceControllerContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">297</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1652</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">incrementState</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">938</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">resolveContexts</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1082</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">resolveContexts</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">988</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">change</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">826</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">change</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">556</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">ServiceController</span><span class="o">.</span><span class="n">doChange</span><span class="p">(</span><span class="n">ServiceController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">688</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">ServiceController</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">ServiceController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">460</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">ServiceDeployer</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">ServiceDeployer</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">163</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">ServiceDeployer</span><span class="o">.</span><span class="n">deploy</span><span class="p">(</span><span class="n">ServiceDeployer</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">99</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">ServiceDeployer</span><span class="o">.</span><span class="n">deploy</span><span class="p">(</span><span class="n">ServiceDeployer</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">46</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">spi</span><span class="o">.</span><span class="n">deployer</span><span class="o">.</span><span class="n">helpers</span><span class="o">.</span><span class="n">AbstractSimpleRealDeployer</span><span class="o">.</span><span class="n">internalDeploy</span><span class="p">(</span><span class="n">AbstractSimpleRealDeployer</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">62</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">spi</span><span class="o">.</span><span class="n">deployer</span><span class="o">.</span><span class="n">helpers</span><span class="o">.</span><span class="n">AbstractRealDeployer</span><span class="o">.</span><span class="n">deploy</span><span class="p">(</span><span class="n">AbstractRealDeployer</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">55</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">DeployerWrapper</span><span class="o">.</span><span class="n">deploy</span><span class="p">(</span><span class="n">DeployerWrapper</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">179</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">DeployersImpl</span><span class="o">.</span><span class="n">doDeploy</span><span class="p">(</span><span class="n">DeployersImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1454</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">DeployersImpl</span><span class="o">.</span><span class="n">doInstallParentFirst</span><span class="p">(</span><span class="n">DeployersImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1172</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">DeployersImpl</span><span class="o">.</span><span class="n">doInstallParentFirst</span><span class="p">(</span><span class="n">DeployersImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1193</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">DeployersImpl</span><span class="o">.</span><span class="n">doInstallParentFirst</span><span class="p">(</span><span class="n">DeployersImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1225</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">DeployersImpl</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">DeployersImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1113</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractControllerContext</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">AbstractControllerContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">348</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1652</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">incrementState</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">938</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">resolveContexts</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1082</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">resolveContexts</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">988</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">change</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">826</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">change</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">556</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">DeployersImpl</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="n">DeployersImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">789</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">deployers</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">MainDeployerImpl</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="n">MainDeployerImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">699</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">profileservice</span><span class="o">.</span><span class="n">repository</span><span class="o">.</span><span class="n">MainDeployerAdapter</span><span class="o">.</span><span class="n">process</span><span class="p">(</span><span class="n">MainDeployerAdapter</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">117</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">profileservice</span><span class="o">.</span><span class="n">repository</span><span class="o">.</span><span class="n">ProfileDeployAction</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">ProfileDeployAction</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">70</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">profileservice</span><span class="o">.</span><span class="n">repository</span><span class="o">.</span><span class="n">AbstractProfileAction</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">AbstractProfileAction</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">53</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">profileservice</span><span class="o">.</span><span class="n">repository</span><span class="o">.</span><span class="n">AbstractProfileService</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">AbstractProfileService</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">403</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractControllerContext</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">AbstractControllerContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">348</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1652</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">incrementState</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">938</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">resolveContexts</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1082</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">resolveContexts</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">988</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">778</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">dependency</span><span class="o">.</span><span class="n">plugins</span><span class="o">.</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">install</span><span class="p">(</span><span class="n">AbstractController</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">543</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">profileservice</span><span class="o">.</span><span class="n">repository</span><span class="o">.</span><span class="n">AbstractProfileService</span><span class="o">.</span><span class="n">registerProfile</span><span class="p">(</span><span class="n">AbstractProfileService</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">308</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">system</span><span class="o">.</span><span class="n">server</span><span class="o">.</span><span class="n">profileservice</span><span class="o">.</span><span class="n">ProfileServiceBootstrap</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">ProfileServiceBootstrap</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">256</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">bootstrap</span><span class="o">.</span><span class="n">AbstractServerImpl</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="n">AbstractServerImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">461</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">Main</span><span class="o">.</span><span class="n">boot</span><span class="p">(</span><span class="n">Main</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">221</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">Main</span><span class="o">$</span><span class="mf">1.</span><span class="n">run</span><span class="p">(</span><span class="n">Main</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">556</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">lang</span><span class="o">.</span><span class="n">Thread</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="ne">Thread</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">662</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="what-is-going-on">What is going on:</h2>
+<p>In the run of deployment, JBoss is starting context, hands over control to NucleusServlet init. Nucleus is trying to get write access lock and hangs there forever, while WAR deployment and all subsequent deployment never completes.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2018-06-07-aws/" class="read-more-link">Read more...</a>
+      <a href="/posts/2014-09-03-atg-rant/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-09-03-gitbits/">Few gitbits</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-09-03 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 319 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="show-branches-and-tags-in-log">Show branches and tags in log</h2>
+<blockquote>
+<p>git log &ndash;oneline &ndash;decorate</p>
+</blockquote>
+<p><img src="/images/gb-1.png" alt=""></p>
+<h2 id="even-better---all-branches-with-graph">Even better - all branches with graph</h2>
+<blockquote>
+<p>git log &ndash;oneline &ndash;decorate &ndash;all &ndash;graph</p>
+</blockquote>
+<p><img src="/images/gb-2.png" alt=""></p>
+<h2 id="highlight-words-instead-of-lines">Highlight words instead of lines</h2>
+<blockquote>
+<p>git diff &ndash;word-diff HEAD~~~ HEAD~~</p>
+</blockquote>
+<p>Also works in git log -p and git show</p>
+<h2 id="better-status">Better status</h2>
+<blockquote>
+<p>git status -sb</p>
+</blockquote>
+<p>Compare with gs == git status</p>
+<p><img src="/images/gb-5.png" alt=""></p>
+<h2 id="find-a-name">Find a name</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git name-rev 2643908
+</span></span><span class="line"><span class="cl">2643908 remotes/origin/HEAD~2
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git name-rev --name-only 2643908
+</span></span><span class="line"><span class="cl">remotes/origin/HEAD~2
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6
+</span></span><span class="line"><span class="cl">LIVE
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git name-rev --name-only 73c762c
+</span></span><span class="line"><span class="cl">remotes/origin/2013-10-22-LIVE~3
+</span></span></code></pre></div><h1 id="find-which-branch-has-a-commit">Find which branch has a commit</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git branch --contains 73c762c
+</span></span><span class="line"><span class="cl">  LIVE
+</span></span><span class="line"><span class="cl">  LIVE-140430
+</span></span><span class="line"><span class="cl">  LIVE2
+</span></span><span class="line"><span class="cl">  LIVE3
+</span></span><span class="line"><span class="cl">  LIVE4
+</span></span><span class="line"><span class="cl">  PATCH-ORS-140605
+</span></span><span class="line"><span class="cl">  PATCH-ORS-140616
+</span></span><span class="line"><span class="cl">  feature_us_shipping
+</span></span><span class="line"><span class="cl">* master
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git branch --contains 188fcd6
+</span></span><span class="line"><span class="cl">  LIVE
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git branch --contains 2643908
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git pull
+</span></span><span class="line"><span class="cl">Updating ed81557..220a6a7
+</span></span><span class="line"><span class="cl">Fast-forward
+</span></span><span class="line"><span class="cl">....
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git branch --contains 2643908
+</span></span><span class="line"><span class="cl">* master
+</span></span></code></pre></div><p>The NO RESULT from 2643908 was caused by the fact that this commit was present only in origin/master, not yet merged into local master. After pull, it does show</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-09-03-gitbits/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-08-28-elastic-tutorial/">Tutorial on Elastic</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-08-28 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 1658 words </span>
+        <span class="more-meta"> 8 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="running-elastic">Running elastic</h2>
+<p>(see Elastic search and Kibana - getting started)</p>
+<blockquote>
+<p>Use case: building a employee directory for Megacorp</p>
+</blockquote>
+<ul>
+<li>each document - type of &rsquo;employee'</li>
+<li>everything in megacorp index</li>
+</ul>
+<h2 id="populating">Populating</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="c1"># Delete the `megacorp` index in case it already exists
+</span></span></span><span class="line"><span class="cl"><span class="k">DELETE</span><span class="w"> </span><span class="o">/</span><span class="n">megacorp</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Index document 1, type &#34;employee&#34;, in the
+</span></span></span><span class="line"><span class="cl"><span class="c1"># &#34;megacorp&#34; index
+</span></span></span><span class="line"><span class="cl"><span class="n">PUT</span><span class="w"> </span><span class="o">/</span><span class="n">megacorp</span><span class="o">/</span><span class="n">employee</span><span class="o">/</span><span class="mi">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;first_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;John&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;last_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;Smith&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;age&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">        </span><span class="mi">25</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;about&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">      </span><span class="s2">&#34;I love to go rock climbing&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;interests&#34;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&#34;sports&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;music&#34;</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Index two more documents
+</span></span></span><span class="line"><span class="cl"><span class="n">PUT</span><span class="w"> </span><span class="o">/</span><span class="n">megacorp</span><span class="o">/</span><span class="n">employee</span><span class="o">/</span><span class="mi">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;first_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;Jane&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;last_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">   </span><span class="s2">&#34;Smith&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;age&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">         </span><span class="mi">32</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;about&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">       </span><span class="s2">&#34;I like to collect rock albums&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;interests&#34;</span><span class="p">:</span><span class="w">  </span><span class="p">[</span><span class="w"> </span><span class="s2">&#34;music&#34;</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">PUT</span><span class="w"> </span><span class="o">/</span><span class="n">megacorp</span><span class="o">/</span><span class="n">employee</span><span class="o">/</span><span class="mi">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;first_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;Douglas&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;last_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">   </span><span class="s2">&#34;Fir&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;age&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">         </span><span class="mi">35</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;about&#34;</span><span class="p">:</span><span class="w">        </span><span class="s2">&#34;I like to build cabinets&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;interests&#34;</span><span class="p">:</span><span class="w">  </span><span class="p">[</span><span class="w"> </span><span class="s2">&#34;forestry&#34;</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">}</span><span class="w">
+</span></span></span></code></pre></div><p>In server</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-08-28-elastic-tutorial/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-08-27-es1/">Elastic search and Kibana - getting started</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-08-27 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 599 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>#Installation:</p>
+<p>See <a href="http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_installing_elasticsearch.html"></a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="o">-</span><span class="n">O</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">VERSION</span><span class="o">.</span><span class="n">zip</span>
+</span></span><span class="line"><span class="cl"><span class="n">unzip</span> <span class="n">elasticsearch</span><span class="o">-$</span><span class="n">VERSION</span><span class="o">.</span><span class="n">zip</span>
+</span></span><span class="line"><span class="cl"><span class="n">cd</span>  <span class="n">elasticsearch</span><span class="o">-$</span><span class="n">VERSION</span>
+</span></span></code></pre></div><p>Marvel is management plugin - console about cluster. Install:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./bin/plugin -i elasticsearch/marvel/latest
+</span></span><span class="line"><span class="cl"># disable data collection for local cluster
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">echo &#39;marvel.agent.enabled: false&#39; &gt;&gt; ./config/elasticsearch.yml
+</span></span></code></pre></div><h1 id="test">Test</h1>
+<p>Startup log:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">elasticsearch</span><span class="o">-</span><span class="mf">1.3</span><span class="o">.</span><span class="mi">2</span>  <span class="n">bin</span><span class="o">/</span><span class="n">elasticsearch</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">08</span><span class="p">,</span><span class="mi">325</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">node</span>                     <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">version</span><span class="p">[</span><span class="mf">1.3</span><span class="o">.</span><span class="mi">2</span><span class="p">],</span> <span class="n">pid</span><span class="p">[</span><span class="mi">59610</span><span class="p">],</span> <span class="n">build</span><span class="p">[</span><span class="n">dee175d</span><span class="o">/</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">13</span><span class="n">T14</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">30</span><span class="n">Z</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">08</span><span class="p">,</span><span class="mi">325</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">node</span>                     <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">initializing</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">08</span><span class="p">,</span><span class="mi">338</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">plugins</span>                  <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">loaded</span> <span class="p">[</span><span class="n">marvel</span><span class="p">],</span> <span class="n">sites</span> <span class="p">[</span><span class="n">marvel</span><span class="p">,</span> <span class="n">kopf</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">905</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">marvel</span><span class="o">.</span><span class="n">agent</span>             <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">collecting</span> <span class="n">disabled</span> <span class="n">by</span> <span class="n">settings</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span><span class="mi">020</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">node</span>                     <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">initialized</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span><span class="mi">021</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">node</span>                     <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">starting</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span><span class="mi">131</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">transport</span>                <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">bound_address</span> <span class="p">{</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">9300</span><span class="p">]},</span> <span class="n">publish_address</span> <span class="p">{</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">179.121</span><span class="p">:</span><span class="mi">9300</span><span class="p">]}</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span><span class="mi">148</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">discovery</span>                <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">elasticsearch</span><span class="o">/</span><span class="n">nNgRXlHARHCPutTq7dZXWg</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">160</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">cluster</span><span class="o">.</span><span class="n">service</span>          <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">new_master</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">][</span><span class="n">nNgRXlHARHCPutTq7dZXWg</span><span class="p">][</span><span class="n">Miros</span><span class="o">-</span><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="o">-</span><span class="mf">2.</span><span class="n">local</span><span class="p">][</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">179.121</span><span class="p">:</span><span class="mi">9300</span><span class="p">]],</span> <span class="n">reason</span><span class="p">:</span> <span class="n">zen</span><span class="o">-</span><span class="n">disco</span><span class="o">-</span><span class="n">join</span> <span class="p">(</span><span class="n">elected_as_master</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">181</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">http</span>                     <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">bound_address</span> <span class="p">{</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">9200</span><span class="p">]},</span> <span class="n">publish_address</span> <span class="p">{</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">179.121</span><span class="p">:</span><span class="mi">9200</span><span class="p">]}</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">181</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">node</span>                     <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">started</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">726</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">gateway</span>                  <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">recovered</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">indices</span> <span class="n">into</span> <span class="n">cluster_state</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mi">00</span><span class="p">,</span><span class="mi">491</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">cluster</span><span class="o">.</span><span class="n">service</span>          <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">added</span> <span class="p">{[</span><span class="n">logstash</span><span class="o">-</span><span class="n">Miros</span><span class="o">-</span><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="o">-</span><span class="mf">2.</span><span class="n">local</span><span class="o">-</span><span class="mi">59618</span><span class="o">-</span><span class="mi">4086</span><span class="p">][</span><span class="n">Eh5YjUFxSIWIn4xK45xu0w</span><span class="p">][</span><span class="n">Miros</span><span class="o">-</span><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="o">-</span><span class="mf">2.</span><span class="n">local</span><span class="p">][</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">179.121</span><span class="p">:</span><span class="mi">9301</span><span class="p">]]{</span><span class="n">client</span><span class="o">=</span><span class="bp">true</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">false</span><span class="p">},},</span> <span class="n">reason</span><span class="p">:</span> <span class="n">zen</span><span class="o">-</span><span class="n">disco</span><span class="o">-</span><span class="n">receive</span><span class="p">(</span><span class="n">join</span> <span class="n">from</span> <span class="n">node</span><span class="p">[[</span><span class="n">logstash</span><span class="o">-</span><span class="n">Miros</span><span class="o">-</span><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="o">-</span><span class="mf">2.</span><span class="n">local</span><span class="o">-</span><span class="mi">59618</span><span class="o">-</span><span class="mi">4086</span><span class="p">][</span><span class="n">Eh5YjUFxSIWIn4xK45xu0w</span><span class="p">][</span><span class="n">Miros</span><span class="o">-</span><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="o">-</span><span class="mf">2.</span><span class="n">local</span><span class="p">][</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">179.121</span><span class="p">:</span><span class="mi">9301</span><span class="p">]]{</span><span class="n">client</span><span class="o">=</span><span class="bp">true</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">false</span><span class="p">}])</span>
+</span></span><span class="line"><span class="cl"><span class="n">Installed</span> <span class="n">some</span> <span class="n">pluggins</span> <span class="o">-</span> <span class="n">marvel</span><span class="p">,</span> <span class="n">kopf</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span>  <span class="n">curl</span> <span class="s1">&#39;http://localhost:9200/?pretty&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;status&#34;</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;name&#34;</span> <span class="p">:</span> <span class="s2">&#34;Sea Urchin&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;version&#34;</span> <span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;number&#34;</span> <span class="p">:</span> <span class="s2">&#34;1.3.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;build_hash&#34;</span> <span class="p">:</span> <span class="s2">&#34;dee175dbe2f254f3f26992f5d7591939aaefd12f&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;build_timestamp&#34;</span> <span class="p">:</span> <span class="s2">&#34;2014-08-13T14:29:30Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;build_snapshot&#34;</span> <span class="p">:</span> <span class="bp">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;lucene_version&#34;</span> <span class="p">:</span> <span class="s2">&#34;4.9&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;tagline&#34;</span> <span class="p">:</span> <span class="s2">&#34;You Know, for Search&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The sense console allows to avoid using curl and do it from browser: - &lt;http://localhost:9200/_plugin/marvel/sense/ &gt;</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-08-27-es1/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -265,7 +775,9 @@ So many clouds, so little time &hellip;
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -283,13 +795,10 @@ So many clouds, so little time &hellip;
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -300,7 +809,10 @@ So many clouds, so little time &hellip;
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

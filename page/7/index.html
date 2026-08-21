@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -36,20 +36,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Miro&#39;s World" />
-<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
-<meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Miro&#39;s World"/>
-<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
+<meta property="og:url" content="https://miroadamy.com/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Miro&#39;s World">
+	<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+	<meta itemprop="name" content="Miro&#39;s World">
+	<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta itemprop="datePublished" content="2026-08-21T14:31:54+00:00">
+	<meta itemprop="dateModified" content="2026-08-21T14:31:54+00:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Miro&#39;s World">
+	<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,12 +91,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -108,6 +122,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -116,125 +131,756 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-08-03-post/">Family vacation</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2017-05-10-remote-svn/">Managing code in remote SVN repo</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2019-08-03 </span>
+      <span class="post-time"> 2017-05-10 </span>
       <div class="post-category">
-          <a href="/categories/life/"> life </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 17 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 540 words </span>
+        <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      After long time both we and both our children are in the same place.
-Precious family time.
+      <p>This is based on J.&rsquo;s&rsquo; question in Slack:</p>
+<blockquote>
+<p>Do we have some customer where we are moving a git repo to svn in an automated fashion
+I just need to move the git repo into svn periodically nightly</p>
+</blockquote>
+<p>The setup (as I understand it):</p>
+<ul>
+<li>on client side we have a worktree that is Git repository</li>
+<li>the files needs to be copied to SVN regularly</li>
+</ul>
+<h2 id="options">Options</h2>
+<h3 id="use-git-svn-bridge">Use git-svn bridge</h3>
+<p>Git client allows to &ldquo;pretend&rdquo; it is SVN and pull/push against remote SVN repo</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2019-08-03-post/" class="read-more-link">Read more...</a>
+      <a href="/posts/2017-05-10-remote-svn/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-07-18-finland-man/">Finland Män</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-11-02-pensieve-to-bitbucket/">Process for transferring Git repo from Gitolite to Bitbucket</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2019-07-16 </span>
+      <span class="post-time"> 2016-11-02 </span>
       <div class="post-category">
-          <a href="/categories/jokes/"> jokes </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 367 words </span>
+        <span class="more-meta"> 766 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="task">Task</h2>
+<p>Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there</p>
+<h2 id="user-setup">User setup</h2>
+<ul>
+<li>List all keys in Gitolite</li>
+<li>must have access to Gitolite admin interface</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  gitolite-admin git:(master) ll keydir
+</span></span><span class="line"><span class="cl">total 144K
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 401 Jun 29  2015 alter.pub
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 397 Jun 29  2015 codereview.pub
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 400 Apr 18  2016 hybris.pub
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 400 Apr 19  2016 hybris2.pub
+</span></span><span class="line"><span class="cl">-rw-r----- 1 miro 398 Mar 30  2016 irae.pub
+</span></span><span class="line"><span class="cl">... DELETED ...
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 401 Jun 29  2015 miro.pub
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 411 Jun 29  2015 tkuser.jenkins0.pub
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 411 Jun 29  2015 tkuser.jenkins2.pub
+</span></span></code></pre></div><p>These will be split to 5 usergroups</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-11-02-pensieve-to-bitbucket/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-09-05-git-update-all-local-branches/">Update all local branches in Git repo</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-09-05 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 689 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="update-all-local-branches-in-git-repo">Update all local branches in Git repo</h1>
+<p>Issue: The git pull updates just one current branch.</p>
+<p>In DevOps I am following many Git repos and need to keep up to date for all local branches.</p>
+<h2 id="git-ffwd-update-command">git ffwd-update command</h2>
+<p>Source: <a href="http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches">http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches</a></p>
+<p>Create file named git-ffwd-update somewhere on the path (in my case <code>~/bin</code>)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">main<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">REMOTES</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$REMOTES</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">REMOTES</span><span class="o">=</span><span class="k">$(</span>git remote<span class="k">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">REMOTES</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$REMOTES</span><span class="s2">&#34;</span> <span class="p">|</span> xargs -n1 <span class="nb">echo</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">CLB</span><span class="o">=</span><span class="k">$(</span>git branch -l<span class="p">|</span>awk <span class="s1">&#39;/^\*/{print $2}&#39;</span><span class="k">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$REMOTES</span><span class="s2">&#34;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> REMOTE<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    git remote update <span class="nv">$REMOTE</span>
+</span></span><span class="line"><span class="cl">    git remote show <span class="nv">$REMOTE</span> -n <span class="se">\
+</span></span></span><span class="line"><span class="cl">    <span class="p">|</span> awk <span class="s1">&#39;/merges with remote/{print $5&#34; &#34;$1}&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">    <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> line<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">RB</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$line</span><span class="s2">&#34;</span><span class="p">|</span>cut -f1 -d<span class="s2">&#34; &#34;</span><span class="k">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">ARB</span><span class="o">=</span><span class="s2">&#34;refs/remotes/</span><span class="nv">$REMOTE</span><span class="s2">/</span><span class="nv">$RB</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">LB</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$line</span><span class="s2">&#34;</span><span class="p">|</span>cut -f2 -d<span class="s2">&#34; &#34;</span><span class="k">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">ALB</span><span class="o">=</span><span class="s2">&#34;refs/heads/</span><span class="nv">$LB</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">NBEHIND</span><span class="o">=</span><span class="k">$((</span> <span class="k">$(</span>git rev-list --count <span class="nv">$ALB</span>..<span class="nv">$ARB</span> 2&gt;/dev/null<span class="k">)</span> <span class="o">+</span><span class="m">0</span><span class="k">))</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">NAHEAD</span><span class="o">=</span><span class="k">$((</span> <span class="k">$(</span>git rev-list --count <span class="nv">$ARB</span>..<span class="nv">$ALB</span> 2&gt;/dev/null<span class="k">)</span> <span class="o">+</span><span class="m">0</span><span class="k">))</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$NBEHIND</span><span class="s2">&#34;</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$NAHEAD</span><span class="s2">&#34;</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">echo</span> <span class="s2">&#34; branch </span><span class="nv">$LB</span><span class="s2"> is </span><span class="nv">$NBEHIND</span><span class="s2"> commit(s) behind and </span><span class="nv">$NAHEAD</span><span class="s2"> commit(s) ahead of </span><span class="nv">$REMOTE</span><span class="s2">/</span><span class="nv">$RB</span><span class="s2">. could not be fast-forwarded&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$LB</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="nv">$CLB</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">echo</span> <span class="s2">&#34; branch </span><span class="nv">$LB</span><span class="s2"> was </span><span class="nv">$NBEHIND</span><span class="s2"> commit(s) behind of </span><span class="nv">$REMOTE</span><span class="s2">/</span><span class="nv">$RB</span><span class="s2">. fast-forward merge&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          git merge -q <span class="nv">$ARB</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">echo</span> <span class="s2">&#34; branch </span><span class="nv">$LB</span><span class="s2"> was </span><span class="nv">$NBEHIND</span><span class="s2"> commit(s) behind of </span><span class="nv">$REMOTE</span><span class="s2">/</span><span class="nv">$RB</span><span class="s2">. reseting local branch to remote&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          git branch -l -f <span class="nv">$LB</span> -t <span class="nv">$ARB</span> &gt;/dev/null<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">      <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">    <span class="k">done</span>
+</span></span><span class="line"><span class="cl">  <span class="k">done</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">main <span class="nv">$@</span>
+</span></span></code></pre></div><p>Make sure the file is executable: <code>chmod +x ~/bin/git-ffwd-update</code></p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-09-05-git-update-all-local-branches/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-05-30-linux-resources/">Learning resources for Linux and Command line</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-05-30 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 338 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Lost and then found again - here:https://angrytouristblog.blogspot.com/2015/10/rejoice-finland-man-is-back.html
-Here is the copy, just in case
-Rejoice! The Finland Män is back! Source
-Finland Män Not Like Smalltalk. Is Horror.
-Finland Män not kän underständ smalltalk. When kuud silense, samwan open mouth, silense destroid, why do tis?
-One time Finland Män ko tu bar. Finland Män sit ät kounter, entshoi trink, look onli mopile phone. Is kuud silense. Then kam womän nekst tu Finland Män.
+      <p>This quick summary to answer Megha Maiya&rsquo;s question - I am adding to the Wiki in case it can be expanded later
+useful for somebody else:</p>
+<ul>
+<li>expanded later</li>
+<li>useful for somebody else</li>
+</ul>
+<h2 id="free-resources">Free resources</h2>
+<p>There is HUGE amount of resources available for Linux and Unix out there. The issue is select those reasonably good</p>
+<ul>
+<li>List of lists: <a href="https://github.com/learnbyexample/scripting_course/blob/master/Linux_curated_resources.md">https://github.com/learnbyexample/scripting_course/blob/master/Linux_curated_resources.md</a></li>
+<li><a href="http://ryanstutorials.net/">http://ryanstutorials.net/</a>, specially <a href="http://ryanstutorials.net/linuxtutorial/">http://ryanstutorials.net/linuxtutorial/</a> and <a href="http://ryanstutorials.net/linuxtutorial/">http://ryanstutorials.net/linuxtutorial/</a></li>
+<li><a href="http://www.tutorialspoint.com/unix/unix-getting-started.htm">http://www.tutorialspoint.com/unix/unix-getting-started.htm</a></li>
+<li>(bash scripting) - <a href="https://bash.cyberciti.biz/guide/Main_Page">https://bash.cyberciti.biz/guide/Main_Page</a></li>
+<li>free book - <a href="http://unixmages.com/ufbm.pdf">http://unixmages.com/ufbm.pdf</a> - very beginner friendly</li>
+<li>list of free books: <a href="http://www.dailyartisan.com/news/open-source-e-books-for-linux/">http://www.dailyartisan.com/news/open-source-e-books-for-linux/</a></li>
+<li>Eli The computer guy - <a href="https://www.youtube.com/playlist?list=PLD6B6473ACF32C59D">https://www.youtube.com/playlist?list=PLD6B6473ACF32C59D</a> (I like this one)</li>
+<li>YouTube channel - ultimate Linux tutorials - <a href="https://www.youtube.com/channel/UCn58SGUDUnUHRYKyNffHQrQ">https://www.youtube.com/channel/UCn58SGUDUnUHRYKyNffHQrQ</a>
+(from a generous Indian guy sharing his experience with the world for free. Not ideal audio quality, could use some editing - bot has lots of content)</li>
+<li>EDX courses - <a href="https://www.edx.org/school/linuxfoundationx">https://www.edx.org/school/linuxfoundationx</a></li>
+<li><a href="http://www.tutorialspoint.com/listtutorials/linux/basic-concepts/1">http://www.tutorialspoint.com/listtutorials/linux/basic-concepts/1</a></li>
+<li>Wikibooks - <a href="https://en.wikibooks.org/wiki/LPI_Linux_Certification">https://en.wikibooks.org/wiki/LPI_Linux_Certification</a></li>
+</ul>
+<h2 id="hands-on">Hands On</h2>
+<p>Reading books and watching videos will have very little impact without trying things out.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2019-07-18-finland-man/" class="read-more-link">Read more...</a>
+      <a href="/posts/2016-05-30-linux-resources/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-07-06-picnic/">Company picnic</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-05-17-docker-osx/">Native OS-X Docker (Beta) - not quite there yet</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2019-07-06 </span>
+      <span class="post-time"> 2016-05-17 </span>
       <div class="post-category">
-          <a href="/categories/life/"> life </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 3 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 639 words </span>
+        <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      with great paella.
+      <p>I was intrigued by convenience of using Docker natively on Mac, without dealing with differences localhost != dockerhost, so I subscribed for Beta and installed it.</p>
+<h3 id="good-news-1">Good news 1</h3>
+<p>It can coexist with previous Docker installation (mostly) - see the note at the end. As long as you do not try to run native Docker and docker-machine at the same time, things coexist.</p>
+<h3 id="good-news-2">Good news 2</h3>
+<p>It works for several images I tried. And it is really convenient, seems to be faster (personal perception, not result of a measurement or a benchmark).</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2019-07-06-picnic/" class="read-more-link">Read more...</a>
+      <a href="/posts/2016-05-17-docker-osx/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-06-23-tim-hortons/">Tim Hortons in Valencia</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-24-acc-on-osx/">Starting ACC (ATG Control Centre) on OS-X</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2019-06-23 </span>
+      <span class="post-time"> 2016-03-24 </span>
       <div class="post-category">
-          <a href="/categories/life/"> life </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 79 words </span>
+        <span class="more-meta"> 101 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      I have my doubts whether it will survive. It is next to Starbucks (one of several, albeit nothing like Toronto) so there is competition for tourists looking for the familiar logo.
-As for locals, Spanish coffee culture is quite different, and if I am allowed to say so - Spanish coffee is both better AND less expensive as
-So let&rsquo;s hope Timbits will save the day. Who could resist deep fried sugary dough, eh ?
+      <p>Copy the installation of ACC for respective version from a Linux VM:</p>
+<img src="/images/2014-10-02_17-14-04.png" width="400" />
+<p>The startup script in bin/startClient will fail, because it cannot determine which Java to use to run the app.</p>
+<p>It is trying to determine Unix flavour, failing that defaults to Solaris and ends up with invalid settings.</p>
+<h3 id="fix">Fix</h3>
+<p>Set the variable JAVA_VM to path to executable command on your system.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">which</span> <span class="n">java</span>
+</span></span><span class="line"><span class="cl"><span class="n">java</span> <span class="n">is</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Java</span><span class="o">/</span><span class="n">JavaVirtualMachines</span><span class="o">/</span><span class="n">jdk1</span><span class="o">.</span><span class="mf">7.0</span><span class="n">_55</span><span class="o">.</span><span class="n">jdk</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">Home</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">java</span>
+</span></span><span class="line"><span class="cl"><span class="n">java</span> <span class="n">is</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">java</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="k">export</span> <span class="n">JAVA_VM</span><span class="o">=/</span><span class="n">Library</span><span class="o">/</span><span class="n">Java</span><span class="o">/</span><span class="n">JavaVirtualMachines</span><span class="o">/</span><span class="n">jdk1</span><span class="o">.</span><span class="mf">7.0</span><span class="n">_55</span><span class="o">.</span><span class="n">jdk</span><span class="o">/</span><span class="n">Contents</span><span class="o">/</span><span class="n">Home</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">java</span>
+</span></span></code></pre></div><p>After that, it works.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2019-06-23-tim-hortons/" class="read-more-link">Read more...</a>
+      <a href="/posts/2016-03-24-acc-on-osx/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-05-25-ottawa/">Visit in Canada</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-23-gitbits2/">Git bits 2</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2019-05-26 </span>
+      <span class="post-time"> 2016-03-23 </span>
       <div class="post-category">
-          <a href="/categories/life/"> life </a>
+          <a href="/categories/programming/"> programming </a>
+          <a href="/categories/technology/"> Technology </a>
           </div>
-        <span class="more-meta"> 118 words </span>
+        <span class="more-meta"> 202 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      I did quick 2 week visit to Canada.
-I spent some time with our son and daughter-in-law, visited many dear friends and places in the city and nature, worked for couple of days in the office and met new colleagues and even met current my boss for the first time in 3D. I must say, he is taller than in Zoom :-D
-I also visited our ex-cat with her new human servants and as expected, Lucy duly ignored me.
+      <p>Using the Scala source repo to demonstrate - <a href="git@github.com:scala/scala.git">see Github</a></p>
+<h2 id="show-merged-and-unmerged-branches">Show merged and unmerged branches</h2>
+<p>This command allows you to show all local branches merged  / unmerged to current branch</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  scala git:(2.12.x) git branch -a --merged
+</span></span><span class="line"><span class="cl">* 2.12.x
+</span></span><span class="line"><span class="cl">  remotes/origin/2.11.x
+</span></span><span class="line"><span class="cl">  remotes/origin/2.12.x
+</span></span><span class="line"><span class="cl">  remotes/origin/HEAD -&gt; origin/2.12.x
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  scala git:(2.12.x) git branch -a --no-merged
+</span></span><span class="line"><span class="cl">  remotes/origin/2.10.x
+</span></span><span class="line"><span class="cl">  remotes/origin/2.8.x
+</span></span><span class="line"><span class="cl">  remotes/origin/2.9.x
+</span></span><span class="line"><span class="cl">  remotes/origin/DarkDimius-patch-1
+</span></span><span class="line"><span class="cl">  remotes/origin/gh-pages
+</span></span><span class="line"><span class="cl">  remotes/origin/legacy/msil
+</span></span></code></pre></div><p>This shows you all local branches merged into named branch:</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2019-05-25-ottawa/" class="read-more-link">Read more...</a>
+      <a href="/posts/2016-03-23-gitbits2/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-22-git-unmerged/">Git - find unmerged commits</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-03-22 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 998 words </span>
+        <span class="more-meta"> 5 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>This is Ruby script I found way back and was using it since.</p>
+<p>The credits for creation goes to Zach Dennis. The script is decribed in his
+<a href="https://www.mutuallyhuman.com/blog/2009/07/02/finding-unmerged-commits-with-git-unmerged/">blog post</a></p>
+<p>The source <a href="https://github.com/mhs/tidbits/blob/master/lib/git-unmerged.rb">is here</a></p>
+<h3 id="example">Example</h3>
+<p>This is beginning of very long output from Groovy source</p>
+<p><img src="/images/2016-03-26_20-45-36.png" alt="Groovy source"></p>
+<h3 id="the-code">The code</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env ruby</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;term-ansicolor&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;=1.0.5&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;term/ansicolor&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GitCommit</span>
+</span></span><span class="line"><span class="cl">  <span class="kp">attr_reader</span> <span class="ss">:content</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@content</span> <span class="o">=</span> <span class="n">content</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">sha</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@content</span><span class="o">.</span><span class="n">split</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">to_s</span>
+</span></span><span class="line"><span class="cl">    <span class="sb">`git log --pretty=format:&#34;%h %ad %an - %s&#34; </span><span class="si">#{</span><span class="n">sha</span><span class="si">}</span><span class="sb">~1..</span><span class="si">#{</span><span class="n">sha</span><span class="si">}</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">unmerged?</span>
+</span></span><span class="line"><span class="cl">    <span class="n">content</span> <span class="o">=~</span> <span class="sr">/^\+/</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">equivalent?</span>
+</span></span><span class="line"><span class="cl">    <span class="n">content</span> <span class="o">=~</span> <span class="sr">/^\-/</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GitBranch</span>
+</span></span><span class="line"><span class="cl">  <span class="kp">attr_reader</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:commits</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">commits</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@commits</span> <span class="o">=</span> <span class="n">commits</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Returns origin from origin/some/branch/here</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">repository</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">first</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Returns some/branch/here from origin/some/branch/here</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">branch_name</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;/&#34;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span><span class="o">.</span><span class="n">last</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">unmerged_commits</span>
+</span></span><span class="line"><span class="cl">    <span class="n">commits</span><span class="o">.</span><span class="n">select</span><span class="p">{</span> <span class="o">|</span><span class="n">commit</span><span class="o">|</span> <span class="n">commit</span><span class="o">.</span><span class="n">unmerged?</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">equivalent_commits</span>
+</span></span><span class="line"><span class="cl">    <span class="n">commits</span><span class="o">.</span><span class="n">select</span><span class="p">{</span> <span class="o">|</span><span class="n">commit</span><span class="o">|</span> <span class="n">commit</span><span class="o">.</span><span class="n">equivalent?</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GitBranches</span> <span class="o">&lt;</span> <span class="nb">Array</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">clean_branch_output</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/\n/</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">{</span> <span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="o">.</span><span class="n">strip</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/\*\s+/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">}</span><span class="o">.</span><span class="n">reject</span><span class="p">{</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span> <span class="n">branch</span> <span class="o">=~</span> <span class="sr">/\b</span><span class="si">#{</span><span class="no">Regexp</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="no">UPSTREAM</span><span class="p">)</span><span class="si">}</span><span class="sr">\b/</span> <span class="p">}</span><span class="o">.</span><span class="n">sort</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">local_branches</span>
+</span></span><span class="line"><span class="cl">    <span class="n">clean_branch_output</span> <span class="sb">`git branch`</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">remote_branches</span>
+</span></span><span class="line"><span class="cl">    <span class="n">clean_branch_output</span> <span class="sb">`git branch -r`</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">load</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">git_branches</span> <span class="o">=</span> <span class="kp">new</span>
+</span></span><span class="line"><span class="cl">    <span class="n">branches</span> <span class="o">=</span> <span class="k">if</span> <span class="n">options</span><span class="o">[</span><span class="ss">:local</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">      <span class="n">local_branches</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elsif</span> <span class="n">options</span><span class="o">[</span><span class="ss">:remote</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">      <span class="n">remote_branches</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">branches</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="n">raw_commits</span> <span class="o">=</span> <span class="sb">`git cherry -v </span><span class="si">#{</span><span class="no">UPSTREAM</span><span class="si">}</span><span class="sb"> </span><span class="si">#{</span><span class="n">branch</span><span class="si">}</span><span class="sb">`</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/\n/</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">{</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span> <span class="no">GitCommit</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="n">git_branches</span> <span class="o">&lt;&lt;</span> <span class="no">GitBranch</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">branch</span><span class="p">,</span> <span class="n">raw_commits</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">    <span class="n">git_branches</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">unmerged</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reject</span><span class="p">{</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span> <span class="n">branch</span><span class="o">.</span><span class="n">commits</span><span class="o">.</span><span class="n">empty?</span> <span class="p">}</span><span class="o">.</span><span class="n">sort_by</span><span class="p">{</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span> <span class="n">branch</span><span class="o">.</span><span class="n">name</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">any_missing_commits?</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">select</span><span class="p">{</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span> <span class="n">branch</span><span class="o">.</span><span class="n">commits</span><span class="o">.</span><span class="n">any?</span> <span class="p">}</span><span class="o">.</span><span class="n">any?</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GitUnmerged</span>
+</span></span><span class="line"><span class="cl">  <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">&#34;1.1&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kp">include</span> <span class="no">Term</span><span class="o">::</span><span class="no">ANSIColor</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kp">attr_reader</span> <span class="ss">:branches</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@options</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@branches_to_prune</span> <span class="o">=</span> <span class="o">[]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">extract_options_from_args</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">load</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@branches</span> <span class="o">||=</span> <span class="no">GitBranches</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="ss">:local</span> <span class="o">=&gt;</span> <span class="n">local?</span><span class="p">,</span> <span class="ss">:remote</span> <span class="o">=&gt;</span> <span class="n">remote?</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@branches</span><span class="o">.</span><span class="n">reject!</span><span class="p">{</span><span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:exclude</span><span class="o">].</span><span class="n">include?</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">name</span><span class="p">)}</span> <span class="k">if</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:exclude</span><span class="o">].</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">Array</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@branches</span><span class="o">.</span><span class="n">select!</span><span class="p">{</span><span class="o">|</span><span class="n">b</span><span class="o">|</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:only</span><span class="o">].</span><span class="n">include?</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">name</span><span class="p">)}</span> <span class="k">if</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:only</span><span class="o">].</span><span class="n">is_a?</span><span class="p">(</span><span class="nb">Array</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_overview</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">load</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:exclude</span><span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:exclude</span><span class="o">].</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span> <span class="s2">&#34;The following branches have been excluded&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@options</span><span class="o">[</span><span class="ss">:exclude</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">branch_name</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">puts</span> <span class="s2">&#34;  </span><span class="si">#{</span><span class="n">branch_name</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">end</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:only</span><span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:only</span><span class="o">].</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span> <span class="s2">&#34;The following branches will be compared against:&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@options</span><span class="o">[</span><span class="ss">:only</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">branch_name</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">puts</span> <span class="s2">&#34;  </span><span class="si">#{</span><span class="n">branch_name</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">end</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">branches</span><span class="o">.</span><span class="n">any_missing_commits?</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span> <span class="s2">&#34;The following branches possibly have commits not merged to </span><span class="si">#{</span><span class="n">upstream</span><span class="si">}</span><span class="s2">:&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">branches</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">        <span class="n">num_unmerged</span> <span class="o">=</span> <span class="n">yellow</span><span class="p">(</span><span class="n">branch</span><span class="o">.</span><span class="n">unmerged_commits</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">num_equivalent</span> <span class="o">=</span> <span class="n">green</span><span class="p">(</span><span class="n">branch</span><span class="o">.</span><span class="n">equivalent_commits</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">puts</span> <span class="s">%|  #{branch.name} (#{num_unmerged}/#{num_equivalent} commits)|</span>
+</span></span><span class="line"><span class="cl">      <span class="k">end</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_help</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s">&lt;&lt;-EOT.gsub(/^\s+\|/, &#39;&#39;)
+</span></span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">Usage</span><span class="p">:</span> <span class="c1">#{$0} [-a] [--upstream &lt;branch&gt;] [--remote] [--prune]</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="no">This</span> <span class="n">script</span> <span class="n">wraps</span> <span class="n">the</span> <span class="s2">&#34;git cherry&#34;</span> <span class="n">command</span><span class="o">.</span> <span class="no">It</span> <span class="n">reports</span> <span class="n">the</span> <span class="n">commits</span> <span class="n">from</span> <span class="n">all</span> <span class="n">local</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="n">branches</span> <span class="n">which</span> <span class="n">have</span> <span class="ow">not</span> <span class="n">been</span> <span class="n">merged</span> <span class="n">into</span> <span class="n">an</span> <span class="n">upstream</span> <span class="n">branch</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{yellow(&#34;yellow&#34;)} commits have not been merged</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{green(&#34;green&#34;)} commits have equivalent changes in &lt;upstream&gt; but different SHAs</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="no">The</span> <span class="n">default</span> <span class="n">upstream</span> <span class="n">is</span> <span class="s1">&#39;master&#39;</span> <span class="p">(</span><span class="ow">or</span> <span class="s1">&#39;origin/master&#39;</span> <span class="k">if</span> <span class="n">running</span> <span class="n">with</span> <span class="o">--</span><span class="n">remote</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">OPTIONS</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="o">-</span><span class="n">a</span>   <span class="nb">display</span> <span class="n">all</span> <span class="n">unmerged</span> <span class="n">commits</span> <span class="p">(</span><span class="n">verbose</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="o">--</span><span class="n">remote</span> <span class="p">(</span><span class="o">-</span><span class="n">r</span><span class="p">)</span>  <span class="n">compare</span> <span class="n">remote</span> <span class="n">branches</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">local</span> <span class="n">branches</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="o">--</span><span class="n">upstream</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span>   <span class="n">specify</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">upstream</span> <span class="n">branch</span> <span class="p">(</span><span class="n">defaults</span> <span class="n">to</span> <span class="n">master</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="o">--</span><span class="n">exclude</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;[</span><span class="p">,</span><span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span><span class="p">,</span><span class="o">...]</span>   <span class="n">specify</span> <span class="n">a</span> <span class="n">comma</span><span class="o">-</span><span class="n">separated</span> <span class="n">list</span> <span class="n">of</span> <span class="n">branches</span> <span class="n">to</span> <span class="n">exclude</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="o">--</span><span class="n">only</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;[</span><span class="p">,</span><span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span><span class="p">,</span><span class="o">...]</span>   <span class="n">specify</span> <span class="n">a</span> <span class="n">comma</span><span class="o">-</span><span class="n">separated</span> <span class="n">list</span> <span class="n">of</span> <span class="n">branches</span> <span class="n">to</span> <span class="kp">include</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="o">--</span><span class="n">prune</span>  <span class="n">prompts</span> <span class="n">user</span> <span class="n">to</span> <span class="n">delete</span> <span class="n">branches</span> <span class="n">which</span> <span class="n">have</span> <span class="n">no</span> <span class="n">differences</span> <span class="n">with</span> <span class="n">the</span> <span class="n">upstream</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">EXAMPLE</span><span class="p">:</span> <span class="n">check</span> <span class="k">for</span> <span class="n">all</span> <span class="n">unmerged</span> <span class="n">commits</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{$0}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">EXAMPLE</span><span class="p">:</span> <span class="n">check</span> <span class="k">for</span> <span class="n">all</span> <span class="n">unmerged</span> <span class="n">commits</span> <span class="ow">and</span> <span class="n">merged</span> <span class="n">commits</span> <span class="p">(</span><span class="n">but</span> <span class="n">with</span> <span class="n">a</span> <span class="n">different</span> <span class="no">SHA</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{$0} -a</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">EXAMPLE</span><span class="p">:</span> <span class="n">use</span> <span class="n">a</span> <span class="n">different</span> <span class="n">upstream</span> <span class="n">than</span> <span class="n">master</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{$0} --upstream otherbranch</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">EXAMPLE</span><span class="p">:</span> <span class="n">compare</span> <span class="n">remote</span> <span class="n">branches</span> <span class="n">against</span> <span class="n">origin</span><span class="o">/</span><span class="n">master</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{$0} --remote (-r)</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">EXAMPLE</span><span class="p">:</span> <span class="n">delete</span> <span class="n">branches</span> <span class="n">without</span> <span class="n">unmerged</span> <span class="n">commits</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{$0} --prune</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">EXAMPLE</span><span class="p">:</span> <span class="n">delete</span> <span class="n">remote</span> <span class="n">branches</span> <span class="n">without</span> <span class="n">unmerged</span> <span class="n">commits</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{$0} --remote --prune</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">GITCONFIG</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="no">If</span> <span class="n">you</span> <span class="nb">name</span> <span class="n">this</span> <span class="n">file</span> <span class="n">git</span><span class="o">-</span><span class="n">unmerged</span> <span class="ow">and</span> <span class="n">place</span> <span class="n">it</span> <span class="n">somewhere</span> <span class="k">in</span> <span class="n">your</span> <span class="no">PATH</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="n">you</span> <span class="n">will</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">type</span> <span class="s2">&#34;git unmerged&#34;</span> <span class="n">to</span> <span class="n">use</span> <span class="n">it</span><span class="o">.</span> <span class="no">If</span> <span class="n">you</span><span class="s1">&#39;d like to name
+</span></span></span><span class="line"><span class="cl"><span class="s1">      |  it something else and still refer to it with &#34;git unmerged&#34; then you&#39;</span><span class="n">ll</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="n">need</span> <span class="n">to</span> <span class="n">set</span> <span class="n">up</span> <span class="n">an</span> <span class="k">alias</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>      <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">global</span> <span class="k">alias</span><span class="o">.</span><span class="n">unmerged</span> <span class="p">\\</span><span class="o">!</span><span class="c1">#{$0}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">Version</span><span class="p">:</span> <span class="c1">#{VERSION}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">Author</span><span class="p">:</span> <span class="no">Zach</span> <span class="no">Dennis</span> <span class="o">&lt;</span><span class="n">zdennis</span><span class="vi">@mutuallyhuman</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="no">EOT</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_version</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s2">&#34;</span><span class="si">#{</span><span class="no">VERSION</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">branch_description</span>
+</span></span><span class="line"><span class="cl">    <span class="n">local?</span> <span class="p">?</span> <span class="s2">&#34;local&#34;</span> <span class="p">:</span> <span class="s2">&#34;remote&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_specifics</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">load</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">branches</span><span class="o">.</span><span class="n">any_missing_commits?</span>
+</span></span><span class="line"><span class="cl">      <span class="n">print_breakdown</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span> <span class="s2">&#34;There are no </span><span class="si">#{</span><span class="n">branch_description</span><span class="si">}</span><span class="s2"> branches out of sync with </span><span class="si">#{</span><span class="n">upstream</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_breakdown</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s2">&#34;Below is a breakdown for each branch. Here&#39;s a legend:&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span>
+</span></span><span class="line"><span class="cl">    <span class="n">print_legend</span>
+</span></span><span class="line"><span class="cl">    <span class="n">branches</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">print</span> <span class="s2">&#34;</span><span class="si">#{</span><span class="n">branch</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">:&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="n">branch</span><span class="o">.</span><span class="n">unmerged_commits</span><span class="o">.</span><span class="n">empty?</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">show_equivalent_commits?</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span> <span class="s2">&#34;(no unmerged commits&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">prune?</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">print</span> <span class="s2">&#34;,&#34;</span><span class="p">,</span> <span class="n">red</span><span class="p">(</span><span class="s2">&#34; this will be pruned&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="vi">@branches_to_prune</span> <span class="o">&lt;&lt;</span> <span class="n">branch</span>
+</span></span><span class="line"><span class="cl">        <span class="k">end</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span> <span class="s2">&#34;)</span><span class="se">\n</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">puts</span>
+</span></span><span class="line"><span class="cl">      <span class="k">end</span>
+</span></span><span class="line"><span class="cl">      <span class="n">branch</span><span class="o">.</span><span class="n">unmerged_commits</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">commit</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">yellow</span><span class="p">(</span><span class="n">commit</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="n">show_equivalent_commits?</span>
+</span></span><span class="line"><span class="cl">        <span class="n">branch</span><span class="o">.</span><span class="n">equivalent_commits</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">commit</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">puts</span> <span class="n">green</span><span class="p">(</span><span class="n">commit</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">end</span>
+</span></span><span class="line"><span class="cl">      <span class="k">end</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_legend</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">load</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s2">&#34;  &#34;</span> <span class="o">+</span> <span class="n">yellow</span><span class="p">(</span><span class="s2">&#34;yellow&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34; commits have not been merged&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s2">&#34;  &#34;</span> <span class="o">+</span> <span class="n">green</span><span class="p">(</span><span class="s2">&#34;green&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34; commits have equivalent changes in </span><span class="si">#{</span><span class="no">UPSTREAM</span><span class="si">}</span><span class="s2"> but different SHAs&#34;</span> <span class="k">if</span> <span class="n">show_equivalent_commits?</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">prune</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="k">unless</span> <span class="n">prune?</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="vi">@branches_to_prune</span><span class="o">.</span><span class="n">empty?</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;There are no branches to prune.&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">      <span class="c1"># Protects Heroku repo&#39;s</span>
+</span></span><span class="line"><span class="cl">      <span class="n">rejected_master_branches</span> <span class="o">=</span> <span class="vi">@branches_to_prune</span><span class="o">.</span><span class="n">reject!</span><span class="p">{</span><span class="o">|</span><span class="n">branch</span><span class="o">|</span> <span class="n">branch</span><span class="o">.</span><span class="n">branch_name</span> <span class="o">=~</span> <span class="sr">/master/</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;Are you sure you want to prune the following </span><span class="si">#{</span><span class="vi">@branches_to_prune</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s2"> branches?&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span> <span class="n">red</span><span class="p">(</span><span class="s2">&#34;(Keep in mind this will remove these branches from the remote repository)&#34;</span><span class="p">)</span> <span class="k">if</span> <span class="vi">@remote</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@branches_to_prune</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">puts</span> <span class="n">red</span><span class="p">(</span><span class="s2">&#34; </span><span class="si">#{</span><span class="n">branch</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">end</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span> <span class="s2">&#34;(omitting branches named master)&#34;</span> <span class="k">if</span> <span class="n">rejected_master_branches</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">print</span> <span class="s2">&#34;y or n: &#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="no">STDIN</span><span class="o">.</span><span class="n">gets</span><span class="o">=~</span><span class="sr">/y/i</span>
+</span></span><span class="line"><span class="cl">        <span class="vi">@branches_to_prune</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">          <span class="k">if</span> <span class="n">local?</span>
+</span></span><span class="line"><span class="cl">            <span class="sb">`git branch -D </span><span class="si">#{</span><span class="n">branch</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">          <span class="k">elsif</span> <span class="n">remote?</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">puts</span> <span class="s2">&#34;pruning: </span><span class="si">#{</span><span class="n">branch</span><span class="o">.</span><span class="n">branch_name</span><span class="si">}</span><span class="s2"> with &#39;git push </span><span class="si">#{</span><span class="n">branch</span><span class="o">.</span><span class="n">repository</span><span class="si">}</span><span class="s2"> :</span><span class="si">#{</span><span class="n">branch</span><span class="o">.</span><span class="n">branch_name</span><span class="si">}</span><span class="s2">&#39;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="sb">`git push </span><span class="si">#{</span><span class="n">branch</span><span class="o">.</span><span class="n">repository</span><span class="si">}</span><span class="sb"> :</span><span class="si">#{</span><span class="n">branch</span><span class="o">.</span><span class="n">branch_name</span><span class="si">}</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">          <span class="k">end</span>
+</span></span><span class="line"><span class="cl">        <span class="k">end</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">puts</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;Pruned </span><span class="si">#{</span><span class="vi">@branches_to_prune</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s2"> branches.&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">puts</span> <span class="s2">&#34;&#34;</span><span class="p">,</span> <span class="s2">&#34;Pruning aborted. All branches were left unharmed.&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">end</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">prune?</span> <span class="p">;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:prune</span> <span class="o">]</span> <span class="p">;</span> <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">show_help?</span> <span class="p">;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:show_help</span><span class="o">]</span> <span class="p">;</span> <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">show_equivalent_commits?</span> <span class="p">;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:show_equivalent_commits</span><span class="o">]</span> <span class="p">;</span> <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">show_version?</span> <span class="p">;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:show_version</span><span class="o">]</span> <span class="p">;</span> <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">upstream</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:upstream</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@options</span><span class="o">[</span><span class="ss">:upstream</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elsif</span> <span class="n">local?</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;master&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elsif</span> <span class="n">remote?</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;origin/master&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="kp">private</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">extract_options_from_args</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;--remote&#34;</span><span class="p">)</span> <span class="o">||</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;-r&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@options</span><span class="o">[</span><span class="ss">:remote</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@options</span><span class="o">[</span><span class="ss">:local</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="vi">@options</span><span class="o">[</span><span class="ss">:prune</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;--prune&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@options</span><span class="o">[</span><span class="ss">:show_help</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;-h&#34;</span><span class="p">)</span> <span class="o">||</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;--help&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@options</span><span class="o">[</span><span class="ss">:show_equivalent_commits</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;-a&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@options</span><span class="o">[</span><span class="ss">:show_version</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;-v&#34;</span><span class="p">)</span> <span class="o">||</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;--version&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">index</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&#34;--upstream&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@options</span><span class="o">[</span><span class="ss">:upstream</span><span class="o">]</span> <span class="o">=</span> <span class="n">args</span><span class="o">[</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">index</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&#34;--exclude&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@options</span><span class="o">[</span><span class="ss">:exclude</span><span class="o">]</span> <span class="o">=</span> <span class="n">args</span><span class="o">[</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="o">].</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">index</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&#34;--only&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@options</span><span class="o">[</span><span class="ss">:only</span><span class="o">]</span> <span class="o">=</span> <span class="n">args</span><span class="o">[</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="o">].</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">local?</span> <span class="p">;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:local</span><span class="o">]</span> <span class="p">;</span> <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">remote?</span> <span class="p">;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:remote</span><span class="o">]</span> <span class="p">;</span> <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">unmerged</span> <span class="o">=</span> <span class="no">GitUnmerged</span><span class="o">.</span><span class="n">new</span> <span class="no">ARGV</span>
+</span></span><span class="line"><span class="cl"><span class="no">UPSTREAM</span> <span class="o">=</span> <span class="n">unmerged</span><span class="o">.</span><span class="n">upstream</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">unmerged</span><span class="o">.</span><span class="n">show_help?</span>
+</span></span><span class="line"><span class="cl">  <span class="n">unmerged</span><span class="o">.</span><span class="n">print_help</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl"><span class="k">elsif</span> <span class="n">unmerged</span><span class="o">.</span><span class="n">show_version?</span>
+</span></span><span class="line"><span class="cl">  <span class="n">unmerged</span><span class="o">.</span><span class="n">print_version</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="n">unmerged</span><span class="o">.</span><span class="n">print_overview</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">puts</span>
+</span></span><span class="line"><span class="cl">  <span class="n">unmerged</span><span class="o">.</span><span class="n">print_specifics</span>
+</span></span><span class="line"><span class="cl">  <span class="n">unmerged</span><span class="o">.</span><span class="n">prune</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></div>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-03-22-git-unmerged/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-21-gitbits1/">Git committer activity</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-03-21 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 670 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Git command git shortlog is very handy to see what is team activity.</p>
+<h3 id="show-committer-activity---whole-project">Show committer activity - whole project</h3>
+<p>(output shortened to first 20 lines)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git shortlog -sn | head -20
+</span></span><span class="line"><span class="cl">  2991	Paul King
+</span></span><span class="line"><span class="cl">  1757	Cedric Champeau
+</span></span><span class="line"><span class="cl">  1615	Jochen Theodorou
+</span></span><span class="line"><span class="cl">  1031	James Strachan
+</span></span><span class="line"><span class="cl">   749	Guillaume Laforge
+</span></span><span class="line"><span class="cl">   312	Roshan Dawrani
+</span></span><span class="line"><span class="cl">   306	Jason Dillon
+</span></span><span class="line"><span class="cl">   301	Danno Ferrin
+</span></span><span class="line"><span class="cl">   284	Alex Tkachman
+</span></span><span class="line"><span class="cl">   273	PascalSchumacher
+</span></span><span class="line"><span class="cl">   230	John Wilson
+</span></span><span class="line"><span class="cl">   217	Pascal Schumacher
+</span></span><span class="line"><span class="cl">   204	pascalschumacher
+</span></span><span class="line"><span class="cl">   160	Thibault Kruse
+</span></span><span class="line"><span class="cl">   158	Jeremy Rayner
+</span></span><span class="line"><span class="cl">   134	Russel Winder
+</span></span><span class="line"><span class="cl">   123	Cédric Champeau
+</span></span><span class="line"><span class="cl">   122	Hamlet D&#39;Arcy
+</span></span><span class="line"><span class="cl">   116	Dierk Koenig
+</span></span><span class="line"><span class="cl">   104	Pilho Kim
+</span></span></code></pre></div><p>variant (without n) has different ordering:</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-03-21-gitbits1/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-20-gitinspector/">Git project statistic tool</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-03-20 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 753 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="git-project-statistic-tool">Git project statistic tool</h1>
+<p>Python based, requires Python 2.6+</p>
+<p>Works OOTB on Mac</p>
+<h2 id="installation">Installation</h2>
+<ul>
+<li>Download TAR from <a href="https://github.com/ejwa/gitinspector">Github</a></li>
+<li>unzipped to /opt</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">➜  ll /opt/gitinspector-0.3.2
+</span></span><span class="line"><span class="cl">total 52K
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> miro  <span class="m">999</span> Jul <span class="m">29</span>  <span class="m">2013</span> DESCRIPTION.txt
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> miro  32K Jun <span class="m">14</span>  <span class="m">2013</span> LICENSE.txt
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> miro   <span class="m">78</span> Jul  <span class="m">2</span>  <span class="m">2013</span> MANIFEST.in
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> miro  <span class="m">681</span> Jan <span class="m">13</span>  <span class="m">2014</span> README.txt
+</span></span><span class="line"><span class="cl">drwxr-xr-x <span class="m">45</span> miro 1.5K Mar <span class="m">20</span>  <span class="m">2015</span> gitinspector
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> miro 1.9K Jan <span class="m">14</span>  <span class="m">2014</span> setup.py
+</span></span><span class="line"><span class="cl">-rw-r--r--  <span class="m">1</span> miro  <span class="m">110</span> Jul <span class="m">27</span>  <span class="m">2013</span> stdeb.cfg
+</span></span></code></pre></div><ul>
+<li>create symlink from ~/bin (or from whatever directory on $PATH)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ln -s /opt/gitinspector-0.3.2/gitinspector/gitinspector.py ~/bin/gitinspector.py
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">➜  ~  ll ~/bin <span class="p">|</span> grep gitin
+</span></span><span class="line"><span class="cl">lrwxr-xr-x <span class="m">1</span> miro   <span class="m">52</span> Mar <span class="m">20</span> 16:06 gitinspector.py -&gt; /opt/gitinspector-0.3.2/gitinspector/gitinspector.py
+</span></span></code></pre></div><h2 id="example">Example</h2>
+<p>Look at scala sources - <a href="mailto:git@github.com">git@github.com</a>:scala/scala.git</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-03-20-gitinspector/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -268,7 +914,9 @@ I also visited our ex-cat with her new human servants and as expected, Lucy duly
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -286,13 +934,10 @@ I also visited our ex-cat with her new human servants and as expected, Lucy duly
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -303,7 +948,10 @@ I also visited our ex-cat with her new human servants and as expected, Lucy duly
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

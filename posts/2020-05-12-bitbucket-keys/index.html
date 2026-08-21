@@ -17,14 +17,15 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
-With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification." /><meta name="keywords" content="blog, Miro" />
+With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification. Time has come to split my personal identity and work identity.
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2020-05-12-bitbucket-keys/" />
@@ -35,31 +36,36 @@ With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process 
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Using SSH keys with multiple Bitbucket accounts" />
-<meta property="og:description" content="I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
-With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2020-05-12-bitbucket-keys/" />
-<meta property="article:published_time" content="2020-05-12T22:34:38+08:00" />
-<meta property="article:modified_time" content="2020-05-12T22:34:38+08:00" />
-<meta itemprop="name" content="Using SSH keys with multiple Bitbucket accounts">
-<meta itemprop="description" content="I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
-With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification.">
-<meta itemprop="datePublished" content="2020-05-12T22:34:38+08:00" />
-<meta itemprop="dateModified" content="2020-05-12T22:34:38+08:00" />
-<meta itemprop="wordCount" content="295">
+<meta property="og:url" content="https://miroadamy.com/posts/2020-05-12-bitbucket-keys/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Using SSH keys with multiple Bitbucket accounts">
+	<meta property="og:description" content="I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
+With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification. Time has come to split my personal identity and work identity.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2020-05-12T22:34:38+08:00">
+		<meta property="article:modified_time" content="2020-05-12T22:34:38+08:00">
+		<meta property="article:tag" content="Bitbucket">
+		<meta property="article:tag" content="Git">
+		<meta property="article:tag" content="Ssh">
 
-
-
-<meta itemprop="keywords" content="bitbucket,git,ssh," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Using SSH keys with multiple Bitbucket accounts"/>
-<meta name="twitter:description" content="I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
-With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification."/>
+	<meta itemprop="name" content="Using SSH keys with multiple Bitbucket accounts">
+	<meta itemprop="description" content="I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
+With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification. Time has come to split my personal identity and work identity.">
+	<meta itemprop="datePublished" content="2020-05-12T22:34:38+08:00">
+	<meta itemprop="dateModified" content="2020-05-12T22:34:38+08:00">
+	<meta itemprop="wordCount" content="295">
+	<meta itemprop="keywords" content="Bitbucket,Git,Ssh">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Using SSH keys with multiple Bitbucket accounts">
+	<meta name="twitter:description" content="I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
+With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification. Time has come to split my personal identity and work identity.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -96,12 +102,21 @@ With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process 
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -118,6 +133,7 @@ With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process 
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -153,33 +169,33 @@ With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process 
       <p>I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.</p>
 <p>With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification. Time has come to split my personal identity and work identity.</p>
 <p>I have created second Bitbucket account with work email and added &lsquo;-pvt&rsquo; to my login to keep them separate, removed the old myself from work worspaces and added the new myself instead. So far so good. The problems started when I wanted to keep using git based urls and needed new keypair. One cannot register same public key with two different Bitbucket accounts, so I needed new key:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">ssh-keygen -f ~/.ssh/bitbucket-pivotree
-</code></pre></div><p>but cloning did not work (for repository visible in Web UI):</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git clone -v git@bitbucket.org:thinkwrap/tw-bitbucket-admin.git
-Cloning into <span class="s1">&#39;tw-bitbucket-admin&#39;</span>...
-Forbidden
-fatal: Could not <span class="nb">read</span> from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-</code></pre></div><p>An attempt to add key to ssh daemon <code>ssh-add  ~/.ssh/bitbucket-pivotree</code> did not solve the problem either.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ssh-keygen -f ~/.ssh/bitbucket-pivotree
+</span></span></code></pre></div><p>but cloning did not work (for repository visible in Web UI):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone -v git@bitbucket.org:thinkwrap/tw-bitbucket-admin.git
+</span></span><span class="line"><span class="cl">Cloning into <span class="s1">&#39;tw-bitbucket-admin&#39;</span>...
+</span></span><span class="line"><span class="cl">Forbidden
+</span></span><span class="line"><span class="cl">fatal: Could not <span class="nb">read</span> from remote repository.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Please make sure you have the correct access rights
+</span></span><span class="line"><span class="cl">and the repository exists.
+</span></span></code></pre></div><p>An attempt to add key to ssh daemon <code>ssh-add  ~/.ssh/bitbucket-pivotree</code> did not solve the problem either.</p>
 <h2 id="solution">Solution</h2>
 <p>I had to define explicitly two different URLs for bitbucket in <code>~/.ssh/config</code> file:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">Host work.bitbucket.org
-  HostName bitbucket.org
-  User git
-  IdentityFile ~/.ssh/bitbucket-pivotree
-
-Host bitbucket.org
-  HostName bitbucket.org
-  User git
-  IdentityFile ~/.ssh/id_rsa
-</code></pre></div><p>Now for cloning work repositories, I can use the</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git clone -v git@work.itbucket.org:thinkwrap/tw-bitbucket-admin.git
-</code></pre></div><p>and the work key will be automatically used.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Host work.bitbucket.org
+</span></span><span class="line"><span class="cl">  HostName bitbucket.org
+</span></span><span class="line"><span class="cl">  User git
+</span></span><span class="line"><span class="cl">  IdentityFile ~/.ssh/bitbucket-pivotree
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Host bitbucket.org
+</span></span><span class="line"><span class="cl">  HostName bitbucket.org
+</span></span><span class="line"><span class="cl">  User git
+</span></span><span class="line"><span class="cl">  IdentityFile ~/.ssh/id_rsa
+</span></span></code></pre></div><p>Now for cloning work repositories, I can use the</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone -v git@work.itbucket.org:thinkwrap/tw-bitbucket-admin.git
+</span></span></code></pre></div><p>and the work key will be automatically used.</p>
 <p>For existing - already cloned repos, here is simple way how to reset the remote URL:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">git remote set-url origin <span class="k">$(</span>git remote -v <span class="p">|</span> grep fetch <span class="p">|</span> awk <span class="s1">&#39;{print $2;}&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/git@bit/git@work.bit/&#39;</span><span class="k">)</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git remote set-url origin <span class="k">$(</span>git remote -v <span class="p">|</span> grep fetch <span class="p">|</span> awk <span class="s1">&#39;{print $2;}&#39;</span> <span class="p">|</span> sed <span class="s1">&#39;s/git@bit/git@work.bit/&#39;</span><span class="k">)</span>
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -241,7 +257,7 @@ Host bitbucket.org
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -259,13 +275,10 @@ Host bitbucket.org
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -276,7 +289,10 @@ Host bitbucket.org
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

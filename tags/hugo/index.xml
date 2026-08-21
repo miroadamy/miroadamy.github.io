@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>hugo on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/hugo/</link>
-    <description>Recent content in hugo on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 23 Nov 2019 22:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Building Hugo as well on GitLab pages</title>
-      <link>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</link>
-      <pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</guid>
-      <description>Parallel building challenges Unlike Github, Gitlab considers Hugo blogs first class citizens and does not impose any restrictions on repo naming.
-I had 3 challenges to overcome related to co-existence of GH and GL versions:
- I need to use same repo for both GH and GL the submodule link for public does not work on GL the site root is different - I have no custom domain forward for GitLab  Using same repo To separate the GH and GL, I have added 2 remotes to repo and special branch gitlab-pages.</description>
-    </item>
-    
-    <item>
-      <title>From Jekyll to Hugo</title>
-      <link>https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/</link>
-      <pubDate>Wed, 20 Nov 2019 23:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/</guid>
-      <description>I have decided to consolidate all piecemeal versions of my blogpost uder one roof and at the same to do these four things
- technology upgrade - from Jekyll to Hugo visual refresh of the page review tagging and categorization merge hidden posts from Wikis to one place  Why Hugo replaced Jekyll The version 3 of my blog (see below for a bit of history) has been hosted on Github pages and using the default static site generators - Jekyll.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Hugo on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/hugo/</link>
+		<description>Recent content in Hugo on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 23 Nov 2019 22:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Building Hugo as well on GitLab pages</title>
+				<link>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</link>
+				<pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</guid>
+				<description>&lt;h1 id=&#34;parallel-building-challenges&#34;&gt;Parallel building challenges&lt;/h1&gt;&#xA;&lt;p&gt;Unlike Github, Gitlab considers Hugo blogs first class citizens and does not impose any restrictions on repo naming.&lt;/p&gt;&#xA;&lt;p&gt;I had 3 challenges to overcome related to co-existence of GH and GL versions:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;I need to use same repo for both GH and GL&lt;/li&gt;&#xA;&lt;li&gt;the submodule link for &lt;code&gt;public&lt;/code&gt; does not work on GL&lt;/li&gt;&#xA;&lt;li&gt;the site root is different - I have no custom domain forward for GitLab&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;using-same-repo&#34;&gt;Using same repo&lt;/h2&gt;&#xA;&lt;p&gt;To separate the GH and GL, I have added 2 remotes to repo and special branch &lt;code&gt;gitlab-pages&lt;/code&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>From Jekyll to Hugo</title>
+				<link>https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/</link>
+				<pubDate>Wed, 20 Nov 2019 23:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/</guid>
+				<description>&lt;p&gt;I have decided to consolidate all piecemeal versions of my blogpost uder one roof and at the same to do these four things&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;technology upgrade - from Jekyll to Hugo&lt;/li&gt;&#xA;&lt;li&gt;visual refresh of the page&lt;/li&gt;&#xA;&lt;li&gt;review tagging and categorization&lt;/li&gt;&#xA;&lt;li&gt;merge hidden posts from Wikis to one place&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;why-hugo-replaced-jekyll&#34;&gt;Why Hugo replaced Jekyll&lt;/h2&gt;&#xA;&lt;p&gt;The version 3 of my blog (see below for a bit of history) has been hosted on &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github pages&lt;/a&gt; and using the default static site generators - &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

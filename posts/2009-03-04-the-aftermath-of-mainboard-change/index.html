@@ -17,14 +17,15 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="In theory, exchanging mainboard on Macbook has no impact because all your data is stored on your harddisk that is untouched. In real life, there are few minor surprises.
-First, your MAC address of the network card had changed. This is something you will not notice, unless Murphy&#39;s law plays funny game with you, as it did with me. When arriving back to the office, I was able to connect to WiFi network, but the ethernet was stubbornly getting the &#34;" /><meta name="keywords" content="blog, Miro" />
+First, your MAC address of the network card had changed. This is something you will not notice, unless Murphy&#39;s law plays funny game with you, as it did with me. When arriving back to the office, I was able to connect to WiFi network, but the ethernet was stubbornly getting the &#34;internal IP&#34; - 169.254.x.x address, which is pretty much useless from connectivity point of view. We are running two separate networks - both NAT-ed, one on WiFi - mainly for guests, other internal. Not getting an IP address did not make any sense: the cable was OK, because other machine worked just fine with same drop/cable. The Ethernet connection was OK, because it worked when assigned IP address manually.
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2009-03-04-the-aftermath-of-mainboard-change/" />
@@ -35,31 +36,34 @@ First, your MAC address of the network card had changed. This is something you w
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="The aftermath of mainboard change" />
-<meta property="og:description" content="In theory, exchanging mainboard on Macbook has no impact because all your data is stored on your harddisk that is untouched. In real life, there are few minor surprises.
-First, your MAC address of the network card had changed. This is something you will not notice, unless Murphy&#39;s law plays funny game with you, as it did with me. When arriving back to the office, I was able to connect to WiFi network, but the ethernet was stubbornly getting the &#34;" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2009-03-04-the-aftermath-of-mainboard-change/" />
-<meta property="article:published_time" content="2009-03-04T01:01:04-05:00" />
-<meta property="article:modified_time" content="2009-03-04T01:01:04-05:00" />
-<meta itemprop="name" content="The aftermath of mainboard change">
-<meta itemprop="description" content="In theory, exchanging mainboard on Macbook has no impact because all your data is stored on your harddisk that is untouched. In real life, there are few minor surprises.
-First, your MAC address of the network card had changed. This is something you will not notice, unless Murphy&#39;s law plays funny game with you, as it did with me. When arriving back to the office, I was able to connect to WiFi network, but the ethernet was stubbornly getting the &#34;">
-<meta itemprop="datePublished" content="2009-03-04T01:01:04-05:00" />
-<meta itemprop="dateModified" content="2009-03-04T01:01:04-05:00" />
-<meta itemprop="wordCount" content="481">
+<meta property="og:url" content="https://miroadamy.com/posts/2009-03-04-the-aftermath-of-mainboard-change/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="The aftermath of mainboard change">
+	<meta property="og:description" content="In theory, exchanging mainboard on Macbook has no impact because all your data is stored on your harddisk that is untouched. In real life, there are few minor surprises.
+First, your MAC address of the network card had changed. This is something you will not notice, unless Murphy&#39;s law plays funny game with you, as it did with me. When arriving back to the office, I was able to connect to WiFi network, but the ethernet was stubbornly getting the &#34;internal IP&#34; - 169.254.x.x address, which is pretty much useless from connectivity point of view. We are running two separate networks - both NAT-ed, one on WiFi - mainly for guests, other internal. Not getting an IP address did not make any sense: the cable was OK, because other machine worked just fine with same drop/cable. The Ethernet connection was OK, because it worked when assigned IP address manually.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2009-03-04T01:01:04-05:00">
+		<meta property="article:modified_time" content="2009-03-04T01:01:04-05:00">
+		<meta property="article:tag" content="Osx">
 
-
-
-<meta itemprop="keywords" content="osx," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="The aftermath of mainboard change"/>
-<meta name="twitter:description" content="In theory, exchanging mainboard on Macbook has no impact because all your data is stored on your harddisk that is untouched. In real life, there are few minor surprises.
-First, your MAC address of the network card had changed. This is something you will not notice, unless Murphy&#39;s law plays funny game with you, as it did with me. When arriving back to the office, I was able to connect to WiFi network, but the ethernet was stubbornly getting the &#34;"/>
+	<meta itemprop="name" content="The aftermath of mainboard change">
+	<meta itemprop="description" content="In theory, exchanging mainboard on Macbook has no impact because all your data is stored on your harddisk that is untouched. In real life, there are few minor surprises.
+First, your MAC address of the network card had changed. This is something you will not notice, unless Murphy&#39;s law plays funny game with you, as it did with me. When arriving back to the office, I was able to connect to WiFi network, but the ethernet was stubbornly getting the &#34;internal IP&#34; - 169.254.x.x address, which is pretty much useless from connectivity point of view. We are running two separate networks - both NAT-ed, one on WiFi - mainly for guests, other internal. Not getting an IP address did not make any sense: the cable was OK, because other machine worked just fine with same drop/cable. The Ethernet connection was OK, because it worked when assigned IP address manually.">
+	<meta itemprop="datePublished" content="2009-03-04T01:01:04-05:00">
+	<meta itemprop="dateModified" content="2009-03-04T01:01:04-05:00">
+	<meta itemprop="wordCount" content="481">
+	<meta itemprop="keywords" content="Osx">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="The aftermath of mainboard change">
+	<meta name="twitter:description" content="In theory, exchanging mainboard on Macbook has no impact because all your data is stored on your harddisk that is untouched. In real life, there are few minor surprises.
+First, your MAC address of the network card had changed. This is something you will not notice, unless Murphy&#39;s law plays funny game with you, as it did with me. When arriving back to the office, I was able to connect to WiFi network, but the ethernet was stubbornly getting the &#34;internal IP&#34; - 169.254.x.x address, which is pretty much useless from connectivity point of view. We are running two separate networks - both NAT-ed, one on WiFi - mainly for guests, other internal. Not getting an IP address did not make any sense: the cable was OK, because other machine worked just fine with same drop/cable. The Ethernet connection was OK, because it worked when assigned IP address manually.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -96,12 +100,21 @@ First, your MAC address of the network card had changed. This is something you w
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -118,6 +131,7 @@ First, your MAC address of the network card had changed. This is something you w
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -214,7 +228,7 @@ First, your MAC address of the network card had changed. This is something you w
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -232,13 +246,10 @@ First, your MAC address of the network card had changed. This is something you w
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -249,7 +260,10 @@ First, your MAC address of the network card had changed. This is something you w
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

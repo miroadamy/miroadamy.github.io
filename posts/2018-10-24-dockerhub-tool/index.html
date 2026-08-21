@@ -18,14 +18,15 @@
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Skopeo I have stumbled upon this tool: https://github.com/containers/skopeo - command line tools for manipulation with Docker images and Docker image registries.
 It can work with OCI images as well as the original Docker v2 images.
-Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.io/fedora { &amp;#34;Name&amp;#34;: &amp;#34;docker.io/library/fedora&amp;#34;, &amp;#34;Digest&amp;#34;: &amp;#34;sha256:b41cd083421dd7aa46d619e958b75a026a5d5733f08f14ba6d53943d6106ea6d&amp;#34;, &amp;#34;RepoTags&amp;#34;: [ &amp;#34;20&amp;#34;, &amp;#34;21&amp;#34;, &amp;#34;22&amp;#34;, &amp;#34;23&amp;#34;, &amp;#34;24&amp;#34;, &amp;#34;25&amp;#34;, &amp;#34;26-modular&amp;#34;, &amp;#34;26&amp;#34;, &amp;#34;27&amp;#34;, &amp;#34;28&amp;#34;, &amp;#34;29&amp;#34;, &amp;#34;branched&amp;#34;, &amp;#34;heisenbug&amp;#34;, &amp;#34;latest&amp;#34;, &amp;#34;modular&amp;#34;, &amp;#34;rawhide&amp;#34; ], &amp;#34;Created&amp;#34;: &amp;#34;2018-09-07T19:20:02." /><meta name="keywords" content="blog, Miro" />
+Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.io/fedora { &#34;Name&#34;: &#34;docker.io/library/fedora&#34;, &#34;Digest&#34;: &#34;sha256:b41cd083421dd7aa46d619e958b75a026a5d5733f08f14ba6d53943d6106ea6d&#34;, &#34;RepoTags&#34;: [ &#34;20&#34;, &#34;21&#34;, &#34;22&#34;, &#34;23&#34;, &#34;24&#34;, &#34;25&#34;, &#34;26-modular&#34;, &#34;26&#34;, &#34;27&#34;, &#34;28&#34;, &#34;29&#34;, &#34;branched&#34;, &#34;heisenbug&#34;, &#34;latest&#34;, &#34;modular&#34;, &#34;rawhide&#34; ], &#34;Created&#34;: &#34;2018-09-07T19:20:02.809176076Z&#34;, &#34;DockerVersion&#34;: &#34;17.06.2-ce&#34;, &#34;Labels&#34;: null, &#34;Architecture&#34;: &#34;amd64&#34;, &#34;Os&#34;: &#34;linux&#34;, &#34;Layers&#34;: [ &#34;sha256:565884f490d9ec697e519c57d55d09e268542ef2c1340fd63262751fa308f047&#34; ] } It works with protected repos as well - as long as creds are provided
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2018-10-24-dockerhub-tool/" />
@@ -36,34 +37,38 @@ Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-o
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Useful tool for Dockerhub" />
-<meta property="og:description" content="Skopeo I have stumbled upon this tool: https://github.com/containers/skopeo - command line tools for manipulation with Docker images and Docker image registries.
+<meta property="og:url" content="https://miroadamy.com/posts/2018-10-24-dockerhub-tool/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Useful tool for Dockerhub">
+	<meta property="og:description" content="Skopeo I have stumbled upon this tool: https://github.com/containers/skopeo - command line tools for manipulation with Docker images and Docker image registries.
 It can work with OCI images as well as the original Docker v2 images.
-Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.io/fedora { &#34;Name&#34;: &#34;docker.io/library/fedora&#34;, &#34;Digest&#34;: &#34;sha256:b41cd083421dd7aa46d619e958b75a026a5d5733f08f14ba6d53943d6106ea6d&#34;, &#34;RepoTags&#34;: [ &#34;20&#34;, &#34;21&#34;, &#34;22&#34;, &#34;23&#34;, &#34;24&#34;, &#34;25&#34;, &#34;26-modular&#34;, &#34;26&#34;, &#34;27&#34;, &#34;28&#34;, &#34;29&#34;, &#34;branched&#34;, &#34;heisenbug&#34;, &#34;latest&#34;, &#34;modular&#34;, &#34;rawhide&#34; ], &#34;Created&#34;: &#34;2018-09-07T19:20:02." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2018-10-24-dockerhub-tool/" />
-<meta property="article:published_time" content="2018-10-24T11:22:48+08:00" />
-<meta property="article:modified_time" content="2018-10-24T11:22:48+08:00" />
-<meta itemprop="name" content="Useful tool for Dockerhub">
-<meta itemprop="description" content="Skopeo I have stumbled upon this tool: https://github.com/containers/skopeo - command line tools for manipulation with Docker images and Docker image registries.
+Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.io/fedora { &#34;Name&#34;: &#34;docker.io/library/fedora&#34;, &#34;Digest&#34;: &#34;sha256:b41cd083421dd7aa46d619e958b75a026a5d5733f08f14ba6d53943d6106ea6d&#34;, &#34;RepoTags&#34;: [ &#34;20&#34;, &#34;21&#34;, &#34;22&#34;, &#34;23&#34;, &#34;24&#34;, &#34;25&#34;, &#34;26-modular&#34;, &#34;26&#34;, &#34;27&#34;, &#34;28&#34;, &#34;29&#34;, &#34;branched&#34;, &#34;heisenbug&#34;, &#34;latest&#34;, &#34;modular&#34;, &#34;rawhide&#34; ], &#34;Created&#34;: &#34;2018-09-07T19:20:02.809176076Z&#34;, &#34;DockerVersion&#34;: &#34;17.06.2-ce&#34;, &#34;Labels&#34;: null, &#34;Architecture&#34;: &#34;amd64&#34;, &#34;Os&#34;: &#34;linux&#34;, &#34;Layers&#34;: [ &#34;sha256:565884f490d9ec697e519c57d55d09e268542ef2c1340fd63262751fa308f047&#34; ] } It works with protected repos as well - as long as creds are provided">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2018-10-24T11:22:48+08:00">
+		<meta property="article:modified_time" content="2018-10-24T11:22:48+08:00">
+		<meta property="article:tag" content="Docker">
+		<meta property="article:tag" content="Commandline">
+
+	<meta itemprop="name" content="Useful tool for Dockerhub">
+	<meta itemprop="description" content="Skopeo I have stumbled upon this tool: https://github.com/containers/skopeo - command line tools for manipulation with Docker images and Docker image registries.
 It can work with OCI images as well as the original Docker v2 images.
-Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.io/fedora { &#34;Name&#34;: &#34;docker.io/library/fedora&#34;, &#34;Digest&#34;: &#34;sha256:b41cd083421dd7aa46d619e958b75a026a5d5733f08f14ba6d53943d6106ea6d&#34;, &#34;RepoTags&#34;: [ &#34;20&#34;, &#34;21&#34;, &#34;22&#34;, &#34;23&#34;, &#34;24&#34;, &#34;25&#34;, &#34;26-modular&#34;, &#34;26&#34;, &#34;27&#34;, &#34;28&#34;, &#34;29&#34;, &#34;branched&#34;, &#34;heisenbug&#34;, &#34;latest&#34;, &#34;modular&#34;, &#34;rawhide&#34; ], &#34;Created&#34;: &#34;2018-09-07T19:20:02.">
-<meta itemprop="datePublished" content="2018-10-24T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2018-10-24T11:22:48+08:00" />
-<meta itemprop="wordCount" content="187">
-
-
-
-<meta itemprop="keywords" content="docker,commandline," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Useful tool for Dockerhub"/>
-<meta name="twitter:description" content="Skopeo I have stumbled upon this tool: https://github.com/containers/skopeo - command line tools for manipulation with Docker images and Docker image registries.
+Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.io/fedora { &#34;Name&#34;: &#34;docker.io/library/fedora&#34;, &#34;Digest&#34;: &#34;sha256:b41cd083421dd7aa46d619e958b75a026a5d5733f08f14ba6d53943d6106ea6d&#34;, &#34;RepoTags&#34;: [ &#34;20&#34;, &#34;21&#34;, &#34;22&#34;, &#34;23&#34;, &#34;24&#34;, &#34;25&#34;, &#34;26-modular&#34;, &#34;26&#34;, &#34;27&#34;, &#34;28&#34;, &#34;29&#34;, &#34;branched&#34;, &#34;heisenbug&#34;, &#34;latest&#34;, &#34;modular&#34;, &#34;rawhide&#34; ], &#34;Created&#34;: &#34;2018-09-07T19:20:02.809176076Z&#34;, &#34;DockerVersion&#34;: &#34;17.06.2-ce&#34;, &#34;Labels&#34;: null, &#34;Architecture&#34;: &#34;amd64&#34;, &#34;Os&#34;: &#34;linux&#34;, &#34;Layers&#34;: [ &#34;sha256:565884f490d9ec697e519c57d55d09e268542ef2c1340fd63262751fa308f047&#34; ] } It works with protected repos as well - as long as creds are provided">
+	<meta itemprop="datePublished" content="2018-10-24T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2018-10-24T11:22:48+08:00">
+	<meta itemprop="wordCount" content="187">
+	<meta itemprop="keywords" content="Docker,Commandline">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Useful tool for Dockerhub">
+	<meta name="twitter:description" content="Skopeo I have stumbled upon this tool: https://github.com/containers/skopeo - command line tools for manipulation with Docker images and Docker image registries.
 It can work with OCI images as well as the original Docker v2 images.
-Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.io/fedora { &#34;Name&#34;: &#34;docker.io/library/fedora&#34;, &#34;Digest&#34;: &#34;sha256:b41cd083421dd7aa46d619e958b75a026a5d5733f08f14ba6d53943d6106ea6d&#34;, &#34;RepoTags&#34;: [ &#34;20&#34;, &#34;21&#34;, &#34;22&#34;, &#34;23&#34;, &#34;24&#34;, &#34;25&#34;, &#34;26-modular&#34;, &#34;26&#34;, &#34;27&#34;, &#34;28&#34;, &#34;29&#34;, &#34;branched&#34;, &#34;heisenbug&#34;, &#34;latest&#34;, &#34;modular&#34;, &#34;rawhide&#34; ], &#34;Created&#34;: &#34;2018-09-07T19:20:02."/>
+Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.io/fedora { &#34;Name&#34;: &#34;docker.io/library/fedora&#34;, &#34;Digest&#34;: &#34;sha256:b41cd083421dd7aa46d619e958b75a026a5d5733f08f14ba6d53943d6106ea6d&#34;, &#34;RepoTags&#34;: [ &#34;20&#34;, &#34;21&#34;, &#34;22&#34;, &#34;23&#34;, &#34;24&#34;, &#34;25&#34;, &#34;26-modular&#34;, &#34;26&#34;, &#34;27&#34;, &#34;28&#34;, &#34;29&#34;, &#34;branched&#34;, &#34;heisenbug&#34;, &#34;latest&#34;, &#34;modular&#34;, &#34;rawhide&#34; ], &#34;Created&#34;: &#34;2018-09-07T19:20:02.809176076Z&#34;, &#34;DockerVersion&#34;: &#34;17.06.2-ce&#34;, &#34;Labels&#34;: null, &#34;Architecture&#34;: &#34;amd64&#34;, &#34;Os&#34;: &#34;linux&#34;, &#34;Layers&#34;: [ &#34;sha256:565884f490d9ec697e519c57d55d09e268542ef2c1340fd63262751fa308f047&#34; ] } It works with protected repos as well - as long as creds are provided">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -100,12 +105,21 @@ Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-o
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -122,6 +136,7 @@ Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-o
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -164,69 +179,69 @@ Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-o
 <p>I have stumbled upon this tool: <a href="https://github.com/containers/skopeo">https://github.com/containers/skopeo</a> - command line tools for manipulation with Docker images and Docker image registries.</p>
 <p>It can work with OCI images as well as the original Docker v2 images.</p>
 <h2 id="installation">Installation</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">brew install skopeo
-</code></pre></div><h2 id="usage">Usage</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.io/fedora
-{
-    &#34;Name&#34;: &#34;docker.io/library/fedora&#34;,
-    &#34;Digest&#34;: &#34;sha256:b41cd083421dd7aa46d619e958b75a026a5d5733f08f14ba6d53943d6106ea6d&#34;,
-    &#34;RepoTags&#34;: [
-        &#34;20&#34;,
-        &#34;21&#34;,
-        &#34;22&#34;,
-        &#34;23&#34;,
-        &#34;24&#34;,
-        &#34;25&#34;,
-        &#34;26-modular&#34;,
-        &#34;26&#34;,
-        &#34;27&#34;,
-        &#34;28&#34;,
-        &#34;29&#34;,
-        &#34;branched&#34;,
-        &#34;heisenbug&#34;,
-        &#34;latest&#34;,
-        &#34;modular&#34;,
-        &#34;rawhide&#34;
-    ],
-    &#34;Created&#34;: &#34;2018-09-07T19:20:02.809176076Z&#34;,
-    &#34;DockerVersion&#34;: &#34;17.06.2-ce&#34;,
-    &#34;Labels&#34;: null,
-    &#34;Architecture&#34;: &#34;amd64&#34;,
-    &#34;Os&#34;: &#34;linux&#34;,
-    &#34;Layers&#34;: [
-        &#34;sha256:565884f490d9ec697e519c57d55d09e268542ef2c1340fd63262751fa308f047&#34;
-    ]
-}
-</code></pre></div><p>It works with protected repos as well - as long as creds are provided</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">skopeo --override-os=linux inspect --creds=&#39;&#39;${CREDS}&#39;&#39; docker://docker.io/thinkwrap/dropship-ui:uat | jq &#34;.Digest&#34;
-
-&#34;sha256:43f95207dafa7dbc034e5126a9f6b6952e47e162206e889c1071f6e06308f4f4&#34;
-</code></pre></div><p>The reason for <code>override-os</code> is running the client on MacOS. On Linux, this can be removed.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">brew install skopeo
+</span></span></code></pre></div><h2 id="usage">Usage</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.io/fedora
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;Name&#34;: &#34;docker.io/library/fedora&#34;,
+</span></span><span class="line"><span class="cl">    &#34;Digest&#34;: &#34;sha256:b41cd083421dd7aa46d619e958b75a026a5d5733f08f14ba6d53943d6106ea6d&#34;,
+</span></span><span class="line"><span class="cl">    &#34;RepoTags&#34;: [
+</span></span><span class="line"><span class="cl">        &#34;20&#34;,
+</span></span><span class="line"><span class="cl">        &#34;21&#34;,
+</span></span><span class="line"><span class="cl">        &#34;22&#34;,
+</span></span><span class="line"><span class="cl">        &#34;23&#34;,
+</span></span><span class="line"><span class="cl">        &#34;24&#34;,
+</span></span><span class="line"><span class="cl">        &#34;25&#34;,
+</span></span><span class="line"><span class="cl">        &#34;26-modular&#34;,
+</span></span><span class="line"><span class="cl">        &#34;26&#34;,
+</span></span><span class="line"><span class="cl">        &#34;27&#34;,
+</span></span><span class="line"><span class="cl">        &#34;28&#34;,
+</span></span><span class="line"><span class="cl">        &#34;29&#34;,
+</span></span><span class="line"><span class="cl">        &#34;branched&#34;,
+</span></span><span class="line"><span class="cl">        &#34;heisenbug&#34;,
+</span></span><span class="line"><span class="cl">        &#34;latest&#34;,
+</span></span><span class="line"><span class="cl">        &#34;modular&#34;,
+</span></span><span class="line"><span class="cl">        &#34;rawhide&#34;
+</span></span><span class="line"><span class="cl">    ],
+</span></span><span class="line"><span class="cl">    &#34;Created&#34;: &#34;2018-09-07T19:20:02.809176076Z&#34;,
+</span></span><span class="line"><span class="cl">    &#34;DockerVersion&#34;: &#34;17.06.2-ce&#34;,
+</span></span><span class="line"><span class="cl">    &#34;Labels&#34;: null,
+</span></span><span class="line"><span class="cl">    &#34;Architecture&#34;: &#34;amd64&#34;,
+</span></span><span class="line"><span class="cl">    &#34;Os&#34;: &#34;linux&#34;,
+</span></span><span class="line"><span class="cl">    &#34;Layers&#34;: [
+</span></span><span class="line"><span class="cl">        &#34;sha256:565884f490d9ec697e519c57d55d09e268542ef2c1340fd63262751fa308f047&#34;
+</span></span><span class="line"><span class="cl">    ]
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>It works with protected repos as well - as long as creds are provided</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">skopeo --override-os=linux inspect --creds=&#39;&#39;${CREDS}&#39;&#39; docker://docker.io/thinkwrap/dropship-ui:uat | jq &#34;.Digest&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34;sha256:43f95207dafa7dbc034e5126a9f6b6952e47e162206e889c1071f6e06308f4f4&#34;
+</span></span></code></pre></div><p>The reason for <code>override-os</code> is running the client on MacOS. On Linux, this can be removed.</p>
 <p>The double single quotes around <code>${CREDS}</code> is to make sure that special characters in password such as <code>;!| </code> will not confuse shell.</p>
 <h3 id="getting-information-about-all-tags">Getting information about all Tags</h3>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">skopeo --override-os=linux inspect --creds=&#39;&#39;${CREDS}&#39;&#39; docker://docker.io/thinkwrap/dropship-ui:uat | jq &#34;.RepoTags[]&#34;
-
-&#34;0.3.0&#34;
-&#34;1.3.0-uat&#34;
-&#34;1.3.1-uat&#34;
-&#34;1.3.2-uat&#34;
-&#34;1.4.0-uat&#34;
-&#34;1.4.1-uat&#34;
-&#34;1.4.2-uat&#34;
-&#34;1.4.3-uat&#34;
-&#34;1.4.4-uat&#34;
-&#34;1.4.5-uat&#34;
-&#34;1.4.6-uat&#34;
-&#34;1.5.0-uat&#34;
-&#34;1.5.1-uat&#34;
-&#34;1.5.2-uat&#34;
-&#34;1.5.3-uat&#34;
-&#34;1.5.4-uat&#34;
-&#34;1.5.5-uat&#34;
-&#34;1.5.6-uat&#34;
-&#34;development&#34;
-&#34;uat&#34;
-</code></pre></div><p>Speaking of Docker container tools, see also: <a href="https://github.com/GoogleContainerTools/container-diff">https://github.com/GoogleContainerTools/container-diff</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">skopeo --override-os=linux inspect --creds=&#39;&#39;${CREDS}&#39;&#39; docker://docker.io/thinkwrap/dropship-ui:uat | jq &#34;.RepoTags[]&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&#34;0.3.0&#34;
+</span></span><span class="line"><span class="cl">&#34;1.3.0-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.3.1-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.3.2-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.4.0-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.4.1-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.4.2-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.4.3-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.4.4-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.4.5-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.4.6-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.5.0-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.5.1-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.5.2-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.5.3-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.5.4-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.5.5-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;1.5.6-uat&#34;
+</span></span><span class="line"><span class="cl">&#34;development&#34;
+</span></span><span class="line"><span class="cl">&#34;uat&#34;
+</span></span></code></pre></div><p>Speaking of Docker container tools, see also: <a href="https://github.com/GoogleContainerTools/container-diff">https://github.com/GoogleContainerTools/container-diff</a></p>
 
     </div>
 
@@ -288,7 +303,7 @@ Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-o
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -306,13 +321,10 @@ Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-o
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -323,7 +335,10 @@ Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-o
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

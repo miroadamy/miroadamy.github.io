@@ -17,14 +17,14 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Bunch of one-liners for AWS .. so that I find them faster next time
-aws --output=json ec2 describe-instances | jq -r &amp;#39;.Reservations[].Instances[] | &amp;#34;\n&amp;#34; &#43; .InstanceId &#43; &amp;#34; : &amp;#34; &#43; .KeyName &#43; &amp;#34; =&amp;gt; &amp;#34; &#43; .PublicIpAddress &#43; &amp;#34; | &amp;#34; &#43; .PublicDnsName, .Tags[] as $tt | &amp;#34; ... &amp;#34; &#43; $tt.Key &#43;&amp;#34;:&amp;#34;&#43; $tt.Value&amp;#39; aws ec2 describe-instances | jq &amp;#39;.Reservations[].Instances[] | .InstanceId &#43; &amp;#34; : &amp;#34; &#43; .Placement.AvailabilityZone &#43; &amp;#34; =&amp;gt; &amp;#34; &#43; ." /><meta name="keywords" content="blog, Miro" />
+aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId &#43; &#34; : &#34; &#43; .Placement.AvailabilityZone &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress&#39; aws iam list-group-policies --group-name kops aws ec2 describe-vpcs | jq &#39;.Vpcs[] | .VpcId &#43; &#34; &#34; &#43; .CidrBlock&#39; aws iam list-users | jq &#39;.Users[].UserName&#39; aws --output=json --region=ca-central-1 ec2 describe-vpcs | jq -r &#39;.Vpcs[] | .VpcId &#43; &#34; &#34; &#43; .CidrBlock,.Tags[] as $tt | &#34; .. &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43;$tt.Value&#39; aws ec2 describe-vpcs | jq -e --raw-output &#39;.Vpcs[] | &#34;\n&#34; &#43; .VpcId &#43; &#34; : &#34; &#43; .CidrBlock, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-subnets | jq -e --raw-output &#39;.Subnets[] | &#34;\n&#34; &#43; .VpcId &#43; &#34; : &#34; &#43; .CidrBlock &#43;&#34; : &#34; &#43; .AvailabilityZone, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 authorize-security-group-ingress --group-id sg-bfa45bd4 --protocol tcp --port 31672 --cidr 204.101.219.210/31 How many instances of each type do I have, and in what states? Considering buying reserved instances or thinking about migrating to a newly introduced class? aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34; What CIDRs have Ingress Access to which Ports? # This is helpful when you need to perform a survey or audit of your system boundaries. While such a task isn’t ever “easy”, it can go more smoothly with with a summary: aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39; Which Services am I using? aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31 --granularity MONTHLY --metrics UsageQuantity --group-by Type=DIMENSION,Key=SERVICE | jq &#39;.ResultsByTime[].Groups[] | select(.Metrics.UsageQuantity.Amount &gt; 0) | .Keys[0]&#39; # How much they cost aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31 --granularity MONTHLY --metrics USAGE_QUANTITY BLENDED_COST --group-by Type=DIMENSION,Key=SERVICE | jq &#39;[ .ResultsByTime[].Groups[] | select(.Metrics.BlendedCost.Amount &gt; &#34;0&#34;) | { (.Keys[0]): .Metrics.BlendedCost } ] | sort_by(.Amount) | add&#39; # Instances running aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34; CIDR access to ports aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39; Lambda runtimes aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ runtime:.[0].Runtime, functions:[.[]|.FunctionName] } ]&#34; Memory size aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ (.[0].Runtime): [.[]|{ name: .FunctionName, timeout: .Timeout, memory: .MemorySize }] }]&#34; Lambda Environment variables aws lambda list-functions | jq -r &#39;[.Functions[]|{name: .FunctionName, env: .Environment.Variables}]|.[]|select(.env|length &gt; 0)&#39; " /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2019-10-03-aws-inspection/" />
@@ -35,31 +35,36 @@ aws --output=json ec2 describe-instances | jq -r &amp;#39;.Reservations[].Instan
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="AWS Inspection" />
-<meta property="og:description" content="Bunch of one-liners for AWS .. so that I find them faster next time
-aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId &#43; &#34; : &#34; &#43; .Placement.AvailabilityZone &#43; &#34; =&gt; &#34; &#43; ." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2019-10-03-aws-inspection/" />
-<meta property="article:published_time" content="2019-10-03T11:22:48+08:00" />
-<meta property="article:modified_time" content="2019-10-03T11:22:48+08:00" />
-<meta itemprop="name" content="AWS Inspection">
-<meta itemprop="description" content="Bunch of one-liners for AWS .. so that I find them faster next time
-aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId &#43; &#34; : &#34; &#43; .Placement.AvailabilityZone &#43; &#34; =&gt; &#34; &#43; .">
-<meta itemprop="datePublished" content="2019-10-03T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2019-10-03T11:22:48+08:00" />
-<meta itemprop="wordCount" content="471">
+<meta property="og:url" content="https://miroadamy.com/posts/2019-10-03-aws-inspection/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="AWS Inspection">
+	<meta property="og:description" content="Bunch of one-liners for AWS .. so that I find them faster next time
+aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId &#43; &#34; : &#34; &#43; .Placement.AvailabilityZone &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress&#39; aws iam list-group-policies --group-name kops aws ec2 describe-vpcs | jq &#39;.Vpcs[] | .VpcId &#43; &#34; &#34; &#43; .CidrBlock&#39; aws iam list-users | jq &#39;.Users[].UserName&#39; aws --output=json --region=ca-central-1 ec2 describe-vpcs | jq -r &#39;.Vpcs[] | .VpcId &#43; &#34; &#34; &#43; .CidrBlock,.Tags[] as $tt | &#34; .. &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43;$tt.Value&#39; aws ec2 describe-vpcs | jq -e --raw-output &#39;.Vpcs[] | &#34;\n&#34; &#43; .VpcId &#43; &#34; : &#34; &#43; .CidrBlock, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-subnets | jq -e --raw-output &#39;.Subnets[] | &#34;\n&#34; &#43; .VpcId &#43; &#34; : &#34; &#43; .CidrBlock &#43;&#34; : &#34; &#43; .AvailabilityZone, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 authorize-security-group-ingress --group-id sg-bfa45bd4 --protocol tcp --port 31672 --cidr 204.101.219.210/31 How many instances of each type do I have, and in what states? Considering buying reserved instances or thinking about migrating to a newly introduced class? aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34; What CIDRs have Ingress Access to which Ports? # This is helpful when you need to perform a survey or audit of your system boundaries. While such a task isn’t ever “easy”, it can go more smoothly with with a summary: aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39; Which Services am I using? aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31 --granularity MONTHLY --metrics UsageQuantity --group-by Type=DIMENSION,Key=SERVICE | jq &#39;.ResultsByTime[].Groups[] | select(.Metrics.UsageQuantity.Amount &gt; 0) | .Keys[0]&#39; # How much they cost aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31 --granularity MONTHLY --metrics USAGE_QUANTITY BLENDED_COST --group-by Type=DIMENSION,Key=SERVICE | jq &#39;[ .ResultsByTime[].Groups[] | select(.Metrics.BlendedCost.Amount &gt; &#34;0&#34;) | { (.Keys[0]): .Metrics.BlendedCost } ] | sort_by(.Amount) | add&#39; # Instances running aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34; CIDR access to ports aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39; Lambda runtimes aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ runtime:.[0].Runtime, functions:[.[]|.FunctionName] } ]&#34; Memory size aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ (.[0].Runtime): [.[]|{ name: .FunctionName, timeout: .Timeout, memory: .MemorySize }] }]&#34; Lambda Environment variables aws lambda list-functions | jq -r &#39;[.Functions[]|{name: .FunctionName, env: .Environment.Variables}]|.[]|select(.env|length &gt; 0)&#39;">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2019-10-03T11:22:48+08:00">
+		<meta property="article:modified_time" content="2019-10-03T11:22:48+08:00">
+		<meta property="article:tag" content="Aws">
+		<meta property="article:tag" content="Cloud">
+		<meta property="article:tag" content="Oneliners">
 
-
-
-<meta itemprop="keywords" content="AWS,cloud,oneliners," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="AWS Inspection"/>
-<meta name="twitter:description" content="Bunch of one-liners for AWS .. so that I find them faster next time
-aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId &#43; &#34; : &#34; &#43; .Placement.AvailabilityZone &#43; &#34; =&gt; &#34; &#43; ."/>
+	<meta itemprop="name" content="AWS Inspection">
+	<meta itemprop="description" content="Bunch of one-liners for AWS .. so that I find them faster next time
+aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId &#43; &#34; : &#34; &#43; .Placement.AvailabilityZone &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress&#39; aws iam list-group-policies --group-name kops aws ec2 describe-vpcs | jq &#39;.Vpcs[] | .VpcId &#43; &#34; &#34; &#43; .CidrBlock&#39; aws iam list-users | jq &#39;.Users[].UserName&#39; aws --output=json --region=ca-central-1 ec2 describe-vpcs | jq -r &#39;.Vpcs[] | .VpcId &#43; &#34; &#34; &#43; .CidrBlock,.Tags[] as $tt | &#34; .. &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43;$tt.Value&#39; aws ec2 describe-vpcs | jq -e --raw-output &#39;.Vpcs[] | &#34;\n&#34; &#43; .VpcId &#43; &#34; : &#34; &#43; .CidrBlock, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-subnets | jq -e --raw-output &#39;.Subnets[] | &#34;\n&#34; &#43; .VpcId &#43; &#34; : &#34; &#43; .CidrBlock &#43;&#34; : &#34; &#43; .AvailabilityZone, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 authorize-security-group-ingress --group-id sg-bfa45bd4 --protocol tcp --port 31672 --cidr 204.101.219.210/31 How many instances of each type do I have, and in what states? Considering buying reserved instances or thinking about migrating to a newly introduced class? aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34; What CIDRs have Ingress Access to which Ports? # This is helpful when you need to perform a survey or audit of your system boundaries. While such a task isn’t ever “easy”, it can go more smoothly with with a summary: aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39; Which Services am I using? aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31 --granularity MONTHLY --metrics UsageQuantity --group-by Type=DIMENSION,Key=SERVICE | jq &#39;.ResultsByTime[].Groups[] | select(.Metrics.UsageQuantity.Amount &gt; 0) | .Keys[0]&#39; # How much they cost aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31 --granularity MONTHLY --metrics USAGE_QUANTITY BLENDED_COST --group-by Type=DIMENSION,Key=SERVICE | jq &#39;[ .ResultsByTime[].Groups[] | select(.Metrics.BlendedCost.Amount &gt; &#34;0&#34;) | { (.Keys[0]): .Metrics.BlendedCost } ] | sort_by(.Amount) | add&#39; # Instances running aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34; CIDR access to ports aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39; Lambda runtimes aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ runtime:.[0].Runtime, functions:[.[]|.FunctionName] } ]&#34; Memory size aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ (.[0].Runtime): [.[]|{ name: .FunctionName, timeout: .Timeout, memory: .MemorySize }] }]&#34; Lambda Environment variables aws lambda list-functions | jq -r &#39;[.Functions[]|{name: .FunctionName, env: .Environment.Variables}]|.[]|select(.env|length &gt; 0)&#39;">
+	<meta itemprop="datePublished" content="2019-10-03T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2019-10-03T11:22:48+08:00">
+	<meta itemprop="wordCount" content="471">
+	<meta itemprop="keywords" content="Aws,Cloud,Oneliners">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="AWS Inspection">
+	<meta name="twitter:description" content="Bunch of one-liners for AWS .. so that I find them faster next time
+aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; &#43; .InstanceId &#43; &#34; : &#34; &#43; .KeyName &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress &#43; &#34; | &#34; &#43; .PublicDnsName, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId &#43; &#34; : &#34; &#43; .Placement.AvailabilityZone &#43; &#34; =&gt; &#34; &#43; .PublicIpAddress&#39; aws iam list-group-policies --group-name kops aws ec2 describe-vpcs | jq &#39;.Vpcs[] | .VpcId &#43; &#34; &#34; &#43; .CidrBlock&#39; aws iam list-users | jq &#39;.Users[].UserName&#39; aws --output=json --region=ca-central-1 ec2 describe-vpcs | jq -r &#39;.Vpcs[] | .VpcId &#43; &#34; &#34; &#43; .CidrBlock,.Tags[] as $tt | &#34; .. &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43;$tt.Value&#39; aws ec2 describe-vpcs | jq -e --raw-output &#39;.Vpcs[] | &#34;\n&#34; &#43; .VpcId &#43; &#34; : &#34; &#43; .CidrBlock, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 describe-subnets | jq -e --raw-output &#39;.Subnets[] | &#34;\n&#34; &#43; .VpcId &#43; &#34; : &#34; &#43; .CidrBlock &#43;&#34; : &#34; &#43; .AvailabilityZone, .Tags[] as $tt | &#34; ... &#34; &#43; $tt.Key &#43;&#34;:&#34;&#43; $tt.Value&#39; aws ec2 authorize-security-group-ingress --group-id sg-bfa45bd4 --protocol tcp --port 31672 --cidr 204.101.219.210/31 How many instances of each type do I have, and in what states? Considering buying reserved instances or thinking about migrating to a newly introduced class? aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34; What CIDRs have Ingress Access to which Ports? # This is helpful when you need to perform a survey or audit of your system boundaries. While such a task isn’t ever “easy”, it can go more smoothly with with a summary: aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39; Which Services am I using? aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31 --granularity MONTHLY --metrics UsageQuantity --group-by Type=DIMENSION,Key=SERVICE | jq &#39;.ResultsByTime[].Groups[] | select(.Metrics.UsageQuantity.Amount &gt; 0) | .Keys[0]&#39; # How much they cost aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31 --granularity MONTHLY --metrics USAGE_QUANTITY BLENDED_COST --group-by Type=DIMENSION,Key=SERVICE | jq &#39;[ .ResultsByTime[].Groups[] | select(.Metrics.BlendedCost.Amount &gt; &#34;0&#34;) | { (.Keys[0]): .Metrics.BlendedCost } ] | sort_by(.Amount) | add&#39; # Instances running aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34; CIDR access to ports aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39; Lambda runtimes aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ runtime:.[0].Runtime, functions:[.[]|.FunctionName] } ]&#34; Memory size aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ (.[0].Runtime): [.[]|{ name: .FunctionName, timeout: .Timeout, memory: .MemorySize }] }]&#34; Lambda Environment variables aws lambda list-functions | jq -r &#39;[.Functions[]|{name: .FunctionName, env: .Environment.Variables}]|.[]|select(.env|length &gt; 0)&#39;">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -96,12 +101,21 @@ aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -118,6 +132,7 @@ aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -159,55 +174,53 @@ aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[
     <div class="post-content">
       <h2 id="bunch-of-one-liners-for-aws">Bunch of one-liners for AWS</h2>
 <p>.. so that I find them faster next time</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; + .InstanceId + &#34;  :  &#34; + .KeyName + &#34;  =&gt;  &#34; + .PublicIpAddress + &#34; | &#34; + .PublicDnsName,  .Tags[] as $tt | &#34;  ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39;
-
-aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId + &#34;  :  &#34; + .Placement.AvailabilityZone + &#34;  =&gt;  &#34; + .PublicIpAddress&#39;
-
-aws iam list-group-policies --group-name kops
-
-aws ec2 describe-vpcs | jq &#39;.Vpcs[] | .VpcId + &#34; &#34; + .CidrBlock&#39;
-
-aws iam list-users | jq &#39;.Users[].UserName&#39;
-
-aws --output=json --region=ca-central-1 ec2 describe-vpcs | jq -r &#39;.Vpcs[] | .VpcId + &#34; &#34; + .CidrBlock,.Tags[] as $tt | &#34;  .. &#34; + $tt.Key +&#34;:&#34;+$tt.Value&#39;
-
-
-aws ec2 describe-vpcs | jq -e --raw-output &#39;.Vpcs[] | &#34;\n&#34; + .VpcId + &#34;  :  &#34; + .CidrBlock,  .Tags[] as $tt | &#34;  ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39;
-
-aws ec2 describe-subnets | jq -e --raw-output &#39;.Subnets[] | &#34;\n&#34; + .VpcId + &#34;  :  &#34; + .CidrBlock +&#34; : &#34; + .AvailabilityZone,  .Tags[] as $tt | &#34;  ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39;
-
-aws ec2 authorize-security-group-ingress --group-id sg-bfa45bd4 --protocol tcp --port 31672 --cidr 204.101.219.210/31
-</code></pre></div><h2 id="how-many-instances-of-each-type-do-i-have-and-in-what-states">How many instances of each type do I have, and in what states?</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">aws --output=json ec2 describe-instances | jq -r &#39;.Reservations[].Instances[] | &#34;\n&#34; + .InstanceId + &#34;  :  &#34; + .KeyName + &#34;  =&gt;  &#34; + .PublicIpAddress + &#34; | &#34; + .PublicDnsName,  .Tags[] as $tt | &#34;  ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws ec2 describe-instances | jq &#39;.Reservations[].Instances[] | .InstanceId + &#34;  :  &#34; + .Placement.AvailabilityZone + &#34;  =&gt;  &#34; + .PublicIpAddress&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws iam list-group-policies --group-name kops
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws ec2 describe-vpcs | jq &#39;.Vpcs[] | .VpcId + &#34; &#34; + .CidrBlock&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws iam list-users | jq &#39;.Users[].UserName&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws --output=json --region=ca-central-1 ec2 describe-vpcs | jq -r &#39;.Vpcs[] | .VpcId + &#34; &#34; + .CidrBlock,.Tags[] as $tt | &#34;  .. &#34; + $tt.Key +&#34;:&#34;+$tt.Value&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws ec2 describe-vpcs | jq -e --raw-output &#39;.Vpcs[] | &#34;\n&#34; + .VpcId + &#34;  :  &#34; + .CidrBlock,  .Tags[] as $tt | &#34;  ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws ec2 describe-subnets | jq -e --raw-output &#39;.Subnets[] | &#34;\n&#34; + .VpcId + &#34;  :  &#34; + .CidrBlock +&#34; : &#34; + .AvailabilityZone,  .Tags[] as $tt | &#34;  ... &#34; + $tt.Key +&#34;:&#34;+ $tt.Value&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws ec2 authorize-security-group-ingress --group-id sg-bfa45bd4 --protocol tcp --port 31672 --cidr 204.101.219.210/31
+</span></span></code></pre></div><h2 id="how-many-instances-of-each-type-do-i-have-and-in-what-states">How many instances of each type do I have, and in what states?</h2>
 <ul>
 <li>Considering buying reserved instances or thinking about migrating to a newly introduced class?</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34;
-</code></pre></div><h2 id="what-cidrs-have-ingress-access-to-which-ports">What CIDRs have Ingress Access to which Ports?</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># This is helpful when you need to perform a survey or audit of your system boundaries. While such a task isn’t ever “easy”, it can go more smoothly with with a summary:
-
-aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39;
-
-</code></pre></div><h2 id="which-services-am-i-using">Which Services am I using?</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31  --granularity MONTHLY --metrics UsageQuantity --group-by Type=DIMENSION,Key=SERVICE | jq &#39;.ResultsByTime[].Groups[] | select(.Metrics.UsageQuantity.Amount &gt; 0) | .Keys[0]&#39;
-
-
-# How much they cost
-aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31  --granularity MONTHLY --metrics USAGE_QUANTITY BLENDED_COST  --group-by Type=DIMENSION,Key=SERVICE | jq &#39;[ .ResultsByTime[].Groups[] | select(.Metrics.BlendedCost.Amount &gt; &#34;0&#34;) | { (.Keys[0]): .Metrics.BlendedCost } ] | sort_by(.Amount) | add&#39;
-
-# Instances running
-
-aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34;
-</code></pre></div><h2 id="cidr-access-to-ports">CIDR access to ports</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39;
-</code></pre></div><h2 id="lambda-runtimes">Lambda runtimes</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ runtime:.[0].Runtime, functions:[.[]|.FunctionName] }
-]&#34;
-</code></pre></div><h2 id="memory-size">Memory size</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ (.[0].Runtime): [.[]|{ name: .FunctionName, timeout: .Timeout, memory: .MemorySize }] }]&#34;
-</code></pre></div><h2 id="lambda-environment-variables">Lambda Environment variables</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">aws lambda list-functions | jq -r &#39;[.Functions[]|{name: .FunctionName, env: .Environment.Variables}]|.[]|select(.env|length &gt; 0)&#39;
-
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34;
+</span></span></code></pre></div><h2 id="what-cidrs-have-ingress-access-to-which-ports">What CIDRs have Ingress Access to which Ports?</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># This is helpful when you need to perform a survey or audit of your system boundaries. While such a task isn’t ever “easy”, it can go more smoothly with with a summary:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39;
+</span></span></code></pre></div><h2 id="which-services-am-i-using">Which Services am I using?</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31  --granularity MONTHLY --metrics UsageQuantity --group-by Type=DIMENSION,Key=SERVICE | jq &#39;.ResultsByTime[].Groups[] | select(.Metrics.UsageQuantity.Amount &gt; 0) | .Keys[0]&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># How much they cost
+</span></span><span class="line"><span class="cl">aws ce get-cost-and-usage --time-period Start=2019-08-01,End=2019-08-31  --granularity MONTHLY --metrics USAGE_QUANTITY BLENDED_COST  --group-by Type=DIMENSION,Key=SERVICE | jq &#39;[ .ResultsByTime[].Groups[] | select(.Metrics.BlendedCost.Amount &gt; &#34;0&#34;) | { (.Keys[0]): .Metrics.BlendedCost } ] | sort_by(.Amount) | add&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Instances running
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .State.Name, type: .InstanceType }]|group_by(.state)|.[]|{state: .[0].state, types: [.[].type]|[group_by(.)|.[]|{type: .[0], count: ([.[]]|length)}] }]&#34;
+</span></span></code></pre></div><h2 id="cidr-access-to-ports">CIDR access to ports</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">aws ec2 describe-security-groups | jq &#39;[ .SecurityGroups[].IpPermissions[] as $a | { &#34;ports&#34;: [($a.FromPort|tostring),($a.ToPort|tostring)]|unique, &#34;cidr&#34;: $a.IpRanges[].CidrIp } ] | [group_by(.cidr)[] | { (.[0].cidr): [.[].ports|join(&#34;-&#34;)]|unique }] | add&#39;
+</span></span></code></pre></div><h2 id="lambda-runtimes">Lambda runtimes</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ runtime:.[0].Runtime, functions:[.[]|.FunctionName] }
+</span></span><span class="line"><span class="cl">]&#34;
+</span></span></code></pre></div><h2 id="memory-size">Memory size</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">aws lambda list-functions | jq &#34;.Functions | group_by(.Runtime)|[.[]|{ (.[0].Runtime): [.[]|{ name: .FunctionName, timeout: .Timeout, memory: .MemorySize }] }]&#34;
+</span></span></code></pre></div><h2 id="lambda-environment-variables">Lambda Environment variables</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">aws lambda list-functions | jq -r &#39;[.Functions[]|{name: .FunctionName, env: .Environment.Variables}]|.[]|select(.env|length &gt; 0)&#39;
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -269,7 +282,7 @@ aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -287,13 +300,10 @@ aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -304,7 +314,10 @@ aws ec2 describe-instances | jq -r &#34;[[.Reservations[].Instances[]|{ state: .
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

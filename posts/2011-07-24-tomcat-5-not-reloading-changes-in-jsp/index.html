@@ -16,14 +16,15 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that. I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application." /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that. I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application. So I located the instance of Tomcat 5.5 (I always have couple of Tomcats lying around) and being lazy, I decided to inject the change into out-of the box jsp-examples Web application that comes with it.
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/" />
@@ -34,28 +35,31 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Tomcat 5 not reloading changes in JSP" />
-<meta property="og:description" content="Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that. I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/" />
-<meta property="article:published_time" content="2011-07-24T17:33:34-04:00" />
-<meta property="article:modified_time" content="2011-07-24T17:33:34-04:00" />
-<meta itemprop="name" content="Tomcat 5 not reloading changes in JSP">
-<meta itemprop="description" content="Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that. I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application.">
-<meta itemprop="datePublished" content="2011-07-24T17:33:34-04:00" />
-<meta itemprop="dateModified" content="2011-07-24T17:33:34-04:00" />
-<meta itemprop="wordCount" content="513">
+<meta property="og:url" content="https://miroadamy.com/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Tomcat 5 not reloading changes in JSP">
+	<meta property="og:description" content="Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that. I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application. So I located the instance of Tomcat 5.5 (I always have couple of Tomcats lying around) and being lazy, I decided to inject the change into out-of the box jsp-examples Web application that comes with it.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2011-07-24T17:33:34-04:00">
+		<meta property="article:modified_time" content="2011-07-24T17:33:34-04:00">
+		<meta property="article:tag" content="Java">
 
-
-
-<meta itemprop="keywords" content="java," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tomcat 5 not reloading changes in JSP"/>
-<meta name="twitter:description" content="Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that. I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application."/>
+	<meta itemprop="name" content="Tomcat 5 not reloading changes in JSP">
+	<meta itemprop="description" content="Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that. I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application. So I located the instance of Tomcat 5.5 (I always have couple of Tomcats lying around) and being lazy, I decided to inject the change into out-of the box jsp-examples Web application that comes with it.">
+	<meta itemprop="datePublished" content="2011-07-24T17:33:34-04:00">
+	<meta itemprop="dateModified" content="2011-07-24T17:33:34-04:00">
+	<meta itemprop="wordCount" content="513">
+	<meta itemprop="keywords" content="Java">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Tomcat 5 not reloading changes in JSP">
+	<meta name="twitter:description" content="Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that. I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application. So I located the instance of Tomcat 5.5 (I always have couple of Tomcats lying around) and being lazy, I decided to inject the change into out-of the box jsp-examples Web application that comes with it.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -92,12 +96,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -114,6 +127,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -149,16 +163,16 @@ The most logical explanation would be that I am editing different file than relo
 <p>Really weird.</p>
 <p>Few more experiments showed that no change to any JSP page under jsp-examples was visible. Removing JSP page caused 404 error as expected, but as soon as the page was there, it reappeared in original pristine version.
 At this point, I started to suspect there is something fishy with the jsp-examples application itself. And it was. Brief check of the web.xml showed that it is quite long (24K) and that it contains declaration:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;servlet&gt;
-  &lt;servlet-name&gt;org.apache.jsp.jsp2.el.basic_002dcomparisons_jsp&lt;/servlet-name&gt;
-  &lt;servlet-class&gt;org.apache.jsp.jsp2.el.basic_002dcomparisons_jsp&lt;/servlet-class&gt;
-&lt;/servlet&gt;
-....
-&lt;servlet-mapping&gt;
-  &lt;servlet-name&gt;org.apache.jsp.jsp2.el.basic_002dcomparisons_jsp&lt;/servlet-name&gt;
-  &lt;url-pattern&gt;/jsp2/el/basic-comparisons.jsp&lt;/url-pattern&gt;
-&lt;/servlet-mapping&gt;
-</code></pre></div><p>and suddenly it all made sense.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;servlet&gt;
+</span></span><span class="line"><span class="cl">  &lt;servlet-name&gt;org.apache.jsp.jsp2.el.basic_002dcomparisons_jsp&lt;/servlet-name&gt;
+</span></span><span class="line"><span class="cl">  &lt;servlet-class&gt;org.apache.jsp.jsp2.el.basic_002dcomparisons_jsp&lt;/servlet-class&gt;
+</span></span><span class="line"><span class="cl">&lt;/servlet&gt;
+</span></span><span class="line"><span class="cl">....
+</span></span><span class="line"><span class="cl">&lt;servlet-mapping&gt;
+</span></span><span class="line"><span class="cl">  &lt;servlet-name&gt;org.apache.jsp.jsp2.el.basic_002dcomparisons_jsp&lt;/servlet-name&gt;
+</span></span><span class="line"><span class="cl">  &lt;url-pattern&gt;/jsp2/el/basic-comparisons.jsp&lt;/url-pattern&gt;
+</span></span><span class="line"><span class="cl">&lt;/servlet-mapping&gt;
+</span></span></code></pre></div><p>and suddenly it all made sense.</p>
 <p>As long as the JSP file was present (Tomcat checks), it&rsquo;s content was completely ignored and the request for /jsp2/el/basic-comparisons.jsp was served by COMPILED class /webapps/jsp-examples/WEB-INF/classes/org/apache/jsp/jsp2/el/basic_002dcomparisons_jsp.class - which of course did not contain any of the JSP file changes. When I removed file, Tomcat reported 404 a- the check for file existence comes before check for URL mapping apparently.</p>
 <p>Moral of the story: being lazy causes one has to do more work but often learns something new. Had I created fresh new WebApp, none of these mappings were present and I would never realized what is Tomcat 5 doing behind the scenes.</p>
 <p>Btw, in Tomcat 6 the mappings are gone and everything behaves as expected.
@@ -223,7 +237,7 @@ Although this is not technically a bug - but a feature - it is unfortunate that 
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -241,13 +255,10 @@ Although this is not technically a bug - but a feature - it is unfortunate that 
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -258,7 +269,10 @@ Although this is not technically a bug - but a feature - it is unfortunate that 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

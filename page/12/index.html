@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -36,20 +36,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Miro&#39;s World" />
-<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
-<meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Miro&#39;s World"/>
-<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
+<meta property="og:url" content="https://miroadamy.com/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Miro&#39;s World">
+	<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+	<meta itemprop="name" content="Miro&#39;s World">
+	<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta itemprop="datePublished" content="2026-08-21T14:31:54+00:00">
+	<meta itemprop="dateModified" content="2026-08-21T14:31:54+00:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Miro&#39;s World">
+	<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,12 +91,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -108,6 +122,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -116,124 +131,372 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-02-10-atgdiagram/">ATG Module Diagram Generator</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-10-16-endeca-oracle/">Endeca start scripts - Oracle way</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2018-02-10 </span>
+      <span class="post-time"> 2013-10-16 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 301 words </span>
+        <span class="more-meta"> 239 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      I have found local clone of this repo while cleaning up the disk. The source was originally residing in private repo on Bitbucket which I moved to GitHub: https://github.com/miroadamy/atgdiagram
-What it does Groovy scripts:
- https://github.com/miroadamy/atgdiagram/blob/master/src/listATGModules.groovy https://github.com/miroadamy/atgdiagram/blob/master/src/ATGModule.groovy  that scan local ATG installation, discover modules and generate the PlantUML file representing it, for example - https://github.com/miroadamy/atgdiagram/blob/master/uml/test2.uml
-Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2 Using /opt/ATG/ATG10.0.2 installation Dependants of module TWeStore.eStore =&gt; [DCS.
+      <p>I have ported the Oracle VM style management scripts into the Loyalty VM.</p>
+<p>The scripts are in the loyalty-endeca Git repo, originally in eVoucher branch but also merged into edc</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="p">[</span><span class="n">tkuser</span><span class="err">@</span><span class="n">vm</span><span class="o">-</span><span class="n">lo1</span><span class="o">-</span><span class="n">hpr</span><span class="o">-</span><span class="n">ma</span> <span class="n">endeca</span><span class="p">]</span><span class="o">$</span> <span class="n">ls</span> <span class="o">-</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">total</span> <span class="mi">28</span>
+</span></span><span class="line"><span class="cl"><span class="n">dev</span><span class="o">-</span><span class="n">check</span><span class="o">-</span><span class="n">environment</span><span class="o">.</span><span class="n">sh</span><span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="n">dev</span><span class="o">-</span><span class="n">deploy</span><span class="o">-</span><span class="n">endeca</span><span class="o">-</span><span class="n">app</span><span class="o">.</span><span class="n">sh</span><span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="n">dev</span><span class="o">-</span><span class="n">endeca</span><span class="o">-</span><span class="n">environmet</span><span class="o">.</span><span class="n">ini</span><span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="n">dev</span><span class="o">-</span><span class="n">remove</span><span class="o">-</span><span class="n">endeca</span><span class="o">-</span><span class="n">app</span><span class="o">.</span><span class="n">sh</span><span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="n">endeca</span><span class="o">-</span><span class="n">control</span><span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="n">endeca</span><span class="o">-</span><span class="n">vars</span><span class="o">.</span><span class="n">txt</span><span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="n">README</span><span class="o">.</span><span class="n">md</span><span class="o">*</span>
+</span></span><span class="line"><span class="cl"><span class="n">RewardsEndc</span><span class="o">/</span>
+</span></span></code></pre></div><h3 id="dev-endeca-environmetini">dev-endeca-environmet.ini</h3>
+<p>This is environment setting script.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">### MUST BE SOURCED IN
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">source dev-endeca-environmet.ini
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## or
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">. dev-endeca-environmet.ini
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">## NEVER
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">./dev-endeca-environmet.ini
+</span></span></code></pre></div><h3 id="endeca-control">endeca-control</h3>
+<p>Main script that manages three components of the system named:</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2018-02-10-atgdiagram/" class="read-more-link">Read more...</a>
+      <a href="/posts/2013-10-16-endeca-oracle/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2017-01-26-canada/">Christmas in Canada</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-26-git-push-matching-simple/">Difference between matching and simple - Git push</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2018-01-26 </span>
+      <span class="post-time"> 2013-09-26 </span>
       <div class="post-category">
-          <a href="/categories/travel/"> travel </a>
+          <a href="/categories/technology/"> Technology </a>
           </div>
-        <span class="more-meta"> 18 words </span>
+        <span class="more-meta"> 717 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Git message</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Git 2.0 from &#39;matching&#39; to &#39;simple&#39;. To squelch this message
+</span></span><span class="line"><span class="cl">and maintain the current behavior after the default changes, use:
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">git config --global push.default matching
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">To squelch this message and adopt the new behavior now, use:
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">git config --global push.default simple
+</span></span></code></pre></div><p>Options for push.default</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">nothing - do not push anything.
+</span></span><span class="line"><span class="cl">matching - push all matching branches. All branches having the same name in both ends are considered to be matching. This is the default.
+</span></span><span class="line"><span class="cl">upstream - push the current branch to its upstream branch.
+</span></span><span class="line"><span class="cl">tracking - deprecated synonym for upstream.
+</span></span><span class="line"><span class="cl">current - push the current branch to a branch of the same name.
+</span></span></code></pre></div><p>From SOF:</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-09-26-git-push-matching-simple/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-25-sublime-text-macro-timestamp/">Sublime text macro to insert timestamp</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-09-25 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> Programming </a>
+          </div>
+        <span class="more-meta"> 62 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      We have visited Canada for the winter season.
-It was very nice to see old friends and family.
+      <h1 id="sublime-text-macro-to-insert-timestamp">Sublime text macro to insert timestamp</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">import sublime_plugin
+</span></span><span class="line"><span class="cl">from datetime import datetime
+</span></span><span class="line"><span class="cl">class TimeStampCommand(sublime_plugin.TextCommand):
+</span></span><span class="line"><span class="cl">    def run(self, edit):
+</span></span><span class="line"><span class="cl">        # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior
+</span></span><span class="line"><span class="cl">        stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;)  # 2013-07-18 14:54:23
+</span></span><span class="line"><span class="cl">        for r in self.view.sel():
+</span></span><span class="line"><span class="cl">            if r.empty():
+</span></span><span class="line"><span class="cl">                self.view.insert(edit, r.a, stamp)
+</span></span><span class="line"><span class="cl">            else:
+</span></span><span class="line"><span class="cl">                self.view.replace(edit, r,   stamp)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">platform-edc $
+</span></span></code></pre></div><p>Documentation - <a href="http://docs.python.org/2/library/datetime.html#datetime.datetime">see</a></p>
+<h2 id="installation">Installation:</h2>
+<p>Add this to Keybindings / User</p>
+<p>![](/images/2013-09-23_8.02.19 PM.png)</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2017-01-26-canada/" class="read-more-link">Read more...</a>
+      <a href="/posts/2013-09-25-sublime-text-macro-timestamp/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2017-11-23-visual-vm/">VisualVM inside Docker container</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-24-screenshot-cli/">How to make screenshot from command line</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-11-23 </span>
+      <span class="post-time"> 2013-09-24 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
+          <a href="/categories/lifehacks/"> lifehacks </a>
           </div>
-        <span class="more-meta"> 515 words </span>
-        <span class="more-meta"> 3 mins read </span>
+        <span class="more-meta"> 57 words </span>
+        <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      The idea / motivation In order to run VisualVM from predefined configuration you need to point the app to the user directory. This directory takes about 20MB, but 90% of the the content is actually generated or repeated.
-➜ 4devops-visualvm git:(master) du -sh tw-sl/* 244K tw-sl/config 7.3M tw-sl/modules 52K tw-sl/repository 4.0K tw-sl/update 104K tw-sl/update_tracking 11M tw-sl/var ➜ 4devops-visualvm git:(master) du -sh tw-wool/* 248K tw-wool/config 7.2M tw-wool/modules 60K tw-wool/repository 4.0K tw-wool/update 104K tw-wool/update_tracking 11M tw-wool/var ➜ 4devops-visualvm git:(master) du -sh tw-wool 19M tw-wool The only part that is specific and worthy of maintaining in the Git repo is repository
+      <h1 id="how-to-make-screenshot-from-command-line">How to make screenshot from command line</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png
+</span></span><span class="line"><span class="cl">libpng warning: zero length keyword
+</span></span><span class="line"><span class="cl">libpng warning: Empty language field in iTXt chunk
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">platform-edc $ screencapture  ~/Desktop/A$(date +%Y%m%d%H%M%S).png
+</span></span><span class="line"><span class="cl">libpng warning: zero length keyword
+</span></span><span class="line"><span class="cl">libpng warning: Empty language field in iTXt chunk
+</span></span></code></pre></div><p>First one is &ldquo;interactive&rdquo; - Cmd-Shift-3 with selection tool, second is full screen</p>
+<p><img src="/images/20130923195517.png" alt="">
+<img src="/images/A20130923195544.png" alt=""></p>
     </div>
     <div class="read-more">
-      <a href="/posts/2017-11-23-visual-vm/" class="read-more-link">Read more...</a>
+      <a href="/posts/2013-09-24-screenshot-cli/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2017-11-14-install-aws-cli-mac/">Install AWS CLI on Mac</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-16-vbox-shared-folder/">Case sensitivity and VirtualBox shared folder</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-11-14 </span>
+      <span class="post-time"> 2013-09-16 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> DevOps </a>
+          <a href="/categories/technology/"> Technology </a>
           </div>
-        <span class="more-meta"> 1226 words </span>
-        <span class="more-meta"> 6 mins read </span>
+        <span class="more-meta"> 101 words </span>
+        <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Install AWS CLI on Mac The Mac comes with Python 2.7 and no pip
-This guide recommends upgrade to Python 3 which I want to avoid: http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html
-Unsuccesfull path - keep the Python 2.7 ➜ ~ pip --version zsh: command not found: pip ➜ ~ sudo easy_install pip Password: Searching for pip Reading https://pypi.python.org/simple/pip/ Best match: pip 9.0.1 Downloading https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9 Processing pip-9.0.1.tar.gz Writing /tmp/easy_install-QnLLJp/pip-9.0.1/setup.cfg Running pip-9.0.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-QnLLJp/pip-9.0.1/egg-dist-tmp-03hMh7 /System/Library/Frameworks/Python.
+      <h1 id="case-sensitivity-and-virtualbox-shared-folder">Case sensitivity and VirtualBox shared folder</h1>
+<p>Weird but true behaviour:</p>
+<p>I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">touch zz zZ
+</span></span></code></pre></div><p>creates two files, both &ldquo;inside VM&rdquo; <code>~/development/ATG/platform-edc</code> as well as in OS-X.</p>
+<p>If the VM is suspended and resumed, it looses the case sensitivity inside the VM.</p>
+<p>The command</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ~/development/ATG/platform-edc
+</span></span><span class="line"><span class="cl">touch zz zZ
+</span></span></code></pre></div><p>will create just single file. Outside the VM, in OS-X file system is still case sensitive.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2017-11-14-install-aws-cli-mac/" class="read-more-link">Read more...</a>
+      <a href="/posts/2013-09-16-vbox-shared-folder/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2017-05-15-sensitive-git/">Storing sensitive information in Git</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-05-mc-color-scheme/">Usable mc color scheme</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2017-05-17 </span>
+      <span class="post-time"> 2013-09-05 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
+          <a href="/categories/technology/"> Technology </a>
           </div>
-        <span class="more-meta"> 1000 words </span>
-        <span class="more-meta"> 5 mins read </span>
+        <span class="more-meta"> 9 words </span>
+        <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      The purpose of this is to evaluate options and suggest possible approaches for handling the sensitive information in Git repositories such as database credentials, API credentials, passwords, keys, certificates etc. Joel asked this question a few weeks ago - this is part of Milos&rsquo;s security awareness program.
-The issue Git repos store in cleartext all credentials, that may also be including PROD credentials.
-Everybody who clones the repository - every developer has access to this information that should have been shared only with the support team that has legitimate access to production.
+      <h1 id="usable-mc-color-scheme">Usable mc color scheme</h1>
+<p>Edit</p>
+<p><code>~/.mc/ini</code></p>
+<p>insert</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Colors]
+</span></span><span class="line"><span class="cl">base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default
+</span></span></code></pre></div><p><img src="/images/mc-color-scheme.png" alt=""></p>
     </div>
     <div class="read-more">
-      <a href="/posts/2017-05-15-sensitive-git/" class="read-more-link">Read more...</a>
+      <a href="/posts/2013-09-05-mc-color-scheme/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-09-03-show-lock-screen-indicator/">Show lock screen indicator in OS-X menu</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-09-03 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> Technology </a>
+          </div>
+        <span class="more-meta"> 50 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="show-lock-screen-indicator-in-os-x-menu">Show lock screen indicator in OS-X menu</h1>
+<p>After HDD reinstall I lost most of my customizations (by choice decided NOT to restore from TM).</p>
+<p>The Lock in menu is provided by KeyChain Access, not by System Preferences.</p>
+<p>Open &lsquo;KeyChain Access&rsquo; -&gt; Preferences, select &lsquo;Show keychain status&rsquo;</p>
+<p><img src="/images/2013-09-03_1.30.08.png" alt="image1"></p>
+<p>and it is back:</p>
+<p><img src="/images/2013-09-03_1.29.34.png" alt="image1"></p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-09-03-show-lock-screen-indicator/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-04-22-atg-development/">ATG Development using &#39;hidden&#39; VM</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-04-22 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 692 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.</p>
+<p>Inspiration for the setup came from <a href="https://www.youtube.com/watch?feature=player_embedded&amp;v=cPt_1Vga-Nk">https://www.youtube.com/watch?feature=player_embedded&amp;v=cPt_1Vga-Nk</a></p>
+<h2 id="motivation---issues-with-vms">Motivation - issues with VMs</h2>
+<p>VMs are great - they allow &ldquo;packaged&rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-04-22-atg-development/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-04-13-git-conflict/">Merge conflict with deleted file</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-04-13 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 333 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I was merging the branch that removed / consolidated bunch of duplicate JSP files (corporate-ui-cleanup).</p>
+<p>In the meantime in master, some minor UI changes were made to these files whose content was now elsewhere.</p>
+<p>Quick trick how to resolve it fast:</p>
+<h2 id="show-branch">Show branch</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">CineplexB2B</span> <span class="o">$</span> <span class="n">git</span> <span class="n">show</span><span class="o">-</span><span class="n">branch</span>
+</span></span><span class="line"><span class="cl"><span class="o">!</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">database</span><span class="o">-</span><span class="n">cleanup</span><span class="p">]</span> <span class="n">Loading</span> <span class="n">data</span> <span class="n">with</span> <span class="n">XML</span> <span class="n">only</span><span class="p">:</span> <span class="n">no</span> <span class="n">constraints</span> <span class="ow">and</span> <span class="n">tax_id</span> <span class="p">(</span><span class="n">unused</span> <span class="n">field</span><span class="p">)</span> <span class="n">nullable</span>
+</span></span><span class="line"><span class="cl"> <span class="o">!</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">gradle</span><span class="o">-</span><span class="n">build</span><span class="p">]</span> <span class="n">Merge</span> <span class="n">branch</span> <span class="s1">&#39;master&#39;</span> <span class="n">into</span> <span class="n">bb</span><span class="o">-</span><span class="n">gradle</span><span class="o">-</span><span class="n">build</span>
+</span></span><span class="line"><span class="cl">  <span class="o">*</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="p">]</span> <span class="n">Merged</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">last</span> <span class="mi">5</span> <span class="n">days</span> <span class="n">changes</span>
+</span></span><span class="line"><span class="cl">   <span class="o">!</span> <span class="p">[</span><span class="n">corporate</span><span class="o">-</span><span class="n">ui</span><span class="o">-</span><span class="n">cleanup</span><span class="p">]</span> <span class="n">Merged</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">last</span> <span class="mi">5</span> <span class="n">days</span> <span class="n">changes</span>
+</span></span><span class="line"><span class="cl">    <span class="o">!</span> <span class="p">[</span><span class="n">master</span><span class="p">]</span> <span class="n">Merged</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">last</span> <span class="mi">5</span> <span class="n">days</span> <span class="n">changes</span>
+</span></span><span class="line"><span class="cl"><span class="o">-----</span>
+</span></span><span class="line"><span class="cl"> <span class="o">-</span>    <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">gradle</span><span class="o">-</span><span class="n">build</span><span class="p">]</span> <span class="n">Merge</span> <span class="n">branch</span> <span class="s1">&#39;master&#39;</span> <span class="n">into</span> <span class="n">bb</span><span class="o">-</span><span class="n">gradle</span><span class="o">-</span><span class="n">build</span>
+</span></span><span class="line"><span class="cl"> <span class="o">----</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="p">]</span> <span class="n">Merged</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">last</span> <span class="mi">5</span> <span class="n">days</span> <span class="n">changes</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="p">]</span> <span class="n">CPLXB2B</span><span class="o">-</span><span class="mi">562</span><span class="p">,</span> <span class="n">usageInfo</span><span class="o">/</span><span class="n">internalUsageInfo</span> <span class="n">mapping</span> <span class="ow">in</span> <span class="n">CFI</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">^</span><span class="p">]</span> <span class="k">return</span> <span class="n">order</span> <span class="n">goes</span> <span class="n">all</span> <span class="n">the</span> <span class="n">way</span> <span class="n">to</span> <span class="n">NEW</span><span class="p">:</span> <span class="n">replaced</span> <span class="n">SetPaymentGroupAmount</span><span class="p">,</span> <span class="n">added</span> <span class="n">ReturnFee</span> <span class="n">calculator</span><span class="p">,</span> <span class="n">added</span> <span class="n">reusable</span> <span class="n">jsp</span> <span class="n">fragments</span> <span class="k">for</span> <span class="n">sales</span> <span class="n">order</span> <span class="n">pages</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">2</span><span class="p">]</span> <span class="n">Styling</span> <span class="n">change</span> <span class="n">to</span> <span class="n">avoid</span> <span class="n">disappearing</span> <span class="n">links</span> <span class="n">inside</span> <span class="n">Terms</span> <span class="ow">and</span> <span class="n">Conditions</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">3</span><span class="p">]</span> <span class="n">Dealing</span> <span class="n">with</span> <span class="n">consequences</span> <span class="k">if</span> <span class="n">INTERNAL</span> <span class="n">split</span> <span class="n">to</span> <span class="n">INTERNAL_TRANSFER</span> <span class="ow">and</span> <span class="n">INTERNAL_PURCHASE</span>
+</span></span><span class="line"><span class="cl"> <span class="o">----</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="p">]</span> <span class="n">Merge</span> <span class="n">remote</span><span class="o">-</span><span class="n">tracking</span> <span class="n">branch</span> <span class="s1">&#39;origin/master&#39;</span> <span class="n">into</span> <span class="n">uat2</span><span class="o">-</span><span class="n">deploy</span>
+</span></span><span class="line"><span class="cl"> <span class="o">----</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="o">^</span><span class="mi">2</span><span class="p">]</span> <span class="n">Merge</span> <span class="n">branch</span> <span class="s1">&#39;master&#39;</span> <span class="n">of</span> <span class="n">luke</span><span class="p">:</span><span class="n">cineplex</span><span class="o">-</span><span class="n">b2b</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="o">^</span><span class="mi">2</span><span class="o">^</span><span class="p">]</span> <span class="n">merged</span> <span class="n">changes</span> <span class="o">-</span> <span class="n">fixed</span> <span class="n">conflict</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">2</span><span class="p">]</span> <span class="n">CPLXBTOB</span><span class="o">-</span><span class="mi">557</span> <span class="o">-</span> <span class="n">fixed</span> <span class="n">amount</span> <span class="n">column</span> <span class="n">to</span> <span class="n">show</span> <span class="n">proper</span> <span class="n">currency</span>
+</span></span><span class="line"><span class="cl"> <span class="o">----</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">3</span><span class="p">]</span> <span class="n">Merge</span> <span class="n">branch</span> <span class="s1">&#39;master&#39;</span> <span class="n">of</span> <span class="n">twgit</span><span class="err">@</span><span class="n">luke</span><span class="p">:</span><span class="n">cineplex</span><span class="o">-</span><span class="n">b2b</span><span class="o">.</span><span class="n">git</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="p">]</span> <span class="n">CPLXBTOB</span><span class="o">-</span><span class="mi">484</span> <span class="o">-</span> <span class="n">fixed</span> <span class="n">the</span> <span class="n">spacing</span> <span class="ow">and</span> <span class="n">comma</span> <span class="n">issues</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">5</span><span class="p">]</span> <span class="n">Reverted</span> <span class="mi">4</span><span class="n">d512ed</span> <span class="o">-</span> <span class="n">issue</span> <span class="n">with</span> <span class="n">recalculate</span><span class="o">.</span> <span class="n">Must</span> <span class="n">be</span> <span class="n">solved</span> <span class="n">selectively</span> <span class="n">via</span> <span class="n">Javascript</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">6</span><span class="p">]</span> <span class="n">Spacing</span> <span class="ow">in</span> <span class="n">header</span>
+</span></span></code></pre></div><p>see also version with <code>--current</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">CineplexB2B $ git show-branch --current master
+</span></span><span class="line"><span class="cl">! [master] Merged in the last 5 days changes
+</span></span><span class="line"><span class="cl"> * [bb-master] Merged in the last 5 days changes
+</span></span><span class="line"><span class="cl">--
+</span></span><span class="line"><span class="cl">-- [master] Merged in the last 5 days changes
+</span></span></code></pre></div><p>For more, see <a href="http://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created">http://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created</a></p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-04-13-git-conflict/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2013-04-09-bash/">Pattern for test sourcing the script</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-04-09 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 60 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1"># Test if it is sourced or not</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">[[</span> <span class="o">$</span><span class="mi">0</span> <span class="o">!=</span> <span class="o">.*</span><span class="n">bash</span> <span class="p">]];</span> <span class="n">then</span>
+</span></span><span class="line"><span class="cl">    <span class="n">echo</span> <span class="n">Please</span> <span class="n">source</span> <span class="n">it</span><span class="p">:</span> <span class="o">.</span> <span class="o">$</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="n">exit</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">fi</span>
+</span></span><span class="line"><span class="cl"><span class="n">res</span><span class="o">=</span><span class="err">`</span><span class="n">gradle</span> <span class="o">--</span><span class="n">version</span> <span class="o">&gt;/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span> <span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span><span class="p">;</span> <span class="n">echo</span> <span class="o">$</span><span class="err">?</span> <span class="err">`</span>        
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">[[</span> <span class="o">$</span><span class="n">res</span> <span class="o">==</span> <span class="s2">&#34;0&#34;</span> <span class="p">]];</span> <span class="n">then</span>
+</span></span><span class="line"><span class="cl">    <span class="n">echo</span> <span class="n">Have</span> <span class="n">gradle</span><span class="p">:</span> <span class="err">`</span><span class="n">which</span> <span class="n">gradle</span><span class="err">`</span>
+</span></span><span class="line"><span class="cl">    <span class="n">gradle</span> <span class="o">--</span><span class="n">version</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">    <span class="k">export</span> <span class="n">GRADLE_HOME</span><span class="o">=~/</span><span class="n">opt</span><span class="o">/</span><span class="n">gradle</span>
+</span></span><span class="line"><span class="cl">    <span class="k">export</span> <span class="n">PATH</span><span class="o">=$</span><span class="n">PATH</span><span class="p">:</span><span class="o">$</span><span class="n">GRADLE_HOME</span><span class="o">/</span><span class="n">bin</span>
+</span></span><span class="line"><span class="cl">    <span class="n">echo</span> <span class="n">No</span> <span class="n">Gradle</span><span class="p">,</span> <span class="n">adding</span> <span class="o">-</span> <span class="err">`</span><span class="n">which</span> <span class="n">gradle</span><span class="err">`</span>   
+</span></span><span class="line"><span class="cl">    <span class="n">gradle</span> <span class="o">--</span><span class="n">version</span>
+</span></span><span class="line"><span class="cl"><span class="n">fi</span>
+</span></span></code></pre></div>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2013-04-09-bash/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -267,7 +530,9 @@ Everybody who clones the repository - every developer has access to this informa
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -285,13 +550,10 @@ Everybody who clones the repository - every developer has access to this informa
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -302,7 +564,10 @@ Everybody who clones the repository - every developer has access to this informa
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

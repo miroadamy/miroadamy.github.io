@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>google on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/google/</link>
-    <description>Recent content in google on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 23 Oct 2018 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/google/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Google Wifi</title>
-      <link>https://miroadamy.com/posts/2018-10-23-google-wifi/</link>
-      <pubDate>Tue, 23 Oct 2018 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2018-10-23-google-wifi/</guid>
-      <description>Installed Google Wifi - three access points. Finally I have good coverage on both floors of the appartment including the upper terrace and will be able to work at night outside during hot summer nights when temperature does not drop under 25.
-The setup was supereasy and iOS app is very well made and gives interesting insights.
-Happy.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Google on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/google/</link>
+		<description>Recent content in Google on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 23 Oct 2018 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/google/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Google Wifi</title>
+				<link>https://miroadamy.com/posts/2018-10-23-google-wifi/</link>
+				<pubDate>Tue, 23 Oct 2018 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2018-10-23-google-wifi/</guid>
+				<description>&lt;p&gt;Installed Google Wifi - three access points. Finally I have good coverage on both floors of the appartment including the upper terrace and will be able to work at night outside during hot summer nights when temperature does not drop under 25.&lt;/p&gt;&#xA;&lt;p&gt;The setup was supereasy and iOS app is very well made and gives interesting insights.&lt;/p&gt;&#xA;&lt;p&gt;Happy.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/google-wifi.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

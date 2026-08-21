@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Architecture on Miro&#39;s World</title>
-    <link>https://miroadamy.com/categories/architecture/</link>
-    <description>Recent content in Architecture on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 10 Aug 2020 13:00:00 +0800</lastBuildDate><atom:link href="https://miroadamy.com/categories/architecture/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Reference Architecture as a Code</title>
-      <link>https://miroadamy.com/posts/2020-08-07-architecture-as-a-code/</link>
-      <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2020-08-07-architecture-as-a-code/</guid>
-      <description>Many shapes of Architecture According to the wise people, an architecture is the shared understanding that the expert developers/system builders/maintainers have of the system design. It&amp;rsquo;s purpose is to maximize the probability that the decisions you have to make early in a project are the right ones. It is sort of a blueprint for the future system and captures parts, relations, boundaries, constraints.
-In our business (we build and run environments and solutions for eCommerce, data management and other business activities of our customers), an important subtype of architecture is Reference Architecture.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Architecture on Miro&#39;s World</title>
+		<link>https://miroadamy.com/categories/architecture/</link>
+		<description>Recent content in Architecture on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 10 Aug 2020 13:00:00 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/categories/architecture/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Reference Architecture as a Code</title>
+				<link>https://miroadamy.com/posts/2020-08-07-architecture-as-a-code/</link>
+				<pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2020-08-07-architecture-as-a-code/</guid>
+				<description>&lt;h2 id=&#34;many-shapes-of-architecture&#34;&gt;Many shapes of Architecture&lt;/h2&gt;&#xA;&lt;p&gt;According to the &lt;a href=&#34;https://martinfowler.com/architecture/&#34;&gt;wise people&lt;/a&gt;, an architecture is the shared understanding that the expert developers/system builders/maintainers have of the system design. It&amp;rsquo;s purpose is to maximize the&#xA;probability that the decisions you have to make early in a project are the right ones. It is sort of a blueprint for the future system and captures parts, relations, boundaries, constraints.&lt;/p&gt;&#xA;&lt;p&gt;In our business (we build and run environments and solutions for eCommerce, data management and other business activities of our customers), an important subtype of architecture is Reference Architecture. It is an architecture that serves both as a capture of best practices for a particular business case as well as a living, evolving template for creating new instances of that type of an environment. Both best practice as well as evolving features are important: the reference architecture (RA) serves as knowledge gathering in the ever changing world of cloud. As new features of AWS or Azure come, the RA needs to absorb them to incorporate latest advances and to use the best price / performance options available.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

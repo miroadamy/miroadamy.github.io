@@ -16,20 +16,21 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="Show branches and tags in log  git log &amp;ndash;oneline &amp;ndash;decorate
- Even better - all branches with graph  git log &amp;ndash;oneline &amp;ndash;decorate &amp;ndash;all &amp;ndash;graph
- Highlight words instead of lines  git diff &amp;ndash;word-diff HEAD~~~ HEAD~~
- Also works in git log -p and git show
-Better status  git status -sb
- Compare with gs == git status
-Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git name-rev --name-only 73c762c remotes/origin/2013-10-22-LIVE~3 Find which branch has a commit ➜ simstore-atg git:(master) ✗ git branch --contains 73c762c LIVE LIVE-140430 LIVE2 LIVE3 LIVE4 PATCH-ORS-140605 PATCH-ORS-140616 feature_us_shipping * master ➜ simstore-atg git:(master) ✗ git branch --contains 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 ➜ simstore-atg git:(master) ✗ git pull Updating ed81557." /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Show branches and tags in log git log &ndash;oneline &ndash;decorate
+Even better - all branches with graph git log &ndash;oneline &ndash;decorate &ndash;all &ndash;graph
+Highlight words instead of lines git diff &ndash;word-diff HEAD~~~ HEAD~~
+Also works in git log -p and git show
+Better status git status -sb
+Compare with gs == git status
+Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git name-rev --name-only 73c762c remotes/origin/2013-10-22-LIVE~3 Find which branch has a commit ➜ simstore-atg git:(master) ✗ git branch --contains 73c762c LIVE LIVE-140430 LIVE2 LIVE3 LIVE4 PATCH-ORS-140605 PATCH-ORS-140616 feature_us_shipping * master ➜ simstore-atg git:(master) ✗ git branch --contains 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 ➜ simstore-atg git:(master) ✗ git pull Updating ed81557..220a6a7 Fast-forward .... ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 * master The NO RESULT from 2643908 was caused by the fact that this commit was present only in origin/master, not yet merged into local master. After pull, it does show
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-09-03-gitbits/" />
@@ -40,46 +41,49 @@ Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remot
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Few gitbits" />
-<meta property="og:description" content="Show branches and tags in log  git log &ndash;oneline &ndash;decorate
- Even better - all branches with graph  git log &ndash;oneline &ndash;decorate &ndash;all &ndash;graph
- Highlight words instead of lines  git diff &ndash;word-diff HEAD~~~ HEAD~~
- Also works in git log -p and git show
-Better status  git status -sb
- Compare with gs == git status
-Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git name-rev --name-only 73c762c remotes/origin/2013-10-22-LIVE~3 Find which branch has a commit ➜ simstore-atg git:(master) ✗ git branch --contains 73c762c LIVE LIVE-140430 LIVE2 LIVE3 LIVE4 PATCH-ORS-140605 PATCH-ORS-140616 feature_us_shipping * master ➜ simstore-atg git:(master) ✗ git branch --contains 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 ➜ simstore-atg git:(master) ✗ git pull Updating ed81557." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2014-09-03-gitbits/" />
-<meta property="article:published_time" content="2014-09-03T11:22:48+08:00" />
-<meta property="article:modified_time" content="2014-09-03T11:22:48+08:00" />
-<meta itemprop="name" content="Few gitbits">
-<meta itemprop="description" content="Show branches and tags in log  git log &ndash;oneline &ndash;decorate
- Even better - all branches with graph  git log &ndash;oneline &ndash;decorate &ndash;all &ndash;graph
- Highlight words instead of lines  git diff &ndash;word-diff HEAD~~~ HEAD~~
- Also works in git log -p and git show
-Better status  git status -sb
- Compare with gs == git status
-Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git name-rev --name-only 73c762c remotes/origin/2013-10-22-LIVE~3 Find which branch has a commit ➜ simstore-atg git:(master) ✗ git branch --contains 73c762c LIVE LIVE-140430 LIVE2 LIVE3 LIVE4 PATCH-ORS-140605 PATCH-ORS-140616 feature_us_shipping * master ➜ simstore-atg git:(master) ✗ git branch --contains 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 ➜ simstore-atg git:(master) ✗ git pull Updating ed81557.">
-<meta itemprop="datePublished" content="2014-09-03T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2014-09-03T11:22:48+08:00" />
-<meta itemprop="wordCount" content="319">
+<meta property="og:url" content="https://miroadamy.com/posts/2014-09-03-gitbits/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Few gitbits">
+	<meta property="og:description" content="Show branches and tags in log git log –oneline –decorate
+Even better - all branches with graph git log –oneline –decorate –all –graph
+Highlight words instead of lines git diff –word-diff HEAD~~~ HEAD~~
+Also works in git log -p and git show
+Better status git status -sb
+Compare with gs == git status
+Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git name-rev --name-only 73c762c remotes/origin/2013-10-22-LIVE~3 Find which branch has a commit ➜ simstore-atg git:(master) ✗ git branch --contains 73c762c LIVE LIVE-140430 LIVE2 LIVE3 LIVE4 PATCH-ORS-140605 PATCH-ORS-140616 feature_us_shipping * master ➜ simstore-atg git:(master) ✗ git branch --contains 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 ➜ simstore-atg git:(master) ✗ git pull Updating ed81557..220a6a7 Fast-forward .... ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 * master The NO RESULT from 2643908 was caused by the fact that this commit was present only in origin/master, not yet merged into local master. After pull, it does show">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2014-09-03T11:22:48+08:00">
+		<meta property="article:modified_time" content="2014-09-03T11:22:48+08:00">
+		<meta property="article:tag" content="Git">
 
-
-
-<meta itemprop="keywords" content="git," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Few gitbits"/>
-<meta name="twitter:description" content="Show branches and tags in log  git log &ndash;oneline &ndash;decorate
- Even better - all branches with graph  git log &ndash;oneline &ndash;decorate &ndash;all &ndash;graph
- Highlight words instead of lines  git diff &ndash;word-diff HEAD~~~ HEAD~~
- Also works in git log -p and git show
-Better status  git status -sb
- Compare with gs == git status
-Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git name-rev --name-only 73c762c remotes/origin/2013-10-22-LIVE~3 Find which branch has a commit ➜ simstore-atg git:(master) ✗ git branch --contains 73c762c LIVE LIVE-140430 LIVE2 LIVE3 LIVE4 PATCH-ORS-140605 PATCH-ORS-140616 feature_us_shipping * master ➜ simstore-atg git:(master) ✗ git branch --contains 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 ➜ simstore-atg git:(master) ✗ git pull Updating ed81557."/>
+	<meta itemprop="name" content="Few gitbits">
+	<meta itemprop="description" content="Show branches and tags in log git log –oneline –decorate
+Even better - all branches with graph git log –oneline –decorate –all –graph
+Highlight words instead of lines git diff –word-diff HEAD~~~ HEAD~~
+Also works in git log -p and git show
+Better status git status -sb
+Compare with gs == git status
+Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git name-rev --name-only 73c762c remotes/origin/2013-10-22-LIVE~3 Find which branch has a commit ➜ simstore-atg git:(master) ✗ git branch --contains 73c762c LIVE LIVE-140430 LIVE2 LIVE3 LIVE4 PATCH-ORS-140605 PATCH-ORS-140616 feature_us_shipping * master ➜ simstore-atg git:(master) ✗ git branch --contains 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 ➜ simstore-atg git:(master) ✗ git pull Updating ed81557..220a6a7 Fast-forward .... ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 * master The NO RESULT from 2643908 was caused by the fact that this commit was present only in origin/master, not yet merged into local master. After pull, it does show">
+	<meta itemprop="datePublished" content="2014-09-03T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2014-09-03T11:22:48+08:00">
+	<meta itemprop="wordCount" content="319">
+	<meta itemprop="keywords" content="Git">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Few gitbits">
+	<meta name="twitter:description" content="Show branches and tags in log git log –oneline –decorate
+Even better - all branches with graph git log –oneline –decorate –all –graph
+Highlight words instead of lines git diff –word-diff HEAD~~~ HEAD~~
+Also works in git log -p and git show
+Better status git status -sb
+Compare with gs == git status
+Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 2643908 remotes/origin/HEAD~2 ➜ simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git name-rev --name-only 73c762c remotes/origin/2013-10-22-LIVE~3 Find which branch has a commit ➜ simstore-atg git:(master) ✗ git branch --contains 73c762c LIVE LIVE-140430 LIVE2 LIVE3 LIVE4 PATCH-ORS-140605 PATCH-ORS-140616 feature_us_shipping * master ➜ simstore-atg git:(master) ✗ git branch --contains 188fcd6 LIVE ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 ➜ simstore-atg git:(master) ✗ git pull Updating ed81557..220a6a7 Fast-forward .... ➜ simstore-atg git:(master) ✗ git branch --contains 2643908 * master The NO RESULT from 2643908 was caused by the fact that this commit was present only in origin/master, not yet merged into local master. After pull, it does show">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -116,12 +120,21 @@ Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remot
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -138,6 +151,7 @@ Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remot
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -200,64 +214,64 @@ Find a name ➜ simstore-atg git:(master) ✗ git name-rev 2643908 2643908 remot
 <p>Compare with gs == git status</p>
 <p><img src="/images/gb-5.png" alt=""></p>
 <h2 id="find-a-name">Find a name</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  simstore-atg git:(master) ✗ git name-rev 2643908
-2643908 remotes/origin/HEAD~2
- 
- 
-➜  simstore-atg git:(master) ✗ git name-rev --name-only 2643908
-remotes/origin/HEAD~2
- 
- 
-➜  simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6
-LIVE
- 
- 
-➜  simstore-atg git:(master) ✗ git name-rev --name-only 73c762c
-remotes/origin/2013-10-22-LIVE~3
-</code></pre></div><h1 id="find-which-branch-has-a-commit">Find which branch has a commit</h1>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  simstore-atg git:(master) ✗ git branch --contains 73c762c
-  LIVE
-  LIVE-140430
-  LIVE2
-  LIVE3
-  LIVE4
-  PATCH-ORS-140605
-  PATCH-ORS-140616
-  feature_us_shipping
-* master
- 
- 
-➜  simstore-atg git:(master) ✗ git branch --contains 188fcd6
-  LIVE
- 
- 
-➜  simstore-atg git:(master) ✗ git branch --contains 2643908
- 
- 
-➜  simstore-atg git:(master) ✗ git pull
-Updating ed81557..220a6a7
-Fast-forward
-....
-  
-➜  simstore-atg git:(master) ✗ git branch --contains 2643908
-* master
-</code></pre></div><p>The NO RESULT from 2643908 was caused by the fact that this commit was present only in origin/master, not yet merged into local master. After pull, it does show</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git name-rev 2643908
+</span></span><span class="line"><span class="cl">2643908 remotes/origin/HEAD~2
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git name-rev --name-only 2643908
+</span></span><span class="line"><span class="cl">remotes/origin/HEAD~2
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git name-rev --name-only 188fcd6
+</span></span><span class="line"><span class="cl">LIVE
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git name-rev --name-only 73c762c
+</span></span><span class="line"><span class="cl">remotes/origin/2013-10-22-LIVE~3
+</span></span></code></pre></div><h1 id="find-which-branch-has-a-commit">Find which branch has a commit</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git branch --contains 73c762c
+</span></span><span class="line"><span class="cl">  LIVE
+</span></span><span class="line"><span class="cl">  LIVE-140430
+</span></span><span class="line"><span class="cl">  LIVE2
+</span></span><span class="line"><span class="cl">  LIVE3
+</span></span><span class="line"><span class="cl">  LIVE4
+</span></span><span class="line"><span class="cl">  PATCH-ORS-140605
+</span></span><span class="line"><span class="cl">  PATCH-ORS-140616
+</span></span><span class="line"><span class="cl">  feature_us_shipping
+</span></span><span class="line"><span class="cl">* master
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git branch --contains 188fcd6
+</span></span><span class="line"><span class="cl">  LIVE
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git branch --contains 2643908
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git pull
+</span></span><span class="line"><span class="cl">Updating ed81557..220a6a7
+</span></span><span class="line"><span class="cl">Fast-forward
+</span></span><span class="line"><span class="cl">....
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git branch --contains 2643908
+</span></span><span class="line"><span class="cl">* master
+</span></span></code></pre></div><p>The NO RESULT from 2643908 was caused by the fact that this commit was present only in origin/master, not yet merged into local master. After pull, it does show</p>
 <p>Of course, I could have used &lsquo;-a&rsquo; flag to show all branches</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  simstore-atg git:(master) ✗ git branch -a --contains 2643908
-* master
-  remotes/origin/HEAD -&gt; origin/master
-  remotes/origin/master
-</code></pre></div><h2 id="show-which-commit-contains-message">Show which commit contains message</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git branch -a --contains 2643908
+</span></span><span class="line"><span class="cl">* master
+</span></span><span class="line"><span class="cl">  remotes/origin/HEAD -&gt; origin/master
+</span></span><span class="line"><span class="cl">  remotes/origin/master
+</span></span></code></pre></div><h2 id="show-which-commit-contains-message">Show which commit contains message</h2>
 <blockquote>
 <p>git show :/SIMWEB-700</p>
 </blockquote>
 <p><img src="/images/gb-6.png" alt=""></p>
 <p>For multiple commits: all commits related to ticket (searches THE COMMIT MESSAGE)</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git last --grep SIMWEB-867
-  
-➜  simstore-atg git:(master) ✗ git last&lt;TAB&gt;
-last      -- alias for &#39;log --pretty=format:&#34;%h %ad | %s%d [%an]&#34; --date=short&#39;
-</code></pre></div><p><img src="/images/gb-7.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git last --grep SIMWEB-867
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git last&lt;TAB&gt;
+</span></span><span class="line"><span class="cl">last      -- alias for &#39;log --pretty=format:&#34;%h %ad | %s%d [%an]&#34; --date=short&#39;
+</span></span></code></pre></div><p><img src="/images/gb-7.png" alt=""></p>
 <p>Searches the DIFF - not the message - for SimpleDateFormat</p>
 <blockquote>
 <p>git log &ndash;word-diff &ndash;stat -GSimpleDateFormat</p>
@@ -265,13 +279,13 @@ last      -- alias for &#39;log --pretty=format:&#34;%h %ad | %s%d [%an]&#34; --
 <p>The word SimpleDateFormat is NOT in message, but in diff:</p>
 <p><img src="/images/gb-8.png" alt=""></p>
 <p>If we inspect the commit diff for one of the commits:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  simstore-atg git:(master) ✗ git log -1 -p 2fc121c7e75c6f5aeb57b25030e5fa9896e29a88 | grep -n SimpleDateFormat
-200:-import java.text.SimpleDateFormat;
-279:-        SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
-307:+import java.text.SimpleDateFormat;
-405:+        SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
-➜  simstore-atg git:(master) ✗
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗ git log -1 -p 2fc121c7e75c6f5aeb57b25030e5fa9896e29a88 | grep -n SimpleDateFormat
+</span></span><span class="line"><span class="cl">200:-import java.text.SimpleDateFormat;
+</span></span><span class="line"><span class="cl">279:-        SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
+</span></span><span class="line"><span class="cl">307:+import java.text.SimpleDateFormat;
+</span></span><span class="line"><span class="cl">405:+        SimpleDateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
+</span></span><span class="line"><span class="cl">➜  simstore-atg git:(master) ✗
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -331,7 +345,7 @@ last      -- alias for &#39;log --pretty=format:&#34;%h %ad | %s%d [%an]&#34; --
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -349,13 +363,10 @@ last      -- alias for &#39;log --pretty=format:&#34;%h %ad | %s%d [%an]&#34; --
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -366,7 +377,10 @@ last      -- alias for &#39;log --pretty=format:&#34;%h %ad | %s%d [%an]&#34; --
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

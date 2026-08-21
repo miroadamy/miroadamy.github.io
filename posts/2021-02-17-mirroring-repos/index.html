@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2021-02-17-mirroring-repos/" />
@@ -34,28 +34,36 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="How to mirror Github and Bitbucket repositories" />
-<meta property="og:description" content="Using Bitbucket and Github API to mirror repositories" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2021-02-17-mirroring-repos/" />
-<meta property="article:published_time" content="2021-02-17T13:00:00+08:00" />
-<meta property="article:modified_time" content="2021-02-17T13:00:00+08:00" />
-<meta itemprop="name" content="How to mirror Github and Bitbucket repositories">
-<meta itemprop="description" content="Using Bitbucket and Github API to mirror repositories">
-<meta itemprop="datePublished" content="2021-02-17T13:00:00+08:00" />
-<meta itemprop="dateModified" content="2021-02-17T13:00:00+08:00" />
-<meta itemprop="wordCount" content="604">
+<meta property="og:url" content="https://miroadamy.com/posts/2021-02-17-mirroring-repos/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="How to mirror Github and Bitbucket repositories">
+	<meta property="og:description" content="Using Bitbucket and Github API to mirror repositories">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2021-02-17T13:00:00+08:00">
+		<meta property="article:modified_time" content="2021-02-17T13:00:00+08:00">
+		<meta property="article:tag" content="Git">
+		<meta property="article:tag" content="Github">
+		<meta property="article:tag" content="Bitbucket">
+		<meta property="article:tag" content="Python">
+		<meta property="article:tag" content="Api">
+		<meta property="article:tag" content="Shell">
 
-
-
-<meta itemprop="keywords" content="git,github,bitbucket,python,API,shell," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How to mirror Github and Bitbucket repositories"/>
-<meta name="twitter:description" content="Using Bitbucket and Github API to mirror repositories"/>
+	<meta itemprop="name" content="How to mirror Github and Bitbucket repositories">
+	<meta itemprop="description" content="Using Bitbucket and Github API to mirror repositories">
+	<meta itemprop="datePublished" content="2021-02-17T13:00:00+08:00">
+	<meta itemprop="dateModified" content="2021-02-17T13:00:00+08:00">
+	<meta itemprop="wordCount" content="604">
+	<meta itemprop="keywords" content="Git,Github,Bitbucket,Python,Api,Shell">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="How to mirror Github and Bitbucket repositories">
+	<meta name="twitter:description" content="Using Bitbucket and Github API to mirror repositories">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -92,12 +100,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -114,6 +131,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -164,23 +182,22 @@
 <p>First I use the <code>./bb-repo-links.sh</code> and <code>./gh-repo-links.sh</code> to generate list of repositories.
 See these blog articles: <a href="/posts/2021-02-15-bitbucket-list-repos/">How to list repositories in Bitbucket</a> and <a href="/posts/2021-02-16-github-list-repos/">How to list repositories in github</a></p>
 <p>These are text files and have the structure like this:</p>
-<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">EXFO|git@bitbucket.org:thinkwrap/exfo-tw-docker-jenkins.git
-FARO|git@bitbucket.org:thinkwrap/faro-infrastructure.git
-H3|git@bitbucket.org:thinkwrap/headless-api-gateway.git
-H3|git@bitbucket.org:thinkwrap/headless-cart-service.git
-H3|git@bitbucket.org:thinkwrap/headless-catalog-service.git
-H3|git@bitbucket.org:thinkwrap/headless-connector-atg.git
-H3|git@bitbucket.org:thinkwrap/headless-connector-contentful.git
-</code></pre></div><p>The first field is the project prefix, and the second is the SSH url for cloning the repository.  They are separated by the | character.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">EXFO|git@bitbucket.org:thinkwrap/exfo-tw-docker-jenkins.git
+</span></span><span class="line"><span class="cl">FARO|git@bitbucket.org:thinkwrap/faro-infrastructure.git
+</span></span><span class="line"><span class="cl">H3|git@bitbucket.org:thinkwrap/headless-api-gateway.git
+</span></span><span class="line"><span class="cl">H3|git@bitbucket.org:thinkwrap/headless-cart-service.git
+</span></span><span class="line"><span class="cl">H3|git@bitbucket.org:thinkwrap/headless-catalog-service.git
+</span></span><span class="line"><span class="cl">H3|git@bitbucket.org:thinkwrap/headless-connector-atg.git
+</span></span><span class="line"><span class="cl">H3|git@bitbucket.org:thinkwrap/headless-connector-contentful.git
+</span></span></code></pre></div><p>The first field is the project prefix, and the second is the SSH url for cloning the repository.  They are separated by the | character.</p>
 <p>Cloning is trivial:</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">python3 ./process_repos.py NAME-OF-THE-CONTROL-FILE ....
-
-</code></pre></div><p>e.g.</p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh">python3 ./process_repos.py pivotree_h3.bb-repo2 pvtrlabs.gh-repo 
-</code></pre></div><p>The Python script uses <code>../MIRROR</code> as the starting point for the mirrored tree.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">python3 ./process_repos.py NAME-OF-THE-CONTROL-FILE ....
+</span></span></code></pre></div><p>e.g.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">python3 ./process_repos.py pivotree_h3.bb-repo2 pvtrlabs.gh-repo 
+</span></span></code></pre></div><p>The Python script uses <code>../MIRROR</code> as the starting point for the mirrored tree.</p>
 <p>This can be changed by exporting the variable <code>MIRROR_ROOT</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">MIRROR_ROOT</span> <span class="o">=</span> <span class="s1">&#39;../MIRROR2&#39;</span>
-</code></pre></div><p>The generated structure looks like this:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">MIRROR_ROOT</span> <span class="o">=</span> <span class="s1">&#39;../MIRROR2&#39;</span>
+</span></span></code></pre></div><p>The generated structure looks like this:</p>
 <p><code>PLAFORM &gt; ACCOUNT &gt; PROJECT &gt; REPO</code></p>
 <p>where:</p>
 <ul>
@@ -190,116 +207,115 @@ H3|git@bitbucket.org:thinkwrap/headless-connector-contentful.git
 <li>REPO is the repository name</li>
 </ul>
 <p>NOTE: the names of some projects are &lt; edited &gt;.</p>
-<div class="highlight"><pre class="chroma"><code class="language-txt" data-lang="txt">.
-├── bitbucket.org
-│   ├── pivotree_h3
-│   │   ├── BrownBagExamples
-│   │   │   └── apigateway
-│   │   ├── DATA
-│   │   │   └── sample-data-aws
-│   │   ├── DIVE
-│   │   │   ├── customer-mgmt-api
-│   │   │   ├── data-science-practice
-...
-│   │   │   ├── pvt-admin-mgmt-api
-│   │   │   └── sagemaker-microservices
-│   │   ├── DIVE20
-│   │   │   ├── dive-data-manager
-...
-│   │   │   └── tr-sgm-duplicates-svc
-│   │   ├── DIVECX
-│   │   │   ├── dive-cx-account
-│   │   │   ├── dive-cx-account-fork
-...
-│   │   │   └── pvt-ssm-manager
-│   │   └── starter
-│   │       ├── pvt-node-module-starter
-│   │       ├── pvt-node-starter
-│   │       ├── pvt-pipeline-example
-│   │       └── pvt-sls-starter
-│   └── thinkwrap
-│       ├── &lt;PRJ&gt;-CLOUD
-│       │   └── &lt;prj&gt;-cloud
-│       ├── Admin
-│       │   └── tw-bitbucket-admin
-│       ├── &lt;PROJECT_1&gt;
-│       │   ├── &lt;prj1&gt;-infra
-│       │   └── &lt;prj1&gt;-robot
-│       ├── BOPIS
-│       │   ├── bopis_automation_platform
-│       │   └── pvt-bopis
-│       ├── &lt;PRJ2&gt;
-│       │   └── &lt;prj2&gt;-vtex-poc
-│       ├── &lt;PRJ3&gt;
-...
-│       │   └── &lt;prj4&gt;-testautomation
-│       ├── ZZZ-Archived-Repos
-│       │   └── oneclick-starter
-│       └── microbase
-│           ├── micro-alexa-search
-│           ├── micro-alexa-search-skill
-│           ├── micro-backoffice
-│           ├── micro-cart-service
-│           ├── micro-catalog-service
-│           ├── micro-customer-service
-│           ├── micro-docker-nginx
-│           ├── micro-docker-service
-│           ├── micro-oauth-service
-│           ├── micro-payment-service
-│           ├── micro-promotion-service
-│           ├── micro-recommendation-service
-│           ├── micro-stock-service
-│           ├── micro-tax-service
-│           ├── microbase
-│           └── www.microbase.io
-└── github.com
-    ├── pivotree-tech-blog
-    │   └── src
-    │       ├── hugo101
-    │       ├── pivotree-tech-blog-source-poc
-    │       ├── pivotree-tech-blog.github.io
-    │       └── story
-    ├── pvtrlabs
-    │   └── src
-    │       ├── action-skip-ci
-    │       ├── at-aws-onelogin-multiapp
-    │       ├── at-cloudhealth
-    │       ├── at-opsgenie-integrations
-....    
-    │       ├── terraform-tfe-workspace
-    │       ├── terraform-tfe-workspace-full
-    │       ├── test-limited-tfc-access
-    │       └── test-repo
-    └── thinkwrap
-        └── src
-            ├── ML-Live-Beginner
-            ├── ML-Live-Intermediate
-            ├── Tiny-Python-3.6-Notebook
-            ├── aaac-starter-template
-            ├── aws-cost-and-usage-report
-            ├── aws-ml-guide
-            ├── blast-radius
-            ├── docker-aws-cli
-            ├── docker-kubernetes-cli
-            ├── docker-kubernetes-cli-helm
-            ├── docker-node-base-pipelines
-            ├── docker-node-sls-pipelines
-            ├── docker-node-sls-pipelines-aws
-            ├── docker-python-base-pipelines
-            ├── docker-sls-cli
-            ├── docker-terraform-cli
-            ├── docker-terraform-cli-helm
-            ├── ecs-deep-dive-2018
-            ├── kubernetes-in-action
-            ├── programming-with-data
-            ├── sgviz
-            ├── ssm-parameter-store
-            ├── terraform-ecs-fargate
-            └── universal-recommender
-
-549 directories, 0 files
-
-</code></pre></div><h2 id="updating">Updating</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-txt" data-lang="txt"><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">├── bitbucket.org
+</span></span><span class="line"><span class="cl">│   ├── pivotree_h3
+</span></span><span class="line"><span class="cl">│   │   ├── BrownBagExamples
+</span></span><span class="line"><span class="cl">│   │   │   └── apigateway
+</span></span><span class="line"><span class="cl">│   │   ├── DATA
+</span></span><span class="line"><span class="cl">│   │   │   └── sample-data-aws
+</span></span><span class="line"><span class="cl">│   │   ├── DIVE
+</span></span><span class="line"><span class="cl">│   │   │   ├── customer-mgmt-api
+</span></span><span class="line"><span class="cl">│   │   │   ├── data-science-practice
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">│   │   │   ├── pvt-admin-mgmt-api
+</span></span><span class="line"><span class="cl">│   │   │   └── sagemaker-microservices
+</span></span><span class="line"><span class="cl">│   │   ├── DIVE20
+</span></span><span class="line"><span class="cl">│   │   │   ├── dive-data-manager
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">│   │   │   └── tr-sgm-duplicates-svc
+</span></span><span class="line"><span class="cl">│   │   ├── DIVECX
+</span></span><span class="line"><span class="cl">│   │   │   ├── dive-cx-account
+</span></span><span class="line"><span class="cl">│   │   │   ├── dive-cx-account-fork
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">│   │   │   └── pvt-ssm-manager
+</span></span><span class="line"><span class="cl">│   │   └── starter
+</span></span><span class="line"><span class="cl">│   │       ├── pvt-node-module-starter
+</span></span><span class="line"><span class="cl">│   │       ├── pvt-node-starter
+</span></span><span class="line"><span class="cl">│   │       ├── pvt-pipeline-example
+</span></span><span class="line"><span class="cl">│   │       └── pvt-sls-starter
+</span></span><span class="line"><span class="cl">│   └── thinkwrap
+</span></span><span class="line"><span class="cl">│       ├── &lt;PRJ&gt;-CLOUD
+</span></span><span class="line"><span class="cl">│       │   └── &lt;prj&gt;-cloud
+</span></span><span class="line"><span class="cl">│       ├── Admin
+</span></span><span class="line"><span class="cl">│       │   └── tw-bitbucket-admin
+</span></span><span class="line"><span class="cl">│       ├── &lt;PROJECT_1&gt;
+</span></span><span class="line"><span class="cl">│       │   ├── &lt;prj1&gt;-infra
+</span></span><span class="line"><span class="cl">│       │   └── &lt;prj1&gt;-robot
+</span></span><span class="line"><span class="cl">│       ├── BOPIS
+</span></span><span class="line"><span class="cl">│       │   ├── bopis_automation_platform
+</span></span><span class="line"><span class="cl">│       │   └── pvt-bopis
+</span></span><span class="line"><span class="cl">│       ├── &lt;PRJ2&gt;
+</span></span><span class="line"><span class="cl">│       │   └── &lt;prj2&gt;-vtex-poc
+</span></span><span class="line"><span class="cl">│       ├── &lt;PRJ3&gt;
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">│       │   └── &lt;prj4&gt;-testautomation
+</span></span><span class="line"><span class="cl">│       ├── ZZZ-Archived-Repos
+</span></span><span class="line"><span class="cl">│       │   └── oneclick-starter
+</span></span><span class="line"><span class="cl">│       └── microbase
+</span></span><span class="line"><span class="cl">│           ├── micro-alexa-search
+</span></span><span class="line"><span class="cl">│           ├── micro-alexa-search-skill
+</span></span><span class="line"><span class="cl">│           ├── micro-backoffice
+</span></span><span class="line"><span class="cl">│           ├── micro-cart-service
+</span></span><span class="line"><span class="cl">│           ├── micro-catalog-service
+</span></span><span class="line"><span class="cl">│           ├── micro-customer-service
+</span></span><span class="line"><span class="cl">│           ├── micro-docker-nginx
+</span></span><span class="line"><span class="cl">│           ├── micro-docker-service
+</span></span><span class="line"><span class="cl">│           ├── micro-oauth-service
+</span></span><span class="line"><span class="cl">│           ├── micro-payment-service
+</span></span><span class="line"><span class="cl">│           ├── micro-promotion-service
+</span></span><span class="line"><span class="cl">│           ├── micro-recommendation-service
+</span></span><span class="line"><span class="cl">│           ├── micro-stock-service
+</span></span><span class="line"><span class="cl">│           ├── micro-tax-service
+</span></span><span class="line"><span class="cl">│           ├── microbase
+</span></span><span class="line"><span class="cl">│           └── www.microbase.io
+</span></span><span class="line"><span class="cl">└── github.com
+</span></span><span class="line"><span class="cl">    ├── pivotree-tech-blog
+</span></span><span class="line"><span class="cl">    │   └── src
+</span></span><span class="line"><span class="cl">    │       ├── hugo101
+</span></span><span class="line"><span class="cl">    │       ├── pivotree-tech-blog-source-poc
+</span></span><span class="line"><span class="cl">    │       ├── pivotree-tech-blog.github.io
+</span></span><span class="line"><span class="cl">    │       └── story
+</span></span><span class="line"><span class="cl">    ├── pvtrlabs
+</span></span><span class="line"><span class="cl">    │   └── src
+</span></span><span class="line"><span class="cl">    │       ├── action-skip-ci
+</span></span><span class="line"><span class="cl">    │       ├── at-aws-onelogin-multiapp
+</span></span><span class="line"><span class="cl">    │       ├── at-cloudhealth
+</span></span><span class="line"><span class="cl">    │       ├── at-opsgenie-integrations
+</span></span><span class="line"><span class="cl">....    
+</span></span><span class="line"><span class="cl">    │       ├── terraform-tfe-workspace
+</span></span><span class="line"><span class="cl">    │       ├── terraform-tfe-workspace-full
+</span></span><span class="line"><span class="cl">    │       ├── test-limited-tfc-access
+</span></span><span class="line"><span class="cl">    │       └── test-repo
+</span></span><span class="line"><span class="cl">    └── thinkwrap
+</span></span><span class="line"><span class="cl">        └── src
+</span></span><span class="line"><span class="cl">            ├── ML-Live-Beginner
+</span></span><span class="line"><span class="cl">            ├── ML-Live-Intermediate
+</span></span><span class="line"><span class="cl">            ├── Tiny-Python-3.6-Notebook
+</span></span><span class="line"><span class="cl">            ├── aaac-starter-template
+</span></span><span class="line"><span class="cl">            ├── aws-cost-and-usage-report
+</span></span><span class="line"><span class="cl">            ├── aws-ml-guide
+</span></span><span class="line"><span class="cl">            ├── blast-radius
+</span></span><span class="line"><span class="cl">            ├── docker-aws-cli
+</span></span><span class="line"><span class="cl">            ├── docker-kubernetes-cli
+</span></span><span class="line"><span class="cl">            ├── docker-kubernetes-cli-helm
+</span></span><span class="line"><span class="cl">            ├── docker-node-base-pipelines
+</span></span><span class="line"><span class="cl">            ├── docker-node-sls-pipelines
+</span></span><span class="line"><span class="cl">            ├── docker-node-sls-pipelines-aws
+</span></span><span class="line"><span class="cl">            ├── docker-python-base-pipelines
+</span></span><span class="line"><span class="cl">            ├── docker-sls-cli
+</span></span><span class="line"><span class="cl">            ├── docker-terraform-cli
+</span></span><span class="line"><span class="cl">            ├── docker-terraform-cli-helm
+</span></span><span class="line"><span class="cl">            ├── ecs-deep-dive-2018
+</span></span><span class="line"><span class="cl">            ├── kubernetes-in-action
+</span></span><span class="line"><span class="cl">            ├── programming-with-data
+</span></span><span class="line"><span class="cl">            ├── sgviz
+</span></span><span class="line"><span class="cl">            ├── ssm-parameter-store
+</span></span><span class="line"><span class="cl">            ├── terraform-ecs-fargate
+</span></span><span class="line"><span class="cl">            └── universal-recommender
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">549 directories, 0 files
+</span></span></code></pre></div><h2 id="updating">Updating</h2>
 <p>If the Python script encounters an existing repository, it tries to do an update by fetching the remote updates. It does NOT merge.</p>
 <p><strong>NOTE</strong></p>
 <p>This was also published on <a href="https://blog.pivotree.cloud/2021-02-17-mirroring-repos/">our cloud team blog</a></p>
@@ -368,7 +384,7 @@ H3|git@bitbucket.org:thinkwrap/headless-connector-contentful.git
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -386,13 +402,10 @@ H3|git@bitbucket.org:thinkwrap/headless-connector-contentful.git
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -403,7 +416,10 @@ H3|git@bitbucket.org:thinkwrap/headless-connector-contentful.git
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

@@ -17,14 +17,16 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Observed at QA environment. During automated shutdown sequence, the exception was thrown:
-$ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &amp;#34;main&amp;#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org." /><meta name="keywords" content="blog, Miro" />
+$ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:693) at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:686) at javax.naming.InitialContext.lookup(InitialContext.java:392) at org.jboss.Shutdown.main(Shutdown.java:219) Caused by: javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]] at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:335) at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1734) ... 4 more Caused by: javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused] at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:305) ... 5 more Caused by: java.net.ConnectException: Connection refused at java.net.PlainSocketImpl.socketConnect(Native Method) at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351) at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:211) at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200) at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366) at java.net.Socket.connect(Socket.java:529) at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:97) at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:82) at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:301) ... 5 more To watch the log: tail -f /var/log/atg/gdi-qa-com1.log The conflict of 1099 between Endeca and ATG was resolved according Fixing port conflict on 1099 between out-of-the-box Endeca and JBOSS - the actual port was 11199
+The environment variable for JBOSS instance were OK
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2015-04-11-jboss-shutdown/" />
@@ -35,31 +37,38 @@ $ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/b
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Fixing the shutdown problem with JBoss" />
-<meta property="og:description" content="Observed at QA environment. During automated shutdown sequence, the exception was thrown:
-$ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2015-04-11-jboss-shutdown/" />
-<meta property="article:published_time" content="2015-04-11T11:22:48+08:00" />
-<meta property="article:modified_time" content="2015-04-11T11:22:48+08:00" />
-<meta itemprop="name" content="Fixing the shutdown problem with JBoss">
-<meta itemprop="description" content="Observed at QA environment. During automated shutdown sequence, the exception was thrown:
-$ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org.">
-<meta itemprop="datePublished" content="2015-04-11T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2015-04-11T11:22:48+08:00" />
-<meta itemprop="wordCount" content="307">
+<meta property="og:url" content="https://miroadamy.com/posts/2015-04-11-jboss-shutdown/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Fixing the shutdown problem with JBoss">
+	<meta property="og:description" content="Observed at QA environment. During automated shutdown sequence, the exception was thrown:
+$ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:693) at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:686) at javax.naming.InitialContext.lookup(InitialContext.java:392) at org.jboss.Shutdown.main(Shutdown.java:219) Caused by: javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]] at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:335) at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1734) ... 4 more Caused by: javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused] at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:305) ... 5 more Caused by: java.net.ConnectException: Connection refused at java.net.PlainSocketImpl.socketConnect(Native Method) at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351) at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:211) at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200) at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366) at java.net.Socket.connect(Socket.java:529) at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:97) at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:82) at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:301) ... 5 more To watch the log: tail -f /var/log/atg/gdi-qa-com1.log The conflict of 1099 between Endeca and ATG was resolved according Fixing port conflict on 1099 between out-of-the-box Endeca and JBOSS - the actual port was 11199
+The environment variable for JBOSS instance were OK">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2015-04-11T11:22:48+08:00">
+		<meta property="article:modified_time" content="2015-04-11T11:22:48+08:00">
+		<meta property="article:tag" content="Java">
+		<meta property="article:tag" content="Jboss">
 
-
-
-<meta itemprop="keywords" content="java,jboss," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Fixing the shutdown problem with JBoss"/>
-<meta name="twitter:description" content="Observed at QA environment. During automated shutdown sequence, the exception was thrown:
-$ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org."/>
+	<meta itemprop="name" content="Fixing the shutdown problem with JBoss">
+	<meta itemprop="description" content="Observed at QA environment. During automated shutdown sequence, the exception was thrown:
+$ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:693) at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:686) at javax.naming.InitialContext.lookup(InitialContext.java:392) at org.jboss.Shutdown.main(Shutdown.java:219) Caused by: javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]] at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:335) at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1734) ... 4 more Caused by: javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused] at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:305) ... 5 more Caused by: java.net.ConnectException: Connection refused at java.net.PlainSocketImpl.socketConnect(Native Method) at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351) at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:211) at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200) at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366) at java.net.Socket.connect(Socket.java:529) at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:97) at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:82) at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:301) ... 5 more To watch the log: tail -f /var/log/atg/gdi-qa-com1.log The conflict of 1099 between Endeca and ATG was resolved according Fixing port conflict on 1099 between out-of-the-box Endeca and JBOSS - the actual port was 11199
+The environment variable for JBOSS instance were OK">
+	<meta itemprop="datePublished" content="2015-04-11T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2015-04-11T11:22:48+08:00">
+	<meta itemprop="wordCount" content="307">
+	<meta itemprop="keywords" content="Java,Jboss">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Fixing the shutdown problem with JBoss">
+	<meta name="twitter:description" content="Observed at QA environment. During automated shutdown sequence, the exception was thrown:
+$ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099 Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]] at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763) at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:693) at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:686) at javax.naming.InitialContext.lookup(InitialContext.java:392) at org.jboss.Shutdown.main(Shutdown.java:219) Caused by: javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]] at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:335) at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1734) ... 4 more Caused by: javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused] at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:305) ... 5 more Caused by: java.net.ConnectException: Connection refused at java.net.PlainSocketImpl.socketConnect(Native Method) at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351) at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:211) at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200) at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366) at java.net.Socket.connect(Socket.java:529) at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:97) at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:82) at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:301) ... 5 more To watch the log: tail -f /var/log/atg/gdi-qa-com1.log The conflict of 1099 between Endeca and ATG was resolved according Fixing port conflict on 1099 between out-of-the-box Endeca and JBOSS - the actual port was 11199
+The environment variable for JBOSS instance were OK">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -96,12 +105,21 @@ $ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/b
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -118,6 +136,7 @@ $ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/b
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -147,64 +166,64 @@ $ bin/gdi-qa-com1.sh stop JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/b
 </div>
     <div class="post-content">
       <p>Observed at QA environment. During automated shutdown sequence, the exception was thrown:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ bin/gdi-qa-com1.sh stop
-JBOSS_CMD_STOP = java -classpath /opt/jboss/jboss-as/bin/shutdown.jar:/opt/jboss/jboss-as/client/jnet.jar org.jboss.Shutdown --shutdown --user=admin --password=admin -s jnp://0.0.0.0:1099
-Exception in thread &#34;main&#34; javax.naming.CommunicationException: Could not obtain connection to any of these urls: 0.0.0.0:1099 [Root exception is javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]]
-    at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1763)
-    at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:693)
-    at org.jnp.interfaces.NamingContext.lookup(NamingContext.java:686)
-    at javax.naming.InitialContext.lookup(InitialContext.java:392)
-    at org.jboss.Shutdown.main(Shutdown.java:219)
-Caused by: javax.naming.CommunicationException: Failed to connect to server /0.0.0.0:1099 [Root exception is javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]]
-    at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:335)
-    at org.jnp.interfaces.NamingContext.checkRef(NamingContext.java:1734)
-    ... 4 more
-Caused by: javax.naming.ServiceUnavailableException: Failed to connect to server /0.0.0.0:1099 [Root exception is java.net.ConnectException: Connection refused]
-    at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:305)
-    ... 5 more
-Caused by: java.net.ConnectException: Connection refused
-    at java.net.PlainSocketImpl.socketConnect(Native Method)
-    at java.net.PlainSocketImpl.doConnect(PlainSocketImpl.java:351)
-    at java.net.PlainSocketImpl.connectToAddress(PlainSocketImpl.java:211)
-    at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:200)
-    at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:366)
-    at java.net.Socket.connect(Socket.java:529)
-    at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:97)
-    at org.jnp.interfaces.TimedSocketFactory.createSocket(TimedSocketFactory.java:82)
-    at org.jnp.interfaces.NamingContext.getServer(NamingContext.java:301)
-    ... 5 more
-To watch the log: tail -f /var/log/atg/gdi-qa-com1.log
-</code></pre></div><p>The conflict of 1099 between Endeca and ATG was resolved according <code>Fixing port conflict on 1099 between out-of-the-box Endeca and JBOSS</code> - the actual port was 11199</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">$</span> <span class="n">bin</span><span class="o">/</span><span class="n">gdi</span><span class="o">-</span><span class="n">qa</span><span class="o">-</span><span class="n">com1</span><span class="o">.</span><span class="n">sh</span> <span class="n">stop</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_CMD_STOP</span> <span class="o">=</span> <span class="n">java</span> <span class="o">-</span><span class="n">classpath</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">jboss</span><span class="o">/</span><span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">shutdown</span><span class="o">.</span><span class="n">jar</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">jboss</span><span class="o">/</span><span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="o">/</span><span class="n">client</span><span class="o">/</span><span class="n">jnet</span><span class="o">.</span><span class="n">jar</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">Shutdown</span> <span class="o">--</span><span class="n">shutdown</span> <span class="o">--</span><span class="n">user</span><span class="o">=</span><span class="n">admin</span> <span class="o">--</span><span class="n">password</span><span class="o">=</span><span class="n">admin</span> <span class="o">-</span><span class="n">s</span> <span class="n">jnp</span><span class="p">:</span><span class="o">//</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span>
+</span></span><span class="line"><span class="cl"><span class="n">Exception</span> <span class="ow">in</span> <span class="n">thread</span> <span class="s2">&#34;main&#34;</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">CommunicationException</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">obtain</span> <span class="n">connection</span> <span class="n">to</span> <span class="n">any</span> <span class="n">of</span> <span class="n">these</span> <span class="n">urls</span><span class="p">:</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span> <span class="p">[</span><span class="n">Root</span> <span class="n">exception</span> <span class="n">is</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">CommunicationException</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">connect</span> <span class="n">to</span> <span class="n">server</span> <span class="o">/</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span> <span class="p">[</span><span class="n">Root</span> <span class="n">exception</span> <span class="n">is</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">ServiceUnavailableException</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">connect</span> <span class="n">to</span> <span class="n">server</span> <span class="o">/</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span> <span class="p">[</span><span class="n">Root</span> <span class="n">exception</span> <span class="n">is</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">ConnectException</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">refused</span><span class="p">]]]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">checkRef</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1763</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">693</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">686</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">InitialContext</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">InitialContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">392</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">Shutdown</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">Shutdown</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">219</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Caused</span> <span class="n">by</span><span class="p">:</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">CommunicationException</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">connect</span> <span class="n">to</span> <span class="n">server</span> <span class="o">/</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span> <span class="p">[</span><span class="n">Root</span> <span class="n">exception</span> <span class="n">is</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">ServiceUnavailableException</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">connect</span> <span class="n">to</span> <span class="n">server</span> <span class="o">/</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span> <span class="p">[</span><span class="n">Root</span> <span class="n">exception</span> <span class="n">is</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">ConnectException</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">refused</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">getServer</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">335</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">checkRef</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1734</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span> <span class="mi">4</span> <span class="n">more</span>
+</span></span><span class="line"><span class="cl"><span class="n">Caused</span> <span class="n">by</span><span class="p">:</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">ServiceUnavailableException</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">connect</span> <span class="n">to</span> <span class="n">server</span> <span class="o">/</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span> <span class="p">[</span><span class="n">Root</span> <span class="n">exception</span> <span class="n">is</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">ConnectException</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">refused</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">getServer</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">305</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span> <span class="mi">5</span> <span class="n">more</span>
+</span></span><span class="line"><span class="cl"><span class="n">Caused</span> <span class="n">by</span><span class="p">:</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">ConnectException</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">refused</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">socketConnect</span><span class="p">(</span><span class="n">Native</span> <span class="n">Method</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">doConnect</span><span class="p">(</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">351</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">connectToAddress</span><span class="p">(</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">211</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">200</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">SocksSocketImpl</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">SocksSocketImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">366</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">Socket</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">Socket</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">529</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">TimedSocketFactory</span><span class="o">.</span><span class="n">createSocket</span><span class="p">(</span><span class="n">TimedSocketFactory</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">97</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">TimedSocketFactory</span><span class="o">.</span><span class="n">createSocket</span><span class="p">(</span><span class="n">TimedSocketFactory</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">82</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">getServer</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">301</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span> <span class="mi">5</span> <span class="n">more</span>
+</span></span><span class="line"><span class="cl"><span class="n">To</span> <span class="n">watch</span> <span class="n">the</span> <span class="nb">log</span><span class="p">:</span> <span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="nb">log</span><span class="o">/</span><span class="n">atg</span><span class="o">/</span><span class="n">gdi</span><span class="o">-</span><span class="n">qa</span><span class="o">-</span><span class="n">com1</span><span class="o">.</span><span class="n">log</span>
+</span></span></code></pre></div><p>The conflict of 1099 between Endeca and ATG was resolved according <code>Fixing port conflict on 1099 between out-of-the-box Endeca and JBOSS</code> - the actual port was 11199</p>
 <p><img src="/images/jboss-fix-1.png" alt=""></p>
 <p>The environment variable for JBOSS instance were OK</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[jboss@gdi-app-l1 ~]$ env | grep JBOSS
-JBOSS_COM2_CONSOLE=/var/log/atg/gdi-qa-com2.log
-JBOSS_LDR_CONF=gdi-qa-ldr
-JBOSS_HOME=/opt/jboss/jboss-as
-JBOSS_COM2_HOST=0.0.0.0
-JBOSS_STG_CONSOLE=/var/log/atg/gdi-qa-stg.log
-JBOSS_COM1_HOST=0.0.0.0
-JBOSS_COM2_ADMINPORT=1199
-JBOSS_COM1_CONSOLE=/var/log/atg/gdi-qa-com1.log
-JBOSS_STG_CONF=gdi-qa-stg
-JBOSS_STG_ADMINPORT=1299
-JBOSS_STG_HOST=0.0.0.0
-JBOSS_ADMINPASS=admin
-JBOSS_LDR_CONSOLE=/var/log/atg/gdi-qa-ldr.log
-JBOSS_USER=RUNASIS
-JBOSS_LDR_ADMINPORT=1399
-JBOSS_LDR_HOST=0.0.0.0
-JBOSS_COM1_ADMINPORT=1099
-JBOSS_COM1_CONF=gdi-qa-com1
-JBOSS_COM2_CONF=gdi-qa-com2
-</code></pre></div><p>but these are used only for shutdown.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="p">[</span><span class="n">jboss</span><span class="err">@</span><span class="n">gdi</span><span class="o">-</span><span class="n">app</span><span class="o">-</span><span class="n">l1</span> <span class="o">~</span><span class="p">]</span><span class="o">$</span> <span class="n">env</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">JBOSS</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_COM2_CONSOLE</span><span class="o">=/</span><span class="k">var</span><span class="o">/</span><span class="nb">log</span><span class="o">/</span><span class="n">atg</span><span class="o">/</span><span class="n">gdi</span><span class="o">-</span><span class="n">qa</span><span class="o">-</span><span class="n">com2</span><span class="o">.</span><span class="n">log</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_LDR_CONF</span><span class="o">=</span><span class="n">gdi</span><span class="o">-</span><span class="n">qa</span><span class="o">-</span><span class="n">ldr</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_HOME</span><span class="o">=/</span><span class="n">opt</span><span class="o">/</span><span class="n">jboss</span><span class="o">/</span><span class="n">jboss</span><span class="o">-</span><span class="n">as</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_COM2_HOST</span><span class="o">=</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_STG_CONSOLE</span><span class="o">=/</span><span class="k">var</span><span class="o">/</span><span class="nb">log</span><span class="o">/</span><span class="n">atg</span><span class="o">/</span><span class="n">gdi</span><span class="o">-</span><span class="n">qa</span><span class="o">-</span><span class="n">stg</span><span class="o">.</span><span class="n">log</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_COM1_HOST</span><span class="o">=</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_COM2_ADMINPORT</span><span class="o">=</span><span class="mi">1199</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_COM1_CONSOLE</span><span class="o">=/</span><span class="k">var</span><span class="o">/</span><span class="nb">log</span><span class="o">/</span><span class="n">atg</span><span class="o">/</span><span class="n">gdi</span><span class="o">-</span><span class="n">qa</span><span class="o">-</span><span class="n">com1</span><span class="o">.</span><span class="n">log</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_STG_CONF</span><span class="o">=</span><span class="n">gdi</span><span class="o">-</span><span class="n">qa</span><span class="o">-</span><span class="n">stg</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_STG_ADMINPORT</span><span class="o">=</span><span class="mi">1299</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_STG_HOST</span><span class="o">=</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_ADMINPASS</span><span class="o">=</span><span class="n">admin</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_LDR_CONSOLE</span><span class="o">=/</span><span class="k">var</span><span class="o">/</span><span class="nb">log</span><span class="o">/</span><span class="n">atg</span><span class="o">/</span><span class="n">gdi</span><span class="o">-</span><span class="n">qa</span><span class="o">-</span><span class="n">ldr</span><span class="o">.</span><span class="n">log</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_USER</span><span class="o">=</span><span class="n">RUNASIS</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_LDR_ADMINPORT</span><span class="o">=</span><span class="mi">1399</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_LDR_HOST</span><span class="o">=</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_COM1_ADMINPORT</span><span class="o">=</span><span class="mi">1099</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_COM1_CONF</span><span class="o">=</span><span class="n">gdi</span><span class="o">-</span><span class="n">qa</span><span class="o">-</span><span class="n">com1</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_COM2_CONF</span><span class="o">=</span><span class="n">gdi</span><span class="o">-</span><span class="n">qa</span><span class="o">-</span><span class="n">com2</span>
+</span></span></code></pre></div><p>but these are used only for shutdown.</p>
 <p>The actual port used for communication was:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[jboss@gdi-app-l1 gdi-qa-com1]$ sudo netstat -tulpn | grep 27745 | grep 1099
-tcp        0      0 0.0.0.0:11099               0.0.0.0:*                   LISTEN      27745/java
-[jboss@gdi-app-l1 gdi-qa-com1]$ sudo netstat -tulpn | grep 27745 | grep 109
-tcp        0      0 0.0.0.0:11098               0.0.0.0:*                   LISTEN      27745/java
-tcp        0      0 0.0.0.0:11099               0.0.0.0:*                   LISTEN      27745/java
-</code></pre></div><p>This port is set in JBOSS file</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[jboss@gdi-app-l1 gdi-qa-com1]$ sudo netstat -tulpn | grep 27745 | grep 1099
+</span></span><span class="line"><span class="cl">tcp        0      0 0.0.0.0:11099               0.0.0.0:*                   LISTEN      27745/java
+</span></span><span class="line"><span class="cl">[jboss@gdi-app-l1 gdi-qa-com1]$ sudo netstat -tulpn | grep 27745 | grep 109
+</span></span><span class="line"><span class="cl">tcp        0      0 0.0.0.0:11098               0.0.0.0:*                   LISTEN      27745/java
+</span></span><span class="line"><span class="cl">tcp        0      0 0.0.0.0:11099               0.0.0.0:*                   LISTEN      27745/java
+</span></span></code></pre></div><p>This port is set in JBOSS file</p>
 <blockquote>
 <p>[jboss@gdi-app-l1 gdi-qa-com1]$ vim ./conf/bindingservice.beans/META-INF/bindings-jboss-beans.xml</p>
 </blockquote>
@@ -271,7 +290,7 @@ tcp        0      0 0.0.0.0:11099               0.0.0.0:*                   LIST
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -289,13 +308,10 @@ tcp        0      0 0.0.0.0:11099               0.0.0.0:*                   LIST
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -306,7 +322,10 @@ tcp        0      0 0.0.0.0:11099               0.0.0.0:*                   LIST
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

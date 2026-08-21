@@ -19,14 +19,15 @@
 <meta name="author" content="Miro Adamy" /><meta name="description" content="This is mainly for Linux and Mac as they do not have good client.
 It requires relatively modern Perl - 5.1x should work. I have
 ➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail) Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.0.pl
-Make it executable and put it on the path:" /><meta name="keywords" content="blog, Miro" />
+Make it executable and put it on the path:
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2015-07-08-keepass-cli/" />
@@ -37,37 +38,42 @@ Make it executable and put it on the path:" /><meta name="keywords" content="blo
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Accessing Keepass information from command line" />
-<meta property="og:description" content="This is mainly for Linux and Mac as they do not have good client.
-It requires relatively modern Perl - 5.1x should work. I have
-➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail) Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.0.pl
-Make it executable and put it on the path:" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2015-07-08-keepass-cli/" />
-<meta property="article:published_time" content="2015-07-08T11:22:48+08:00" />
-<meta property="article:modified_time" content="2015-07-08T11:22:48+08:00" />
-<meta itemprop="name" content="Accessing Keepass information from command line">
-<meta itemprop="description" content="This is mainly for Linux and Mac as they do not have good client.
+<meta property="og:url" content="https://miroadamy.com/posts/2015-07-08-keepass-cli/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Accessing Keepass information from command line">
+	<meta property="og:description" content="This is mainly for Linux and Mac as they do not have good client.
 It requires relatively modern Perl - 5.1x should work. I have
 ➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail) Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.0.pl
 Make it executable and put it on the path:">
-<meta itemprop="datePublished" content="2015-07-08T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2015-07-08T11:22:48+08:00" />
-<meta itemprop="wordCount" content="592">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2015-07-08T11:22:48+08:00">
+		<meta property="article:modified_time" content="2015-07-08T11:22:48+08:00">
+		<meta property="article:tag" content="Keepass">
+		<meta property="article:tag" content="Commandline">
+		<meta property="article:tag" content="Perl">
 
-
-
-<meta itemprop="keywords" content="keepass,commandline,perl," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Accessing Keepass information from command line"/>
-<meta name="twitter:description" content="This is mainly for Linux and Mac as they do not have good client.
+	<meta itemprop="name" content="Accessing Keepass information from command line">
+	<meta itemprop="description" content="This is mainly for Linux and Mac as they do not have good client.
 It requires relatively modern Perl - 5.1x should work. I have
 ➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail) Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.0.pl
-Make it executable and put it on the path:"/>
+Make it executable and put it on the path:">
+	<meta itemprop="datePublished" content="2015-07-08T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2015-07-08T11:22:48+08:00">
+	<meta itemprop="wordCount" content="592">
+	<meta itemprop="keywords" content="Keepass,Commandline,Perl">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Accessing Keepass information from command line">
+	<meta name="twitter:description" content="This is mainly for Linux and Mac as they do not have good client.
+It requires relatively modern Perl - 5.1x should work. I have
+➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail) Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.0.pl
+Make it executable and put it on the path:">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -104,12 +110,21 @@ Make it executable and put it on the path:"/>
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -126,6 +141,7 @@ Make it executable and put it on the path:"/>
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -156,88 +172,88 @@ Make it executable and put it on the path:"/>
     <div class="post-content">
       <p>This is mainly for Linux and Mac as they do not have good client.</p>
 <p>It requires relatively modern Perl - 5.1x should work. I have</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  ~  perl --version
-This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level
-(with 2 registered patches, see perl -V for more detail)
-</code></pre></div><p>Get the kpcli distribution
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  ~  perl --version
+</span></span><span class="line"><span class="cl">This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level
+</span></span><span class="line"><span class="cl">(with 2 registered patches, see perl -V for more detail)
+</span></span></code></pre></div><p>Get the kpcli distribution
 Download from Sourceforge - <a href="http://sourceforge.net/projects/kpcli/">http://sourceforge.net/projects/kpcli/</a> or get the attached script kpcli-3.0.pl</p>
 <p>Make it executable and put it on the path:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">mv ~/Downloads/kpcli-3.0.pl ~/bin
-chmod +x ~/bin/kpcli-3.0.pl
-</code></pre></div><p>It will not work out of the box unless you install few Perl modules.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">mv</span> <span class="o">~/</span><span class="n">Downloads</span><span class="o">/</span><span class="n">kpcli</span><span class="o">-</span><span class="mf">3.0</span><span class="o">.</span><span class="n">pl</span> <span class="o">~/</span><span class="n">bin</span>
+</span></span><span class="line"><span class="cl"><span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="o">~/</span><span class="n">bin</span><span class="o">/</span><span class="n">kpcli</span><span class="o">-</span><span class="mf">3.0</span><span class="o">.</span><span class="n">pl</span>
+</span></span></code></pre></div><p>It will not work out of the box unless you install few Perl modules.</p>
 <p>Easiest way is to use cpanm, which is installed using cpan</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Run CPAN and let it configure itself if run for the first time
-cpan
-  
-# install cpanm using cpan
-sudo cpan App::cpanminus
-</code></pre></div><p>Now we can use cpanm to proceed</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo cpanm Crypt::Rijndael
-sudo cpanm Sort::Naturally
-sudo cpanm Term::ShellUI
-sudo cpanm File::KeePass
- 
- 
-# I had issues with Readline::Gnu
-sudo cpanm Term::ReadLine::Gnu
-# so I installed Perl5 version instead
-sudo cpanm Term::ReadLine::Perl5
-  
-sudo cpanm Clipboard
-sudo cpanm Capture:Tiny
-sudo cpanm Capture::Tiny
-  
-~/bin/kpcli-3.0.pl --help
-</code></pre></div><p>Now it can be run and open file. After opening you can navigate in the password file as in file system (try pwd, cd, ls) and copy password to clipboard (try h)</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  Sites git:(master) ✗ ~/bin/kpcli-3.0.pl --kdb ~/PASSWORDS/PAL.kdbx
-Please provide the master password: *************************
-KeePass CLI (kpcli-3.0) v3.0 is ready for operation.
-Type &#39;help&#39; for a description of available commands.
-Type &#39;help &lt;command&gt;&#39; for details on individual commands.
-* NOTE: You are using Term::ReadLine::Perl5.
-  Term::ReadLine::Gnu will provide better functionality.
-kpcli-3.0:/&gt; ls
-=== Groups ===
-PAL-Keypass/
-kpcli-3.0:/&gt; h
-  attach -- Manage attachments: attach &lt;path to entry|entry number&gt;
-      cd -- Change directory (path to a group)
-      cl -- Change directory and list entries (cd+ls)
-   clone -- Clone an entry: clone &lt;path to entry&gt; &lt;path to new entry&gt;
-   close -- Close the currently opened database
-     cls -- Clear screen (&#34;clear&#34; command also works)
-    copy -- Copy an entry: copy &lt;path to entry&gt; &lt;path to new entry&gt;
-    edit -- Edit an entry: edit &lt;path to entry|entry number&gt;
-  export -- Export entries to a new KeePass DB (export &lt;file.kdb&gt; [&lt;file.key&gt;])
-    find -- Finds entries by Title
-    help -- Print helpful information
- history -- Prints the command history
-   icons -- Change group or entry icons in the database
-  import -- Import a password database (import &lt;file&gt; &lt;path&gt; [&lt;file.key&gt;])
-      ls -- Lists items in the pwd or specified paths (&#34;dir&#34; also works)
-   mkdir -- Create a new group (mkdir &lt;group_name&gt;)
-      mv -- Move an item: mv &lt;path to a group|or entries&gt; &lt;path to group&gt;
-     new -- Create a new entry: new &lt;optional path&amp;|title&gt;
-    open -- Open a KeePass database file (open &lt;file.kdb&gt; [&lt;file.key&gt;])
-    pwck -- Check password quality: pwck &lt;entry|group&gt;
-     pwd -- Print the current working directory
-    quit -- Quit this program (EOF and exit also work)
-  rename -- Rename a group: rename &lt;path to group&gt;
-      rm -- Remove an entry: rm &lt;path to entry|entry number&gt;
-   rmdir -- Delete a group (rmdir &lt;group_name&gt;)
-    save -- Save the database to disk
-  saveas -- Save to a specific filename (saveas &lt;file.kdb&gt; [&lt;file.key&gt;])
-    show -- Show an entry: show [-f] [-a] &lt;entry path|entry number&gt;
-   stats -- Prints statistics about the open KeePass file
-     ver -- Print the version of this program
-    vers -- Same as &#34;ver -v&#34;
-      xp -- Copy password to clipboard: xp &lt;entry path|number&gt;
-      xu -- Copy username to clipboard: xu &lt;entry path|number&gt;
-      xw -- Copy URL (www) to clipboard: xw &lt;entry path|number&gt;
-      xx -- Clear the clipboard: xx
-Type &#34;help &lt;command&gt;&#34; for more detailed help on a command.
-kpcli-3.0:/&gt;
-</code></pre></div><p>Enjoy</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Run CPAN and let it configure itself if run for the first time
+</span></span><span class="line"><span class="cl">cpan
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"># install cpanm using cpan
+</span></span><span class="line"><span class="cl">sudo cpan App::cpanminus
+</span></span></code></pre></div><p>Now we can use cpanm to proceed</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo cpanm Crypt::Rijndael
+</span></span><span class="line"><span class="cl">sudo cpanm Sort::Naturally
+</span></span><span class="line"><span class="cl">sudo cpanm Term::ShellUI
+</span></span><span class="line"><span class="cl">sudo cpanm File::KeePass
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># I had issues with Readline::Gnu
+</span></span><span class="line"><span class="cl">sudo cpanm Term::ReadLine::Gnu
+</span></span><span class="line"><span class="cl"># so I installed Perl5 version instead
+</span></span><span class="line"><span class="cl">sudo cpanm Term::ReadLine::Perl5
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">sudo cpanm Clipboard
+</span></span><span class="line"><span class="cl">sudo cpanm Capture:Tiny
+</span></span><span class="line"><span class="cl">sudo cpanm Capture::Tiny
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">~/bin/kpcli-3.0.pl --help
+</span></span></code></pre></div><p>Now it can be run and open file. After opening you can navigate in the password file as in file system (try pwd, cd, ls) and copy password to clipboard (try h)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">Sites</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="err">✗</span> <span class="o">~/</span><span class="n">bin</span><span class="o">/</span><span class="n">kpcli</span><span class="o">-</span><span class="mf">3.0</span><span class="o">.</span><span class="n">pl</span> <span class="o">--</span><span class="n">kdb</span> <span class="o">~/</span><span class="n">PASSWORDS</span><span class="o">/</span><span class="n">PAL</span><span class="o">.</span><span class="n">kdbx</span>
+</span></span><span class="line"><span class="cl"><span class="n">Please</span> <span class="n">provide</span> <span class="n">the</span> <span class="n">master</span> <span class="n">password</span><span class="p">:</span> <span class="o">*************************</span>
+</span></span><span class="line"><span class="cl"><span class="n">KeePass</span> <span class="n">CLI</span> <span class="p">(</span><span class="n">kpcli</span><span class="o">-</span><span class="mf">3.0</span><span class="p">)</span> <span class="n">v3</span><span class="o">.</span><span class="mi">0</span> <span class="n">is</span> <span class="n">ready</span> <span class="k">for</span> <span class="n">operation</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">Type</span> <span class="s1">&#39;help&#39;</span> <span class="k">for</span> <span class="n">a</span> <span class="n">description</span> <span class="n">of</span> <span class="n">available</span> <span class="n">commands</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">Type</span> <span class="s1">&#39;help &lt;command&gt;&#39;</span> <span class="k">for</span> <span class="n">details</span> <span class="n">on</span> <span class="n">individual</span> <span class="n">commands</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="o">*</span> <span class="n">NOTE</span><span class="p">:</span> <span class="n">You</span> <span class="n">are</span> <span class="n">using</span> <span class="n">Term</span><span class="p">::</span><span class="n">ReadLine</span><span class="p">::</span><span class="n">Perl5</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">  <span class="n">Term</span><span class="p">::</span><span class="n">ReadLine</span><span class="p">::</span><span class="n">Gnu</span> <span class="n">will</span> <span class="n">provide</span> <span class="n">better</span> <span class="n">functionality</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">kpcli</span><span class="o">-</span><span class="mf">3.0</span><span class="p">:</span><span class="o">/&gt;</span> <span class="n">ls</span>
+</span></span><span class="line"><span class="cl"><span class="o">===</span> <span class="n">Groups</span> <span class="o">===</span>
+</span></span><span class="line"><span class="cl"><span class="n">PAL</span><span class="o">-</span><span class="n">Keypass</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="n">kpcli</span><span class="o">-</span><span class="mf">3.0</span><span class="p">:</span><span class="o">/&gt;</span> <span class="n">h</span>
+</span></span><span class="line"><span class="cl">  <span class="n">attach</span> <span class="o">--</span> <span class="n">Manage</span> <span class="n">attachments</span><span class="p">:</span> <span class="n">attach</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">entry</span><span class="o">|</span><span class="n">entry</span> <span class="n">number</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">cd</span> <span class="o">--</span> <span class="n">Change</span> <span class="n">directory</span> <span class="p">(</span><span class="n">path</span> <span class="n">to</span> <span class="n">a</span> <span class="n">group</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">cl</span> <span class="o">--</span> <span class="n">Change</span> <span class="n">directory</span> <span class="ow">and</span> <span class="n">list</span> <span class="n">entries</span> <span class="p">(</span><span class="n">cd</span><span class="o">+</span><span class="n">ls</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">clone</span> <span class="o">--</span> <span class="n">Clone</span> <span class="n">an</span> <span class="n">entry</span><span class="p">:</span> <span class="n">clone</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">entry</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">new</span> <span class="n">entry</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">close</span> <span class="o">--</span> <span class="n">Close</span> <span class="n">the</span> <span class="n">currently</span> <span class="n">opened</span> <span class="n">database</span>
+</span></span><span class="line"><span class="cl">     <span class="n">cls</span> <span class="o">--</span> <span class="n">Clear</span> <span class="n">screen</span> <span class="p">(</span><span class="s2">&#34;clear&#34;</span> <span class="n">command</span> <span class="n">also</span> <span class="n">works</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">copy</span> <span class="o">--</span> <span class="n">Copy</span> <span class="n">an</span> <span class="n">entry</span><span class="p">:</span> <span class="n">copy</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">entry</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">new</span> <span class="n">entry</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edit</span> <span class="o">--</span> <span class="n">Edit</span> <span class="n">an</span> <span class="n">entry</span><span class="p">:</span> <span class="n">edit</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">entry</span><span class="o">|</span><span class="n">entry</span> <span class="n">number</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">export</span> <span class="o">--</span> <span class="n">Export</span> <span class="n">entries</span> <span class="n">to</span> <span class="n">a</span> <span class="n">new</span> <span class="n">KeePass</span> <span class="n">DB</span> <span class="p">(</span><span class="k">export</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">.</span><span class="n">kdb</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">file</span><span class="o">.</span><span class="n">key</span><span class="o">&gt;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">find</span> <span class="o">--</span> <span class="n">Finds</span> <span class="n">entries</span> <span class="n">by</span> <span class="n">Title</span>
+</span></span><span class="line"><span class="cl">    <span class="n">help</span> <span class="o">--</span> <span class="n">Print</span> <span class="n">helpful</span> <span class="n">information</span>
+</span></span><span class="line"><span class="cl"> <span class="n">history</span> <span class="o">--</span> <span class="n">Prints</span> <span class="n">the</span> <span class="n">command</span> <span class="n">history</span>
+</span></span><span class="line"><span class="cl">   <span class="n">icons</span> <span class="o">--</span> <span class="n">Change</span> <span class="n">group</span> <span class="ow">or</span> <span class="n">entry</span> <span class="n">icons</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">database</span>
+</span></span><span class="line"><span class="cl">  <span class="n">import</span> <span class="o">--</span> <span class="n">Import</span> <span class="n">a</span> <span class="n">password</span> <span class="n">database</span> <span class="p">(</span><span class="n">import</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">file</span><span class="o">.</span><span class="n">key</span><span class="o">&gt;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">      <span class="n">ls</span> <span class="o">--</span> <span class="n">Lists</span> <span class="n">items</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">pwd</span> <span class="ow">or</span> <span class="n">specified</span> <span class="n">paths</span> <span class="p">(</span><span class="s2">&#34;dir&#34;</span> <span class="n">also</span> <span class="n">works</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">   <span class="n">mkdir</span> <span class="o">--</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">group</span> <span class="p">(</span><span class="n">mkdir</span> <span class="o">&lt;</span><span class="n">group_name</span><span class="o">&gt;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="n">mv</span> <span class="o">--</span> <span class="n">Move</span> <span class="n">an</span> <span class="n">item</span><span class="p">:</span> <span class="n">mv</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">a</span> <span class="n">group</span><span class="o">|</span><span class="ow">or</span> <span class="n">entries</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">group</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="n">new</span> <span class="o">--</span> <span class="n">Create</span> <span class="n">a</span> <span class="n">new</span> <span class="n">entry</span><span class="p">:</span> <span class="n">new</span> <span class="o">&lt;</span><span class="n">optional</span> <span class="n">path</span><span class="o">&amp;|</span><span class="n">title</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">open</span> <span class="o">--</span> <span class="n">Open</span> <span class="n">a</span> <span class="n">KeePass</span> <span class="n">database</span> <span class="n">file</span> <span class="p">(</span><span class="n">open</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">.</span><span class="n">kdb</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">file</span><span class="o">.</span><span class="n">key</span><span class="o">&gt;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">pwck</span> <span class="o">--</span> <span class="n">Check</span> <span class="n">password</span> <span class="n">quality</span><span class="p">:</span> <span class="n">pwck</span> <span class="o">&lt;</span><span class="n">entry</span><span class="o">|</span><span class="n">group</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="n">pwd</span> <span class="o">--</span> <span class="n">Print</span> <span class="n">the</span> <span class="n">current</span> <span class="n">working</span> <span class="n">directory</span>
+</span></span><span class="line"><span class="cl">    <span class="n">quit</span> <span class="o">--</span> <span class="n">Quit</span> <span class="n">this</span> <span class="n">program</span> <span class="p">(</span><span class="n">EOF</span> <span class="ow">and</span> <span class="n">exit</span> <span class="n">also</span> <span class="n">work</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="n">rename</span> <span class="o">--</span> <span class="n">Rename</span> <span class="n">a</span> <span class="n">group</span><span class="p">:</span> <span class="n">rename</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">group</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">rm</span> <span class="o">--</span> <span class="n">Remove</span> <span class="n">an</span> <span class="n">entry</span><span class="p">:</span> <span class="n">rm</span> <span class="o">&lt;</span><span class="n">path</span> <span class="n">to</span> <span class="n">entry</span><span class="o">|</span><span class="n">entry</span> <span class="n">number</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">rmdir</span> <span class="o">--</span> <span class="n">Delete</span> <span class="n">a</span> <span class="n">group</span> <span class="p">(</span><span class="n">rmdir</span> <span class="o">&lt;</span><span class="n">group_name</span><span class="o">&gt;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">save</span> <span class="o">--</span> <span class="n">Save</span> <span class="n">the</span> <span class="n">database</span> <span class="n">to</span> <span class="n">disk</span>
+</span></span><span class="line"><span class="cl">  <span class="n">saveas</span> <span class="o">--</span> <span class="n">Save</span> <span class="n">to</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">filename</span> <span class="p">(</span><span class="n">saveas</span> <span class="o">&lt;</span><span class="n">file</span><span class="o">.</span><span class="n">kdb</span><span class="o">&gt;</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">file</span><span class="o">.</span><span class="n">key</span><span class="o">&gt;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl">    <span class="n">show</span> <span class="o">--</span> <span class="n">Show</span> <span class="n">an</span> <span class="n">entry</span><span class="p">:</span> <span class="n">show</span> <span class="p">[</span><span class="o">-</span><span class="n">f</span><span class="p">]</span> <span class="p">[</span><span class="o">-</span><span class="n">a</span><span class="p">]</span> <span class="o">&lt;</span><span class="n">entry</span> <span class="n">path</span><span class="o">|</span><span class="n">entry</span> <span class="n">number</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="n">stats</span> <span class="o">--</span> <span class="n">Prints</span> <span class="n">statistics</span> <span class="n">about</span> <span class="n">the</span> <span class="n">open</span> <span class="n">KeePass</span> <span class="n">file</span>
+</span></span><span class="line"><span class="cl">     <span class="n">ver</span> <span class="o">--</span> <span class="n">Print</span> <span class="n">the</span> <span class="n">version</span> <span class="n">of</span> <span class="n">this</span> <span class="n">program</span>
+</span></span><span class="line"><span class="cl">    <span class="n">vers</span> <span class="o">--</span> <span class="n">Same</span> <span class="n">as</span> <span class="s2">&#34;ver -v&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">xp</span> <span class="o">--</span> <span class="n">Copy</span> <span class="n">password</span> <span class="n">to</span> <span class="n">clipboard</span><span class="p">:</span> <span class="n">xp</span> <span class="o">&lt;</span><span class="n">entry</span> <span class="n">path</span><span class="o">|</span><span class="n">number</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">xu</span> <span class="o">--</span> <span class="n">Copy</span> <span class="n">username</span> <span class="n">to</span> <span class="n">clipboard</span><span class="p">:</span> <span class="n">xu</span> <span class="o">&lt;</span><span class="n">entry</span> <span class="n">path</span><span class="o">|</span><span class="n">number</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">xw</span> <span class="o">--</span> <span class="n">Copy</span> <span class="n">URL</span> <span class="p">(</span><span class="n">www</span><span class="p">)</span> <span class="n">to</span> <span class="n">clipboard</span><span class="p">:</span> <span class="n">xw</span> <span class="o">&lt;</span><span class="n">entry</span> <span class="n">path</span><span class="o">|</span><span class="n">number</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">xx</span> <span class="o">--</span> <span class="n">Clear</span> <span class="n">the</span> <span class="n">clipboard</span><span class="p">:</span> <span class="n">xx</span>
+</span></span><span class="line"><span class="cl"><span class="n">Type</span> <span class="s2">&#34;help &lt;command&gt;&#34;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">detailed</span> <span class="n">help</span> <span class="n">on</span> <span class="n">a</span> <span class="n">command</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">kpcli</span><span class="o">-</span><span class="mf">3.0</span><span class="p">:</span><span class="o">/&gt;</span>
+</span></span></code></pre></div><p>Enjoy</p>
 
     </div>
 
@@ -300,7 +316,7 @@ kpcli-3.0:/&gt;
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -318,13 +334,10 @@ kpcli-3.0:/&gt;
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -335,7 +348,10 @@ kpcli-3.0:/&gt;
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

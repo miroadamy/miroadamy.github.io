@@ -17,14 +17,15 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="at least as the programming language languages are concerned. One of the things that will be presented on the MIX07 is Dynamic Language Runtime, a new platform suitable to host high level, dynamic languages such as Python and Ruby. For Python, there is already pretty decent .NET implementation - namely IronPython. What is coming now is IronPython 2.0 based on the DLR as well as - yesss - IronRuby.
-It is great that this is happening." /><meta name="keywords" content="blog, Miro" />
+It is great that this is happening. In Java world, JRuby is very close to being full implementation of the language. The speed of the JRuby is still not quite in the proximity of the C implementation, but the large selling point of JRuby is its capability of deploying Ruby application (or even a Rails application) inside Tomcat or any other Java Web container. This removes largest obstacle of using Ruby in enterprise environment - namely being &#34;new&#34; and not approved platform. When the .NET runtime will be able to host Ruby code, acceptance in enterprise space will be even higher.
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2007-05-01-microsoft-is-getting-more-dynamic/" />
@@ -35,31 +36,36 @@ It is great that this is happening." /><meta name="keywords" content="blog, Miro
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Microsoft is getting more dynamic" />
-<meta property="og:description" content="at least as the programming language languages are concerned. One of the things that will be presented on the MIX07 is Dynamic Language Runtime, a new platform suitable to host high level, dynamic languages such as Python and Ruby. For Python, there is already pretty decent .NET implementation - namely IronPython. What is coming now is IronPython 2.0 based on the DLR as well as - yesss - IronRuby.
-It is great that this is happening." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2007-05-01-microsoft-is-getting-more-dynamic/" />
-<meta property="article:published_time" content="2007-05-01T22:08:12-04:00" />
-<meta property="article:modified_time" content="2007-05-01T22:08:12-04:00" />
-<meta itemprop="name" content="Microsoft is getting more dynamic">
-<meta itemprop="description" content="at least as the programming language languages are concerned. One of the things that will be presented on the MIX07 is Dynamic Language Runtime, a new platform suitable to host high level, dynamic languages such as Python and Ruby. For Python, there is already pretty decent .NET implementation - namely IronPython. What is coming now is IronPython 2.0 based on the DLR as well as - yesss - IronRuby.
-It is great that this is happening.">
-<meta itemprop="datePublished" content="2007-05-01T22:08:12-04:00" />
-<meta itemprop="dateModified" content="2007-05-01T22:08:12-04:00" />
-<meta itemprop="wordCount" content="279">
+<meta property="og:url" content="https://miroadamy.com/posts/2007-05-01-microsoft-is-getting-more-dynamic/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Microsoft is getting more dynamic">
+	<meta property="og:description" content="at least as the programming language languages are concerned. One of the things that will be presented on the MIX07 is Dynamic Language Runtime, a new platform suitable to host high level, dynamic languages such as Python and Ruby. For Python, there is already pretty decent .NET implementation - namely IronPython. What is coming now is IronPython 2.0 based on the DLR as well as - yesss - IronRuby.
+It is great that this is happening. In Java world, JRuby is very close to being full implementation of the language. The speed of the JRuby is still not quite in the proximity of the C implementation, but the large selling point of JRuby is its capability of deploying Ruby application (or even a Rails application) inside Tomcat or any other Java Web container. This removes largest obstacle of using Ruby in enterprise environment - namely being &#34;new&#34; and not approved platform. When the .NET runtime will be able to host Ruby code, acceptance in enterprise space will be even higher.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2007-05-01T22:08:12-04:00">
+		<meta property="article:modified_time" content="2007-05-01T22:08:12-04:00">
+		<meta property="article:tag" content="Ruby">
+		<meta property="article:tag" content="Microsoft">
+		<meta property="article:tag" content="Dot-Net">
 
-
-
-<meta itemprop="keywords" content="ruby,microsoft,dot-net," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Microsoft is getting more dynamic"/>
-<meta name="twitter:description" content="at least as the programming language languages are concerned. One of the things that will be presented on the MIX07 is Dynamic Language Runtime, a new platform suitable to host high level, dynamic languages such as Python and Ruby. For Python, there is already pretty decent .NET implementation - namely IronPython. What is coming now is IronPython 2.0 based on the DLR as well as - yesss - IronRuby.
-It is great that this is happening."/>
+	<meta itemprop="name" content="Microsoft is getting more dynamic">
+	<meta itemprop="description" content="at least as the programming language languages are concerned. One of the things that will be presented on the MIX07 is Dynamic Language Runtime, a new platform suitable to host high level, dynamic languages such as Python and Ruby. For Python, there is already pretty decent .NET implementation - namely IronPython. What is coming now is IronPython 2.0 based on the DLR as well as - yesss - IronRuby.
+It is great that this is happening. In Java world, JRuby is very close to being full implementation of the language. The speed of the JRuby is still not quite in the proximity of the C implementation, but the large selling point of JRuby is its capability of deploying Ruby application (or even a Rails application) inside Tomcat or any other Java Web container. This removes largest obstacle of using Ruby in enterprise environment - namely being &#34;new&#34; and not approved platform. When the .NET runtime will be able to host Ruby code, acceptance in enterprise space will be even higher.">
+	<meta itemprop="datePublished" content="2007-05-01T22:08:12-04:00">
+	<meta itemprop="dateModified" content="2007-05-01T22:08:12-04:00">
+	<meta itemprop="wordCount" content="279">
+	<meta itemprop="keywords" content="Ruby,Microsoft,Dot-Net">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Microsoft is getting more dynamic">
+	<meta name="twitter:description" content="at least as the programming language languages are concerned. One of the things that will be presented on the MIX07 is Dynamic Language Runtime, a new platform suitable to host high level, dynamic languages such as Python and Ruby. For Python, there is already pretty decent .NET implementation - namely IronPython. What is coming now is IronPython 2.0 based on the DLR as well as - yesss - IronRuby.
+It is great that this is happening. In Java world, JRuby is very close to being full implementation of the language. The speed of the JRuby is still not quite in the proximity of the C implementation, but the large selling point of JRuby is its capability of deploying Ruby application (or even a Rails application) inside Tomcat or any other Java Web container. This removes largest obstacle of using Ruby in enterprise environment - namely being &#34;new&#34; and not approved platform. When the .NET runtime will be able to host Ruby code, acceptance in enterprise space will be even higher.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -96,12 +102,21 @@ It is great that this is happening."/>
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -118,6 +133,7 @@ It is great that this is happening."/>
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -212,7 +228,7 @@ It is great that this is happening."/>
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -230,13 +246,10 @@ It is great that this is happening."/>
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -247,7 +260,10 @@ It is great that this is happening."/>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

@@ -19,14 +19,15 @@
 <meta name="author" content="Miro Adamy" /><meta name="description" content="This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
 How gitolite works Repository permission structure This is general format of repo definition
 REPO NAME rule line rule line for example
-@staff = dilbert alice wally bob repo foo RW&#43; = dilbert # line 1 RW&#43; dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5 The Rule line has format:" /><meta name="keywords" content="blog, Miro" />
+@staff = dilbert alice wally bob repo foo RW&#43; = dilbert # line 1 RW&#43; dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5 The Rule line has format:
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-04-02-gitolite-permissions/" />
@@ -37,37 +38,41 @@ REPO NAME rule line rule line for example
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Gitolite permissions setup" />
-<meta property="og:description" content="This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
-How gitolite works Repository permission structure This is general format of repo definition
-REPO NAME rule line rule line for example
-@staff = dilbert alice wally bob repo foo RW&#43; = dilbert # line 1 RW&#43; dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5 The Rule line has format:" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2014-04-02-gitolite-permissions/" />
-<meta property="article:published_time" content="2014-04-02T11:22:48+08:00" />
-<meta property="article:modified_time" content="2014-04-02T11:22:48+08:00" />
-<meta itemprop="name" content="Gitolite permissions setup">
-<meta itemprop="description" content="This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
+<meta property="og:url" content="https://miroadamy.com/posts/2014-04-02-gitolite-permissions/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Gitolite permissions setup">
+	<meta property="og:description" content="This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
 How gitolite works Repository permission structure This is general format of repo definition
 REPO NAME rule line rule line for example
 @staff = dilbert alice wally bob repo foo RW&#43; = dilbert # line 1 RW&#43; dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5 The Rule line has format:">
-<meta itemprop="datePublished" content="2014-04-02T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2014-04-02T11:22:48+08:00" />
-<meta itemprop="wordCount" content="1458">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2014-04-02T11:22:48+08:00">
+		<meta property="article:modified_time" content="2014-04-02T11:22:48+08:00">
+		<meta property="article:tag" content="Git">
+		<meta property="article:tag" content="Gitolite">
 
-
-
-<meta itemprop="keywords" content="git,gitolite," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Gitolite permissions setup"/>
-<meta name="twitter:description" content="This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
+	<meta itemprop="name" content="Gitolite permissions setup">
+	<meta itemprop="description" content="This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
 How gitolite works Repository permission structure This is general format of repo definition
 REPO NAME rule line rule line for example
-@staff = dilbert alice wally bob repo foo RW&#43; = dilbert # line 1 RW&#43; dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5 The Rule line has format:"/>
+@staff = dilbert alice wally bob repo foo RW&#43; = dilbert # line 1 RW&#43; dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5 The Rule line has format:">
+	<meta itemprop="datePublished" content="2014-04-02T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2014-04-02T11:22:48+08:00">
+	<meta itemprop="wordCount" content="1458">
+	<meta itemprop="keywords" content="Git,Gitolite">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Gitolite permissions setup">
+	<meta name="twitter:description" content="This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
+How gitolite works Repository permission structure This is general format of repo definition
+REPO NAME rule line rule line for example
+@staff = dilbert alice wally bob repo foo RW&#43; = dilbert # line 1 RW&#43; dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5 The Rule line has format:">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -104,12 +109,21 @@ REPO NAME rule line rule line for example
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -126,6 +140,7 @@ REPO NAME rule line rule line for example
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -176,19 +191,19 @@ REPO NAME rule line rule line for example
 <h2 id="how-gitolite-works">How gitolite works</h2>
 <h3 id="repository-permission-structure">Repository permission structure</h3>
 <p>This is general format of repo definition</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">REPO NAME
-   rule line
-   rule line
-</code></pre></div><p>for example</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">@staff          =   dilbert alice wally bob
- 
-repo foo
-    RW+         =   dilbert     # line 1
-    RW+ dev     =   alice       # line 2
-    -           =   wally       # line 3
-    RW  temp/   =   @staff      # line 4
-    R           =   ashok       # line 5
-</code></pre></div><p>The Rule line has format:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">REPO NAME
+</span></span><span class="line"><span class="cl">   rule line
+</span></span><span class="line"><span class="cl">   rule line
+</span></span></code></pre></div><p>for example</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@staff          =   dilbert alice wally bob
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">repo foo
+</span></span><span class="line"><span class="cl">    RW+         =   dilbert     # line 1
+</span></span><span class="line"><span class="cl">    RW+ dev     =   alice       # line 2
+</span></span><span class="line"><span class="cl">    -           =   wally       # line 3
+</span></span><span class="line"><span class="cl">    RW  temp/   =   @staff      # line 4
+</span></span><span class="line"><span class="cl">    R           =   ashok       # line 5
+</span></span></code></pre></div><p>The Rule line has format:</p>
 <p><code>&lt;permission&gt; &lt;zero or more refexes&gt; = &lt;one or more users/user groups&gt;</code></p>
 <p>Permission:</p>
 <ul>
@@ -204,7 +219,7 @@ repo foo
 <p>REFEX:</p>
 <ul>
 <li>regular expression specifying branch or tag</li>
-<li>' ' - space is every branch</li>
+<li>&rsquo; &rsquo; - space is every branch</li>
 <li>&lsquo;master$&rsquo; - any branch whose name ends on master</li>
 <li>&lsquo;^LIVE&rsquo; - any branch starting on &lsquo;LIVE&rsquo;</li>
 <li>&lsquo;^FOO$&rsquo; - branch named exactly &lsquo;foo&rsquo;.
@@ -226,43 +241,43 @@ repo foo
 <p>Because information may be in multiple files (includes etc), Gitolates accumulates the permissions and creates effective permission FIRST.</p>
 <p>This is documented in <a href="http://gitolite.com/gitolite/rules.html#rule-accum">http://gitolite.com/gitolite/rules.html#rule-accum</a>. Here is an example</p>
 <p>This:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">1  # we have 3 specifically named FOSS projects, but we also consider any
- 2  # project in the foss/ directory to be FOSS.
- 3  @FOSS-projects  =   git gitolite linux foss/..*
- 
- 4  # similarly for proprietary projects
- 5  @prop-projects  =   foo bar baz prop/..*
- 
- 6  # our users are divided into staff, interns, and bosses
- 7  @staff          =   alice dilbert wally
- 8  @interns        =   ashok
- 9  @bosses         =   PHB
- 
-10  # we have certain policies.  The first is that FOSS projects are readable
-11  # by everyone
-12  repo @FOSS-projects
-13      R   =   @all
- 
-14  # the second is that bosses can read any repo if they wish to
-15  repo @all
-16      R   =   @bosses
- 
-17  # now we have specific rules for specific projects
-18  repo git
-19      RW+ =   junio
-20      ...some other rules...
- 
-21  repo gitolite
-22      RW+ =   sitaram
-23      ...some other rules...
- 
-24  ...etc...
-</code></pre></div><p>gets collapsed to this for the &lsquo;gitolite&rsquo; repo</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">13      R   =   @all            # since it is a member of @FOSS-projects
-16      R   =   @bosses         # since every repo is a member of @all anyway
-22      RW+ =   sitaram         # from the gitolite-specific ruleset
-23      ...some other rules...  # from the gitolite-specific ruleset
-</code></pre></div><p>This accumulation happens BEFORE any check is done</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">1  # we have 3 specifically named FOSS projects, but we also consider any
+</span></span><span class="line"><span class="cl"> 2  # project in the foss/ directory to be FOSS.
+</span></span><span class="line"><span class="cl"> 3  @FOSS-projects  =   git gitolite linux foss/..*
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 4  # similarly for proprietary projects
+</span></span><span class="line"><span class="cl"> 5  @prop-projects  =   foo bar baz prop/..*
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 6  # our users are divided into staff, interns, and bosses
+</span></span><span class="line"><span class="cl"> 7  @staff          =   alice dilbert wally
+</span></span><span class="line"><span class="cl"> 8  @interns        =   ashok
+</span></span><span class="line"><span class="cl"> 9  @bosses         =   PHB
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">10  # we have certain policies.  The first is that FOSS projects are readable
+</span></span><span class="line"><span class="cl">11  # by everyone
+</span></span><span class="line"><span class="cl">12  repo @FOSS-projects
+</span></span><span class="line"><span class="cl">13      R   =   @all
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">14  # the second is that bosses can read any repo if they wish to
+</span></span><span class="line"><span class="cl">15  repo @all
+</span></span><span class="line"><span class="cl">16      R   =   @bosses
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">17  # now we have specific rules for specific projects
+</span></span><span class="line"><span class="cl">18  repo git
+</span></span><span class="line"><span class="cl">19      RW+ =   junio
+</span></span><span class="line"><span class="cl">20      ...some other rules...
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">21  repo gitolite
+</span></span><span class="line"><span class="cl">22      RW+ =   sitaram
+</span></span><span class="line"><span class="cl">23      ...some other rules...
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">24  ...etc...
+</span></span></code></pre></div><p>gets collapsed to this for the &lsquo;gitolite&rsquo; repo</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">13      R   =   @all            # since it is a member of @FOSS-projects
+</span></span><span class="line"><span class="cl">16      R   =   @bosses         # since every repo is a member of @all anyway
+</span></span><span class="line"><span class="cl">22      RW+ =   sitaram         # from the gitolite-specific ruleset
+</span></span><span class="line"><span class="cl">23      ...some other rules...  # from the gitolite-specific ruleset
+</span></span></code></pre></div><p>This accumulation happens BEFORE any check is done</p>
 <h3 id="pre-git-phase-read-access">Pre-git phase (read access)</h3>
 <p>To check if user has access rights to particular repo, all accumulated rules for that repo and that user are scanned.</p>
 <p>If Gitolite finds rule with &lsquo;R&rsquo; access, it is permitted. For each rule:</p>
@@ -292,46 +307,46 @@ repo foo
 <li>If no rule ends with a decision, (&ldquo;fallthru&rdquo;), deny access</li>
 </ul>
 <p>Because this is deeply logical, but not necessary intuitive, here are few examples:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">@QA_team    =   QA_guy QA_gal
-@Lead_devs  =   sitaram dilbert
-@devs       =   @Lead_devs alice wally
-  
-repo    foo
-    RW  refs/tags/v[0-9]        =   @QA_team
-    RW+                         =   @Lead_devs
-    RW  dev/                    =   @devs
-</code></pre></div><p>A member of the QA team can only push tags which start with <code>v</code>, followed by a digit (optionally followed by anything else). This allows them to tag repository, but not actually commit new code.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@QA_team    =   QA_guy QA_gal
+</span></span><span class="line"><span class="cl">@Lead_devs  =   sitaram dilbert
+</span></span><span class="line"><span class="cl">@devs       =   @Lead_devs alice wally
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">repo    foo
+</span></span><span class="line"><span class="cl">    RW  refs/tags/v[0-9]        =   @QA_team
+</span></span><span class="line"><span class="cl">    RW+                         =   @Lead_devs
+</span></span><span class="line"><span class="cl">    RW  dev/                    =   @devs
+</span></span></code></pre></div><p>A member of the QA team can only push tags which start with <code>v</code>, followed by a digit (optionally followed by anything else). This allows them to tag repository, but not actually commit new code.</p>
 <p>A lead dev can push or rewind just about anything. (When you don’t supply a pattern between the permissions and the <code>=</code> sign, it means it matches any ref.)</p>
 <p>A normal dev can only push branches whose name starts with <code>dev/</code>.</p>
 <p>All of these will have read access because deny rules do not work during that phase.</p>
 <p>An example with deny rules.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">repo    bar
-    RW+ master                  =   @Lead_devs  # line 1
-    -   master                  =   @devs       # line 2
-    RW+                         =   @devs       # line 3
-</code></pre></div><p>This example shows how to protect forced-rewind to anybody but Lead_devs group.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">repo    bar
+</span></span><span class="line"><span class="cl">    RW+ master                  =   @Lead_devs  # line 1
+</span></span><span class="line"><span class="cl">    -   master                  =   @devs       # line 2
+</span></span><span class="line"><span class="cl">    RW+                         =   @devs       # line 3
+</span></span></code></pre></div><p>This example shows how to protect forced-rewind to anybody but Lead_devs group.</p>
 <p>When a normal dev (not a lead dev) tries to rewind-write to “master”, the first matching rule is Line 2, which says “deny”. If a lead dev tries it, though, Line 1 (which comes before Line 2) matches, and allows the access.</p>
 <p>Just as an exercise, think about what happens if you switch Lines 1 and 2. Since “lead” devs are also members of <code>@dev</code>, they will be denied any write access to “master” since the deny rule will be matched first!)</p>
 <p>Devs will have read access to master because the deny rules are ignored during Read check.</p>
 <p>Here is a problematic one:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Gitolite permission test
- repo gitolite-permission-test
-    RW master$     = dev1 lead tester
-    RW LIVE$       = lead
-    R LIVE$        = dev1 tester
-    R vmonly$      = lead
-    RW vmonly$     = dev1 tester
-</code></pre></div><p>Here we want allow only for lead to push against LIVE and only for dev1 and tester against &lsquo;vmonly&rsquo;, while all can push against master.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zed" data-lang="zed"><span class="line"><span class="cl"><span class="err">#</span><span class="w"> </span><span class="n">Gitolite</span><span class="w"> </span><span class="kd">permission</span><span class="w"> </span><span class="n">test</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="n">repo</span><span class="w"> </span><span class="n">gitolite</span><span class="o">-</span><span class="kd">permission</span><span class="o">-</span><span class="n">test</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">RW</span><span class="w"> </span><span class="n">master</span><span class="err">$</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">dev1</span><span class="w"> </span><span class="n">lead</span><span class="w"> </span><span class="n">tester</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">RW</span><span class="w"> </span><span class="n">LIVE</span><span class="err">$</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">lead</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">R</span><span class="w"> </span><span class="n">LIVE</span><span class="err">$</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">dev1</span><span class="w"> </span><span class="n">tester</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">R</span><span class="w"> </span><span class="n">vmonly</span><span class="err">$</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">lead</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">RW</span><span class="w"> </span><span class="n">vmonly</span><span class="err">$</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">dev1</span><span class="w"> </span><span class="n">tester</span><span class="w">
+</span></span></span></code></pre></div><p>Here we want allow only for lead to push against LIVE and only for dev1 and tester against &lsquo;vmonly&rsquo;, while all can push against master.</p>
 <p>This works OK, HOWEVER - nobody can create any new branch. Let&rsquo;s say lead creates UAT branch. The tests against rules will fail as none of the rules matches UAT.</p>
 <p>Correct way how to achieve this would be</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Gitolite permission test
- repo gitolite-permission-test
-    RW LIVE$       = lead
-    RW vmonly$     = dev1 tester
-    - LIVE$        = dev1 tester
-    - vmonly$      = lead
-    RW             = @all
-</code></pre></div><p>Remember - read access is allowed because deny rules are ignored (we have no option set).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-zed" data-lang="zed"><span class="line"><span class="cl"><span class="err">#</span><span class="w"> </span><span class="n">Gitolite</span><span class="w"> </span><span class="kd">permission</span><span class="w"> </span><span class="n">test</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="n">repo</span><span class="w"> </span><span class="n">gitolite</span><span class="o">-</span><span class="kd">permission</span><span class="o">-</span><span class="n">test</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">RW</span><span class="w"> </span><span class="n">LIVE</span><span class="err">$</span><span class="w">       </span><span class="o">=</span><span class="w"> </span><span class="n">lead</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">RW</span><span class="w"> </span><span class="n">vmonly</span><span class="err">$</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">dev1</span><span class="w"> </span><span class="n">tester</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">LIVE</span><span class="err">$</span><span class="w">        </span><span class="o">=</span><span class="w"> </span><span class="n">dev1</span><span class="w"> </span><span class="n">tester</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">vmonly</span><span class="err">$</span><span class="w">      </span><span class="o">=</span><span class="w"> </span><span class="n">lead</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">RW</span><span class="w">             </span><span class="o">=</span><span class="w"> </span><span class="err">@</span><span class="n">all</span><span class="w">
+</span></span></span></code></pre></div><p>Remember - read access is allowed because deny rules are ignored (we have no option set).</p>
 <p>If lead is trying to push against &lsquo;vmonly&rsquo;, line 5 will stop him. If lead tries to push LIVE, it is allowed by explicit rule #1</p>
 <p>If dev1 or tester will try to push against vmonly, the rule #2 allows it. If they try to push against LIVE, rule #3 stops them</p>
 <p>If anybody tries to push against master or any branch other than LIVE or vmonly, the rule #5 will permit proceeding.</p>
@@ -344,12 +359,12 @@ repo    foo
 <li>testing</li>
 </ul>
 <p>The general pattern is</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">repo gitolite-permission-test
-    RW PROTECTED-BRANCH     = @privileged-group
-    - PROTECTED-BRANCH      = @read-only-group
-... repeat for all branches / groups
-    RW                      = @all
-</code></pre></div><h2 id="template-for-repository-rights">Template for repository rights</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">repo gitolite-permission-test
+</span></span><span class="line"><span class="cl">    RW PROTECTED-BRANCH     = @privileged-group
+</span></span><span class="line"><span class="cl">    - PROTECTED-BRANCH      = @read-only-group
+</span></span><span class="line"><span class="cl">... repeat for all branches / groups
+</span></span><span class="line"><span class="cl">    RW                      = @all
+</span></span></code></pre></div><h2 id="template-for-repository-rights">Template for repository rights</h2>
 <h3 id="groups">Groups</h3>
 <p>In each Gitolite config, we will define</p>
 <ul>
@@ -365,19 +380,19 @@ repo    foo
 </ul>
 <p>Later on, we may add UAT - some projects may want to run the UAT branches via</p>
 <p>So the template is</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">@admins     = miro admin2.name
-@developers = dev1.name dev2.name
-@leads      = lead1.name lead2.name
-@readonly   = jenkins2 crucible
-  
-# All repositories sharing same access
-repo repo1 repo2
-    RW+           =  @admins
-    RW LIVE       =  @leads
-    - LIVE        =  @developers
-    RW            =  @developers
-    R             =  @readonly
-</code></pre></div><p>There is also automagically defined &lsquo;@all&rsquo; group.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@admins     = miro admin2.name
+</span></span><span class="line"><span class="cl">@developers = dev1.name dev2.name
+</span></span><span class="line"><span class="cl">@leads      = lead1.name lead2.name
+</span></span><span class="line"><span class="cl">@readonly   = jenkins2 crucible
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"># All repositories sharing same access
+</span></span><span class="line"><span class="cl">repo repo1 repo2
+</span></span><span class="line"><span class="cl">    RW+           =  @admins
+</span></span><span class="line"><span class="cl">    RW LIVE       =  @leads
+</span></span><span class="line"><span class="cl">    - LIVE        =  @developers
+</span></span><span class="line"><span class="cl">    RW            =  @developers
+</span></span><span class="line"><span class="cl">    R             =  @readonly
+</span></span></code></pre></div><p>There is also automagically defined &lsquo;@all&rsquo; group.</p>
 <p>This should NOT be used - because it grants access to any uploaded key in keydir/ without having the named user listed in one of the groups above.</p>
 <p>Slowly, we will migrate the existing repos to this structure.</p>
 <h2 id="sources-credits-attributions">Sources, credits, attributions:</h2>
@@ -451,7 +466,7 @@ repo repo1 repo2
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -469,13 +484,10 @@ repo repo1 repo2
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -486,7 +498,10 @@ repo repo1 repo2
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

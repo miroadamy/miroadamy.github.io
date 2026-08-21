@@ -17,19 +17,24 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Graphviz This time using brew
-➜ DPS brew install graphviz ==&amp;gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz ######################################################################## 100.0% ==&amp;gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz 🍺 /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M ➜ DPS dot -V dot - graphviz version 2.38.0 (20140413.2041) ➜ DPS Schema Spy From http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/
+➜ DPS brew install graphviz ==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz ######################################################################## 100.0% ==&gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz 🍺 /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M ➜ DPS dot -V dot - graphviz version 2.38.0 (20140413.2041) ➜ DPS Schema Spy From http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/
 To /opt/diagram
 Run:
- diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training
- It produces HTML documentation for tables
-Size is about 51 M for a small ATG install" /><meta name="keywords" content="blog, Miro" />
+diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training
+It produces HTML documentation for tables
+Size is about 51 M for a small ATG install
+PlantUML Also installed in /opt/diagram
+http://plantuml.sourceforge.net/running.html
+See http://www.planttext.com
+Command Line You can also run PlantUML using the following command :java -jar plantuml.jar file1 file2 file3 This will look for @startuml into file1, file2 and file3. (For each diagram, it will create a .png file). For processing a whole directory, you can use: java -jar plantuml.jar &#34;c:/directory1&#34; &#34;c:/directory2&#34; This command will search for @startuml and @enduml into .c, .h, .cpp, .txt, .pu, .tex, .html, .htm or .java files of the c:/directory directory. (For each diagram, it will create a .png file). From Groovy Since calling Java from Groovy is pretty simple, the only thinks to do is to copy PlantUML.jar file to the classpath (for exemple, ../Groovy/Groovy-1.7.6/lib directory).The following script print the current PlantUML version, and encode a URL:
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-09-09-redo-graph/" />
@@ -40,46 +45,66 @@ Size is about 51 M for a small ATG install" /><meta name="keywords" content="blo
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Recreate txt base graph generator" />
-<meta property="og:description" content="Graphviz This time using brew
+<meta property="og:url" content="https://miroadamy.com/posts/2014-09-09-redo-graph/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Recreate txt base graph generator">
+	<meta property="og:description" content="Graphviz This time using brew
 ➜ DPS brew install graphviz ==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz ######################################################################## 100.0% ==&gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz 🍺 /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M ➜ DPS dot -V dot - graphviz version 2.38.0 (20140413.2041) ➜ DPS Schema Spy From http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/
 To /opt/diagram
 Run:
- diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training
- It produces HTML documentation for tables
-Size is about 51 M for a small ATG install" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2014-09-09-redo-graph/" />
-<meta property="article:published_time" content="2014-09-09T11:22:48+08:00" />
-<meta property="article:modified_time" content="2014-09-09T11:22:48+08:00" />
-<meta itemprop="name" content="Recreate txt base graph generator">
-<meta itemprop="description" content="Graphviz This time using brew
+diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training
+It produces HTML documentation for tables
+Size is about 51 M for a small ATG install
+PlantUML Also installed in /opt/diagram
+http://plantuml.sourceforge.net/running.html
+See http://www.planttext.com
+Command Line You can also run PlantUML using the following command :java -jar plantuml.jar file1 file2 file3 This will look for @startuml into file1, file2 and file3. (For each diagram, it will create a .png file). For processing a whole directory, you can use: java -jar plantuml.jar &#34;c:/directory1&#34; &#34;c:/directory2&#34; This command will search for @startuml and @enduml into .c, .h, .cpp, .txt, .pu, .tex, .html, .htm or .java files of the c:/directory directory. (For each diagram, it will create a .png file). From Groovy Since calling Java from Groovy is pretty simple, the only thinks to do is to copy PlantUML.jar file to the classpath (for exemple, ../Groovy/Groovy-1.7.6/lib directory).The following script print the current PlantUML version, and encode a URL:">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2014-09-09T11:22:48+08:00">
+		<meta property="article:modified_time" content="2014-09-09T11:22:48+08:00">
+		<meta property="article:tag" content="Commandline">
+		<meta property="article:tag" content="Plaintext">
+		<meta property="article:tag" content="Documentation">
+		<meta property="article:tag" content="Groovy">
+		<meta property="article:tag" content="Atg">
+		<meta property="article:tag" content="Graphviz">
+
+	<meta itemprop="name" content="Recreate txt base graph generator">
+	<meta itemprop="description" content="Graphviz This time using brew
 ➜ DPS brew install graphviz ==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz ######################################################################## 100.0% ==&gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz 🍺 /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M ➜ DPS dot -V dot - graphviz version 2.38.0 (20140413.2041) ➜ DPS Schema Spy From http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/
 To /opt/diagram
 Run:
- diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training
- It produces HTML documentation for tables
-Size is about 51 M for a small ATG install">
-<meta itemprop="datePublished" content="2014-09-09T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2014-09-09T11:22:48+08:00" />
-<meta itemprop="wordCount" content="318">
-
-
-
-<meta itemprop="keywords" content="commandline,plaintext,documentation,groovy,atg,graphviz," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Recreate txt base graph generator"/>
-<meta name="twitter:description" content="Graphviz This time using brew
+diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training
+It produces HTML documentation for tables
+Size is about 51 M for a small ATG install
+PlantUML Also installed in /opt/diagram
+http://plantuml.sourceforge.net/running.html
+See http://www.planttext.com
+Command Line You can also run PlantUML using the following command :java -jar plantuml.jar file1 file2 file3 This will look for @startuml into file1, file2 and file3. (For each diagram, it will create a .png file). For processing a whole directory, you can use: java -jar plantuml.jar &#34;c:/directory1&#34; &#34;c:/directory2&#34; This command will search for @startuml and @enduml into .c, .h, .cpp, .txt, .pu, .tex, .html, .htm or .java files of the c:/directory directory. (For each diagram, it will create a .png file). From Groovy Since calling Java from Groovy is pretty simple, the only thinks to do is to copy PlantUML.jar file to the classpath (for exemple, ../Groovy/Groovy-1.7.6/lib directory).The following script print the current PlantUML version, and encode a URL:">
+	<meta itemprop="datePublished" content="2014-09-09T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2014-09-09T11:22:48+08:00">
+	<meta itemprop="wordCount" content="318">
+	<meta itemprop="keywords" content="Commandline,Plaintext,Documentation,Groovy,Atg,Graphviz">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Recreate txt base graph generator">
+	<meta name="twitter:description" content="Graphviz This time using brew
 ➜ DPS brew install graphviz ==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz ######################################################################## 100.0% ==&gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz 🍺 /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M ➜ DPS dot -V dot - graphviz version 2.38.0 (20140413.2041) ➜ DPS Schema Spy From http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/
 To /opt/diagram
 Run:
- diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training
- It produces HTML documentation for tables
-Size is about 51 M for a small ATG install"/>
+diagram java -jar ./schemaSpy_5.0.0.jar -cp .:/Users/miro/lib/jdbc/mysql-connector-java-5.1.26-bin.jar -t mysql -o library -host localhost -u training -db training_dev01 -p training
+It produces HTML documentation for tables
+Size is about 51 M for a small ATG install
+PlantUML Also installed in /opt/diagram
+http://plantuml.sourceforge.net/running.html
+See http://www.planttext.com
+Command Line You can also run PlantUML using the following command :java -jar plantuml.jar file1 file2 file3 This will look for @startuml into file1, file2 and file3. (For each diagram, it will create a .png file). For processing a whole directory, you can use: java -jar plantuml.jar &#34;c:/directory1&#34; &#34;c:/directory2&#34; This command will search for @startuml and @enduml into .c, .h, .cpp, .txt, .pu, .tex, .html, .htm or .java files of the c:/directory directory. (For each diagram, it will create a .png file). From Groovy Since calling Java from Groovy is pretty simple, the only thinks to do is to copy PlantUML.jar file to the classpath (for exemple, ../Groovy/Groovy-1.7.6/lib directory).The following script print the current PlantUML version, and encode a URL:">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -116,12 +141,21 @@ Size is about 51 M for a small ATG install"/>
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -138,6 +172,7 @@ Size is about 51 M for a small ATG install"/>
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -179,15 +214,15 @@ Size is about 51 M for a small ATG install"/>
     <div class="post-content">
       <h2 id="graphviz">Graphviz</h2>
 <p>This time using brew</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  DPS  brew install graphviz
-==&gt; Downloading https://downloads.sf.net/project/machomebrew/Bottles/graphviz-2.38.0.mavericks.bottle.tar.gz
-######################################################################## 100.0%
-==&gt; Pouring graphviz-2.38.0.mavericks.bottle.tar.gz
-🍺  /usr/local/Cellar/graphviz/2.38.0: 469 files, 68M
-➜  DPS  dot -V
-dot - graphviz version 2.38.0 (20140413.2041)
-➜  DPS
-</code></pre></div><h2 id="schema-spy">Schema Spy</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">DPS</span>  <span class="n">brew</span> <span class="n">install</span> <span class="n">graphviz</span>
+</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">downloads</span><span class="o">.</span><span class="n">sf</span><span class="o">.</span><span class="n">net</span><span class="o">/</span><span class="n">project</span><span class="o">/</span><span class="n">machomebrew</span><span class="o">/</span><span class="n">Bottles</span><span class="o">/</span><span class="n">graphviz</span><span class="o">-</span><span class="mf">2.38</span><span class="o">.</span><span class="mf">0.</span><span class="n">mavericks</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</span></span><span class="line"><span class="cl"><span class="c1">######################################################################## 100.0%</span>
+</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Pouring</span> <span class="n">graphviz</span><span class="o">-</span><span class="mf">2.38</span><span class="o">.</span><span class="mf">0.</span><span class="n">mavericks</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</span></span><span class="line"><span class="cl"><span class="err">🍺</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">graphviz</span><span class="o">/</span><span class="mf">2.38</span><span class="o">.</span><span class="mi">0</span><span class="p">:</span> <span class="mi">469</span> <span class="n">files</span><span class="p">,</span> <span class="mi">68</span><span class="n">M</span>
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">DPS</span>  <span class="n">dot</span> <span class="o">-</span><span class="n">V</span>
+</span></span><span class="line"><span class="cl"><span class="n">dot</span> <span class="o">-</span> <span class="n">graphviz</span> <span class="n">version</span> <span class="mf">2.38</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="mf">20140413.2041</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">DPS</span>
+</span></span></code></pre></div><h2 id="schema-spy">Schema Spy</h2>
 <p>From <a href="http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/">http://sourceforge.net/projects/schemaspy/files/schemaspy/SchemaSpy%205.0.0/</a></p>
 <p>To <code>/opt/diagram</code></p>
 <p>Run:</p>
@@ -204,71 +239,71 @@ dot - graphviz version 2.38.0 (20140413.2041)
 <p><a href="http://plantuml.sourceforge.net/running.html">http://plantuml.sourceforge.net/running.html</a></p>
 <p>See <a href="http://www.planttext.com">http://www.planttext.com</a></p>
 <h3 id="command-line">Command Line</h3>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">You can also run PlantUML using the following command :java -jar plantuml.jar file1 file2 file3
- 
-This will look for @startuml into file1, file2 and file3. (For each diagram, it will create a .png file).
-For processing a whole directory, you can use:
-java -jar plantuml.jar &#34;c:/directory1&#34; &#34;c:/directory2&#34;
- 
-This command will search for @startuml and @enduml into .c, .h, .cpp, .txt, .pu, .tex, .html, .htm or .java files of the c:/directory directory. 
-(For each diagram, it will create a .png file).
-</code></pre></div><h3 id="from-groovy">From Groovy</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">You can also run PlantUML using the following command :java -jar plantuml.jar file1 file2 file3
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">This will look for @startuml into file1, file2 and file3. (For each diagram, it will create a .png file).
+</span></span><span class="line"><span class="cl">For processing a whole directory, you can use:
+</span></span><span class="line"><span class="cl">java -jar plantuml.jar &#34;c:/directory1&#34; &#34;c:/directory2&#34;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">This command will search for @startuml and @enduml into .c, .h, .cpp, .txt, .pu, .tex, .html, .htm or .java files of the c:/directory directory. 
+</span></span><span class="line"><span class="cl">(For each diagram, it will create a .png file).
+</span></span></code></pre></div><h3 id="from-groovy">From Groovy</h3>
 <p>Since calling Java from Groovy is pretty simple, the only thinks to do is to copy PlantUML.jar file to the classpath (for exemple, ../Groovy/Groovy-1.7.6/lib directory).The following script print the current PlantUML version, and encode a URL:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"> 
-println net.sourceforge.plantuml.version.Version.version() 
-println net.sourceforge.plantuml.code.TranscoderUtil.getDefaultTranscoder().encode(&#34;Bob-&gt;Alice:hello&#34;)
- 
- 
-If you want to generate an image from a description:
-
-s = new net.sourceforge.plantuml.SourceStringReader(&#34;@startuml\nBob-&gt;Alice:hello\n@enduml&#34;)
-FileOutputStream file = new FileOutputStream(&#34;c:/testGroovy2.png&#34;)
-s.generateImage(file);
-file.close()
-</code></pre></div><h1 id="examples">Examples:</h1>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">@startuml
-start
-if (multiprocessor?) then (yes)
-  fork
-    :Treatment 1;
-  fork again
-    :Treatment 2;
-  end fork
-else (monoproc)
-  :Treatment 1;
-  :Treatment 2;
-endif
- 
-@enduml
-</code></pre></div><p><img src="/images/graph-4.png" alt=""></p>
-<div class="highlight"><pre class="chroma"><code class="language-go" data-lang="go"><span class="err">@</span><span class="nx">startuml</span>
-<span class="kn">package</span> <span class="s">&#34;Some Group&#34;</span> <span class="p">{</span>
-  <span class="nx">HTTP</span> <span class="o">-</span> <span class="p">[</span><span class="nx">First</span> <span class="nx">Component</span><span class="p">]</span>
-  <span class="p">[</span><span class="nx">Another</span> <span class="nx">Component</span><span class="p">]</span>
-<span class="p">}</span>
-  
-<span class="nx">node</span> <span class="s">&#34;Other Groups&#34;</span> <span class="p">{</span>
-  <span class="nx">FTP</span> <span class="o">-</span> <span class="p">[</span><span class="nx">Second</span> <span class="nx">Component</span><span class="p">]</span>
-  <span class="p">[</span><span class="nx">First</span> <span class="nx">Component</span><span class="p">]</span> <span class="o">--</span><span class="p">&gt;</span> <span class="nx">FTP</span>
-<span class="p">}</span>
-<span class="nx">cloud</span> <span class="p">{</span>
-  <span class="p">[</span><span class="nx">Example</span> <span class="mi">1</span><span class="p">]</span>
-<span class="p">}</span>
- 
-<span class="nx">database</span> <span class="s">&#34;MySql&#34;</span> <span class="p">{</span>
-  <span class="nx">folder</span> <span class="s">&#34;This is my folder&#34;</span> <span class="p">{</span>
-    <span class="p">[</span><span class="nx">Folder</span> <span class="mi">3</span><span class="p">]</span>
-  <span class="p">}</span>
-  <span class="nx">frame</span> <span class="s">&#34;Foo&#34;</span> <span class="p">{</span>
-    <span class="p">[</span><span class="nx">Frame</span> <span class="mi">4</span><span class="p">]</span>
-  <span class="p">}</span>
-<span class="p">}</span>
- 
-<span class="p">[</span><span class="nx">Another</span> <span class="nx">Component</span><span class="p">]</span> <span class="o">--</span><span class="p">&gt;</span> <span class="p">[</span><span class="nx">Example</span> <span class="mi">1</span><span class="p">]</span>
-<span class="p">[</span><span class="nx">Example</span> <span class="mi">1</span><span class="p">]</span> <span class="o">--</span><span class="p">&gt;</span> <span class="p">[</span><span class="nx">Folder</span> <span class="mi">3</span><span class="p">]</span>
-<span class="p">[</span><span class="nx">Folder</span> <span class="mi">3</span><span class="p">]</span> <span class="o">--</span><span class="p">&gt;</span> <span class="p">[</span><span class="nx">Frame</span> <span class="mi">4</span><span class="p">]</span>
-<span class="err">@</span><span class="nx">enduml</span>
-</code></pre></div><p><img src="/images/graph-5.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">println net.sourceforge.plantuml.version.Version.version() 
+</span></span><span class="line"><span class="cl">println net.sourceforge.plantuml.code.TranscoderUtil.getDefaultTranscoder().encode(&#34;Bob-&gt;Alice:hello&#34;)
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">If you want to generate an image from a description:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">s = new net.sourceforge.plantuml.SourceStringReader(&#34;@startuml\nBob-&gt;Alice:hello\n@enduml&#34;)
+</span></span><span class="line"><span class="cl">FileOutputStream file = new FileOutputStream(&#34;c:/testGroovy2.png&#34;)
+</span></span><span class="line"><span class="cl">s.generateImage(file);
+</span></span><span class="line"><span class="cl">file.close()
+</span></span></code></pre></div><h1 id="examples">Examples:</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">@startuml
+</span></span><span class="line"><span class="cl">start
+</span></span><span class="line"><span class="cl">if (multiprocessor?) then (yes)
+</span></span><span class="line"><span class="cl">  fork
+</span></span><span class="line"><span class="cl">    :Treatment 1;
+</span></span><span class="line"><span class="cl">  fork again
+</span></span><span class="line"><span class="cl">    :Treatment 2;
+</span></span><span class="line"><span class="cl">  end fork
+</span></span><span class="line"><span class="cl">else (monoproc)
+</span></span><span class="line"><span class="cl">  :Treatment 1;
+</span></span><span class="line"><span class="cl">  :Treatment 2;
+</span></span><span class="line"><span class="cl">endif
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">@enduml
+</span></span></code></pre></div><p><img src="/images/graph-4.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="err">@</span><span class="nx">startuml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="s">&#34;Some Group&#34;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">HTTP</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">[</span><span class="nx">First</span><span class="w"> </span><span class="nx">Component</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">[</span><span class="nx">Another</span><span class="w"> </span><span class="nx">Component</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="nx">node</span><span class="w"> </span><span class="s">&#34;Other Groups&#34;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">FTP</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">[</span><span class="nx">Second</span><span class="w"> </span><span class="nx">Component</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">[</span><span class="nx">First</span><span class="w"> </span><span class="nx">Component</span><span class="p">]</span><span class="w"> </span><span class="o">--</span><span class="p">&gt;</span><span class="w"> </span><span class="nx">FTP</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="nx">cloud</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">[</span><span class="nx">Example</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="nx">database</span><span class="w"> </span><span class="s">&#34;MySql&#34;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">folder</span><span class="w"> </span><span class="s">&#34;This is my folder&#34;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">[</span><span class="nx">Folder</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nx">frame</span><span class="w"> </span><span class="s">&#34;Foo&#34;</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">[</span><span class="nx">Frame</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">Another</span><span class="w"> </span><span class="nx">Component</span><span class="p">]</span><span class="w"> </span><span class="o">--</span><span class="p">&gt;</span><span class="w"> </span><span class="p">[</span><span class="nx">Example</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">Example</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">--</span><span class="p">&gt;</span><span class="w"> </span><span class="p">[</span><span class="nx">Folder</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">Folder</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">--</span><span class="p">&gt;</span><span class="w"> </span><span class="p">[</span><span class="nx">Frame</span><span class="w"> </span><span class="mi">4</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">@</span><span class="nx">enduml</span><span class="w">
+</span></span></span></code></pre></div><p><img src="/images/graph-5.png" alt=""></p>
 
     </div>
 
@@ -334,7 +369,7 @@ endif
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -352,13 +387,10 @@ endif
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -369,7 +401,10 @@ endif
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

@@ -20,14 +20,18 @@
 You will find out:
 - what two computer science courses were most useful in his university studies
 (one that was not really a comp-sci and one he decided to drop)
-- why is it tough to be an in-house programmer" /><meta name="keywords" content="blog, Miro" />
+- why is it tough to be an in-house programmer
+- why is the quality of many in-house systems so bad
+- what is this &#34;quality thing&#34; anyway
+- why is specification futile
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2007-12-20-joels-gems/" />
@@ -38,40 +42,52 @@ You will find out:
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Joel&#39;s gems" />
-<meta property="og:description" content="One of the most readable, original blogers out there, writing on software development practice and techniques - Joel Spolsky - published an excellent 3 part Talk at Yale: Part1, Part2 and Part3.
+<meta property="og:url" content="https://miroadamy.com/posts/2007-12-20-joels-gems/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Joel&#39;s gems">
+	<meta property="og:description" content="One of the most readable, original blogers out there, writing on software development practice and techniques - Joel Spolsky - published an excellent 3 part Talk at Yale: Part1, Part2 and Part3.
 You will find out:
 - what two computer science courses were most useful in his university studies
 (one that was not really a comp-sci and one he decided to drop)
-- why is it tough to be an in-house programmer" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2007-12-20-joels-gems/" />
-<meta property="article:published_time" content="2007-12-20T01:51:31-05:00" />
-<meta property="article:modified_time" content="2007-12-20T01:51:31-05:00" />
-<meta itemprop="name" content="Joel&#39;s gems">
-<meta itemprop="description" content="One of the most readable, original blogers out there, writing on software development practice and techniques - Joel Spolsky - published an excellent 3 part Talk at Yale: Part1, Part2 and Part3.
+- why is it tough to be an in-house programmer
+- why is the quality of many in-house systems so bad
+- what is this &#34;quality thing&#34; anyway
+- why is specification futile">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2007-12-20T01:51:31-05:00">
+		<meta property="article:modified_time" content="2007-12-20T01:51:31-05:00">
+		<meta property="article:tag" content="Blog">
+
+	<meta itemprop="name" content="Joel&#39;s gems">
+	<meta itemprop="description" content="One of the most readable, original blogers out there, writing on software development practice and techniques - Joel Spolsky - published an excellent 3 part Talk at Yale: Part1, Part2 and Part3.
 You will find out:
 - what two computer science courses were most useful in his university studies
 (one that was not really a comp-sci and one he decided to drop)
-- why is it tough to be an in-house programmer">
-<meta itemprop="datePublished" content="2007-12-20T01:51:31-05:00" />
-<meta itemprop="dateModified" content="2007-12-20T01:51:31-05:00" />
-<meta itemprop="wordCount" content="97">
-
-
-
-<meta itemprop="keywords" content="blog," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Joel&#39;s gems"/>
-<meta name="twitter:description" content="One of the most readable, original blogers out there, writing on software development practice and techniques - Joel Spolsky - published an excellent 3 part Talk at Yale: Part1, Part2 and Part3.
+- why is it tough to be an in-house programmer
+- why is the quality of many in-house systems so bad
+- what is this &#34;quality thing&#34; anyway
+- why is specification futile">
+	<meta itemprop="datePublished" content="2007-12-20T01:51:31-05:00">
+	<meta itemprop="dateModified" content="2007-12-20T01:51:31-05:00">
+	<meta itemprop="wordCount" content="97">
+	<meta itemprop="keywords" content="Blog">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Joel&#39;s gems">
+	<meta name="twitter:description" content="One of the most readable, original blogers out there, writing on software development practice and techniques - Joel Spolsky - published an excellent 3 part Talk at Yale: Part1, Part2 and Part3.
 You will find out:
 - what two computer science courses were most useful in his university studies
 (one that was not really a comp-sci and one he decided to drop)
-- why is it tough to be an in-house programmer"/>
+- why is it tough to be an in-house programmer
+- why is the quality of many in-house systems so bad
+- what is this &#34;quality thing&#34; anyway
+- why is specification futile">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -108,12 +124,21 @@ You will find out:
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -130,6 +155,7 @@ You will find out:
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -227,7 +253,7 @@ You will find out:
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -245,13 +271,10 @@ You will find out:
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -262,7 +285,10 @@ You will find out:
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

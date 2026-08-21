@@ -1,64 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>europe on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/europe/</link>
-    <description>Recent content in europe on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 05 Dec 2019 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/europe/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>BOTD - Blog of the Day</title>
-      <link>https://miroadamy.com/posts/2019-12-05-silvias-blog/</link>
-      <pubDate>Thu, 05 Dec 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2019-12-05-silvias-blog/</guid>
-      <description>Today&amp;rsquo;s blog of the day is a special one. It does not deal with cloud, DevOps or distributed systems. The theme of the blog is travel, life of digital nomad and observations on life from a perspective of a smart young woman, working as Online English teacher and travelling a lot while doing so - https://bookandtravel.blog/
-What makes this blog dear and interesting to me is that it&amp;rsquo;s author is my daughter Silvia.</description>
-    </item>
-    
-    <item>
-      <title>Finland Män</title>
-      <link>https://miroadamy.com/posts/2019-07-18-finland-man/</link>
-      <pubDate>Tue, 16 Jul 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2019-07-18-finland-man/</guid>
-      <description>Lost and then found again - here:https://angrytouristblog.blogspot.com/2015/10/rejoice-finland-man-is-back.html
-Here is the copy, just in case
-Rejoice! The Finland Män is back! Source
-Finland Män Not Like Smalltalk. Is Horror.
-Finland Män not kän underständ smalltalk. When kuud silense, samwan open mouth, silense destroid, why do tis?
-One time Finland Män ko tu bar. Finland Män sit ät kounter, entshoi trink, look onli mopile phone. Is kuud silense. Then kam womän nekst tu Finland Män.</description>
-    </item>
-    
-    <item>
-      <title>Europe 2007 - 1</title>
-      <link>https://miroadamy.com/posts/2007-08-20-europe-2007-1/</link>
-      <pubDate>Mon, 20 Aug 2007 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-08-20-europe-2007-1/</guid>
-      <description>Europe 2007 - 1: Switzerland, Lower Engadin The flight went pretty quickly. It was less than 7 hours, anyway. We crossed the night and the Atlantic in a short time and landed at 6 AM in rainy, wet Zurich.
-The car I have retrieved from Europa car was Spanish Volkswagen make – Seat Leon. According the specification, it was a “medium size car”. And it maybe was, for European circumstances. For me it felt fairly small – our luggage did barely fit into the trunk.</description>
-    </item>
-    
-    <item>
-      <title>Europe 2007 - 2</title>
-      <link>https://miroadamy.com/posts/2007-08-20-europe-2007-2/</link>
-      <pubDate>Mon, 20 Aug 2007 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-08-20-europe-2007-2/</guid>
-      <description>Europe 2007 - 2: Südtirol and Verona Welcome to Italy: Verona After the breakfast, we took off from Scuol direction Martina, via brief drive through Austria to Italy. If I would not consult the map, I would barely noticed the border crossing, because there was no passport control on neither of the Switzerland-Austria or Austria-Italy border. You will not really notice that you have left Switzerland either, unless you notice the prices on gas stations being suddenly in Euro.</description>
-    </item>
-    
-    <item>
-      <title>Europe 2007 - 3</title>
-      <link>https://miroadamy.com/posts/2007-08-20-europe-2007-3/</link>
-      <pubDate>Mon, 20 Aug 2007 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-08-20-europe-2007-3/</guid>
-      <description>Europe 2007 - 3: Pisa, Tirrenia and Firenze Pisa and Firenze After wonderful evening in Verona, the next day after a very good breakfast (they even had whole-wheat breads), we spend few hours in the garden of the hotel and taking pictures of the peacocks and around 10:30 we left towards the coast, south and the leaning tower.
-The road we took was mostly on toll highways – the directions in Google maps were very useful.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Europe on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/europe/</link>
+		<description>Recent content in Europe on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 05 Dec 2019 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/europe/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>BOTD - Blog of the Day</title>
+				<link>https://miroadamy.com/posts/2019-12-05-silvias-blog/</link>
+				<pubDate>Thu, 05 Dec 2019 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2019-12-05-silvias-blog/</guid>
+				<description>&lt;p&gt;Today&amp;rsquo;s blog of the day is a special one. It does not deal with cloud, DevOps or distributed systems. The theme of the blog is travel, life of digital nomad and observations on life from a perspective of a smart young woman, working as Online English teacher and travelling a lot while doing so - &lt;a href=&#34;https://bookandtravel.blog/&#34;&gt;https://bookandtravel.blog/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;What makes this blog dear and interesting to me is that it&amp;rsquo;s author is my daughter Silvia. What could make the blog interesting and valuable for other audience (especially those learning English who are interested in personal development) is the format of the entries - as they combine reading and language teaching. Each post contains 10-20 emphasized words or expressions that are explained in footnotes - check &lt;a href=&#34;https://bookandtravel.blog/2019/11/19/what-traveling-really-means/&#34;&gt;this one&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Finland Män</title>
+				<link>https://miroadamy.com/posts/2019-07-18-finland-man/</link>
+				<pubDate>Tue, 16 Jul 2019 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2019-07-18-finland-man/</guid>
+				<description>&lt;p&gt;Lost and then found again - here:https://angrytouristblog.blogspot.com/2015/10/rejoice-finland-man-is-back.html&lt;/p&gt;&#xA;&lt;p&gt;Here is the copy, just in case&lt;/p&gt;&#xA;&lt;h1 id=&#34;rejoice-the-finland-män-is-back&#34;&gt;Rejoice! The Finland Män is back!&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://angrytouristblog.blogspot.com/2015/10/rejoice-finland-man-is-back.html&#34; title=&#34;Permalink to Rejoice! The Finland Män is back!&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Finland Män Not Like Smalltalk. Is Horror.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Finland Män not kän underständ smalltalk. When kuud silense, samwan open mouth, silense destroid, why do tis?&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;One time Finland Män&lt;/strong&gt; ko tu bar. Finland Män sit ät kounter, entshoi trink, look onli mopile phone. Is kuud silense.&#xA;Then kam womän nekst tu Finland Män. She äsk: “Do you kam hiör often?”&#xA;Finland Män pärälised. Is horror. Why she äsk tis? Is häv tu reäkt samhau?&#xA;Finland Män luuk onli mopile phone. Tsek emails. Kiip luuking mopile phone. Then änssör: “Why you äsk? Is you kondukting sam sörvey?”&#xA;Womän not say enitink. She ko öwei. Is kuud silense.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Europe 2007 - 1</title>
+				<link>https://miroadamy.com/posts/2007-08-20-europe-2007-1/</link>
+				<pubDate>Mon, 20 Aug 2007 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2007-08-20-europe-2007-1/</guid>
+				<description>&lt;h1 id=&#34;europe-2007---1-switzerland-lower-engadin&#34;&gt;Europe 2007 - 1: Switzerland, Lower Engadin&lt;/h1&gt;&#xA;&lt;p&gt;The flight went pretty quickly. It was less than 7 hours, anyway. We crossed the night and the Atlantic in a short time and landed at 6 AM in rainy, wet &lt;a href=&#34;http://en.wikipedia.org/wiki/Z%C3%BCrich&#34;&gt;Zurich&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The car I have retrieved from Europa car was Spanish Volkswagen make – &lt;a href=&#34;http://en.wikipedia.org/wiki/SEAT_Le%C3%B3n&#34;&gt;Seat Leon&lt;/a&gt;. According the specification, it was a “medium size car”. And it maybe was, for European circumstances. For me it felt fairly small – our luggage did barely fit into the trunk. If we had more than two normal size and one half size cases, we would be in trouble. One small piece had to fit behind my seat.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Europe 2007 - 2</title>
+				<link>https://miroadamy.com/posts/2007-08-20-europe-2007-2/</link>
+				<pubDate>Mon, 20 Aug 2007 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2007-08-20-europe-2007-2/</guid>
+				<description>&lt;h1 id=&#34;europe-2007---2-südtirol-and-verona&#34;&gt;Europe 2007 - 2: Südtirol and Verona&lt;/h1&gt;&#xA;&lt;h2 id=&#34;welcome-to-italy-verona&#34;&gt;Welcome to Italy: Verona&lt;/h2&gt;&#xA;&lt;p&gt;After the breakfast, we took off from Scuol direction Martina, via brief drive through Austria to Italy. If I would not consult the map, I would barely noticed the border crossing, because there was no passport control on neither of the Switzerland-Austria or Austria-Italy border. You will not really notice that you have left Switzerland either, unless you notice the prices on gas stations being suddenly in Euro. And you will definitely not notice you are in Italy for quite a some time as the villages will still look very German (or Austrian, if you wish), with signs in German (and often in gothic Schwabach letters). This region – &lt;a href=&#34;http://en.wikipedia.org/wiki/Trentino-Alto_Adige/S%C3%BCdtirol&#34;&gt;south Tirol aka Sud-Tirol aka Trentino – Alto Adige&lt;/a&gt; – is ethnically and historically part of Austrian empire and is part of Italy for less than 100 years.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Europe 2007 - 3</title>
+				<link>https://miroadamy.com/posts/2007-08-20-europe-2007-3/</link>
+				<pubDate>Mon, 20 Aug 2007 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2007-08-20-europe-2007-3/</guid>
+				<description>&lt;h1 id=&#34;europe-2007---3-pisa-tirrenia-and-firenze&#34;&gt;Europe 2007 - 3: Pisa, Tirrenia and Firenze&lt;/h1&gt;&#xA;&lt;h2 id=&#34;pisa-and-firenze&#34;&gt;Pisa and Firenze&lt;/h2&gt;&#xA;&lt;p&gt;After wonderful evening in Verona, the next day after a very good breakfast (they even had whole-wheat breads), we spend few hours in the garden of the hotel and taking pictures of the peacocks and around 10:30 we left towards the coast, south and the leaning tower.&lt;/p&gt;&#xA;&lt;p&gt;The road we took was mostly on toll highways – the directions in Google maps were very useful. Not far away from Pisa you start to see the oleanders in the space dividing the highway directions – something that in my mind was always intimately related to being in Italy.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

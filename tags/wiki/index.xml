@@ -1,50 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>wiki on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/wiki/</link>
-    <description>Recent content in wiki on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 07 Apr 2012 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/wiki/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>GitHub &#43; Gollum vs BitBucket Wiki</title>
-      <link>https://miroadamy.com/posts/2012-04-07-gollum/</link>
-      <pubDate>Sat, 07 Apr 2012 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2012-04-07-gollum/</guid>
-      <description> both Wikis are backed by Git repo both allow local edit  Gollum See https://github.com/github/gollum#readme
-Installation: http://alblue.bandlem.com/2011/05/git-tip-of-week-gollum.html
- sudo gem install gollum
- Running git init TestWiki gollum --page-file-dir wiki TestWiki openurl http://localhost:4567 Parsers - separate install gem install rdiscount gem install wikicloth Get Wiki for repo git clone URL URL: - git@github.com:radegast/dotvim.wiki.git R+W - https://radegast@github.com/radegast/dotvim.wiki.git R+W - git://github.com/radegast/dotvim.wiki.git R Pros  multiple markups supports Markdown List of all pages  Questions  How to link to page in subdir  </description>
-    </item>
-    
-    <item>
-      <title>Using Wiki markup without a Wiki</title>
-      <link>https://miroadamy.com/posts/2007-05-17-using-wiki-markup-without-a-wiki/</link>
-      <pubDate>Thu, 17 May 2007 22:10:44 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-05-17-using-wiki-markup-without-a-wiki/</guid>
-      <description>Even with having Wiki as the main documentation repository, not all documentation ends up in a Wiki. Some documentation needs to be managed as part of the source tree - e.g. Readme&#39;s, compilation instructions and similar. This information is usually either plain text or in some form of text processor format, mostly Microsoft Word compatible. Both have their selection of problems. Word documents are large, bloated, harder to version controlled and not readable in shell environment (try to cat or tail Word document :-)).</description>
-    </item>
-    
-    <item>
-      <title>Project management using Wiki</title>
-      <link>https://miroadamy.com/posts/2007-03-05-project-management-using-wiki/</link>
-      <pubDate>Mon, 05 Mar 2007 22:50:04 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-03-05-project-management-using-wiki/</guid>
-      <description>It has been half a year in March since we have started to use Wiki as main project management, collaboration and content creation tool. I think this is period long enough to look back and summarize what we have discovered, what worked and what not. This was not the first attempt to use Wiki in this context - however, it was first case when the result can be considered full success.</description>
-    </item>
-    
-    <item>
-      <title>Wiki&#39;s are everywhere ...</title>
-      <link>https://miroadamy.com/posts/2006-11-21-wikis-are-everywhere/</link>
-      <pubDate>Tue, 21 Nov 2006 21:05:25 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2006-11-21-wikis-are-everywhere/</guid>
-      <description>Since the beginning of the biometric security project, we are using an excellent enterprise-level Wiki Confluence as knowledge repository and main team communication tool. I was not sure at the beginning, how will the Wiki approach work for all the people on the team, mostly because once before I already tried it and had not much success of introducing the idea. It was few years ago and the Wiki engine I used were nowhere in the same league as Confluence, but main problem at that time was probably the users&#39; mindset.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Wiki on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/wiki/</link>
+		<description>Recent content in Wiki on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sat, 07 Apr 2012 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/wiki/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>GitHub &#43; Gollum vs BitBucket Wiki</title>
+				<link>https://miroadamy.com/posts/2012-04-07-gollum/</link>
+				<pubDate>Sat, 07 Apr 2012 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2012-04-07-gollum/</guid>
+				<description>&lt;ul&gt;&#xA;&lt;li&gt;both Wikis are backed by Git repo&lt;/li&gt;&#xA;&lt;li&gt;both allow local edit&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;gollum&#34;&gt;Gollum&lt;/h2&gt;&#xA;&lt;p&gt;See &lt;a href=&#34;https://github.com/github/gollum#readme&#34;&gt;https://github.com/github/gollum#readme&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Installation: &lt;a href=&#34;http://alblue.bandlem.com/2011/05/git-tip-of-week-gollum.html&#34;&gt;http://alblue.bandlem.com/2011/05/git-tip-of-week-gollum.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;sudo gem install gollum&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h3 id=&#34;running&#34;&gt;Running&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git init TestWiki&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gollum --page-file-dir wiki TestWiki&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;openurl http://localhost:4567&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;parsers---separate-install&#34;&gt;Parsers - separate install&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gem install rdiscount&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gem install wikicloth&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;get-wiki-for-repo&#34;&gt;Get Wiki for repo&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git clone URL&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;URL:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- git@github.com:radegast/dotvim.wiki.git R+W&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- https://radegast@github.com/radegast/dotvim.wiki.git R+W&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;- git://github.com/radegast/dotvim.wiki.git R&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;pros&#34;&gt;Pros&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;multiple markups&lt;/li&gt;&#xA;&lt;li&gt;supports Markdown&lt;/li&gt;&#xA;&lt;li&gt;List of all pages&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;questions&#34;&gt;Questions&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;How to link to page in subdir&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Using Wiki markup without a Wiki</title>
+				<link>https://miroadamy.com/posts/2007-05-17-using-wiki-markup-without-a-wiki/</link>
+				<pubDate>Thu, 17 May 2007 22:10:44 -0400</pubDate>
+				<guid>https://miroadamy.com/posts/2007-05-17-using-wiki-markup-without-a-wiki/</guid>
+				<description>&lt;p&gt;Even with having Wiki as the main documentation repository,  not all documentation ends up in a Wiki. Some documentation needs to be managed as part of the source tree - e.g. Readme&#39;s, compilation instructions and similar. This information is usually either plain text or in some form of text processor format, mostly Microsoft Word compatible. Both have their selection of problems. Word documents are large, bloated, harder to version controlled and not readable in shell environment (try to cat or tail Word document :-)). The plain text format lacks visual structure and without headlines, bold/italic, font sizes etc is harder read.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Project management using Wiki</title>
+				<link>https://miroadamy.com/posts/2007-03-05-project-management-using-wiki/</link>
+				<pubDate>Mon, 05 Mar 2007 22:50:04 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2007-03-05-project-management-using-wiki/</guid>
+				<description>&lt;p&gt;It has been half a year in March since we have started to use Wiki as main project management, collaboration and content creation tool. I think this is period long enough to look back and summarize what we have discovered, what worked and what not. This was not the first attempt to use Wiki in this context - however, it was first case when the result can be considered full success. I have tried (both in at-home and project environments) several Wiki implementations, notably &lt;a href=&#34;http://www.jspwiki.org/&#34;&gt;JSPWiki&lt;/a&gt;,&lt;a href=&#34;http://moinmoin.wikiwikiweb.de/&#34;&gt;MoinMoin&lt;/a&gt;, &lt;a href=&#34;http://www.flexwiki.com/&#34;&gt;FlexWiki&lt;/a&gt;, Wiki module for DotNetNuke and &lt;a href=&#34;http://www.mediawiki.org/wiki/MediaWiki&#34;&gt;MediaWiki&lt;/a&gt; over period of about 5 years. During this process  I have discovered by trial and error, which features are important in software development project environment and what are the conditions/consequences of using Wiki as main information hub.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Wiki&#39;s are everywhere ...</title>
+				<link>https://miroadamy.com/posts/2006-11-21-wikis-are-everywhere/</link>
+				<pubDate>Tue, 21 Nov 2006 21:05:25 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2006-11-21-wikis-are-everywhere/</guid>
+				<description>&lt;p&gt;Since the beginning of the biometric security project, we are using an excellent enterprise-level Wiki &lt;a href=&#34;http://www.atlassian.com/software/confluence/&#34;&gt;Confluence&lt;/a&gt; as knowledge repository and main team communication tool. I was not sure at the beginning, how will the Wiki approach work for all the people on the team, mostly because once before I already tried it and had not much success of introducing the idea. It was few years ago and the Wiki engine I used were nowhere in the same league as Confluence, but main problem at that time was probably the users&#39; mindset. I am happy to report that this time it worked really really well. I am not sure whether it was because of the fantastic user friendly features and capabilities of  Confluence, or because the general awareness shifted thanks to sites like Wikipedia and people got used to the idea of user created content ... The truth is that Wiki&#39;s are mainstream now - inside or outside of the enterprise space.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

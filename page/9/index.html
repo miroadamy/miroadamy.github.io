@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -36,20 +36,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Miro&#39;s World" />
-<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
-<meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Miro&#39;s World"/>
-<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
+<meta property="og:url" content="https://miroadamy.com/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Miro&#39;s World">
+	<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+	<meta itemprop="name" content="Miro&#39;s World">
+	<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta itemprop="datePublished" content="2026-08-21T14:31:54+00:00">
+	<meta itemprop="dateModified" content="2026-08-21T14:31:54+00:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Miro&#39;s World">
+	<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,12 +91,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -108,6 +122,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -116,124 +131,884 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-11-28-aws/">AWS Certified Developer - Associate</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-05-22-ssh-issue/">How to solve &#39;Agent admitted failure to sign using the key&#39;</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2018-10-28 </span>
+      <span class="post-time"> 2015-05-22 </span>
       <div class="post-category">
           <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 6 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 328 words </span>
+        <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Got the second certification today
-https://www.certmetrics.com/amazon/public/badge.aspx?i=2&amp;t=c&amp;d=2018-11-28&amp;ci=AWS00261816
+      <p>After re-creating the SSH key, I got the above error from Gitolite.</p>
+<p>Full trace:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  TWC  ssh -v thinkwrap@pensieve.thinkwrap.com
+</span></span><span class="line"><span class="cl">OpenSSH_5.3p1, OpenSSL 1.0.1e-fips 11 Feb 2013
+</span></span><span class="line"><span class="cl">debug1: Reading configuration data /etc/ssh/ssh_config
+</span></span><span class="line"><span class="cl">debug1: Applying options for *
+</span></span><span class="line"><span class="cl">debug1: Connecting to pensieve.thinkwrap.com [24.137.198.18] port 22.
+</span></span><span class="line"><span class="cl">debug1: Connection established.
+</span></span><span class="line"><span class="cl">debug1: identity file /home/thinkwrap/.ssh/identity type -1
+</span></span><span class="line"><span class="cl">debug1: identity file /home/thinkwrap/.ssh/identity-cert type -1
+</span></span><span class="line"><span class="cl">debug1: identity file /home/thinkwrap/.ssh/id_rsa type 1
+</span></span><span class="line"><span class="cl">debug1: identity file /home/thinkwrap/.ssh/id_rsa-cert type -1
+</span></span><span class="line"><span class="cl">debug1: identity file /home/thinkwrap/.ssh/id_dsa type -1
+</span></span><span class="line"><span class="cl">debug1: identity file /home/thinkwrap/.ssh/id_dsa-cert type -1
+</span></span><span class="line"><span class="cl">debug1: Remote protocol version 2.0, remote software version OpenSSH_5.3
+</span></span><span class="line"><span class="cl">debug1: match: OpenSSH_5.3 pat OpenSSH*
+</span></span><span class="line"><span class="cl">debug1: Enabling compatibility mode for protocol 2.0
+</span></span><span class="line"><span class="cl">debug1: Local version string SSH-2.0-OpenSSH_5.3
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_KEXINIT sent
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_KEXINIT received
+</span></span><span class="line"><span class="cl">debug1: kex: server-&gt;client aes128-ctr hmac-md5 none
+</span></span><span class="line"><span class="cl">debug1: kex: client-&gt;server aes128-ctr hmac-md5 none
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_KEX_DH_GEX_REQUEST(1024&lt;1024&lt;8192) sent
+</span></span><span class="line"><span class="cl">debug1: expecting SSH2_MSG_KEX_DH_GEX_GROUP
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_KEX_DH_GEX_INIT sent
+</span></span><span class="line"><span class="cl">debug1: expecting SSH2_MSG_KEX_DH_GEX_REPLY
+</span></span><span class="line"><span class="cl">debug1: Host &#39;pensieve.thinkwrap.com&#39; is known and matches the RSA host key.
+</span></span><span class="line"><span class="cl">debug1: Found key in /home/thinkwrap/.ssh/known_hosts:2
+</span></span><span class="line"><span class="cl">debug1: ssh_rsa_verify: signature correct
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_NEWKEYS sent
+</span></span><span class="line"><span class="cl">debug1: expecting SSH2_MSG_NEWKEYS
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_NEWKEYS received
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_SERVICE_REQUEST sent
+</span></span><span class="line"><span class="cl">debug1: SSH2_MSG_SERVICE_ACCEPT received
+</span></span><span class="line"><span class="cl">debug1: Authentications that can continue: publickey,gssapi-keyex,gssapi-with-mic,password
+</span></span><span class="line"><span class="cl">debug1: Next authentication method: gssapi-keyex
+</span></span><span class="line"><span class="cl">debug1: No valid Key exchange context
+</span></span><span class="line"><span class="cl">debug1: Next authentication method: gssapi-with-mic
+</span></span><span class="line"><span class="cl">debug1: Unspecified GSS failure.  Minor code may provide more information
+</span></span><span class="line"><span class="cl">Credentials cache file &#39;/tmp/krb5cc_500&#39; not found
+</span></span><span class="line"><span class="cl">debug1: Unspecified GSS failure.  Minor code may provide more information
+</span></span><span class="line"><span class="cl">Credentials cache file &#39;/tmp/krb5cc_500&#39; not found
+</span></span><span class="line"><span class="cl">debug1: Unspecified GSS failure.  Minor code may provide more information
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">debug1: Unspecified GSS failure.  Minor code may provide more information
+</span></span><span class="line"><span class="cl">Credentials cache file &#39;/tmp/krb5cc_500&#39; not found
+</span></span><span class="line"><span class="cl">debug1: Next authentication method: publickey
+</span></span><span class="line"><span class="cl">debug1: Offering public key: /home/thinkwrap/.ssh/id_rsa
+</span></span><span class="line"><span class="cl">debug1: Remote: Forced command: /home/thinkwrap/gitolite/src/gitolite-shell miro.adamy+ATG11-TrainingVM
+</span></span><span class="line"><span class="cl">debug1: Remote: Port forwarding disabled.
+</span></span><span class="line"><span class="cl">debug1: Remote: X11 forwarding disabled.
+</span></span><span class="line"><span class="cl">debug1: Remote: Agent forwarding disabled.
+</span></span><span class="line"><span class="cl">debug1: Remote: Pty allocation disabled.
+</span></span><span class="line"><span class="cl">debug1: Server accepts key: pkalg ssh-rsa blen 277
+</span></span><span class="line"><span class="cl">Agent admitted failure to sign using the key.
+</span></span><span class="line"><span class="cl">debug1: Trying private key: /home/thinkwrap/.ssh/identity
+</span></span><span class="line"><span class="cl">debug1: Trying private key: /home/thinkwrap/.ssh/id_dsa
+</span></span><span class="line"><span class="cl">debug1: Next authentication method: password
+</span></span><span class="line"><span class="cl">thinkwrap@pensieve.thinkwrap.com&#39;s password:
+</span></span></code></pre></div><h1 id="solution">Solution</h1>
+<ol>
+<li>
+<p>log-out, log on</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2018-11-28-aws/" class="read-more-link">Read more...</a>
+      <a href="/posts/2015-05-22-ssh-issue/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-11-17-panpan/">Happy birthday Czechoslovakia</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-04-11-jboss-shutdown/">Fixing the shutdown problem with JBoss</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2018-10-28 </span>
+      <span class="post-time"> 2015-04-11 </span>
       <div class="post-category">
-          <a href="/categories/general/"> general </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 89 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 307 words </span>
+        <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Czechoslovakia would be 100 today 1918-10-28 - 1992-12-31 We (both nations) we lucky to separate paths the peaceful way and at the end of the day, both countries are in the EU, NATO and relations between Czechs and Slovak are probably the best ever because the quarrels over budget and transfers ended.
-It is a bit nostalgic though, admitting that we were the last naturally bilingual generation that could read a book and a week later not to be 100% sure whether it was in Czech or in Slovak.
+      <p>Observed at QA environment. During automated shutdown sequence, the exception was thrown:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">$</span> <span class="n">bin</span><span class="o">/</span><span class="n">gdi</span><span class="o">-</span><span class="n">qa</span><span class="o">-</span><span class="n">com1</span><span class="o">.</span><span class="n">sh</span> <span class="n">stop</span>
+</span></span><span class="line"><span class="cl"><span class="n">JBOSS_CMD_STOP</span> <span class="o">=</span> <span class="n">java</span> <span class="o">-</span><span class="n">classpath</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">jboss</span><span class="o">/</span><span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">shutdown</span><span class="o">.</span><span class="n">jar</span><span class="p">:</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">jboss</span><span class="o">/</span><span class="n">jboss</span><span class="o">-</span><span class="n">as</span><span class="o">/</span><span class="n">client</span><span class="o">/</span><span class="n">jnet</span><span class="o">.</span><span class="n">jar</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">Shutdown</span> <span class="o">--</span><span class="n">shutdown</span> <span class="o">--</span><span class="n">user</span><span class="o">=</span><span class="n">admin</span> <span class="o">--</span><span class="n">password</span><span class="o">=</span><span class="n">admin</span> <span class="o">-</span><span class="n">s</span> <span class="n">jnp</span><span class="p">:</span><span class="o">//</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span>
+</span></span><span class="line"><span class="cl"><span class="n">Exception</span> <span class="ow">in</span> <span class="n">thread</span> <span class="s2">&#34;main&#34;</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">CommunicationException</span><span class="p">:</span> <span class="n">Could</span> <span class="ow">not</span> <span class="n">obtain</span> <span class="n">connection</span> <span class="n">to</span> <span class="n">any</span> <span class="n">of</span> <span class="n">these</span> <span class="n">urls</span><span class="p">:</span> <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span> <span class="p">[</span><span class="n">Root</span> <span class="n">exception</span> <span class="n">is</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">CommunicationException</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">connect</span> <span class="n">to</span> <span class="n">server</span> <span class="o">/</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span> <span class="p">[</span><span class="n">Root</span> <span class="n">exception</span> <span class="n">is</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">ServiceUnavailableException</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">connect</span> <span class="n">to</span> <span class="n">server</span> <span class="o">/</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span> <span class="p">[</span><span class="n">Root</span> <span class="n">exception</span> <span class="n">is</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">ConnectException</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">refused</span><span class="p">]]]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">checkRef</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1763</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">693</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">686</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">InitialContext</span><span class="o">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">InitialContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">392</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jboss</span><span class="o">.</span><span class="n">Shutdown</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">Shutdown</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">219</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Caused</span> <span class="n">by</span><span class="p">:</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">CommunicationException</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">connect</span> <span class="n">to</span> <span class="n">server</span> <span class="o">/</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span> <span class="p">[</span><span class="n">Root</span> <span class="n">exception</span> <span class="n">is</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">ServiceUnavailableException</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">connect</span> <span class="n">to</span> <span class="n">server</span> <span class="o">/</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span> <span class="p">[</span><span class="n">Root</span> <span class="n">exception</span> <span class="n">is</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">ConnectException</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">refused</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">getServer</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">335</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">checkRef</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">1734</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span> <span class="mi">4</span> <span class="n">more</span>
+</span></span><span class="line"><span class="cl"><span class="n">Caused</span> <span class="n">by</span><span class="p">:</span> <span class="n">javax</span><span class="o">.</span><span class="n">naming</span><span class="o">.</span><span class="n">ServiceUnavailableException</span><span class="p">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">connect</span> <span class="n">to</span> <span class="n">server</span> <span class="o">/</span><span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">1099</span> <span class="p">[</span><span class="n">Root</span> <span class="n">exception</span> <span class="n">is</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">ConnectException</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">refused</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">getServer</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">305</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span> <span class="mi">5</span> <span class="n">more</span>
+</span></span><span class="line"><span class="cl"><span class="n">Caused</span> <span class="n">by</span><span class="p">:</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">ConnectException</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">refused</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">socketConnect</span><span class="p">(</span><span class="n">Native</span> <span class="n">Method</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">doConnect</span><span class="p">(</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">351</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">connectToAddress</span><span class="p">(</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">211</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">PlainSocketImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">200</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">SocksSocketImpl</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">SocksSocketImpl</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">366</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="n">net</span><span class="o">.</span><span class="n">Socket</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">Socket</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">529</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">TimedSocketFactory</span><span class="o">.</span><span class="n">createSocket</span><span class="p">(</span><span class="n">TimedSocketFactory</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">97</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">TimedSocketFactory</span><span class="o">.</span><span class="n">createSocket</span><span class="p">(</span><span class="n">TimedSocketFactory</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">82</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="n">jnp</span><span class="o">.</span><span class="n">interfaces</span><span class="o">.</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">getServer</span><span class="p">(</span><span class="n">NamingContext</span><span class="o">.</span><span class="n">java</span><span class="p">:</span><span class="mi">301</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="o">...</span> <span class="mi">5</span> <span class="n">more</span>
+</span></span><span class="line"><span class="cl"><span class="n">To</span> <span class="n">watch</span> <span class="n">the</span> <span class="nb">log</span><span class="p">:</span> <span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="nb">log</span><span class="o">/</span><span class="n">atg</span><span class="o">/</span><span class="n">gdi</span><span class="o">-</span><span class="n">qa</span><span class="o">-</span><span class="n">com1</span><span class="o">.</span><span class="n">log</span>
+</span></span></code></pre></div><p>The conflict of 1099 between Endeca and ATG was resolved according <code>Fixing port conflict on 1099 between out-of-the-box Endeca and JBOSS</code> - the actual port was 11199</p>
+<p><img src="/images/jboss-fix-1.png" alt=""></p>
+<p>The environment variable for JBOSS instance were OK</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2018-11-17-panpan/" class="read-more-link">Read more...</a>
+      <a href="/posts/2015-04-11-jboss-shutdown/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-10-24-dockerhub-tool/">Useful tool for Dockerhub</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-03-20-git-project-stat/">Git project statistic tool</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2018-10-24 </span>
+      <span class="post-time"> 2015-03-20 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> DevOps </a>
-          <a href="/categories/tools/"> tools </a>
+          <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 187 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 423 words </span>
+        <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Skopeo I have stumbled upon this tool: https://github.com/containers/skopeo - command line tools for manipulation with Docker images and Docker image registries.
-It can work with OCI images as well as the original Docker v2 images.
-Installation brew install skopeo Usage ➜ deploy-2018-10-24 skopeo --override-os=linux inspect docker://docker.io/fedora { &#34;Name&#34;: &#34;docker.io/library/fedora&#34;, &#34;Digest&#34;: &#34;sha256:b41cd083421dd7aa46d619e958b75a026a5d5733f08f14ba6d53943d6106ea6d&#34;, &#34;RepoTags&#34;: [ &#34;20&#34;, &#34;21&#34;, &#34;22&#34;, &#34;23&#34;, &#34;24&#34;, &#34;25&#34;, &#34;26-modular&#34;, &#34;26&#34;, &#34;27&#34;, &#34;28&#34;, &#34;29&#34;, &#34;branched&#34;, &#34;heisenbug&#34;, &#34;latest&#34;, &#34;modular&#34;, &#34;rawhide&#34; ], &#34;Created&#34;: &#34;2018-09-07T19:20:02.
+      <h1 id="git-inspector">Git Inspector</h1>
+<p>Python based, requires Python 2.6+</p>
+<p>Works OOTB on Mac</p>
+<h2 id="installation">Installation</h2>
+<ul>
+<li>Download TAR from <a href="https://code.google.com/p/gitinspector/">https://code.google.com/p/gitinspector/</a></li>
+<li>unzipped to</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/opt/gitinspector-0.3.2:
+</span></span><span class="line"><span class="cl">total 52K
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro  999 Jul 29  2013 DESCRIPTION.txt
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro  32K Jun 14  2013 LICENSE.txt
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro   78 Jul  2  2013 MANIFEST.in
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro  681 Jan 13  2014 README.txt
+</span></span><span class="line"><span class="cl">drwxr-xr-x 45 miro 1.5K Mar 20 16:06 gitinspector
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro 1.9K Jan 14  2014 setup.py
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro  110 Jul 27  2013 stdeb.cfg
+</span></span></code></pre></div><ul>
+<li>create symlink to it from <code>~/bin</code> (is on path)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ln -s /opt/gitinspector-0.3.2/gitinspector/gitinspector.py ~/bin/gitinspector.py
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">➜  ~  ll ~/bin | grep gitin
+</span></span><span class="line"><span class="cl">lrwxr-xr-x 1 miro   52 Mar 20 16:06 gitinspector.py -&gt; /opt/gitinspector-0.3.2/gitinspector/gitinspector.py
+</span></span></code></pre></div><h1 id="example">Example</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  gitinspector git:(master) ~/bin/gitinspector.py -Tlr --since=2014-01-01 --until=2015-05-05
+</span></span><span class="line"><span class="cl">Statistical information for the repository &#39;gitinspector&#39; was gathered on 2019/11/27.
+</span></span><span class="line"><span class="cl">The following historical commit information, by author, was found in the repository:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Author                     Commits    Insertions      Deletions    % of changes
+</span></span><span class="line"><span class="cl">Adam Waldenberg                 41           569            249           95.34
+</span></span><span class="line"><span class="cl">Chris Barry                      1             3              3            0.70
+</span></span><span class="line"><span class="cl">Christian Kastner                2             9              5            1.63
+</span></span><span class="line"><span class="cl">Diomidis Spinellis               2             3              3            0.70
+</span></span><span class="line"><span class="cl">Dmitry Dzhus                     1             3              3            0.70
+</span></span><span class="line"><span class="cl">Jon Warghed                      1             1              0            0.12
+</span></span><span class="line"><span class="cl">Yannick Moy                      1             4              3            0.82
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Below are the number of rows from each author that have survived and are still intact in the current revision:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Author                     Rows      Stability          Age       % in comments
+</span></span><span class="line"><span class="cl">Adam Waldenberg             468           82.2          8.7                6.84
+</span></span><span class="line"><span class="cl">Chris Barry                   3          100.0          4.5                0.00
+</span></span><span class="line"><span class="cl">Christian Kastner             8           88.9          3.3                0.00
+</span></span><span class="line"><span class="cl">Diomidis Spinellis            1           33.3          4.0              100.00
+</span></span><span class="line"><span class="cl">Dmitry Dzhus                  3          100.0          2.6                0.00
+</span></span><span class="line"><span class="cl">Jon Warghed                   1          100.0          3.2                0.00
+</span></span><span class="line"><span class="cl">Yannick Moy                   3           75.0          3.7                0.00
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The following history timeline has been gathered from the repository:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Author                  2014-01    2014-02    2014-03    2014-11    2014-12    2015-02
+</span></span><span class="line"><span class="cl">Adam Waldenberg        -+++++++   --++++++   ---+++++  ----+++++  --+++++++   -+++++++
+</span></span><span class="line"><span class="cl">Chris Barry                                                    .
+</span></span><span class="line"><span class="cl">Christian Kastner                                              .
+</span></span><span class="line"><span class="cl">Diomidis Spinellis                                             .
+</span></span><span class="line"><span class="cl">Dmitry Dzhus                                                              .
+</span></span><span class="line"><span class="cl">Jon Warghed                                                    .
+</span></span><span class="line"><span class="cl">Yannick Moy                                                    .
+</span></span><span class="line"><span class="cl">Modified Rows:              170        387          7        223         64          7
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The following responsibilities, by author, were found in the current revision of the repository (comments are excluded from the line count, if possible):
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Adam Waldenberg is mostly responsible for:
+</span></span><span class="line"><span class="cl">   128 gitinspector/metrics.py
+</span></span><span class="line"><span class="cl">    97 gitinspector/blame.py
+</span></span><span class="line"><span class="cl">    30 gitinspector/localization.py
+</span></span><span class="line"><span class="cl">    29 gitinspector/clone.py
+</span></span><span class="line"><span class="cl">    26 gitinspector/terminal.py
+</span></span><span class="line"><span class="cl">    26 gitinspector/basedir.py
+</span></span><span class="line"><span class="cl">    19 gitinspector/changes.py
+</span></span><span class="line"><span class="cl">    17 gitinspector/filtering.py
+</span></span><span class="line"><span class="cl">    16 gitinspector/format.py
+</span></span><span class="line"><span class="cl">    15 gitinspector/gitinspector.py
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Chris Barry is mostly responsible for:
+</span></span><span class="line"><span class="cl">     2 gitinspector/format.py
+</span></span><span class="line"><span class="cl">     1 gitinspector/gravatar.py
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Christian Kastner is mostly responsible for:
+</span></span><span class="line"><span class="cl">     5 gitinspector/basedir.py
+</span></span><span class="line"><span class="cl">     3 gitinspector/format.py
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Dmitry Dzhus is mostly responsible for:
+</span></span><span class="line"><span class="cl">     3 gitinspector/comment.py
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Jon Warghed is mostly responsible for:
+</span></span><span class="line"><span class="cl">     1 gitinspector/changes.py
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Yannick Moy is mostly responsible for:
+</span></span><span class="line"><span class="cl">     3 gitinspector/comment.py
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The extensions below were found in the repository history (extensions used during statistical analysis are marked):
+</span></span><span class="line"><span class="cl">1 css header html po pot [py] txt
+</span></span></code></pre></div>
     </div>
     <div class="read-more">
-      <a href="/posts/2018-10-24-dockerhub-tool/" class="read-more-link">Read more...</a>
+      <a href="/posts/2015-03-20-git-project-stat/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-10-23-google-wifi/">Google Wifi</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-03-10-git-log-output-less/">How to keep git log and less output on the screen</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2018-10-23 </span>
+      <span class="post-time"> 2015-03-10 </span>
       <div class="post-category">
           <a href="/categories/lifehacks/"> lifehacks </a>
           </div>
-        <span class="more-meta"> 58 words </span>
+        <span class="more-meta"> 123 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Installed Google Wifi - three access points. Finally I have good coverage on both floors of the appartment including the upper terrace and will be able to work at night outside during hot summer nights when temperature does not drop under 25.
-The setup was supereasy and iOS app is very well made and gives interesting insights.
-Happy.
+      <p>When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.</p>
+<p>Just for git commands:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git config --global --replace-all core.pager &#34;less -iXFR&#34;
+</span></span></code></pre></div><p>For less globally (including git) - add to .bashrc / .zshrc / etc:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="k">export</span> <span class="n">LESS</span><span class="o">=-</span><span class="n">iXFR</span>
+</span></span></code></pre></div><p>The options we set for less are:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">* -i - ignore case when searching (but respect case if search term contains uppercase letters)
+</span></span><span class="line"><span class="cl">* -X - do not clear screen on exit
+</span></span><span class="line"><span class="cl">* -F - exit if text is less then one screen long
+</span></span><span class="line"><span class="cl">* -R - was on by default on my system, something related to colors
+</span></span></code></pre></div><p>Source: <a href="http://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html">http://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html</a></p>
     </div>
     <div class="read-more">
-      <a href="/posts/2018-10-23-google-wifi/" class="read-more-link">Read more...</a>
+      <a href="/posts/2015-03-10-git-log-output-less/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-10-02-spanish/">Mission (almost) accomplished</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-02-16-grasshoper/">New image that expresses my new undefined job title</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2018-10-02 </span>
+      <span class="post-time"> 2015-02-16 </span>
       <div class="post-category">
-          <a href="/categories/general/"> general </a>
+          <a href="/categories/startuplife/"> startuplife </a>
           </div>
-        <span class="more-meta"> 99 words </span>
+        <span class="more-meta"> 42 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      It&rsquo;s been five years since I started toying with idea to learn first romance language in my collection - despite living in Canada for over 18 years, I never picked up French.
-The learning was slow during 2014 and 2015 (just summer school in Spain and Duolingo) - but it accelerated a lot in last 2 years.
-Fast forward to now: on Sunday while watching Prime (https://en.wikipedia.org/wiki/Prime_(film)) we have decided to switch from English to Spanish (with Spanish subtitles) to enjoy the movie better than in original.
+      <p><img src="/images/grasshopper.png" alt=""></p>
+<p>That is what I do - jump from project to project to topic to project. And back.</p>
+<p>It is uncertain how good is all this - but as they say:</p>
+<blockquote>
+<p>&ldquo;If you cannot do something right, learn to enjoy doing it poorly&rdquo;</p>
+</blockquote>
     </div>
     <div class="read-more">
-      <a href="/posts/2018-10-02-spanish/" class="read-more-link">Read more...</a>
+      <a href="/posts/2015-02-16-grasshoper/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-02-05-unmerged/">Finding unmerged commits in all branches</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-02-05 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 669 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>This one goes beyond git, but is very useful. Ruby script that produces this:</p>
+<p><img src="/images/unmerged.png" alt=""></p>
+<p>Here is the script</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#!/usr/bin/env ruby</span>
+</span></span><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;rubygems&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;term-ansicolor&#39;</span><span class="p">,</span> <span class="s1">&#39;=1.3.0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;term/ansicolor&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GitCommit</span>
+</span></span><span class="line"><span class="cl">  <span class="kp">attr_reader</span> <span class="ss">:content</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@content</span> <span class="o">=</span> <span class="n">content</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">sha</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@content</span><span class="o">.</span><span class="n">split</span><span class="o">[</span><span class="mi">1</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">to_s</span>
+</span></span><span class="line"><span class="cl">    <span class="sb">`git log --pretty=format:&#34;%h %ad %an - %s&#34; </span><span class="si">#{</span><span class="n">sha</span><span class="si">}</span><span class="sb">~1..</span><span class="si">#{</span><span class="n">sha</span><span class="si">}</span><span class="sb">`</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">unmerged?</span>
+</span></span><span class="line"><span class="cl">    <span class="n">content</span> <span class="o">=~</span> <span class="sr">/^\+/</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">equivalent?</span>
+</span></span><span class="line"><span class="cl">    <span class="n">content</span> <span class="o">=~</span> <span class="sr">/^\-/</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GitBranch</span>
+</span></span><span class="line"><span class="cl">  <span class="kp">attr_reader</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:commits</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="nb">name</span><span class="p">,</span> <span class="n">commits</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@name</span> <span class="o">=</span> <span class="nb">name</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@commits</span> <span class="o">=</span> <span class="n">commits</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">unmerged_commits</span>
+</span></span><span class="line"><span class="cl">    <span class="n">commits</span><span class="o">.</span><span class="n">select</span><span class="p">{</span> <span class="o">|</span><span class="n">commit</span><span class="o">|</span> <span class="n">commit</span><span class="o">.</span><span class="n">unmerged?</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">equivalent_commits</span>
+</span></span><span class="line"><span class="cl">    <span class="n">commits</span><span class="o">.</span><span class="n">select</span><span class="p">{</span> <span class="o">|</span><span class="n">commit</span><span class="o">|</span> <span class="n">commit</span><span class="o">.</span><span class="n">equivalent?</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GitBranches</span> <span class="o">&lt;</span> <span class="nb">Array</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">clean_branch_output</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/\n/</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">{</span> <span class="o">|</span><span class="n">e</span><span class="o">|</span> <span class="n">e</span><span class="o">.</span><span class="n">strip</span><span class="o">.</span><span class="n">gsub</span><span class="p">(</span><span class="sr">/\*\s+/</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="p">}</span><span class="o">.</span><span class="n">reject</span><span class="p">{</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span> <span class="n">branch</span> <span class="o">=~</span> <span class="sr">/\b</span><span class="si">#{</span><span class="no">Regexp</span><span class="o">.</span><span class="n">escape</span><span class="p">(</span><span class="no">UPSTREAM</span><span class="p">)</span><span class="si">}</span><span class="sr">\b/</span> <span class="p">}</span><span class="o">.</span><span class="n">sort</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">local_branches</span>
+</span></span><span class="line"><span class="cl">    <span class="n">clean_branch_output</span> <span class="sb">`git branch`</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">remote_branches</span>
+</span></span><span class="line"><span class="cl">    <span class="n">clean_branch_output</span> <span class="sb">`git branch -r`</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">load</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">git_branches</span> <span class="o">=</span> <span class="kp">new</span>
+</span></span><span class="line"><span class="cl">    <span class="n">branches</span> <span class="o">=</span> <span class="k">if</span> <span class="n">options</span><span class="o">[</span><span class="ss">:local</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">      <span class="n">local_branches</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elsif</span> <span class="n">options</span><span class="o">[</span><span class="ss">:remote</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">      <span class="n">remote_branches</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">    <span class="n">branches</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="n">raw_commits</span> <span class="o">=</span> <span class="sb">`git cherry -v </span><span class="si">#{</span><span class="no">UPSTREAM</span><span class="si">}</span><span class="sb"> </span><span class="si">#{</span><span class="n">branch</span><span class="si">}</span><span class="sb">`</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="sr">/\n/</span><span class="p">)</span><span class="o">.</span><span class="n">map</span><span class="p">{</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span> <span class="no">GitCommit</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="n">git_branches</span> <span class="o">&lt;&lt;</span> <span class="no">GitBranch</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">branch</span><span class="p">,</span> <span class="n">raw_commits</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">    <span class="n">git_branches</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">unmerged</span>
+</span></span><span class="line"><span class="cl">    <span class="n">reject</span><span class="p">{</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span> <span class="n">branch</span><span class="o">.</span><span class="n">commits</span><span class="o">.</span><span class="n">empty?</span> <span class="p">}</span><span class="o">.</span><span class="n">sort_by</span><span class="p">{</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span> <span class="n">branch</span><span class="o">.</span><span class="n">name</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">any_missing_commits?</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">select</span><span class="p">{</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span> <span class="n">branch</span><span class="o">.</span><span class="n">commits</span><span class="o">.</span><span class="n">any?</span> <span class="p">}</span><span class="o">.</span><span class="n">any?</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">GitUnmerged</span>
+</span></span><span class="line"><span class="cl">  <span class="no">VERSION</span> <span class="o">=</span> <span class="s2">&#34;1.0.1&#34;</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="kp">include</span> <span class="no">Term</span><span class="o">::</span><span class="no">ANSIColor</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="kp">attr_reader</span> <span class="ss">:branches</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@options</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="n">extract_options_from_args</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">load</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@branches</span> <span class="o">||=</span> <span class="no">GitBranches</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="ss">:local</span> <span class="o">=&gt;</span> <span class="n">local?</span><span class="p">,</span> <span class="ss">:remote</span> <span class="o">=&gt;</span> <span class="n">remote?</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_overview</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">load</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">branches</span><span class="o">.</span><span class="n">any_missing_commits?</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span> <span class="s2">&#34;The following branches possibly have commits not merged to </span><span class="si">#{</span><span class="n">upstream</span><span class="si">}</span><span class="s2">:&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="n">branches</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">        <span class="n">num_unmerged</span> <span class="o">=</span> <span class="n">yellow</span><span class="p">(</span><span class="n">branch</span><span class="o">.</span><span class="n">unmerged_commits</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="n">num_equivalent</span> <span class="o">=</span> <span class="n">green</span><span class="p">(</span><span class="n">branch</span><span class="o">.</span><span class="n">equivalent_commits</span><span class="o">.</span><span class="n">size</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">puts</span> <span class="s">%|  #{branch.name} (#{num_unmerged}/#{num_equivalent} commits)|</span>
+</span></span><span class="line"><span class="cl">      <span class="k">end</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_help</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s">&lt;&lt;-EOT.gsub(/^\s+\|/, &#39;&#39;)
+</span></span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">Usage</span><span class="p">:</span> <span class="c1">#{$0} [-a] [--upstream &lt;branch&gt;] [--remote]</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="no">This</span> <span class="n">script</span> <span class="n">wraps</span> <span class="n">the</span> <span class="s2">&#34;git cherry&#34;</span> <span class="n">command</span><span class="o">.</span> <span class="no">It</span> <span class="n">reports</span> <span class="n">the</span> <span class="n">commits</span> <span class="n">from</span> <span class="n">all</span> <span class="n">local</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="n">branches</span> <span class="n">which</span> <span class="n">have</span> <span class="ow">not</span> <span class="n">been</span> <span class="n">merged</span> <span class="n">into</span> <span class="n">an</span> <span class="n">upstream</span> <span class="n">branch</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{yellow(&#34;yellow&#34;)} commits have not been merged</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{green(&#34;green&#34;)} commits have equivalent changes in &lt;upstream&gt; but different SHAs</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="no">The</span> <span class="n">default</span> <span class="n">upstream</span> <span class="n">is</span> <span class="s1">&#39;master&#39;</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">OPTIONS</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="o">-</span><span class="n">a</span>   <span class="nb">display</span> <span class="n">all</span> <span class="n">unmerged</span> <span class="n">commits</span> <span class="p">(</span><span class="n">verbose</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="o">--</span><span class="n">remote</span>   <span class="n">compare</span> <span class="n">remote</span> <span class="n">branches</span> <span class="n">instead</span> <span class="n">of</span> <span class="n">local</span> <span class="n">branches</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="o">--</span><span class="n">upstream</span> <span class="o">&lt;</span><span class="n">branch</span><span class="o">&gt;</span>   <span class="n">specify</span> <span class="n">a</span> <span class="n">specific</span> <span class="n">upstream</span> <span class="n">branch</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">EXAMPLE</span><span class="p">:</span> <span class="n">check</span> <span class="k">for</span> <span class="n">all</span> <span class="n">unmerged</span> <span class="n">commits</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{$0}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">EXAMPLE</span><span class="p">:</span> <span class="n">check</span> <span class="k">for</span> <span class="n">all</span> <span class="n">unmerged</span> <span class="n">commits</span> <span class="ow">and</span> <span class="n">merged</span> <span class="n">commits</span> <span class="p">(</span><span class="n">but</span> <span class="n">with</span> <span class="n">a</span> <span class="n">different</span> <span class="no">SHA</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{$0} -a</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">EXAMPLE</span><span class="p">:</span> <span class="n">use</span> <span class="n">a</span> <span class="n">different</span> <span class="n">upstream</span> <span class="n">than</span> <span class="n">master</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{$0} --upstream otherbranch</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">EXAMPLE</span><span class="p">:</span> <span class="n">compare</span> <span class="n">remote</span> <span class="n">branches</span> <span class="n">against</span> <span class="n">origin</span><span class="o">/</span><span class="n">master</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="c1">#{$0} --remote</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">GITCONFIG</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="no">If</span> <span class="n">you</span> <span class="nb">name</span> <span class="n">this</span> <span class="n">file</span> <span class="n">git</span><span class="o">-</span><span class="n">unmerged</span> <span class="ow">and</span> <span class="n">place</span> <span class="n">it</span> <span class="n">somewhere</span> <span class="k">in</span> <span class="n">your</span> <span class="no">PATH</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="n">you</span> <span class="n">will</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">type</span> <span class="s2">&#34;git unmerged&#34;</span> <span class="n">to</span> <span class="n">use</span> <span class="n">it</span><span class="o">.</span> <span class="no">If</span> <span class="n">you</span><span class="s1">&#39;d like to name
+</span></span></span><span class="line"><span class="cl"><span class="s1">      |  it something else and still refer to it with &#34;git unmerged&#34; then you&#39;</span><span class="n">ll</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>  <span class="n">need</span> <span class="n">to</span> <span class="n">set</span> <span class="n">up</span> <span class="n">an</span> <span class="k">alias</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>      <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">global</span> <span class="k">alias</span><span class="o">.</span><span class="n">unmerged</span> <span class="p">\\</span><span class="o">!</span><span class="c1">#{$0}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">Version</span><span class="p">:</span> <span class="c1">#{VERSION}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">|</span><span class="ss">Author</span><span class="p">:</span> <span class="no">Zach</span> <span class="no">Dennis</span> <span class="o">&lt;</span><span class="n">zdennis</span><span class="vi">@mutuallyhuman</span><span class="o">.</span><span class="n">com</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="no">EOT</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_version</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s2">&#34;</span><span class="si">#{</span><span class="no">VERSION</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">branch_description</span>
+</span></span><span class="line"><span class="cl">    <span class="n">local?</span> <span class="p">?</span> <span class="s2">&#34;local&#34;</span> <span class="p">:</span> <span class="s2">&#34;remote&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_specifics</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">load</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">branches</span><span class="o">.</span><span class="n">any_missing_commits?</span>
+</span></span><span class="line"><span class="cl">      <span class="n">print_breakdown</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span> <span class="s2">&#34;There are no </span><span class="si">#{</span><span class="n">branch_description</span><span class="si">}</span><span class="s2"> branches out of sync with </span><span class="si">#{</span><span class="n">upstream</span><span class="si">}</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_breakdown</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s2">&#34;Below is a breakdown for each branch. Here&#39;s a legend:&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span>
+</span></span><span class="line"><span class="cl">    <span class="n">print_legend</span>
+</span></span><span class="line"><span class="cl">    <span class="n">branches</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">branch</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">puts</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">print</span> <span class="s2">&#34;</span><span class="si">#{</span><span class="n">branch</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">:&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="n">branch</span><span class="o">.</span><span class="n">unmerged_commits</span><span class="o">.</span><span class="n">empty?</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="n">show_equivalent_commits?</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span> <span class="s2">&#34;(no umerged commits, must have merged commits with different SHAs)</span><span class="se">\n</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">else</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">puts</span>
+</span></span><span class="line"><span class="cl">      <span class="k">end</span>
+</span></span><span class="line"><span class="cl">      <span class="n">branch</span><span class="o">.</span><span class="n">unmerged_commits</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">commit</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">yellow</span><span class="p">(</span><span class="n">commit</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="n">show_equivalent_commits?</span>
+</span></span><span class="line"><span class="cl">        <span class="n">branch</span><span class="o">.</span><span class="n">equivalent_commits</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">commit</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">puts</span> <span class="n">green</span><span class="p">(</span><span class="n">commit</span><span class="o">.</span><span class="n">to_s</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">end</span>
+</span></span><span class="line"><span class="cl">      <span class="k">end</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">print_legend</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">load</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s2">&#34;  &#34;</span> <span class="o">+</span> <span class="n">yellow</span><span class="p">(</span><span class="s2">&#34;yellow&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34; commits have not been merged&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s2">&#34;  &#34;</span> <span class="o">+</span> <span class="n">green</span><span class="p">(</span><span class="s2">&#34;green&#34;</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&#34; commits have equivalent changes in </span><span class="si">#{</span><span class="no">UPSTREAM</span><span class="si">}</span><span class="s2"> but different SHAs&#34;</span> <span class="k">if</span> <span class="n">show_equivalent_commits?</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">show_help?</span> <span class="p">;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:show_help</span><span class="o">]</span> <span class="p">;</span> <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">show_equivalent_commits?</span> <span class="p">;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:show_equivalent_commits</span><span class="o">]</span> <span class="p">;</span> <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">show_version?</span> <span class="p">;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:show_version</span><span class="o">]</span> <span class="p">;</span> <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">upstream</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:upstream</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@options</span><span class="o">[</span><span class="ss">:upstream</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elsif</span> <span class="n">local?</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;master&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">elsif</span> <span class="n">remote?</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;origin/master&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="kp">private</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">extract_options_from_args</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;--remote&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@options</span><span class="o">[</span><span class="ss">:remote</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
+</span></span><span class="line"><span class="cl">    <span class="k">else</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@options</span><span class="o">[</span><span class="ss">:local</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@options</span><span class="o">[</span><span class="ss">:show_help</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;-h&#34;</span><span class="p">)</span> <span class="o">||</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;--help&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@options</span><span class="o">[</span><span class="ss">:show_equivalent_commits</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;-a&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="vi">@options</span><span class="o">[</span><span class="ss">:show_version</span><span class="o">]</span> <span class="o">=</span> <span class="kp">true</span> <span class="k">if</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;-v&#34;</span><span class="p">)</span> <span class="o">||</span> <span class="n">args</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="s2">&#34;--version&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">index</span><span class="o">=</span><span class="n">args</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&#34;--upstream&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="vi">@options</span><span class="o">[</span><span class="ss">:upstream</span><span class="o">]</span> <span class="o">=</span> <span class="n">args</span><span class="o">[</span><span class="n">index</span><span class="o">+</span><span class="mi">1</span><span class="o">]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">local?</span> <span class="p">;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:local</span><span class="o">]</span> <span class="p">;</span> <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">remote?</span> <span class="p">;</span> <span class="vi">@options</span><span class="o">[</span><span class="ss">:remote</span><span class="o">]</span> <span class="p">;</span> <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">unmerged</span> <span class="o">=</span> <span class="no">GitUnmerged</span><span class="o">.</span><span class="n">new</span> <span class="no">ARGV</span>
+</span></span><span class="line"><span class="cl"><span class="no">UPSTREAM</span> <span class="o">=</span> <span class="n">unmerged</span><span class="o">.</span><span class="n">upstream</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">unmerged</span><span class="o">.</span><span class="n">show_help?</span>
+</span></span><span class="line"><span class="cl">  <span class="n">unmerged</span><span class="o">.</span><span class="n">print_help</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl"><span class="k">elsif</span> <span class="n">unmerged</span><span class="o">.</span><span class="n">show_version?</span>
+</span></span><span class="line"><span class="cl">  <span class="n">unmerged</span><span class="o">.</span><span class="n">print_version</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">exit</span>
+</span></span><span class="line"><span class="cl"><span class="k">else</span>
+</span></span><span class="line"><span class="cl">  <span class="n">unmerged</span><span class="o">.</span><span class="n">print_overview</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">puts</span>
+</span></span><span class="line"><span class="cl">  <span class="n">unmerged</span><span class="o">.</span><span class="n">print_specifics</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></div>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-02-05-unmerged/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-11-04-atg-repo-visualizer/">ATG Repository structure visualizer</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-11-04 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 310 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>The groovy script does parse the XML files (scraped from dyn-admin, or output of the XML combine) and produces file in the syntax of Plant UML - <a href="http://plantuml.sourceforge.net">http://plantuml.sourceforge.net</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"> if (args.size() == 0) {
+</span></span><span class="line"><span class="cl">    println &#34;Usage: groovy extractItems.groovy XMLFILE-IN-GSA-FORMAT.xml&#34;
+</span></span><span class="line"><span class="cl">    System.exit(1)
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">def gsaFile = new XmlSlurper().parseText(new File(args[0]).text)
+</span></span><span class="line"><span class="cl">def desc = gsaFile.&#39;item-descriptor&#39;
+</span></span><span class="line"><span class="cl">def processItemDescriptor(myDesc) {
+</span></span><span class="line"><span class="cl">    def info = [:]
+</span></span><span class="line"><span class="cl">    def tables = []
+</span></span><span class="line"><span class="cl">    def props = [:]
+</span></span><span class="line"><span class="cl">    def descriptors = [:]
+</span></span><span class="line"><span class="cl">    for (table in myDesc.table) {
+</span></span><span class="line"><span class="cl">        String tableName = table.@name.text()
+</span></span><span class="line"><span class="cl">        tables += tableName
+</span></span><span class="line"><span class="cl">        // collect table&#39;s properties
+</span></span><span class="line"><span class="cl">        for (prop in table.property) {
+</span></span><span class="line"><span class="cl">            String name = &#34;${prop.@name.text()}(${tableName})&#34;.replaceAll(/[ -]/, &#39;_&#39;)
+</span></span><span class="line"><span class="cl">            props[name] = [:]
+</span></span><span class="line"><span class="cl">            if (&#34;${prop.@&#39;required&#39;.text()}&#34; != &#34;&#34;) {
+</span></span><span class="line"><span class="cl">                props[name][&#39;required&#39;] = &#34;${prop.@&#39;required&#39;.text()}&#34;
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">            if (&#34;${prop.@&#39;hidden&#39;.text()}&#34; != &#34;&#34;) {
+</span></span><span class="line"><span class="cl">                props[name][&#39;hidden&#39;] = &#34;${prop.@&#39;hidden&#39;.text()}&#34;
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">            if (&#34;${prop.@&#39;item-type&#39;.text()}&#34; != &#34;&#34;) {
+</span></span><span class="line"><span class="cl">                props[name][&#39;item-type&#39;] = &#34;${prop.@&#39;item-type&#39;.text()}&#34;
+</span></span><span class="line"><span class="cl">                descriptors[&#34;${prop.@name.text()}&#34;] = &#34;${prop.@&#39;item-type&#39;.text().replaceAll(/[ -]/, &#39;_&#39;)}&#34;
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">    info[&#39;tables&#39;] = tables
+</span></span><span class="line"><span class="cl">    // scan for properties outside of tables
+</span></span><span class="line"><span class="cl">    for (prop in myDesc.property) {
+</span></span><span class="line"><span class="cl">        String name = &#34;${prop.@name.text()}&#34;.replaceAll(/[ -]/, &#39;_&#39;)
+</span></span><span class="line"><span class="cl">        props[name] = [:]
+</span></span><span class="line"><span class="cl">        if (&#34;${prop.@&#39;item-type&#39;.text()}&#34; != &#34;&#34;) {
+</span></span><span class="line"><span class="cl">            props[name][&#39;item-type&#39;] = &#34;${prop.@&#39;item-type&#39;.text()}&#34;
+</span></span><span class="line"><span class="cl">        }      
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    info[&#39;properties&#39;] = props
+</span></span><span class="line"><span class="cl">    info[&#39;descriptors&#39;] = descriptors
+</span></span><span class="line"><span class="cl">    return info
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">println &#34;Got ${desc.size()} item-descriptors&#34;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">println &#34;@startuml&#34;
+</span></span><span class="line"><span class="cl">for (idesc in desc) {
+</span></span><span class="line"><span class="cl">    def info = processItemDescriptor(idesc)
+</span></span><span class="line"><span class="cl">    def name = &#34;${idesc.@name.text().replaceAll(/[ -]/, &#39;_&#39;)}&#34;
+</span></span><span class="line"><span class="cl">    println &#34;\nclass  ${name} {&#34;
+</span></span><span class="line"><span class="cl">    for (p in info.tables)
+</span></span><span class="line"><span class="cl">        println &#34;\t&#34;+p
+</span></span><span class="line"><span class="cl">    println &#34;..&#34;   
+</span></span><span class="line"><span class="cl">    for (p in info.properties)
+</span></span><span class="line"><span class="cl">        println &#34;\t&#34;+p
+</span></span><span class="line"><span class="cl">    println &#34;}&#34;
+</span></span><span class="line"><span class="cl">    for (p in info.descriptors?.keySet())
+</span></span><span class="line"><span class="cl">        println &#34;\t ${name} *-- ${info.descriptors[p]} : ${p}&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">println &#34;@enduml&#34;
+</span></span></code></pre></div><p>The generation (requires installed dot tools)</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-11-04-atg-repo-visualizer/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-11-02-bsd-grep-gnu/">Replace BSD grep with GNU grep</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-11-02 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 169 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="if-annoyed-with">If annoyed with:</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  ~  echo $PATH | tr &#39;:&#39; &#39;\n&#39;
+</span></span><span class="line"><span class="cl">/usr/local/opt/coreutils/libexec/gnubin
+</span></span><span class="line"><span class="cl">/Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin
+</span></span><span class="line"><span class="cl">/opt/ant/bin
+</span></span><span class="line"><span class="cl">/opt/groovy/bin
+</span></span><span class="line"><span class="cl">/opt/gradle/bin
+</span></span><span class="line"><span class="cl">/Users/miro/bin
+</span></span><span class="line"><span class="cl">/usr/local/bin
+</span></span><span class="line"><span class="cl">/usr/bin
+</span></span><span class="line"><span class="cl">/bin
+</span></span><span class="line"><span class="cl">/usr/sbin
+</span></span><span class="line"><span class="cl">/sbin
+</span></span><span class="line"><span class="cl">/usr/local/bin
+</span></span><span class="line"><span class="cl">/opt/X11/bin
+</span></span><span class="line"><span class="cl">/usr/texbin
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"># YEs I am using GNU core utils but grep is not there
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"># The issue
+</span></span><span class="line"><span class="cl">➜  ~  grep --version
+</span></span><span class="line"><span class="cl">grep (BSD grep) 2.5.1-FreeBSD
+</span></span><span class="line"><span class="cl">  
+</span></span></code></pre></div><p>Here is the receipt</p>
+<p><a href="http://www.heystephenwood.com/2013/09/install-gnu-grep-on-mac-osx.html">http://www.heystephenwood.com/2013/09/install-gnu-grep-on-mac-osx.html</a></p>
+<p>Did not install it as the issue was not with grep:</p>
+<p>Instead, use <code>findInJars.sh</code></p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-11-02-bsd-grep-gnu/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-10-14-java6required/">Dealing with &#39;Java Runtime SE 6&#39; required error</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-10-14 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 148 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>When trying to start DBeaver (<a href="http://dbeaver.jkiss.org">http://dbeaver.jkiss.org</a>) I got this</p>
+<p><img src="/images/java6-1.png" alt=""></p>
+<p>I do have Java 7 installed:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  Contents  java -version
+</span></span><span class="line"><span class="cl">java version &#34;1.7.0_55&#34;
+</span></span><span class="line"><span class="cl">Java(TM) SE Runtime Environment (build 1.7.0_55-b13)
+</span></span><span class="line"><span class="cl">Java HotSpot(TM) 64-Bit Server VM (build 24.55-b03, mixed mode)
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  Contents  which java
+</span></span><span class="line"><span class="cl">java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java
+</span></span><span class="line"><span class="cl">java is /usr/bin/java
+</span></span></code></pre></div><p>which should be a superset. But it is not.</p>
+<h2 id="solution">Solution</h2>
+<p>Oracle seems to screw up the PLIST capabilities in JAva7 install</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-10-14-java6required/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2014-10-03-keepas-node/">Keepass-Node install</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2014-10-03 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 453 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>See <a href="https://github.com/gesellix/keepass-node">https://github.com/gesellix/keepass-node</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  keepass-node git:(master) pwd
+</span></span><span class="line"><span class="cl">/Users/miro/src/PLG/keepass-node
+</span></span></code></pre></div><h2 id="install">Install</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">keepass</span><span class="o">-</span><span class="n">node</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">sudo</span><span class="w"> </span><span class="n">npm</span><span class="w"> </span><span class="n">install</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Password</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">&gt;</span><span class="w"> </span><span class="n">dejavu</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">4</span><span class="w"> </span><span class="n">postinstall</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">miro</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">PLG</span><span class="o">/</span><span class="n">keepass</span><span class="o">-</span><span class="n">node</span><span class="o">/</span><span class="n">node_modules</span><span class="o">/</span><span class="n">keepass</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">node_modules</span><span class="o">/</span><span class="n">dejavu</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">&gt;</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="n">bin</span><span class="o">/</span><span class="n">post_install</span><span class="p">.</span><span class="n">js</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Saving</span><span class="w"> </span><span class="n">runtime</span><span class="w"> </span><span class="n">configuration</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">miro</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">PLG</span><span class="o">/</span><span class="n">keepass</span><span class="o">-</span><span class="n">node</span><span class="o">/</span><span class="n">node_modules</span><span class="o">/</span><span class="n">keepass</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="p">.</span><span class="n">dejavurc</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">&gt;</span><span class="w"> </span><span class="n">keepass</span><span class="p">.</span><span class="n">io</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">miro</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">PLG</span><span class="o">/</span><span class="n">keepass</span><span class="o">-</span><span class="n">node</span><span class="o">/</span><span class="n">node_modules</span><span class="o">/</span><span class="n">keepass</span><span class="p">.</span><span class="n">io</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="n">node</span><span class="o">-</span><span class="n">gyp</span><span class="w"> </span><span class="n">rebuild</span><span class="w"> </span><span class="mi">2</span><span class="o">&gt;&amp;</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">(</span><span class="n">echo</span><span class="w"> </span><span class="s1">&#39;DO NOT WORRY ABOUT THESE MESSAGES. KEEPASS.IO WILL FALLBACK TO SLOWER NODE.JS METHODS, SO THERE ARE NO LIMITATIONS EXCEPT SLOWER PERFORMANCE.&#39;</span><span class="p">;</span><span class="w"> </span><span class="k">exit</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">\</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Agreeing</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Xcode</span><span class="o">/</span><span class="n">iOS</span><span class="w"> </span><span class="n">license</span><span class="w"> </span><span class="n">requires</span><span class="w"> </span><span class="n">admin</span><span class="w"> </span><span class="k">privileges</span><span class="p">,</span><span class="w"> </span><span class="n">please</span><span class="w"> </span><span class="n">re</span><span class="o">-</span><span class="n">run</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">via</span><span class="w"> </span><span class="n">sudo</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Agreeing</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Xcode</span><span class="o">/</span><span class="n">iOS</span><span class="w"> </span><span class="n">license</span><span class="w"> </span><span class="n">requires</span><span class="w"> </span><span class="n">admin</span><span class="w"> </span><span class="k">privileges</span><span class="p">,</span><span class="w"> </span><span class="n">please</span><span class="w"> </span><span class="n">re</span><span class="o">-</span><span class="n">run</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="n">via</span><span class="w"> </span><span class="n">sudo</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="n">gyp</span><span class="w"> </span><span class="n">ERR</span><span class="o">!</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="n">error</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">gyp</span><span class="w"> </span><span class="n">ERR</span><span class="o">!</span><span class="w"> </span><span class="n">stack</span><span class="w"> </span><span class="n">Error</span><span class="p">:</span><span class="w"> </span><span class="o">`</span><span class="n">make</span><span class="o">`</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="k">exit</span><span class="w"> </span><span class="n">code</span><span class="p">:</span><span class="w"> </span><span class="mi">69</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">gyp</span><span class="w"> </span><span class="n">ERR</span><span class="o">!</span><span class="w"> </span><span class="n">stack</span><span class="w">     </span><span class="n">at</span><span class="w"> </span><span class="n">ChildProcess</span><span class="p">.</span><span class="nf">onExit</span><span class="w"> </span><span class="p">(</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">node_modules</span><span class="o">/</span><span class="n">npm</span><span class="o">/</span><span class="n">node_modules</span><span class="o">/</span><span class="n">node</span><span class="o">-</span><span class="n">gyp</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">build</span><span class="p">.</span><span class="n">js</span><span class="p">:</span><span class="mi">267</span><span class="p">:</span><span class="mi">23</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">gyp</span><span class="w"> </span><span class="n">ERR</span><span class="o">!</span><span class="w"> </span><span class="n">stack</span><span class="w">     </span><span class="n">at</span><span class="w"> </span><span class="n">ChildProcess</span><span class="p">.</span><span class="nf">emit</span><span class="w"> </span><span class="p">(</span><span class="n">events</span><span class="p">.</span><span class="n">js</span><span class="p">:</span><span class="mi">98</span><span class="p">:</span><span class="mi">17</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">gyp</span><span class="w"> </span><span class="n">ERR</span><span class="o">!</span><span class="w"> </span><span class="n">stack</span><span class="w">     </span><span class="n">at</span><span class="w"> </span><span class="n">Process</span><span class="p">.</span><span class="n">ChildProcess</span><span class="p">.</span><span class="n">_handle</span><span class="p">.</span><span class="nf">onexit</span><span class="w"> </span><span class="p">(</span><span class="n">child_process</span><span class="p">.</span><span class="n">js</span><span class="p">:</span><span class="mi">810</span><span class="p">:</span><span class="mi">12</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">gyp</span><span class="w"> </span><span class="n">ERR</span><span class="o">!</span><span class="w"> </span><span class="n">System</span><span class="w"> </span><span class="n">Darwin</span><span class="w"> </span><span class="mi">13</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">gyp</span><span class="w"> </span><span class="n">ERR</span><span class="o">!</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="s2">&#34;node&#34;</span><span class="w"> </span><span class="s2">&#34;/usr/local/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js&#34;</span><span class="w"> </span><span class="s2">&#34;rebuild&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">gyp</span><span class="w"> </span><span class="n">ERR</span><span class="o">!</span><span class="w"> </span><span class="n">cwd</span><span class="w"> </span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">miro</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">PLG</span><span class="o">/</span><span class="n">keepass</span><span class="o">-</span><span class="n">node</span><span class="o">/</span><span class="n">node_modules</span><span class="o">/</span><span class="n">keepass</span><span class="p">.</span><span class="n">io</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">gyp</span><span class="w"> </span><span class="n">ERR</span><span class="o">!</span><span class="w"> </span><span class="n">node</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="n">v0</span><span class="p">.</span><span class="mi">10</span><span class="p">.</span><span class="mi">31</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">gyp</span><span class="w"> </span><span class="n">ERR</span><span class="o">!</span><span class="w"> </span><span class="n">node</span><span class="o">-</span><span class="n">gyp</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="n">v1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">gyp</span><span class="w"> </span><span class="n">ERR</span><span class="o">!</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">ok</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">DO</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="n">WORRY</span><span class="w"> </span><span class="n">ABOUT</span><span class="w"> </span><span class="n">THESE</span><span class="w"> </span><span class="n">MESSAGES</span><span class="p">.</span><span class="w"> </span><span class="n">KEEPASS</span><span class="p">.</span><span class="n">IO</span><span class="w"> </span><span class="n">WILL</span><span class="w"> </span><span class="n">FALLBACK</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">SLOWER</span><span class="w"> </span><span class="n">NODE</span><span class="p">.</span><span class="n">JS</span><span class="w"> </span><span class="n">METHODS</span><span class="p">,</span><span class="w"> </span><span class="n">SO</span><span class="w"> </span><span class="n">THERE</span><span class="w"> </span><span class="n">ARE</span><span class="w"> </span><span class="n">NO</span><span class="w"> </span><span class="n">LIMITATIONS</span><span class="w"> </span><span class="n">EXCEPT</span><span class="w"> </span><span class="n">SLOWER</span><span class="w"> </span><span class="n">PERFORMANCE</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">chai</span><span class="o">-</span><span class="k">as</span><span class="o">-</span><span class="n">promised</span><span class="o">@</span><span class="mi">4</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span><span class="n">chai</span><span class="o">-</span><span class="k">as</span><span class="o">-</span><span class="n">promised</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">underscore</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span><span class="n">underscore</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">q</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span><span class="n">q</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">compression</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span><span class="n">compression</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">bytes</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="k">on</span><span class="o">-</span><span class="n">headers</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">vary</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">debug</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">ms</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">compressible</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">mime</span><span class="o">-</span><span class="n">db</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">└──</span><span class="w"> </span><span class="n">accepts</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="n">negotiator</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">mime</span><span class="o">-</span><span class="n">types</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">chai</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">2</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span><span class="n">chai</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">assertion</span><span class="o">-</span><span class="n">error</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">└──</span><span class="w"> </span><span class="n">deep</span><span class="o">-</span><span class="n">eql</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="o">-</span><span class="n">detect</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">express</span><span class="o">@</span><span class="mi">4</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">5</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span><span class="n">express</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">merge</span><span class="o">-</span><span class="n">descriptors</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">utils</span><span class="o">-</span><span class="n">merge</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">fresh</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">cookie</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">escape</span><span class="o">-</span><span class="n">html</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">range</span><span class="o">-</span><span class="n">parser</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">cookie</span><span class="o">-</span><span class="n">signature</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">media</span><span class="o">-</span><span class="n">typer</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">vary</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">finalhandler</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">parseurl</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">methods</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">serve</span><span class="o">-</span><span class="n">static</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">path</span><span class="o">-</span><span class="k">to</span><span class="o">-</span><span class="k">regexp</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">depd</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">qs</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">debug</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">ms</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="k">on</span><span class="o">-</span><span class="n">finished</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">ee</span><span class="o">-</span><span class="n">first</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">etag</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">crc</span><span class="o">@</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">proxy</span><span class="o">-</span><span class="n">addr</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="w"> </span><span class="p">(</span><span class="n">forwarded</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">ipaddr</span><span class="p">.</span><span class="n">js</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">send</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">3</span><span class="w"> </span><span class="p">(</span><span class="n">destroy</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">ms</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">mime</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">11</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">type</span><span class="o">-</span><span class="k">is</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">mime</span><span class="o">-</span><span class="n">types</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">└──</span><span class="w"> </span><span class="n">accepts</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="n">negotiator</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">mime</span><span class="o">-</span><span class="n">types</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">mocha</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">21</span><span class="p">.</span><span class="mi">4</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span><span class="n">mocha</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">diff</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">7</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">growl</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">commander</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">mkdirp</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">debug</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">ms</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">jade</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">26</span><span class="p">.</span><span class="mi">3</span><span class="w"> </span><span class="p">(</span><span class="n">commander</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">mkdirp</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">└──</span><span class="w"> </span><span class="n">glob</span><span class="o">@</span><span class="mi">3</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">3</span><span class="w"> </span><span class="p">(</span><span class="n">inherits</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">graceful</span><span class="o">-</span><span class="n">fs</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">minimatch</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">14</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">body</span><span class="o">-</span><span class="n">parser</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span><span class="n">body</span><span class="o">-</span><span class="n">parser</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">bytes</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">media</span><span class="o">-</span><span class="n">typer</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">raw</span><span class="o">-</span><span class="n">body</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">depd</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">qs</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">iconv</span><span class="o">-</span><span class="n">lite</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="k">on</span><span class="o">-</span><span class="n">finished</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">ee</span><span class="o">-</span><span class="n">first</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">└──</span><span class="w"> </span><span class="n">type</span><span class="o">-</span><span class="k">is</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">mime</span><span class="o">-</span><span class="n">types</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">coveralls</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">11</span><span class="p">.</span><span class="mi">2</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span><span class="n">coveralls</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">lcov</span><span class="o">-</span><span class="n">parse</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">6</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">log</span><span class="o">-</span><span class="n">driver</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">request</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">40</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">json</span><span class="o">-</span><span class="n">stringify</span><span class="o">-</span><span class="n">safe</span><span class="o">@</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">forever</span><span class="o">-</span><span class="n">agent</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">aws</span><span class="o">-</span><span class="n">sign2</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">oauth</span><span class="o">-</span><span class="n">sign</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">stringstream</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">tunnel</span><span class="o">-</span><span class="n">agent</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">qs</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="o">-</span><span class="n">uuid</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">mime</span><span class="o">-</span><span class="n">types</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">tough</span><span class="o">-</span><span class="n">cookie</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">12</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">form</span><span class="o">-</span><span class="n">data</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">http</span><span class="o">-</span><span class="n">signature</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">hawk</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">└──</span><span class="w"> </span><span class="n">js</span><span class="o">-</span><span class="n">yaml</span><span class="o">@</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="n">esprima</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">argparse</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">15</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">istanbul</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">2</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span><span class="n">istanbul</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">abbrev</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">which</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">nopt</span><span class="o">@</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">wordwrap</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">once</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">1</span><span class="w"> </span><span class="p">(</span><span class="n">wrappy</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">async</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">resolve</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">4</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">mkdirp</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">minimist</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">fileset</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">5</span><span class="w"> </span><span class="p">(</span><span class="n">minimatch</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">glob</span><span class="o">@</span><span class="mi">3</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">11</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">esprima</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">escodegen</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">3</span><span class="w"> </span><span class="p">(</span><span class="n">estraverse</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">esutils</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">source</span><span class="o">-</span><span class="n">map</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="n">esprima</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">handlebars</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">optimist</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="n">uglify</span><span class="o">-</span><span class="n">js</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">6</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">└──</span><span class="w"> </span><span class="n">js</span><span class="o">-</span><span class="n">yaml</span><span class="o">@</span><span class="mi">3</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">2</span><span class="w"> </span><span class="p">(</span><span class="n">esprima</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">argparse</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">15</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">googleapis</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">14</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span><span class="n">googleapis</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">async</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">multipart</span><span class="o">-</span><span class="n">stream</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">inherits</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">sandwich</span><span class="o">-</span><span class="n">stream</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">request</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">40</span><span class="p">.</span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">json</span><span class="o">-</span><span class="n">stringify</span><span class="o">-</span><span class="n">safe</span><span class="o">@</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">aws</span><span class="o">-</span><span class="n">sign2</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">forever</span><span class="o">-</span><span class="n">agent</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">oauth</span><span class="o">-</span><span class="n">sign</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">3</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">stringstream</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">tunnel</span><span class="o">-</span><span class="n">agent</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">qs</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">node</span><span class="o">-</span><span class="n">uuid</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">mime</span><span class="o">-</span><span class="n">types</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">form</span><span class="o">-</span><span class="n">data</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">tough</span><span class="o">-</span><span class="n">cookie</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">12</span><span class="p">.</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">http</span><span class="o">-</span><span class="n">signature</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">10</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">hawk</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">1</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">└──</span><span class="w"> </span><span class="n">gapitoken</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">1</span><span class="p">.</span><span class="mi">3</span><span class="w"> </span><span class="p">(</span><span class="n">jws</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">2</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">keepass</span><span class="p">.</span><span class="n">io</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">5</span><span class="w"> </span><span class="n">node_modules</span><span class="o">/</span><span class="n">keepass</span><span class="p">.</span><span class="n">io</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">async</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">9</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">nan</span><span class="o">@</span><span class="mi">1</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">├──</span><span class="w"> </span><span class="n">xml2js</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">4</span><span class="w"> </span><span class="p">(</span><span class="n">sax</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">6</span><span class="p">.</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">xmlbuilder</span><span class="o">@</span><span class="mi">2</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">4</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">└──</span><span class="w"> </span><span class="n">dejavu</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">4</span><span class="w"> </span><span class="p">(</span><span class="n">amdefine</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">0</span><span class="p">.</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="n">mout</span><span class="o">@</span><span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">.</span><span class="mi">0</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">keepass</span><span class="o">-</span><span class="n">node</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></div><p>Kinda weird to ignore errors, but anyway &hellip;</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2014-10-03-keepas-node/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -267,7 +1042,9 @@ Fast forward to now: on Sunday while watching Prime (https://en.wikipedia.org/wi
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -285,13 +1062,10 @@ Fast forward to now: on Sunday while watching Prime (https://en.wikipedia.org/wi
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -302,7 +1076,10 @@ Fast forward to now: on Sunday while watching Prime (https://en.wikipedia.org/wi
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

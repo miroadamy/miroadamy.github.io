@@ -17,14 +17,15 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="As part of current project I need to test some ORM frameworks and for that, you need a database. In this particular case, database equals Oracle. I need a local instance to be able to work outside of the customer&#39;s location.
-On my notebook, I have already installation of MySQL (for all the Rails stuff) and SQLServer (for ASP.NET). Plus few lightweight databases (meaning that they do not really need a server) such as sqlite3, Derby and HSQLDB)." /><meta name="keywords" content="blog, Miro" />
+On my notebook, I have already installation of MySQL (for all the Rails stuff) and SQLServer (for ASP.NET). Plus few lightweight databases (meaning that they do not really need a server) such as sqlite3, Derby and HSQLDB). I was very hesitant to add another instance and for some time tried to do the work with MySQL - but differences in SQL and most importantly the way how the CLOBs and BLOBs are handled convinced me this is a bad idea.
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2007-09-24-oracle-10g-xe-nice-surprise/" />
@@ -35,31 +36,33 @@ On my notebook, I have already installation of MySQL (for all the Rails stuff) a
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Oracle 10g XE - nice surprise" />
-<meta property="og:description" content="As part of current project I need to test some ORM frameworks and for that, you need a database. In this particular case, database equals Oracle. I need a local instance to be able to work outside of the customer&#39;s location.
-On my notebook, I have already installation of MySQL (for all the Rails stuff) and SQLServer (for ASP.NET). Plus few lightweight databases (meaning that they do not really need a server) such as sqlite3, Derby and HSQLDB)." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2007-09-24-oracle-10g-xe-nice-surprise/" />
-<meta property="article:published_time" content="2007-09-24T11:22:04-04:00" />
-<meta property="article:modified_time" content="2007-09-24T11:22:04-04:00" />
-<meta itemprop="name" content="Oracle 10g XE - nice surprise">
-<meta itemprop="description" content="As part of current project I need to test some ORM frameworks and for that, you need a database. In this particular case, database equals Oracle. I need a local instance to be able to work outside of the customer&#39;s location.
-On my notebook, I have already installation of MySQL (for all the Rails stuff) and SQLServer (for ASP.NET). Plus few lightweight databases (meaning that they do not really need a server) such as sqlite3, Derby and HSQLDB).">
-<meta itemprop="datePublished" content="2007-09-24T11:22:04-04:00" />
-<meta itemprop="dateModified" content="2007-09-24T11:22:04-04:00" />
-<meta itemprop="wordCount" content="482">
+<meta property="og:url" content="https://miroadamy.com/posts/2007-09-24-oracle-10g-xe-nice-surprise/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Oracle 10g XE - nice surprise">
+	<meta property="og:description" content="As part of current project I need to test some ORM frameworks and for that, you need a database. In this particular case, database equals Oracle. I need a local instance to be able to work outside of the customer&#39;s location.
+On my notebook, I have already installation of MySQL (for all the Rails stuff) and SQLServer (for ASP.NET). Plus few lightweight databases (meaning that they do not really need a server) such as sqlite3, Derby and HSQLDB). I was very hesitant to add another instance and for some time tried to do the work with MySQL - but differences in SQL and most importantly the way how the CLOBs and BLOBs are handled convinced me this is a bad idea.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2007-09-24T11:22:04-04:00">
+		<meta property="article:modified_time" content="2007-09-24T11:22:04-04:00">
 
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Oracle 10g XE - nice surprise"/>
-<meta name="twitter:description" content="As part of current project I need to test some ORM frameworks and for that, you need a database. In this particular case, database equals Oracle. I need a local instance to be able to work outside of the customer&#39;s location.
-On my notebook, I have already installation of MySQL (for all the Rails stuff) and SQLServer (for ASP.NET). Plus few lightweight databases (meaning that they do not really need a server) such as sqlite3, Derby and HSQLDB)."/>
+	<meta itemprop="name" content="Oracle 10g XE - nice surprise">
+	<meta itemprop="description" content="As part of current project I need to test some ORM frameworks and for that, you need a database. In this particular case, database equals Oracle. I need a local instance to be able to work outside of the customer&#39;s location.
+On my notebook, I have already installation of MySQL (for all the Rails stuff) and SQLServer (for ASP.NET). Plus few lightweight databases (meaning that they do not really need a server) such as sqlite3, Derby and HSQLDB). I was very hesitant to add another instance and for some time tried to do the work with MySQL - but differences in SQL and most importantly the way how the CLOBs and BLOBs are handled convinced me this is a bad idea.">
+	<meta itemprop="datePublished" content="2007-09-24T11:22:04-04:00">
+	<meta itemprop="dateModified" content="2007-09-24T11:22:04-04:00">
+	<meta itemprop="wordCount" content="482">
+	<meta itemprop="keywords" content="Programming">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Oracle 10g XE - nice surprise">
+	<meta name="twitter:description" content="As part of current project I need to test some ORM frameworks and for that, you need a database. In this particular case, database equals Oracle. I need a local instance to be able to work outside of the customer&#39;s location.
+On my notebook, I have already installation of MySQL (for all the Rails stuff) and SQLServer (for ASP.NET). Plus few lightweight databases (meaning that they do not really need a server) such as sqlite3, Derby and HSQLDB). I was very hesitant to add another instance and for some time tried to do the work with MySQL - but differences in SQL and most importantly the way how the CLOBs and BLOBs are handled convinced me this is a bad idea.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -96,12 +99,21 @@ On my notebook, I have already installation of MySQL (for all the Rails stuff) a
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -118,6 +130,7 @@ On my notebook, I have already installation of MySQL (for all the Rails stuff) a
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -209,7 +222,7 @@ On my notebook, I have already installation of MySQL (for all the Rails stuff) a
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -227,13 +240,10 @@ On my notebook, I have already installation of MySQL (for all the Rails stuff) a
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -244,7 +254,10 @@ On my notebook, I have already installation of MySQL (for all the Rails stuff) a
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

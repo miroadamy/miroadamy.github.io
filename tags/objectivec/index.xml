@@ -1,50 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>objectivec on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/objectivec/</link>
-    <description>Recent content in objectivec on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 02 Sep 2008 23:33:30 -0400</lastBuildDate><atom:link href="https://miroadamy.com/tags/objectivec/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Objective C: I really miss namespaces</title>
-      <link>https://miroadamy.com/posts/2008-09-02-objective-c-i-really-miss-namespaces/</link>
-      <pubDate>Tue, 02 Sep 2008 23:33:30 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2008-09-02-objective-c-i-really-miss-namespaces/</guid>
-      <description>One feature that I strongly miss from Objective C are namespaces. Inability to avoid name clash between your classes sometimes really stands in your way.
-I am reading S. Kochan&#39;s book &#34;Programming in Objective C&#34; and in one of the examples he creates the class Point. Unfortunately, there already is struct Point defined in mactypes.h.
-The solution is easy - rename the darn Point to something like TKPoint ... at least that is what Cocoa naming guide recommends.</description>
-    </item>
-    
-    <item>
-      <title>XCode annoyances</title>
-      <link>https://miroadamy.com/posts/2008-09-01-xcode-annoyances/</link>
-      <pubDate>Mon, 01 Sep 2008 22:34:57 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2008-09-01-xcode-annoyances/</guid>
-      <description>PM Xcode[34563] *** Terminating app due to uncaught exception &amp;#39;NSInvalidArgumentException&amp;#39;, reason: &amp;#39; *** -[NSAutoreleasePool stopObservingModelObject:]: unrecognized selector sent to instance 0x32da240&amp;#39; </description>
-    </item>
-    
-    <item>
-      <title>Couple of Objective-C and Cocoa links</title>
-      <link>https://miroadamy.com/posts/2008-03-12-couple-of-objective-c-and-cocoa-links/</link>
-      <pubDate>Wed, 12 Mar 2008 23:25:46 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2008-03-12-couple-of-objective-c-and-cocoa-links/</guid>
-      <description>Lured by the iPhone platform, this is what I read in the evenings. Feels kind of funny: after 10+ years of Java/C# and almost as many years of C++ beforehand, I mostly lost my C instincts and C habits. Fortunately, I have also mostly lost my C++ bad habits as well.
-The Apple site is definitive starting point - put the http://developer.apple.com/referencelibrary/index.html into your bookmarks. From non-Apple sources, very bookmarking-worthy is the Cocoa Literature and Cocoa Devcentral.</description>
-    </item>
-    
-    <item>
-      <title>Managing knowledge portfolio</title>
-      <link>https://miroadamy.com/posts/2007-03-25-managing-knowledge-portfolio/</link>
-      <pubDate>Sun, 25 Mar 2007 22:50:43 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-03-25-managing-knowledge-portfolio/</guid>
-      <description>There are few technical books which you enjoy first time you read them, remember the experience and keep coming back. One of such classic books is The Pragmatic Programmer - from journeyman to master - by David Thomas and Andrew Hunt. If you have not read it, get it, it is worth every cent. Since the book was written - ages ago, back in 2000 - it did not loose anything of its freshness and value - which one cannot say about most of technical books written earlier than 2-3 years ago.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Objectivec on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/objectivec/</link>
+		<description>Recent content in Objectivec on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 02 Sep 2008 23:33:30 -0400</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/objectivec/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Objective C: I really miss namespaces</title>
+				<link>https://miroadamy.com/posts/2008-09-02-objective-c-i-really-miss-namespaces/</link>
+				<pubDate>Tue, 02 Sep 2008 23:33:30 -0400</pubDate>
+				<guid>https://miroadamy.com/posts/2008-09-02-objective-c-i-really-miss-namespaces/</guid>
+				<description>&lt;p&gt;One feature that I strongly miss from Objective C are namespaces. Inability to avoid name clash between your  classes sometimes really stands in your way.&lt;/p&gt;&#xA;&lt;p&gt;I am reading S. Kochan&#39;s book &#34;&lt;a href=&#34;http://search.safaribooksonline.com/0672325861&#34; target=&#34;_blank&#34;&gt;Programming in Objective C&lt;/a&gt;&#34; and in one of the examples he creates the class Point. Unfortunately, there already is struct Point defined in mactypes.h.&lt;/p&gt;&#xA;&lt;p&gt;The solution is easy - rename the darn Point to something like TKPoint ... at least that is what &lt;a href=&#34;http://cocoadevcentral.com/articles/000082.php&#34; target=&#34;_self&#34;&gt;Cocoa naming guide&lt;/a&gt; recommends. It is probably matter of getting used to it  - but I still find the solution suggested by Kevin Hoffman &lt;a href=&#34;http://dotnetaddict.dotnetdevelopersjournal.com/objc_namespaces.htm&#34; target=&#34;_blank&#34;&gt;much more elegant&lt;/a&gt; - too bad it is only theoretical. Much nicer than NSHack ;-)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>XCode annoyances</title>
+				<link>https://miroadamy.com/posts/2008-09-01-xcode-annoyances/</link>
+				<pubDate>Mon, 01 Sep 2008 22:34:57 -0400</pubDate>
+				<guid>https://miroadamy.com/posts/2008-09-01-xcode-annoyances/</guid>
+				<description>&lt;p&gt;I have started to seriously play with Objective C and XCode about week ago. So far it was very pleasant experience. I really like the language - feels like Ruby (or Smalltalk if you want) with rocket launcher: very powerful, blastingly fast and dangerous like hell. No array boundary checks as in Java :-).&lt;/p&gt;&#xA;&lt;p&gt;The XCode was not bad experience either. Here my very long Eclipse and Visual Studio history is going a bit in the way, as the things often works quite different. Not necessarily worse, but different. It would be too early to judge it - not before I get more proficient in both Objective-C and XCode and learn more Cocoa goodness.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Couple of Objective-C and Cocoa links</title>
+				<link>https://miroadamy.com/posts/2008-03-12-couple-of-objective-c-and-cocoa-links/</link>
+				<pubDate>Wed, 12 Mar 2008 23:25:46 -0400</pubDate>
+				<guid>https://miroadamy.com/posts/2008-03-12-couple-of-objective-c-and-cocoa-links/</guid>
+				<description>&lt;p&gt;Lured by the iPhone platform, this is what I read in the evenings. Feels kind of funny: after 10+ years of Java/C# and almost as many years  of C++ beforehand, I mostly lost my C instincts and C habits. Fortunately, I have also mostly lost my C++ bad habits as well.&lt;/p&gt;&#xA;&lt;p&gt;The Apple site is definitive starting point - put the &lt;a href=&#34;http://developer.apple.com/referencelibrary/index.html&#34; target=&#34;_blank&#34;&gt;http://developer.apple.com/referencelibrary/index.html&lt;/a&gt; into your bookmarks. From non-Apple sources, very bookmarking-worthy is the &lt;a href=&#34;http://osx.hyperjeff.net/reference/CocoaArticles.php&#34; target=&#34;_blank&#34;&gt;Cocoa Literature&lt;/a&gt; and &lt;a href=&#34;http://www.cocoadevcentral.com/&#34; target=&#34;_blank&#34;&gt;Cocoa Devcentral&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Managing knowledge portfolio</title>
+				<link>https://miroadamy.com/posts/2007-03-25-managing-knowledge-portfolio/</link>
+				<pubDate>Sun, 25 Mar 2007 22:50:43 -0400</pubDate>
+				<guid>https://miroadamy.com/posts/2007-03-25-managing-knowledge-portfolio/</guid>
+				<description>&lt;p&gt;There are few technical books which you enjoy first time you read them, remember the experience and keep coming back. One of such  classic books is  &lt;a href=&#34;http://www.amazon.ca/Pragmatic-Programmer-Journeyman-Master/dp/020161622X&#34; target=&#34;_blank&#34;&gt;The Pragmatic Programmer - from journeyman to master&lt;/a&gt; - by David Thomas and Andrew Hunt. If you have not read it, get it, it is worth every cent. Since the book was written - ages ago, back in 2000 - it did not loose anything of its freshness and value - which one cannot say about most of technical books written earlier than 2-3 years ago. Inspired by the success of their initial creation, Dave and Andrew started the&lt;a href=&#34;http://www.pragmaticprogrammer.com/index.html&#34; target=&#34;_blank&#34;&gt; website&lt;/a&gt; and continued writing whole Pragmatic Programmer &lt;a href=&#34;http://www.pragmaticprogrammer.com/bookshelf/index.html&#34; target=&#34;_blank&#34;&gt;series&lt;/a&gt; of books.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

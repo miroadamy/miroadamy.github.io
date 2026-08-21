@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>applescript on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/applescript/</link>
-    <description>Recent content in applescript on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 22 Apr 2014 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/applescript/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Folder action to autorename screenshots</title>
-      <link>https://miroadamy.com/posts/2014-04-22-autorename-screenshots/</link>
-      <pubDate>Tue, 22 Apr 2014 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2014-04-22-autorename-screenshots/</guid>
-      <description>Move the location of the screenshots I do not want to have ~/Desktop polluted with files. Thus
-mkdir -p ~/Documents/Screenshots defaults write com.apple.screencapture location ~/Documents/Screenshots killall SystemUIServer Test the screenshot - it does it
-Automator based auto-rename  Create Folder action for ~/Documents/Screenshots  It has 3 actions
-s/Screen Shots // s/./-/g s/ at /_/ </description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Applescript on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/applescript/</link>
+		<description>Recent content in Applescript on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 22 Apr 2014 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/applescript/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Folder action to autorename screenshots</title>
+				<link>https://miroadamy.com/posts/2014-04-22-autorename-screenshots/</link>
+				<pubDate>Tue, 22 Apr 2014 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2014-04-22-autorename-screenshots/</guid>
+				<description>&lt;h2 id=&#34;move-the-location-of-the-screenshots&#34;&gt;Move the location of the screenshots&lt;/h2&gt;&#xA;&lt;p&gt;I do not want to have &lt;code&gt;~/Desktop&lt;/code&gt; polluted with files. Thus&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir -p ~/Documents/Screenshots&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;defaults write com.apple.screencapture location ~/Documents/Screenshots&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;killall SystemUIServer&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Test the screenshot - it does it&lt;/p&gt;&#xA;&lt;h2 id=&#34;automator-based-auto-rename&#34;&gt;Automator based auto-rename&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Create Folder action for &lt;code&gt;~/Documents/Screenshots&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/autorename-1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;It has 3 actions&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/autorename-2.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s/Screen Shots //&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s/./-/g&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;s/ at /_/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+			</item>
+	</channel>
 </rss>

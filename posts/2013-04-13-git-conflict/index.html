@@ -19,14 +19,16 @@
 <meta name="author" content="Miro Adamy" /><meta name="description" content="I was merging the branch that removed / consolidated bunch of duplicate JSP files (corporate-ui-cleanup).
 In the meantime in master, some minor UI changes were made to these files whose content was now elsewhere.
 Quick trick how to resolve it fast:
-Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data with XML only: no constraints and tax_id (unused field) nullable ! [bb-gradle-build] Merge branch &amp;#39;master&amp;#39; into bb-gradle-build * [bb-master] Merged in the last 5 days changes !" /><meta name="keywords" content="blog, Miro" />
+Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data with XML only: no constraints and tax_id (unused field) nullable ! [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build * [bb-master] Merged in the last 5 days changes ! [corporate-ui-cleanup] Merged in the last 5 days changes ! [master] Merged in the last 5 days changes ----- - [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build ---- [bb-master] Merged in the last 5 days changes &#43;*&#43;&#43; [bb-master^2] CPLXB2B-562, usageInfo/internalUsageInfo mapping in CFI &#43;*&#43;&#43; [bb-master^2^] return order goes all the way to NEW: replaced SetPaymentGroupAmount, added ReturnFee calculator, added reusable jsp fragments for sales order pages &#43;*&#43;&#43; [bb-master^2~2] Styling change to avoid disappearing links inside Terms and Conditions &#43;*&#43;&#43; [bb-master^2~3] Dealing with consequences if INTERNAL split to INTERNAL_TRANSFER and INTERNAL_PURCHASE ---- [bb-master^2~4] Merge remote-tracking branch &#39;origin/master&#39; into uat2-deploy ---- [bb-master^2~4^2] Merge branch &#39;master&#39; of luke:cineplex-b2b &#43;*&#43;&#43; [bb-master^2~4^2^] merged changes - fixed conflict &#43;*&#43;&#43; [bb-master^2~4^2~2] CPLXBTOB-557 - fixed amount column to show proper currency ---- [bb-master^2~4^2~3] Merge branch &#39;master&#39; of twgit@luke:cineplex-b2b.git &#43;*&#43;&#43; [bb-master^2~4^2~4] CPLXBTOB-484 - fixed the spacing and comma issues &#43;*&#43;&#43; [bb-master^2~5] Reverted 4d512ed - issue with recalculate. Must be solved selectively via Javascript &#43;*&#43;&#43; [bb-master^2~6] Spacing in header see also version with --current
+CineplexB2B $ git show-branch --current master ! [master] Merged in the last 5 days changes * [bb-master] Merged in the last 5 days changes -- -- [master] Merged in the last 5 days changes For more, see http://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2013-04-13-git-conflict/" />
@@ -37,37 +39,43 @@ Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data w
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Merge conflict with deleted file" />
-<meta property="og:description" content="I was merging the branch that removed / consolidated bunch of duplicate JSP files (corporate-ui-cleanup).
+<meta property="og:url" content="https://miroadamy.com/posts/2013-04-13-git-conflict/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Merge conflict with deleted file">
+	<meta property="og:description" content="I was merging the branch that removed / consolidated bunch of duplicate JSP files (corporate-ui-cleanup).
 In the meantime in master, some minor UI changes were made to these files whose content was now elsewhere.
 Quick trick how to resolve it fast:
-Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data with XML only: no constraints and tax_id (unused field) nullable ! [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build * [bb-master] Merged in the last 5 days changes !" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2013-04-13-git-conflict/" />
-<meta property="article:published_time" content="2013-04-13T11:22:48+08:00" />
-<meta property="article:modified_time" content="2013-04-13T11:22:48+08:00" />
-<meta itemprop="name" content="Merge conflict with deleted file">
-<meta itemprop="description" content="I was merging the branch that removed / consolidated bunch of duplicate JSP files (corporate-ui-cleanup).
+Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data with XML only: no constraints and tax_id (unused field) nullable ! [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build * [bb-master] Merged in the last 5 days changes ! [corporate-ui-cleanup] Merged in the last 5 days changes ! [master] Merged in the last 5 days changes ----- - [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build ---- [bb-master] Merged in the last 5 days changes &#43;*&#43;&#43; [bb-master^2] CPLXB2B-562, usageInfo/internalUsageInfo mapping in CFI &#43;*&#43;&#43; [bb-master^2^] return order goes all the way to NEW: replaced SetPaymentGroupAmount, added ReturnFee calculator, added reusable jsp fragments for sales order pages &#43;*&#43;&#43; [bb-master^2~2] Styling change to avoid disappearing links inside Terms and Conditions &#43;*&#43;&#43; [bb-master^2~3] Dealing with consequences if INTERNAL split to INTERNAL_TRANSFER and INTERNAL_PURCHASE ---- [bb-master^2~4] Merge remote-tracking branch &#39;origin/master&#39; into uat2-deploy ---- [bb-master^2~4^2] Merge branch &#39;master&#39; of luke:cineplex-b2b &#43;*&#43;&#43; [bb-master^2~4^2^] merged changes - fixed conflict &#43;*&#43;&#43; [bb-master^2~4^2~2] CPLXBTOB-557 - fixed amount column to show proper currency ---- [bb-master^2~4^2~3] Merge branch &#39;master&#39; of twgit@luke:cineplex-b2b.git &#43;*&#43;&#43; [bb-master^2~4^2~4] CPLXBTOB-484 - fixed the spacing and comma issues &#43;*&#43;&#43; [bb-master^2~5] Reverted 4d512ed - issue with recalculate. Must be solved selectively via Javascript &#43;*&#43;&#43; [bb-master^2~6] Spacing in header see also version with --current
+CineplexB2B $ git show-branch --current master ! [master] Merged in the last 5 days changes * [bb-master] Merged in the last 5 days changes -- -- [master] Merged in the last 5 days changes For more, see http://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2013-04-13T11:22:48+08:00">
+		<meta property="article:modified_time" content="2013-04-13T11:22:48+08:00">
+		<meta property="article:tag" content="Git">
+
+	<meta itemprop="name" content="Merge conflict with deleted file">
+	<meta itemprop="description" content="I was merging the branch that removed / consolidated bunch of duplicate JSP files (corporate-ui-cleanup).
 In the meantime in master, some minor UI changes were made to these files whose content was now elsewhere.
 Quick trick how to resolve it fast:
-Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data with XML only: no constraints and tax_id (unused field) nullable ! [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build * [bb-master] Merged in the last 5 days changes !">
-<meta itemprop="datePublished" content="2013-04-13T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2013-04-13T11:22:48+08:00" />
-<meta itemprop="wordCount" content="333">
-
-
-
-<meta itemprop="keywords" content="git," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Merge conflict with deleted file"/>
-<meta name="twitter:description" content="I was merging the branch that removed / consolidated bunch of duplicate JSP files (corporate-ui-cleanup).
+Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data with XML only: no constraints and tax_id (unused field) nullable ! [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build * [bb-master] Merged in the last 5 days changes ! [corporate-ui-cleanup] Merged in the last 5 days changes ! [master] Merged in the last 5 days changes ----- - [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build ---- [bb-master] Merged in the last 5 days changes &#43;*&#43;&#43; [bb-master^2] CPLXB2B-562, usageInfo/internalUsageInfo mapping in CFI &#43;*&#43;&#43; [bb-master^2^] return order goes all the way to NEW: replaced SetPaymentGroupAmount, added ReturnFee calculator, added reusable jsp fragments for sales order pages &#43;*&#43;&#43; [bb-master^2~2] Styling change to avoid disappearing links inside Terms and Conditions &#43;*&#43;&#43; [bb-master^2~3] Dealing with consequences if INTERNAL split to INTERNAL_TRANSFER and INTERNAL_PURCHASE ---- [bb-master^2~4] Merge remote-tracking branch &#39;origin/master&#39; into uat2-deploy ---- [bb-master^2~4^2] Merge branch &#39;master&#39; of luke:cineplex-b2b &#43;*&#43;&#43; [bb-master^2~4^2^] merged changes - fixed conflict &#43;*&#43;&#43; [bb-master^2~4^2~2] CPLXBTOB-557 - fixed amount column to show proper currency ---- [bb-master^2~4^2~3] Merge branch &#39;master&#39; of twgit@luke:cineplex-b2b.git &#43;*&#43;&#43; [bb-master^2~4^2~4] CPLXBTOB-484 - fixed the spacing and comma issues &#43;*&#43;&#43; [bb-master^2~5] Reverted 4d512ed - issue with recalculate. Must be solved selectively via Javascript &#43;*&#43;&#43; [bb-master^2~6] Spacing in header see also version with --current
+CineplexB2B $ git show-branch --current master ! [master] Merged in the last 5 days changes * [bb-master] Merged in the last 5 days changes -- -- [master] Merged in the last 5 days changes For more, see http://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created">
+	<meta itemprop="datePublished" content="2013-04-13T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2013-04-13T11:22:48+08:00">
+	<meta itemprop="wordCount" content="333">
+	<meta itemprop="keywords" content="Git">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Merge conflict with deleted file">
+	<meta name="twitter:description" content="I was merging the branch that removed / consolidated bunch of duplicate JSP files (corporate-ui-cleanup).
 In the meantime in master, some minor UI changes were made to these files whose content was now elsewhere.
 Quick trick how to resolve it fast:
-Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data with XML only: no constraints and tax_id (unused field) nullable ! [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build * [bb-master] Merged in the last 5 days changes !"/>
+Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data with XML only: no constraints and tax_id (unused field) nullable ! [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build * [bb-master] Merged in the last 5 days changes ! [corporate-ui-cleanup] Merged in the last 5 days changes ! [master] Merged in the last 5 days changes ----- - [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build ---- [bb-master] Merged in the last 5 days changes &#43;*&#43;&#43; [bb-master^2] CPLXB2B-562, usageInfo/internalUsageInfo mapping in CFI &#43;*&#43;&#43; [bb-master^2^] return order goes all the way to NEW: replaced SetPaymentGroupAmount, added ReturnFee calculator, added reusable jsp fragments for sales order pages &#43;*&#43;&#43; [bb-master^2~2] Styling change to avoid disappearing links inside Terms and Conditions &#43;*&#43;&#43; [bb-master^2~3] Dealing with consequences if INTERNAL split to INTERNAL_TRANSFER and INTERNAL_PURCHASE ---- [bb-master^2~4] Merge remote-tracking branch &#39;origin/master&#39; into uat2-deploy ---- [bb-master^2~4^2] Merge branch &#39;master&#39; of luke:cineplex-b2b &#43;*&#43;&#43; [bb-master^2~4^2^] merged changes - fixed conflict &#43;*&#43;&#43; [bb-master^2~4^2~2] CPLXBTOB-557 - fixed amount column to show proper currency ---- [bb-master^2~4^2~3] Merge branch &#39;master&#39; of twgit@luke:cineplex-b2b.git &#43;*&#43;&#43; [bb-master^2~4^2~4] CPLXBTOB-484 - fixed the spacing and comma issues &#43;*&#43;&#43; [bb-master^2~5] Reverted 4d512ed - issue with recalculate. Must be solved selectively via Javascript &#43;*&#43;&#43; [bb-master^2~6] Spacing in header see also version with --current
+CineplexB2B $ git show-branch --current master ! [master] Merged in the last 5 days changes * [bb-master] Merged in the last 5 days changes -- -- [master] Merged in the last 5 days changes For more, see http://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -104,12 +112,21 @@ Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data w
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -126,6 +143,7 @@ Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data w
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -163,38 +181,38 @@ Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data w
 <p>In the meantime in master, some minor UI changes were made to these files whose content was now elsewhere.</p>
 <p>Quick trick how to resolve it fast:</p>
 <h2 id="show-branch">Show branch</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">CineplexB2B $ git show-branch
-! [bb-database-cleanup] Loading data with XML only: no constraints and tax_id (unused field) nullable
- ! [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build
-  * [bb-master] Merged in the last 5 days changes
-   ! [corporate-ui-cleanup] Merged in the last 5 days changes
-    ! [master] Merged in the last 5 days changes
------
- -    [bb-gradle-build] Merge branch &#39;master&#39; into bb-gradle-build
- ---- [bb-master] Merged in the last 5 days changes
- +*++ [bb-master^2] CPLXB2B-562, usageInfo/internalUsageInfo mapping in CFI
- +*++ [bb-master^2^] return order goes all the way to NEW: replaced SetPaymentGroupAmount, added ReturnFee calculator, added reusable jsp fragments for sales order pages
- +*++ [bb-master^2~2] Styling change to avoid disappearing links inside Terms and Conditions
- +*++ [bb-master^2~3] Dealing with consequences if INTERNAL split to INTERNAL_TRANSFER and INTERNAL_PURCHASE
- ---- [bb-master^2~4] Merge remote-tracking branch &#39;origin/master&#39; into uat2-deploy
- ---- [bb-master^2~4^2] Merge branch &#39;master&#39; of luke:cineplex-b2b
- +*++ [bb-master^2~4^2^] merged changes - fixed conflict
- +*++ [bb-master^2~4^2~2] CPLXBTOB-557 - fixed amount column to show proper currency
- ---- [bb-master^2~4^2~3] Merge branch &#39;master&#39; of twgit@luke:cineplex-b2b.git
- +*++ [bb-master^2~4^2~4] CPLXBTOB-484 - fixed the spacing and comma issues
- +*++ [bb-master^2~5] Reverted 4d512ed - issue with recalculate. Must be solved selectively via Javascript
- +*++ [bb-master^2~6] Spacing in header
-</code></pre></div><p>see also version with <code>--current</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">CineplexB2B $ git show-branch --current master
-! [master] Merged in the last 5 days changes
- * [bb-master] Merged in the last 5 days changes
---
--- [master] Merged in the last 5 days changes
-</code></pre></div><p>For more, see <a href="http://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created">http://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">CineplexB2B</span> <span class="o">$</span> <span class="n">git</span> <span class="n">show</span><span class="o">-</span><span class="n">branch</span>
+</span></span><span class="line"><span class="cl"><span class="o">!</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">database</span><span class="o">-</span><span class="n">cleanup</span><span class="p">]</span> <span class="n">Loading</span> <span class="n">data</span> <span class="n">with</span> <span class="n">XML</span> <span class="n">only</span><span class="p">:</span> <span class="n">no</span> <span class="n">constraints</span> <span class="ow">and</span> <span class="n">tax_id</span> <span class="p">(</span><span class="n">unused</span> <span class="n">field</span><span class="p">)</span> <span class="n">nullable</span>
+</span></span><span class="line"><span class="cl"> <span class="o">!</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">gradle</span><span class="o">-</span><span class="n">build</span><span class="p">]</span> <span class="n">Merge</span> <span class="n">branch</span> <span class="s1">&#39;master&#39;</span> <span class="n">into</span> <span class="n">bb</span><span class="o">-</span><span class="n">gradle</span><span class="o">-</span><span class="n">build</span>
+</span></span><span class="line"><span class="cl">  <span class="o">*</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="p">]</span> <span class="n">Merged</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">last</span> <span class="mi">5</span> <span class="n">days</span> <span class="n">changes</span>
+</span></span><span class="line"><span class="cl">   <span class="o">!</span> <span class="p">[</span><span class="n">corporate</span><span class="o">-</span><span class="n">ui</span><span class="o">-</span><span class="n">cleanup</span><span class="p">]</span> <span class="n">Merged</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">last</span> <span class="mi">5</span> <span class="n">days</span> <span class="n">changes</span>
+</span></span><span class="line"><span class="cl">    <span class="o">!</span> <span class="p">[</span><span class="n">master</span><span class="p">]</span> <span class="n">Merged</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">last</span> <span class="mi">5</span> <span class="n">days</span> <span class="n">changes</span>
+</span></span><span class="line"><span class="cl"><span class="o">-----</span>
+</span></span><span class="line"><span class="cl"> <span class="o">-</span>    <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">gradle</span><span class="o">-</span><span class="n">build</span><span class="p">]</span> <span class="n">Merge</span> <span class="n">branch</span> <span class="s1">&#39;master&#39;</span> <span class="n">into</span> <span class="n">bb</span><span class="o">-</span><span class="n">gradle</span><span class="o">-</span><span class="n">build</span>
+</span></span><span class="line"><span class="cl"> <span class="o">----</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="p">]</span> <span class="n">Merged</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">last</span> <span class="mi">5</span> <span class="n">days</span> <span class="n">changes</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="p">]</span> <span class="n">CPLXB2B</span><span class="o">-</span><span class="mi">562</span><span class="p">,</span> <span class="n">usageInfo</span><span class="o">/</span><span class="n">internalUsageInfo</span> <span class="n">mapping</span> <span class="ow">in</span> <span class="n">CFI</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">^</span><span class="p">]</span> <span class="k">return</span> <span class="n">order</span> <span class="n">goes</span> <span class="n">all</span> <span class="n">the</span> <span class="n">way</span> <span class="n">to</span> <span class="n">NEW</span><span class="p">:</span> <span class="n">replaced</span> <span class="n">SetPaymentGroupAmount</span><span class="p">,</span> <span class="n">added</span> <span class="n">ReturnFee</span> <span class="n">calculator</span><span class="p">,</span> <span class="n">added</span> <span class="n">reusable</span> <span class="n">jsp</span> <span class="n">fragments</span> <span class="k">for</span> <span class="n">sales</span> <span class="n">order</span> <span class="n">pages</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">2</span><span class="p">]</span> <span class="n">Styling</span> <span class="n">change</span> <span class="n">to</span> <span class="n">avoid</span> <span class="n">disappearing</span> <span class="n">links</span> <span class="n">inside</span> <span class="n">Terms</span> <span class="ow">and</span> <span class="n">Conditions</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">3</span><span class="p">]</span> <span class="n">Dealing</span> <span class="n">with</span> <span class="n">consequences</span> <span class="k">if</span> <span class="n">INTERNAL</span> <span class="n">split</span> <span class="n">to</span> <span class="n">INTERNAL_TRANSFER</span> <span class="ow">and</span> <span class="n">INTERNAL_PURCHASE</span>
+</span></span><span class="line"><span class="cl"> <span class="o">----</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="p">]</span> <span class="n">Merge</span> <span class="n">remote</span><span class="o">-</span><span class="n">tracking</span> <span class="n">branch</span> <span class="s1">&#39;origin/master&#39;</span> <span class="n">into</span> <span class="n">uat2</span><span class="o">-</span><span class="n">deploy</span>
+</span></span><span class="line"><span class="cl"> <span class="o">----</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="o">^</span><span class="mi">2</span><span class="p">]</span> <span class="n">Merge</span> <span class="n">branch</span> <span class="s1">&#39;master&#39;</span> <span class="n">of</span> <span class="n">luke</span><span class="p">:</span><span class="n">cineplex</span><span class="o">-</span><span class="n">b2b</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="o">^</span><span class="mi">2</span><span class="o">^</span><span class="p">]</span> <span class="n">merged</span> <span class="n">changes</span> <span class="o">-</span> <span class="n">fixed</span> <span class="n">conflict</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">2</span><span class="p">]</span> <span class="n">CPLXBTOB</span><span class="o">-</span><span class="mi">557</span> <span class="o">-</span> <span class="n">fixed</span> <span class="n">amount</span> <span class="n">column</span> <span class="n">to</span> <span class="n">show</span> <span class="n">proper</span> <span class="n">currency</span>
+</span></span><span class="line"><span class="cl"> <span class="o">----</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">3</span><span class="p">]</span> <span class="n">Merge</span> <span class="n">branch</span> <span class="s1">&#39;master&#39;</span> <span class="n">of</span> <span class="n">twgit</span><span class="err">@</span><span class="n">luke</span><span class="p">:</span><span class="n">cineplex</span><span class="o">-</span><span class="n">b2b</span><span class="o">.</span><span class="n">git</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">4</span><span class="p">]</span> <span class="n">CPLXBTOB</span><span class="o">-</span><span class="mi">484</span> <span class="o">-</span> <span class="n">fixed</span> <span class="n">the</span> <span class="n">spacing</span> <span class="ow">and</span> <span class="n">comma</span> <span class="n">issues</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">5</span><span class="p">]</span> <span class="n">Reverted</span> <span class="mi">4</span><span class="n">d512ed</span> <span class="o">-</span> <span class="n">issue</span> <span class="n">with</span> <span class="n">recalculate</span><span class="o">.</span> <span class="n">Must</span> <span class="n">be</span> <span class="n">solved</span> <span class="n">selectively</span> <span class="n">via</span> <span class="n">Javascript</span>
+</span></span><span class="line"><span class="cl"> <span class="o">+*++</span> <span class="p">[</span><span class="n">bb</span><span class="o">-</span><span class="n">master</span><span class="o">^</span><span class="mi">2</span><span class="o">~</span><span class="mi">6</span><span class="p">]</span> <span class="n">Spacing</span> <span class="ow">in</span> <span class="n">header</span>
+</span></span></code></pre></div><p>see also version with <code>--current</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">CineplexB2B $ git show-branch --current master
+</span></span><span class="line"><span class="cl">! [master] Merged in the last 5 days changes
+</span></span><span class="line"><span class="cl"> * [bb-master] Merged in the last 5 days changes
+</span></span><span class="line"><span class="cl">--
+</span></span><span class="line"><span class="cl">-- [master] Merged in the last 5 days changes
+</span></span></code></pre></div><p>For more, see <a href="http://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created">http://stackoverflow.com/questions/2255416/how-to-determine-when-a-git-branch-was-created</a></p>
 <h2 id="find-difference">Find difference</h2>
 <p>between 2 versions of the file which existed on master - since 13 commits ago</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git diff master~13:cineplex/j2ee-apps/cineplex.ear/b2b.war/profile/gadgets/applicationReview_content.jsp master:cineplex/j2ee-apps/cineplex.ear/b2b.war/profile/gadgets/applicationReview_content.jsp
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git diff master~13:cineplex/j2ee-apps/cineplex.ear/b2b.war/profile/gadgets/applicationReview_content.jsp master:cineplex/j2ee-apps/cineplex.ear/b2b.war/profile/gadgets/applicationReview_content.jsp
+</span></span></code></pre></div><ul>
 <li>Save the diff to file</li>
 <li>open the new location</li>
 <li>find &ldquo;shared&rdquo; part from the diff</li>
@@ -261,7 +279,7 @@ Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data w
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -279,13 +297,10 @@ Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data w
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -296,7 +311,10 @@ Show branch CineplexB2B $ git show-branch ! [bb-database-cleanup] Loading data w
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

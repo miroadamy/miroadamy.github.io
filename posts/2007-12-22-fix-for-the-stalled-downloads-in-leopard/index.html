@@ -16,14 +16,16 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="sudo sysctl -w net.inet.tcp.rfc1323=0 (it replaces the default value of 1)" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="I was experiencing the occasional weird behaviour on downloading large files in Leopard: the download would stall, but after stopping/restarting (which can be done in Safari and iTunes), the download would continue. It was not very consistent, and I suspected the NAT router or even Rogers - some sites were occasionally having this problem, while other sites would not.
+While playing with JRuby over the weekend, this happened again and pretty much prevented the gem installation - because the multi-megabyte gem index would not download from http://gems.rubyforge.org/. Strangely enough, same download would work on Tiger, on Linux and on Windows using same router - which pretty much excluded router as a cause.
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2007-12-22-fix-for-the-stalled-downloads-in-leopard/" />
@@ -34,28 +36,32 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Fix for the stalled downloads in Leopard" />
-<meta property="og:description" content="sudo sysctl -w net.inet.tcp.rfc1323=0 (it replaces the default value of 1)" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2007-12-22-fix-for-the-stalled-downloads-in-leopard/" />
-<meta property="article:published_time" content="2007-12-22T23:12:18-05:00" />
-<meta property="article:modified_time" content="2007-12-22T23:12:18-05:00" />
-<meta itemprop="name" content="Fix for the stalled downloads in Leopard">
-<meta itemprop="description" content="sudo sysctl -w net.inet.tcp.rfc1323=0 (it replaces the default value of 1)">
-<meta itemprop="datePublished" content="2007-12-22T23:12:18-05:00" />
-<meta itemprop="dateModified" content="2007-12-22T23:12:18-05:00" />
-<meta itemprop="wordCount" content="11">
+<meta property="og:url" content="https://miroadamy.com/posts/2007-12-22-fix-for-the-stalled-downloads-in-leopard/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Fix for the stalled downloads in Leopard">
+	<meta property="og:description" content="I was experiencing the occasional weird behaviour on downloading large files in Leopard: the download would stall, but after stopping/restarting (which can be done in Safari and iTunes), the download would continue. It was not very consistent, and I suspected the NAT router or even Rogers - some sites were occasionally having this problem, while other sites would not.
+While playing with JRuby over the weekend, this happened again and pretty much prevented the gem installation - because the multi-megabyte gem index would not download from http://gems.rubyforge.org/. Strangely enough, same download would work on Tiger, on Linux and on Windows using same router - which pretty much excluded router as a cause.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2007-12-22T23:12:18-05:00">
+		<meta property="article:modified_time" content="2007-12-22T23:12:18-05:00">
 
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Fix for the stalled downloads in Leopard"/>
-<meta name="twitter:description" content="sudo sysctl -w net.inet.tcp.rfc1323=0 (it replaces the default value of 1)"/>
+	<meta itemprop="name" content="Fix for the stalled downloads in Leopard">
+	<meta itemprop="description" content="I was experiencing the occasional weird behaviour on downloading large files in Leopard: the download would stall, but after stopping/restarting (which can be done in Safari and iTunes), the download would continue. It was not very consistent, and I suspected the NAT router or even Rogers - some sites were occasionally having this problem, while other sites would not.
+While playing with JRuby over the weekend, this happened again and pretty much prevented the gem installation - because the multi-megabyte gem index would not download from http://gems.rubyforge.org/. Strangely enough, same download would work on Tiger, on Linux and on Windows using same router - which pretty much excluded router as a cause.">
+	<meta itemprop="datePublished" content="2007-12-22T23:12:18-05:00">
+	<meta itemprop="dateModified" content="2007-12-22T23:12:18-05:00">
+	<meta itemprop="wordCount" content="202">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Fix for the stalled downloads in Leopard">
+	<meta name="twitter:description" content="I was experiencing the occasional weird behaviour on downloading large files in Leopard: the download would stall, but after stopping/restarting (which can be done in Safari and iTunes), the download would continue. It was not very consistent, and I suspected the NAT router or even Rogers - some sites were occasionally having this problem, while other sites would not.
+While playing with JRuby over the weekend, this happened again and pretty much prevented the gem installation - because the multi-megabyte gem index would not download from http://gems.rubyforge.org/. Strangely enough, same download would work on Tiger, on Linux and on Windows using same router - which pretty much excluded router as a cause.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -92,12 +98,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -114,6 +129,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -127,7 +143,7 @@
       <div class="post-meta">
         <span class="post-time"> 2007-12-22 </span>
         
-          <span class="more-meta"> 11 words </span>
+          <span class="more-meta"> 202 words </span>
           <span class="more-meta"> 1 min read </span>
         
       </div>
@@ -140,10 +156,16 @@
   </div>
 </div>
     <div class="post-content">
-      <!-- raw HTML omitted -->
-<div class="highlight"><pre class="chroma"><code class="language-ruby" data-lang="ruby">   <span class="n">sudo</span> <span class="n">sysctl</span> <span class="o">-</span><span class="n">w</span> <span class="n">net</span><span class="o">.</span><span class="n">inet</span><span class="o">.</span><span class="n">tcp</span><span class="o">.</span><span class="n">rfc1323</span><span class="o">=</span><span class="mi">0</span>
-</code></pre></div><p>(it replaces the default value of 1)<!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+      <p>I was experiencing the occasional weird behaviour on downloading large files in Leopard: the download would stall, but after stopping/restarting (which can be done in Safari and iTunes), the download would continue. It was not very consistent, and I suspected the NAT router or even Rogers - some sites were occasionally having this problem, while other sites would not.</p>
+<p>While playing with JRuby over the weekend, this happened again and pretty much prevented the gem installation - because the multi-megabyte gem index would not download from http://gems.rubyforge.org/. Strangely enough, same download would work on Tiger, on Linux and on Windows using same router - which pretty much excluded router as a cause.</p>
+<p>I found simple fix <a href="http://discussions.apple.com/thread.jspa?messageID=6079960" target="_blank">here</a> - big thanks to Chris D Searle. Run the following:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl">   <span class="n">sudo</span> <span class="n">sysctl</span> <span class="o">-</span><span class="n">w</span> <span class="n">net</span><span class="o">.</span><span class="n">inet</span><span class="o">.</span><span class="n">tcp</span><span class="o">.</span><span class="n">rfc1323</span><span class="o">=</span><span class="mi">0</span>
+</span></span></code></pre></div><p>(it replaces the default value of 1)</p></p>
+<p>I do not know all the details of the fix - it switches off some TCP window optimization which may have been the cause of the problem. More on the parameter and how to set it in variety of OS-es can be found  <a href="http://proj.sunet.se/E2E/tcptune.html" target="_blank">in the TCP tuning handbook</a>.</p>
+<p>To make change permanent, create (or edit) the file /etc/sysctl.conf with the content:</p>
+```
+   net.inet.tcp.rfc1323=0
+```
 
     </div>
 
@@ -202,7 +224,7 @@
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -220,13 +242,10 @@
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -237,7 +256,10 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

@@ -17,14 +17,15 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
-User setup  List all keys in Gitolite must have access to Gitolite admin interface  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2." /><meta name="keywords" content="blog, Miro" />
+User setup List all keys in Gitolite must have access to Gitolite admin interface cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2.pub -rw-r----- 1 miro 398 Mar 30 2016 irae.pub ... DELETED ... -rw-r--r-- 1 miro 401 Jun 29 2015 miro.pub -rw-r--r-- 1 miro 411 Jun 29 2015 tkuser.jenkins0.pub -rw-r--r-- 1 miro 411 Jun 29 2015 tkuser.jenkins2.pub These will be split to 5 usergroups
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/" />
@@ -35,31 +36,36 @@ User setup  List all keys in Gitolite must have access to Gitolite admin interfa
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Process for transferring Git repo from Gitolite to Bitbucket" />
-<meta property="og:description" content="Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
-User setup  List all keys in Gitolite must have access to Gitolite admin interface  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/" />
-<meta property="article:published_time" content="2016-11-02T11:22:48+08:00" />
-<meta property="article:modified_time" content="2016-11-02T11:22:48+08:00" />
-<meta itemprop="name" content="Process for transferring Git repo from Gitolite to Bitbucket">
-<meta itemprop="description" content="Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
-User setup  List all keys in Gitolite must have access to Gitolite admin interface  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2.">
-<meta itemprop="datePublished" content="2016-11-02T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2016-11-02T11:22:48+08:00" />
-<meta itemprop="wordCount" content="766">
+<meta property="og:url" content="https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Process for transferring Git repo from Gitolite to Bitbucket">
+	<meta property="og:description" content="Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
+User setup List all keys in Gitolite must have access to Gitolite admin interface cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2.pub -rw-r----- 1 miro 398 Mar 30 2016 irae.pub ... DELETED ... -rw-r--r-- 1 miro 401 Jun 29 2015 miro.pub -rw-r--r-- 1 miro 411 Jun 29 2015 tkuser.jenkins0.pub -rw-r--r-- 1 miro 411 Jun 29 2015 tkuser.jenkins2.pub These will be split to 5 usergroups">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2016-11-02T11:22:48+08:00">
+		<meta property="article:modified_time" content="2016-11-02T11:22:48+08:00">
+		<meta property="article:tag" content="Git">
+		<meta property="article:tag" content="Gitolite">
+		<meta property="article:tag" content="Bitbucket">
 
-
-
-<meta itemprop="keywords" content="git,gitolite,bitbucket," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Process for transferring Git repo from Gitolite to Bitbucket"/>
-<meta name="twitter:description" content="Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
-User setup  List all keys in Gitolite must have access to Gitolite admin interface  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2."/>
+	<meta itemprop="name" content="Process for transferring Git repo from Gitolite to Bitbucket">
+	<meta itemprop="description" content="Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
+User setup List all keys in Gitolite must have access to Gitolite admin interface cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2.pub -rw-r----- 1 miro 398 Mar 30 2016 irae.pub ... DELETED ... -rw-r--r-- 1 miro 401 Jun 29 2015 miro.pub -rw-r--r-- 1 miro 411 Jun 29 2015 tkuser.jenkins0.pub -rw-r--r-- 1 miro 411 Jun 29 2015 tkuser.jenkins2.pub These will be split to 5 usergroups">
+	<meta itemprop="datePublished" content="2016-11-02T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2016-11-02T11:22:48+08:00">
+	<meta itemprop="wordCount" content="766">
+	<meta itemprop="keywords" content="Git,Gitolite,Bitbucket">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Process for transferring Git repo from Gitolite to Bitbucket">
+	<meta name="twitter:description" content="Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
+User setup List all keys in Gitolite must have access to Gitolite admin interface cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2.pub -rw-r----- 1 miro 398 Mar 30 2016 irae.pub ... DELETED ... -rw-r--r-- 1 miro 401 Jun 29 2015 miro.pub -rw-r--r-- 1 miro 411 Jun 29 2015 tkuser.jenkins0.pub -rw-r--r-- 1 miro 411 Jun 29 2015 tkuser.jenkins2.pub These will be split to 5 usergroups">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -96,12 +102,21 @@ User setup  List all keys in Gitolite must have access to Gitolite admin interfa
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -118,6 +133,7 @@ User setup  List all keys in Gitolite must have access to Gitolite admin interfa
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -173,21 +189,21 @@ User setup  List all keys in Gitolite must have access to Gitolite admin interfa
 <li>List all keys in Gitolite</li>
 <li>must have access to Gitolite admin interface</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin
- 
- 
-➜  gitolite-admin git:(master) ll keydir
-total 144K
--rw-r--r-- 1 miro 401 Jun 29  2015 alter.pub
--rw-r--r-- 1 miro 397 Jun 29  2015 codereview.pub
--rw-r--r-- 1 miro 400 Apr 18  2016 hybris.pub
--rw-r--r-- 1 miro 400 Apr 19  2016 hybris2.pub
--rw-r----- 1 miro 398 Mar 30  2016 irae.pub
-... DELETED ...
--rw-r--r-- 1 miro 401 Jun 29  2015 miro.pub
--rw-r--r-- 1 miro 411 Jun 29  2015 tkuser.jenkins0.pub
--rw-r--r-- 1 miro 411 Jun 29  2015 tkuser.jenkins2.pub
-</code></pre></div><p>These will be split to 5 usergroups</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">➜  gitolite-admin git:(master) ll keydir
+</span></span><span class="line"><span class="cl">total 144K
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 401 Jun 29  2015 alter.pub
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 397 Jun 29  2015 codereview.pub
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 400 Apr 18  2016 hybris.pub
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 400 Apr 19  2016 hybris2.pub
+</span></span><span class="line"><span class="cl">-rw-r----- 1 miro 398 Mar 30  2016 irae.pub
+</span></span><span class="line"><span class="cl">... DELETED ...
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 401 Jun 29  2015 miro.pub
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 411 Jun 29  2015 tkuser.jenkins0.pub
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 411 Jun 29  2015 tkuser.jenkins2.pub
+</span></span></code></pre></div><p>These will be split to 5 usergroups</p>
 <ul>
 <li>Administrators (admin access) - all projects</li>
 <li>Developers - write access to all branches except master and develop, this project only</li>
@@ -210,137 +226,135 @@ total 144K
 <h3 id="clean-clone-the-repository-standard-way">clean clone the repository (standard way)</h3>
 <p><code>git clone prj@pensieve.thinkwrap.com:prj.git prj-normal</code></p>
 <h3 id="run-the-statistics">run the statistics</h3>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd prj-normal
-➜  prj-normal git:(master) git branch -a | wc -l
-892
-➜  prj-normal git:(master) git branch -r | wc -l
-891
-➜  prj-normal git:(master) git rev-list --all --count
-5527
-➜  prj-normal git:(master) git tag | wc -l
-3
-</code></pre></div><h3 id="mirror-clone-the-repo">mirror clone the repo</h3>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd ..
-git clone --mirror prj@pensieve.thinkwrap.com:prj.git prj-mirror 
-</code></pre></div><h3 id="difference-between-normal-and-mirror-clone">Difference between normal and mirror clone</h3>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  prj-normal git:(master) ll
-total 8.0K
--rw-r--r--  1 miro 1.6K Oct 31 17:01 Dockerfile
--rw-r--r--  1 miro  714 Oct 31 17:01 docker-compose.yml
-drwxr-xr-x 17 miro  578 Oct 31 17:01 prjbackoffice
-drwxr-xr-x 16 miro  544 Oct 31 17:01 prjcockpits
-drwxr-xr-x 21 miro  714 Oct 31 17:01 prjcore
-drwxr-xr-x 18 miro  612 Oct 31 17:01 prjctpayment
-drwxr-xr-x 18 miro  612 Oct 31 17:01 prjfacades
-drwxr-xr-x 16 miro  544 Oct 31 17:01 prjfulfilmentprocess
-drwxr-xr-x 19 miro  646 Oct 31 17:01 prjinitialdata
-drwxr-xr-x 19 miro  646 Oct 31 17:01 prjintegration
-drwxr-xr-x 15 miro  510 Oct 31 17:01 prjproject
-drwxr-xr-x  6 miro  204 Oct 31 17:01 prjsampledata
-drwxr-xr-x 17 miro  578 Oct 31 17:01 prjstorefront
-drwxr-xr-x 16 miro  544 Oct 31 17:01 prjtest
-drwxr-xr-x 20 miro  680 Oct 31 17:01 prjuserregistrationaddon
-drwxr-xr-x 11 miro  374 Oct 31 17:01 twdeploy
-drwxr-xr-x 17 miro  578 Oct 31 17:01 twvoucheraddon
-drwxr-xr-x 18 miro  612 Oct 31 17:01 twwishlistaddon
-
-➜  prj-mirror git:(master) ll
-total 100K
--rw-r--r--  1 miro  23 Oct 31 17:10 HEAD
--rw-r--r--  1 miro 257 Nov  2 09:08 config
--rw-r--r--  1 miro  73 Oct 31 17:06 description
-drwxr-xr-x 11 miro 374 Oct 31 17:06 hooks
-drwxr-xr-x  3 miro 102 Oct 31 17:06 info
-drwxr-xr-x  4 miro 136 Oct 31 17:06 objects
--rw-r--r--  1 miro 88K Oct 31 17:10 packed-refs
-drwxr-xr-x  4 miro 136 Oct 31 17:06 refs
-
-➜  prj-normal git:(master) git branch -a | tail -10
-  remotes/origin/release/1.21
-  remotes/origin/release/1.22
-  remotes/origin/release/1.3
-  remotes/origin/release/1.4
-  remotes/origin/release/1.5
-  remotes/origin/release/1.6
-  remotes/origin/release/1.7
-  remotes/origin/release/1.8
-  remotes/origin/release/1.9
-  remotes/origin/release/prj-UAT_2016-05-05
-
-➜  prj-mirror git:(master) git branch -a | tail -10
-  release/1.21
-  release/1.22
-  release/1.3
-  release/1.4
-  release/1.5
-  release/1.6
-  release/1.7
-  release/1.8
-  release/1.9
-  release/prj-UAT_2016-05-05
-
-
-</code></pre></div><h3 id="re-run-the-statistics">re-run the statistics</h3>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  prj-mirror git:(master) git branch -a | wc -l
-890
-➜  prj-mirror git:(master) git branch -r | wc -l
-0
-➜  prj-mirror git:(master) git rev-list --all --count
-5527
-</code></pre></div><h3 id="explanation-of-the-differences">Explanation of the differences</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd prj-normal
+</span></span><span class="line"><span class="cl">➜  prj-normal git:(master) git branch -a | wc -l
+</span></span><span class="line"><span class="cl">892
+</span></span><span class="line"><span class="cl">➜  prj-normal git:(master) git branch -r | wc -l
+</span></span><span class="line"><span class="cl">891
+</span></span><span class="line"><span class="cl">➜  prj-normal git:(master) git rev-list --all --count
+</span></span><span class="line"><span class="cl">5527
+</span></span><span class="line"><span class="cl">➜  prj-normal git:(master) git tag | wc -l
+</span></span><span class="line"><span class="cl">3
+</span></span></code></pre></div><h3 id="mirror-clone-the-repo">mirror clone the repo</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ..
+</span></span><span class="line"><span class="cl">git clone --mirror prj@pensieve.thinkwrap.com:prj.git prj-mirror 
+</span></span></code></pre></div><h3 id="difference-between-normal-and-mirror-clone">Difference between normal and mirror clone</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  prj-normal git:(master) ll
+</span></span><span class="line"><span class="cl">total 8.0K
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro 1.6K Oct 31 17:01 Dockerfile
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro  714 Oct 31 17:01 docker-compose.yml
+</span></span><span class="line"><span class="cl">drwxr-xr-x 17 miro  578 Oct 31 17:01 prjbackoffice
+</span></span><span class="line"><span class="cl">drwxr-xr-x 16 miro  544 Oct 31 17:01 prjcockpits
+</span></span><span class="line"><span class="cl">drwxr-xr-x 21 miro  714 Oct 31 17:01 prjcore
+</span></span><span class="line"><span class="cl">drwxr-xr-x 18 miro  612 Oct 31 17:01 prjctpayment
+</span></span><span class="line"><span class="cl">drwxr-xr-x 18 miro  612 Oct 31 17:01 prjfacades
+</span></span><span class="line"><span class="cl">drwxr-xr-x 16 miro  544 Oct 31 17:01 prjfulfilmentprocess
+</span></span><span class="line"><span class="cl">drwxr-xr-x 19 miro  646 Oct 31 17:01 prjinitialdata
+</span></span><span class="line"><span class="cl">drwxr-xr-x 19 miro  646 Oct 31 17:01 prjintegration
+</span></span><span class="line"><span class="cl">drwxr-xr-x 15 miro  510 Oct 31 17:01 prjproject
+</span></span><span class="line"><span class="cl">drwxr-xr-x  6 miro  204 Oct 31 17:01 prjsampledata
+</span></span><span class="line"><span class="cl">drwxr-xr-x 17 miro  578 Oct 31 17:01 prjstorefront
+</span></span><span class="line"><span class="cl">drwxr-xr-x 16 miro  544 Oct 31 17:01 prjtest
+</span></span><span class="line"><span class="cl">drwxr-xr-x 20 miro  680 Oct 31 17:01 prjuserregistrationaddon
+</span></span><span class="line"><span class="cl">drwxr-xr-x 11 miro  374 Oct 31 17:01 twdeploy
+</span></span><span class="line"><span class="cl">drwxr-xr-x 17 miro  578 Oct 31 17:01 twvoucheraddon
+</span></span><span class="line"><span class="cl">drwxr-xr-x 18 miro  612 Oct 31 17:01 twwishlistaddon
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">➜  prj-mirror git:(master) ll
+</span></span><span class="line"><span class="cl">total 100K
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro  23 Oct 31 17:10 HEAD
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro 257 Nov  2 09:08 config
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro  73 Oct 31 17:06 description
+</span></span><span class="line"><span class="cl">drwxr-xr-x 11 miro 374 Oct 31 17:06 hooks
+</span></span><span class="line"><span class="cl">drwxr-xr-x  3 miro 102 Oct 31 17:06 info
+</span></span><span class="line"><span class="cl">drwxr-xr-x  4 miro 136 Oct 31 17:06 objects
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro 88K Oct 31 17:10 packed-refs
+</span></span><span class="line"><span class="cl">drwxr-xr-x  4 miro 136 Oct 31 17:06 refs
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">➜  prj-normal git:(master) git branch -a | tail -10
+</span></span><span class="line"><span class="cl">  remotes/origin/release/1.21
+</span></span><span class="line"><span class="cl">  remotes/origin/release/1.22
+</span></span><span class="line"><span class="cl">  remotes/origin/release/1.3
+</span></span><span class="line"><span class="cl">  remotes/origin/release/1.4
+</span></span><span class="line"><span class="cl">  remotes/origin/release/1.5
+</span></span><span class="line"><span class="cl">  remotes/origin/release/1.6
+</span></span><span class="line"><span class="cl">  remotes/origin/release/1.7
+</span></span><span class="line"><span class="cl">  remotes/origin/release/1.8
+</span></span><span class="line"><span class="cl">  remotes/origin/release/1.9
+</span></span><span class="line"><span class="cl">  remotes/origin/release/prj-UAT_2016-05-05
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">➜  prj-mirror git:(master) git branch -a | tail -10
+</span></span><span class="line"><span class="cl">  release/1.21
+</span></span><span class="line"><span class="cl">  release/1.22
+</span></span><span class="line"><span class="cl">  release/1.3
+</span></span><span class="line"><span class="cl">  release/1.4
+</span></span><span class="line"><span class="cl">  release/1.5
+</span></span><span class="line"><span class="cl">  release/1.6
+</span></span><span class="line"><span class="cl">  release/1.7
+</span></span><span class="line"><span class="cl">  release/1.8
+</span></span><span class="line"><span class="cl">  release/1.9
+</span></span><span class="line"><span class="cl">  release/prj-UAT_2016-05-05
+</span></span></code></pre></div><h3 id="re-run-the-statistics">re-run the statistics</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  prj-mirror git:(master) git branch -a | wc -l
+</span></span><span class="line"><span class="cl">890
+</span></span><span class="line"><span class="cl">➜  prj-mirror git:(master) git branch -r | wc -l
+</span></span><span class="line"><span class="cl">0
+</span></span><span class="line"><span class="cl">➜  prj-mirror git:(master) git rev-list --all --count
+</span></span><span class="line"><span class="cl">5527
+</span></span></code></pre></div><h3 id="explanation-of-the-differences">Explanation of the differences</h3>
 <ul>
 <li>mirror has no remote branches</li>
 <li>two missing branches are</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd prj-normal; git branch -a &gt;../prjbranch-norm; cd ..
-cd prj-mirror; git branch -a &gt;../prjbranch-mirror; cd ..
- 
- 
-cat prjbranch-norm | sed &#39;s!remotes/origin/!!&#39; &gt;prjbranch-norm2
- 
-diff -u prjbranch-norm2 prjbranch-mirror
- 
- 
-➜  tmp diff -u prjbranch-norm2 prjbranch-mirror
---- prjbranch-norm2 2016-10-31 17:24:14.000000000 +0100
-+++ prjbranch-mirror    2016-10-31 17:23:25.000000000 +0100
-@@ -1,6 +1,4 @@
--* master
-   Cleanoverride
--  HEAD -&gt; origin/master
-   prjSTORE-1085-cart-update-message
-   prjSTORE-1087-download-quantity
-   prjSTORE-1142-unavailable-button-links
-@@ -865,7 +863,7 @@
-   hotfix/v2
-   hotfix/v3
-   hotfix/v4
--  master
-+* master
-   release/1.0
-   release/1.1
-   release/1.10
-➜  tmp
-</code></pre></div><p>Missing is local master branch and local reference HEAD pointing to master - this makes no sense for bare repository</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">cd</span> <span class="n">prj</span><span class="o">-</span><span class="n">normal</span><span class="p">;</span> <span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">a</span> <span class="o">&gt;../</span><span class="n">prjbranch</span><span class="o">-</span><span class="n">norm</span><span class="p">;</span> <span class="n">cd</span> <span class="o">..</span>
+</span></span><span class="line"><span class="cl"><span class="n">cd</span> <span class="n">prj</span><span class="o">-</span><span class="n">mirror</span><span class="p">;</span> <span class="n">git</span> <span class="n">branch</span> <span class="o">-</span><span class="n">a</span> <span class="o">&gt;../</span><span class="n">prjbranch</span><span class="o">-</span><span class="n">mirror</span><span class="p">;</span> <span class="n">cd</span> <span class="o">..</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">cat</span> <span class="n">prjbranch</span><span class="o">-</span><span class="n">norm</span> <span class="o">|</span> <span class="n">sed</span> <span class="s1">&#39;s!remotes/origin/!!&#39;</span> <span class="o">&gt;</span><span class="n">prjbranch</span><span class="o">-</span><span class="n">norm2</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">diff</span> <span class="o">-</span><span class="n">u</span> <span class="n">prjbranch</span><span class="o">-</span><span class="n">norm2</span> <span class="n">prjbranch</span><span class="o">-</span><span class="n">mirror</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">tmp</span> <span class="n">diff</span> <span class="o">-</span><span class="n">u</span> <span class="n">prjbranch</span><span class="o">-</span><span class="n">norm2</span> <span class="n">prjbranch</span><span class="o">-</span><span class="n">mirror</span>
+</span></span><span class="line"><span class="cl"><span class="o">---</span> <span class="n">prjbranch</span><span class="o">-</span><span class="n">norm2</span> <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">31</span> <span class="mi">17</span><span class="p">:</span><span class="mi">24</span><span class="p">:</span><span class="mf">14.000000000</span> <span class="o">+</span><span class="mi">0100</span>
+</span></span><span class="line"><span class="cl"><span class="o">+++</span> <span class="n">prjbranch</span><span class="o">-</span><span class="n">mirror</span>    <span class="mi">2016</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="mi">31</span> <span class="mi">17</span><span class="p">:</span><span class="mi">23</span><span class="p">:</span><span class="mf">25.000000000</span> <span class="o">+</span><span class="mi">0100</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span> <span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl"><span class="o">-*</span> <span class="n">master</span>
+</span></span><span class="line"><span class="cl">   <span class="n">Cleanoverride</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span>  <span class="n">HEAD</span> <span class="o">-&gt;</span> <span class="n">origin</span><span class="o">/</span><span class="n">master</span>
+</span></span><span class="line"><span class="cl">   <span class="n">prjSTORE</span><span class="o">-</span><span class="mi">1085</span><span class="o">-</span><span class="n">cart</span><span class="o">-</span><span class="n">update</span><span class="o">-</span><span class="n">message</span>
+</span></span><span class="line"><span class="cl">   <span class="n">prjSTORE</span><span class="o">-</span><span class="mi">1087</span><span class="o">-</span><span class="n">download</span><span class="o">-</span><span class="n">quantity</span>
+</span></span><span class="line"><span class="cl">   <span class="n">prjSTORE</span><span class="o">-</span><span class="mi">1142</span><span class="o">-</span><span class="n">unavailable</span><span class="o">-</span><span class="n">button</span><span class="o">-</span><span class="n">links</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="o">-</span><span class="mi">865</span><span class="p">,</span><span class="mi">7</span> <span class="o">+</span><span class="mi">863</span><span class="p">,</span><span class="mi">7</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">   <span class="n">hotfix</span><span class="o">/</span><span class="n">v2</span>
+</span></span><span class="line"><span class="cl">   <span class="n">hotfix</span><span class="o">/</span><span class="n">v3</span>
+</span></span><span class="line"><span class="cl">   <span class="n">hotfix</span><span class="o">/</span><span class="n">v4</span>
+</span></span><span class="line"><span class="cl"><span class="o">-</span>  <span class="n">master</span>
+</span></span><span class="line"><span class="cl"><span class="o">+*</span> <span class="n">master</span>
+</span></span><span class="line"><span class="cl">   <span class="n">release</span><span class="o">/</span><span class="mf">1.0</span>
+</span></span><span class="line"><span class="cl">   <span class="n">release</span><span class="o">/</span><span class="mf">1.1</span>
+</span></span><span class="line"><span class="cl">   <span class="n">release</span><span class="o">/</span><span class="mf">1.10</span>
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">tmp</span>
+</span></span></code></pre></div><p>Missing is local master branch and local reference HEAD pointing to master - this makes no sense for bare repository</p>
 <p>change the upstream / upload</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">git remote set-url --push origin git@bitbucket.org:thinkwrap/prj.git
-
-git push --mirror
-</code></pre></div><h3 id="re-clone-from-bitbucket">RE-clone from Bitbucket</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git remote set-url --push origin git@bitbucket.org:thinkwrap/prj.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git push --mirror
+</span></span></code></pre></div><h3 id="re-clone-from-bitbucket">RE-clone from Bitbucket</h3>
 <blockquote>
 <p>git clone <a href="mailto:git@bitbucket.org">git@bitbucket.org</a>:thinkwrap/prj.git prj-bitbucket</p>
 </blockquote>
 <h3 id="re-run-the-statistics-1">re-run the statistics</h3>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  prj-mirror git:(master) cd ../prj-bitbucket
-➜  prj-bitbucket git:(master) git branch -a | wc -l
-892
-➜  prj-bitbucket git:(master) git branch -r | wc -l
-891
-➜  prj-bitbucket git:(master) git rev-list --all --count
-5527
-➜  prj-bitbucket git:(master) git tag | wc -l
-3
-</code></pre></div><h2 id="compare">compare</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  prj-mirror git:(master) cd ../prj-bitbucket
+</span></span><span class="line"><span class="cl">➜  prj-bitbucket git:(master) git branch -a | wc -l
+</span></span><span class="line"><span class="cl">892
+</span></span><span class="line"><span class="cl">➜  prj-bitbucket git:(master) git branch -r | wc -l
+</span></span><span class="line"><span class="cl">891
+</span></span><span class="line"><span class="cl">➜  prj-bitbucket git:(master) git rev-list --all --count
+</span></span><span class="line"><span class="cl">5527
+</span></span><span class="line"><span class="cl">➜  prj-bitbucket git:(master) git tag | wc -l
+</span></span><span class="line"><span class="cl">3
+</span></span></code></pre></div><h2 id="compare">compare</h2>
 <p>=&gt; same number of commits, branches, tags etc</p>
 <h2 id="add-gitolite-users-to-bitbucket">Add Gitolite users to Bitbucket</h2>
 <ul>
@@ -409,7 +423,7 @@ git push --mirror
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -427,13 +441,10 @@ git push --mirror
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -444,7 +455,10 @@ git push --mirror
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

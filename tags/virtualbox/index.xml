@@ -1,83 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>virtualbox on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/virtualbox/</link>
-    <description>Recent content in virtualbox on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 23 Sep 2014 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How to access shared folder in Linux guest in VirtualBox</title>
-      <link>https://miroadamy.com/posts/2014-09-23-shared-folder/</link>
-      <pubDate>Tue, 23 Sep 2014 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2014-09-23-shared-folder/</guid>
-      <description>Make sure the VBOx extensions are installed.
-Go here for details:
-Add share In VirtualBox, Device add transient shared folder:
-This one has made available path /Users/Shared/ATG-11 under the name ATG-11
-Mount it sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x. 1 root 272 Sep 12 16:02 ATG11-docs -rw-rw-r--. 1 root 675 May 13 23:46 atg-platform-mac.userlibraries -rw-rw-r--. 1 root 787 May 13 23:17 atg-platform-vm.</description>
-    </item>
-    
-    <item>
-      <title>Installation of sshfs in the new VM</title>
-      <link>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</link>
-      <pubDate>Tue, 11 Mar 2014 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</guid>
-      <description>Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
-Get the &amp;lsquo;epel&amp;rsquo; repos wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm Validate
-$ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo It if good idea to enable the remi by default
-sudo vim /etc/yum.repos.d/remi.repo
-Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap Using Mount the host directory</description>
-    </item>
-    
-    <item>
-      <title>How to make screenshot from command line</title>
-      <link>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</link>
-      <pubDate>Tue, 24 Sep 2013 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</guid>
-      <description>How to make screenshot from command line platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk First one is &amp;ldquo;interactive&amp;rdquo; - Cmd-Shift-3 with selection tool, second is full screen</description>
-    </item>
-    
-    <item>
-      <title>Case sensitivity and VirtualBox shared folder</title>
-      <link>https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/</link>
-      <pubDate>Mon, 16 Sep 2013 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/</guid>
-      <description>Case sensitivity and VirtualBox shared folder Weird but true behaviour:
-I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
-touch zz zZ creates two files, both &amp;ldquo;inside VM&amp;rdquo; ~/development/ATG/platform-edc as well as in OS-X.
-If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
-The command
-cd ~/development/ATG/platform-edc touch zz zZ will create just single file.</description>
-    </item>
-    
-    <item>
-      <title>Usable mc color scheme</title>
-      <link>https://miroadamy.com/posts/2013-09-05-mc-color-scheme/</link>
-      <pubDate>Thu, 05 Sep 2013 21:32:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2013-09-05-mc-color-scheme/</guid>
-      <description>Usable mc color scheme Edit
-~/.mc/ini
-insert
-[Colors] base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default </description>
-    </item>
-    
-    <item>
-      <title>ATG Development using &#39;hidden&#39; VM</title>
-      <link>https://miroadamy.com/posts/2013-04-22-atg-development/</link>
-      <pubDate>Mon, 22 Apr 2013 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2013-04-22-atg-development/</guid>
-      <description>Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.
-Inspiration for the setup came from https://www.youtube.com/watch?feature=player_embedded&amp;amp;v=cPt_1Vga-Nk
-Motivation - issues with VMs VMs are great - they allow &amp;ldquo;packaged&amp;rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Virtualbox on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/virtualbox/</link>
+		<description>Recent content in Virtualbox on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 23 Sep 2014 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>How to access shared folder in Linux guest in VirtualBox</title>
+				<link>https://miroadamy.com/posts/2014-09-23-shared-folder/</link>
+				<pubDate>Tue, 23 Sep 2014 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2014-09-23-shared-folder/</guid>
+				<description>&lt;p&gt;Make sure the VBOx extensions are installed.&lt;/p&gt;&#xA;&lt;p&gt;Go here for details:&lt;/p&gt;&#xA;&lt;h2 id=&#34;add-share&#34;&gt;Add share&lt;/h2&gt;&#xA;&lt;p&gt;In VirtualBox, Device add transient shared folder:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/virt-box.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This one has made available path /Users/Shared/ATG-11 under the name ATG-11&lt;/p&gt;&#xA;&lt;h2 id=&#34;mount-it&#34;&gt;Mount it&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mount -t vboxsf ATG-11 /media&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ll /media/Unix/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total 19M&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x. 1 root  408 Sep 12 16:02 ATG11-1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x. 1 root  272 Sep 12 16:02 ATG11-docs&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-r--. 1 root  675 May 13 23:46 atg-platform-mac.userlibraries&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-r--. 1 root  787 May 13 23:17 atg-platform-vm.userlibraries&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rwxr--r--. 1 root  19M Feb 15  2013 jrebel-5.1.3-nosetup.zip&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--. 1 root 1020 May 15 15:36 jrebel.lic&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--. 1 root  582 May 15 14:58 rebel.xml&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x. 1 root  272 Apr  6 01:33 security&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x. 1 root  306 Jun  9 22:34 servers&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rwxr--r--. 1 root  349 Dec 17  2013 users.txt&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x. 1 root  340 Sep  3 16:10 xrebel&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+			</item>
+			<item>
+				<title>Installation of sshfs in the new VM</title>
+				<link>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</link>
+				<pubDate>Tue, 11 Mar 2014 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</guid>
+				<description>&lt;h1 id=&#34;installation-of-sshfs-in-the-new-vm&#34;&gt;Installation of sshfs in the new VM&lt;/h1&gt;&#xA;&lt;p&gt;On Centos 6, the fuse-sshfs is not part of default YUM repos.&lt;/p&gt;&#xA;&lt;h2 id=&#34;get-the-epel-repos&#34;&gt;Get the &amp;rsquo;epel&amp;rsquo; repos&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Validate&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/etc/yum.repos.d/epel.repo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/etc/yum.repos.d/epel-testing.repo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/etc/yum.repos.d/remi.repo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It if good idea to enable the remi by default&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;sudo vim /etc/yum.repos.d/remi.repo&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;usermod -a -G fuse thinkwrap&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;using&#34;&gt;Using&lt;/h2&gt;&#xA;&lt;p&gt;Mount the host directory&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>How to make screenshot from command line</title>
+				<link>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</link>
+				<pubDate>Tue, 24 Sep 2013 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</guid>
+				<description>&lt;h1 id=&#34;how-to-make-screenshot-from-command-line&#34;&gt;How to make screenshot from command line&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libpng warning: zero length keyword&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libpng warning: Empty language field in iTXt chunk&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;platform-edc $ screencapture  ~/Desktop/A$(date +%Y%m%d%H%M%S).png&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libpng warning: zero length keyword&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libpng warning: Empty language field in iTXt chunk&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;First one is &amp;ldquo;interactive&amp;rdquo; - Cmd-Shift-3 with selection tool, second is full screen&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/20130923195517.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;https://miroadamy.com/images/A20130923195544.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Case sensitivity and VirtualBox shared folder</title>
+				<link>https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/</link>
+				<pubDate>Mon, 16 Sep 2013 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/</guid>
+				<description>&lt;h1 id=&#34;case-sensitivity-and-virtualbox-shared-folder&#34;&gt;Case sensitivity and VirtualBox shared folder&lt;/h1&gt;&#xA;&lt;p&gt;Weird but true behaviour:&lt;/p&gt;&#xA;&lt;p&gt;I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;touch zz zZ&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;creates two files, both &amp;ldquo;inside VM&amp;rdquo; &lt;code&gt;~/development/ATG/platform-edc&lt;/code&gt; as well as in OS-X.&lt;/p&gt;&#xA;&lt;p&gt;If the VM is suspended and resumed, it looses the case sensitivity inside the VM.&lt;/p&gt;&#xA;&lt;p&gt;The command&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd ~/development/ATG/platform-edc&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;touch zz zZ&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;will create just single file. Outside the VM, in OS-X file system is still case sensitive.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Usable mc color scheme</title>
+				<link>https://miroadamy.com/posts/2013-09-05-mc-color-scheme/</link>
+				<pubDate>Thu, 05 Sep 2013 21:32:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2013-09-05-mc-color-scheme/</guid>
+				<description>&lt;h1 id=&#34;usable-mc-color-scheme&#34;&gt;Usable mc color scheme&lt;/h1&gt;&#xA;&lt;p&gt;Edit&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;~/.mc/ini&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;insert&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[Colors]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;base_color=lightgray,blue:normal=blue,default:selected=white,brightblue:marked=yellow,default:markselect=yellow,gray:directory=brightblue,default:executable=brightgreen,default:link=cyan,default:device=brightmagenta,default:special=lightgray,default:errors=red,default:reverse=green,default:gauge=green,default:input=white,gray:dnormal=green,gray:dfocus=brightgreen,gray:dhotnormal=cyan,gray:dhotfocus=brightcyan,gray:menu=green,default:menuhot=cyan,default:menusel=green,gray:menuhotsel=cyan,default:helpnormal=cyan,default:editnormal=green,default:editbold=blue,default:editmarked=gray,blue:stalelink=red,default&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/mc-color-scheme.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>ATG Development using &#39;hidden&#39; VM</title>
+				<link>https://miroadamy.com/posts/2013-04-22-atg-development/</link>
+				<pubDate>Mon, 22 Apr 2013 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2013-04-22-atg-development/</guid>
+				<description>&lt;p&gt;Brief description of my latest setup I use for CPL and LCH - in case I forget it or somebody wants to replicate it.&lt;/p&gt;&#xA;&lt;p&gt;Inspiration for the setup came from &lt;a href=&#34;https://www.youtube.com/watch?feature=player_embedded&amp;amp;v=cPt_1Vga-Nk&#34;&gt;https://www.youtube.com/watch?feature=player_embedded&amp;amp;v=cPt_1Vga-Nk&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;motivation---issues-with-vms&#34;&gt;Motivation - issues with VMs&lt;/h2&gt;&#xA;&lt;p&gt;VMs are great - they allow &amp;ldquo;packaged&amp;rdquo; dev environment and quick start for the new member of the team. Start a VM on local or remote host, connect with VNC or Remote Desktop and you are in business.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>hardware on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/hardware/</link>
-    <description>Recent content in hardware on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 23 Oct 2018 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Google Wifi</title>
-      <link>https://miroadamy.com/posts/2018-10-23-google-wifi/</link>
-      <pubDate>Tue, 23 Oct 2018 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2018-10-23-google-wifi/</guid>
-      <description>Installed Google Wifi - three access points. Finally I have good coverage on both floors of the appartment including the upper terrace and will be able to work at night outside during hot summer nights when temperature does not drop under 25.
-The setup was supereasy and iOS app is very well made and gives interesting insights.
-Happy.</description>
-    </item>
-    
-    <item>
-      <title>The problem with hard drives: too large and too cheap</title>
-      <link>https://miroadamy.com/posts/2006-12-05-the-problem-with-hard-drives-too-large-and-too-cheap/</link>
-      <pubDate>Tue, 05 Dec 2006 23:36:51 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2006-12-05-the-problem-with-hard-drives-too-large-and-too-cheap/</guid>
-      <description>I have worked through my listening to the Security Now! podcasts up to middle October now (more specifically up to here) and one remark from Steve Gibson forced me to think very hard: how today&#39;s hard drives encounter hundreds of read errors a day (actually Leo said &#34;hundreds a minute&#34;), but thanks to ECC process and dynamic reallocation of sectors, this is invisible to the user, because:
-&#34; .... if a file is damaged because of a bad sector, it can recover that data by recovering the data, either moving it or kind of reformatting the sector underneath it to make it readable again .</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Hardware on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/hardware/</link>
+		<description>Recent content in Hardware on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Tue, 23 Oct 2018 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/hardware/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Google Wifi</title>
+				<link>https://miroadamy.com/posts/2018-10-23-google-wifi/</link>
+				<pubDate>Tue, 23 Oct 2018 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2018-10-23-google-wifi/</guid>
+				<description>&lt;p&gt;Installed Google Wifi - three access points. Finally I have good coverage on both floors of the appartment including the upper terrace and will be able to work at night outside during hot summer nights when temperature does not drop under 25.&lt;/p&gt;&#xA;&lt;p&gt;The setup was supereasy and iOS app is very well made and gives interesting insights.&lt;/p&gt;&#xA;&lt;p&gt;Happy.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/google-wifi.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>The problem with hard drives: too large and too cheap</title>
+				<link>https://miroadamy.com/posts/2006-12-05-the-problem-with-hard-drives-too-large-and-too-cheap/</link>
+				<pubDate>Tue, 05 Dec 2006 23:36:51 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2006-12-05-the-problem-with-hard-drives-too-large-and-too-cheap/</guid>
+				<description>&lt;p&gt;I have worked through my listening to the Security Now! podcasts up to middle October now (more specifically up to &lt;a href=&#34;http://www.grc.com/SecurityNow.htm#62&#34;&gt;here&lt;/a&gt;) and one remark from Steve Gibson forced me to think very hard: how today&#39;s hard drives encounter hundreds of read errors a day (actually Leo said &#34;hundreds a minute&#34;), but thanks to ECC process and dynamic reallocation of sectors, this is invisible to the user, because:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&#34; .... if a file is damaged because of a bad sector, it can recover that data by recovering the data, either moving it or kind of reformatting the sector underneath it to make it readable again ... &#34;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

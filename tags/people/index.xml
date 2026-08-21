@@ -1,46 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>people on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/people/</link>
-    <description>Recent content in people on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 11 Apr 2007 23:39:47 -0400</lastBuildDate><atom:link href="https://miroadamy.com/tags/people/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Kurt Vonnegut - R.I.P.</title>
-      <link>https://miroadamy.com/posts/2007-04-11-kurt-vonnegut-rip/</link>
-      <pubDate>Wed, 11 Apr 2007 23:39:47 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-04-11-kurt-vonnegut-rip/</guid>
-      <description>It is a sad news - Kurt Vonnegut Jr., one of the great sci-fi writers, died at the age of 84.
-Thanks for all the great hours spent reading many of great books he wrote over last 55 years. I guess that best way how to show respect is re-read something he wrote - like this one.</description>
-    </item>
-    
-    <item>
-      <title>Who is the most successful programmer of the world ?</title>
-      <link>https://miroadamy.com/posts/2007-02-11-who-is-the-most-successful-programmer-of-the-world/</link>
-      <pubDate>Sun, 11 Feb 2007 23:52:35 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-02-11-who-is-the-most-successful-programmer-of-the-world/</guid>
-      <description>Depending on how you define success, you may get different answer to the question above.
-If you choose for the success criteria:
-- amount of money made by programming AND
-- number of people using the product AND
-- impact on the community at large
-the answer is probably Charles (Karoly) Simonyi, Hungarian born ex-Microsoft employee, billionaire, astronaut and original author of Microsoft Word.
-True, there certainly are people that made more money than him and their fortune is closely related to software - but unlike Simonyi none of them was actively programming for major part of their career.</description>
-    </item>
-    
-    <item>
-      <title>Unknown celebrity</title>
-      <link>https://miroadamy.com/posts/2006-12-10-unknown-celebrity/</link>
-      <pubDate>Sun, 10 Dec 2006 13:50:12 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2006-12-10-unknown-celebrity/</guid>
-      <description>Yes, I know, the title sounds like oxymoron and to certain degree, it is. What it should maybe say is Person who should have been celebrity ...
-I am not going anywere close to movies or entertainment industry with this. There are more than enough sites, blogs and gossip channels out there that look at life of movie stars or singers. I will stay within the world of computers and technology, which has its own heros and celebrities, albeit known in smaller groups.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>People on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/people/</link>
+		<description>Recent content in People on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 11 Apr 2007 23:39:47 -0400</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/people/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Kurt Vonnegut - R.I.P.</title>
+				<link>https://miroadamy.com/posts/2007-04-11-kurt-vonnegut-rip/</link>
+				<pubDate>Wed, 11 Apr 2007 23:39:47 -0400</pubDate>
+				<guid>https://miroadamy.com/posts/2007-04-11-kurt-vonnegut-rip/</guid>
+				<description>&lt;p&gt;It is a sad news - &lt;a href=&#34;http://en.wikipedia.org/wiki/Kurt_Vonnegut&#34; target=&#34;_blank&#34;&gt;Kurt Vonnegut Jr.&lt;/a&gt;, one of the great sci-fi writers, died at the age of 84.&lt;/p&gt;&#xA;&lt;p&gt;Thanks for all the great hours spent reading &lt;a href=&#34;http://en.wikipedia.org/wiki/List_of_the_writings_of_Kurt_Vonnegut&#34; target=&#34;_blank&#34;&gt;many of great books&lt;/a&gt; he wrote over last 55 years. I guess that best way how to show respect is re-read something he wrote - like &lt;a href=&#34;http://en.wikipedia.org/wiki/Slaughterhouse-five&#34; target=&#34;_blank&#34;&gt;this one&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Who is the most successful programmer of the world ?</title>
+				<link>https://miroadamy.com/posts/2007-02-11-who-is-the-most-successful-programmer-of-the-world/</link>
+				<pubDate>Sun, 11 Feb 2007 23:52:35 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2007-02-11-who-is-the-most-successful-programmer-of-the-world/</guid>
+				<description>&lt;p&gt;Depending on how you define &lt;em&gt;success&lt;/em&gt;, you may get different answer to the question above.&lt;/p&gt;&#xA;&lt;p&gt;If you choose for the success criteria:&lt;/p&gt;&#xA;&lt;p&gt;- amount of money made by programming AND&lt;br /&gt;&#xA;- number of people using the product AND&lt;br /&gt;&#xA;- impact on the community at large&lt;/p&gt;&#xA;&lt;p&gt;the answer is probably &lt;a href=&#34;http://en.wikipedia.org/wiki/Simonyi&#34; target=&#34;_blank&#34;&gt;Charles (Karoly) Simonyi&lt;/a&gt;, Hungarian born ex-Microsoft employee, billionaire, astronaut and original author of Microsoft Word.&lt;/p&gt;&#xA;&lt;p&gt;True, there certainly are people that made more money than him and their fortune is closely related to software - but unlike Simonyi none of them was actively programming for major part of their career. Take Bill Gates for example - most of his coding goes back to his teenage years and after creating Basic, his role was not related with active code writing. Also the number of people using Altair Basic (or any basic) today is likely nowhere in the Word league.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Unknown celebrity</title>
+				<link>https://miroadamy.com/posts/2006-12-10-unknown-celebrity/</link>
+				<pubDate>Sun, 10 Dec 2006 13:50:12 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2006-12-10-unknown-celebrity/</guid>
+				<description>&lt;p&gt;Yes, I know, the title sounds like oxymoron and to certain degree, it is. What it should maybe say is &lt;em&gt;Person who should have been celebrity&lt;/em&gt; ...&lt;/p&gt;&#xA;&lt;p&gt;I am not going anywere close to movies or entertainment industry with this. There are more than enough sites, blogs and gossip channels out there that look at life of movie stars or singers. I will stay within the world of computers and technology, which has its own heros and celebrities, albeit known in smaller groups. In &#34;real world&#34;, pretty much everybody knows &lt;a href=&#34;http://en.wikipedia.org/wiki/Bill_Gates&#34;&gt;Bill Gates&lt;/a&gt;, &lt;a href=&#34;http://en.wikipedia.org/wiki/Linus_Torvalds&#34;&gt;Linus Torvalds&lt;/a&gt;, &lt;a href=&#34;http://en.wikipedia.org/wiki/Steve_jobs&#34;&gt;Steve Jobs&lt;/a&gt;, &lt;a href=&#34;http://en.wikipedia.org/wiki/Larry_Ellison&#34;&gt;Larry Ellison&lt;/a&gt;, &lt;a href=&#34;http://en.wikipedia.org/wiki/Steve_Wozniak&#34;&gt;Steve Wozniak&lt;/a&gt;. They have made the headlines many times. Fewer people know names like &lt;a href=&#34;http://en.wikipedia.org/wiki/James_Gosling&#34;&gt;James Gosling&lt;/a&gt;, &lt;a href=&#34;http://en.wikipedia.org/wiki/Anders_Hejlsberg&#34;&gt;Anders Hejlsberg&lt;/a&gt;, &lt;a href=&#34;http://en.wikipedia.org/wiki/Bill_Joy&#34;&gt;Bill Joy&lt;/a&gt;, &lt;a href=&#34;http://en.wikipedia.org/wiki/Dennis_Ritchie&#34;&gt;Dennis Ritchie&lt;/a&gt;, &lt;a href=&#34;http://en.wikipedia.org/wiki/Guido_van_Rossum&#34;&gt;Guido van Rossum&lt;/a&gt;, &lt;a href=&#34;http://en.wikipedia.org/wiki/Guy_L._Steele&#34;&gt;Guy L. Steele&lt;/a&gt;, &lt;a href=&#34;http://en.wikipedia.org/wiki/Richard_Stallman&#34;&gt;Richard Stallman&lt;/a&gt;....&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

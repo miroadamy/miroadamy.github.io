@@ -18,14 +18,15 @@
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Issue In dotvim repo, I used readonly URL for cloning the repository. Now I have created local branch ( linux-vm ) to track Linux specific font settings and need them to push up.
 After creating new SSH pair and adding to GitHub, does not work
-[tkuser@cplx-dev-vf .vim]$ git status # On branch linux-vm nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm fatal: remote error: You can&amp;#39;t push to git://github." /><meta name="keywords" content="blog, Miro" />
+[tkuser@cplx-dev-vf .vim]$ git status # On branch linux-vm nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm fatal: remote error: You can&#39;t push to git://github.com/radegast/dotvim.git Use git@github.com:radegast/dotvim.git [tkuser@cplx-dev-vf .vim]$ git remote show origin * remote origin Fetch URL: git://github.com/radegast/dotvim.git Push URL: git://github.com/radegast/dotvim.git HEAD branch: master Remote branch: master tracked Local branch configured for &#39;git pull&#39;: master merges with remote master Local ref configured for &#39;git push&#39;: master pushes to master (up to date) [tkuser@cplx-dev-vf .vim]$ git remote set-url --push origin git@github.com:radegast/dotvim.git [tkuser@cplx-dev-vf .vim]$ git remote show origin * remote origin Fetch URL: git://github.com/radegast/dotvim.git Push URL: git@github.com:radegast/dotvim.git HEAD branch: master Remote branch: master tracked Local branch configured for &#39;git pull&#39;: master merges with remote master Local ref configured for &#39;git push&#39;: master pushes to master (up to date) [tkuser@cplx-dev-vf .vim]$ git push origin linux-vm Enter passphrase for key &#39;/home/tkuser/.ssh/id_rsa&#39;: Counting objects: 5, done. Compressing objects: 100% (2/2), done. Writing objects: 100% (3/3), 306 bytes, done. Total 3 (delta 1), reused 0 (delta 0) To git@github.com:radegast/dotvim.git * [new branch] linux-vm -&gt; linux-vm The important line is
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2012-03-21-remote-origin/" />
@@ -36,34 +37,38 @@ After creating new SSH pair and adding to GitHub, does not work
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="How to fix the remote origin from read only" />
-<meta property="og:description" content="Issue In dotvim repo, I used readonly URL for cloning the repository. Now I have created local branch ( linux-vm ) to track Linux specific font settings and need them to push up.
+<meta property="og:url" content="https://miroadamy.com/posts/2012-03-21-remote-origin/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="How to fix the remote origin from read only">
+	<meta property="og:description" content="Issue In dotvim repo, I used readonly URL for cloning the repository. Now I have created local branch ( linux-vm ) to track Linux specific font settings and need them to push up.
 After creating new SSH pair and adding to GitHub, does not work
-[tkuser@cplx-dev-vf .vim]$ git status # On branch linux-vm nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm fatal: remote error: You can&#39;t push to git://github." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2012-03-21-remote-origin/" />
-<meta property="article:published_time" content="2012-03-21T11:22:48+08:00" />
-<meta property="article:modified_time" content="2012-03-21T11:22:48+08:00" />
-<meta itemprop="name" content="How to fix the remote origin from read only">
-<meta itemprop="description" content="Issue In dotvim repo, I used readonly URL for cloning the repository. Now I have created local branch ( linux-vm ) to track Linux specific font settings and need them to push up.
+[tkuser@cplx-dev-vf .vim]$ git status # On branch linux-vm nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm fatal: remote error: You can&#39;t push to git://github.com/radegast/dotvim.git Use git@github.com:radegast/dotvim.git [tkuser@cplx-dev-vf .vim]$ git remote show origin * remote origin Fetch URL: git://github.com/radegast/dotvim.git Push URL: git://github.com/radegast/dotvim.git HEAD branch: master Remote branch: master tracked Local branch configured for &#39;git pull&#39;: master merges with remote master Local ref configured for &#39;git push&#39;: master pushes to master (up to date) [tkuser@cplx-dev-vf .vim]$ git remote set-url --push origin git@github.com:radegast/dotvim.git [tkuser@cplx-dev-vf .vim]$ git remote show origin * remote origin Fetch URL: git://github.com/radegast/dotvim.git Push URL: git@github.com:radegast/dotvim.git HEAD branch: master Remote branch: master tracked Local branch configured for &#39;git pull&#39;: master merges with remote master Local ref configured for &#39;git push&#39;: master pushes to master (up to date) [tkuser@cplx-dev-vf .vim]$ git push origin linux-vm Enter passphrase for key &#39;/home/tkuser/.ssh/id_rsa&#39;: Counting objects: 5, done. Compressing objects: 100% (2/2), done. Writing objects: 100% (3/3), 306 bytes, done. Total 3 (delta 1), reused 0 (delta 0) To git@github.com:radegast/dotvim.git * [new branch] linux-vm -&gt; linux-vm The important line is">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2012-03-21T11:22:48+08:00">
+		<meta property="article:modified_time" content="2012-03-21T11:22:48+08:00">
+		<meta property="article:tag" content="Git">
+		<meta property="article:tag" content="Ssh">
+
+	<meta itemprop="name" content="How to fix the remote origin from read only">
+	<meta itemprop="description" content="Issue In dotvim repo, I used readonly URL for cloning the repository. Now I have created local branch ( linux-vm ) to track Linux specific font settings and need them to push up.
 After creating new SSH pair and adding to GitHub, does not work
-[tkuser@cplx-dev-vf .vim]$ git status # On branch linux-vm nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm fatal: remote error: You can&#39;t push to git://github.">
-<meta itemprop="datePublished" content="2012-03-21T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2012-03-21T11:22:48+08:00" />
-<meta itemprop="wordCount" content="311">
-
-
-
-<meta itemprop="keywords" content="git,ssh," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="How to fix the remote origin from read only"/>
-<meta name="twitter:description" content="Issue In dotvim repo, I used readonly URL for cloning the repository. Now I have created local branch ( linux-vm ) to track Linux specific font settings and need them to push up.
+[tkuser@cplx-dev-vf .vim]$ git status # On branch linux-vm nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm fatal: remote error: You can&#39;t push to git://github.com/radegast/dotvim.git Use git@github.com:radegast/dotvim.git [tkuser@cplx-dev-vf .vim]$ git remote show origin * remote origin Fetch URL: git://github.com/radegast/dotvim.git Push URL: git://github.com/radegast/dotvim.git HEAD branch: master Remote branch: master tracked Local branch configured for &#39;git pull&#39;: master merges with remote master Local ref configured for &#39;git push&#39;: master pushes to master (up to date) [tkuser@cplx-dev-vf .vim]$ git remote set-url --push origin git@github.com:radegast/dotvim.git [tkuser@cplx-dev-vf .vim]$ git remote show origin * remote origin Fetch URL: git://github.com/radegast/dotvim.git Push URL: git@github.com:radegast/dotvim.git HEAD branch: master Remote branch: master tracked Local branch configured for &#39;git pull&#39;: master merges with remote master Local ref configured for &#39;git push&#39;: master pushes to master (up to date) [tkuser@cplx-dev-vf .vim]$ git push origin linux-vm Enter passphrase for key &#39;/home/tkuser/.ssh/id_rsa&#39;: Counting objects: 5, done. Compressing objects: 100% (2/2), done. Writing objects: 100% (3/3), 306 bytes, done. Total 3 (delta 1), reused 0 (delta 0) To git@github.com:radegast/dotvim.git * [new branch] linux-vm -&gt; linux-vm The important line is">
+	<meta itemprop="datePublished" content="2012-03-21T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2012-03-21T11:22:48+08:00">
+	<meta itemprop="wordCount" content="311">
+	<meta itemprop="keywords" content="Git,Ssh">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="How to fix the remote origin from read only">
+	<meta name="twitter:description" content="Issue In dotvim repo, I used readonly URL for cloning the repository. Now I have created local branch ( linux-vm ) to track Linux specific font settings and need them to push up.
 After creating new SSH pair and adding to GitHub, does not work
-[tkuser@cplx-dev-vf .vim]$ git status # On branch linux-vm nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm fatal: remote error: You can&#39;t push to git://github."/>
+[tkuser@cplx-dev-vf .vim]$ git status # On branch linux-vm nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm fatal: remote error: You can&#39;t push to git://github.com/radegast/dotvim.git Use git@github.com:radegast/dotvim.git [tkuser@cplx-dev-vf .vim]$ git remote show origin * remote origin Fetch URL: git://github.com/radegast/dotvim.git Push URL: git://github.com/radegast/dotvim.git HEAD branch: master Remote branch: master tracked Local branch configured for &#39;git pull&#39;: master merges with remote master Local ref configured for &#39;git push&#39;: master pushes to master (up to date) [tkuser@cplx-dev-vf .vim]$ git remote set-url --push origin git@github.com:radegast/dotvim.git [tkuser@cplx-dev-vf .vim]$ git remote show origin * remote origin Fetch URL: git://github.com/radegast/dotvim.git Push URL: git@github.com:radegast/dotvim.git HEAD branch: master Remote branch: master tracked Local branch configured for &#39;git pull&#39;: master merges with remote master Local ref configured for &#39;git push&#39;: master pushes to master (up to date) [tkuser@cplx-dev-vf .vim]$ git push origin linux-vm Enter passphrase for key &#39;/home/tkuser/.ssh/id_rsa&#39;: Counting objects: 5, done. Compressing objects: 100% (2/2), done. Writing objects: 100% (3/3), 306 bytes, done. Total 3 (delta 1), reused 0 (delta 0) To git@github.com:radegast/dotvim.git * [new branch] linux-vm -&gt; linux-vm The important line is">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -100,12 +105,21 @@ After creating new SSH pair and adding to GitHub, does not work
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -122,6 +136,7 @@ After creating new SSH pair and adding to GitHub, does not work
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -162,49 +177,48 @@ After creating new SSH pair and adding to GitHub, does not work
       <h2 id="issue">Issue</h2>
 <p>In dotvim repo, I used readonly URL for cloning the repository. Now I have created local branch ( linux-vm ) to track Linux specific font settings and need them to push up.</p>
 <p>After creating new SSH pair and adding to GitHub, does not work</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@cplx-dev-vf .vim]$ git status
-# On branch linux-vm
-nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm
-fatal: remote error:
- You can&#39;t push to git://github.com/radegast/dotvim.git
- Use git@github.com:radegast/dotvim.git
- 
-[tkuser@cplx-dev-vf .vim]$ git remote show origin
-* remote origin
- Fetch URL: git://github.com/radegast/dotvim.git
- Push URL: git://github.com/radegast/dotvim.git
- HEAD branch: master
- Remote branch:
- master tracked
- Local branch configured for &#39;git pull&#39;:
- master merges with remote master
- Local ref configured for &#39;git push&#39;:
- master pushes to master (up to date)
- 
-[tkuser@cplx-dev-vf .vim]$ git remote set-url --push origin git@github.com:radegast/dotvim.git
- 
-[tkuser@cplx-dev-vf .vim]$ git remote show origin
-* remote origin
- Fetch URL: git://github.com/radegast/dotvim.git
- Push URL: git@github.com:radegast/dotvim.git
- HEAD branch: master
- Remote branch:
- master tracked
- Local branch configured for &#39;git pull&#39;:
- master merges with remote master
- Local ref configured for &#39;git push&#39;:
- master pushes to master (up to date)
- 
-[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm
-Enter passphrase for key &#39;/home/tkuser/.ssh/id_rsa&#39;:
-Counting objects: 5, done.
-Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 306 bytes, done.
-Total 3 (delta 1), reused 0 (delta 0)
-To git@github.com:radegast/dotvim.git
- * [new branch] linux-vm -&gt; linux-vm
-
-</code></pre></div><p>The important line is</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@cplx-dev-vf .vim]$ git status
+</span></span><span class="line"><span class="cl"># On branch linux-vm
+</span></span><span class="line"><span class="cl">nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm
+</span></span><span class="line"><span class="cl">fatal: remote error:
+</span></span><span class="line"><span class="cl"> You can&#39;t push to git://github.com/radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> Use git@github.com:radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">[tkuser@cplx-dev-vf .vim]$ git remote show origin
+</span></span><span class="line"><span class="cl">* remote origin
+</span></span><span class="line"><span class="cl"> Fetch URL: git://github.com/radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> Push URL: git://github.com/radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> HEAD branch: master
+</span></span><span class="line"><span class="cl"> Remote branch:
+</span></span><span class="line"><span class="cl"> master tracked
+</span></span><span class="line"><span class="cl"> Local branch configured for &#39;git pull&#39;:
+</span></span><span class="line"><span class="cl"> master merges with remote master
+</span></span><span class="line"><span class="cl"> Local ref configured for &#39;git push&#39;:
+</span></span><span class="line"><span class="cl"> master pushes to master (up to date)
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">[tkuser@cplx-dev-vf .vim]$ git remote set-url --push origin git@github.com:radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">[tkuser@cplx-dev-vf .vim]$ git remote show origin
+</span></span><span class="line"><span class="cl">* remote origin
+</span></span><span class="line"><span class="cl"> Fetch URL: git://github.com/radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> Push URL: git@github.com:radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> HEAD branch: master
+</span></span><span class="line"><span class="cl"> Remote branch:
+</span></span><span class="line"><span class="cl"> master tracked
+</span></span><span class="line"><span class="cl"> Local branch configured for &#39;git pull&#39;:
+</span></span><span class="line"><span class="cl"> master merges with remote master
+</span></span><span class="line"><span class="cl"> Local ref configured for &#39;git push&#39;:
+</span></span><span class="line"><span class="cl"> master pushes to master (up to date)
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm
+</span></span><span class="line"><span class="cl">Enter passphrase for key &#39;/home/tkuser/.ssh/id_rsa&#39;:
+</span></span><span class="line"><span class="cl">Counting objects: 5, done.
+</span></span><span class="line"><span class="cl">Compressing objects: 100% (2/2), done.
+</span></span><span class="line"><span class="cl">Writing objects: 100% (3/3), 306 bytes, done.
+</span></span><span class="line"><span class="cl">Total 3 (delta 1), reused 0 (delta 0)
+</span></span><span class="line"><span class="cl">To git@github.com:radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> * [new branch] linux-vm -&gt; linux-vm
+</span></span></code></pre></div><p>The important line is</p>
 <blockquote>
 <p>git remote set-url &ndash;push origin <a href="mailto:git@github.com">git@github.com</a>:radegast/dotvim.git</p>
 </blockquote>
@@ -213,22 +227,21 @@ To git@github.com:radegast/dotvim.git
 <li>creating the pair: <a href="http://help.github.com/linux-set-up-git/">http://help.github.com/linux-set-up-git/</a></li>
 </ul>
 <h3 id="keygen">Keygen</h3>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@cplx-dev-vf ~]$ ssh-keygen -t rsa -C &#34;miro.adamy+cplx-dev-vf-osx@gmail.com&#34;
-Generating public/private rsa key pair.
-Enter file in which to save the key (/home/tkuser/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in /home/tkuser/.ssh/id_rsa.
-Your public key has been saved in /home/tkuser/.ssh/id_rsa.pub.
-The key fingerprint is:
-4e:17:89:ea:b3:57:51:78:e3:27:dc:d2:b1:2a:0e:86 miro.adamy+cplx-dev-vf-osx@gmail.com
-
-</code></pre></div><p>Validation</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[tkuser@cplx-dev-vf .ssh]$ cd
-[tkuser@cplx-dev-vf ~]$ ssh -T git@github.com
-Enter passphrase for key &#39;/home/tkuser/.ssh/id_rsa&#39;:
-Hi radegast! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@cplx-dev-vf ~]$ ssh-keygen -t rsa -C &#34;miro.adamy+cplx-dev-vf-osx@gmail.com&#34;
+</span></span><span class="line"><span class="cl">Generating public/private rsa key pair.
+</span></span><span class="line"><span class="cl">Enter file in which to save the key (/home/tkuser/.ssh/id_rsa):
+</span></span><span class="line"><span class="cl">Enter passphrase (empty for no passphrase):
+</span></span><span class="line"><span class="cl">Enter same passphrase again:
+</span></span><span class="line"><span class="cl">Your identification has been saved in /home/tkuser/.ssh/id_rsa.
+</span></span><span class="line"><span class="cl">Your public key has been saved in /home/tkuser/.ssh/id_rsa.pub.
+</span></span><span class="line"><span class="cl">The key fingerprint is:
+</span></span><span class="line"><span class="cl">4e:17:89:ea:b3:57:51:78:e3:27:dc:d2:b1:2a:0e:86 miro.adamy+cplx-dev-vf-osx@gmail.com
+</span></span></code></pre></div><p>Validation</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@cplx-dev-vf .ssh]$ cd
+</span></span><span class="line"><span class="cl">[tkuser@cplx-dev-vf ~]$ ssh -T git@github.com
+</span></span><span class="line"><span class="cl">Enter passphrase for key &#39;/home/tkuser/.ssh/id_rsa&#39;:
+</span></span><span class="line"><span class="cl">Hi radegast! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -289,7 +302,7 @@ Hi radegast! You&#39;ve successfully authenticated, but GitHub does not provide 
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -307,13 +320,10 @@ Hi radegast! You&#39;ve successfully authenticated, but GitHub does not provide 
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -324,7 +334,10 @@ Hi radegast! You&#39;ve successfully authenticated, but GitHub does not provide 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

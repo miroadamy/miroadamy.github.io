@@ -19,15 +19,15 @@
 <meta name="author" content="Miro Adamy" /><meta name="description" content="I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
 Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE
 What should work:
-grok { match =&amp;gt; [&amp;#34;message&amp;#34;, &amp;#34;regex to parse severity&amp;#34;], match =&amp;gt; [&amp;#34;message&amp;#34;, &amp;#34;regex to parse server IP&amp;#34;], match =&amp;gt; [&amp;#34;message&amp;#34;, &amp;#34;regex to parse user&amp;#34;] } What needs to be done instead
-You _should_ be able to do exactly what you listed at the bottom of your email, except that you&amp;#39;d need `break_on_match =&amp;gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches." /><meta name="keywords" content="blog, Miro" />
+grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] } What needs to be done instead
+You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches. Unfortunately, due to a bug (https://logstash.jira.com/browse/LOGSTASH-703), this doesn&#39;t work when you&#39;re matching against the same field in each match expression (&#34;message&#34; in your case). I was hoping to take a stab at fixing this bug (as several others have mentioned an interest in doing), but got distracted and haven&#39;t done it yet. It shouldn&#39;t be terribly hard to fix, just needs some time. As a work-around, the following should work, but unfortunately the way that your tag_on_failure will end up working will be different because you have multiple Grok filters that could fail independently. It&#39;s probably slightly less efficient to do it this way because the event has to pass from one filter to the next through the pipeline, but my guess (based on absolutely no empirical data) is that it isn&#39;t significantly slower because the same work would need to be done by Regex either way, there&#39;s just more LogStash in the mix this way. grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;] } grok { match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;] } grok { match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] } ~Greg Mefford " /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-09-16-logstash-error/" />
@@ -38,40 +38,45 @@ You _should_ be able to do exactly what you listed at the bottom of your email, 
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="logstash - known error" />
-<meta property="og:description" content="I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
+<meta property="og:url" content="https://miroadamy.com/posts/2014-09-16-logstash-error/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="logstash - known error">
+	<meta property="og:description" content="I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
 Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE
 What should work:
 grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] } What needs to be done instead
-You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2014-09-16-logstash-error/" />
-<meta property="article:published_time" content="2014-09-16T11:22:48+08:00" />
-<meta property="article:modified_time" content="2014-09-16T11:22:48+08:00" />
-<meta itemprop="name" content="logstash - known error">
-<meta itemprop="description" content="I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
+You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches. Unfortunately, due to a bug (https://logstash.jira.com/browse/LOGSTASH-703), this doesn&#39;t work when you&#39;re matching against the same field in each match expression (&#34;message&#34; in your case). I was hoping to take a stab at fixing this bug (as several others have mentioned an interest in doing), but got distracted and haven&#39;t done it yet. It shouldn&#39;t be terribly hard to fix, just needs some time. As a work-around, the following should work, but unfortunately the way that your tag_on_failure will end up working will be different because you have multiple Grok filters that could fail independently. It&#39;s probably slightly less efficient to do it this way because the event has to pass from one filter to the next through the pipeline, but my guess (based on absolutely no empirical data) is that it isn&#39;t significantly slower because the same work would need to be done by Regex either way, there&#39;s just more LogStash in the mix this way. grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;] } grok { match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;] } grok { match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] } ~Greg Mefford">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2014-09-16T11:22:48+08:00">
+		<meta property="article:modified_time" content="2014-09-16T11:22:48+08:00">
+		<meta property="article:tag" content="Logs">
+		<meta property="article:tag" content="Logstash">
+		<meta property="article:tag" content="Elk">
+
+	<meta itemprop="name" content="logstash - known error">
+	<meta itemprop="description" content="I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
 Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE
 What should work:
 grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] } What needs to be done instead
-You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches.">
-<meta itemprop="datePublished" content="2014-09-16T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2014-09-16T11:22:48+08:00" />
-<meta itemprop="wordCount" content="288">
-
-
-
-<meta itemprop="keywords" content="logs,logstash,elk," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="logstash - known error"/>
-<meta name="twitter:description" content="I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
+You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches. Unfortunately, due to a bug (https://logstash.jira.com/browse/LOGSTASH-703), this doesn&#39;t work when you&#39;re matching against the same field in each match expression (&#34;message&#34; in your case). I was hoping to take a stab at fixing this bug (as several others have mentioned an interest in doing), but got distracted and haven&#39;t done it yet. It shouldn&#39;t be terribly hard to fix, just needs some time. As a work-around, the following should work, but unfortunately the way that your tag_on_failure will end up working will be different because you have multiple Grok filters that could fail independently. It&#39;s probably slightly less efficient to do it this way because the event has to pass from one filter to the next through the pipeline, but my guess (based on absolutely no empirical data) is that it isn&#39;t significantly slower because the same work would need to be done by Regex either way, there&#39;s just more LogStash in the mix this way. grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;] } grok { match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;] } grok { match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] } ~Greg Mefford">
+	<meta itemprop="datePublished" content="2014-09-16T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2014-09-16T11:22:48+08:00">
+	<meta itemprop="wordCount" content="288">
+	<meta itemprop="keywords" content="Logs,Logstash,Elk">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="logstash - known error">
+	<meta name="twitter:description" content="I have been trying to make this work for about 1.5 hr. Looks like there is open bug - https://logstash.jira.com/browse/LOGSTASH-703
 Helpful link: https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE
 What should work:
 grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;], match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] } What needs to be done instead
-You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches."/>
+You _should_ be able to do exactly what you listed at the bottom of your email, except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message instead of just parsing the first one that matches. Unfortunately, due to a bug (https://logstash.jira.com/browse/LOGSTASH-703), this doesn&#39;t work when you&#39;re matching against the same field in each match expression (&#34;message&#34; in your case). I was hoping to take a stab at fixing this bug (as several others have mentioned an interest in doing), but got distracted and haven&#39;t done it yet. It shouldn&#39;t be terribly hard to fix, just needs some time. As a work-around, the following should work, but unfortunately the way that your tag_on_failure will end up working will be different because you have multiple Grok filters that could fail independently. It&#39;s probably slightly less efficient to do it this way because the event has to pass from one filter to the next through the pipeline, but my guess (based on absolutely no empirical data) is that it isn&#39;t significantly slower because the same work would need to be done by Regex either way, there&#39;s just more LogStash in the mix this way. grok { match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;] } grok { match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;] } grok { match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;] } ~Greg Mefford">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -108,12 +113,21 @@ You _should_ be able to do exactly what you listed at the bottom of your email, 
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -130,6 +144,7 @@ You _should_ be able to do exactly what you listed at the bottom of your email, 
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -162,46 +177,46 @@ You _should_ be able to do exactly what you listed at the bottom of your email, 
 Looks like there is open bug - <a href="https://logstash.jira.com/browse/LOGSTASH-703">https://logstash.jira.com/browse/LOGSTASH-703</a></p>
 <p>Helpful link: <a href="https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE">https://groups.google.com/forum/#!topic/logstash-users/sZM03po7HJE</a></p>
 <p>What should work:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">grok {
-   match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;],
-   match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;],
-   match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;]
-}
-</code></pre></div><p>What needs to be done instead</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">You _should_ be able to do exactly what you listed at the bottom of your email, 
-except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message 
-instead of just parsing the first one that matches. 
-Unfortunately, due to a bug (https://logstash.jira.com/browse/LOGSTASH-703), 
-this doesn&#39;t work when you&#39;re matching against the same field in each match expression (&#34;message&#34; in your case). 
-I was hoping to take a stab at fixing this bug (as several others have mentioned an interest in doing), 
-but got distracted and haven&#39;t done it yet. It shouldn&#39;t be terribly hard to fix, just needs some time.
- 
-As a work-around, the following should work, but unfortunately the way that your tag_on_failure 
-will end up working will be different 
-because you have multiple Grok filters that could fail independently. 
-It&#39;s probably slightly less efficient to do it this way because the event has to pass 
-from one filter to the next through the pipeline, 
-but my guess (based on absolutely no empirical data) is that it isn&#39;t significantly slower 
-because the same work would need to be done by Regex either way, 
-
-there&#39;s just more LogStash in the mix this way.
- 
- 
-grok {
-   match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;]
- 
-}
-grok {
-   match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;]
-}
-grok {
-   match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;]
-}
- 
- 
- 
-~Greg Mefford
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">grok {
+</span></span><span class="line"><span class="cl">   match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;],
+</span></span><span class="line"><span class="cl">   match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;],
+</span></span><span class="line"><span class="cl">   match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;]
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>What needs to be done instead</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">You _should_ be able to do exactly what you listed at the bottom of your email, 
+</span></span><span class="line"><span class="cl">except that you&#39;d need `break_on_match =&gt; false` so that it would parse each snippet for each message 
+</span></span><span class="line"><span class="cl">instead of just parsing the first one that matches. 
+</span></span><span class="line"><span class="cl">Unfortunately, due to a bug (https://logstash.jira.com/browse/LOGSTASH-703), 
+</span></span><span class="line"><span class="cl">this doesn&#39;t work when you&#39;re matching against the same field in each match expression (&#34;message&#34; in your case). 
+</span></span><span class="line"><span class="cl">I was hoping to take a stab at fixing this bug (as several others have mentioned an interest in doing), 
+</span></span><span class="line"><span class="cl">but got distracted and haven&#39;t done it yet. It shouldn&#39;t be terribly hard to fix, just needs some time.
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">As a work-around, the following should work, but unfortunately the way that your tag_on_failure 
+</span></span><span class="line"><span class="cl">will end up working will be different 
+</span></span><span class="line"><span class="cl">because you have multiple Grok filters that could fail independently. 
+</span></span><span class="line"><span class="cl">It&#39;s probably slightly less efficient to do it this way because the event has to pass 
+</span></span><span class="line"><span class="cl">from one filter to the next through the pipeline, 
+</span></span><span class="line"><span class="cl">but my guess (based on absolutely no empirical data) is that it isn&#39;t significantly slower 
+</span></span><span class="line"><span class="cl">because the same work would need to be done by Regex either way, 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">there&#39;s just more LogStash in the mix this way.
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">grok {
+</span></span><span class="line"><span class="cl">   match =&gt; [&#34;message&#34;, &#34;regex to parse severity&#34;]
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">grok {
+</span></span><span class="line"><span class="cl">   match =&gt; [&#34;message&#34;, &#34;regex to parse server IP&#34;]
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">grok {
+</span></span><span class="line"><span class="cl">   match =&gt; [&#34;message&#34;, &#34;regex to parse user&#34;]
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">~Greg Mefford
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -263,7 +278,7 @@ grok {
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -281,13 +296,10 @@ grok {
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -298,7 +310,10 @@ grok {
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

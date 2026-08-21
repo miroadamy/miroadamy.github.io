@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -36,20 +36,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Miro&#39;s World" />
-<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
-<meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Miro&#39;s World"/>
-<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
+<meta property="og:url" content="https://miroadamy.com/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Miro&#39;s World">
+	<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+	<meta itemprop="name" content="Miro&#39;s World">
+	<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta itemprop="datePublished" content="2026-08-21T14:31:54+00:00">
+	<meta itemprop="dateModified" content="2026-08-21T14:31:54+00:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Miro&#39;s World">
+	<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,12 +91,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -108,6 +122,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -131,9 +146,14 @@
   
   <div class="post-content">
     <div class="post-summary">
-      How to manage users and groups in Bitbucket Use case:
-I want to maintain users and groups and their access to repositories in an organization in Bitbucket. To make sure I do not miss newly changed admin access, I want to use the Bitbucket API to retrieve the list of permissions on repository basis and on user/group bases.
-Setup Bitbucket requires a username and password to access the API. This information is stored in environment variables BBUSER and BBPASSWORD.
+      <h1 id="how-to-manage-users-and-groups-in-bitbucket">How to manage users and groups in Bitbucket</h1>
+<p><strong>Use case</strong>:</p>
+<p>I want to maintain users and groups and their access to repositories in an organization in Bitbucket.
+To make sure I do not miss newly changed admin access, I want to use the Bitbucket API to retrieve the list of permissions on repository basis and on user/group bases.</p>
+<h2 id="setup">Setup</h2>
+<p>Bitbucket requires a username and password to access the API. This information is stored in environment variables
+<code>BBUSER</code> and <code>BBPASSWORD</code>.  <code>BBPASSWORD</code> should be an access token / app password defined in the <code>App passwords</code> section
+of the user settings:</p>
     </div>
     <div class="read-more">
       <a href="/posts/2021-02-18-bitbucket-user-groups/" class="read-more-link">Read more...</a>
@@ -158,9 +178,19 @@ Setup Bitbucket requires a username and password to access the API. This informa
   
   <div class="post-content">
     <div class="post-summary">
-      Mirroring large number of GitHub or Bitbucket repositories Use case:
-I want to create local clone of a large number of repositories from an organization in GitHub / Bitbucket.
-Assumptions  user has SSH key registered with the GH / BB - can clone using ssh protocol user has successfully cloned at least one repo from command line before (the /etc/hosts contains host entries for BB and GH) user has modern version of Python 3 installed (3.
+      <h1 id="mirroring-large-number-of-github-or-bitbucket-repositories">Mirroring large number of GitHub or Bitbucket repositories</h1>
+<p><strong>Use case</strong>:</p>
+<p>I want to create local clone of a large number of repositories from an organization in GitHub / Bitbucket.</p>
+<h2 id="assumptions">Assumptions</h2>
+<ul>
+<li>user has SSH key registered with the GH / BB - can clone using ssh protocol</li>
+<li>user has successfully cloned at least one repo from command line before (the /etc/hosts contains host entries for BB and GH)</li>
+<li>user has modern version of Python 3 installed (3.6 or better)</li>
+<li>user has local installation of a reasonably modern Git</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<p>First I use the <code>./bb-repo-links.sh</code> and <code>./gh-repo-links.sh</code> to generate list of repositories.
+See these blog articles: <a href="/posts/2021-02-15-bitbucket-list-repos/">How to list repositories in Bitbucket</a> and <a href="/posts/2021-02-16-github-list-repos/">How to list repositories in github</a></p>
     </div>
     <div class="read-more">
       <a href="/posts/2021-02-17-mirroring-repos/" class="read-more-link">Read more...</a>
@@ -178,16 +208,20 @@ Assumptions  user has SSH key registered with the GH / BB - can clone using ssh 
           <a href="/categories/version-control/"> version control </a>
           <a href="/categories/howto/"> howto </a>
           </div>
-        <span class="more-meta"> 726 words </span>
+        <span class="more-meta"> 727 words </span>
         <span class="more-meta"> 4 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      How to list repositories in GitHub Use Case:
-I want to maintain repositories in an organization in GitHub. To make sure I do not miss newly added ones, I want to use API access to retrieve the list of repositories in the organization.
-Setup GitHub requires a token to access the API. This token is stored in an environment variable github_token and can be generated in the user profile section - settings - developer settings.
+      <h1 id="how-to-list-repositories-in-github">How to list repositories in GitHub</h1>
+<p><strong>Use Case</strong>:</p>
+<p>I want to maintain repositories in an organization in GitHub.  To make sure I do not miss newly added ones,
+I want to use API access to retrieve the list of repositories in the organization.</p>
+<h2 id="setup">Setup</h2>
+<p>GitHub requires a token to access the API.  This token is stored in an environment variable
+<code>github_token</code> and can be generated in the user profile section - settings - developer settings.</p>
     </div>
     <div class="read-more">
       <a href="/posts/2021-02-16-github-list-repos/" class="read-more-link">Read more...</a>
@@ -212,9 +246,14 @@ Setup GitHub requires a token to access the API. This token is stored in an envi
   
   <div class="post-content">
     <div class="post-summary">
-      How to list repositories in Bitbucket Use case:
-I want to maintain repositories in an organization in Bitbucket. To make sure I do not miss newly added ones, I want to use API access to retrieve the list of all repositories in the organization.
-Setup Bitbucket requires a username and password to access the API. This information is stored in the environment variables BBUSER and BBPASSWORD. The BBPASSWORD should be an access token / app password defined in the App passwords section of the user settings:
+      <h1 id="how-to-list-repositories-in-bitbucket">How to list repositories in Bitbucket</h1>
+<p><strong>Use case</strong>:</p>
+<p>I want to maintain repositories in an organization in Bitbucket. To make sure I do not miss newly added ones,
+I want to use API access to retrieve the list of all repositories in the organization.</p>
+<h2 id="setup">Setup</h2>
+<p>Bitbucket requires a username and password to access the API. This information is stored in the environment variables
+<code>BBUSER</code> and <code>BBPASSWORD</code>. The <code>BBPASSWORD</code> should be an access token / app password defined in the <code>App passwords</code> section
+of the user settings:</p>
     </div>
     <div class="read-more">
       <a href="/posts/2021-02-15-bitbucket-list-repos/" class="read-more-link">Read more...</a>
@@ -239,10 +278,144 @@ Setup Bitbucket requires a username and password to access the API. This informa
   
   <div class="post-content">
     <div class="post-summary">
-      This blog post is a de-powerpointized version of a brownbag session in Pivotree. The goal was to increase awareness of tools and techniques for information / knowledge capture in the projects, specifically focusing on producing quality documentation so that everybody in project can access it and contribute to it, not only developers. We wanted to look at the tools that would allow engineers keep using their tools of trade (without impact on developer’s productivity) and at the same time make the information available without duplication of work to increase re-findability of information.
+      <p>This blog post is a de-powerpointized version of a brownbag session in Pivotree. The goal
+was to increase awareness of tools and techniques for information / knowledge capture in the projects, specifically focusing on producing quality documentation so that everybody in project can access it and contribute to it,
+not only developers. We wanted to look at the tools that would allow engineers keep using their tools of trade
+(without impact on developer’s productivity) and at the same time make the information available without
+duplication of work to increase re-findability of information.</p>
     </div>
     <div class="read-more">
       <a href="/posts/2020-11-23-documentation-multi-repo/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2020-08-07-architecture-as-a-code/">Reference Architecture as a Code</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-08-10 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> DevOps </a>
+          <a href="/categories/architecture/"> Architecture </a>
+          </div>
+        <span class="more-meta"> 4109 words </span>
+        <span class="more-meta"> 20 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="many-shapes-of-architecture">Many shapes of Architecture</h2>
+<p>According to the <a href="https://martinfowler.com/architecture/">wise people</a>, an architecture is the shared understanding that the expert developers/system builders/maintainers have of the system design. It&rsquo;s purpose is to maximize the
+probability that the decisions you have to make early in a project are the right ones. It is sort of a blueprint for the future system and captures parts, relations, boundaries, constraints.</p>
+<p>In our business (we build and run environments and solutions for eCommerce, data management and other business activities of our customers), an important subtype of architecture is Reference Architecture. It is an architecture that serves both as a capture of best practices for a particular business case as well as a living, evolving template for creating new instances of that type of an environment. Both best practice as well as evolving features are important: the reference architecture (RA) serves as knowledge gathering in the ever changing world of cloud. As new features of AWS or Azure come, the RA needs to absorb them to incorporate latest advances and to use the best price / performance options available.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2020-08-07-architecture-as-a-code/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2020-05-30-dockercon-2020/">DockerCon 2020</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-30 </span>
+      <div class="post-category">
+          <a href="/categories/events/"> events </a>
+          </div>
+        <span class="more-meta"> 489 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I had an opportunity to attend DockerCon 2018 in person - it was great experience in wonderful city - Barcelona. My notes from it <a href="https://www.miroadamy.com/posts/2018-12-07-dockercon-2018/">are here</a>. I missed previous year (for variety of reasons), but DockerCon this year (as many other tech events) was purely virtual so I was able to see some part of it.</p>
+<p>Compared to 2018, the general tone and content of this DockerCon was quite different. In 2018 it felt like all the attention is focused on big enterprise (mainly Microsoft related) and what Docker as a company is looking for best way how to hook big firms with deep pockets.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2020-05-30-dockercon-2020/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2020-05-14-accessing-tfcloud-api/">Accessing Terraform cloud Module registry programatically</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-14 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> DevOps </a>
+          </div>
+        <span class="more-meta"> 336 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>First step is to get your personal token. Log on to Terraform Cloud, go to <a href="https://app.terraform.io/app/settings/tokens">https://app.terraform.io/app/settings/tokens</a> and generate new token.</p>
+<p>Note: it is important to save the token to safe place - this is only time you will see it.</p>
+<p><img src="/images/terraform-token.png" alt="token"></p>
+<p>Export the token:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TFE_TOKEN</span><span class="o">=</span>&lt;THE-TOKEN-VALUE&gt;
+</span></span></code></pre></div><p>The documentation for Terraform API is <a href="https://www.terraform.io/docs/cloud/api/index.html">here</a></p>
+<p>It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described. It could also used better examples.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2020-05-14-accessing-tfcloud-api/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2020-05-12-bitbucket-keys/">Using SSH keys with multiple Bitbucket accounts</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-05-12 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 295 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.</p>
+<p>With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification. Time has come to split my personal identity and work identity.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2020-05-12-bitbucket-keys/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2020-03-31-history-of-faith/">History of Faith</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2020-03-31 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> DevOps </a>
+          <a href="/categories/startup-life/"> startup-life </a>
+          </div>
+        <span class="more-meta"> 3138 words </span>
+        <span class="more-meta"> 15 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="the-beginnings">The beginnings</h2>
+<p>Once upon a time - actually, in late 2017-early 2018 - there was a QA/DevOps engineer named José who liked containers, Docker and worked for a company named Thinkwrap (that soon would become Pivotree) in Valencia, Spain.</p>
+<p>José was responsible (among other things) for setting up integration and QA environments for multiple Hybris projects. Such environment, when being built in traditional way (from physical servers or VMs), normally requires quite a few pieces:</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2020-03-31-history-of-faith/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -273,7 +446,9 @@ Setup Bitbucket requires a username and password to access the API. This informa
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -291,13 +466,10 @@ Setup Bitbucket requires a username and password to access the API. This informa
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -308,7 +480,10 @@ Setup Bitbucket requires a username and password to access the API. This informa
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>twitter on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/twitter/</link>
-    <description>Recent content in twitter on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 14 Nov 2019 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Thought of the day</title>
-      <link>https://miroadamy.com/posts/2019-11-14-totd/</link>
-      <pubDate>Thu, 14 Nov 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2019-11-14-totd/</guid>
-      <description>Adding screenshot in case the account disappears</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Twitter on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/twitter/</link>
+		<description>Recent content in Twitter on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 14 Nov 2019 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/twitter/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Thought of the day</title>
+				<link>https://miroadamy.com/posts/2019-11-14-totd/</link>
+				<pubDate>Thu, 14 Nov 2019 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2019-11-14-totd/</guid>
+				<description>&lt;blockquote class=&#34;twitter-tweet&#34;&gt;&lt;p lang=&#34;en&#34; dir=&#34;ltr&#34;&gt;“The older you get, the more quiet you become.&lt;br&gt;&lt;br&gt;Life humbles you so deeply as you age. You realize how much nonsense you’ve wasted time on.”&lt;/p&gt;&amp;mdash; Vala Afshar (@ValaAfshar) &lt;a href=&#34;https://twitter.com/ValaAfshar/status/1194784700390354944?ref_src=twsrc%5Etfw&#34;&gt;November 14, 2019&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src=&#34;https://platform.twitter.com/widgets.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&#xA;&lt;p&gt;Adding screenshot in case the account disappears&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/tweet-2019-a.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -36,20 +36,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Miro&#39;s World" />
-<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
-<meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Miro&#39;s World"/>
-<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
+<meta property="og:url" content="https://miroadamy.com/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Miro&#39;s World">
+	<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+	<meta itemprop="name" content="Miro&#39;s World">
+	<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta itemprop="datePublished" content="2026-08-21T14:31:54+00:00">
+	<meta itemprop="dateModified" content="2026-08-21T14:31:54+00:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Miro&#39;s World">
+	<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,12 +91,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -108,6 +122,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -116,124 +131,244 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-06-21-gitolite-setup/">Using Gitolite for code sharing setup</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-02-06-book-recommendation-java-concurrency-in-practice/">Book recommendation: Java Concurrency in Practice</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2012-06-21 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 4713 words </span>
-        <span class="more-meta"> 23 mins read </span>
+      <span class="post-time"> 2008-02-06 </span>
+      
+        <span class="more-meta"> 90 words </span>
+        <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
-Main features  multiple users each user represent a client:  e.g. users client1    Users are separated by Unix permissions:  access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes  Inside each user, there are multiple projects.
+      <p>After long time, I stumbled upon something that is both educational and practical. Since Doug Lea's classic, this is very readworthy work on concurrency in Java world. It focuses on Java 5 features and addresses both Web applications as well as GUI apps - each group having their own share of concurrency related problems</p>
+<p><img src="{{ site.baseurl }}/images/jcp.jpg" alt="jcp.jpg" /></p>
+<p>Here is the <a href="http://www.amazon.ca/gp/product/0321349601?ie=UTF8&amp;tag=none0b69&amp;linkCode=as2&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0321349601">Amazon page</a> for the book - check the reviews.  There is also a <a href="http://www.javaconcurrencyinpractice.com/jcip-sample.pdf">sample chapter</a> available on the <a href="http://www.javaconcurrencyinpractice.com/">book's website</a>. If you have Safari subscription, you can read it there as well.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2012-06-21-gitolite-setup/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-02-06-book-recommendation-java-concurrency-in-practice/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-05-29-admin-tool-goodies/">Admin tool goodies</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-02-04-spring-framework-the-biggest-missing-piece/">Spring Framework - the biggest missing piece</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2012-05-29 </span>
+      <span class="post-time"> 2008-02-04 </span>
       <div class="post-category">
-          <a href="/categories/tools/"> tools </a>
+          <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 1354 words </span>
-        <span class="more-meta"> 7 mins read </span>
+        <span class="more-meta"> 561 words </span>
+        <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      tmutil The tmutil - everything to know about Time machine backups. For example, why is the MBP backing up 4.3 GB &hellip; again.
-Lion only. See http://www.macgurulounge.com/see-which-files-time-machine-backed-up/ for Snow Leopard and before.
-547 tmutil 548 tmutil help 549 tmutil help listbackups 550 tmutil listbackups 551 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 552 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-171551/ 553 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ 554 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-130159/ 555 tmutil uniquesize /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 556 tmutil compare /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-131532/ /Volumes/Radegast2-TM/Backups.backupdb/Radegast/2012-05-27-162449 here is why: ~ $ tmutil uniquesize /Volumes/Radegast2-TM/Backups.
+      <p>I am having the pleasure working with Spring 2.x since about October last year. It is my return back to Spring, after first encounter in 2005 (counting only larger projects). Same as in previous project, it has been so much fun :-). So much fun in fact, that I was spending my evening playing with code and reading up what is new in 2.5, rather that blogging ;-)</p>
+<p>I am still amazed about how nice is the whole thing designed and how many ways it can be used. It's flexibility is simply breathtaking. The price for the flexibility is complexity - sometimes it is not obvious what of many options should be chosen and what are all these options anyway :-).</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2012-05-29-admin-tool-goodies/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-02-04-spring-framework-the-biggest-missing-piece/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-05-13-homelessness-over/">Homelessness is over, moved in</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/">Spring 2 MVC and ResourceBundleViewResolver problem</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2012-05-13 </span>
+      <span class="post-time"> 2008-01-24 </span>
       <div class="post-category">
-          <a href="/categories/technology/"> technology </a>
+          <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 266 words </span>
+        <span class="more-meta"> 129 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>This one took some time to figure out - it is one of those problems that are obvious after you know the solution but hard to see beforehand.</p>
+<p>I had the ResourceBundleViewResolver configured with Tiles 2, like this:</p>
+<p>[code language='xml']</p>
+<p>[/code]</p>
+<p>and the view.properties was:</p>
+<p>[code language='xml']<br />
+parent-view.(class)=org.springframework.web.servlet.view.JstlView<br />
+parent-view.(abstract)=true</p>
+<p>about.url=/WEB-INF/jsp/about.jsp<br />
+form.url=/WEB-INF/jsp/form.jsp<br />
+list.url=/WEB-INF/jsp/list.jsp</p>
+<p>[/code]</p>
+<p>It kept givin exception saying that /WEB-INF/jsp/list.jsp does not exist. Which it did. I tried couple of things, no result.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-01-24-spring-2-mvc-and-resourcebundleviewresolver-problem/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-20-using-ibatis-with-abator/">Using iBatis with Abator</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-01-20 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 457 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I am back to Java and on mission of re-discovering <a href="http://www.springframework.org/" target="_blank">Spring</a> coolness - and in awe how much was added since 1.2 to current 2.5.1. Thanks, <a href="http://www.springsource.com/web/guest/home" target="_blank">SpringSource</a> and hundreds of contributors.</p>
+<p>Data layer of the current project is based on <a href="http://ibatis.apache.org/" target="_blank">iBatis</a> and Spring DAO. We have decided to try out the <a href="http://ibatis.apache.org/abator.html" target="_blank">Abator</a> tool from Apache (part of the iBatis suite) to generate initial version of data mapping (as we inherited the database schema).</p>
+<p>Only necessary part is abator.jar (there are no other dependencies).</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-01-20-using-ibatis-with-abator/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-16-steves-latest/">Steve&#39;s latest ...</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-01-16 </span>
+      
+        <span class="more-meta"> 947 words </span>
+        <span class="more-meta"> 5 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Of course, I mean the other Steve, Steve Jobs. My world is revolving around few Steves.  Steve Jobs is usually Steve Nr. 2 - and no, Joel - the Steve #1 is definitely not Ballmer :-). But every year, for two brief occasions - Macworld and WWDC - Steve Jobs becomes Steve #1 for very large amount of people.</p>
+<p>I was waiting with this post full day to allow the new-ity of the keynote sink in and reality distortion field to evaporate .... This is my take on the latest from Appleverse - and an answer to all who were asking whether I did already (pre)ordered and what :-). The answer is - nothing so far. I even have mixed feelings about the four Macworld news and here is why:</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-01-16-steves-latest/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-14-the-best-gtd-tool-is-still-a-wiki-part-ii/">The best GTD tool is still a Wiki - part II</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-01-14 </span>
+      
+        <span class="more-meta"> 590 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p><i>Continuation of <a href="http://thinkwrap.wordpress.com/2008/01/06/the-best-gtd-tool-is-still-a-wiki-part-i/" target="_blank">this post</a>.</i></p>
+<p>As every TiddlyWiki, the main building block of the MGTDTW (MonkeyGTD TiddlyWiki, if you are wondering what kind of monstrous acronym is that) is a <b>tiddler</b>. And the only one building block because <i>everything</i> is a tiddler. How does this map to the GTD approach ?</p>
+<p>The GTD workflow works with projects, contexts and actions. Action (or task or todo) is smallest building stone. The actions in GTD are really small actions. Every goal that requires multiple steps is a project - thus project has multiple actions. Context is an environment for executing the actions - e.g. Office, On-Line, Errands. Action can be in of the the state: "next" - ready to be started, waiting-for (something else needs to happen before you can start), future (something you may want to do later but not really a task right now) or done. OK, this is slightly oversimplified - for real explanation check the resources in Part I.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-01-14-the-best-gtd-tool-is-still-a-wiki-part-ii/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-11-safari-books-online-and-lyndacom-on-ipod-touch/">Safari Books Online and Lynda.com on iPod Touch</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-01-11 </span>
+      
+        <span class="more-meta"> 258 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Being two weeks without &ldquo;permanent computer home&rdquo; and living among old Helios, MacMini, temp repair and Web was interesting experience. I certainly remember most of my Web passwords (again).
-Got my new MacBook Pro replacement yesterday. Pretty sweet upgrade: quad-core i7 @ 2.4, 8 GB RAM, 750 GB HDD 7200 RPM, Thunderbolt. Noticeably faster but also a bit louder - runs fans more often, maybe it is just while Spotlight does index everything ?
+      <p>Last few weeks I have been using one application on iTouch much more than before: YouTube. Within my how wireless network, I can have an access to the videos on YouTube without sitting behind the computer - for example while walking on treadmill (I recommend walking slowly) or on a sofa :-).</p>
+<p>Very interesting videos and actually worth the time spent on them are Google technical talks from Google channel. Few examples of videos I watched and liked:</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2012-05-13-homelessness-over/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-01-11-safari-books-online-and-lyndacom-on-ipod-touch/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-04-15-github/">GitHub identity mixup</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-07-sony-ereader-format-lrf-viewer-for-the-mac-linux-and-windows/">Sony eReader format (LRF) viewer for the Mac, Linux and Windows</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2012-04-15 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 79 words </span>
+      <span class="post-time"> 2008-01-07 </span>
+      
+        <span class="more-meta"> 176 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      After I created the ThinkWrap GitHub account and uploaded the public key, this key got somehow bound to GitHub identity &lsquo;madamy&rsquo;
-I had to add user madamy to my public GitHub repo - where I keep the dot-files - https://github.com/radegast/dotvim
-This may be an issue for people that have their own private accounts - the key management is the key.
-This article is useful:
- http://sealedabstract.com/code/github-ssh-with-multiple-identities-the-slightly-more-definitive-guide/ http://net.tutsplus.com/tutorials/tools-and-tips/how-to-work-with-github-and-multiple-accounts/  Alternative Use https for forking , instead read/write ssh.
+      <p>Thanks to Kovid Goyal, the Sony Reader's very own terrible software (iTunes wannabe) can very soon be decommissioned from  my software collection. The <a href="https://libprs500.kovidgoyal.net/" target="_blank">libprs500 project</a>, multi-platform solution written in Python works very well and allows to move data between Sony and your Mac / Linux / Windows. The UI is actually pretty decent, considering that it is not native Cocoa app:</p>
+<p><img src="{{ site.baseurl }}/images/picture-8R.png" alt="picture-8.png" /></p>
+<p>You can also edit metadata, which is very important because of the limited screen space on PRS500. As added benefit, the application gives you a reader for LRF file format that allows reading unprotected LRF books on the Mac/Linux as well in addition to Windows. Here is a snapshot:</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2012-04-15-github/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-01-07-sony-ereader-format-lrf-viewer-for-the-mac-linux-and-windows/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2012-04-09-macvim-git/">Using MacVim as git editor</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-06-the-best-gtd-tool-is-still-a-wiki-part-i/">The best GTD tool is still a Wiki - part I</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2012-04-09 </span>
+      <span class="post-time"> 2008-01-06 </span>
+      <div class="post-category">
+          <a href="/categories/lifehacks/"> lifehacks </a>
+          </div>
+        <span class="more-meta"> 891 words </span>
+        <span class="more-meta"> 5 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Did you notice that there are seasons for software as well ? Similarly as with other merchandise, there are times during the year when many more people suddenly decide they need that one application X. Luckily, this trend is not as extreme as with e.g. Santa hats or carved pumpkins, which are impossible to find in stores outside of the narrow window around Christmas and Halloween (I am grateful for that :-)). In software world, the most seasonal category is tax preparation software, for obvious reasons. Taxes, like the dentist checkup are not something you will be crazy even thinking about, unless it is that time of year ....</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-01-06-the-best-gtd-tool-is-still-a-wiki-part-i/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-01-03-jruby-keeping-your-databaseyml-really-dry/">JRuby - keeping your database.yml really DRY</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-01-03 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 23 words </span>
+        <span class="more-meta"> 180 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Add this to .bashrc  export GIT_EDITOR='/Applications/MacVim.app/Contents/MacOS/Vim -g -f '
- The key is -f, without it git will abort because of empty commit message.
+      <p>I am experimenting in JRuby and use database in virtual machine (VMWare Fusion). This is great because you can have multiple versions of multiple databases ready without polluting the notebook. One downsize though is that IP address of the database will change between the VM restarts.</p>
+<p>First important setting in Fusion is to use the 'NAT' option rather than 'Bridged'. With NAT, you database host IP address will not follow the network. It was quite annoying to change it from 192.168.X to 192.168.Y everytime I reconnected at home from work or vice versa.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2012-04-09-macvim-git/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-01-03-jruby-keeping-your-databaseyml-really-dry/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -267,7 +402,9 @@ This article is useful:
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -285,13 +422,10 @@ This article is useful:
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -302,7 +436,10 @@ This article is useful:
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

@@ -18,15 +18,16 @@
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="How does the blog setup and publishing work Before I forget, here is how the current configuration works.
 There are two repositories at play:
- source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io  The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
-The Githup pages repo contains generated static site, with index." /><meta name="keywords" content="blog, Miro" />
+source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
+The Githup pages repo contains generated static site, with index.html that can be theoretically deployed in any hosting site or S3 bucket. Every push against the GHPR will be immediately visible.
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2019-11-22-hugo-setup/" />
@@ -37,37 +38,41 @@ The Githup pages repo contains generated static site, with index." /><meta name=
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Current Hugo setup on Github Pages" />
-<meta property="og:description" content="How does the blog setup and publishing work Before I forget, here is how the current configuration works.
+<meta property="og:url" content="https://miroadamy.com/posts/2019-11-22-hugo-setup/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Current Hugo setup on Github Pages">
+	<meta property="og:description" content="How does the blog setup and publishing work Before I forget, here is how the current configuration works.
 There are two repositories at play:
- source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io  The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
-The Githup pages repo contains generated static site, with index." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2019-11-22-hugo-setup/" />
-<meta property="article:published_time" content="2019-11-22T11:22:48+08:00" />
-<meta property="article:modified_time" content="2019-11-22T11:22:48+08:00" />
-<meta itemprop="name" content="Current Hugo setup on Github Pages">
-<meta itemprop="description" content="How does the blog setup and publishing work Before I forget, here is how the current configuration works.
+source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
+The Githup pages repo contains generated static site, with index.html that can be theoretically deployed in any hosting site or S3 bucket. Every push against the GHPR will be immediately visible.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2019-11-22T11:22:48+08:00">
+		<meta property="article:modified_time" content="2019-11-22T11:22:48+08:00">
+		<meta property="article:tag" content="Blog">
+		<meta property="article:tag" content="Plaintext">
+
+	<meta itemprop="name" content="Current Hugo setup on Github Pages">
+	<meta itemprop="description" content="How does the blog setup and publishing work Before I forget, here is how the current configuration works.
 There are two repositories at play:
- source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io  The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
-The Githup pages repo contains generated static site, with index.">
-<meta itemprop="datePublished" content="2019-11-22T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2019-11-22T11:22:48+08:00" />
-<meta itemprop="wordCount" content="1244">
-
-
-
-<meta itemprop="keywords" content="blog,plaintext," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Current Hugo setup on Github Pages"/>
-<meta name="twitter:description" content="How does the blog setup and publishing work Before I forget, here is how the current configuration works.
+source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
+The Githup pages repo contains generated static site, with index.html that can be theoretically deployed in any hosting site or S3 bucket. Every push against the GHPR will be immediately visible.">
+	<meta itemprop="datePublished" content="2019-11-22T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2019-11-22T11:22:48+08:00">
+	<meta itemprop="wordCount" content="1245">
+	<meta itemprop="keywords" content="Blog,Plaintext">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Current Hugo setup on Github Pages">
+	<meta name="twitter:description" content="How does the blog setup and publishing work Before I forget, here is how the current configuration works.
 There are two repositories at play:
- source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io  The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
-The Githup pages repo contains generated static site, with index."/>
+source repo - https://github.com/miroadamy/miroadamy.com github pages repo (== GHPR) - https://github.com/miroadamy/miroadamy.github.io The blog source repo contains only source files (.md, static media etc). This repo has usual submodules under the /themes - e.g. /themes/even which is one currently used.
+The Githup pages repo contains generated static site, with index.html that can be theoretically deployed in any hosting site or S3 bucket. Every push against the GHPR will be immediately visible.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -104,12 +109,21 @@ The Githup pages repo contains generated static site, with index."/>
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -126,6 +140,7 @@ The Githup pages repo contains generated static site, with index."/>
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -141,7 +156,7 @@ The Githup pages repo contains generated static site, with index."/>
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 1244 words </span>
+          <span class="more-meta"> 1245 words </span>
           <span class="more-meta"> 6 mins read </span>
         
       </div>
@@ -173,36 +188,36 @@ This repo has usual submodules under the <code>/themes</code> - e.g. <code>/them
 <h2 id="site-generation">Site generation</h2>
 <p>The Hugo generator processes the source code using configuration file and writes output - static generated site - under <code>./public</code> subfolder.</p>
 <p>To make things easier I have checked out the GHPR repository as submodule of source repo under <code>./public</code> in the source repo. The tree of the repos looks like this</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">
-➜  miroadamy.com git:(master) ✗ tree -F -L 1
-.                             =&gt; github.com:miroadamy/miroadamy.com
-├── archetypes/
-├── config.toml
-├── config.toml~
-├── content/
-├── data/
-├── layouts/
-├── public/                   =&gt; github.com:miroadamy/miroadamy.github.io.gi
-├── resources/
-├── static/
-└── themes/
-    ├── ananke/               =&gt; github.com:budparr/gohugo-theme-ananke.git (not used)
-    ├── even/                 =&gt; github.com:olOwOlo/hugo-theme-even
-    └── hugo-coder/           =&gt; github.com:luizdepra/hugo-coder.git (not used)
-</code></pre></div><p>The <code>.gitmodules</code> files shows the same information</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[submodule &#34;themes/ananke&#34;]
-    path = themes/ananke
-    url = https://github.com/budparr/gohugo-theme-ananke.git
-[submodule &#34;themes/hugo-coder&#34;]
-    path = themes/hugo-coder
-    url = https://github.com/luizdepra/hugo-coder.git
-[submodule &#34;themes/even&#34;]
-    path = themes/even
-    url = https://github.com/olOwOlo/hugo-theme-even
-[submodule &#34;public&#34;]
-    path = public
-    url = git@github.com:miroadamy/miroadamy.github.io.git
-</code></pre></div><h2 id="publishing-new-version-of-the-blog">Publishing new version of the blog</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">➜  miroadamy.com git:(master) ✗ tree -F -L 1
+</span></span><span class="line"><span class="cl">.                             =&gt; github.com:miroadamy/miroadamy.com
+</span></span><span class="line"><span class="cl">├── archetypes/
+</span></span><span class="line"><span class="cl">├── config.toml
+</span></span><span class="line"><span class="cl">├── config.toml~
+</span></span><span class="line"><span class="cl">├── content/
+</span></span><span class="line"><span class="cl">├── data/
+</span></span><span class="line"><span class="cl">├── layouts/
+</span></span><span class="line"><span class="cl">├── public/                   =&gt; github.com:miroadamy/miroadamy.github.io.gi
+</span></span><span class="line"><span class="cl">├── resources/
+</span></span><span class="line"><span class="cl">├── static/
+</span></span><span class="line"><span class="cl">└── themes/
+</span></span><span class="line"><span class="cl">    ├── ananke/               =&gt; github.com:budparr/gohugo-theme-ananke.git (not used)
+</span></span><span class="line"><span class="cl">    ├── even/                 =&gt; github.com:olOwOlo/hugo-theme-even
+</span></span><span class="line"><span class="cl">    └── hugo-coder/           =&gt; github.com:luizdepra/hugo-coder.git (not used)
+</span></span></code></pre></div><p>The <code>.gitmodules</code> files shows the same information</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[submodule &#34;themes/ananke&#34;]
+</span></span><span class="line"><span class="cl">    path = themes/ananke
+</span></span><span class="line"><span class="cl">    url = https://github.com/budparr/gohugo-theme-ananke.git
+</span></span><span class="line"><span class="cl">[submodule &#34;themes/hugo-coder&#34;]
+</span></span><span class="line"><span class="cl">    path = themes/hugo-coder
+</span></span><span class="line"><span class="cl">    url = https://github.com/luizdepra/hugo-coder.git
+</span></span><span class="line"><span class="cl">[submodule &#34;themes/even&#34;]
+</span></span><span class="line"><span class="cl">    path = themes/even
+</span></span><span class="line"><span class="cl">    url = https://github.com/olOwOlo/hugo-theme-even
+</span></span><span class="line"><span class="cl">[submodule &#34;public&#34;]
+</span></span><span class="line"><span class="cl">    path = public
+</span></span><span class="line"><span class="cl">    url = git@github.com:miroadamy/miroadamy.github.io.git
+</span></span></code></pre></div><h2 id="publishing-new-version-of-the-blog">Publishing new version of the blog</h2>
 <p>The generation step from source to GHPR is done locally - I want to test the result before publishing anyway so I need to have local Hugo setup</p>
 <p>Steps</p>
 <ol>
@@ -211,292 +226,291 @@ This repo has usual submodules under the <code>/themes</code> - e.g. <code>/them
 <li>Repeat</li>
 </ol>
 <p>The start of Hugo is very fast &lt; 1 sec. It generates site to temporary space and starts embedded webserver on port 1313</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  miroadamy.com git:(master) ✗ hugo serve
-
-                   | EN
-+------------------+-----+
-  Pages            | 527
-  Paginator pages  | 149
-  Non-page files   |   1
-  Static files     | 200
-  Processed images |   0
-  Aliases          |  41
-  Sitemaps         |   1
-  Cleaned          |   0
-
-Total in 541 ms
-Watching for changes in /Users/miro/src/MIA/miroadamy.com/{archetypes,content,data,layouts,static,themes}
-Watching for config changes in /Users/miro/src/MIA/miroadamy.com/config.toml
-Environment: &#34;development&#34;
-Serving pages from memory
-Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
-Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
-Press Ctrl+C to stop
-</code></pre></div><p>During development, we can edit the source files and changes are immediately reflected in rendered site. This allows super fast development.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  miroadamy.com git:(master) ✗ hugo serve
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                   | EN
+</span></span><span class="line"><span class="cl">+------------------+-----+
+</span></span><span class="line"><span class="cl">  Pages            | 527
+</span></span><span class="line"><span class="cl">  Paginator pages  | 149
+</span></span><span class="line"><span class="cl">  Non-page files   |   1
+</span></span><span class="line"><span class="cl">  Static files     | 200
+</span></span><span class="line"><span class="cl">  Processed images |   0
+</span></span><span class="line"><span class="cl">  Aliases          |  41
+</span></span><span class="line"><span class="cl">  Sitemaps         |   1
+</span></span><span class="line"><span class="cl">  Cleaned          |   0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Total in 541 ms
+</span></span><span class="line"><span class="cl">Watching for changes in /Users/miro/src/MIA/miroadamy.com/{archetypes,content,data,layouts,static,themes}
+</span></span><span class="line"><span class="cl">Watching for config changes in /Users/miro/src/MIA/miroadamy.com/config.toml
+</span></span><span class="line"><span class="cl">Environment: &#34;development&#34;
+</span></span><span class="line"><span class="cl">Serving pages from memory
+</span></span><span class="line"><span class="cl">Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+</span></span><span class="line"><span class="cl">Web Server is available at http://localhost:1313/ (bind address 127.0.0.1)
+</span></span><span class="line"><span class="cl">Press Ctrl+C to stop
+</span></span></code></pre></div><p>During development, we can edit the source files and changes are immediately reflected in rendered site. This allows super fast development.</p>
 <p>When the content looks good, we generate the static content into <code>./public</code>. This writes new content to the GHPR repo. Here are the steps used for this article:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">
-# In the source repository
-➜  miroadamy.com git:(master) ✗ pwd
-/Users/miro/src/MIA/miroadamy.com
-
-# Note the added file - we have validated that all is OK by running `hugo serve` and localhost:1313
-➜  miroadamy.com git:(master) ✗ gss
-?? content/posts/2019-11-22-hugo-setup.md
-
-# Now we generate the site
-
-➜  miroadamy.com git:(master) ✗ hugo
-
-                   | EN
-+------------------+-----+
-  Pages            | 527
-  Paginator pages  | 149
-  Non-page files   |   1
-  Static files     | 200
-  Processed images |   0
-  Aliases          |  41
-  Sitemaps         |   1
-  Cleaned          |   0
-
-Total in 679 ms
-
-# Note that there is additonal change - the `public` link has been modified
-
-# We are now in context of source repo:
-
-➜  miroadamy.com git:(master) ✗ git remote -v
-origin  git@github.com:miro.adamy/miroadamy.com.git (fetch)
-origin  git@github.com:miro.adamy/miroadamy.com.git (push)
-
-# Go to public =&gt; here we will be in context of GHPR
-
-➜  miroadamy.com git:(master) ✗ cd public
-➜  public git:(master) ✗ git remote -v
-origin  git@github.com:miroadamy/miroadamy.github.io.git (fetch)
-origin  git@github.com:miroadamy/miroadamy.github.io.git (push)
-
-# The generator modified  lots of files and added some. We need to commit these changes
-
-➜  public git:(master) ✗ git add .
-➜  public git:(master) ✗ git status
-On branch master
-Your branch is up-to-date with &#39;origin/master&#39;.
-Changes to be committed:
-  (use &#34;git reset HEAD &lt;file&gt;...&#34; to unstage)
-
-    modified:   categories/index.html
-    modified:   categories/index.xml
-    modified:   categories/programming/index.html
-    modified:   categories/programming/index.xml
-    modified:   index.html
-    modified:   index.xml
-    modified:   page/10/index.html
-    modified:   page/11/index.html
-    modified:   page/12/index.html
-    modified:   page/13/index.html
-    modified:   page/14/index.html
-    modified:   page/15/index.html
-    modified:   page/16/index.html
-    modified:   page/17/index.html
-    modified:   page/18/index.html
-    modified:   page/19/index.html
-    modified:   page/2/index.html
-    modified:   page/20/index.html
-    modified:   page/21/index.html
-    modified:   page/22/index.html
-    modified:   page/23/index.html
-    modified:   page/24/index.html
-    modified:   page/25/index.html
-    modified:   page/26/index.html
-    modified:   page/27/index.html
-    modified:   page/28/index.html
-    modified:   page/29/index.html
-    modified:   page/3/index.html
-    modified:   page/30/index.html
-    modified:   page/31/index.html
-    modified:   page/32/index.html
-    modified:   page/33/index.html
-    modified:   page/34/index.html
-    modified:   page/35/index.html
-    modified:   page/36/index.html
-    modified:   page/37/index.html
-    modified:   page/38/index.html
-    modified:   page/39/index.html
-    modified:   page/4/index.html
-    modified:   page/40/index.html
-    modified:   page/41/index.html
-    modified:   page/42/index.html
-    modified:   page/43/index.html
-    modified:   page/44/index.html
-    modified:   page/45/index.html
-    modified:   page/46/index.html
-    modified:   page/47/index.html
-    modified:   page/48/index.html
-    modified:   page/49/index.html
-    modified:   page/5/index.html
-    modified:   page/50/index.html
-    modified:   page/51/index.html
-    modified:   page/52/index.html
-    modified:   page/53/index.html
-    modified:   page/54/index.html
-    modified:   page/55/index.html
-    modified:   page/56/index.html
-    modified:   page/57/index.html
-    modified:   page/58/index.html
-    modified:   page/59/index.html
-    modified:   page/6/index.html
-    modified:   page/60/index.html
-    modified:   page/61/index.html
-    modified:   page/62/index.html
-    modified:   page/63/index.html
-    modified:   page/64/index.html
-    modified:   page/65/index.html
-    modified:   page/66/index.html
-    modified:   page/67/index.html
-    modified:   page/68/index.html
-    modified:   page/69/index.html
-    modified:   page/7/index.html
-    modified:   page/70/index.html
-    modified:   page/71/index.html
-    modified:   page/72/index.html
-    modified:   page/73/index.html
-    modified:   page/74/index.html
-    modified:   page/75/index.html
-    modified:   page/76/index.html
-    modified:   page/77/index.html
-    modified:   page/78/index.html
-    modified:   page/79/index.html
-    modified:   page/8/index.html
-    modified:   page/80/index.html
-    modified:   page/81/index.html
-    modified:   page/82/index.html
-    modified:   page/83/index.html
-    modified:   page/84/index.html
-    modified:   page/85/index.html
-    modified:   page/86/index.html
-    modified:   page/87/index.html
-    modified:   page/88/index.html
-    modified:   page/9/index.html
-    modified:   posts/2019-11-20-from-jekyll-to-hugo/index.html
-    new file:   posts/2019-11-22-hugo-setup/index.html
-    new file:   posts/2029-01-01-post.md.template
-    modified:   posts/index.html
-    modified:   posts/index.xml
-    modified:   posts/page/10/index.html
-    modified:   posts/page/11/index.html
-    modified:   posts/page/12/index.html
-    modified:   posts/page/13/index.html
-    modified:   posts/page/14/index.html
-    modified:   posts/page/15/index.html
-    modified:   posts/page/16/index.html
-    modified:   posts/page/17/index.html
-    modified:   posts/page/18/index.html
-    modified:   posts/page/19/index.html
-    modified:   posts/page/2/index.html
-    modified:   posts/page/20/index.html
-    modified:   posts/page/21/index.html
-    modified:   posts/page/22/index.html
-    modified:   posts/page/23/index.html
-    modified:   posts/page/24/index.html
-    modified:   posts/page/25/index.html
-    modified:   posts/page/26/index.html
-    modified:   posts/page/27/index.html
-    modified:   posts/page/28/index.html
-    modified:   posts/page/29/index.html
-    modified:   posts/page/3/index.html
-    modified:   posts/page/30/index.html
-    modified:   posts/page/31/index.html
-    modified:   posts/page/32/index.html
-    modified:   posts/page/33/index.html
-    modified:   posts/page/34/index.html
-    modified:   posts/page/35/index.html
-    modified:   posts/page/36/index.html
-    modified:   posts/page/37/index.html
-    modified:   posts/page/38/index.html
-    modified:   posts/page/39/index.html
-    modified:   posts/page/4/index.html
-    modified:   posts/page/40/index.html
-    modified:   posts/page/41/index.html
-    modified:   posts/page/42/index.html
-    modified:   posts/page/43/index.html
-    modified:   posts/page/44/index.html
-    modified:   posts/page/5/index.html
-    modified:   posts/page/6/index.html
-    modified:   posts/page/7/index.html
-    modified:   posts/page/8/index.html
-    modified:   posts/page/9/index.html
-    modified:   sitemap.xml
-    modified:   tags/blog/index.html
-    modified:   tags/blog/index.xml
-    modified:   tags/blog/page/2/index.html
-    modified:   tags/blog/page/3/index.html
-    modified:   tags/index.html
-    modified:   tags/index.xml
-
-
-# Make local commit
-
-➜  public git:(master) ✗ git commit -m &#34;Published the Hugo setup article&#34;
-[master cd95809] Published the Hugo setup article
- 148 files changed, 3219 insertions(+), 2638 deletions(-)
- create mode 100644 posts/2019-11-22-hugo-setup/index.html
- create mode 100644 posts/2029-01-01-post.md.template
-
-# Publish site on Github
-
-➜  public git:(master) git push
-Counting objects: 291, done.
-Delta compression using up to 8 threads.
-Compressing objects: 100% (157/157), done.
-Writing objects: 100% (291/291), 131.31 KiB | 0 bytes/s, done.
-Total 291 (delta 150), reused 0 (delta 0)
-remote: Resolving deltas: 100% (150/150), completed with 61 local objects.
-To github.com:miroadamy/miroadamy.github.io.git
-   676432b..cd95809  master -&gt; master
-
-# Now the static site was updated but the source needs to be as well
-
-➜  miroadamy.com git:(master) ✗ git status
-On branch master
-Your branch is ahead of &#39;origin/master&#39; by 1 commit.
-  (use &#34;git push&#34; to publish your local commits)
-Changes not staged for commit:
-  (use &#34;git add &lt;file&gt;...&#34; to update what will be committed)
-  (use &#34;git checkout -- &lt;file&gt;...&#34; to discard changes in working directory)
-
-    modified:   public (new commits)
-
-Untracked files:
-  (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
-
-    content/posts/2019-11-22-hugo-setup.md
-
-no changes added to commit (use &#34;git add&#34; and/or &#34;git commit -a&#34;)
-
-# We add the changes to source - new changed file as well as the &#39;public&#39; link
-➜  miroadamy.com git:(master) ✗ git add .
-
-➜  miroadamy.com git:(master) ✗ git commit -m &#34;Published the Hugo setup article source&#34;
-[master f078d54] Published the Hugo setup article source
- 2 files changed, 352 insertions(+), 1 deletion(-)
- create mode 100644 content/posts/2019-11-22-hugo-setup.md
-
-</code></pre></div><p>And we are done</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># In the source repository
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">miroadamy</span><span class="p">.</span><span class="n">com</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">pwd</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">miro</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">MIA</span><span class="o">/</span><span class="n">miroadamy</span><span class="p">.</span><span class="n">com</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Note the added file - we have validated that all is OK by running `hugo serve` and localhost:1313
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">miroadamy</span><span class="p">.</span><span class="n">com</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">gss</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">??</span><span class="w"> </span><span class="n">content</span><span class="o">/</span><span class="n">posts</span><span class="o">/</span><span class="mi">2019</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="n">hugo</span><span class="o">-</span><span class="n">setup</span><span class="p">.</span><span class="n">md</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Now we generate the site
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">miroadamy</span><span class="p">.</span><span class="n">com</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">hugo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                   </span><span class="o">|</span><span class="w"> </span><span class="n">EN</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="o">+</span><span class="c1">------------------+-----+
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">Pages</span><span class="w">            </span><span class="o">|</span><span class="w"> </span><span class="mi">527</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">Paginator</span><span class="w"> </span><span class="n">pages</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="mi">149</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">Non</span><span class="o">-</span><span class="n">page</span><span class="w"> </span><span class="n">files</span><span class="w">   </span><span class="o">|</span><span class="w">   </span><span class="mi">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">Static</span><span class="w"> </span><span class="n">files</span><span class="w">     </span><span class="o">|</span><span class="w"> </span><span class="mi">200</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">Processed</span><span class="w"> </span><span class="n">images</span><span class="w"> </span><span class="o">|</span><span class="w">   </span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">Aliases</span><span class="w">          </span><span class="o">|</span><span class="w">  </span><span class="mi">41</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">Sitemaps</span><span class="w">         </span><span class="o">|</span><span class="w">   </span><span class="mi">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">Cleaned</span><span class="w">          </span><span class="o">|</span><span class="w">   </span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Total</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">679</span><span class="w"> </span><span class="n">ms</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Note that there is additonal change - the `public` link has been modified
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># We are now in context of source repo:
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">miroadamy</span><span class="p">.</span><span class="n">com</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">origin</span><span class="w">  </span><span class="n">git</span><span class="o">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">:</span><span class="n">miro</span><span class="p">.</span><span class="n">adamy</span><span class="o">/</span><span class="n">miroadamy</span><span class="p">.</span><span class="n">com</span><span class="p">.</span><span class="nf">git</span><span class="w"> </span><span class="p">(</span><span class="k">fetch</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">origin</span><span class="w">  </span><span class="n">git</span><span class="o">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">:</span><span class="n">miro</span><span class="p">.</span><span class="n">adamy</span><span class="o">/</span><span class="n">miroadamy</span><span class="p">.</span><span class="n">com</span><span class="p">.</span><span class="nf">git</span><span class="w"> </span><span class="p">(</span><span class="n">push</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Go to public =&gt; here we will be in context of GHPR
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">miroadamy</span><span class="p">.</span><span class="n">com</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">cd</span><span class="w"> </span><span class="n">public</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">public</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">origin</span><span class="w">  </span><span class="n">git</span><span class="o">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">:</span><span class="n">miroadamy</span><span class="o">/</span><span class="n">miroadamy</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="nf">git</span><span class="w"> </span><span class="p">(</span><span class="k">fetch</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">origin</span><span class="w">  </span><span class="n">git</span><span class="o">@</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">:</span><span class="n">miroadamy</span><span class="o">/</span><span class="n">miroadamy</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="nf">git</span><span class="w"> </span><span class="p">(</span><span class="n">push</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># The generator modified  lots of files and added some. We need to commit these changes
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">public</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">public</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">status</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">On</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="n">master</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Your</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">up</span><span class="o">-</span><span class="k">to</span><span class="o">-</span><span class="kt">date</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="s1">&#39;origin/master&#39;</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Changes</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">committed</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">(</span><span class="k">use</span><span class="w"> </span><span class="s2">&#34;git reset HEAD &lt;file&gt;...&#34;</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">unstage</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">categories</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">categories</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">xml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">categories</span><span class="o">/</span><span class="n">programming</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">categories</span><span class="o">/</span><span class="n">programming</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">xml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="k">index</span><span class="p">.</span><span class="n">xml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">12</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">14</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">15</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">16</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">17</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">18</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">19</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">20</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">21</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">22</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">23</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">24</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">25</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">26</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">27</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">28</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">29</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">3</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">30</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">31</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">32</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">33</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">34</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">35</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">36</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">37</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">38</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">39</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">4</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">40</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">41</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">42</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">43</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">44</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">45</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">46</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">47</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">48</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">49</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">5</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">50</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">51</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">52</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">53</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">54</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">55</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">56</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">57</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">58</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">59</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">60</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">61</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">62</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">63</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">64</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">65</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">66</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">67</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">68</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">69</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">7</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">70</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">71</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">72</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">73</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">74</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">75</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">76</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">77</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">78</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">79</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">8</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">80</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">81</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">82</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">83</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">84</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">85</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">86</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">87</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">88</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">page</span><span class="o">/</span><span class="mi">9</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="mi">2019</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">20</span><span class="o">-</span><span class="k">from</span><span class="o">-</span><span class="n">jekyll</span><span class="o">-</span><span class="k">to</span><span class="o">-</span><span class="n">hugo</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">new</span><span class="w"> </span><span class="n">file</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="mi">2019</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="n">hugo</span><span class="o">-</span><span class="n">setup</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">new</span><span class="w"> </span><span class="n">file</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="mi">2029</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="n">post</span><span class="p">.</span><span class="n">md</span><span class="p">.</span><span class="n">template</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">xml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">10</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">12</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">13</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">14</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">15</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">16</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">17</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">18</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">19</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">20</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">21</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">22</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">23</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">24</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">25</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">26</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">27</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">28</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">29</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">3</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">30</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">31</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">32</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">33</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">34</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">35</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">36</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">37</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">38</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">39</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">4</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">40</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">41</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">42</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">43</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">44</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">5</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">6</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">7</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">8</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">posts</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">9</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">sitemap</span><span class="p">.</span><span class="n">xml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">tags</span><span class="o">/</span><span class="n">blog</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">tags</span><span class="o">/</span><span class="n">blog</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">xml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">tags</span><span class="o">/</span><span class="n">blog</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">2</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">tags</span><span class="o">/</span><span class="n">blog</span><span class="o">/</span><span class="n">page</span><span class="o">/</span><span class="mi">3</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">tags</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="n">tags</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">xml</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Make local commit
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">public</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">commit</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="s2">&#34;Published the Hugo setup article&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">master</span><span class="w"> </span><span class="n">cd95809</span><span class="p">]</span><span class="w"> </span><span class="n">Published</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Hugo</span><span class="w"> </span><span class="n">setup</span><span class="w"> </span><span class="n">article</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="mi">148</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">changed</span><span class="p">,</span><span class="w"> </span><span class="mi">3219</span><span class="w"> </span><span class="nf">insertions</span><span class="p">(</span><span class="o">+</span><span class="p">),</span><span class="w"> </span><span class="mi">2638</span><span class="w"> </span><span class="nf">deletions</span><span class="p">(</span><span class="o">-</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="mi">100644</span><span class="w"> </span><span class="n">posts</span><span class="o">/</span><span class="mi">2019</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="n">hugo</span><span class="o">-</span><span class="n">setup</span><span class="o">/</span><span class="k">index</span><span class="p">.</span><span class="n">html</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="mi">100644</span><span class="w"> </span><span class="n">posts</span><span class="o">/</span><span class="mi">2029</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="n">post</span><span class="p">.</span><span class="n">md</span><span class="p">.</span><span class="n">template</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Publish site on Github
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">public</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">push</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Counting</span><span class="w"> </span><span class="n">objects</span><span class="p">:</span><span class="w"> </span><span class="mi">291</span><span class="p">,</span><span class="w"> </span><span class="n">done</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Delta</span><span class="w"> </span><span class="n">compression</span><span class="w"> </span><span class="k">using</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="mi">8</span><span class="w"> </span><span class="n">threads</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Compressing</span><span class="w"> </span><span class="n">objects</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="mi">157</span><span class="o">/</span><span class="mi">157</span><span class="p">),</span><span class="w"> </span><span class="n">done</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Writing</span><span class="w"> </span><span class="n">objects</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="mi">291</span><span class="o">/</span><span class="mi">291</span><span class="p">),</span><span class="w"> </span><span class="mi">131</span><span class="p">.</span><span class="mi">31</span><span class="w"> </span><span class="n">KiB</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="n">bytes</span><span class="o">/</span><span class="n">s</span><span class="p">,</span><span class="w"> </span><span class="n">done</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Total</span><span class="w"> </span><span class="mi">291</span><span class="w"> </span><span class="p">(</span><span class="n">delta</span><span class="w"> </span><span class="mi">150</span><span class="p">),</span><span class="w"> </span><span class="n">reused</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">(</span><span class="n">delta</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">remote</span><span class="p">:</span><span class="w"> </span><span class="n">Resolving</span><span class="w"> </span><span class="n">deltas</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="o">%</span><span class="w"> </span><span class="p">(</span><span class="mi">150</span><span class="o">/</span><span class="mi">150</span><span class="p">),</span><span class="w"> </span><span class="n">completed</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="mi">61</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">objects</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">To</span><span class="w"> </span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="p">:</span><span class="n">miroadamy</span><span class="o">/</span><span class="n">miroadamy</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="p">.</span><span class="n">git</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="mi">676432</span><span class="n">b</span><span class="p">..</span><span class="n">cd95809</span><span class="w">  </span><span class="n">master</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">master</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Now the static site was updated but the source needs to be as well
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">miroadamy</span><span class="p">.</span><span class="n">com</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">status</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="k">On</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="n">master</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Your</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">ahead</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="s1">&#39;origin/master&#39;</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">commit</span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">(</span><span class="k">use</span><span class="w"> </span><span class="s2">&#34;git push&#34;</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">publish</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="n">commits</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Changes</span><span class="w"> </span><span class="k">not</span><span class="w"> </span><span class="n">staged</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">commit</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">(</span><span class="k">use</span><span class="w"> </span><span class="s2">&#34;git add &lt;file&gt;...&#34;</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="k">update</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">committed</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">(</span><span class="k">use</span><span class="w"> </span><span class="s2">&#34;git checkout -- &lt;file&gt;...&#34;</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">discard</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">working</span><span class="w"> </span><span class="n">directory</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">modified</span><span class="p">:</span><span class="w">   </span><span class="nf">public</span><span class="w"> </span><span class="p">(</span><span class="n">new</span><span class="w"> </span><span class="n">commits</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">Untracked</span><span class="w"> </span><span class="n">files</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="p">(</span><span class="k">use</span><span class="w"> </span><span class="s2">&#34;git add &lt;file&gt;...&#34;</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="n">include</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">committed</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">content</span><span class="o">/</span><span class="n">posts</span><span class="o">/</span><span class="mi">2019</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="n">hugo</span><span class="o">-</span><span class="n">setup</span><span class="p">.</span><span class="n">md</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">no</span><span class="w"> </span><span class="n">changes</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="nf">commit</span><span class="w"> </span><span class="p">(</span><span class="k">use</span><span class="w"> </span><span class="s2">&#34;git add&#34;</span><span class="w"> </span><span class="k">and</span><span class="o">/</span><span class="k">or</span><span class="w"> </span><span class="s2">&#34;git commit -a&#34;</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># We add the changes to source - new changed file as well as the &#39;public&#39; link
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">miroadamy</span><span class="p">.</span><span class="n">com</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="k">add</span><span class="w"> </span><span class="p">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">➜</span><span class="w">  </span><span class="n">miroadamy</span><span class="p">.</span><span class="n">com</span><span class="w"> </span><span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span><span class="w"> </span><span class="err">✗</span><span class="w"> </span><span class="n">git</span><span class="w"> </span><span class="n">commit</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="s2">&#34;Published the Hugo setup article source&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">master</span><span class="w"> </span><span class="n">f078d54</span><span class="p">]</span><span class="w"> </span><span class="n">Published</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Hugo</span><span class="w"> </span><span class="n">setup</span><span class="w"> </span><span class="n">article</span><span class="w"> </span><span class="n">source</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">changed</span><span class="p">,</span><span class="w"> </span><span class="mi">352</span><span class="w"> </span><span class="nf">insertions</span><span class="p">(</span><span class="o">+</span><span class="p">),</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="nf">deletion</span><span class="p">(</span><span class="o">-</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span><span class="k">create</span><span class="w"> </span><span class="n">mode</span><span class="w"> </span><span class="mi">100644</span><span class="w"> </span><span class="n">content</span><span class="o">/</span><span class="n">posts</span><span class="o">/</span><span class="mi">2019</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">22</span><span class="o">-</span><span class="n">hugo</span><span class="o">-</span><span class="n">setup</span><span class="p">.</span><span class="n">md</span><span class="w">
+</span></span></span></code></pre></div><p>And we are done</p>
 <p>It can be automated to this small script:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span>
-<span class="nv">MESSAGE</span><span class="o">=</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="s1">&#39;Published changes&#39;</span><span class="si">}</span>
-
-hugo
-<span class="nb">cd</span> public
-git add .
-git commit -m <span class="s2">&#34;</span><span class="nv">$MESSAGE</span><span class="s2">&#34;</span>
-git push
-<span class="nb">cd</span> ..
-git add .
-git commit -m <span class="s2">&#34;</span><span class="si">${</span><span class="nv">MESSAGE</span><span class="si">}</span><span class="s2"> - source&#34;</span>
-git push
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">MESSAGE</span><span class="o">=</span><span class="si">${</span><span class="nv">1</span><span class="k">:-</span><span class="s1">&#39;Published changes&#39;</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">hugo
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> public
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;</span><span class="nv">$MESSAGE</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">git push
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> ..
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;</span><span class="si">${</span><span class="nv">MESSAGE</span><span class="si">}</span><span class="s2"> - source&#34;</span>
+</span></span><span class="line"><span class="cl">git push
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -557,7 +571,7 @@ git push
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -575,13 +589,10 @@ git push
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -592,7 +603,10 @@ git push
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

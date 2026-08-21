@@ -1,92 +1,66 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>linux on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/linux/</link>
-    <description>Recent content in linux on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 30 May 2016 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Learning resources for Linux and Command line</title>
-      <link>https://miroadamy.com/posts/2016-05-30-linux-resources/</link>
-      <pubDate>Mon, 30 May 2016 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2016-05-30-linux-resources/</guid>
-      <description>This quick summary to answer Megha Maiya&amp;rsquo;s question - I am adding to the Wiki in case it can be expanded later useful for somebody else:
- expanded later useful for somebody else  Free resources There is HUGE amount of resources available for Linux and Unix out there. The issue is select those reasonably good
- List of lists: https://github.com/learnbyexample/scripting_course/blob/master/Linux_curated_resources.md http://ryanstutorials.net/, specially http://ryanstutorials.net/linuxtutorial/ and http://ryanstutorials.net/linuxtutorial/ http://www.tutorialspoint.com/unix/unix-getting-started.htm (bash scripting) - https://bash.</description>
-    </item>
-    
-    <item>
-      <title>How to access shared folder in Linux guest in VirtualBox</title>
-      <link>https://miroadamy.com/posts/2014-09-23-shared-folder/</link>
-      <pubDate>Tue, 23 Sep 2014 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2014-09-23-shared-folder/</guid>
-      <description>Make sure the VBOx extensions are installed.
-Go here for details:
-Add share In VirtualBox, Device add transient shared folder:
-This one has made available path /Users/Shared/ATG-11 under the name ATG-11
-Mount it sudo mount -t vboxsf ATG-11 /media $ ll /media/Unix/ total 19M drwxr-xr-x. 1 root 408 Sep 12 16:02 ATG11-1 drwxr-xr-x. 1 root 272 Sep 12 16:02 ATG11-docs -rw-rw-r--. 1 root 675 May 13 23:46 atg-platform-mac.userlibraries -rw-rw-r--. 1 root 787 May 13 23:17 atg-platform-vm.</description>
-    </item>
-    
-    <item>
-      <title>How to install Chrome in Centos 6.5</title>
-      <link>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</link>
-      <pubDate>Fri, 04 Apr 2014 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</guid>
-      <description>How to install Chrome in Centos 6.5 Step 1. Add Google Yum Repository Create a new yum repository using below instructions.
- sudo vim /etc/yum.repos.d/google.repo
-Add following content to this file
-[google] name=Google baseurl=http://dl.google.com/linux/rpm/stable/$basearch enabled=1 gpgcheck=1 gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub Step 2: Install/Update Google Chrome Richard Lloid provided an shell script to grab libraries from a more recent Linux distro, put them in a tree (/opt/google/chrome/lib) exclusively picked up by Google Chrome and then you can indeed run Google Chrome on CentOS 6.</description>
-    </item>
-    
-    <item>
-      <title>Installation of sshfs in the new VM</title>
-      <link>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</link>
-      <pubDate>Tue, 11 Mar 2014 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</guid>
-      <description>Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
-Get the &amp;lsquo;epel&amp;rsquo; repos wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm Validate
-$ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo It if good idea to enable the remi by default
-sudo vim /etc/yum.repos.d/remi.repo
-Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap Using Mount the host directory</description>
-    </item>
-    
-    <item>
-      <title>Configuring permanent time updates for Linux</title>
-      <link>https://miroadamy.com/posts/2011-02-03-linux-time/</link>
-      <pubDate>Thu, 03 Feb 2011 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2011-02-03-linux-time/</guid>
-      <description>1) make sure the DNS works sudo vi /etc/resolv.conf cat /etc/resolv.conf nameserver 208.67.222.222 nameserver 208.67.220.220 nameserver 192.168.16.1 2) check that you have ntpd installed  cat /etc/ntp.conf
- 3) make it work in all /sbin/chkconfig --list | grep ntpd sudo /sbin/chkconfig --level 2345 ntpd on 4) Initial sync  sudo /usr/sbin/ntpdate pool.ntp.org
- 5) Start service / restart  sudo /sbin/service ntpd start
- </description>
-    </item>
-    
-    <item>
-      <title>Linux vs Windows - great comparison</title>
-      <link>https://miroadamy.com/posts/2008-08-22-linux-vs-windows-great-comparison/</link>
-      <pubDate>Fri, 22 Aug 2008 23:35:47 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2008-08-22-linux-vs-windows-great-comparison/</guid>
-      <description>I have been &#34;living in a command line&#34; for last few weeks. Pretty refreshing experience. As result, I had to google a lot, especially when it comes to e.g. subtle differences between tar options on Ubuntu Linux and Open Solaris ... While doing that, I somehow stumbled upon this great writeup on cultural differences between Linux and Windows. Nicely written, no flamewars - obviously pro-Linux, but no Microsoft or Windows bashing and lots of insight.</description>
-    </item>
-    
-    <item>
-      <title>.NET on Linux faster than on Windows ? Hmm</title>
-      <link>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</link>
-      <pubDate>Wed, 27 Jun 2007 22:28:29 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</guid>
-      <description>An interesting article on JavaLobby caught my eye today: Do .NET Applications Run Better on Java?
-
-Normally, knowing the not exactly impartial focus of the Java centric site such as JavaLobby or theserverside.com, one should be careful when reading how much Java outperforms .NET. The bias works the other way too - just look at the Theserverside.net or other .NET centric side how much is C# superior :-). With that in mind, I looked atthe technical report.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Linux on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/linux/</link>
+		<description>Recent content in Linux on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 30 May 2016 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Learning resources for Linux and Command line</title>
+				<link>https://miroadamy.com/posts/2016-05-30-linux-resources/</link>
+				<pubDate>Mon, 30 May 2016 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2016-05-30-linux-resources/</guid>
+				<description>&lt;p&gt;This quick summary to answer Megha Maiya&amp;rsquo;s question - I am adding to the Wiki in case it can be expanded later&#xA;useful for somebody else:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;expanded later&lt;/li&gt;&#xA;&lt;li&gt;useful for somebody else&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;free-resources&#34;&gt;Free resources&lt;/h2&gt;&#xA;&lt;p&gt;There is HUGE amount of resources available for Linux and Unix out there. The issue is select those reasonably good&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;List of lists: &lt;a href=&#34;https://github.com/learnbyexample/scripting_course/blob/master/Linux_curated_resources.md&#34;&gt;https://github.com/learnbyexample/scripting_course/blob/master/Linux_curated_resources.md&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://ryanstutorials.net/&#34;&gt;http://ryanstutorials.net/&lt;/a&gt;, specially &lt;a href=&#34;http://ryanstutorials.net/linuxtutorial/&#34;&gt;http://ryanstutorials.net/linuxtutorial/&lt;/a&gt; and &lt;a href=&#34;http://ryanstutorials.net/linuxtutorial/&#34;&gt;http://ryanstutorials.net/linuxtutorial/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.tutorialspoint.com/unix/unix-getting-started.htm&#34;&gt;http://www.tutorialspoint.com/unix/unix-getting-started.htm&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;(bash scripting) - &lt;a href=&#34;https://bash.cyberciti.biz/guide/Main_Page&#34;&gt;https://bash.cyberciti.biz/guide/Main_Page&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;free book - &lt;a href=&#34;http://unixmages.com/ufbm.pdf&#34;&gt;http://unixmages.com/ufbm.pdf&lt;/a&gt; - very beginner friendly&lt;/li&gt;&#xA;&lt;li&gt;list of free books: &lt;a href=&#34;http://www.dailyartisan.com/news/open-source-e-books-for-linux/&#34;&gt;http://www.dailyartisan.com/news/open-source-e-books-for-linux/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Eli The computer guy - &lt;a href=&#34;https://www.youtube.com/playlist?list=PLD6B6473ACF32C59D&#34;&gt;https://www.youtube.com/playlist?list=PLD6B6473ACF32C59D&lt;/a&gt; (I like this one)&lt;/li&gt;&#xA;&lt;li&gt;YouTube channel - ultimate Linux tutorials - &lt;a href=&#34;https://www.youtube.com/channel/UCn58SGUDUnUHRYKyNffHQrQ&#34;&gt;https://www.youtube.com/channel/UCn58SGUDUnUHRYKyNffHQrQ&lt;/a&gt;&#xA;(from a generous Indian guy sharing his experience with the world for free. Not ideal audio quality, could use some editing - bot has lots of content)&lt;/li&gt;&#xA;&lt;li&gt;EDX courses - &lt;a href=&#34;https://www.edx.org/school/linuxfoundationx&#34;&gt;https://www.edx.org/school/linuxfoundationx&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://www.tutorialspoint.com/listtutorials/linux/basic-concepts/1&#34;&gt;http://www.tutorialspoint.com/listtutorials/linux/basic-concepts/1&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;Wikibooks - &lt;a href=&#34;https://en.wikibooks.org/wiki/LPI_Linux_Certification&#34;&gt;https://en.wikibooks.org/wiki/LPI_Linux_Certification&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;hands-on&#34;&gt;Hands On&lt;/h2&gt;&#xA;&lt;p&gt;Reading books and watching videos will have very little impact without trying things out.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>How to access shared folder in Linux guest in VirtualBox</title>
+				<link>https://miroadamy.com/posts/2014-09-23-shared-folder/</link>
+				<pubDate>Tue, 23 Sep 2014 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2014-09-23-shared-folder/</guid>
+				<description>&lt;p&gt;Make sure the VBOx extensions are installed.&lt;/p&gt;&#xA;&lt;p&gt;Go here for details:&lt;/p&gt;&#xA;&lt;h2 id=&#34;add-share&#34;&gt;Add share&lt;/h2&gt;&#xA;&lt;p&gt;In VirtualBox, Device add transient shared folder:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/virt-box.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;This one has made available path /Users/Shared/ATG-11 under the name ATG-11&lt;/p&gt;&#xA;&lt;h2 id=&#34;mount-it&#34;&gt;Mount it&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo mount -t vboxsf ATG-11 /media&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ll /media/Unix/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total 19M&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x. 1 root  408 Sep 12 16:02 ATG11-1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x. 1 root  272 Sep 12 16:02 ATG11-docs&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-r--. 1 root  675 May 13 23:46 atg-platform-mac.userlibraries&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-rw-r--. 1 root  787 May 13 23:17 atg-platform-vm.userlibraries&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rwxr--r--. 1 root  19M Feb 15  2013 jrebel-5.1.3-nosetup.zip&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--. 1 root 1020 May 15 15:36 jrebel.lic&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r--. 1 root  582 May 15 14:58 rebel.xml&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x. 1 root  272 Apr  6 01:33 security&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x. 1 root  306 Jun  9 22:34 servers&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rwxr--r--. 1 root  349 Dec 17  2013 users.txt&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;drwxr-xr-x. 1 root  340 Sep  3 16:10 xrebel&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+			</item>
+			<item>
+				<title>How to install Chrome in Centos 6.5</title>
+				<link>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</link>
+				<pubDate>Fri, 04 Apr 2014 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2014-04-04-install-chrome-centos6/</guid>
+				<description>&lt;h1 id=&#34;how-to-install-chrome-in-centos-65&#34;&gt;How to install Chrome in Centos 6.5&lt;/h1&gt;&#xA;&lt;h2 id=&#34;step-1-add-google-yum-repository&#34;&gt;Step 1. Add Google Yum Repository&lt;/h2&gt;&#xA;&lt;p&gt;Create a new yum repository using below instructions.&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt; sudo vim /etc/yum.repos.d/google.repo&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Add following content to this file&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;[google]&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;name=Google&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;baseurl=http://dl.google.com/linux/rpm/stable/$basearch&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;enabled=1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpgcheck=1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;step-2-installupdate-google-chrome&#34;&gt;Step 2: Install/Update Google Chrome&lt;/h2&gt;&#xA;&lt;p&gt;Richard Lloid provided an shell script to grab libraries from a more recent Linux distro, put them in a tree (/opt/google/chrome/lib) exclusively picked up by Google Chrome and then you can indeed run Google Chrome on CentOS 6.4 or later. &lt;a href=&#34;http://chrome.richardlloyd.org.uk/&#34;&gt;Read More&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Installation of sshfs in the new VM</title>
+				<link>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</link>
+				<pubDate>Tue, 11 Mar 2014 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2014-03-11-sshf-in-vm/</guid>
+				<description>&lt;h1 id=&#34;installation-of-sshfs-in-the-new-vm&#34;&gt;Installation of sshfs in the new VM&lt;/h1&gt;&#xA;&lt;p&gt;On Centos 6, the fuse-sshfs is not part of default YUM repos.&lt;/p&gt;&#xA;&lt;h2 id=&#34;get-the-epel-repos&#34;&gt;Get the &amp;rsquo;epel&amp;rsquo; repos&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Validate&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/etc/yum.repos.d/epel.repo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/etc/yum.repos.d/epel-testing.repo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/etc/yum.repos.d/remi.repo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It if good idea to enable the remi by default&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;sudo vim /etc/yum.repos.d/remi.repo&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;usermod -a -G fuse thinkwrap&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;using&#34;&gt;Using&lt;/h2&gt;&#xA;&lt;p&gt;Mount the host directory&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Configuring permanent time updates for Linux</title>
+				<link>https://miroadamy.com/posts/2011-02-03-linux-time/</link>
+				<pubDate>Thu, 03 Feb 2011 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2011-02-03-linux-time/</guid>
+				<description>&lt;h2 id=&#34;1-make-sure-the-dns-works&#34;&gt;1) make sure the DNS works&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo vi /etc/resolv.conf&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cat /etc/resolv.conf&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nameserver 208.67.222.222&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nameserver 208.67.220.220&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nameserver 192.168.16.1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;2-check-that-you-have-ntpd-installed&#34;&gt;2) check that you have ntpd installed&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;cat /etc/ntp.conf&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;3-make-it-work-in-all&#34;&gt;3) make it work in all&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;/sbin/chkconfig --list | grep ntpd&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo /sbin/chkconfig --level 2345 ntpd on&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;4-initial-sync&#34;&gt;4) Initial sync&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;sudo /usr/sbin/ntpdate pool.ntp.org&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;5-start-service--restart&#34;&gt;5) Start service / restart&lt;/h2&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;sudo /sbin/service ntpd start&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+			</item>
+			<item>
+				<title>Linux vs Windows - great comparison</title>
+				<link>https://miroadamy.com/posts/2008-08-22-linux-vs-windows-great-comparison/</link>
+				<pubDate>Fri, 22 Aug 2008 23:35:47 -0400</pubDate>
+				<guid>https://miroadamy.com/posts/2008-08-22-linux-vs-windows-great-comparison/</guid>
+				<description>&lt;p&gt;I have been &#34;living in a command line&#34; for last few weeks. Pretty refreshing experience. As result, I had to google a lot, especially when it comes to e.g. subtle differences between tar options on Ubuntu Linux and Open Solaris ... While doing that, I somehow stumbled upon this great writeup on cultural differences between Linux and Windows. Nicely written, no flamewars - obviously pro-Linux, but no Microsoft or Windows bashing and lots of insight. Higly recommended.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>.NET on Linux faster than on Windows ? Hmm</title>
+				<link>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</link>
+				<pubDate>Wed, 27 Jun 2007 22:28:29 -0400</pubDate>
+				<guid>https://miroadamy.com/posts/2007-06-27-net-on-linux-faster-than-on-windows-hmm/</guid>
+				<description>&lt;p&gt;An interesting article on JavaLobby caught my eye today: &lt;a href=&#34;http://www.javalobby.org/java/forums/t97871.html&#34; target=&#34;_blank&#34;&gt;Do .NET Applications Run Better on Java?&lt;br /&gt;&#xA;&lt;/a&gt;&lt;br /&gt;&#xA;Normally, knowing the not exactly impartial focus of the Java centric site such as &lt;a href=&#34;http://www.javalobby.org/java/forums/t97871.html&#34; target=&#34;_blank&#34;&gt;JavaLobby&lt;/a&gt; or &lt;a href=&#34;http://www.theserverside.com/&#34; target=&#34;_blank&#34;&gt;theserverside.com&lt;/a&gt;, one should be careful when reading how much Java outperforms .NET. The bias works the other way too - just look at the &lt;a href=&#34;http://www.theserverside.net/&#34; target=&#34;_blank&#34;&gt;Theserverside.net&lt;/a&gt; or other .NET centric side how much is C# superior :-). With that in mind, I looked at&lt;a href=&#34;http://www.mainsoft.com/solutions/pdfs/PerformanceStudy.pdf&#34; target=&#34;_blank&#34;&gt; the technical report&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

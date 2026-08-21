@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>switzerland on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/switzerland/</link>
-    <description>Recent content in switzerland on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Mon, 20 Aug 2007 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/switzerland/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Europe 2007 - 1</title>
-      <link>https://miroadamy.com/posts/2007-08-20-europe-2007-1/</link>
-      <pubDate>Mon, 20 Aug 2007 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-08-20-europe-2007-1/</guid>
-      <description>Europe 2007 - 1: Switzerland, Lower Engadin The flight went pretty quickly. It was less than 7 hours, anyway. We crossed the night and the Atlantic in a short time and landed at 6 AM in rainy, wet Zurich.
-The car I have retrieved from Europa car was Spanish Volkswagen make – Seat Leon. According the specification, it was a “medium size car”. And it maybe was, for European circumstances. For me it felt fairly small – our luggage did barely fit into the trunk.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Switzerland on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/switzerland/</link>
+		<description>Recent content in Switzerland on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Mon, 20 Aug 2007 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/switzerland/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Europe 2007 - 1</title>
+				<link>https://miroadamy.com/posts/2007-08-20-europe-2007-1/</link>
+				<pubDate>Mon, 20 Aug 2007 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2007-08-20-europe-2007-1/</guid>
+				<description>&lt;h1 id=&#34;europe-2007---1-switzerland-lower-engadin&#34;&gt;Europe 2007 - 1: Switzerland, Lower Engadin&lt;/h1&gt;&#xA;&lt;p&gt;The flight went pretty quickly. It was less than 7 hours, anyway. We crossed the night and the Atlantic in a short time and landed at 6 AM in rainy, wet &lt;a href=&#34;http://en.wikipedia.org/wiki/Z%C3%BCrich&#34;&gt;Zurich&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;The car I have retrieved from Europa car was Spanish Volkswagen make – &lt;a href=&#34;http://en.wikipedia.org/wiki/SEAT_Le%C3%B3n&#34;&gt;Seat Leon&lt;/a&gt;. According the specification, it was a “medium size car”. And it maybe was, for European circumstances. For me it felt fairly small – our luggage did barely fit into the trunk. If we had more than two normal size and one half size cases, we would be in trouble. One small piece had to fit behind my seat.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

@@ -1,101 +1,80 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>podcast on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/podcast/</link>
-    <description>Recent content in podcast on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Fri, 27 Apr 2007 22:48:29 -0400</lastBuildDate><atom:link href="https://miroadamy.com/tags/podcast/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>New great podcast</title>
-      <link>https://miroadamy.com/posts/2007-04-27-new-great-podcast/</link>
-      <pubDate>Fri, 27 Apr 2007 22:48:29 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-04-27-new-great-podcast/</guid>
-      <description>Running out of Security Now! and TWIT episodes, I have subscribed and started listening to few newly discovered podcasts.
-I have started to listen to the .NET specific one from Scott Hanselman named Hanselminutes. There are couple of factors that makes it better that other geeky blogs out there. First reason is the content quality. There is very high signal-to-noise ratio, pretty much all content counts and both guys in addition to being smart are quite good at achieving right balance between keeping on topic and spontaneity.</description>
-    </item>
-    
-    <item>
-      <title>One more reason to like TWIT</title>
-      <link>https://miroadamy.com/posts/2007-04-23-one-more-reason-to-like-twit/</link>
-      <pubDate>Mon, 23 Apr 2007 22:42:58 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-04-23-one-more-reason-to-like-twit/</guid>
-      <description>As it happens, both my most favorite podcasters - Leo Laporte as well as Steve Gibson are passionate e-book readers. They have both purchased and are (mostly) happy users of the Sony PRS-500 aka Sony Reader in addition to several other platforms - (Palm, Pocket PC). In the latest podcasts - both in TWIT as well as Security Now!, the eBooks and eReader got quite some publicity :-).
-Both had similar experience with PDF format on PRS-500 as myself - but Steve mentioned the PDF re-flowing the document to make it better suites for small screen - something I have looked into but did not get it working quite right.</description>
-    </item>
-    
-    <item>
-      <title>Walking season ... and SPAM</title>
-      <link>https://miroadamy.com/posts/2007-03-31-walking-season-and-spam/</link>
-      <pubDate>Sat, 31 Mar 2007 22:10:53 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-03-31-walking-season-and-spam/</guid>
-      <description>Today I have started the walking season 2007. I did some gentle preparation during the week - few short, 4-5 km strolls around the neighbourhood, but it was today when I really started. It was beautiful day in Ottawa - sunny, temperature around 8-10, so I took off and did 12 km loop through Westboro, down south and around Dow&#39;s Lake up to downtown. Just fantastic. The companion on the road were Security Now!</description>
-    </item>
-    
-    <item>
-      <title>Security of the browsers</title>
-      <link>https://miroadamy.com/posts/2007-03-06-security-of-the-browsers/</link>
-      <pubDate>Tue, 06 Mar 2007 23:00:27 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-03-06-security-of-the-browsers/</guid>
-      <description>I have just finished listening to the back-episodes of Security Now! # 38, where Steve Gibson describes his approach to securely browsing Web without antivirus and with Internet Explorer. The idea in a nutshell is - use properly locked down IE zones. Steve has modified the security settings of the default (Internet zone) to maximum: not allowing any scripting, cookies etc. Which makes many sites unusable, of course because increasing number of browsers does require Javascript enabled - or else game is over.</description>
-    </item>
-    
-    <item>
-      <title>Webbits - 2007-02</title>
-      <link>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</link>
-      <pubDate>Sun, 04 Feb 2007 23:38:11 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</guid>
-      <description>Time to clean up the link cache once again.
-Obviously, most of the news on Techsites are Vista related. Web Worker&#39;s daily gives you 10 reasons why to upgrade to Vista and 10 reasons why not. MacHouse comments on complicated upgrade paths and Brian Briggs offers decision chart for the updgradees.
-General spirit - compared to the launch of Windows 95 - is fairly cynical. The italian Mac bloggers sums it up: Niente di nuovo in Vista.</description>
-    </item>
-    
-    <item>
-      <title>Evergreen Security Now!</title>
-      <link>https://miroadamy.com/posts/2007-01-25-evergreen-security-now/</link>
-      <pubDate>Thu, 25 Jan 2007 23:07:26 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-01-25-evergreen-security-now/</guid>
-      <description>I have started to listen the Security Now! podcasts from the very beginning - sometimes in summer 2005. Unlike some news-and-rumours podcasts that sound kind of weird if you listen them month later, this one did not loose a bit of it&#39;s freshness. Even listening the story of Sony Rootkit discovery again was very entertaining. I am now at first &#34;mod-4&#34; Q&amp;amp;A podcast, Number 16.
-Every time I listen to Steve Gibson, one of two things happens.</description>
-    </item>
-    
-    <item>
-      <title>Few more podcasts</title>
-      <link>https://miroadamy.com/posts/2006-12-21-few-more-podcasts/</link>
-      <pubDate>Thu, 21 Dec 2006 23:38:31 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2006-12-21-few-more-podcasts/</guid>
-      <description>Unfortunately, as of previous Sunday I have run out of the backlog in Security Now! episodes, which means that with all three of my favorite podcasts (Twit, Windows Weekly and Security Now!), I am pretty much dependent on their weekly releases. This is a problem, because the sum of 5-7 weekly commutes to work and back (about 15 minutes one way) plus about 40 minutes in a gym every day equals to about 6 hours of required podcast quality content, and the new episodes of three podcasts above cover barely half of it.</description>
-    </item>
-    
-    <item>
-      <title>Security now</title>
-      <link>https://miroadamy.com/posts/2006-12-02-security-now/</link>
-      <pubDate>Sat, 02 Dec 2006 20:38:04 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2006-12-02-security-now/</guid>
-      <description>After listening for over week to Security Now! podcast (thanks, Steve, thanks Leo and happy birthday), I&#39;ve decided to actually do something about the security on computers around. I started to scanning my home network using &#34;Shields Up&#34; and was happy to found that the only open port was SSH, exactly as I thought I configured it.
-As next step, I followed the advice from this podcast and used my hosts file to block out ads servers and other internet vermins.</description>
-    </item>
-    
-    <item>
-      <title>Podcast du jour</title>
-      <link>https://miroadamy.com/posts/2006-11-28-podcast-du-jour/</link>
-      <pubDate>Tue, 28 Nov 2006 22:21:13 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2006-11-28-podcast-du-jour/</guid>
-      <description>This is for Gabo, Derek, Steve and others who talked to me about podcasts and about which podcasts are worth listening to.
-Since I bought Nano2, I spend lot&#39;s of time listening to podcasts. Pretty much all driving time, walking time and time in the gym is spend listening to wide selection of topics and to people producing them.
-Here is my current list plus some additional recommendations:
-1) TWIT and all around Leo Laporte.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Podcast on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/podcast/</link>
+		<description>Recent content in Podcast on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Fri, 27 Apr 2007 22:48:29 -0400</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/podcast/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>New great podcast</title>
+				<link>https://miroadamy.com/posts/2007-04-27-new-great-podcast/</link>
+				<pubDate>Fri, 27 Apr 2007 22:48:29 -0400</pubDate>
+				<guid>https://miroadamy.com/posts/2007-04-27-new-great-podcast/</guid>
+				<description>&lt;p&gt;Running out of Security Now! and TWIT episodes, I have subscribed and started listening to few newly discovered podcasts.&lt;/p&gt;&#xA;&lt;p&gt;I have started to listen to the .NET specific one from &lt;a href=&#34;http://www.hanselman.com/blog/&#34; target=&#34;_blank&#34;&gt;Scott Hanselman&lt;/a&gt; named &lt;a href=&#34;http://www.hanselminutes.com/&#34; target=&#34;_blank&#34;&gt;Hanselminutes&lt;/a&gt;. There are couple of factors that makes it better that other geeky blogs out there. First reason is the content quality. There is very high signal-to-noise ratio, pretty much all content counts and both guys in addition to being smart are quite good at achieving right balance between keeping on topic and spontaneity.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>One more reason to like TWIT</title>
+				<link>https://miroadamy.com/posts/2007-04-23-one-more-reason-to-like-twit/</link>
+				<pubDate>Mon, 23 Apr 2007 22:42:58 -0400</pubDate>
+				<guid>https://miroadamy.com/posts/2007-04-23-one-more-reason-to-like-twit/</guid>
+				<description>&lt;p&gt;As it happens, both my most favorite podcasters - &lt;a href=&#34;http://leoville.com/&#34; target=&#34;_blank&#34;&gt;Leo Laporte&lt;/a&gt; as well as &lt;a href=&#34;http://www.grc.com/securitynow.htm&#34; target=&#34;_blank&#34;&gt;Steve Gibson&lt;/a&gt; are passionate e-book readers. They have both purchased and are (mostly) happy users of the &lt;a href=&#34;http://www.learningcenter.sony.us/assets/itpd/reader/&#34; target=&#34;_blank&#34;&gt;Sony PRS-500&lt;/a&gt; aka Sony Reader in addition to several other platforms - (Palm, Pocket PC). In the latest podcasts - both in TWIT as well as Security Now!, the eBooks and eReader got quite some publicity :-).&lt;/p&gt;&#xA;&lt;p&gt;Both had similar experience with PDF format on PRS-500 as myself - but Steve mentioned the PDF re-flowing the document to make it better suites for small screen - something I have looked into but did not get it working quite right. The preferred approach to using Reader is RTF format - which again, matches my impressions.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Walking season ... and SPAM</title>
+				<link>https://miroadamy.com/posts/2007-03-31-walking-season-and-spam/</link>
+				<pubDate>Sat, 31 Mar 2007 22:10:53 -0400</pubDate>
+				<guid>https://miroadamy.com/posts/2007-03-31-walking-season-and-spam/</guid>
+				<description>&lt;p&gt;Today I have started the walking season 2007. I did some gentle preparation during the week - few short, 4-5 km strolls around the neighbourhood, but it was today when I really started. It was &lt;a href=&#34;http://www.theweathernetwork.com/weather/cities/can/Pages/CAON0512.htm&#34; target=&#34;_blank&#34;&gt;beautiful&lt;/a&gt; day in &lt;a href=&#34;http://www.ottawa.com/&#34; target=&#34;_blank&#34;&gt;Ottawa&lt;/a&gt; - sunny, temperature around 8-10, so I took off and did 12 km loop through &lt;a href=&#34;http://www.ottawaliving.ca/community.php?community_id=31&#34; target=&#34;_blank&#34;&gt;Westboro&lt;/a&gt;, down south and around &lt;a href=&#34;http://www.ottawakiosk.com/panos/rideau_canal_3.html&#34; target=&#34;_blank&#34;&gt;Dow&#39;s Lake&lt;/a&gt; up to downtown. Just fantastic. The companion on the road were Security Now! - I was behind few episodes, but I managed to listen to almost full 3 episodes.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Security of the browsers</title>
+				<link>https://miroadamy.com/posts/2007-03-06-security-of-the-browsers/</link>
+				<pubDate>Tue, 06 Mar 2007 23:00:27 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2007-03-06-security-of-the-browsers/</guid>
+				<description>&lt;p&gt;I have just finished listening to the back-episodes of Security Now! # 38, where Steve Gibson describes his approach to securely browsing Web without antivirus and with Internet Explorer. The idea in a nutshell is - use properly locked down IE zones. Steve has modified the security settings of the default (Internet zone) to maximum: not allowing any scripting, cookies etc. Which makes many sites unusable, of course because increasing number of browsers does require Javascript enabled - or else game is over.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Webbits - 2007-02</title>
+				<link>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</link>
+				<pubDate>Sun, 04 Feb 2007 23:38:11 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</guid>
+				<description>&lt;p&gt;Time to clean up the link cache once again.&lt;/p&gt;&#xA;&lt;p&gt;Obviously, most of the news on Techsites are Vista related. Web Worker&#39;s daily gives you &lt;a href=&#34;http://webworkerdaily.com/2007/01/31/10-reasons-for-the-windows-web-worker-to-upgrade-to-vistaor-not/&#34;&gt;10 reasons why to upgrade to Vista and 10 reasons why not&lt;/a&gt;. MacHouse comments on &lt;a href=&#34;http://homepage.mac.com/mercutio2/MacHouse/page1/page1.html&#34;&gt;complicated upgrade paths&lt;/a&gt; and Brian Briggs offers &lt;a href=&#34;http://www.bbspot.com/News/2007/02/windows-vista-upgrade-decision-flowchart.html&#34;&gt;decision chart for the updgradees&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;General spirit - compared to the launch of Windows 95 - is fairly cynical. The italian Mac bloggers &lt;a href=&#34;http://macintosh.wordpress.com/2007/01/29/prepararsi-non-solo-spiritualmente-alluscita-di-vista/&#34;&gt;sums it up&lt;/a&gt;: Niente di nuovo in Vista. So does &lt;a href=&#34;http://uploads.wordpress.com/2007/02/04/the-%E2%80%9Cwow%E2%80%9D-started-five-years-ago/&#34;&gt;this one&lt;/a&gt;. This site shows some &lt;a href=&#34;http://www.flickr.com/photo_zoom.gne?id=376525899&amp;amp;context=pool-35034346867@N01&amp;amp;size=o&#34;&gt;real innovation&lt;/a&gt; :-). Despite it is Vista launch, Steve Jobs and OS-X seems to get almost as much publicity as Vista and as few bloggers commented - Microsoft does not take it easy - see &lt;a href=&#34;http://psychohistory.wordpress.com/2007/02/04/bill-gates-loses-his-cool/&#34;&gt;Bill Gates TV appearance&lt;/a&gt;.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Evergreen Security Now!</title>
+				<link>https://miroadamy.com/posts/2007-01-25-evergreen-security-now/</link>
+				<pubDate>Thu, 25 Jan 2007 23:07:26 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2007-01-25-evergreen-security-now/</guid>
+				<description>&lt;p&gt;I have started to listen the Security Now! podcasts from the very beginning - sometimes in summer 2005. Unlike some  news-and-rumours podcasts that sound kind of weird if you listen them month later, this one did not loose a bit of it&#39;s freshness. Even listening the story of Sony Rootkit discovery again was very entertaining. I am now at first &#34;mod-4&#34; Q&amp;amp;A podcast, Number 16.&lt;/p&gt;&#xA;&lt;p&gt;Every time I listen to Steve Gibson, one of two things happens. Either I learn something new, or I discover new, better way how to explain something I knew about in a very nice, accessible way. Steve&#39;s handling of differences  between WEP and WPA, explanation why MAC address filtering gives no security and his VPN coverage was an excellent example of the later.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Few more podcasts</title>
+				<link>https://miroadamy.com/posts/2006-12-21-few-more-podcasts/</link>
+				<pubDate>Thu, 21 Dec 2006 23:38:31 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2006-12-21-few-more-podcasts/</guid>
+				<description>&lt;p&gt;Unfortunately, as of previous Sunday I have run out of the backlog in Security Now! episodes, which means that with all three of my favorite podcasts (&lt;a href=&#34;http://www.twit.tv/TWiT&#34;&gt;Twit&lt;/a&gt;, &lt;a href=&#34;http://www.twit.tv/ww&#34;&gt;Windows Weekly&lt;/a&gt; and &lt;a href=&#34;http://www.twit.tv/SN&#34;&gt;Security Now!&lt;/a&gt;), I am pretty much dependent on their weekly releases. This is a problem, because the sum of 5-7 weekly commutes to work and back (about 15 minutes one way) plus about 40 minutes in a gym every day equals to about 6 hours of required podcast quality content, and the new episodes of three podcasts above cover barely half of it.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Security now</title>
+				<link>https://miroadamy.com/posts/2006-12-02-security-now/</link>
+				<pubDate>Sat, 02 Dec 2006 20:38:04 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2006-12-02-security-now/</guid>
+				<description>&lt;p&gt;After listening for over week to Security Now! podcast (thanks, Steve, thanks Leo and happy birthday), I&#39;ve decided to actually do something about the security on computers around. I started to scanning my home network using &#34;&lt;a href=&#34;https://www.grc.com/x/ne.dll?bh0bkyd2&#34;&gt;Shields Up&lt;/a&gt;&#34; and was happy to found that the only open port was SSH, exactly as I thought I configured it.&lt;/p&gt;&#xA;&lt;p&gt;As next step, I followed the advice from &lt;a href=&#34;http://www.grc.com/SecurityNow.htm#45&#34;&gt;this podcast&lt;/a&gt; and used my hosts file to block out ads servers and other internet vermins.  You may also want to look at the &lt;a href=&#34;http://www.grc.com/sn/notes-045.htm&#34;&gt;podcast notes&lt;/a&gt;, read &lt;a href=&#34;http://www.grc.com/sn/SN-045.pdf&#34;&gt;full transcript&lt;/a&gt; or &lt;a href=&#34;http://media.grc.com/sn/SN-045.mp3&#34;&gt;listen&lt;/a&gt; to it.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Podcast du jour</title>
+				<link>https://miroadamy.com/posts/2006-11-28-podcast-du-jour/</link>
+				<pubDate>Tue, 28 Nov 2006 22:21:13 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2006-11-28-podcast-du-jour/</guid>
+				<description>&lt;p&gt;This is for Gabo, Derek, Steve and others who talked to me about podcasts and about which podcasts are worth listening to.&lt;/p&gt;&#xA;&lt;p&gt;Since I bought &lt;a href=&#34;http://www.apple.com/ipodnano/&#34;&gt;Nano2&lt;/a&gt;, I spend lot&#39;s of time listening to podcasts. Pretty much all driving time, walking time and time in the gym is spend listening to wide selection of topics and to people producing them.&lt;/p&gt;&#xA;&lt;p&gt;Here is my current list plus some additional recommendations:&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1) TWIT and all around Leo Laporte. &lt;/strong&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

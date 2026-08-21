@@ -17,14 +17,15 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Adding Bash to Tensorflow notebook I commented out PHP and C&#43;&#43; stuff that I do not really need:
-FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;amp;&amp;amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;amp;&amp;amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;amp;&amp;amp; \ # tar -xvf zeromq-4.1.5.tar.gz &amp;amp;&amp;amp; \ # cd zeromq-* &amp;amp;&amp;amp; \ # ." /><meta name="keywords" content="blog, Miro" />
+FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;&amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;&amp; \ # tar -xvf zeromq-4.1.5.tar.gz &amp;&amp; \ # cd zeromq-* &amp;&amp; \ # ./configure &amp;&amp; make &amp;&amp; make install &amp;&amp; \ # printf &#34;\n&#34; | pecl install zmq-beta &amp;&amp; \ # echo &#34;extension=zmq.so&#34; &gt; /etc/php/7.0/cli/conf.d/zmq.ini # install PHP composer #RUN wget https://getcomposer.org/installer -O composer-setup.php &amp;&amp; \ # wget https://litipk.github.io/Jupyter-PHP-Installer/dist/jupyter-php-installer.phar &amp;&amp; \ # php composer-setup.php &amp;&amp; \ # php ./jupyter-php-installer.phar -vvv install &amp;&amp; \ # mv composer.phar /usr/local/bin/composer &amp;&amp; \ # rm -rf zeromq-* jupyter-php* &amp;&amp; \ # rm composer-setup.php # install ijavascript #RUN apt-get install -yq nodejs npm libzmq3-dev node-gyp &amp;&amp; \ # npm install -g ijavascript &amp;&amp; \ # ijs --ijs-install=global #RUN cd .. &amp;&amp; \ # apt-get install -yq --no-install-recommends cmake &amp;&amp; \ # wget https://raw.githubusercontent.com/root-mirror/cling/master/tools/packaging/cpt.py &amp;&amp; \ # chmod &#43;x cpt.py &amp;&amp; \ # ./cpt.py --check-requirements &amp;&amp; ./cpt.py --create-dev-env Debug --with-workdir=./cling/ #RUN cd .. &amp;&amp; \ # wget https://root.cern.ch/download/cling/cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \ # tar -xvjf cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \ # rm cling_*.tar.bz2 &amp;&amp; \ # mv cling_* cling #RUN cd .. &amp;&amp; \ # ln -s $(pwd)/cling/bin/* /usr/bin/ &amp;&amp; \ # cd cling/share/cling/Jupyter/kernel &amp;&amp; \ # pip install -e . &amp;&amp; \ # jupyter-kernelspec install cling-cpp17 &amp;&amp; \ # jupyter-kernelspec install cling-cpp14 &amp;&amp; \ # jupyter-kernelspec install cling-cpp11 RUN chown -R $NB_USER /home/$NB_USER &amp;&amp; \ rm -rf /home/$NB_USER/.local/share/jupyter # install java jre for h2o RUN apt-get install -yq openjdk-8-jre # Reset user from jupyter/base-notebook USER $NB_USER # install jupyter-bash RUN /opt/conda/bin/pip install --no-cache-dir bash_kernel RUN /opt/conda/bin/python -m bash_kernel.install # install h2o RUN /opt/conda/bin/pip install --no-cache-dir --upgrade h2o &amp;&amp; \ /opt/conda/bin/pip install --no-cache-dir --upgrade pandas # disable authentication RUN mkdir -p .jupyter RUN echo &#34;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py RUN echo &#34;c.NotebookApp.token = &#39;&#39;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py Source: https://bitbucket.org/snippets/klassify/Ee9Myk/jupyter-notebook-with-bash-kernel
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2019-03-16-jupyter-bash/" />
@@ -35,31 +36,36 @@ FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get up
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Jupyter notebook with Bash kernel" />
-<meta property="og:description" content="Adding Bash to Tensorflow notebook I commented out PHP and C&#43;&#43; stuff that I do not really need:
-FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;&amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;&amp; \ # tar -xvf zeromq-4.1.5.tar.gz &amp;&amp; \ # cd zeromq-* &amp;&amp; \ # ." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2019-03-16-jupyter-bash/" />
-<meta property="article:published_time" content="2019-03-16T11:22:48+08:00" />
-<meta property="article:modified_time" content="2019-03-16T11:22:48+08:00" />
-<meta itemprop="name" content="Jupyter notebook with Bash kernel">
-<meta itemprop="description" content="Adding Bash to Tensorflow notebook I commented out PHP and C&#43;&#43; stuff that I do not really need:
-FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;&amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;&amp; \ # tar -xvf zeromq-4.1.5.tar.gz &amp;&amp; \ # cd zeromq-* &amp;&amp; \ # .">
-<meta itemprop="datePublished" content="2019-03-16T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2019-03-16T11:22:48+08:00" />
-<meta itemprop="wordCount" content="334">
+<meta property="og:url" content="https://miroadamy.com/posts/2019-03-16-jupyter-bash/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Jupyter notebook with Bash kernel">
+	<meta property="og:description" content="Adding Bash to Tensorflow notebook I commented out PHP and C&#43;&#43; stuff that I do not really need:
+FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;&amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;&amp; \ # tar -xvf zeromq-4.1.5.tar.gz &amp;&amp; \ # cd zeromq-* &amp;&amp; \ # ./configure &amp;&amp; make &amp;&amp; make install &amp;&amp; \ # printf &#34;\n&#34; | pecl install zmq-beta &amp;&amp; \ # echo &#34;extension=zmq.so&#34; &gt; /etc/php/7.0/cli/conf.d/zmq.ini # install PHP composer #RUN wget https://getcomposer.org/installer -O composer-setup.php &amp;&amp; \ # wget https://litipk.github.io/Jupyter-PHP-Installer/dist/jupyter-php-installer.phar &amp;&amp; \ # php composer-setup.php &amp;&amp; \ # php ./jupyter-php-installer.phar -vvv install &amp;&amp; \ # mv composer.phar /usr/local/bin/composer &amp;&amp; \ # rm -rf zeromq-* jupyter-php* &amp;&amp; \ # rm composer-setup.php # install ijavascript #RUN apt-get install -yq nodejs npm libzmq3-dev node-gyp &amp;&amp; \ # npm install -g ijavascript &amp;&amp; \ # ijs --ijs-install=global #RUN cd .. &amp;&amp; \ # apt-get install -yq --no-install-recommends cmake &amp;&amp; \ # wget https://raw.githubusercontent.com/root-mirror/cling/master/tools/packaging/cpt.py &amp;&amp; \ # chmod &#43;x cpt.py &amp;&amp; \ # ./cpt.py --check-requirements &amp;&amp; ./cpt.py --create-dev-env Debug --with-workdir=./cling/ #RUN cd .. &amp;&amp; \ # wget https://root.cern.ch/download/cling/cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \ # tar -xvjf cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \ # rm cling_*.tar.bz2 &amp;&amp; \ # mv cling_* cling #RUN cd .. &amp;&amp; \ # ln -s $(pwd)/cling/bin/* /usr/bin/ &amp;&amp; \ # cd cling/share/cling/Jupyter/kernel &amp;&amp; \ # pip install -e . &amp;&amp; \ # jupyter-kernelspec install cling-cpp17 &amp;&amp; \ # jupyter-kernelspec install cling-cpp14 &amp;&amp; \ # jupyter-kernelspec install cling-cpp11 RUN chown -R $NB_USER /home/$NB_USER &amp;&amp; \ rm -rf /home/$NB_USER/.local/share/jupyter # install java jre for h2o RUN apt-get install -yq openjdk-8-jre # Reset user from jupyter/base-notebook USER $NB_USER # install jupyter-bash RUN /opt/conda/bin/pip install --no-cache-dir bash_kernel RUN /opt/conda/bin/python -m bash_kernel.install # install h2o RUN /opt/conda/bin/pip install --no-cache-dir --upgrade h2o &amp;&amp; \ /opt/conda/bin/pip install --no-cache-dir --upgrade pandas # disable authentication RUN mkdir -p .jupyter RUN echo &#34;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py RUN echo &#34;c.NotebookApp.token = &#39;&#39;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py Source: https://bitbucket.org/snippets/klassify/Ee9Myk/jupyter-notebook-with-bash-kernel">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2019-03-16T11:22:48+08:00">
+		<meta property="article:modified_time" content="2019-03-16T11:22:48+08:00">
+		<meta property="article:tag" content="Python">
+		<meta property="article:tag" content="Jupyter">
+		<meta property="article:tag" content="Bash">
 
-
-
-<meta itemprop="keywords" content="python,jupyter,bash," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Jupyter notebook with Bash kernel"/>
-<meta name="twitter:description" content="Adding Bash to Tensorflow notebook I commented out PHP and C&#43;&#43; stuff that I do not really need:
-FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;&amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;&amp; \ # tar -xvf zeromq-4.1.5.tar.gz &amp;&amp; \ # cd zeromq-* &amp;&amp; \ # ."/>
+	<meta itemprop="name" content="Jupyter notebook with Bash kernel">
+	<meta itemprop="description" content="Adding Bash to Tensorflow notebook I commented out PHP and C&#43;&#43; stuff that I do not really need:
+FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;&amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;&amp; \ # tar -xvf zeromq-4.1.5.tar.gz &amp;&amp; \ # cd zeromq-* &amp;&amp; \ # ./configure &amp;&amp; make &amp;&amp; make install &amp;&amp; \ # printf &#34;\n&#34; | pecl install zmq-beta &amp;&amp; \ # echo &#34;extension=zmq.so&#34; &gt; /etc/php/7.0/cli/conf.d/zmq.ini # install PHP composer #RUN wget https://getcomposer.org/installer -O composer-setup.php &amp;&amp; \ # wget https://litipk.github.io/Jupyter-PHP-Installer/dist/jupyter-php-installer.phar &amp;&amp; \ # php composer-setup.php &amp;&amp; \ # php ./jupyter-php-installer.phar -vvv install &amp;&amp; \ # mv composer.phar /usr/local/bin/composer &amp;&amp; \ # rm -rf zeromq-* jupyter-php* &amp;&amp; \ # rm composer-setup.php # install ijavascript #RUN apt-get install -yq nodejs npm libzmq3-dev node-gyp &amp;&amp; \ # npm install -g ijavascript &amp;&amp; \ # ijs --ijs-install=global #RUN cd .. &amp;&amp; \ # apt-get install -yq --no-install-recommends cmake &amp;&amp; \ # wget https://raw.githubusercontent.com/root-mirror/cling/master/tools/packaging/cpt.py &amp;&amp; \ # chmod &#43;x cpt.py &amp;&amp; \ # ./cpt.py --check-requirements &amp;&amp; ./cpt.py --create-dev-env Debug --with-workdir=./cling/ #RUN cd .. &amp;&amp; \ # wget https://root.cern.ch/download/cling/cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \ # tar -xvjf cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \ # rm cling_*.tar.bz2 &amp;&amp; \ # mv cling_* cling #RUN cd .. &amp;&amp; \ # ln -s $(pwd)/cling/bin/* /usr/bin/ &amp;&amp; \ # cd cling/share/cling/Jupyter/kernel &amp;&amp; \ # pip install -e . &amp;&amp; \ # jupyter-kernelspec install cling-cpp17 &amp;&amp; \ # jupyter-kernelspec install cling-cpp14 &amp;&amp; \ # jupyter-kernelspec install cling-cpp11 RUN chown -R $NB_USER /home/$NB_USER &amp;&amp; \ rm -rf /home/$NB_USER/.local/share/jupyter # install java jre for h2o RUN apt-get install -yq openjdk-8-jre # Reset user from jupyter/base-notebook USER $NB_USER # install jupyter-bash RUN /opt/conda/bin/pip install --no-cache-dir bash_kernel RUN /opt/conda/bin/python -m bash_kernel.install # install h2o RUN /opt/conda/bin/pip install --no-cache-dir --upgrade h2o &amp;&amp; \ /opt/conda/bin/pip install --no-cache-dir --upgrade pandas # disable authentication RUN mkdir -p .jupyter RUN echo &#34;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py RUN echo &#34;c.NotebookApp.token = &#39;&#39;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py Source: https://bitbucket.org/snippets/klassify/Ee9Myk/jupyter-notebook-with-bash-kernel">
+	<meta itemprop="datePublished" content="2019-03-16T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2019-03-16T11:22:48+08:00">
+	<meta itemprop="wordCount" content="334">
+	<meta itemprop="keywords" content="Python,Jupyter,Bash">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Jupyter notebook with Bash kernel">
+	<meta name="twitter:description" content="Adding Bash to Tensorflow notebook I commented out PHP and C&#43;&#43; stuff that I do not really need:
+FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;&amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;&amp; \ # tar -xvf zeromq-4.1.5.tar.gz &amp;&amp; \ # cd zeromq-* &amp;&amp; \ # ./configure &amp;&amp; make &amp;&amp; make install &amp;&amp; \ # printf &#34;\n&#34; | pecl install zmq-beta &amp;&amp; \ # echo &#34;extension=zmq.so&#34; &gt; /etc/php/7.0/cli/conf.d/zmq.ini # install PHP composer #RUN wget https://getcomposer.org/installer -O composer-setup.php &amp;&amp; \ # wget https://litipk.github.io/Jupyter-PHP-Installer/dist/jupyter-php-installer.phar &amp;&amp; \ # php composer-setup.php &amp;&amp; \ # php ./jupyter-php-installer.phar -vvv install &amp;&amp; \ # mv composer.phar /usr/local/bin/composer &amp;&amp; \ # rm -rf zeromq-* jupyter-php* &amp;&amp; \ # rm composer-setup.php # install ijavascript #RUN apt-get install -yq nodejs npm libzmq3-dev node-gyp &amp;&amp; \ # npm install -g ijavascript &amp;&amp; \ # ijs --ijs-install=global #RUN cd .. &amp;&amp; \ # apt-get install -yq --no-install-recommends cmake &amp;&amp; \ # wget https://raw.githubusercontent.com/root-mirror/cling/master/tools/packaging/cpt.py &amp;&amp; \ # chmod &#43;x cpt.py &amp;&amp; \ # ./cpt.py --check-requirements &amp;&amp; ./cpt.py --create-dev-env Debug --with-workdir=./cling/ #RUN cd .. &amp;&amp; \ # wget https://root.cern.ch/download/cling/cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \ # tar -xvjf cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \ # rm cling_*.tar.bz2 &amp;&amp; \ # mv cling_* cling #RUN cd .. &amp;&amp; \ # ln -s $(pwd)/cling/bin/* /usr/bin/ &amp;&amp; \ # cd cling/share/cling/Jupyter/kernel &amp;&amp; \ # pip install -e . &amp;&amp; \ # jupyter-kernelspec install cling-cpp17 &amp;&amp; \ # jupyter-kernelspec install cling-cpp14 &amp;&amp; \ # jupyter-kernelspec install cling-cpp11 RUN chown -R $NB_USER /home/$NB_USER &amp;&amp; \ rm -rf /home/$NB_USER/.local/share/jupyter # install java jre for h2o RUN apt-get install -yq openjdk-8-jre # Reset user from jupyter/base-notebook USER $NB_USER # install jupyter-bash RUN /opt/conda/bin/pip install --no-cache-dir bash_kernel RUN /opt/conda/bin/python -m bash_kernel.install # install h2o RUN /opt/conda/bin/pip install --no-cache-dir --upgrade h2o &amp;&amp; \ /opt/conda/bin/pip install --no-cache-dir --upgrade pandas # disable authentication RUN mkdir -p .jupyter RUN echo &#34;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py RUN echo &#34;c.NotebookApp.token = &#39;&#39;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py Source: https://bitbucket.org/snippets/klassify/Ee9Myk/jupyter-notebook-with-bash-kernel">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -96,12 +102,21 @@ FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get up
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -118,6 +133,7 @@ FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get up
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -152,80 +168,80 @@ FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get up
     <div class="post-content">
       <h2 id="adding-bash-to-tensorflow-notebook">Adding Bash to Tensorflow notebook</h2>
 <p>I commented out PHP and C++ stuff that I do not really need:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">FROM jupyter/tensorflow-notebook
-
-USER root
-# install dependencies 
-RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \
-    php-cli php-dev php-pear \
-    pkg-config \
-    &amp;&amp; apt-get clean
-#    rm -rf /var/lib/apt/lists/*
-
-# install zeromq and zmq php extension 
-#RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;&amp; \
-#    tar -xvf zeromq-4.1.5.tar.gz &amp;&amp; \
-#    cd zeromq-* &amp;&amp; \
-#    ./configure &amp;&amp; make &amp;&amp; make install &amp;&amp; \
-#    printf &#34;\n&#34; | pecl install zmq-beta &amp;&amp; \
-#    echo &#34;extension=zmq.so&#34; &gt; /etc/php/7.0/cli/conf.d/zmq.ini
-
-# install PHP composer
-#RUN wget https://getcomposer.org/installer -O composer-setup.php &amp;&amp; \
-#    wget https://litipk.github.io/Jupyter-PHP-Installer/dist/jupyter-php-installer.phar &amp;&amp; \
-#    php composer-setup.php &amp;&amp; \
-#    php ./jupyter-php-installer.phar -vvv install &amp;&amp; \
-#    mv composer.phar /usr/local/bin/composer &amp;&amp; \
-#    rm -rf zeromq-* jupyter-php* &amp;&amp; \
-#    rm composer-setup.php
-
-# install ijavascript
-#RUN apt-get install -yq nodejs npm libzmq3-dev node-gyp &amp;&amp; \
-#    npm install -g ijavascript &amp;&amp; \
-#    ijs --ijs-install=global
-
-#RUN cd .. &amp;&amp; \
-#    apt-get install -yq --no-install-recommends cmake &amp;&amp; \
-#    wget https://raw.githubusercontent.com/root-mirror/cling/master/tools/packaging/cpt.py &amp;&amp; \
-#    chmod +x cpt.py &amp;&amp; \
-#    ./cpt.py --check-requirements &amp;&amp; ./cpt.py --create-dev-env Debug --with-workdir=./cling/
-
-#RUN cd .. &amp;&amp; \
-#    wget https://root.cern.ch/download/cling/cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \
-#    tar -xvjf cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \
-#    rm cling_*.tar.bz2 &amp;&amp; \
-#    mv cling_* cling
-
-#RUN cd .. &amp;&amp; \
-#    ln -s $(pwd)/cling/bin/* /usr/bin/ &amp;&amp; \
-#    cd cling/share/cling/Jupyter/kernel &amp;&amp; \
-#    pip install -e . &amp;&amp; \
-#    jupyter-kernelspec install cling-cpp17 &amp;&amp; \
-#    jupyter-kernelspec install cling-cpp14 &amp;&amp; \
-#    jupyter-kernelspec install cling-cpp11
-
-RUN chown -R $NB_USER /home/$NB_USER &amp;&amp; \
-    rm -rf /home/$NB_USER/.local/share/jupyter
-
-# install java jre for h2o
-RUN apt-get install -yq openjdk-8-jre
-
-# Reset user from jupyter/base-notebook
-USER $NB_USER
-
-# install jupyter-bash
-RUN /opt/conda/bin/pip install --no-cache-dir bash_kernel
-RUN /opt/conda/bin/python -m bash_kernel.install
-
-# install h2o
-RUN /opt/conda/bin/pip install --no-cache-dir --upgrade h2o &amp;&amp; \
-    /opt/conda/bin/pip install --no-cache-dir --upgrade pandas
-
-# disable authentication
-RUN mkdir -p .jupyter
-RUN echo &#34;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py
-RUN echo &#34;c.NotebookApp.token = &#39;&#39;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py
-</code></pre></div><p>Source: <a href="https://bitbucket.org/snippets/klassify/Ee9Myk/jupyter-notebook-with-bash-kernel">https://bitbucket.org/snippets/klassify/Ee9Myk/jupyter-notebook-with-bash-kernel</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">FROM</span> <span class="n">jupyter</span><span class="o">/</span><span class="n">tensorflow</span><span class="o">-</span><span class="n">notebook</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">USER</span> <span class="n">root</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># install dependencies </span>
+</span></span><span class="line"><span class="cl"><span class="n">RUN</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">yq</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">install</span><span class="o">-</span><span class="n">recommends</span> \
+</span></span><span class="line"><span class="cl">    <span class="n">php</span><span class="o">-</span><span class="n">cli</span> <span class="n">php</span><span class="o">-</span><span class="n">dev</span> <span class="n">php</span><span class="o">-</span><span class="n">pear</span> \
+</span></span><span class="line"><span class="cl">    <span class="n">pkg</span><span class="o">-</span><span class="n">config</span> \
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;&amp;</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">clean</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    rm -rf /var/lib/apt/lists/*</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># install zeromq and zmq php extension </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    tar -xvf zeromq-4.1.5.tar.gz &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    cd zeromq-* &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    ./configure &amp;&amp; make &amp;&amp; make install &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    printf &#34;\n&#34; | pecl install zmq-beta &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    echo &#34;extension=zmq.so&#34; &gt; /etc/php/7.0/cli/conf.d/zmq.ini</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># install PHP composer</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#RUN wget https://getcomposer.org/installer -O composer-setup.php &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    wget https://litipk.github.io/Jupyter-PHP-Installer/dist/jupyter-php-installer.phar &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    php composer-setup.php &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    php ./jupyter-php-installer.phar -vvv install &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    mv composer.phar /usr/local/bin/composer &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    rm -rf zeromq-* jupyter-php* &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    rm composer-setup.php</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># install ijavascript</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#RUN apt-get install -yq nodejs npm libzmq3-dev node-gyp &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    npm install -g ijavascript &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    ijs --ijs-install=global</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#RUN cd .. &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    apt-get install -yq --no-install-recommends cmake &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    wget https://raw.githubusercontent.com/root-mirror/cling/master/tools/packaging/cpt.py &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    chmod +x cpt.py &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    ./cpt.py --check-requirements &amp;&amp; ./cpt.py --create-dev-env Debug --with-workdir=./cling/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#RUN cd .. &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    wget https://root.cern.ch/download/cling/cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    tar -xvjf cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    rm cling_*.tar.bz2 &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    mv cling_* cling</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#RUN cd .. &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    ln -s $(pwd)/cling/bin/* /usr/bin/ &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    cd cling/share/cling/Jupyter/kernel &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    pip install -e . &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    jupyter-kernelspec install cling-cpp17 &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    jupyter-kernelspec install cling-cpp14 &amp;&amp; \</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#    jupyter-kernelspec install cling-cpp11</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">RUN</span> <span class="n">chown</span> <span class="o">-</span><span class="n">R</span> <span class="o">$</span><span class="n">NB_USER</span> <span class="o">/</span><span class="n">home</span><span class="o">/$</span><span class="n">NB_USER</span> <span class="o">&amp;&amp;</span> \
+</span></span><span class="line"><span class="cl">    <span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">/</span><span class="n">home</span><span class="o">/$</span><span class="n">NB_USER</span><span class="o">/.</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">jupyter</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># install java jre for h2o</span>
+</span></span><span class="line"><span class="cl"><span class="n">RUN</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">yq</span> <span class="n">openjdk</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="n">jre</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Reset user from jupyter/base-notebook</span>
+</span></span><span class="line"><span class="cl"><span class="n">USER</span> <span class="o">$</span><span class="n">NB_USER</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># install jupyter-bash</span>
+</span></span><span class="line"><span class="cl"><span class="n">RUN</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">conda</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">dir</span> <span class="n">bash_kernel</span>
+</span></span><span class="line"><span class="cl"><span class="n">RUN</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">conda</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">bash_kernel</span><span class="o">.</span><span class="n">install</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># install h2o</span>
+</span></span><span class="line"><span class="cl"><span class="n">RUN</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">conda</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">dir</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">h2o</span> <span class="o">&amp;&amp;</span> \
+</span></span><span class="line"><span class="cl">    <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">conda</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">dir</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pandas</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># disable authentication</span>
+</span></span><span class="line"><span class="cl"><span class="n">RUN</span> <span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">.</span><span class="n">jupyter</span>
+</span></span><span class="line"><span class="cl"><span class="n">RUN</span> <span class="n">echo</span> <span class="s2">&#34;&#34;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">jupyter</span><span class="o">/</span><span class="n">jupyter_notebook_config</span><span class="o">.</span><span class="n">py</span>
+</span></span><span class="line"><span class="cl"><span class="n">RUN</span> <span class="n">echo</span> <span class="s2">&#34;c.NotebookApp.token = &#39;&#39;&#34;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">jupyter</span><span class="o">/</span><span class="n">jupyter_notebook_config</span><span class="o">.</span><span class="n">py</span>
+</span></span></code></pre></div><p>Source: <a href="https://bitbucket.org/snippets/klassify/Ee9Myk/jupyter-notebook-with-bash-kernel">https://bitbucket.org/snippets/klassify/Ee9Myk/jupyter-notebook-with-bash-kernel</a></p>
 
     </div>
 
@@ -288,7 +304,7 @@ RUN echo &#34;c.NotebookApp.token = &#39;&#39;&#34; &gt;&gt; ~/.jupyter/jupyter_
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -306,13 +322,10 @@ RUN echo &#34;c.NotebookApp.token = &#39;&#39;&#34; &gt;&gt; ~/.jupyter/jupyter_
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -323,7 +336,10 @@ RUN echo &#34;c.NotebookApp.token = &#39;&#39;&#34; &gt;&gt; ~/.jupyter/jupyter_
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

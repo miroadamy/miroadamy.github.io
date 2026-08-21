@@ -20,14 +20,15 @@
 In DevOps I am following many Git repos and need to keep up to date for all local branches.
 git ffwd-update command Source: http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches
 Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
-#!/bin/bash  main() { REMOTES=&amp;#34;$@&amp;#34;; if [ -z &amp;#34;$REMOTES&amp;#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &amp;#34;$REMOTES&amp;#34; | xargs -n1 echo) CLB=$(git branch -l|awk &amp;#39;/^\*/{print $2}&amp;#39;); echo &amp;#34;$REMOTES&amp;#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \  | awk &amp;#39;/merges with remote/{print $5&amp;#34; &amp;#34;$1}&amp;#39; \  | while read line; do RB=$(echo &amp;#34;$line&amp;#34;|cut -f1 -d&amp;#34; &amp;#34;); ARB=&amp;#34;refs/remotes/$REMOTE/$RB&amp;#34;; LB=$(echo &amp;#34;$line&amp;#34;|cut -f2 -d&amp;#34; &amp;#34;); ALB=&amp;#34;refs/heads/$LB&amp;#34;; NBEHIND=$(( $(git rev-list --count $ALB." /><meta name="keywords" content="blog, Miro" />
+#!/bin/bash main() { REMOTES=&#34;$@&#34;; if [ -z &#34;$REMOTES&#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &#34;$REMOTES&#34; | xargs -n1 echo) CLB=$(git branch -l|awk &#39;/^\*/{print $2}&#39;); echo &#34;$REMOTES&#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \ | awk &#39;/merges with remote/{print $5&#34; &#34;$1}&#39; \ | while read line; do RB=$(echo &#34;$line&#34;|cut -f1 -d&#34; &#34;); ARB=&#34;refs/remotes/$REMOTE/$RB&#34;; LB=$(echo &#34;$line&#34;|cut -f2 -d&#34; &#34;); ALB=&#34;refs/heads/$LB&#34;; NBEHIND=$(( $(git rev-list --count $ALB..$ARB 2&gt;/dev/null) &#43;0)); NAHEAD=$(( $(git rev-list --count $ARB..$ALB 2&gt;/dev/null) &#43;0)); if [ &#34;$NBEHIND&#34; -gt 0 ]; then if [ &#34;$NAHEAD&#34; -gt 0 ]; then echo &#34; branch $LB is $NBEHIND commit(s) behind and $NAHEAD commit(s) ahead of $REMOTE/$RB. could not be fast-forwarded&#34;; elif [ &#34;$LB&#34; = &#34;$CLB&#34; ]; then echo &#34; branch $LB was $NBEHIND commit(s) behind of $REMOTE/$RB. fast-forward merge&#34;; git merge -q $ARB; else echo &#34; branch $LB was $NBEHIND commit(s) behind of $REMOTE/$RB. reseting local branch to remote&#34;; git branch -l -f $LB -t $ARB &gt;/dev/null; fi fi done done } main $@ Make sure the file is executable: chmod &#43;x ~/bin/git-ffwd-update
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2016-09-05-git-update-all-local-branches/" />
@@ -38,40 +39,43 @@ Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Update all local branches in Git repo" />
-<meta property="og:description" content="Update all local branches in Git repo Issue: The git pull updates just one current branch.
+<meta property="og:url" content="https://miroadamy.com/posts/2016-09-05-git-update-all-local-branches/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Update all local branches in Git repo">
+	<meta property="og:description" content="Update all local branches in Git repo Issue: The git pull updates just one current branch.
 In DevOps I am following many Git repos and need to keep up to date for all local branches.
 git ffwd-update command Source: http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches
 Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
-#!/bin/bash  main() { REMOTES=&#34;$@&#34;; if [ -z &#34;$REMOTES&#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &#34;$REMOTES&#34; | xargs -n1 echo) CLB=$(git branch -l|awk &#39;/^\*/{print $2}&#39;); echo &#34;$REMOTES&#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \  | awk &#39;/merges with remote/{print $5&#34; &#34;$1}&#39; \  | while read line; do RB=$(echo &#34;$line&#34;|cut -f1 -d&#34; &#34;); ARB=&#34;refs/remotes/$REMOTE/$RB&#34;; LB=$(echo &#34;$line&#34;|cut -f2 -d&#34; &#34;); ALB=&#34;refs/heads/$LB&#34;; NBEHIND=$(( $(git rev-list --count $ALB." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2016-09-05-git-update-all-local-branches/" />
-<meta property="article:published_time" content="2016-09-05T11:22:48+08:00" />
-<meta property="article:modified_time" content="2016-09-05T11:22:48+08:00" />
-<meta itemprop="name" content="Update all local branches in Git repo">
-<meta itemprop="description" content="Update all local branches in Git repo Issue: The git pull updates just one current branch.
+#!/bin/bash main() { REMOTES=&#34;$@&#34;; if [ -z &#34;$REMOTES&#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &#34;$REMOTES&#34; | xargs -n1 echo) CLB=$(git branch -l|awk &#39;/^\*/{print $2}&#39;); echo &#34;$REMOTES&#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \ | awk &#39;/merges with remote/{print $5&#34; &#34;$1}&#39; \ | while read line; do RB=$(echo &#34;$line&#34;|cut -f1 -d&#34; &#34;); ARB=&#34;refs/remotes/$REMOTE/$RB&#34;; LB=$(echo &#34;$line&#34;|cut -f2 -d&#34; &#34;); ALB=&#34;refs/heads/$LB&#34;; NBEHIND=$(( $(git rev-list --count $ALB..$ARB 2&gt;/dev/null) &#43;0)); NAHEAD=$(( $(git rev-list --count $ARB..$ALB 2&gt;/dev/null) &#43;0)); if [ &#34;$NBEHIND&#34; -gt 0 ]; then if [ &#34;$NAHEAD&#34; -gt 0 ]; then echo &#34; branch $LB is $NBEHIND commit(s) behind and $NAHEAD commit(s) ahead of $REMOTE/$RB. could not be fast-forwarded&#34;; elif [ &#34;$LB&#34; = &#34;$CLB&#34; ]; then echo &#34; branch $LB was $NBEHIND commit(s) behind of $REMOTE/$RB. fast-forward merge&#34;; git merge -q $ARB; else echo &#34; branch $LB was $NBEHIND commit(s) behind of $REMOTE/$RB. reseting local branch to remote&#34;; git branch -l -f $LB -t $ARB &gt;/dev/null; fi fi done done } main $@ Make sure the file is executable: chmod &#43;x ~/bin/git-ffwd-update">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2016-09-05T11:22:48+08:00">
+		<meta property="article:modified_time" content="2016-09-05T11:22:48+08:00">
+		<meta property="article:tag" content="Git">
+
+	<meta itemprop="name" content="Update all local branches in Git repo">
+	<meta itemprop="description" content="Update all local branches in Git repo Issue: The git pull updates just one current branch.
 In DevOps I am following many Git repos and need to keep up to date for all local branches.
 git ffwd-update command Source: http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches
 Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
-#!/bin/bash  main() { REMOTES=&#34;$@&#34;; if [ -z &#34;$REMOTES&#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &#34;$REMOTES&#34; | xargs -n1 echo) CLB=$(git branch -l|awk &#39;/^\*/{print $2}&#39;); echo &#34;$REMOTES&#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \  | awk &#39;/merges with remote/{print $5&#34; &#34;$1}&#39; \  | while read line; do RB=$(echo &#34;$line&#34;|cut -f1 -d&#34; &#34;); ARB=&#34;refs/remotes/$REMOTE/$RB&#34;; LB=$(echo &#34;$line&#34;|cut -f2 -d&#34; &#34;); ALB=&#34;refs/heads/$LB&#34;; NBEHIND=$(( $(git rev-list --count $ALB.">
-<meta itemprop="datePublished" content="2016-09-05T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2016-09-05T11:22:48+08:00" />
-<meta itemprop="wordCount" content="682">
-
-
-
-<meta itemprop="keywords" content="git," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Update all local branches in Git repo"/>
-<meta name="twitter:description" content="Update all local branches in Git repo Issue: The git pull updates just one current branch.
+#!/bin/bash main() { REMOTES=&#34;$@&#34;; if [ -z &#34;$REMOTES&#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &#34;$REMOTES&#34; | xargs -n1 echo) CLB=$(git branch -l|awk &#39;/^\*/{print $2}&#39;); echo &#34;$REMOTES&#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \ | awk &#39;/merges with remote/{print $5&#34; &#34;$1}&#39; \ | while read line; do RB=$(echo &#34;$line&#34;|cut -f1 -d&#34; &#34;); ARB=&#34;refs/remotes/$REMOTE/$RB&#34;; LB=$(echo &#34;$line&#34;|cut -f2 -d&#34; &#34;); ALB=&#34;refs/heads/$LB&#34;; NBEHIND=$(( $(git rev-list --count $ALB..$ARB 2&gt;/dev/null) &#43;0)); NAHEAD=$(( $(git rev-list --count $ARB..$ALB 2&gt;/dev/null) &#43;0)); if [ &#34;$NBEHIND&#34; -gt 0 ]; then if [ &#34;$NAHEAD&#34; -gt 0 ]; then echo &#34; branch $LB is $NBEHIND commit(s) behind and $NAHEAD commit(s) ahead of $REMOTE/$RB. could not be fast-forwarded&#34;; elif [ &#34;$LB&#34; = &#34;$CLB&#34; ]; then echo &#34; branch $LB was $NBEHIND commit(s) behind of $REMOTE/$RB. fast-forward merge&#34;; git merge -q $ARB; else echo &#34; branch $LB was $NBEHIND commit(s) behind of $REMOTE/$RB. reseting local branch to remote&#34;; git branch -l -f $LB -t $ARB &gt;/dev/null; fi fi done done } main $@ Make sure the file is executable: chmod &#43;x ~/bin/git-ffwd-update">
+	<meta itemprop="datePublished" content="2016-09-05T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2016-09-05T11:22:48+08:00">
+	<meta itemprop="wordCount" content="689">
+	<meta itemprop="keywords" content="Git">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Update all local branches in Git repo">
+	<meta name="twitter:description" content="Update all local branches in Git repo Issue: The git pull updates just one current branch.
 In DevOps I am following many Git repos and need to keep up to date for all local branches.
 git ffwd-update command Source: http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches
 Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
-#!/bin/bash  main() { REMOTES=&#34;$@&#34;; if [ -z &#34;$REMOTES&#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &#34;$REMOTES&#34; | xargs -n1 echo) CLB=$(git branch -l|awk &#39;/^\*/{print $2}&#39;); echo &#34;$REMOTES&#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \  | awk &#39;/merges with remote/{print $5&#34; &#34;$1}&#39; \  | while read line; do RB=$(echo &#34;$line&#34;|cut -f1 -d&#34; &#34;); ARB=&#34;refs/remotes/$REMOTE/$RB&#34;; LB=$(echo &#34;$line&#34;|cut -f2 -d&#34; &#34;); ALB=&#34;refs/heads/$LB&#34;; NBEHIND=$(( $(git rev-list --count $ALB."/>
+#!/bin/bash main() { REMOTES=&#34;$@&#34;; if [ -z &#34;$REMOTES&#34; ]; then REMOTES=$(git remote); fi REMOTES=$(echo &#34;$REMOTES&#34; | xargs -n1 echo) CLB=$(git branch -l|awk &#39;/^\*/{print $2}&#39;); echo &#34;$REMOTES&#34; | while read REMOTE; do git remote update $REMOTE git remote show $REMOTE -n \ | awk &#39;/merges with remote/{print $5&#34; &#34;$1}&#39; \ | while read line; do RB=$(echo &#34;$line&#34;|cut -f1 -d&#34; &#34;); ARB=&#34;refs/remotes/$REMOTE/$RB&#34;; LB=$(echo &#34;$line&#34;|cut -f2 -d&#34; &#34;); ALB=&#34;refs/heads/$LB&#34;; NBEHIND=$(( $(git rev-list --count $ALB..$ARB 2&gt;/dev/null) &#43;0)); NAHEAD=$(( $(git rev-list --count $ARB..$ALB 2&gt;/dev/null) &#43;0)); if [ &#34;$NBEHIND&#34; -gt 0 ]; then if [ &#34;$NAHEAD&#34; -gt 0 ]; then echo &#34; branch $LB is $NBEHIND commit(s) behind and $NAHEAD commit(s) ahead of $REMOTE/$RB. could not be fast-forwarded&#34;; elif [ &#34;$LB&#34; = &#34;$CLB&#34; ]; then echo &#34; branch $LB was $NBEHIND commit(s) behind of $REMOTE/$RB. fast-forward merge&#34;; git merge -q $ARB; else echo &#34; branch $LB was $NBEHIND commit(s) behind of $REMOTE/$RB. reseting local branch to remote&#34;; git branch -l -f $LB -t $ARB &gt;/dev/null; fi fi done done } main $@ Make sure the file is executable: chmod &#43;x ~/bin/git-ffwd-update">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -108,12 +112,21 @@ Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -130,6 +143,7 @@ Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -145,7 +159,7 @@ Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 682 words </span>
+          <span class="more-meta"> 689 words </span>
           <span class="more-meta"> 4 mins read </span>
         
       </div>
@@ -170,110 +184,110 @@ Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
 <h2 id="git-ffwd-update-command">git ffwd-update command</h2>
 <p>Source: <a href="http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches">http://stackoverflow.com/questions/4318161/can-git-pull-all-update-all-my-local-branches</a></p>
 <p>Create file named git-ffwd-update somewhere on the path (in my case <code>~/bin</code>)</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/bash
-</span><span class="cp"></span> 
-main<span class="o">()</span> <span class="o">{</span>
-  <span class="nv">REMOTES</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span><span class="p">;</span>
-  <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$REMOTES</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    <span class="nv">REMOTES</span><span class="o">=</span><span class="k">$(</span>git remote<span class="k">)</span><span class="p">;</span>
-  <span class="k">fi</span>
-  <span class="nv">REMOTES</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$REMOTES</span><span class="s2">&#34;</span> <span class="p">|</span> xargs -n1 <span class="nb">echo</span><span class="k">)</span>
-  <span class="nv">CLB</span><span class="o">=</span><span class="k">$(</span>git branch -l<span class="p">|</span>awk <span class="s1">&#39;/^\*/{print $2}&#39;</span><span class="k">)</span><span class="p">;</span>
-  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$REMOTES</span><span class="s2">&#34;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> REMOTE<span class="p">;</span> <span class="k">do</span>
-    git remote update <span class="nv">$REMOTE</span>
-    git remote show <span class="nv">$REMOTE</span> -n <span class="se">\
-</span><span class="se"></span>    <span class="p">|</span> awk <span class="s1">&#39;/merges with remote/{print $5&#34; &#34;$1}&#39;</span> <span class="se">\
-</span><span class="se"></span>    <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> line<span class="p">;</span> <span class="k">do</span>
-      <span class="nv">RB</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$line</span><span class="s2">&#34;</span><span class="p">|</span>cut -f1 -d<span class="s2">&#34; &#34;</span><span class="k">)</span><span class="p">;</span>
-      <span class="nv">ARB</span><span class="o">=</span><span class="s2">&#34;refs/remotes/</span><span class="nv">$REMOTE</span><span class="s2">/</span><span class="nv">$RB</span><span class="s2">&#34;</span><span class="p">;</span>
-      <span class="nv">LB</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$line</span><span class="s2">&#34;</span><span class="p">|</span>cut -f2 -d<span class="s2">&#34; &#34;</span><span class="k">)</span><span class="p">;</span>
-      <span class="nv">ALB</span><span class="o">=</span><span class="s2">&#34;refs/heads/</span><span class="nv">$LB</span><span class="s2">&#34;</span><span class="p">;</span>
-      <span class="nv">NBEHIND</span><span class="o">=</span><span class="k">$((</span> <span class="k">$(</span>git rev-list --count <span class="nv">$ALB</span>..<span class="nv">$ARB</span> 2&gt;/dev/null<span class="k">)</span> <span class="o">+</span><span class="m">0</span><span class="k">))</span><span class="p">;</span>
-      <span class="nv">NAHEAD</span><span class="o">=</span><span class="k">$((</span> <span class="k">$(</span>git rev-list --count <span class="nv">$ARB</span>..<span class="nv">$ALB</span> 2&gt;/dev/null<span class="k">)</span> <span class="o">+</span><span class="m">0</span><span class="k">))</span><span class="p">;</span>
-      <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$NBEHIND</span><span class="s2">&#34;</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-        <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$NAHEAD</span><span class="s2">&#34;</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-          <span class="nb">echo</span> <span class="s2">&#34; branch </span><span class="nv">$LB</span><span class="s2"> is </span><span class="nv">$NBEHIND</span><span class="s2"> commit(s) behind and </span><span class="nv">$NAHEAD</span><span class="s2"> commit(s) ahead of </span><span class="nv">$REMOTE</span><span class="s2">/</span><span class="nv">$RB</span><span class="s2">. could not be fast-forwarded&#34;</span><span class="p">;</span>
-        <span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$LB</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="nv">$CLB</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-          <span class="nb">echo</span> <span class="s2">&#34; branch </span><span class="nv">$LB</span><span class="s2"> was </span><span class="nv">$NBEHIND</span><span class="s2"> commit(s) behind of </span><span class="nv">$REMOTE</span><span class="s2">/</span><span class="nv">$RB</span><span class="s2">. fast-forward merge&#34;</span><span class="p">;</span>
-          git merge -q <span class="nv">$ARB</span><span class="p">;</span>
-        <span class="k">else</span>
-          <span class="nb">echo</span> <span class="s2">&#34; branch </span><span class="nv">$LB</span><span class="s2"> was </span><span class="nv">$NBEHIND</span><span class="s2"> commit(s) behind of </span><span class="nv">$REMOTE</span><span class="s2">/</span><span class="nv">$RB</span><span class="s2">. reseting local branch to remote&#34;</span><span class="p">;</span>
-          git branch -l -f <span class="nv">$LB</span> -t <span class="nv">$ARB</span> &gt;/dev/null<span class="p">;</span>
-        <span class="k">fi</span>
-      <span class="k">fi</span>
-    <span class="k">done</span>
-  <span class="k">done</span>
-<span class="o">}</span>
- 
-main <span class="nv">$@</span>
-</code></pre></div><p>Make sure the file is executable: <code>chmod +x ~/bin/git-ffwd-update</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">main<span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">REMOTES</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="o">[</span> -z <span class="s2">&#34;</span><span class="nv">$REMOTES</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">REMOTES</span><span class="o">=</span><span class="k">$(</span>git remote<span class="k">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">REMOTES</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$REMOTES</span><span class="s2">&#34;</span> <span class="p">|</span> xargs -n1 <span class="nb">echo</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">CLB</span><span class="o">=</span><span class="k">$(</span>git branch -l<span class="p">|</span>awk <span class="s1">&#39;/^\*/{print $2}&#39;</span><span class="k">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$REMOTES</span><span class="s2">&#34;</span> <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> REMOTE<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    git remote update <span class="nv">$REMOTE</span>
+</span></span><span class="line"><span class="cl">    git remote show <span class="nv">$REMOTE</span> -n <span class="se">\
+</span></span></span><span class="line"><span class="cl">    <span class="p">|</span> awk <span class="s1">&#39;/merges with remote/{print $5&#34; &#34;$1}&#39;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">    <span class="p">|</span> <span class="k">while</span> <span class="nb">read</span> line<span class="p">;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">RB</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$line</span><span class="s2">&#34;</span><span class="p">|</span>cut -f1 -d<span class="s2">&#34; &#34;</span><span class="k">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">ARB</span><span class="o">=</span><span class="s2">&#34;refs/remotes/</span><span class="nv">$REMOTE</span><span class="s2">/</span><span class="nv">$RB</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">LB</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span> <span class="s2">&#34;</span><span class="nv">$line</span><span class="s2">&#34;</span><span class="p">|</span>cut -f2 -d<span class="s2">&#34; &#34;</span><span class="k">)</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">ALB</span><span class="o">=</span><span class="s2">&#34;refs/heads/</span><span class="nv">$LB</span><span class="s2">&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">NBEHIND</span><span class="o">=</span><span class="k">$((</span> <span class="k">$(</span>git rev-list --count <span class="nv">$ALB</span>..<span class="nv">$ARB</span> 2&gt;/dev/null<span class="k">)</span> <span class="o">+</span><span class="m">0</span><span class="k">))</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">NAHEAD</span><span class="o">=</span><span class="k">$((</span> <span class="k">$(</span>git rev-list --count <span class="nv">$ARB</span>..<span class="nv">$ALB</span> 2&gt;/dev/null<span class="k">)</span> <span class="o">+</span><span class="m">0</span><span class="k">))</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$NBEHIND</span><span class="s2">&#34;</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$NAHEAD</span><span class="s2">&#34;</span> -gt <span class="m">0</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">echo</span> <span class="s2">&#34; branch </span><span class="nv">$LB</span><span class="s2"> is </span><span class="nv">$NBEHIND</span><span class="s2"> commit(s) behind and </span><span class="nv">$NAHEAD</span><span class="s2"> commit(s) ahead of </span><span class="nv">$REMOTE</span><span class="s2">/</span><span class="nv">$RB</span><span class="s2">. could not be fast-forwarded&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">elif</span> <span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$LB</span><span class="s2">&#34;</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="nv">$CLB</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">echo</span> <span class="s2">&#34; branch </span><span class="nv">$LB</span><span class="s2"> was </span><span class="nv">$NBEHIND</span><span class="s2"> commit(s) behind of </span><span class="nv">$REMOTE</span><span class="s2">/</span><span class="nv">$RB</span><span class="s2">. fast-forward merge&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          git merge -q <span class="nv">$ARB</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">else</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">echo</span> <span class="s2">&#34; branch </span><span class="nv">$LB</span><span class="s2"> was </span><span class="nv">$NBEHIND</span><span class="s2"> commit(s) behind of </span><span class="nv">$REMOTE</span><span class="s2">/</span><span class="nv">$RB</span><span class="s2">. reseting local branch to remote&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">          git branch -l -f <span class="nv">$LB</span> -t <span class="nv">$ARB</span> &gt;/dev/null<span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">      <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">    <span class="k">done</span>
+</span></span><span class="line"><span class="cl">  <span class="k">done</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">main <span class="nv">$@</span>
+</span></span></code></pre></div><p>Make sure the file is executable: <code>chmod +x ~/bin/git-ffwd-update</code></p>
 <h2 id="test-it-out">Test it out:</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜ git:(develop) ✗ git ffwd-update
-Fetching origin
-remote: Counting objects: 2786, done.
-remote: Compressing objects: 100% (1385/1385), done.
-remote: Total 2786 (delta 1447), reused 2023 (delta 888)
-Receiving objects: 100% (2786/2786), 410.54 KiB | 0 bytes/s, done.
-Resolving deltas: 100% (1447/1447), completed with 141 local objects.
-From bitbucket.org:thinkwrap/XXXXXXX
-   b060dd8..b72c54a  develop    -&gt; origin/develop
- * [new branch]      feature/FDPCare-5 -&gt; origin/feature/FDPCare-5
-   f3f524c..3b7294e  feature/STRIPES-1036 -&gt; origin/feature/STRIPES-1036
- * [new branch]      feature/STRIPES-1079 -&gt; origin/feature/STRIPES-1079
- * [new branch]      feature/STRIPES-1098-createPriceRowProductIdError -&gt; origin/feature/STRIPES-1098-createPriceRowProductIdError
- * [new branch]      feature/STRIPES-1104_sitemap_menu_items -&gt; origin/feature/STRIPES-1104_sitemap_menu_items
- * [new branch]      feature/STRIPES-1105_sitemap_pos -&gt; origin/feature/STRIPES-1105_sitemap_pos
- * [new branch]      feature/STRIPES-1106 -&gt; origin/feature/STRIPES-1106
- * [new branch]      feature/STRIPES-1107 -&gt; origin/feature/STRIPES-1107
- * [new branch]      feature/STRIPES-1108 -&gt; origin/feature/STRIPES-1108
- * [new branch]      feature/STRIPES-1109 -&gt; origin/feature/STRIPES-1109
- * [new branch]      feature/STRIPES-1112 -&gt; origin/feature/STRIPES-1112
- * [new branch]      feature/STRIPES-1113 -&gt; origin/feature/STRIPES-1113
- * [new branch]      feature/STRIPES-1114 -&gt; origin/feature/STRIPES-1114
- * [new branch]      feature/STRIPES-1115 -&gt; origin/feature/STRIPES-1115
- * [new branch]      feature/STRIPES-1116 -&gt; origin/feature/STRIPES-1116
- * [new branch]      feature/STRIPES-1117 -&gt; origin/feature/STRIPES-1117
- * [new branch]      feature/STRIPES-1124_Create_diagram_create_check -&gt; origin/feature/STRIPES-1124_Create_diagram_create_check
- * [new branch]      feature/STRIPES-1135_Controller_for_GMMS -&gt; origin/feature/STRIPES-1135_Controller_for_GMMS
- * [new branch]      feature/STRIPES-1140_autodiscount -&gt; origin/feature/STRIPES-1140_autodiscount
- * [new branch]      feature/STRIPES-1142 -&gt; origin/feature/STRIPES-1142
- * [new branch]      feature/STRIPES-1143 -&gt; origin/feature/STRIPES-1143
- * [new branch]      feature/STRIPES-1145_GMMS.stripesCodeCredit_facade -&gt; origin/feature/STRIPES-1145_GMMS.stripesCodeCredit_facade
- * [new branch]      feature/STRIPES-1149 -&gt; origin/feature/STRIPES-1149
- * [new branch]      feature/STRIPES-1151 -&gt; origin/feature/STRIPES-1151
- * [new branch]      feature/STRIPES-1152 -&gt; origin/feature/STRIPES-1152
- * [new branch]      feature/STRIPES-1153 -&gt; origin/feature/STRIPES-1153
- * [new branch]      feature/STRIPES-1154 -&gt; origin/feature/STRIPES-1154
- * [new branch]      feature/STRIPES-1155 -&gt; origin/feature/STRIPES-1155
- * [new branch]      hotfix/FDPCARE-72-2016-08-22 -&gt; origin/hotfix/FDPCARE-72-2016-08-22
- * [new branch]      hotfix/STRIPES-1121-2016-08-18 -&gt; origin/hotfix/STRIPES-1121-2016-08-18
- * [new branch]      hotfix/STRIPES-1133_on_side_issue -&gt; origin/hotfix/STRIPES-1133_on_side_issue
-   0352331..c2bec59  master     -&gt; origin/master
-   b4521ce..10a1d1d  release/fdp-prod -&gt; origin/release/fdp-prod
- * [new tag]         3.0.2(HF)  -&gt; 3.0.2(HF)
- * [new tag]         release/FDP-PROD_2016-08-18 -&gt; release/FDP-PROD_2016-08-18
- * [new tag]         release/FDP-PROD_2016-08-22-hotfix -&gt; release/FDP-PROD_2016-08-22-hotfix
- * [new tag]         release/FDP-UAT_2016-08-22-hotfix -&gt; release/FDP-UAT_2016-08-22-hotfix
- * [new tag]         3.0.1(HF)  -&gt; 3.0.1(HF)
- * [new tag]         release/FDP-PROD_2016-08-17 -&gt; release/FDP-PROD_2016-08-17
- * [new tag]         release/FDP-UAT_2016-08-10 -&gt; release/FDP-UAT_2016-08-10
- * [new tag]         release/FDP-UAT_2016-08-12 -&gt; release/FDP-UAT_2016-08-12
- * [new tag]         release/FDP-UAT_2016-08-15 -&gt; release/FDP-UAT_2016-08-15
- * [new tag]         release/FDP-UAT_2016-08-16 -&gt; release/FDP-UAT_2016-08-16
- branch develop was 216 commit(s) behind of origin/develop. fast-forward merge
- branch feature/STRIPES-79-maintain-code-compliance-jan-2016 was 87 commit(s) behind of origin/feature/STRIPES-79-maintain-code-compliance-jan-2016. reseting local branch to remote
- branch master was 1336 commit(s) behind of origin/master. reseting local branch to remote
- branch release/fdp-dev was 436 commit(s) behind of origin/release/fdp-dev. reseting local branch to remote
- branch release/fdp-prod was 447 commit(s) behind of origin/release/fdp-prod. reseting local branch to remote
- branch release/fdp-uat was 68 commit(s) behind of origin/release/fdp-uat. reseting local branch to remote
- branch release/livelab was 14 commit(s) behind of origin/release/livelab. reseting local branch to remote
-</code></pre></div><h2 id="automation-for-multiple-repositories">Automation for multiple repositories</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜ git:(develop) ✗ git ffwd-update
+</span></span><span class="line"><span class="cl">Fetching origin
+</span></span><span class="line"><span class="cl">remote: Counting objects: 2786, done.
+</span></span><span class="line"><span class="cl">remote: Compressing objects: 100% (1385/1385), done.
+</span></span><span class="line"><span class="cl">remote: Total 2786 (delta 1447), reused 2023 (delta 888)
+</span></span><span class="line"><span class="cl">Receiving objects: 100% (2786/2786), 410.54 KiB | 0 bytes/s, done.
+</span></span><span class="line"><span class="cl">Resolving deltas: 100% (1447/1447), completed with 141 local objects.
+</span></span><span class="line"><span class="cl">From bitbucket.org:thinkwrap/XXXXXXX
+</span></span><span class="line"><span class="cl">   b060dd8..b72c54a  develop    -&gt; origin/develop
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/FDPCare-5 -&gt; origin/feature/FDPCare-5
+</span></span><span class="line"><span class="cl">   f3f524c..3b7294e  feature/STRIPES-1036 -&gt; origin/feature/STRIPES-1036
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1079 -&gt; origin/feature/STRIPES-1079
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1098-createPriceRowProductIdError -&gt; origin/feature/STRIPES-1098-createPriceRowProductIdError
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1104_sitemap_menu_items -&gt; origin/feature/STRIPES-1104_sitemap_menu_items
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1105_sitemap_pos -&gt; origin/feature/STRIPES-1105_sitemap_pos
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1106 -&gt; origin/feature/STRIPES-1106
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1107 -&gt; origin/feature/STRIPES-1107
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1108 -&gt; origin/feature/STRIPES-1108
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1109 -&gt; origin/feature/STRIPES-1109
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1112 -&gt; origin/feature/STRIPES-1112
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1113 -&gt; origin/feature/STRIPES-1113
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1114 -&gt; origin/feature/STRIPES-1114
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1115 -&gt; origin/feature/STRIPES-1115
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1116 -&gt; origin/feature/STRIPES-1116
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1117 -&gt; origin/feature/STRIPES-1117
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1124_Create_diagram_create_check -&gt; origin/feature/STRIPES-1124_Create_diagram_create_check
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1135_Controller_for_GMMS -&gt; origin/feature/STRIPES-1135_Controller_for_GMMS
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1140_autodiscount -&gt; origin/feature/STRIPES-1140_autodiscount
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1142 -&gt; origin/feature/STRIPES-1142
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1143 -&gt; origin/feature/STRIPES-1143
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1145_GMMS.stripesCodeCredit_facade -&gt; origin/feature/STRIPES-1145_GMMS.stripesCodeCredit_facade
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1149 -&gt; origin/feature/STRIPES-1149
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1151 -&gt; origin/feature/STRIPES-1151
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1152 -&gt; origin/feature/STRIPES-1152
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1153 -&gt; origin/feature/STRIPES-1153
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1154 -&gt; origin/feature/STRIPES-1154
+</span></span><span class="line"><span class="cl"> * [new branch]      feature/STRIPES-1155 -&gt; origin/feature/STRIPES-1155
+</span></span><span class="line"><span class="cl"> * [new branch]      hotfix/FDPCARE-72-2016-08-22 -&gt; origin/hotfix/FDPCARE-72-2016-08-22
+</span></span><span class="line"><span class="cl"> * [new branch]      hotfix/STRIPES-1121-2016-08-18 -&gt; origin/hotfix/STRIPES-1121-2016-08-18
+</span></span><span class="line"><span class="cl"> * [new branch]      hotfix/STRIPES-1133_on_side_issue -&gt; origin/hotfix/STRIPES-1133_on_side_issue
+</span></span><span class="line"><span class="cl">   0352331..c2bec59  master     -&gt; origin/master
+</span></span><span class="line"><span class="cl">   b4521ce..10a1d1d  release/fdp-prod -&gt; origin/release/fdp-prod
+</span></span><span class="line"><span class="cl"> * [new tag]         3.0.2(HF)  -&gt; 3.0.2(HF)
+</span></span><span class="line"><span class="cl"> * [new tag]         release/FDP-PROD_2016-08-18 -&gt; release/FDP-PROD_2016-08-18
+</span></span><span class="line"><span class="cl"> * [new tag]         release/FDP-PROD_2016-08-22-hotfix -&gt; release/FDP-PROD_2016-08-22-hotfix
+</span></span><span class="line"><span class="cl"> * [new tag]         release/FDP-UAT_2016-08-22-hotfix -&gt; release/FDP-UAT_2016-08-22-hotfix
+</span></span><span class="line"><span class="cl"> * [new tag]         3.0.1(HF)  -&gt; 3.0.1(HF)
+</span></span><span class="line"><span class="cl"> * [new tag]         release/FDP-PROD_2016-08-17 -&gt; release/FDP-PROD_2016-08-17
+</span></span><span class="line"><span class="cl"> * [new tag]         release/FDP-UAT_2016-08-10 -&gt; release/FDP-UAT_2016-08-10
+</span></span><span class="line"><span class="cl"> * [new tag]         release/FDP-UAT_2016-08-12 -&gt; release/FDP-UAT_2016-08-12
+</span></span><span class="line"><span class="cl"> * [new tag]         release/FDP-UAT_2016-08-15 -&gt; release/FDP-UAT_2016-08-15
+</span></span><span class="line"><span class="cl"> * [new tag]         release/FDP-UAT_2016-08-16 -&gt; release/FDP-UAT_2016-08-16
+</span></span><span class="line"><span class="cl"> branch develop was 216 commit(s) behind of origin/develop. fast-forward merge
+</span></span><span class="line"><span class="cl"> branch feature/STRIPES-79-maintain-code-compliance-jan-2016 was 87 commit(s) behind of origin/feature/STRIPES-79-maintain-code-compliance-jan-2016. reseting local branch to remote
+</span></span><span class="line"><span class="cl"> branch master was 1336 commit(s) behind of origin/master. reseting local branch to remote
+</span></span><span class="line"><span class="cl"> branch release/fdp-dev was 436 commit(s) behind of origin/release/fdp-dev. reseting local branch to remote
+</span></span><span class="line"><span class="cl"> branch release/fdp-prod was 447 commit(s) behind of origin/release/fdp-prod. reseting local branch to remote
+</span></span><span class="line"><span class="cl"> branch release/fdp-uat was 68 commit(s) behind of origin/release/fdp-uat. reseting local branch to remote
+</span></span><span class="line"><span class="cl"> branch release/livelab was 14 commit(s) behind of origin/release/livelab. reseting local branch to remote
+</span></span></code></pre></div><h2 id="automation-for-multiple-repositories">Automation for multiple repositories</h2>
 <p>Most of my repos are living under <code>~/src/CLIENTS</code>. All except XYZ are accessed using ssh and public key</p>
 <p>Create list of repos:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">REPOS=$(find . -type d -name &#39;.git&#39; | sed &#39;s!/.git!/!&#39;)
- 
-echo $REPOS | grep -v XYZ &gt;repos-list
-</code></pre></div><p>Edit the list if necessary.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">REPOS=$(find . -type d -name &#39;.git&#39; | sed &#39;s!/.git!/!&#39;)
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">echo $REPOS | grep -v XYZ &gt;repos-list
+</span></span></code></pre></div><p>Edit the list if necessary.</p>
 <p>Use it to crawl</p>
 <p><code>for i in $(cat repos-list); do cd $i; echo Processing $i; git ffwd-update; cd -; done</code></p>
 
@@ -336,7 +350,7 @@ echo $REPOS | grep -v XYZ &gt;repos-list
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -354,13 +368,10 @@ echo $REPOS | grep -v XYZ &gt;repos-list
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -371,7 +382,10 @@ echo $REPOS | grep -v XYZ &gt;repos-list
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

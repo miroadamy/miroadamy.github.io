@@ -17,17 +17,17 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="#Installation:
-See 
-curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION Marvel is management plugin - console about cluster. Install:
-./bin/plugin -i elasticsearch/marvel/latest # disable data collection for local cluster echo &amp;#39;marvel.agent.enabled: false&amp;#39; &amp;gt;&amp;gt; ./config/elasticsearch.yml Test Startup log:
-➜ elasticsearch-1.3.2 bin/elasticsearch [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] version[1.3.2], pid[59610], build[dee175d/2014-08-13T14:29:30Z] [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] initializing ... [2014-08-27 11:17:08,338][INFO ][plugins ] [Joe Fixit] loaded [marvel], sites [marvel, kopf] [2014-08-27 11:17:10,905][INFO ][marvel." /><meta name="keywords" content="blog, Miro" />
+See curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION Marvel is management plugin - console about cluster. Install:
+./bin/plugin -i elasticsearch/marvel/latest # disable data collection for local cluster echo &#39;marvel.agent.enabled: false&#39; &gt;&gt; ./config/elasticsearch.yml Test Startup log:
+➜ elasticsearch-1.3.2 bin/elasticsearch [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] version[1.3.2], pid[59610], build[dee175d/2014-08-13T14:29:30Z] [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] initializing ... [2014-08-27 11:17:08,338][INFO ][plugins ] [Joe Fixit] loaded [marvel], sites [marvel, kopf] [2014-08-27 11:17:10,905][INFO ][marvel.agent ] [Joe Fixit] collecting disabled by settings [2014-08-27 11:17:11,020][INFO ][node ] [Joe Fixit] initialized [2014-08-27 11:17:11,021][INFO ][node ] [Joe Fixit] starting ... [2014-08-27 11:17:11,131][INFO ][transport ] [Joe Fixit] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.179.121:9300]} [2014-08-27 11:17:11,148][INFO ][discovery ] [Joe Fixit] elasticsearch/nNgRXlHARHCPutTq7dZXWg [2014-08-27 11:17:14,160][INFO ][cluster.service ] [Joe Fixit] new_master [Joe Fixit][nNgRXlHARHCPutTq7dZXWg][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9300]], reason: zen-disco-join (elected_as_master) [2014-08-27 11:17:14,181][INFO ][http ] [Joe Fixit] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.179.121:9200]} [2014-08-27 11:17:14,181][INFO ][node ] [Joe Fixit] started [2014-08-27 11:17:14,726][INFO ][gateway ] [Joe Fixit] recovered [4] indices into cluster_state [2014-08-27 11:18:00,491][INFO ][cluster.service ] [Joe Fixit] added {[logstash-Miros-MacBook-Pro-2.local-59618-4086][Eh5YjUFxSIWIn4xK45xu0w][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9301]]{client=true, data=false},}, reason: zen-disco-receive(join from node[[logstash-Miros-MacBook-Pro-2.local-59618-4086][Eh5YjUFxSIWIn4xK45xu0w][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9301]]{client=true, data=false}]) Installed some pluggins - marvel, kopf ... ➜ ~ curl &#39;http://localhost:9200/?pretty&#39; { &#34;status&#34; : 200, &#34;name&#34; : &#34;Sea Urchin&#34;, &#34;version&#34; : { &#34;number&#34; : &#34;1.3.2&#34;, &#34;build_hash&#34; : &#34;dee175dbe2f254f3f26992f5d7591939aaefd12f&#34;, &#34;build_timestamp&#34; : &#34;2014-08-13T14:29:30Z&#34;, &#34;build_snapshot&#34; : false, &#34;lucene_version&#34; : &#34;4.9&#34; }, &#34;tagline&#34; : &#34;You Know, for Search&#34; } The sense console allows to avoid using curl and do it from browser: - &lt;http://localhost:9200/_plugin/marvel/sense/ &gt;
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-08-27-es1/" />
@@ -38,40 +38,42 @@ curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticse
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Elastic search and Kibana - getting started" />
-<meta property="og:description" content="#Installation:
-See 
-curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION Marvel is management plugin - console about cluster. Install:
+<meta property="og:url" content="https://miroadamy.com/posts/2014-08-27-es1/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Elastic search and Kibana - getting started">
+	<meta property="og:description" content="#Installation:
+See curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION Marvel is management plugin - console about cluster. Install:
 ./bin/plugin -i elasticsearch/marvel/latest # disable data collection for local cluster echo &#39;marvel.agent.enabled: false&#39; &gt;&gt; ./config/elasticsearch.yml Test Startup log:
-➜ elasticsearch-1.3.2 bin/elasticsearch [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] version[1.3.2], pid[59610], build[dee175d/2014-08-13T14:29:30Z] [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] initializing ... [2014-08-27 11:17:08,338][INFO ][plugins ] [Joe Fixit] loaded [marvel], sites [marvel, kopf] [2014-08-27 11:17:10,905][INFO ][marvel." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2014-08-27-es1/" />
-<meta property="article:published_time" content="2014-08-27T11:22:48+08:00" />
-<meta property="article:modified_time" content="2014-08-27T11:22:48+08:00" />
-<meta itemprop="name" content="Elastic search and Kibana - getting started">
-<meta itemprop="description" content="#Installation:
-See 
-curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION Marvel is management plugin - console about cluster. Install:
+➜ elasticsearch-1.3.2 bin/elasticsearch [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] version[1.3.2], pid[59610], build[dee175d/2014-08-13T14:29:30Z] [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] initializing ... [2014-08-27 11:17:08,338][INFO ][plugins ] [Joe Fixit] loaded [marvel], sites [marvel, kopf] [2014-08-27 11:17:10,905][INFO ][marvel.agent ] [Joe Fixit] collecting disabled by settings [2014-08-27 11:17:11,020][INFO ][node ] [Joe Fixit] initialized [2014-08-27 11:17:11,021][INFO ][node ] [Joe Fixit] starting ... [2014-08-27 11:17:11,131][INFO ][transport ] [Joe Fixit] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.179.121:9300]} [2014-08-27 11:17:11,148][INFO ][discovery ] [Joe Fixit] elasticsearch/nNgRXlHARHCPutTq7dZXWg [2014-08-27 11:17:14,160][INFO ][cluster.service ] [Joe Fixit] new_master [Joe Fixit][nNgRXlHARHCPutTq7dZXWg][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9300]], reason: zen-disco-join (elected_as_master) [2014-08-27 11:17:14,181][INFO ][http ] [Joe Fixit] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.179.121:9200]} [2014-08-27 11:17:14,181][INFO ][node ] [Joe Fixit] started [2014-08-27 11:17:14,726][INFO ][gateway ] [Joe Fixit] recovered [4] indices into cluster_state [2014-08-27 11:18:00,491][INFO ][cluster.service ] [Joe Fixit] added {[logstash-Miros-MacBook-Pro-2.local-59618-4086][Eh5YjUFxSIWIn4xK45xu0w][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9301]]{client=true, data=false},}, reason: zen-disco-receive(join from node[[logstash-Miros-MacBook-Pro-2.local-59618-4086][Eh5YjUFxSIWIn4xK45xu0w][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9301]]{client=true, data=false}]) Installed some pluggins - marvel, kopf ... ➜ ~ curl &#39;http://localhost:9200/?pretty&#39; { &#34;status&#34; : 200, &#34;name&#34; : &#34;Sea Urchin&#34;, &#34;version&#34; : { &#34;number&#34; : &#34;1.3.2&#34;, &#34;build_hash&#34; : &#34;dee175dbe2f254f3f26992f5d7591939aaefd12f&#34;, &#34;build_timestamp&#34; : &#34;2014-08-13T14:29:30Z&#34;, &#34;build_snapshot&#34; : false, &#34;lucene_version&#34; : &#34;4.9&#34; }, &#34;tagline&#34; : &#34;You Know, for Search&#34; } The sense console allows to avoid using curl and do it from browser: - &lt;http://localhost:9200/_plugin/marvel/sense/ &gt;">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2014-08-27T11:22:48+08:00">
+		<meta property="article:modified_time" content="2014-08-27T11:22:48+08:00">
+		<meta property="article:tag" content="Elasticsearch">
+		<meta property="article:tag" content="Elk">
+		<meta property="article:tag" content="Search">
+
+	<meta itemprop="name" content="Elastic search and Kibana - getting started">
+	<meta itemprop="description" content="#Installation:
+See curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION Marvel is management plugin - console about cluster. Install:
 ./bin/plugin -i elasticsearch/marvel/latest # disable data collection for local cluster echo &#39;marvel.agent.enabled: false&#39; &gt;&gt; ./config/elasticsearch.yml Test Startup log:
-➜ elasticsearch-1.3.2 bin/elasticsearch [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] version[1.3.2], pid[59610], build[dee175d/2014-08-13T14:29:30Z] [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] initializing ... [2014-08-27 11:17:08,338][INFO ][plugins ] [Joe Fixit] loaded [marvel], sites [marvel, kopf] [2014-08-27 11:17:10,905][INFO ][marvel.">
-<meta itemprop="datePublished" content="2014-08-27T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2014-08-27T11:22:48+08:00" />
-<meta itemprop="wordCount" content="598">
-
-
-
-<meta itemprop="keywords" content="elasticsearch,elk,search," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Elastic search and Kibana - getting started"/>
-<meta name="twitter:description" content="#Installation:
-See 
-curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION Marvel is management plugin - console about cluster. Install:
+➜ elasticsearch-1.3.2 bin/elasticsearch [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] version[1.3.2], pid[59610], build[dee175d/2014-08-13T14:29:30Z] [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] initializing ... [2014-08-27 11:17:08,338][INFO ][plugins ] [Joe Fixit] loaded [marvel], sites [marvel, kopf] [2014-08-27 11:17:10,905][INFO ][marvel.agent ] [Joe Fixit] collecting disabled by settings [2014-08-27 11:17:11,020][INFO ][node ] [Joe Fixit] initialized [2014-08-27 11:17:11,021][INFO ][node ] [Joe Fixit] starting ... [2014-08-27 11:17:11,131][INFO ][transport ] [Joe Fixit] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.179.121:9300]} [2014-08-27 11:17:11,148][INFO ][discovery ] [Joe Fixit] elasticsearch/nNgRXlHARHCPutTq7dZXWg [2014-08-27 11:17:14,160][INFO ][cluster.service ] [Joe Fixit] new_master [Joe Fixit][nNgRXlHARHCPutTq7dZXWg][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9300]], reason: zen-disco-join (elected_as_master) [2014-08-27 11:17:14,181][INFO ][http ] [Joe Fixit] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.179.121:9200]} [2014-08-27 11:17:14,181][INFO ][node ] [Joe Fixit] started [2014-08-27 11:17:14,726][INFO ][gateway ] [Joe Fixit] recovered [4] indices into cluster_state [2014-08-27 11:18:00,491][INFO ][cluster.service ] [Joe Fixit] added {[logstash-Miros-MacBook-Pro-2.local-59618-4086][Eh5YjUFxSIWIn4xK45xu0w][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9301]]{client=true, data=false},}, reason: zen-disco-receive(join from node[[logstash-Miros-MacBook-Pro-2.local-59618-4086][Eh5YjUFxSIWIn4xK45xu0w][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9301]]{client=true, data=false}]) Installed some pluggins - marvel, kopf ... ➜ ~ curl &#39;http://localhost:9200/?pretty&#39; { &#34;status&#34; : 200, &#34;name&#34; : &#34;Sea Urchin&#34;, &#34;version&#34; : { &#34;number&#34; : &#34;1.3.2&#34;, &#34;build_hash&#34; : &#34;dee175dbe2f254f3f26992f5d7591939aaefd12f&#34;, &#34;build_timestamp&#34; : &#34;2014-08-13T14:29:30Z&#34;, &#34;build_snapshot&#34; : false, &#34;lucene_version&#34; : &#34;4.9&#34; }, &#34;tagline&#34; : &#34;You Know, for Search&#34; } The sense console allows to avoid using curl and do it from browser: - &lt;http://localhost:9200/_plugin/marvel/sense/ &gt;">
+	<meta itemprop="datePublished" content="2014-08-27T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2014-08-27T11:22:48+08:00">
+	<meta itemprop="wordCount" content="599">
+	<meta itemprop="keywords" content="Elasticsearch,Elk,Search">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Elastic search and Kibana - getting started">
+	<meta name="twitter:description" content="#Installation:
+See curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticsearch-$VERSION.zip cd elasticsearch-$VERSION Marvel is management plugin - console about cluster. Install:
 ./bin/plugin -i elasticsearch/marvel/latest # disable data collection for local cluster echo &#39;marvel.agent.enabled: false&#39; &gt;&gt; ./config/elasticsearch.yml Test Startup log:
-➜ elasticsearch-1.3.2 bin/elasticsearch [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] version[1.3.2], pid[59610], build[dee175d/2014-08-13T14:29:30Z] [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] initializing ... [2014-08-27 11:17:08,338][INFO ][plugins ] [Joe Fixit] loaded [marvel], sites [marvel, kopf] [2014-08-27 11:17:10,905][INFO ][marvel."/>
+➜ elasticsearch-1.3.2 bin/elasticsearch [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] version[1.3.2], pid[59610], build[dee175d/2014-08-13T14:29:30Z] [2014-08-27 11:17:08,325][INFO ][node ] [Joe Fixit] initializing ... [2014-08-27 11:17:08,338][INFO ][plugins ] [Joe Fixit] loaded [marvel], sites [marvel, kopf] [2014-08-27 11:17:10,905][INFO ][marvel.agent ] [Joe Fixit] collecting disabled by settings [2014-08-27 11:17:11,020][INFO ][node ] [Joe Fixit] initialized [2014-08-27 11:17:11,021][INFO ][node ] [Joe Fixit] starting ... [2014-08-27 11:17:11,131][INFO ][transport ] [Joe Fixit] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.179.121:9300]} [2014-08-27 11:17:11,148][INFO ][discovery ] [Joe Fixit] elasticsearch/nNgRXlHARHCPutTq7dZXWg [2014-08-27 11:17:14,160][INFO ][cluster.service ] [Joe Fixit] new_master [Joe Fixit][nNgRXlHARHCPutTq7dZXWg][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9300]], reason: zen-disco-join (elected_as_master) [2014-08-27 11:17:14,181][INFO ][http ] [Joe Fixit] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.179.121:9200]} [2014-08-27 11:17:14,181][INFO ][node ] [Joe Fixit] started [2014-08-27 11:17:14,726][INFO ][gateway ] [Joe Fixit] recovered [4] indices into cluster_state [2014-08-27 11:18:00,491][INFO ][cluster.service ] [Joe Fixit] added {[logstash-Miros-MacBook-Pro-2.local-59618-4086][Eh5YjUFxSIWIn4xK45xu0w][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9301]]{client=true, data=false},}, reason: zen-disco-receive(join from node[[logstash-Miros-MacBook-Pro-2.local-59618-4086][Eh5YjUFxSIWIn4xK45xu0w][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9301]]{client=true, data=false}]) Installed some pluggins - marvel, kopf ... ➜ ~ curl &#39;http://localhost:9200/?pretty&#39; { &#34;status&#34; : 200, &#34;name&#34; : &#34;Sea Urchin&#34;, &#34;version&#34; : { &#34;number&#34; : &#34;1.3.2&#34;, &#34;build_hash&#34; : &#34;dee175dbe2f254f3f26992f5d7591939aaefd12f&#34;, &#34;build_timestamp&#34; : &#34;2014-08-13T14:29:30Z&#34;, &#34;build_snapshot&#34; : false, &#34;lucene_version&#34; : &#34;4.9&#34; }, &#34;tagline&#34; : &#34;You Know, for Search&#34; } The sense console allows to avoid using curl and do it from browser: - &lt;http://localhost:9200/_plugin/marvel/sense/ &gt;">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -108,12 +110,21 @@ curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticse
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -130,6 +141,7 @@ curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticse
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -145,7 +157,7 @@ curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticse
         <div class="post-category">
             <a href="/categories/devops/"> devops </a>
             </div>
-          <span class="more-meta"> 598 words </span>
+          <span class="more-meta"> 599 words </span>
           <span class="more-meta"> 3 mins read </span>
         
       </div>
@@ -168,68 +180,68 @@ curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip unzip elasticse
     <div class="post-content">
       <p>#Installation:</p>
 <p>See <a href="http://www.elasticsearch.org/guide/en/elasticsearch/guide/current/_installing_elasticsearch.html"></a></p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">curl -L -O http://download.elasticsearch.org/PATH/TO/VERSION.zip
-unzip elasticsearch-$VERSION.zip
-cd  elasticsearch-$VERSION
-</code></pre></div><p>Marvel is management plugin - console about cluster. Install:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">./bin/plugin -i elasticsearch/marvel/latest
-# disable data collection for local cluster
-
-echo &#39;marvel.agent.enabled: false&#39; &gt;&gt; ./config/elasticsearch.yml
-</code></pre></div><h1 id="test">Test</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">curl</span> <span class="o">-</span><span class="n">L</span> <span class="o">-</span><span class="n">O</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">PATH</span><span class="o">/</span><span class="n">TO</span><span class="o">/</span><span class="n">VERSION</span><span class="o">.</span><span class="n">zip</span>
+</span></span><span class="line"><span class="cl"><span class="n">unzip</span> <span class="n">elasticsearch</span><span class="o">-$</span><span class="n">VERSION</span><span class="o">.</span><span class="n">zip</span>
+</span></span><span class="line"><span class="cl"><span class="n">cd</span>  <span class="n">elasticsearch</span><span class="o">-$</span><span class="n">VERSION</span>
+</span></span></code></pre></div><p>Marvel is management plugin - console about cluster. Install:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">./bin/plugin -i elasticsearch/marvel/latest
+</span></span><span class="line"><span class="cl"># disable data collection for local cluster
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">echo &#39;marvel.agent.enabled: false&#39; &gt;&gt; ./config/elasticsearch.yml
+</span></span></code></pre></div><h1 id="test">Test</h1>
 <p>Startup log:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  elasticsearch-1.3.2  bin/elasticsearch
-[2014-08-27 11:17:08,325][INFO ][node                     ] [Joe Fixit] version[1.3.2], pid[59610], build[dee175d/2014-08-13T14:29:30Z]
-[2014-08-27 11:17:08,325][INFO ][node                     ] [Joe Fixit] initializing ...
-[2014-08-27 11:17:08,338][INFO ][plugins                  ] [Joe Fixit] loaded [marvel], sites [marvel, kopf]
-[2014-08-27 11:17:10,905][INFO ][marvel.agent             ] [Joe Fixit] collecting disabled by settings
-[2014-08-27 11:17:11,020][INFO ][node                     ] [Joe Fixit] initialized
-[2014-08-27 11:17:11,021][INFO ][node                     ] [Joe Fixit] starting ...
-[2014-08-27 11:17:11,131][INFO ][transport                ] [Joe Fixit] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/192.168.179.121:9300]}
-[2014-08-27 11:17:11,148][INFO ][discovery                ] [Joe Fixit] elasticsearch/nNgRXlHARHCPutTq7dZXWg
-[2014-08-27 11:17:14,160][INFO ][cluster.service          ] [Joe Fixit] new_master [Joe Fixit][nNgRXlHARHCPutTq7dZXWg][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9300]], reason: zen-disco-join (elected_as_master)
-[2014-08-27 11:17:14,181][INFO ][http                     ] [Joe Fixit] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/192.168.179.121:9200]}
-[2014-08-27 11:17:14,181][INFO ][node                     ] [Joe Fixit] started
-[2014-08-27 11:17:14,726][INFO ][gateway                  ] [Joe Fixit] recovered [4] indices into cluster_state
-[2014-08-27 11:18:00,491][INFO ][cluster.service          ] [Joe Fixit] added {[logstash-Miros-MacBook-Pro-2.local-59618-4086][Eh5YjUFxSIWIn4xK45xu0w][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9301]]{client=true, data=false},}, reason: zen-disco-receive(join from node[[logstash-Miros-MacBook-Pro-2.local-59618-4086][Eh5YjUFxSIWIn4xK45xu0w][Miros-MacBook-Pro-2.local][inet[/192.168.179.121:9301]]{client=true, data=false}])
-Installed some pluggins - marvel, kopf ...
-
- 
-
-➜  ~  curl &#39;http://localhost:9200/?pretty&#39;
-{
-  &#34;status&#34; : 200,
-  &#34;name&#34; : &#34;Sea Urchin&#34;,
-  &#34;version&#34; : {
-    &#34;number&#34; : &#34;1.3.2&#34;,
-    &#34;build_hash&#34; : &#34;dee175dbe2f254f3f26992f5d7591939aaefd12f&#34;,
-    &#34;build_timestamp&#34; : &#34;2014-08-13T14:29:30Z&#34;,
-    &#34;build_snapshot&#34; : false,
-    &#34;lucene_version&#34; : &#34;4.9&#34;
-  },
-  &#34;tagline&#34; : &#34;You Know, for Search&#34;
-}
-</code></pre></div><p>The sense console allows to avoid using curl and do it from browser: - &lt;http://localhost:9200/_plugin/marvel/sense/ &gt;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">elasticsearch</span><span class="o">-</span><span class="mf">1.3</span><span class="o">.</span><span class="mi">2</span>  <span class="n">bin</span><span class="o">/</span><span class="n">elasticsearch</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">08</span><span class="p">,</span><span class="mi">325</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">node</span>                     <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">version</span><span class="p">[</span><span class="mf">1.3</span><span class="o">.</span><span class="mi">2</span><span class="p">],</span> <span class="n">pid</span><span class="p">[</span><span class="mi">59610</span><span class="p">],</span> <span class="n">build</span><span class="p">[</span><span class="n">dee175d</span><span class="o">/</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">13</span><span class="n">T14</span><span class="p">:</span><span class="mi">29</span><span class="p">:</span><span class="mi">30</span><span class="n">Z</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">08</span><span class="p">,</span><span class="mi">325</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">node</span>                     <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">initializing</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">08</span><span class="p">,</span><span class="mi">338</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">plugins</span>                  <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">loaded</span> <span class="p">[</span><span class="n">marvel</span><span class="p">],</span> <span class="n">sites</span> <span class="p">[</span><span class="n">marvel</span><span class="p">,</span> <span class="n">kopf</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="mi">905</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">marvel</span><span class="o">.</span><span class="n">agent</span>             <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">collecting</span> <span class="n">disabled</span> <span class="n">by</span> <span class="n">settings</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span><span class="mi">020</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">node</span>                     <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">initialized</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span><span class="mi">021</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">node</span>                     <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">starting</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span><span class="mi">131</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">transport</span>                <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">bound_address</span> <span class="p">{</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">9300</span><span class="p">]},</span> <span class="n">publish_address</span> <span class="p">{</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">179.121</span><span class="p">:</span><span class="mi">9300</span><span class="p">]}</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">11</span><span class="p">,</span><span class="mi">148</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">discovery</span>                <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">elasticsearch</span><span class="o">/</span><span class="n">nNgRXlHARHCPutTq7dZXWg</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">160</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">cluster</span><span class="o">.</span><span class="n">service</span>          <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">new_master</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">][</span><span class="n">nNgRXlHARHCPutTq7dZXWg</span><span class="p">][</span><span class="n">Miros</span><span class="o">-</span><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="o">-</span><span class="mf">2.</span><span class="n">local</span><span class="p">][</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">179.121</span><span class="p">:</span><span class="mi">9300</span><span class="p">]],</span> <span class="n">reason</span><span class="p">:</span> <span class="n">zen</span><span class="o">-</span><span class="n">disco</span><span class="o">-</span><span class="n">join</span> <span class="p">(</span><span class="n">elected_as_master</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">181</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">http</span>                     <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">bound_address</span> <span class="p">{</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">:</span><span class="mi">9200</span><span class="p">]},</span> <span class="n">publish_address</span> <span class="p">{</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">179.121</span><span class="p">:</span><span class="mi">9200</span><span class="p">]}</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">181</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">node</span>                     <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">started</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">17</span><span class="p">:</span><span class="mi">14</span><span class="p">,</span><span class="mi">726</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">gateway</span>                  <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">recovered</span> <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">indices</span> <span class="n">into</span> <span class="n">cluster_state</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="mi">2014</span><span class="o">-</span><span class="mi">08</span><span class="o">-</span><span class="mi">27</span> <span class="mi">11</span><span class="p">:</span><span class="mi">18</span><span class="p">:</span><span class="mi">00</span><span class="p">,</span><span class="mi">491</span><span class="p">][</span><span class="n">INFO</span> <span class="p">][</span><span class="n">cluster</span><span class="o">.</span><span class="n">service</span>          <span class="p">]</span> <span class="p">[</span><span class="n">Joe</span> <span class="n">Fixit</span><span class="p">]</span> <span class="n">added</span> <span class="p">{[</span><span class="n">logstash</span><span class="o">-</span><span class="n">Miros</span><span class="o">-</span><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="o">-</span><span class="mf">2.</span><span class="n">local</span><span class="o">-</span><span class="mi">59618</span><span class="o">-</span><span class="mi">4086</span><span class="p">][</span><span class="n">Eh5YjUFxSIWIn4xK45xu0w</span><span class="p">][</span><span class="n">Miros</span><span class="o">-</span><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="o">-</span><span class="mf">2.</span><span class="n">local</span><span class="p">][</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">179.121</span><span class="p">:</span><span class="mi">9301</span><span class="p">]]{</span><span class="n">client</span><span class="o">=</span><span class="bp">true</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">false</span><span class="p">},},</span> <span class="n">reason</span><span class="p">:</span> <span class="n">zen</span><span class="o">-</span><span class="n">disco</span><span class="o">-</span><span class="n">receive</span><span class="p">(</span><span class="n">join</span> <span class="n">from</span> <span class="n">node</span><span class="p">[[</span><span class="n">logstash</span><span class="o">-</span><span class="n">Miros</span><span class="o">-</span><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="o">-</span><span class="mf">2.</span><span class="n">local</span><span class="o">-</span><span class="mi">59618</span><span class="o">-</span><span class="mi">4086</span><span class="p">][</span><span class="n">Eh5YjUFxSIWIn4xK45xu0w</span><span class="p">][</span><span class="n">Miros</span><span class="o">-</span><span class="n">MacBook</span><span class="o">-</span><span class="n">Pro</span><span class="o">-</span><span class="mf">2.</span><span class="n">local</span><span class="p">][</span><span class="n">inet</span><span class="p">[</span><span class="o">/</span><span class="mf">192.168</span><span class="o">.</span><span class="mf">179.121</span><span class="p">:</span><span class="mi">9301</span><span class="p">]]{</span><span class="n">client</span><span class="o">=</span><span class="bp">true</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="bp">false</span><span class="p">}])</span>
+</span></span><span class="line"><span class="cl"><span class="n">Installed</span> <span class="n">some</span> <span class="n">pluggins</span> <span class="o">-</span> <span class="n">marvel</span><span class="p">,</span> <span class="n">kopf</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span>  <span class="n">curl</span> <span class="s1">&#39;http://localhost:9200/?pretty&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;status&#34;</span> <span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;name&#34;</span> <span class="p">:</span> <span class="s2">&#34;Sea Urchin&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;version&#34;</span> <span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;number&#34;</span> <span class="p">:</span> <span class="s2">&#34;1.3.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;build_hash&#34;</span> <span class="p">:</span> <span class="s2">&#34;dee175dbe2f254f3f26992f5d7591939aaefd12f&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;build_timestamp&#34;</span> <span class="p">:</span> <span class="s2">&#34;2014-08-13T14:29:30Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;build_snapshot&#34;</span> <span class="p">:</span> <span class="bp">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;lucene_version&#34;</span> <span class="p">:</span> <span class="s2">&#34;4.9&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;tagline&#34;</span> <span class="p">:</span> <span class="s2">&#34;You Know, for Search&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>The sense console allows to avoid using curl and do it from browser: - &lt;http://localhost:9200/_plugin/marvel/sense/ &gt;</p>
 <p><img src="/images/es-1.png" alt=""></p>
 <h2 id="cluster">Cluster</h2>
 <p>same name in cluster.name, default</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  elasticsearch-1.3.2  cat config/elasticsearch.yml | grep cluster.name
-#cluster.name: elasticsearch
-</code></pre></div><p>Node names are generated, often funny</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  elasticsearch-1.3.2  cat config/elasticsearch.yml | grep cluster.name
+</span></span><span class="line"><span class="cl">#cluster.name: elasticsearch
+</span></span></code></pre></div><p>Node names are generated, often funny</p>
 <ul>
 <li>Sea Urchin</li>
 <li>Franz Kafka</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  elasticsearch-1.3.2  grep -r &#39;initializing ...&#39; logs/
-logs//elasticsearch.log:[2014-08-28 00:00:32,437][INFO ][node                     ] [Thing] initializing ...
-logs//elasticsearch.log:[2014-08-28 00:02:01,637][INFO ][node                     ] [Stacy X] initializing ...
-logs//elasticsearch.log:[2014-08-28 00:21:50,121][INFO ][node                     ] [Ursa Major] initializing ...
-logs//elasticsearch.log:[2014-08-28 10:32:37,790][INFO ][node                     ] [Sea Urchin] initializing ...
-logs//elasticsearch.log.2014-08-21:[2014-08-21 16:39:34,140][INFO ][node                     ] [Moonstone] initializing ...
-logs//elasticsearch.log.2014-08-26:[2014-08-26 12:15:31,948][INFO ][node                     ] [Hydro-Man] initializing ...
-logs//elasticsearch.log.2014-08-27:[2014-08-27 11:17:08,325][INFO ][node                     ] [Joe Fixit] initializing ...
-logs//elasticsearch.log.2014-08-27:[2014-08-27 23:57:11,077][INFO ][node                     ] [Overkill] initializing ...
-</code></pre></div><h1 id="apis">APIs</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  elasticsearch-1.3.2  grep -r &#39;initializing ...&#39; logs/
+</span></span><span class="line"><span class="cl">logs//elasticsearch.log:[2014-08-28 00:00:32,437][INFO ][node                     ] [Thing] initializing ...
+</span></span><span class="line"><span class="cl">logs//elasticsearch.log:[2014-08-28 00:02:01,637][INFO ][node                     ] [Stacy X] initializing ...
+</span></span><span class="line"><span class="cl">logs//elasticsearch.log:[2014-08-28 00:21:50,121][INFO ][node                     ] [Ursa Major] initializing ...
+</span></span><span class="line"><span class="cl">logs//elasticsearch.log:[2014-08-28 10:32:37,790][INFO ][node                     ] [Sea Urchin] initializing ...
+</span></span><span class="line"><span class="cl">logs//elasticsearch.log.2014-08-21:[2014-08-21 16:39:34,140][INFO ][node                     ] [Moonstone] initializing ...
+</span></span><span class="line"><span class="cl">logs//elasticsearch.log.2014-08-26:[2014-08-26 12:15:31,948][INFO ][node                     ] [Hydro-Man] initializing ...
+</span></span><span class="line"><span class="cl">logs//elasticsearch.log.2014-08-27:[2014-08-27 11:17:08,325][INFO ][node                     ] [Joe Fixit] initializing ...
+</span></span><span class="line"><span class="cl">logs//elasticsearch.log.2014-08-27:[2014-08-27 23:57:11,077][INFO ][node                     ] [Overkill] initializing ...
+</span></span></code></pre></div><h1 id="apis">APIs</h1>
 <p>Two built in java clients - port 9300, native protocol</p>
 <p>Must have same Java version</p>
 <ul>
@@ -238,71 +250,71 @@ logs//elasticsearch.log.2014-08-27:[2014-08-27 23:57:11,077][INFO ][node        
 </ul>
 <p>APIs for Java, JS, Groovy, Perl, PHP, Python, Ruby (even .NET).</p>
 <p>Community API for command line</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  elasticsearch-1.3.2  curl -s download.elasticsearch.org/es2unix/es &gt;~/bin/es
-➜  elasticsearch-1.3.2  es version
-zsh: permission denied: es
-➜  elasticsearch-1.3.2  chmod +x ~/bin/es
-➜  elasticsearch-1.3.2  es version
-es            20140723711d4f9
-elasticsearch 1.3.2
-  
-➜  elasticsearch-1.3.2  es indices -v
-status name                pri rep size    bytes   docs
-yellow logstash-2014.08.21   5   1         19313      5
-yellow shakespeare           5   1      19087632 111396
-yellow logstash-2014.08.22   5   1         47220     18
-yellow logstash-2014.08.27   5   1      24996521  14490
-yellow logstash-2014.08.28   5   1      36012778  22645
-yellow kibana-int            5   1         36253      3
-yellow .marvel-kibana        5   1          3586      1
-yellow logstash-2013.12.11   5   1          9943      1
-  
-➜  elasticsearch-1.3.2  es nodes
-yI0t6FIPTAm83QlwXWvO1Q 192.168.179.121 9200 192.168.179.121 9300 1.7.0_55 10.6% 0 d * Sea Urchin
-</code></pre></div><h2 id="restfull-api---9200">Restfull API - 9200</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">elasticsearch</span><span class="o">-</span><span class="mf">1.3</span><span class="o">.</span><span class="mi">2</span>  <span class="n">curl</span> <span class="o">-</span><span class="n">s</span> <span class="n">download</span><span class="o">.</span><span class="n">elasticsearch</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">es2unix</span><span class="o">/</span><span class="n">es</span> <span class="o">&gt;~/</span><span class="n">bin</span><span class="o">/</span><span class="n">es</span>
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">elasticsearch</span><span class="o">-</span><span class="mf">1.3</span><span class="o">.</span><span class="mi">2</span>  <span class="n">es</span> <span class="n">version</span>
+</span></span><span class="line"><span class="cl"><span class="n">zsh</span><span class="p">:</span> <span class="n">permission</span> <span class="n">denied</span><span class="p">:</span> <span class="n">es</span>
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">elasticsearch</span><span class="o">-</span><span class="mf">1.3</span><span class="o">.</span><span class="mi">2</span>  <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="o">~/</span><span class="n">bin</span><span class="o">/</span><span class="n">es</span>
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">elasticsearch</span><span class="o">-</span><span class="mf">1.3</span><span class="o">.</span><span class="mi">2</span>  <span class="n">es</span> <span class="n">version</span>
+</span></span><span class="line"><span class="cl"><span class="n">es</span>            <span class="mi">20140723711</span><span class="n">d4f9</span>
+</span></span><span class="line"><span class="cl"><span class="n">elasticsearch</span> <span class="mf">1.3</span><span class="o">.</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">elasticsearch</span><span class="o">-</span><span class="mf">1.3</span><span class="o">.</span><span class="mi">2</span>  <span class="n">es</span> <span class="n">indices</span> <span class="o">-</span><span class="n">v</span>
+</span></span><span class="line"><span class="cl"><span class="n">status</span> <span class="n">name</span>                <span class="n">pri</span> <span class="n">rep</span> <span class="n">size</span>    <span class="n">bytes</span>   <span class="n">docs</span>
+</span></span><span class="line"><span class="cl"><span class="n">yellow</span> <span class="n">logstash</span><span class="o">-</span><span class="mf">2014.08</span><span class="o">.</span><span class="mi">21</span>   <span class="mi">5</span>   <span class="mi">1</span>         <span class="mi">19313</span>      <span class="mi">5</span>
+</span></span><span class="line"><span class="cl"><span class="n">yellow</span> <span class="n">shakespeare</span>           <span class="mi">5</span>   <span class="mi">1</span>      <span class="mi">19087632</span> <span class="mi">111396</span>
+</span></span><span class="line"><span class="cl"><span class="n">yellow</span> <span class="n">logstash</span><span class="o">-</span><span class="mf">2014.08</span><span class="o">.</span><span class="mi">22</span>   <span class="mi">5</span>   <span class="mi">1</span>         <span class="mi">47220</span>     <span class="mi">18</span>
+</span></span><span class="line"><span class="cl"><span class="n">yellow</span> <span class="n">logstash</span><span class="o">-</span><span class="mf">2014.08</span><span class="o">.</span><span class="mi">27</span>   <span class="mi">5</span>   <span class="mi">1</span>      <span class="mi">24996521</span>  <span class="mi">14490</span>
+</span></span><span class="line"><span class="cl"><span class="n">yellow</span> <span class="n">logstash</span><span class="o">-</span><span class="mf">2014.08</span><span class="o">.</span><span class="mi">28</span>   <span class="mi">5</span>   <span class="mi">1</span>      <span class="mi">36012778</span>  <span class="mi">22645</span>
+</span></span><span class="line"><span class="cl"><span class="n">yellow</span> <span class="n">kibana</span><span class="o">-</span><span class="ne">int</span>            <span class="mi">5</span>   <span class="mi">1</span>         <span class="mi">36253</span>      <span class="mi">3</span>
+</span></span><span class="line"><span class="cl"><span class="n">yellow</span> <span class="o">.</span><span class="n">marvel</span><span class="o">-</span><span class="n">kibana</span>        <span class="mi">5</span>   <span class="mi">1</span>          <span class="mi">3586</span>      <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">yellow</span> <span class="n">logstash</span><span class="o">-</span><span class="mf">2013.12</span><span class="o">.</span><span class="mi">11</span>   <span class="mi">5</span>   <span class="mi">1</span>          <span class="mi">9943</span>      <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">elasticsearch</span><span class="o">-</span><span class="mf">1.3</span><span class="o">.</span><span class="mi">2</span>  <span class="n">es</span> <span class="n">nodes</span>
+</span></span><span class="line"><span class="cl"><span class="n">yI0t6FIPTAm83QlwXWvO1Q</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">179.121</span> <span class="mi">9200</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">179.121</span> <span class="mi">9300</span> <span class="mf">1.7</span><span class="o">.</span><span class="mi">0</span><span class="n">_55</span> <span class="mf">10.6</span><span class="o">%</span> <span class="mi">0</span> <span class="n">d</span> <span class="o">*</span> <span class="n">Sea</span> <span class="n">Urchin</span>
+</span></span></code></pre></div><h2 id="restfull-api---9200">Restfull API - 9200</h2>
 <ul>
 <li>GET, POST, PUT, HEAD, DELETE</li>
 <li>optional ?pretty</li>
 </ul>
 <p>Shorthand:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">curl -XGET &#39;localhost:9200/_count?pretty&#39; -d &#39;
-{
-    &#34;query&#34;: {
-        &#34;match_all&#34;: {}
-    }
-}&#39;
-</code></pre></div><p>=&gt;</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">GET /_count
-{
-    &#34;query&#34;: {
-        &#34;match_all&#34;: {}
-    }
-}
-</code></pre></div><p>Documents are in JSON - <a href="http://en.wikipedia.org/wiki/Json">http://en.wikipedia.org/wiki/Json</a>.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">curl -XGET &#39;localhost:9200/_count?pretty&#39; -d &#39;
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;query&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;match_all&#34;: {}
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}&#39;
+</span></span></code></pre></div><p>=&gt;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /_count
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;query&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;match_all&#34;: {}
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>Documents are in JSON - <a href="http://en.wikipedia.org/wiki/Json">http://en.wikipedia.org/wiki/Json</a>.
 All clients handle conversion to JSON automagically</p>
-<p>See Tutorial on Elastic <!-- raw HTML omitted -->post<!-- raw HTML omitted --></p>
+<p>See Tutorial on Elastic <a href="/posts/2014-08-28-elastic-tutorial/">post</a></p>
 <h1 id="kibana">Kibana</h1>
 <p>Tutorial from: <a href="http://www.elasticsearch.org/guide/en/kibana/current/using-kibana-for-the-first-time.html">http://www.elasticsearch.org/guide/en/kibana/current/using-kibana-for-the-first-time.html</a></p>
 <p>Applying mapping to prevent indexing of some fields</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">curl -XPUT http://localhost:9200/shakespeare -d &#39;
-{
- &#34;mappings&#34; : {
-  &#34;_default_&#34; : {
-   &#34;properties&#34; : {
-    &#34;speaker&#34; : {&#34;type&#34;: &#34;string&#34;, &#34;index&#34; : &#34;not_analyzed&#34; },
-    &#34;play_name&#34; : {&#34;type&#34;: &#34;string&#34;, &#34;index&#34; : &#34;not_analyzed&#34; },
-    &#34;line_id&#34; : { &#34;type&#34; : &#34;integer&#34; },
-    &#34;speech_number&#34; : { &#34;type&#34; : &#34;integer&#34; }
-   }
-  }
- }
-}
-&#39;;
-  
-{&#34;acknowledged&#34;:true}
-  
-[2014-08-27 19:43:07,087][INFO ][cluster.metadata         ] [Joe Fixit] [shakespeare] creating index, cause [api], shards [5]/[1], mappings [_default_]
-</code></pre></div><p>Loaded shakespeare.json</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">curl -XPUT http://localhost:9200/shakespeare -d &#39;
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl"> &#34;mappings&#34; : {
+</span></span><span class="line"><span class="cl">  &#34;_default_&#34; : {
+</span></span><span class="line"><span class="cl">   &#34;properties&#34; : {
+</span></span><span class="line"><span class="cl">    &#34;speaker&#34; : {&#34;type&#34;: &#34;string&#34;, &#34;index&#34; : &#34;not_analyzed&#34; },
+</span></span><span class="line"><span class="cl">    &#34;play_name&#34; : {&#34;type&#34;: &#34;string&#34;, &#34;index&#34; : &#34;not_analyzed&#34; },
+</span></span><span class="line"><span class="cl">    &#34;line_id&#34; : { &#34;type&#34; : &#34;integer&#34; },
+</span></span><span class="line"><span class="cl">    &#34;speech_number&#34; : { &#34;type&#34; : &#34;integer&#34; }
+</span></span><span class="line"><span class="cl">   }
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl"> }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">&#39;;
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">{&#34;acknowledged&#34;:true}
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">[2014-08-27 19:43:07,087][INFO ][cluster.metadata         ] [Joe Fixit] [shakespeare] creating index, cause [api], shards [5]/[1], mappings [_default_]
+</span></span></code></pre></div><p>Loaded shakespeare.json</p>
 
     </div>
 
@@ -365,7 +377,7 @@ All clients handle conversion to JSON automagically</p>
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -383,13 +395,10 @@ All clients handle conversion to JSON automagically</p>
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -400,7 +409,10 @@ All clients handle conversion to JSON automagically</p>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

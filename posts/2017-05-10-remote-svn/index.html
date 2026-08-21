@@ -16,17 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="This is based on J.&amp;rsquo;s&#39; question in Slack:
- Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
- The setup (as I understand it):
- on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly  Options Use git-svn bridge Git client allows to &amp;ldquo;pretend&amp;rdquo; it is SVN and pull/push against remote SVN repo" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="This is based on J.&rsquo;s&rsquo; question in Slack:
+Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
+The setup (as I understand it):
+on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly Options Use git-svn bridge Git client allows to &ldquo;pretend&rdquo; it is SVN and pull/push against remote SVN repo
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2017-05-10-remote-svn/" />
@@ -37,37 +38,40 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Managing code in remote SVN repo" />
-<meta property="og:description" content="This is based on J.&rsquo;s&#39; question in Slack:
- Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
- The setup (as I understand it):
- on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly  Options Use git-svn bridge Git client allows to &ldquo;pretend&rdquo; it is SVN and pull/push against remote SVN repo" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2017-05-10-remote-svn/" />
-<meta property="article:published_time" content="2017-05-10T11:22:48+08:00" />
-<meta property="article:modified_time" content="2017-05-10T11:22:48+08:00" />
-<meta itemprop="name" content="Managing code in remote SVN repo">
-<meta itemprop="description" content="This is based on J.&rsquo;s&#39; question in Slack:
- Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
- The setup (as I understand it):
- on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly  Options Use git-svn bridge Git client allows to &ldquo;pretend&rdquo; it is SVN and pull/push against remote SVN repo">
-<meta itemprop="datePublished" content="2017-05-10T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2017-05-10T11:22:48+08:00" />
-<meta itemprop="wordCount" content="540">
+<meta property="og:url" content="https://miroadamy.com/posts/2017-05-10-remote-svn/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Managing code in remote SVN repo">
+	<meta property="og:description" content="This is based on J.’s’ question in Slack:
+Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
+The setup (as I understand it):
+on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly Options Use git-svn bridge Git client allows to “pretend” it is SVN and pull/push against remote SVN repo">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2017-05-10T11:22:48+08:00">
+		<meta property="article:modified_time" content="2017-05-10T11:22:48+08:00">
+		<meta property="article:tag" content="Git">
 
-
-
-<meta itemprop="keywords" content="git," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Managing code in remote SVN repo"/>
-<meta name="twitter:description" content="This is based on J.&rsquo;s&#39; question in Slack:
- Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
- The setup (as I understand it):
- on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly  Options Use git-svn bridge Git client allows to &ldquo;pretend&rdquo; it is SVN and pull/push against remote SVN repo"/>
+	<meta itemprop="name" content="Managing code in remote SVN repo">
+	<meta itemprop="description" content="This is based on J.’s’ question in Slack:
+Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
+The setup (as I understand it):
+on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly Options Use git-svn bridge Git client allows to “pretend” it is SVN and pull/push against remote SVN repo">
+	<meta itemprop="datePublished" content="2017-05-10T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2017-05-10T11:22:48+08:00">
+	<meta itemprop="wordCount" content="540">
+	<meta itemprop="keywords" content="Git">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Managing code in remote SVN repo">
+	<meta name="twitter:description" content="This is based on J.’s’ question in Slack:
+Do we have some customer where we are moving a git repo to svn in an automated fashion I just need to move the git repo into svn periodically nightly
+The setup (as I understand it):
+on client side we have a worktree that is Git repository the files needs to be copied to SVN regularly Options Use git-svn bridge Git client allows to “pretend” it is SVN and pull/push against remote SVN repo">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -104,12 +108,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -126,6 +139,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -163,7 +177,7 @@
   </div>
 </div>
     <div class="post-content">
-      <p>This is based on J.&rsquo;s' question in Slack:</p>
+      <p>This is based on J.&rsquo;s&rsquo; question in Slack:</p>
 <blockquote>
 <p>Do we have some customer where we are moving a git repo to svn in an automated fashion
 I just need to move the git repo into svn periodically nightly</p>
@@ -186,37 +200,37 @@ I just need to move the git repo into svn periodically nightly</p>
 </ul>
 <h4 id="example">Example</h4>
 <p>Tracking and contributing to the trunk of a Subversion-managed project (ignoring tags and branches):</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Clone a repo (like git clone):
-    git svn clone http://svn.example.com/project/trunk
-# Enter the newly cloned directory:
-    cd trunk
-# You should be on master branch, double-check with &#39;git branch&#39;
-    git branch
-# Do some work and commit locally to Git:
-    git commit ...
-# Something is committed to SVN, rebase your local changes against the
-# latest changes in SVN:
-    git svn rebase
-# Now commit your changes (that were committed previously using Git) to SVN,
-# as well as automatically updating your working HEAD:
-    git svn dcommit
-# Append svn:ignore settings to the default Git exclude file:
-    git svn show-ignore &gt;&gt; .git/info/exclude
-</code></pre></div><p>Tracking and contributing to an entire Subversion-managed project (complete with a trunk, tags and branches):</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Clone a repo with standard SVN directory layout (like git clone):
-    git svn clone http://svn.example.com/project --stdlayout --prefix svn/
-# Or, if the repo uses a non-standard directory layout:
-    git svn clone http://svn.example.com/project -T tr -b branch -t tag --prefix svn/
-# View all branches and tags you have cloned:
-    git branch -r
-# Create a new branch in SVN
-    git svn branch waldo
-# Reset your master to trunk (or any other branch, replacing &#39;trunk&#39;
-# with the appropriate name):
-    git reset --hard svn/trunk
-# You may only dcommit to one branch/tag/trunk at a time.  The usage
-# of dcommit/rebase/show-ignore should be the same as above.
-</code></pre></div><h3 id="using-two-independent-clients">Using two independent clients</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Clone a repo (like git clone):
+</span></span><span class="line"><span class="cl">    git svn clone http://svn.example.com/project/trunk
+</span></span><span class="line"><span class="cl"># Enter the newly cloned directory:
+</span></span><span class="line"><span class="cl">    cd trunk
+</span></span><span class="line"><span class="cl"># You should be on master branch, double-check with &#39;git branch&#39;
+</span></span><span class="line"><span class="cl">    git branch
+</span></span><span class="line"><span class="cl"># Do some work and commit locally to Git:
+</span></span><span class="line"><span class="cl">    git commit ...
+</span></span><span class="line"><span class="cl"># Something is committed to SVN, rebase your local changes against the
+</span></span><span class="line"><span class="cl"># latest changes in SVN:
+</span></span><span class="line"><span class="cl">    git svn rebase
+</span></span><span class="line"><span class="cl"># Now commit your changes (that were committed previously using Git) to SVN,
+</span></span><span class="line"><span class="cl"># as well as automatically updating your working HEAD:
+</span></span><span class="line"><span class="cl">    git svn dcommit
+</span></span><span class="line"><span class="cl"># Append svn:ignore settings to the default Git exclude file:
+</span></span><span class="line"><span class="cl">    git svn show-ignore &gt;&gt; .git/info/exclude
+</span></span></code></pre></div><p>Tracking and contributing to an entire Subversion-managed project (complete with a trunk, tags and branches):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Clone a repo with standard SVN directory layout (like git clone):
+</span></span><span class="line"><span class="cl">    git svn clone http://svn.example.com/project --stdlayout --prefix svn/
+</span></span><span class="line"><span class="cl"># Or, if the repo uses a non-standard directory layout:
+</span></span><span class="line"><span class="cl">    git svn clone http://svn.example.com/project -T tr -b branch -t tag --prefix svn/
+</span></span><span class="line"><span class="cl"># View all branches and tags you have cloned:
+</span></span><span class="line"><span class="cl">    git branch -r
+</span></span><span class="line"><span class="cl"># Create a new branch in SVN
+</span></span><span class="line"><span class="cl">    git svn branch waldo
+</span></span><span class="line"><span class="cl"># Reset your master to trunk (or any other branch, replacing &#39;trunk&#39;
+</span></span><span class="line"><span class="cl"># with the appropriate name):
+</span></span><span class="line"><span class="cl">    git reset --hard svn/trunk
+</span></span><span class="line"><span class="cl"># You may only dcommit to one branch/tag/trunk at a time.  The usage
+</span></span><span class="line"><span class="cl"># of dcommit/rebase/show-ignore should be the same as above.
+</span></span></code></pre></div><h3 id="using-two-independent-clients">Using two independent clients</h3>
 <p>Basically, the work tree is independently managed by SVN client that does not see content of .git directory (it is in .svnignore) and git client that sees everything, including the .svn/ directory.</p>
 <p>The workflow functions well as long as there is no or little merging on Subversion side.</p>
 <h4 id="workflow">Workflow:</h4>
@@ -291,7 +305,7 @@ I just need to move the git repo into svn periodically nightly</p>
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -309,13 +323,10 @@ I just need to move the git repo into svn periodically nightly</p>
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -326,7 +337,10 @@ I just need to move the git repo into svn periodically nightly</p>
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

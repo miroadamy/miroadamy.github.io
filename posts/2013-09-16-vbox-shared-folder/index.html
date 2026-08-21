@@ -18,17 +18,18 @@
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Case sensitivity and VirtualBox shared folder Weird but true behaviour:
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
-touch zz zZ creates two files, both &amp;ldquo;inside VM&amp;rdquo; ~/development/ATG/platform-edc as well as in OS-X.
+touch zz zZ creates two files, both &ldquo;inside VM&rdquo; ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
 The command
-cd ~/development/ATG/platform-edc touch zz zZ will create just single file." /><meta name="keywords" content="blog, Miro" />
+cd ~/development/ATG/platform-edc touch zz zZ will create just single file. Outside the VM, in OS-X file system is still case sensitive.
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/" />
@@ -39,43 +40,47 @@ cd ~/development/ATG/platform-edc touch zz zZ will create just single file." /><
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Case sensitivity and VirtualBox shared folder" />
-<meta property="og:description" content="Case sensitivity and VirtualBox shared folder Weird but true behaviour:
+<meta property="og:url" content="https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Case sensitivity and VirtualBox shared folder">
+	<meta property="og:description" content="Case sensitivity and VirtualBox shared folder Weird but true behaviour:
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
-touch zz zZ creates two files, both &ldquo;inside VM&rdquo; ~/development/ATG/platform-edc as well as in OS-X.
+touch zz zZ creates two files, both “inside VM” ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
 The command
-cd ~/development/ATG/platform-edc touch zz zZ will create just single file." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2013-09-16-vbox-shared-folder/" />
-<meta property="article:published_time" content="2013-09-16T11:22:48+08:00" />
-<meta property="article:modified_time" content="2013-09-16T11:22:48+08:00" />
-<meta itemprop="name" content="Case sensitivity and VirtualBox shared folder">
-<meta itemprop="description" content="Case sensitivity and VirtualBox shared folder Weird but true behaviour:
+cd ~/development/ATG/platform-edc touch zz zZ will create just single file. Outside the VM, in OS-X file system is still case sensitive.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2013-09-16T11:22:48+08:00">
+		<meta property="article:modified_time" content="2013-09-16T11:22:48+08:00">
+		<meta property="article:tag" content="Osx">
+		<meta property="article:tag" content="Virtualbox">
+
+	<meta itemprop="name" content="Case sensitivity and VirtualBox shared folder">
+	<meta itemprop="description" content="Case sensitivity and VirtualBox shared folder Weird but true behaviour:
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
-touch zz zZ creates two files, both &ldquo;inside VM&rdquo; ~/development/ATG/platform-edc as well as in OS-X.
+touch zz zZ creates two files, both “inside VM” ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
 The command
-cd ~/development/ATG/platform-edc touch zz zZ will create just single file.">
-<meta itemprop="datePublished" content="2013-09-16T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2013-09-16T11:22:48+08:00" />
-<meta itemprop="wordCount" content="101">
-
-
-
-<meta itemprop="keywords" content="osx,virtualbox," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Case sensitivity and VirtualBox shared folder"/>
-<meta name="twitter:description" content="Case sensitivity and VirtualBox shared folder Weird but true behaviour:
+cd ~/development/ATG/platform-edc touch zz zZ will create just single file. Outside the VM, in OS-X file system is still case sensitive.">
+	<meta itemprop="datePublished" content="2013-09-16T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2013-09-16T11:22:48+08:00">
+	<meta itemprop="wordCount" content="101">
+	<meta itemprop="keywords" content="Osx,Virtualbox">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Case sensitivity and VirtualBox shared folder">
+	<meta name="twitter:description" content="Case sensitivity and VirtualBox shared folder Weird but true behaviour:
 I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:
-touch zz zZ creates two files, both &ldquo;inside VM&rdquo; ~/development/ATG/platform-edc as well as in OS-X.
+touch zz zZ creates two files, both “inside VM” ~/development/ATG/platform-edc as well as in OS-X.
 If the VM is suspended and resumed, it looses the case sensitivity inside the VM.
 The command
-cd ~/development/ATG/platform-edc touch zz zZ will create just single file."/>
+cd ~/development/ATG/platform-edc touch zz zZ will create just single file. Outside the VM, in OS-X file system is still case sensitive.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -112,12 +117,21 @@ cd ~/development/ATG/platform-edc touch zz zZ will create just single file."/>
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -134,6 +148,7 @@ cd ~/development/ATG/platform-edc touch zz zZ will create just single file."/>
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -165,13 +180,13 @@ cd ~/development/ATG/platform-edc touch zz zZ will create just single file."/>
       <h1 id="case-sensitivity-and-virtualbox-shared-folder">Case sensitivity and VirtualBox shared folder</h1>
 <p>Weird but true behaviour:</p>
 <p>I have the case sensitive encrypted disk (sparse bundle with HFSX type) mounted in VBox shared folders. All works fine, after VM starts:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">touch zz zZ
-</code></pre></div><p>creates two files, both &ldquo;inside VM&rdquo; <code>~/development/ATG/platform-edc</code> as well as in OS-X.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">touch zz zZ
+</span></span></code></pre></div><p>creates two files, both &ldquo;inside VM&rdquo; <code>~/development/ATG/platform-edc</code> as well as in OS-X.</p>
 <p>If the VM is suspended and resumed, it looses the case sensitivity inside the VM.</p>
 <p>The command</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd ~/development/ATG/platform-edc
-touch zz zZ
-</code></pre></div><p>will create just single file. Outside the VM, in OS-X file system is still case sensitive.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd ~/development/ATG/platform-edc
+</span></span><span class="line"><span class="cl">touch zz zZ
+</span></span></code></pre></div><p>will create just single file. Outside the VM, in OS-X file system is still case sensitive.</p>
 <p>It looks as if the wake-up remounted the volumen and normal HFS+ instead of HFSX</p>
 
     </div>
@@ -234,7 +249,7 @@ touch zz zZ
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -252,13 +267,10 @@ touch zz zZ
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -269,7 +281,10 @@ touch zz zZ
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

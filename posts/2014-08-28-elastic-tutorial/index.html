@@ -17,15 +17,16 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Running elastic (see Elastic search and Kibana - getting started)
- Use case: building a employee directory for Megacorp
-  each document - type of &amp;lsquo;employee&amp;rsquo; everything in megacorp index  Populating # Delete the `megacorp` index in case it already exists DELETE /megacorp # Index document 1, type &amp;#34;employee&amp;#34;, in the # &amp;#34;megacorp&amp;#34; index PUT /megacorp/employee/1 { &amp;#34;first_name&amp;#34; : &amp;#34;John&amp;#34;, &amp;#34;last_name&amp;#34; : &amp;#34;Smith&amp;#34;, &amp;#34;age&amp;#34; : 25, &amp;#34;about&amp;#34; : &amp;#34;I love to go rock climbing&amp;#34;, &amp;#34;interests&amp;#34;: [ &amp;#34;sports&amp;#34;, &amp;#34;music&amp;#34; ] } # Index two more documents PUT /megacorp/employee/2 { &amp;#34;first_name&amp;#34; : &amp;#34;Jane&amp;#34;, &amp;#34;last_name&amp;#34; : &amp;#34;Smith&amp;#34;, &amp;#34;age&amp;#34; : 32, &amp;#34;about&amp;#34; : &amp;#34;I like to collect rock albums&amp;#34;, &amp;#34;interests&amp;#34;: [ &amp;#34;music&amp;#34; ] } PUT /megacorp/employee/3 { &amp;#34;first_name&amp;#34; : &amp;#34;Douglas&amp;#34;, &amp;#34;last_name&amp;#34; : &amp;#34;Fir&amp;#34;, &amp;#34;age&amp;#34; : 35, &amp;#34;about&amp;#34;: &amp;#34;I like to build cabinets&amp;#34;, &amp;#34;interests&amp;#34;: [ &amp;#34;forestry&amp;#34; ] } In server" /><meta name="keywords" content="blog, Miro" />
+Use case: building a employee directory for Megacorp
+each document - type of &rsquo;employee&#39; everything in megacorp index Populating # Delete the `megacorp` index in case it already exists DELETE /megacorp # Index document 1, type &#34;employee&#34;, in the # &#34;megacorp&#34; index PUT /megacorp/employee/1 { &#34;first_name&#34; : &#34;John&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 25, &#34;about&#34; : &#34;I love to go rock climbing&#34;, &#34;interests&#34;: [ &#34;sports&#34;, &#34;music&#34; ] } # Index two more documents PUT /megacorp/employee/2 { &#34;first_name&#34; : &#34;Jane&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 32, &#34;about&#34; : &#34;I like to collect rock albums&#34;, &#34;interests&#34;: [ &#34;music&#34; ] } PUT /megacorp/employee/3 { &#34;first_name&#34; : &#34;Douglas&#34;, &#34;last_name&#34; : &#34;Fir&#34;, &#34;age&#34; : 35, &#34;about&#34;: &#34;I like to build cabinets&#34;, &#34;interests&#34;: [ &#34;forestry&#34; ] } In server
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-08-28-elastic-tutorial/" />
@@ -36,34 +37,39 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Tutorial on Elastic" />
-<meta property="og:description" content="Running elastic (see Elastic search and Kibana - getting started)
- Use case: building a employee directory for Megacorp
-  each document - type of &lsquo;employee&rsquo; everything in megacorp index  Populating # Delete the `megacorp` index in case it already exists DELETE /megacorp # Index document 1, type &#34;employee&#34;, in the # &#34;megacorp&#34; index PUT /megacorp/employee/1 { &#34;first_name&#34; : &#34;John&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 25, &#34;about&#34; : &#34;I love to go rock climbing&#34;, &#34;interests&#34;: [ &#34;sports&#34;, &#34;music&#34; ] } # Index two more documents PUT /megacorp/employee/2 { &#34;first_name&#34; : &#34;Jane&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 32, &#34;about&#34; : &#34;I like to collect rock albums&#34;, &#34;interests&#34;: [ &#34;music&#34; ] } PUT /megacorp/employee/3 { &#34;first_name&#34; : &#34;Douglas&#34;, &#34;last_name&#34; : &#34;Fir&#34;, &#34;age&#34; : 35, &#34;about&#34;: &#34;I like to build cabinets&#34;, &#34;interests&#34;: [ &#34;forestry&#34; ] } In server" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2014-08-28-elastic-tutorial/" />
-<meta property="article:published_time" content="2014-08-28T11:22:48+08:00" />
-<meta property="article:modified_time" content="2014-08-28T11:22:48+08:00" />
-<meta itemprop="name" content="Tutorial on Elastic">
-<meta itemprop="description" content="Running elastic (see Elastic search and Kibana - getting started)
- Use case: building a employee directory for Megacorp
-  each document - type of &lsquo;employee&rsquo; everything in megacorp index  Populating # Delete the `megacorp` index in case it already exists DELETE /megacorp # Index document 1, type &#34;employee&#34;, in the # &#34;megacorp&#34; index PUT /megacorp/employee/1 { &#34;first_name&#34; : &#34;John&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 25, &#34;about&#34; : &#34;I love to go rock climbing&#34;, &#34;interests&#34;: [ &#34;sports&#34;, &#34;music&#34; ] } # Index two more documents PUT /megacorp/employee/2 { &#34;first_name&#34; : &#34;Jane&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 32, &#34;about&#34; : &#34;I like to collect rock albums&#34;, &#34;interests&#34;: [ &#34;music&#34; ] } PUT /megacorp/employee/3 { &#34;first_name&#34; : &#34;Douglas&#34;, &#34;last_name&#34; : &#34;Fir&#34;, &#34;age&#34; : 35, &#34;about&#34;: &#34;I like to build cabinets&#34;, &#34;interests&#34;: [ &#34;forestry&#34; ] } In server">
-<meta itemprop="datePublished" content="2014-08-28T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2014-08-28T11:22:48+08:00" />
-<meta itemprop="wordCount" content="1658">
+<meta property="og:url" content="https://miroadamy.com/posts/2014-08-28-elastic-tutorial/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Tutorial on Elastic">
+	<meta property="og:description" content="Running elastic (see Elastic search and Kibana - getting started)
+Use case: building a employee directory for Megacorp
+each document - type of ’employee&#39; everything in megacorp index Populating # Delete the `megacorp` index in case it already exists DELETE /megacorp # Index document 1, type &#34;employee&#34;, in the # &#34;megacorp&#34; index PUT /megacorp/employee/1 { &#34;first_name&#34; : &#34;John&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 25, &#34;about&#34; : &#34;I love to go rock climbing&#34;, &#34;interests&#34;: [ &#34;sports&#34;, &#34;music&#34; ] } # Index two more documents PUT /megacorp/employee/2 { &#34;first_name&#34; : &#34;Jane&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 32, &#34;about&#34; : &#34;I like to collect rock albums&#34;, &#34;interests&#34;: [ &#34;music&#34; ] } PUT /megacorp/employee/3 { &#34;first_name&#34; : &#34;Douglas&#34;, &#34;last_name&#34; : &#34;Fir&#34;, &#34;age&#34; : 35, &#34;about&#34;: &#34;I like to build cabinets&#34;, &#34;interests&#34;: [ &#34;forestry&#34; ] } In server">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2014-08-28T11:22:48+08:00">
+		<meta property="article:modified_time" content="2014-08-28T11:22:48+08:00">
+		<meta property="article:tag" content="Search">
+		<meta property="article:tag" content="Elastic">
+		<meta property="article:tag" content="Tutorial">
 
-
-
-<meta itemprop="keywords" content="search,elastic,tutorial," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tutorial on Elastic"/>
-<meta name="twitter:description" content="Running elastic (see Elastic search and Kibana - getting started)
- Use case: building a employee directory for Megacorp
-  each document - type of &lsquo;employee&rsquo; everything in megacorp index  Populating # Delete the `megacorp` index in case it already exists DELETE /megacorp # Index document 1, type &#34;employee&#34;, in the # &#34;megacorp&#34; index PUT /megacorp/employee/1 { &#34;first_name&#34; : &#34;John&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 25, &#34;about&#34; : &#34;I love to go rock climbing&#34;, &#34;interests&#34;: [ &#34;sports&#34;, &#34;music&#34; ] } # Index two more documents PUT /megacorp/employee/2 { &#34;first_name&#34; : &#34;Jane&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 32, &#34;about&#34; : &#34;I like to collect rock albums&#34;, &#34;interests&#34;: [ &#34;music&#34; ] } PUT /megacorp/employee/3 { &#34;first_name&#34; : &#34;Douglas&#34;, &#34;last_name&#34; : &#34;Fir&#34;, &#34;age&#34; : 35, &#34;about&#34;: &#34;I like to build cabinets&#34;, &#34;interests&#34;: [ &#34;forestry&#34; ] } In server"/>
+	<meta itemprop="name" content="Tutorial on Elastic">
+	<meta itemprop="description" content="Running elastic (see Elastic search and Kibana - getting started)
+Use case: building a employee directory for Megacorp
+each document - type of ’employee&#39; everything in megacorp index Populating # Delete the `megacorp` index in case it already exists DELETE /megacorp # Index document 1, type &#34;employee&#34;, in the # &#34;megacorp&#34; index PUT /megacorp/employee/1 { &#34;first_name&#34; : &#34;John&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 25, &#34;about&#34; : &#34;I love to go rock climbing&#34;, &#34;interests&#34;: [ &#34;sports&#34;, &#34;music&#34; ] } # Index two more documents PUT /megacorp/employee/2 { &#34;first_name&#34; : &#34;Jane&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 32, &#34;about&#34; : &#34;I like to collect rock albums&#34;, &#34;interests&#34;: [ &#34;music&#34; ] } PUT /megacorp/employee/3 { &#34;first_name&#34; : &#34;Douglas&#34;, &#34;last_name&#34; : &#34;Fir&#34;, &#34;age&#34; : 35, &#34;about&#34;: &#34;I like to build cabinets&#34;, &#34;interests&#34;: [ &#34;forestry&#34; ] } In server">
+	<meta itemprop="datePublished" content="2014-08-28T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2014-08-28T11:22:48+08:00">
+	<meta itemprop="wordCount" content="1658">
+	<meta itemprop="keywords" content="Search,Elastic,Tutorial">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Tutorial on Elastic">
+	<meta name="twitter:description" content="Running elastic (see Elastic search and Kibana - getting started)
+Use case: building a employee directory for Megacorp
+each document - type of ’employee&#39; everything in megacorp index Populating # Delete the `megacorp` index in case it already exists DELETE /megacorp # Index document 1, type &#34;employee&#34;, in the # &#34;megacorp&#34; index PUT /megacorp/employee/1 { &#34;first_name&#34; : &#34;John&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 25, &#34;about&#34; : &#34;I love to go rock climbing&#34;, &#34;interests&#34;: [ &#34;sports&#34;, &#34;music&#34; ] } # Index two more documents PUT /megacorp/employee/2 { &#34;first_name&#34; : &#34;Jane&#34;, &#34;last_name&#34; : &#34;Smith&#34;, &#34;age&#34; : 32, &#34;about&#34; : &#34;I like to collect rock albums&#34;, &#34;interests&#34;: [ &#34;music&#34; ] } PUT /megacorp/employee/3 { &#34;first_name&#34; : &#34;Douglas&#34;, &#34;last_name&#34; : &#34;Fir&#34;, &#34;age&#34; : 35, &#34;about&#34;: &#34;I like to build cabinets&#34;, &#34;interests&#34;: [ &#34;forestry&#34; ] } In server">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -100,12 +106,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -122,6 +137,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -180,719 +196,717 @@
 <p>Use case: building a employee directory for Megacorp</p>
 </blockquote>
 <ul>
-<li>each document - type of &lsquo;employee&rsquo;</li>
+<li>each document - type of &rsquo;employee'</li>
 <li>everything in megacorp index</li>
 </ul>
 <h2 id="populating">Populating</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Delete the `megacorp` index in case it already exists
-DELETE /megacorp
-# Index document 1, type &#34;employee&#34;, in the
-# &#34;megacorp&#34; index
-PUT /megacorp/employee/1
-{
-    &#34;first_name&#34; : &#34;John&#34;,
-    &#34;last_name&#34; :  &#34;Smith&#34;,
-    &#34;age&#34; :        25,
-    &#34;about&#34; :      &#34;I love to go rock climbing&#34;,
-    &#34;interests&#34;: [ &#34;sports&#34;, &#34;music&#34; ]
-}
-# Index two more documents
-PUT /megacorp/employee/2
-{
-    &#34;first_name&#34; :  &#34;Jane&#34;,
-    &#34;last_name&#34; :   &#34;Smith&#34;,
-    &#34;age&#34; :         32,
-    &#34;about&#34; :       &#34;I like to collect rock albums&#34;,
-    &#34;interests&#34;:  [ &#34;music&#34; ]
-}
-PUT /megacorp/employee/3
-{
-    &#34;first_name&#34; :  &#34;Douglas&#34;,
-    &#34;last_name&#34; :   &#34;Fir&#34;,
-    &#34;age&#34; :         35,
-    &#34;about&#34;:        &#34;I like to build cabinets&#34;,
-    &#34;interests&#34;:  [ &#34;forestry&#34; ]
-}
-</code></pre></div><p>In server</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">2014-08-28 13:58:02,769][INFO ][cluster.metadata         ] [Sea Urchin] [megacorp] creating index, cause [auto(index api)], shards [5]/[1], mappings []
-[2014-08-28 13:58:02,858][INFO ][cluster.metadata         ] [Sea Urchin] [megacorp] update_mapping [employee] (dynamic)
-[2014-08-28 13:58:16,319][INFO ][cluster.metadata         ] [Sea Urchin] [megacorp] deleting index
-[2014-08-28 13:58:18,891][INFO ][cluster.metadata         ] [Sea Urchin] [megacorp] creating index, cause [auto(index api)], shards [5]/[1], mappings []
-[2014-08-28 13:58:18,964][INFO ][cluster.metadata         ] [Sea Urchin] [megacorp] update_mapping [employee] (dynamic)
-</code></pre></div><h2 id="retrieve">Retrieve</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Retrieve the updated document
-GET /megacorp/employee/1
-  
-{
-   &#34;_index&#34;: &#34;megacorp&#34;,
-   &#34;_type&#34;: &#34;employee&#34;,
-   &#34;_id&#34;: &#34;1&#34;,
-   &#34;_version&#34;: 1,
-   &#34;found&#34;: true,
-   &#34;_source&#34;: {
-      &#34;first_name&#34;: &#34;John&#34;,
-      &#34;last_name&#34;: &#34;Smith&#34;,
-      &#34;age&#34;: 25,
-      &#34;about&#34;: &#34;I love to go rock climbing&#34;,
-      &#34;interests&#34;: [
-         &#34;sports&#34;,
-         &#34;music&#34;
-      ]
-   }
-}
-</code></pre></div><h2 id="get-all">Get all</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Search for all employees in the megacorp index:
-# By default, returns to 10 results
-GET /megacorp/employee/_search
-</code></pre></div><h2 id="url-based-search">URL based search</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Search for all employees in the megacorp index
-# who have &#34;Smith&#34; in the last_name field
-GET /megacorp/employee/_search?q=last_name:Smith
-</code></pre></div><h2 id="query-dsl">Query DSL</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Same query as above, but using the Query DSL
-GET /megacorp/employee/_search
-{
-  &#34;query&#34;: {
-    &#34;match&#34;: {
-      &#34;last_name&#34;: &#34;smith&#34;
-    }
-  }
-}
-</code></pre></div><h2 id="filtering">Filtering</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="c1"># Delete the `megacorp` index in case it already exists
+</span></span></span><span class="line"><span class="cl"><span class="k">DELETE</span><span class="w"> </span><span class="o">/</span><span class="n">megacorp</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Index document 1, type &#34;employee&#34;, in the
+</span></span></span><span class="line"><span class="cl"><span class="c1"># &#34;megacorp&#34; index
+</span></span></span><span class="line"><span class="cl"><span class="n">PUT</span><span class="w"> </span><span class="o">/</span><span class="n">megacorp</span><span class="o">/</span><span class="n">employee</span><span class="o">/</span><span class="mi">1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;first_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;John&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;last_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;Smith&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;age&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">        </span><span class="mi">25</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;about&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">      </span><span class="s2">&#34;I love to go rock climbing&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;interests&#34;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">&#34;sports&#34;</span><span class="p">,</span><span class="w"> </span><span class="s2">&#34;music&#34;</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Index two more documents
+</span></span></span><span class="line"><span class="cl"><span class="n">PUT</span><span class="w"> </span><span class="o">/</span><span class="n">megacorp</span><span class="o">/</span><span class="n">employee</span><span class="o">/</span><span class="mi">2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;first_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;Jane&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;last_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">   </span><span class="s2">&#34;Smith&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;age&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">         </span><span class="mi">32</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;about&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">       </span><span class="s2">&#34;I like to collect rock albums&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;interests&#34;</span><span class="p">:</span><span class="w">  </span><span class="p">[</span><span class="w"> </span><span class="s2">&#34;music&#34;</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">PUT</span><span class="w"> </span><span class="o">/</span><span class="n">megacorp</span><span class="o">/</span><span class="n">employee</span><span class="o">/</span><span class="mi">3</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;first_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">  </span><span class="s2">&#34;Douglas&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;last_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">   </span><span class="s2">&#34;Fir&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;age&#34;</span><span class="w"> </span><span class="p">:</span><span class="w">         </span><span class="mi">35</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;about&#34;</span><span class="p">:</span><span class="w">        </span><span class="s2">&#34;I like to build cabinets&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;interests&#34;</span><span class="p">:</span><span class="w">  </span><span class="p">[</span><span class="w"> </span><span class="s2">&#34;forestry&#34;</span><span class="w"> </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">}</span><span class="w">
+</span></span></span></code></pre></div><p>In server</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">2014-08-28 13:58:02,769][INFO ][cluster.metadata         ] [Sea Urchin] [megacorp] creating index, cause [auto(index api)], shards [5]/[1], mappings []
+</span></span><span class="line"><span class="cl">[2014-08-28 13:58:02,858][INFO ][cluster.metadata         ] [Sea Urchin] [megacorp] update_mapping [employee] (dynamic)
+</span></span><span class="line"><span class="cl">[2014-08-28 13:58:16,319][INFO ][cluster.metadata         ] [Sea Urchin] [megacorp] deleting index
+</span></span><span class="line"><span class="cl">[2014-08-28 13:58:18,891][INFO ][cluster.metadata         ] [Sea Urchin] [megacorp] creating index, cause [auto(index api)], shards [5]/[1], mappings []
+</span></span><span class="line"><span class="cl">[2014-08-28 13:58:18,964][INFO ][cluster.metadata         ] [Sea Urchin] [megacorp] update_mapping [employee] (dynamic)
+</span></span></code></pre></div><h2 id="retrieve">Retrieve</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Retrieve the updated document
+</span></span><span class="line"><span class="cl">GET /megacorp/employee/1
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">   &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">   &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">   &#34;_id&#34;: &#34;1&#34;,
+</span></span><span class="line"><span class="cl">   &#34;_version&#34;: 1,
+</span></span><span class="line"><span class="cl">   &#34;found&#34;: true,
+</span></span><span class="line"><span class="cl">   &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;first_name&#34;: &#34;John&#34;,
+</span></span><span class="line"><span class="cl">      &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">      &#34;age&#34;: 25,
+</span></span><span class="line"><span class="cl">      &#34;about&#34;: &#34;I love to go rock climbing&#34;,
+</span></span><span class="line"><span class="cl">      &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">         &#34;sports&#34;,
+</span></span><span class="line"><span class="cl">         &#34;music&#34;
+</span></span><span class="line"><span class="cl">      ]
+</span></span><span class="line"><span class="cl">   }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><h2 id="get-all">Get all</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Search for all employees in the megacorp index:
+</span></span><span class="line"><span class="cl"># By default, returns to 10 results
+</span></span><span class="line"><span class="cl">GET /megacorp/employee/_search
+</span></span></code></pre></div><h2 id="url-based-search">URL based search</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Search for all employees in the megacorp index
+</span></span><span class="line"><span class="cl"># who have &#34;Smith&#34; in the last_name field
+</span></span><span class="line"><span class="cl">GET /megacorp/employee/_search?q=last_name:Smith
+</span></span></code></pre></div><h2 id="query-dsl">Query DSL</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Same query as above, but using the Query DSL
+</span></span><span class="line"><span class="cl">GET /megacorp/employee/_search
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;query&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;match&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;last_name&#34;: &#34;smith&#34;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><h2 id="filtering">Filtering</h2>
 <p>Combines filter (age &gt; 30) and query within filter (last name = Smith)</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Find all employees whose `last_name` is Smith
-# and who are older than 30
-GET /megacorp/employee/_search
-{
-    &#34;query&#34; : {
-        &#34;filtered&#34; : {
-            &#34;filter&#34; : {
-                &#34;range&#34; : {
-                    &#34;age&#34; : { &#34;gt&#34; : 30 }
-                }
-            },
-            &#34;query&#34; : {
-                &#34;match&#34; : {
-                    &#34;last_name&#34; : &#34;smith&#34;
-                }
-            }
-        }
-    }
-}
-  
-{
-   &#34;took&#34;: 5,
-   &#34;timed_out&#34;: false,
-   &#34;_shards&#34;: {
-      &#34;total&#34;: 5,
-      &#34;successful&#34;: 5,
-      &#34;failed&#34;: 0
-   },
-   &#34;hits&#34;: {
-      &#34;total&#34;: 1,
-      &#34;max_score&#34;: 0.30685282,
-      &#34;hits&#34;: [
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;2&#34;,
-            &#34;_score&#34;: 0.30685282,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;Jane&#34;,
-               &#34;last_name&#34;: &#34;Smith&#34;,
-               &#34;age&#34;: 32,
-               &#34;about&#34;: &#34;I like to collect rock albums&#34;,
-               &#34;interests&#34;: [
-                  &#34;music&#34;
-               ]
-            }
-         }
-      ]
-   }
-}
-</code></pre></div><h2 id="text-queries-with-or">Text queries with OR</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Find all employees who enjoy &#34;rock&#34; or &#34;climbing&#34;
-GET /megacorp/employee/_search
-{
-    &#34;query&#34; : {
-        &#34;match&#34; : {
-            &#34;about&#34; : &#34;rock climbing&#34;
-        }
-    }
-}
-</code></pre></div><p>Note the OR and how relevance is different</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">{
-   &#34;took&#34;: 5,
-   &#34;timed_out&#34;: false,
-   &#34;_shards&#34;: {
-      &#34;total&#34;: 5,
-      &#34;successful&#34;: 5,
-      &#34;failed&#34;: 0
-   },
-   &#34;hits&#34;: {
-      &#34;total&#34;: 2,
-      &#34;max_score&#34;: 0.16273327,
-      &#34;hits&#34;: [
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;1&#34;,
-            &#34;_score&#34;: 0.16273327,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;John&#34;,
-               &#34;last_name&#34;: &#34;Smith&#34;,
-               &#34;age&#34;: 25,
-               &#34;about&#34;: &#34;I love to go rock climbing&#34;,
-               &#34;interests&#34;: [
-                  &#34;sports&#34;,
-                  &#34;music&#34;
-               ]
-            }
-         },
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;2&#34;,
-            &#34;_score&#34;: 0.016878016,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;Jane&#34;,
-               &#34;last_name&#34;: &#34;Smith&#34;,
-               &#34;age&#34;: 32,
-               &#34;about&#34;: &#34;I like to collect rock albums&#34;,
-               &#34;interests&#34;: [
-                  &#34;music&#34;
-               ]
-            }
-         }
-      ]
-   }
-}
-</code></pre></div><p>Elasticsearch can search within full text fields and return the most relevant results first.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="c1"># Find all employees whose `last_name` is Smith
+</span></span></span><span class="line"><span class="cl"><span class="c1"># and who are older than 30
+</span></span></span><span class="line"><span class="cl"><span class="n">GET</span><span class="w"> </span><span class="o">/</span><span class="n">megacorp</span><span class="o">/</span><span class="n">employee</span><span class="o">/</span><span class="n">_search</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="s2">&#34;query&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="s2">&#34;filtered&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="s2">&#34;filter&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="s2">&#34;range&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="s2">&#34;age&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w"> </span><span class="s2">&#34;gt&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="w"> </span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="err">}</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="s2">&#34;query&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="s2">&#34;match&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                    </span><span class="s2">&#34;last_name&#34;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;smith&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                </span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="s2">&#34;took&#34;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="s2">&#34;timed_out&#34;</span><span class="p">:</span><span class="w"> </span><span class="no">false</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="s2">&#34;_shards&#34;</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s2">&#34;total&#34;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s2">&#34;successful&#34;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s2">&#34;failed&#34;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="err">}</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="s2">&#34;hits&#34;</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s2">&#34;total&#34;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s2">&#34;max_score&#34;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">30685282</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="s2">&#34;hits&#34;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">         </span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="s2">&#34;_index&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;megacorp&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="s2">&#34;_type&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;employee&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="s2">&#34;_id&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;2&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="s2">&#34;_score&#34;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">.</span><span class="mi">30685282</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="s2">&#34;_source&#34;</span><span class="p">:</span><span class="w"> </span><span class="err">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">               </span><span class="s2">&#34;first_name&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Jane&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">               </span><span class="s2">&#34;last_name&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;Smith&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">               </span><span class="s2">&#34;age&#34;</span><span class="p">:</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">               </span><span class="s2">&#34;about&#34;</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;I like to collect rock albums&#34;</span><span class="p">,</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">               </span><span class="s2">&#34;interests&#34;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">                  </span><span class="s2">&#34;music&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">               </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">         </span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="err">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="err">}</span><span class="w">
+</span></span></span></code></pre></div><h2 id="text-queries-with-or">Text queries with OR</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Find all employees who enjoy &#34;rock&#34; or &#34;climbing&#34;
+</span></span><span class="line"><span class="cl">GET /megacorp/employee/_search
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;query&#34; : {
+</span></span><span class="line"><span class="cl">        &#34;match&#34; : {
+</span></span><span class="line"><span class="cl">            &#34;about&#34; : &#34;rock climbing&#34;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>Note the OR and how relevance is different</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">   &#34;took&#34;: 5,
+</span></span><span class="line"><span class="cl">   &#34;timed_out&#34;: false,
+</span></span><span class="line"><span class="cl">   &#34;_shards&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;successful&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;failed&#34;: 0
+</span></span><span class="line"><span class="cl">   },
+</span></span><span class="line"><span class="cl">   &#34;hits&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 2,
+</span></span><span class="line"><span class="cl">      &#34;max_score&#34;: 0.16273327,
+</span></span><span class="line"><span class="cl">      &#34;hits&#34;: [
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;1&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 0.16273327,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;first_name&#34;: &#34;John&#34;,
+</span></span><span class="line"><span class="cl">               &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">               &#34;age&#34;: 25,
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: &#34;I love to go rock climbing&#34;,
+</span></span><span class="line"><span class="cl">               &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;sports&#34;,
+</span></span><span class="line"><span class="cl">                  &#34;music&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         },
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;2&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 0.016878016,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;first_name&#34;: &#34;Jane&#34;,
+</span></span><span class="line"><span class="cl">               &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">               &#34;age&#34;: 32,
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: &#34;I like to collect rock albums&#34;,
+</span></span><span class="line"><span class="cl">               &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;music&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         }
+</span></span><span class="line"><span class="cl">      ]
+</span></span><span class="line"><span class="cl">   }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>Elasticsearch can search within full text fields and return the most relevant results first.</p>
 <h2 id="exact-phrase">Exact phrase</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Find all employees who enjoy &#34;rock climbing&#34;
-GET /megacorp/employee/_search
-{
-    &#34;query&#34; : {
-        &#34;match_phrase&#34; : {
-            &#34;about&#34; : &#34;rock climbing&#34;
-        }
-    }
-}
-</code></pre></div><p>Gives back higher score</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">{
-   &#34;took&#34;: 4,
-   &#34;timed_out&#34;: false,
-   &#34;_shards&#34;: {
-      &#34;total&#34;: 5,
-      &#34;successful&#34;: 5,
-      &#34;failed&#34;: 0
-   },
-   &#34;hits&#34;: {
-      &#34;total&#34;: 1,
-      &#34;max_score&#34;: 0.23013961,
-      &#34;hits&#34;: [
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;1&#34;,
-            &#34;_score&#34;: 0.23013961,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;John&#34;,
-               &#34;last_name&#34;: &#34;Smith&#34;,
-               &#34;age&#34;: 25,
-               &#34;about&#34;: &#34;I love to go rock climbing&#34;,
-               &#34;interests&#34;: [
-                  &#34;sports&#34;,
-                  &#34;music&#34;
-               ]
-            }
-         }
-      ]
-   }
-}
-</code></pre></div><h2 id="highlight">Highlight</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">GET /megacorp/employee/_search
-{
-    &#34;query&#34; : {
-        &#34;match_phrase&#34; : {
-            &#34;about&#34; : &#34;rock climbing&#34;
-        }
-    },
-    &#34;highlight&#34;: {
-        &#34;fields&#34; : {
-            &#34;about&#34; : {}
-        }
-    }
-}
-</code></pre></div><h2 id="see-the-html-highlight">See the HTML highlight</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">{
-   &#34;took&#34;: 18,
-   &#34;timed_out&#34;: false,
-   &#34;_shards&#34;: {
-      &#34;total&#34;: 5,
-      &#34;successful&#34;: 5,
-      &#34;failed&#34;: 0
-   },
-   &#34;hits&#34;: {
-      &#34;total&#34;: 1,
-      &#34;max_score&#34;: 0.23013961,
-      &#34;hits&#34;: [
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;1&#34;,
-            &#34;_score&#34;: 0.23013961,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;John&#34;,
-               &#34;last_name&#34;: &#34;Smith&#34;,
-               &#34;age&#34;: 25,
-               &#34;about&#34;: &#34;I love to go rock climbing&#34;,
-               &#34;interests&#34;: [
-                  &#34;sports&#34;,
-                  &#34;music&#34;
-               ]
-            },
-            &#34;highlight&#34;: {
-               &#34;about&#34;: [
-                  &#34;I love to go &lt;em&gt;rock&lt;/em&gt; &lt;em&gt;climbing&lt;/em&gt;&#34;
-               ]
-            }
-         }
-      ]
-   }
-}
-</code></pre></div><h2 id="analytics">Analytics</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Find all employees who enjoy &#34;rock climbing&#34;
+</span></span><span class="line"><span class="cl">GET /megacorp/employee/_search
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;query&#34; : {
+</span></span><span class="line"><span class="cl">        &#34;match_phrase&#34; : {
+</span></span><span class="line"><span class="cl">            &#34;about&#34; : &#34;rock climbing&#34;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>Gives back higher score</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">   &#34;took&#34;: 4,
+</span></span><span class="line"><span class="cl">   &#34;timed_out&#34;: false,
+</span></span><span class="line"><span class="cl">   &#34;_shards&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;successful&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;failed&#34;: 0
+</span></span><span class="line"><span class="cl">   },
+</span></span><span class="line"><span class="cl">   &#34;hits&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 1,
+</span></span><span class="line"><span class="cl">      &#34;max_score&#34;: 0.23013961,
+</span></span><span class="line"><span class="cl">      &#34;hits&#34;: [
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;1&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 0.23013961,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;first_name&#34;: &#34;John&#34;,
+</span></span><span class="line"><span class="cl">               &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">               &#34;age&#34;: 25,
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: &#34;I love to go rock climbing&#34;,
+</span></span><span class="line"><span class="cl">               &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;sports&#34;,
+</span></span><span class="line"><span class="cl">                  &#34;music&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         }
+</span></span><span class="line"><span class="cl">      ]
+</span></span><span class="line"><span class="cl">   }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><h2 id="highlight">Highlight</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /megacorp/employee/_search
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;query&#34; : {
+</span></span><span class="line"><span class="cl">        &#34;match_phrase&#34; : {
+</span></span><span class="line"><span class="cl">            &#34;about&#34; : &#34;rock climbing&#34;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    },
+</span></span><span class="line"><span class="cl">    &#34;highlight&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;fields&#34; : {
+</span></span><span class="line"><span class="cl">            &#34;about&#34; : {}
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><h2 id="see-the-html-highlight">See the HTML highlight</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">   &#34;took&#34;: 18,
+</span></span><span class="line"><span class="cl">   &#34;timed_out&#34;: false,
+</span></span><span class="line"><span class="cl">   &#34;_shards&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;successful&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;failed&#34;: 0
+</span></span><span class="line"><span class="cl">   },
+</span></span><span class="line"><span class="cl">   &#34;hits&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 1,
+</span></span><span class="line"><span class="cl">      &#34;max_score&#34;: 0.23013961,
+</span></span><span class="line"><span class="cl">      &#34;hits&#34;: [
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;1&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 0.23013961,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;first_name&#34;: &#34;John&#34;,
+</span></span><span class="line"><span class="cl">               &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">               &#34;age&#34;: 25,
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: &#34;I love to go rock climbing&#34;,
+</span></span><span class="line"><span class="cl">               &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;sports&#34;,
+</span></span><span class="line"><span class="cl">                  &#34;music&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            },
+</span></span><span class="line"><span class="cl">            &#34;highlight&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;I love to go &lt;em&gt;rock&lt;/em&gt; &lt;em&gt;climbing&lt;/em&gt;&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         }
+</span></span><span class="line"><span class="cl">      ]
+</span></span><span class="line"><span class="cl">   }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><h2 id="analytics">Analytics</h2>
 <ul>
 <li>not recalculated</li>
 <li>on the fly</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Calculate the most popular interests for all employees
-GET /megacorp/employee/_search
-{
-  &#34;aggs&#34;: {
-    &#34;all_interests&#34;: {
-      &#34;terms&#34;: {
-        &#34;field&#34;: &#34;interests&#34;
-      }
-    }
-  }
-}
-  
-  
-{
-   &#34;took&#34;: 1,
-   &#34;timed_out&#34;: false,
-   &#34;_shards&#34;: {
-      &#34;total&#34;: 5,
-      &#34;successful&#34;: 5,
-      &#34;failed&#34;: 0
-   },
-   &#34;hits&#34;: {
-      &#34;total&#34;: 3,
-      &#34;max_score&#34;: 1,
-      &#34;hits&#34;: [
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;3&#34;,
-            &#34;_score&#34;: 1,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;Douglas&#34;,
-               &#34;last_name&#34;: &#34;Fir&#34;,
-               &#34;age&#34;: 35,
-               &#34;about&#34;: &#34;I like to build cabinets&#34;,
-               &#34;interests&#34;: [
-                  &#34;forestry&#34;
-               ]
-            }
-         },
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;1&#34;,
-            &#34;_score&#34;: 1,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;John&#34;,
-               &#34;last_name&#34;: &#34;Smith&#34;,
-               &#34;age&#34;: 25,
-               &#34;about&#34;: &#34;I love to go rock climbing&#34;,
-               &#34;interests&#34;: [
-                  &#34;sports&#34;,
-                  &#34;music&#34;
-               ]
-            }
-         },
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;2&#34;,
-            &#34;_score&#34;: 1,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;Jane&#34;,
-               &#34;last_name&#34;: &#34;Smith&#34;,
-               &#34;age&#34;: 32,
-               &#34;about&#34;: &#34;I like to collect rock albums&#34;,
-               &#34;interests&#34;: [
-                  &#34;music&#34;
-               ]
-            }
-         }
-      ]
-   },
-   &#34;aggregations&#34;: {
-      &#34;all_interests&#34;: {
-         &#34;buckets&#34;: [
-            {
-               &#34;key&#34;: &#34;music&#34;,
-               &#34;doc_count&#34;: 2
-            },
-            {
-               &#34;key&#34;: &#34;forestry&#34;,
-               &#34;doc_count&#34;: 1
-            },
-            {
-               &#34;key&#34;: &#34;sports&#34;,
-               &#34;doc_count&#34;: 1
-            }
-         ]
-      }
-   }
-}
-</code></pre></div><p>Can be combined with Query</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># Calculate the most popular interests for
-# employees named &#34;Smith&#34;
-GET /megacorp/employee/_search
-{
-  &#34;query&#34;: {
-    &#34;match&#34;: {
-      &#34;last_name&#34;: &#34;smith&#34;
-    }
-  },
-  &#34;aggs&#34;: {
-    &#34;all_interests&#34;: {
-      &#34;terms&#34;: {
-        &#34;field&#34;: &#34;interests&#34;
-      }
-    }
-  }
-}
-
-</code></pre></div><p>REsult</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">{
-   &#34;took&#34;: 1,
-   &#34;timed_out&#34;: false,
-   &#34;_shards&#34;: {
-      &#34;total&#34;: 5,
-      &#34;successful&#34;: 5,
-      &#34;failed&#34;: 0
-   },
-   &#34;hits&#34;: {
-      &#34;total&#34;: 2,
-      &#34;max_score&#34;: 0.30685282,
-      &#34;hits&#34;: [
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;1&#34;,
-            &#34;_score&#34;: 0.30685282,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;John&#34;,
-               &#34;last_name&#34;: &#34;Smith&#34;,
-               &#34;age&#34;: 25,
-               &#34;about&#34;: &#34;I love to go rock climbing&#34;,
-               &#34;interests&#34;: [
-                  &#34;sports&#34;,
-                  &#34;music&#34;
-               ]
-            }
-         },
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;2&#34;,
-            &#34;_score&#34;: 0.30685282,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;Jane&#34;,
-               &#34;last_name&#34;: &#34;Smith&#34;,
-               &#34;age&#34;: 32,
-               &#34;about&#34;: &#34;I like to collect rock albums&#34;,
-               &#34;interests&#34;: [
-                  &#34;music&#34;
-               ]
-            }
-         }
-      ]
-   },
-   &#34;aggregations&#34;: {
-      &#34;all_interests&#34;: {
-         &#34;buckets&#34;: [
-            {
-               &#34;key&#34;: &#34;music&#34;,
-               &#34;doc_count&#34;: 2
-            },
-            {
-               &#34;key&#34;: &#34;sports&#34;,
-               &#34;doc_count&#34;: 1
-            }
-         ]
-      }
-   }
-}
-</code></pre></div><p>Aggregation with average computation:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Calculate the most popular interests for all employees
+</span></span><span class="line"><span class="cl">GET /megacorp/employee/_search
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;aggs&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;all_interests&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;terms&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;field&#34;: &#34;interests&#34;
+</span></span><span class="line"><span class="cl">      }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">   &#34;took&#34;: 1,
+</span></span><span class="line"><span class="cl">   &#34;timed_out&#34;: false,
+</span></span><span class="line"><span class="cl">   &#34;_shards&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;successful&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;failed&#34;: 0
+</span></span><span class="line"><span class="cl">   },
+</span></span><span class="line"><span class="cl">   &#34;hits&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 3,
+</span></span><span class="line"><span class="cl">      &#34;max_score&#34;: 1,
+</span></span><span class="line"><span class="cl">      &#34;hits&#34;: [
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;3&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 1,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;first_name&#34;: &#34;Douglas&#34;,
+</span></span><span class="line"><span class="cl">               &#34;last_name&#34;: &#34;Fir&#34;,
+</span></span><span class="line"><span class="cl">               &#34;age&#34;: 35,
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: &#34;I like to build cabinets&#34;,
+</span></span><span class="line"><span class="cl">               &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;forestry&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         },
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;1&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 1,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;first_name&#34;: &#34;John&#34;,
+</span></span><span class="line"><span class="cl">               &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">               &#34;age&#34;: 25,
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: &#34;I love to go rock climbing&#34;,
+</span></span><span class="line"><span class="cl">               &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;sports&#34;,
+</span></span><span class="line"><span class="cl">                  &#34;music&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         },
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;2&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 1,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;first_name&#34;: &#34;Jane&#34;,
+</span></span><span class="line"><span class="cl">               &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">               &#34;age&#34;: 32,
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: &#34;I like to collect rock albums&#34;,
+</span></span><span class="line"><span class="cl">               &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;music&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         }
+</span></span><span class="line"><span class="cl">      ]
+</span></span><span class="line"><span class="cl">   },
+</span></span><span class="line"><span class="cl">   &#34;aggregations&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;all_interests&#34;: {
+</span></span><span class="line"><span class="cl">         &#34;buckets&#34;: [
+</span></span><span class="line"><span class="cl">            {
+</span></span><span class="line"><span class="cl">               &#34;key&#34;: &#34;music&#34;,
+</span></span><span class="line"><span class="cl">               &#34;doc_count&#34;: 2
+</span></span><span class="line"><span class="cl">            },
+</span></span><span class="line"><span class="cl">            {
+</span></span><span class="line"><span class="cl">               &#34;key&#34;: &#34;forestry&#34;,
+</span></span><span class="line"><span class="cl">               &#34;doc_count&#34;: 1
+</span></span><span class="line"><span class="cl">            },
+</span></span><span class="line"><span class="cl">            {
+</span></span><span class="line"><span class="cl">               &#34;key&#34;: &#34;sports&#34;,
+</span></span><span class="line"><span class="cl">               &#34;doc_count&#34;: 1
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         ]
+</span></span><span class="line"><span class="cl">      }
+</span></span><span class="line"><span class="cl">   }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>Can be combined with Query</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Calculate the most popular interests for
+</span></span><span class="line"><span class="cl"># employees named &#34;Smith&#34;
+</span></span><span class="line"><span class="cl">GET /megacorp/employee/_search
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;query&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;match&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;last_name&#34;: &#34;smith&#34;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">  },
+</span></span><span class="line"><span class="cl">  &#34;aggs&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;all_interests&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;terms&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;field&#34;: &#34;interests&#34;
+</span></span><span class="line"><span class="cl">      }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>REsult</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">   &#34;took&#34;: 1,
+</span></span><span class="line"><span class="cl">   &#34;timed_out&#34;: false,
+</span></span><span class="line"><span class="cl">   &#34;_shards&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;successful&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;failed&#34;: 0
+</span></span><span class="line"><span class="cl">   },
+</span></span><span class="line"><span class="cl">   &#34;hits&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 2,
+</span></span><span class="line"><span class="cl">      &#34;max_score&#34;: 0.30685282,
+</span></span><span class="line"><span class="cl">      &#34;hits&#34;: [
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;1&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 0.30685282,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;first_name&#34;: &#34;John&#34;,
+</span></span><span class="line"><span class="cl">               &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">               &#34;age&#34;: 25,
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: &#34;I love to go rock climbing&#34;,
+</span></span><span class="line"><span class="cl">               &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;sports&#34;,
+</span></span><span class="line"><span class="cl">                  &#34;music&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         },
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;2&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 0.30685282,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;first_name&#34;: &#34;Jane&#34;,
+</span></span><span class="line"><span class="cl">               &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">               &#34;age&#34;: 32,
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: &#34;I like to collect rock albums&#34;,
+</span></span><span class="line"><span class="cl">               &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;music&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         }
+</span></span><span class="line"><span class="cl">      ]
+</span></span><span class="line"><span class="cl">   },
+</span></span><span class="line"><span class="cl">   &#34;aggregations&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;all_interests&#34;: {
+</span></span><span class="line"><span class="cl">         &#34;buckets&#34;: [
+</span></span><span class="line"><span class="cl">            {
+</span></span><span class="line"><span class="cl">               &#34;key&#34;: &#34;music&#34;,
+</span></span><span class="line"><span class="cl">               &#34;doc_count&#34;: 2
+</span></span><span class="line"><span class="cl">            },
+</span></span><span class="line"><span class="cl">            {
+</span></span><span class="line"><span class="cl">               &#34;key&#34;: &#34;sports&#34;,
+</span></span><span class="line"><span class="cl">               &#34;doc_count&#34;: 1
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         ]
+</span></span><span class="line"><span class="cl">      }
+</span></span><span class="line"><span class="cl">   }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>Aggregation with average computation:</p>
 <h2 id="hierarchical-roll-ups">Hierarchical roll-ups</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">
-# Calculate the average age of employee per interest
-GET /megacorp/employee/_search
-{
-    &#34;aggs&#34; : {
-        &#34;all_interests&#34; : {
-            &#34;terms&#34; : { &#34;field&#34; : &#34;interests&#34; },
-            &#34;aggs&#34; : {
-                &#34;avg_age&#34; : {
-                    &#34;avg&#34; : { &#34;field&#34; : &#34;age&#34; }
-                }
-            }
-        }
-    }
-}
-</code></pre></div><div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">{
-   &#34;took&#34;: 1,
-   &#34;timed_out&#34;: false,
-   &#34;_shards&#34;: {
-      &#34;total&#34;: 5,
-      &#34;successful&#34;: 5,
-      &#34;failed&#34;: 0
-   },
-   &#34;hits&#34;: {
-      &#34;total&#34;: 3,
-      &#34;max_score&#34;: 1,
-      &#34;hits&#34;: [
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;3&#34;,
-            &#34;_score&#34;: 1,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;Douglas&#34;,
-               &#34;last_name&#34;: &#34;Fir&#34;,
-               &#34;age&#34;: 35,
-               &#34;about&#34;: &#34;I like to build cabinets&#34;,
-               &#34;interests&#34;: [
-                  &#34;forestry&#34;
-               ]
-            }
-         },
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;1&#34;,
-            &#34;_score&#34;: 1,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;John&#34;,
-               &#34;last_name&#34;: &#34;Smith&#34;,
-               &#34;age&#34;: 25,
-               &#34;about&#34;: &#34;I love to go rock climbing&#34;,
-               &#34;interests&#34;: [
-                  &#34;sports&#34;,
-                  &#34;music&#34;
-               ]
-            }
-         },
-         {
-            &#34;_index&#34;: &#34;megacorp&#34;,
-            &#34;_type&#34;: &#34;employee&#34;,
-            &#34;_id&#34;: &#34;2&#34;,
-            &#34;_score&#34;: 1,
-            &#34;_source&#34;: {
-               &#34;first_name&#34;: &#34;Jane&#34;,
-               &#34;last_name&#34;: &#34;Smith&#34;,
-               &#34;age&#34;: 32,
-               &#34;about&#34;: &#34;I like to collect rock albums&#34;,
-               &#34;interests&#34;: [
-                  &#34;music&#34;
-               ]
-            }
-         }
-      ]
-   },
-   &#34;aggregations&#34;: {
-      &#34;all_interests&#34;: {
-         &#34;buckets&#34;: [
-            {
-               &#34;key&#34;: &#34;music&#34;,
-               &#34;doc_count&#34;: 2,
-               &#34;avg_age&#34;: {
-                  &#34;value&#34;: 28.5
-               }
-            },
-            {
-               &#34;key&#34;: &#34;forestry&#34;,
-               &#34;doc_count&#34;: 1,
-               &#34;avg_age&#34;: {
-                  &#34;value&#34;: 35
-               }
-            },
-            {
-               &#34;key&#34;: &#34;sports&#34;,
-               &#34;doc_count&#34;: 1,
-               &#34;avg_age&#34;: {
-                  &#34;value&#34;: 25
-               }
-            }
-         ]
-      }
-   }
-}
-
-</code></pre></div><h1 id="experiments-with-loaded-logs">Experiments with loaded logs</h1>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">GET /_all/logs/_search
-{
-  &#34;query&#34;: {
-    &#34;match_all&#34;: {}
-  }
-}
- 
- 
-GET /_all/logs/_search
-{
-  &#34;query&#34;: {
-    &#34;match&#34;: {
-      &#34;level&#34;: &#34;ERROR&#34;
-    }
-  }
-}
-</code></pre></div><h2 id="retrieve-document">Retrieve document:</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">GET /website/blog/123?pretty
- 
-# only source, no metadata
-GET /website/blog/123/_source
- 
-# only some fields
-GET /website/blog/123?_source=title,text
-</code></pre></div><h2 id="existence-check">Existence check</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">curl -i -XHEAD http://localhost:9200/website/blog/123
- 
-HTTP/1.1 200 OK
-Content-Type: text/plain; charset=UTF-8
-Content-Length: 0
- 
-curl -i -XHEAD http://localhost:9200/website/blog/124
- 
-HTTP/1.1 404 Not Found
-Content-Type: text/plain; charset=UTF-8
-Content-Length: 0
-</code></pre></div><h2 id="update">Update</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Calculate the average age of employee per interest
+</span></span><span class="line"><span class="cl">GET /megacorp/employee/_search
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;aggs&#34; : {
+</span></span><span class="line"><span class="cl">        &#34;all_interests&#34; : {
+</span></span><span class="line"><span class="cl">            &#34;terms&#34; : { &#34;field&#34; : &#34;interests&#34; },
+</span></span><span class="line"><span class="cl">            &#34;aggs&#34; : {
+</span></span><span class="line"><span class="cl">                &#34;avg_age&#34; : {
+</span></span><span class="line"><span class="cl">                    &#34;avg&#34; : { &#34;field&#34; : &#34;age&#34; }
+</span></span><span class="line"><span class="cl">                }
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">   &#34;took&#34;: 1,
+</span></span><span class="line"><span class="cl">   &#34;timed_out&#34;: false,
+</span></span><span class="line"><span class="cl">   &#34;_shards&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;successful&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;failed&#34;: 0
+</span></span><span class="line"><span class="cl">   },
+</span></span><span class="line"><span class="cl">   &#34;hits&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 3,
+</span></span><span class="line"><span class="cl">      &#34;max_score&#34;: 1,
+</span></span><span class="line"><span class="cl">      &#34;hits&#34;: [
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;3&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 1,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;first_name&#34;: &#34;Douglas&#34;,
+</span></span><span class="line"><span class="cl">               &#34;last_name&#34;: &#34;Fir&#34;,
+</span></span><span class="line"><span class="cl">               &#34;age&#34;: 35,
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: &#34;I like to build cabinets&#34;,
+</span></span><span class="line"><span class="cl">               &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;forestry&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         },
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;1&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 1,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;first_name&#34;: &#34;John&#34;,
+</span></span><span class="line"><span class="cl">               &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">               &#34;age&#34;: 25,
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: &#34;I love to go rock climbing&#34;,
+</span></span><span class="line"><span class="cl">               &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;sports&#34;,
+</span></span><span class="line"><span class="cl">                  &#34;music&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         },
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;megacorp&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;employee&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;2&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 1,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;first_name&#34;: &#34;Jane&#34;,
+</span></span><span class="line"><span class="cl">               &#34;last_name&#34;: &#34;Smith&#34;,
+</span></span><span class="line"><span class="cl">               &#34;age&#34;: 32,
+</span></span><span class="line"><span class="cl">               &#34;about&#34;: &#34;I like to collect rock albums&#34;,
+</span></span><span class="line"><span class="cl">               &#34;interests&#34;: [
+</span></span><span class="line"><span class="cl">                  &#34;music&#34;
+</span></span><span class="line"><span class="cl">               ]
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         }
+</span></span><span class="line"><span class="cl">      ]
+</span></span><span class="line"><span class="cl">   },
+</span></span><span class="line"><span class="cl">   &#34;aggregations&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;all_interests&#34;: {
+</span></span><span class="line"><span class="cl">         &#34;buckets&#34;: [
+</span></span><span class="line"><span class="cl">            {
+</span></span><span class="line"><span class="cl">               &#34;key&#34;: &#34;music&#34;,
+</span></span><span class="line"><span class="cl">               &#34;doc_count&#34;: 2,
+</span></span><span class="line"><span class="cl">               &#34;avg_age&#34;: {
+</span></span><span class="line"><span class="cl">                  &#34;value&#34;: 28.5
+</span></span><span class="line"><span class="cl">               }
+</span></span><span class="line"><span class="cl">            },
+</span></span><span class="line"><span class="cl">            {
+</span></span><span class="line"><span class="cl">               &#34;key&#34;: &#34;forestry&#34;,
+</span></span><span class="line"><span class="cl">               &#34;doc_count&#34;: 1,
+</span></span><span class="line"><span class="cl">               &#34;avg_age&#34;: {
+</span></span><span class="line"><span class="cl">                  &#34;value&#34;: 35
+</span></span><span class="line"><span class="cl">               }
+</span></span><span class="line"><span class="cl">            },
+</span></span><span class="line"><span class="cl">            {
+</span></span><span class="line"><span class="cl">               &#34;key&#34;: &#34;sports&#34;,
+</span></span><span class="line"><span class="cl">               &#34;doc_count&#34;: 1,
+</span></span><span class="line"><span class="cl">               &#34;avg_age&#34;: {
+</span></span><span class="line"><span class="cl">                  &#34;value&#34;: 25
+</span></span><span class="line"><span class="cl">               }
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         ]
+</span></span><span class="line"><span class="cl">      }
+</span></span><span class="line"><span class="cl">   }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><h1 id="experiments-with-loaded-logs">Experiments with loaded logs</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /_all/logs/_search
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;query&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;match_all&#34;: {}
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">GET /_all/logs/_search
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;query&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;match&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;level&#34;: &#34;ERROR&#34;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><h2 id="retrieve-document">Retrieve document:</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /website/blog/123?pretty
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># only source, no metadata
+</span></span><span class="line"><span class="cl">GET /website/blog/123/_source
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># only some fields
+</span></span><span class="line"><span class="cl">GET /website/blog/123?_source=title,text
+</span></span></code></pre></div><h2 id="existence-check">Existence check</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">curl -i -XHEAD http://localhost:9200/website/blog/123
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">HTTP/1.1 200 OK
+</span></span><span class="line"><span class="cl">Content-Type: text/plain; charset=UTF-8
+</span></span><span class="line"><span class="cl">Content-Length: 0
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">curl -i -XHEAD http://localhost:9200/website/blog/124
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">HTTP/1.1 404 Not Found
+</span></span><span class="line"><span class="cl">Content-Type: text/plain; charset=UTF-8
+</span></span><span class="line"><span class="cl">Content-Length: 0
+</span></span></code></pre></div><h2 id="update">Update</h2>
 <p>whole doc - same index API</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">PUT /website/blog/123
-{
-  &#34;title&#34;: &#34;My first blog entry&#34;,
-  &#34;text&#34;:  &#34;I am starting to get the hang of this...&#34;,
-  &#34;date&#34;:  &#34;2014/01/02&#34;
-}
- 
-# note new version, created false
-{
-  &#34;_index&#34; :   &#34;website&#34;,
-  &#34;_type&#34; :    &#34;blog&#34;,
-  &#34;_id&#34; :      &#34;123&#34;,
-  &#34;_version&#34; : 2,
-  &#34;created&#34;:   false 
-}
-</code></pre></div><p>Internally, Elasticsearch has marked the old document as deleted and added an entirely new document. The old version of the document doesn’t disappear immediately, although you won’t be able to access it. Elasticsearch cleans up deleted documents in the background as you continue to index more data.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">PUT /website/blog/123
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;title&#34;: &#34;My first blog entry&#34;,
+</span></span><span class="line"><span class="cl">  &#34;text&#34;:  &#34;I am starting to get the hang of this...&#34;,
+</span></span><span class="line"><span class="cl">  &#34;date&#34;:  &#34;2014/01/02&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># note new version, created false
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;_index&#34; :   &#34;website&#34;,
+</span></span><span class="line"><span class="cl">  &#34;_type&#34; :    &#34;blog&#34;,
+</span></span><span class="line"><span class="cl">  &#34;_id&#34; :      &#34;123&#34;,
+</span></span><span class="line"><span class="cl">  &#34;_version&#34; : 2,
+</span></span><span class="line"><span class="cl">  &#34;created&#34;:   false 
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>Internally, Elasticsearch has marked the old document as deleted and added an entirely new document. The old version of the document doesn’t disappear immediately, although you won’t be able to access it. Elasticsearch cleans up deleted documents in the background as you continue to index more data.</p>
 <h2 id="create">Create</h2>
 <p>let the ES generate new ID</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">POST /website/blog/
-{ ... }
- 
-# or force our ID but want to allow create only, not update
- 
-PUT /website/blog/123?op_type=create
-{ ... }
- 
-# another way
-PUT /website/blog/123/_create
-{ ... }
- 
-# will error if it exists:
- 
-{
-  &#34;error&#34; : &#34;DocumentAlreadyExistsException[[website][4] [blog][123]:
-             document already exists]&#34;,
-  &#34;status&#34; : 409
-}
-</code></pre></div><h2 id="delete">Delete</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">GET /logstash-2014.08.21/_search
- 
-{
-   &#34;took&#34;: 1,
-   &#34;timed_out&#34;: false,
-   &#34;_shards&#34;: {
-      &#34;total&#34;: 5,
-      &#34;successful&#34;: 5,
-      &#34;failed&#34;: 0
-   },
-   &#34;hits&#34;: {
-      &#34;total&#34;: 1,
-      &#34;max_score&#34;: 1,
-      &#34;hits&#34;: [
-         {
-            &#34;_index&#34;: &#34;logstash-2014.08.21&#34;,
-            &#34;_type&#34;: &#34;logs&#34;,
-            &#34;_id&#34;: &#34;cjV9RKSBS5K5pRh7QlfllQ&#34;,
-            &#34;_score&#34;: 1,
-            &#34;_source&#34;: {
-               &#34;message&#34;: &#34;asdasdasd asasdasd&#34;,
-               &#34;@version&#34;: &#34;1&#34;,
-               &#34;@timestamp&#34;: &#34;2014-08-21T21:41:46.016Z&#34;,
-               &#34;host&#34;: &#34;Miros-MacBook-Pro-2.local&#34;
-            }
-         }
-      ]
-   }
-}
- 
- 
-DELETE /logstash-2014.08.21/logs/cjV9RKSBS5K5pRh7QlfllQ
- 
-{
-   &#34;found&#34;: true,
-   &#34;_index&#34;: &#34;logstash-2014.08.21&#34;,
-   &#34;_type&#34;: &#34;logs&#34;,
-   &#34;_id&#34;: &#34;cjV9RKSBS5K5pRh7QlfllQ&#34;,
-   &#34;_version&#34;: 2
-}
- 
-GET /logstash-2014.08.21/_search
- 
-{
-   &#34;took&#34;: 0,
-   &#34;timed_out&#34;: false,
-   &#34;_shards&#34;: {
-      &#34;total&#34;: 5,
-      &#34;successful&#34;: 5,
-      &#34;failed&#34;: 0
-   },
-   &#34;hits&#34;: {
-      &#34;total&#34;: 0,
-      &#34;max_score&#34;: null,
-      &#34;hits&#34;: []
-   }
-}
-</code></pre></div><p>afterwards, index still exist:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">
-➜  elasticsearch-1.3.2  es -v indices
-status name                pri rep size    bytes   docs
-yellow logstash-2014.08.21   5   1         11946      0
-yellow shakespeare           5   1      19087632 111396
-yellow logstash-2014.08.22   5   1         47220     18
-yellow megacorp              5   1         11067      3
-yellow logstash-2014.08.27   5   1      24996521  14490
-yellow logstash-2014.08.28   5   1      36012778  22645
-yellow kibana-int            5   1         36253      3
-yellow .marvel-kibana        5   1          3586      1
-yellow .marvel-2014.08.28    1   1      16360673   7980
-yellow logstash-2013.12.11   5   1          9943      1
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">POST /website/blog/
+</span></span><span class="line"><span class="cl">{ ... }
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># or force our ID but want to allow create only, not update
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">PUT /website/blog/123?op_type=create
+</span></span><span class="line"><span class="cl">{ ... }
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># another way
+</span></span><span class="line"><span class="cl">PUT /website/blog/123/_create
+</span></span><span class="line"><span class="cl">{ ... }
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># will error if it exists:
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;error&#34; : &#34;DocumentAlreadyExistsException[[website][4] [blog][123]:
+</span></span><span class="line"><span class="cl">             document already exists]&#34;,
+</span></span><span class="line"><span class="cl">  &#34;status&#34; : 409
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><h2 id="delete">Delete</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">GET /logstash-2014.08.21/_search
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">   &#34;took&#34;: 1,
+</span></span><span class="line"><span class="cl">   &#34;timed_out&#34;: false,
+</span></span><span class="line"><span class="cl">   &#34;_shards&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;successful&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;failed&#34;: 0
+</span></span><span class="line"><span class="cl">   },
+</span></span><span class="line"><span class="cl">   &#34;hits&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 1,
+</span></span><span class="line"><span class="cl">      &#34;max_score&#34;: 1,
+</span></span><span class="line"><span class="cl">      &#34;hits&#34;: [
+</span></span><span class="line"><span class="cl">         {
+</span></span><span class="line"><span class="cl">            &#34;_index&#34;: &#34;logstash-2014.08.21&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_type&#34;: &#34;logs&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_id&#34;: &#34;cjV9RKSBS5K5pRh7QlfllQ&#34;,
+</span></span><span class="line"><span class="cl">            &#34;_score&#34;: 1,
+</span></span><span class="line"><span class="cl">            &#34;_source&#34;: {
+</span></span><span class="line"><span class="cl">               &#34;message&#34;: &#34;asdasdasd asasdasd&#34;,
+</span></span><span class="line"><span class="cl">               &#34;@version&#34;: &#34;1&#34;,
+</span></span><span class="line"><span class="cl">               &#34;@timestamp&#34;: &#34;2014-08-21T21:41:46.016Z&#34;,
+</span></span><span class="line"><span class="cl">               &#34;host&#34;: &#34;Miros-MacBook-Pro-2.local&#34;
+</span></span><span class="line"><span class="cl">            }
+</span></span><span class="line"><span class="cl">         }
+</span></span><span class="line"><span class="cl">      ]
+</span></span><span class="line"><span class="cl">   }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">DELETE /logstash-2014.08.21/logs/cjV9RKSBS5K5pRh7QlfllQ
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">   &#34;found&#34;: true,
+</span></span><span class="line"><span class="cl">   &#34;_index&#34;: &#34;logstash-2014.08.21&#34;,
+</span></span><span class="line"><span class="cl">   &#34;_type&#34;: &#34;logs&#34;,
+</span></span><span class="line"><span class="cl">   &#34;_id&#34;: &#34;cjV9RKSBS5K5pRh7QlfllQ&#34;,
+</span></span><span class="line"><span class="cl">   &#34;_version&#34;: 2
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">GET /logstash-2014.08.21/_search
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">   &#34;took&#34;: 0,
+</span></span><span class="line"><span class="cl">   &#34;timed_out&#34;: false,
+</span></span><span class="line"><span class="cl">   &#34;_shards&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;successful&#34;: 5,
+</span></span><span class="line"><span class="cl">      &#34;failed&#34;: 0
+</span></span><span class="line"><span class="cl">   },
+</span></span><span class="line"><span class="cl">   &#34;hits&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;total&#34;: 0,
+</span></span><span class="line"><span class="cl">      &#34;max_score&#34;: null,
+</span></span><span class="line"><span class="cl">      &#34;hits&#34;: []
+</span></span><span class="line"><span class="cl">   }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div><p>afterwards, index still exist:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">➜  elasticsearch-1.3.2  es -v indices
+</span></span><span class="line"><span class="cl">status name                pri rep size    bytes   docs
+</span></span><span class="line"><span class="cl">yellow logstash-2014.08.21   5   1         11946      0
+</span></span><span class="line"><span class="cl">yellow shakespeare           5   1      19087632 111396
+</span></span><span class="line"><span class="cl">yellow logstash-2014.08.22   5   1         47220     18
+</span></span><span class="line"><span class="cl">yellow megacorp              5   1         11067      3
+</span></span><span class="line"><span class="cl">yellow logstash-2014.08.27   5   1      24996521  14490
+</span></span><span class="line"><span class="cl">yellow logstash-2014.08.28   5   1      36012778  22645
+</span></span><span class="line"><span class="cl">yellow kibana-int            5   1         36253      3
+</span></span><span class="line"><span class="cl">yellow .marvel-kibana        5   1          3586      1
+</span></span><span class="line"><span class="cl">yellow .marvel-2014.08.28    1   1      16360673   7980
+</span></span><span class="line"><span class="cl">yellow logstash-2013.12.11   5   1          9943      1
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -954,7 +968,7 @@ yellow logstash-2013.12.11   5   1          9943      1
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -972,13 +986,10 @@ yellow logstash-2013.12.11   5   1          9943      1
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -989,7 +1000,10 @@ yellow logstash-2013.12.11   5   1          9943      1
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

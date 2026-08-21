@@ -19,15 +19,16 @@
 <meta name="author" content="Miro Adamy" /><meta name="description" content="First step is to get your personal token. Log on to Terraform Cloud, go to https://app.terraform.io/app/settings/tokens and generate new token.
 Note: it is important to save the token to safe place - this is only time you will see it.
 Export the token:
-export TFE_TOKEN=&amp;lt;THE-TOKEN-VALUE&amp;gt; The documentation for Terraform API is here
-It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described." /><meta name="keywords" content="blog, Miro" />
+export TFE_TOKEN=&lt;THE-TOKEN-VALUE&gt; The documentation for Terraform API is here
+It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described. It could also used better examples.
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2020-05-14-accessing-tfcloud-api/" />
@@ -38,40 +39,45 @@ It is OK documentation but not the greatest one, however. There are two versions
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Accessing Terraform cloud Module registry programatically" />
-<meta property="og:description" content="First step is to get your personal token. Log on to Terraform Cloud, go to https://app.terraform.io/app/settings/tokens and generate new token.
+<meta property="og:url" content="https://miroadamy.com/posts/2020-05-14-accessing-tfcloud-api/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Accessing Terraform cloud Module registry programatically">
+	<meta property="og:description" content="First step is to get your personal token. Log on to Terraform Cloud, go to https://app.terraform.io/app/settings/tokens and generate new token.
 Note: it is important to save the token to safe place - this is only time you will see it.
 Export the token:
 export TFE_TOKEN=&lt;THE-TOKEN-VALUE&gt; The documentation for Terraform API is here
-It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2020-05-14-accessing-tfcloud-api/" />
-<meta property="article:published_time" content="2020-05-14T21:22:48+08:00" />
-<meta property="article:modified_time" content="2020-05-14T21:22:48+08:00" />
-<meta itemprop="name" content="Accessing Terraform cloud Module registry programatically">
-<meta itemprop="description" content="First step is to get your personal token. Log on to Terraform Cloud, go to https://app.terraform.io/app/settings/tokens and generate new token.
+It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described. It could also used better examples.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2020-05-14T21:22:48+08:00">
+		<meta property="article:modified_time" content="2020-05-14T21:22:48+08:00">
+		<meta property="article:tag" content="Iaac">
+		<meta property="article:tag" content="Terraform">
+		<meta property="article:tag" content="Cli">
+
+	<meta itemprop="name" content="Accessing Terraform cloud Module registry programatically">
+	<meta itemprop="description" content="First step is to get your personal token. Log on to Terraform Cloud, go to https://app.terraform.io/app/settings/tokens and generate new token.
 Note: it is important to save the token to safe place - this is only time you will see it.
 Export the token:
 export TFE_TOKEN=&lt;THE-TOKEN-VALUE&gt; The documentation for Terraform API is here
-It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described.">
-<meta itemprop="datePublished" content="2020-05-14T21:22:48+08:00" />
-<meta itemprop="dateModified" content="2020-05-14T21:22:48+08:00" />
-<meta itemprop="wordCount" content="336">
-
-
-
-<meta itemprop="keywords" content="iaac,terraform,cli," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Accessing Terraform cloud Module registry programatically"/>
-<meta name="twitter:description" content="First step is to get your personal token. Log on to Terraform Cloud, go to https://app.terraform.io/app/settings/tokens and generate new token.
+It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described. It could also used better examples.">
+	<meta itemprop="datePublished" content="2020-05-14T21:22:48+08:00">
+	<meta itemprop="dateModified" content="2020-05-14T21:22:48+08:00">
+	<meta itemprop="wordCount" content="336">
+	<meta itemprop="keywords" content="Iaac,Terraform,Cli">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Accessing Terraform cloud Module registry programatically">
+	<meta name="twitter:description" content="First step is to get your personal token. Log on to Terraform Cloud, go to https://app.terraform.io/app/settings/tokens and generate new token.
 Note: it is important to save the token to safe place - this is only time you will see it.
 Export the token:
 export TFE_TOKEN=&lt;THE-TOKEN-VALUE&gt; The documentation for Terraform API is here
-It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described."/>
+It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described. It could also used better examples.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -108,12 +114,21 @@ It is OK documentation but not the greatest one, however. There are two versions
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -130,6 +145,7 @@ It is OK documentation but not the greatest one, however. There are two versions
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -162,92 +178,91 @@ It is OK documentation but not the greatest one, however. There are two versions
 <p>Note: it is important to save the token to safe place - this is only time you will see it.</p>
 <p><img src="/images/terraform-token.png" alt="token"></p>
 <p>Export the token:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">TFE_TOKEN</span><span class="o">=</span>&lt;THE-TOKEN-VALUE&gt;
-</code></pre></div><p>The documentation for Terraform API is <a href="https://www.terraform.io/docs/cloud/api/index.html">here</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">TFE_TOKEN</span><span class="o">=</span>&lt;THE-TOKEN-VALUE&gt;
+</span></span></code></pre></div><p>The documentation for Terraform API is <a href="https://www.terraform.io/docs/cloud/api/index.html">here</a></p>
 <p>It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described. It could also used better examples.</p>
 <p>Here is some useful information one can do with the freshly acquired token:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">
-<span class="c1"># Get the account info</span>
-curl -s --header <span class="s2">&#34;Authorization: Bearer </span><span class="nv">$TFE_TOKEN</span><span class="s2">&#34;</span> --request GET  https://app.terraform.io/api/v2/account/details <span class="p">|</span> jq .
-
-<span class="o">{</span>
-  <span class="s2">&#34;data&#34;</span>: <span class="o">{</span>
-    <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;user-&lt;DELETED&gt;7&#34;</span>,
-    <span class="s2">&#34;type&#34;</span>: <span class="s2">&#34;users&#34;</span>,
-    <span class="s2">&#34;attributes&#34;</span>: <span class="o">{</span>
-      <span class="s2">&#34;username&#34;</span>: <span class="s2">&#34;&lt;DELETED&gt;&#34;</span>,
-      <span class="s2">&#34;is-service-account&#34;</span>: false,
-      <span class="s2">&#34;avatar-url&#34;</span>: <span class="s2">&#34;https://www.gravatar.com/avatar/db6b71&lt;DELETED&gt;?s=100&amp;d=mm&#34;</span>,
-      <span class="s2">&#34;password&#34;</span>: null,
-      <span class="s2">&#34;enterprise-support&#34;</span>: true,
-      <span class="s2">&#34;is-site-admin&#34;</span>: false,
-      <span class="s2">&#34;is-sso-login&#34;</span>: false,
-      <span class="s2">&#34;two-factor&#34;</span>: <span class="o">{</span>
-        <span class="s2">&#34;enabled&#34;</span>: true,
-        <span class="s2">&#34;verified&#34;</span>: <span class="nb">true</span>
-      <span class="o">}</span>,
-      <span class="s2">&#34;email&#34;</span>: <span class="s2">&#34;&lt;DELETED&gt;&#34;</span>,
-      <span class="s2">&#34;unconfirmed-email&#34;</span>: null,
-      <span class="s2">&#34;has-git-hub-app-token&#34;</span>: false,
-      <span class="s2">&#34;is-confirmed&#34;</span>: true,
-      <span class="s2">&#34;onboarding-status&#34;</span>: null,
-      <span class="s2">&#34;permissions&#34;</span>: <span class="o">{</span>
-        &lt;DELETED&gt;
-      <span class="o">}</span>
-    <span class="o">}</span>,
-    <span class="s2">&#34;relationships&#34;</span>: <span class="o">{</span>
-      <span class="s2">&#34;authentication-tokens&#34;</span>: <span class="o">{</span>
-        <span class="s2">&#34;links&#34;</span>: <span class="o">{</span>
-          <span class="s2">&#34;related&#34;</span>: <span class="s2">&#34;/api/v2/users/user-&lt;DELETED&gt;/authentication-tokens&#34;</span>
-        <span class="o">}</span>
-      <span class="o">}</span>
-    <span class="o">}</span>,
-    <span class="s2">&#34;links&#34;</span>: <span class="o">{</span>
-      <span class="s2">&#34;self&#34;</span>: <span class="s2">&#34;/api/v2/users/user-&lt;DELETED&gt;&#34;</span>
-    <span class="o">}</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-
-
-<span class="nb">export</span> <span class="nv">MY_ORG</span><span class="o">=</span>&lt;YOUR-ORG-IN-TERRAFORM-CLOUD-NAME&gt;
-
-<span class="c1"># Get the teams for the organization</span>
-curl -s --header <span class="s2">&#34;Authorization: Bearer </span><span class="nv">$TFE_TOKEN</span><span class="s2">&#34;</span> --request GET  https://app.terraform.io/api/v2/organizations/<span class="nv">$MY_ORG</span>/teams <span class="p">|</span> jq .
-
-curl -s --header <span class="s2">&#34;Authorization: Bearer </span><span class="nv">$TFE_TOKEN</span><span class="s2">&#34;</span> --request GET  https://app.terraform.io/api/v2/organizations/<span class="nv">$MY_ORG</span>/workspaces <span class="p">|</span> jq .
-
-</code></pre></div><p>In order to list modules (my original intent), one must use V1 of the API:</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">curl -s --header <span class="s2">&#34;Authorization: Bearer </span><span class="nv">$TFE_TOKEN</span><span class="s2">&#34;</span> --request GET  https://app.terraform.io/api/registry/v1/modules <span class="p">|</span> jq .
-<span class="o">{</span>
-  <span class="s2">&#34;meta&#34;</span>: <span class="o">{</span>
-    <span class="s2">&#34;limit&#34;</span>: 15,
-    <span class="s2">&#34;current_offset&#34;</span>: 0,
-    <span class="s2">&#34;next_offset&#34;</span>: 15,
-    <span class="s2">&#34;next_url&#34;</span>: <span class="s2">&#34;//@/v1/modules?namespace=&lt;DELETED&gt;&#34;</span>
-  <span class="o">}</span>,
-  <span class="s2">&#34;modules&#34;</span>: <span class="o">[</span>
-    <span class="o">{</span>
-      <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;&lt;DELETED/iam-role/aws/0.5.1&#34;</span>,
-      <span class="s2">&#34;owner&#34;</span>: <span class="s2">&#34;&#34;</span>,
-      <span class="s2">&#34;namespace&#34;</span>: <span class="s2">&#34;&lt;DELETED&gt;&#34;</span>,
-      <span class="s2">&#34;name&#34;</span>: <span class="s2">&#34;iam-role&#34;</span>,
-      <span class="s2">&#34;version&#34;</span>: <span class="s2">&#34;0.5.1&#34;</span>,
-      <span class="s2">&#34;provider&#34;</span>: <span class="s2">&#34;aws&#34;</span>,
-      <span class="s2">&#34;description&#34;</span>: <span class="s2">&#34;Terraform Module - AWS IAM Role&#34;</span>,
-      <span class="s2">&#34;source&#34;</span>: <span class="s2">&#34;https://github.com/&lt;DELETED&gt;&#34;</span>,
-      <span class="s2">&#34;tag&#34;</span>: <span class="s2">&#34;&#34;</span>,
-      <span class="s2">&#34;published_at&#34;</span>: <span class="s2">&#34;2020-04-18T13:53:47.261884Z&#34;</span>,
-      <span class="s2">&#34;downloads&#34;</span>: 1345,
-      <span class="s2">&#34;verified&#34;</span>: <span class="nb">false</span>
-    <span class="o">}</span>,
-    &lt;DELETED&gt;
-  <span class="o">]</span>
-<span class="o">}</span>
-</code></pre></div><p>In order to retrieve more than 15 , use the <code>limit</code> URL parameter:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">curl -s --header &#34;Authorization: Bearer $TFE_TOKEN&#34; --request GET  https://app.terraform.io/api/registry/v1/modules\?limit\=100  
-</code></pre></div><p>Here is example that lists only the names of the modules in the repository.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">curl -s --header &#34;Authorization: Bearer $TFE_TOKEN&#34; --request GET  https://app.terraform.io/api/registry/v1/modules\?limit\=100  | jq &#39;.modules[].id&#39; | sort 
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Get the account info</span>
+</span></span><span class="line"><span class="cl">curl -s --header <span class="s2">&#34;Authorization: Bearer </span><span class="nv">$TFE_TOKEN</span><span class="s2">&#34;</span> --request GET  https://app.terraform.io/api/v2/account/details <span class="p">|</span> jq .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;data&#34;</span>: <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;user-&lt;DELETED&gt;7&#34;</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;type&#34;</span>: <span class="s2">&#34;users&#34;</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;attributes&#34;</span>: <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;username&#34;</span>: <span class="s2">&#34;&lt;DELETED&gt;&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;is-service-account&#34;</span>: false,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;avatar-url&#34;</span>: <span class="s2">&#34;https://www.gravatar.com/avatar/db6b71&lt;DELETED&gt;?s=100&amp;d=mm&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;password&#34;</span>: null,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;enterprise-support&#34;</span>: true,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;is-site-admin&#34;</span>: false,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;is-sso-login&#34;</span>: false,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;two-factor&#34;</span>: <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;enabled&#34;</span>: true,
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;verified&#34;</span>: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">      <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;email&#34;</span>: <span class="s2">&#34;&lt;DELETED&gt;&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;unconfirmed-email&#34;</span>: null,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;has-git-hub-app-token&#34;</span>: false,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;is-confirmed&#34;</span>: true,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;onboarding-status&#34;</span>: null,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;permissions&#34;</span>: <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        &lt;DELETED&gt;
+</span></span><span class="line"><span class="cl">      <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;relationships&#34;</span>: <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;authentication-tokens&#34;</span>: <span class="o">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;links&#34;</span>: <span class="o">{</span>
+</span></span><span class="line"><span class="cl">          <span class="s2">&#34;related&#34;</span>: <span class="s2">&#34;/api/v2/users/user-&lt;DELETED&gt;/authentication-tokens&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="o">}</span>
+</span></span><span class="line"><span class="cl">      <span class="o">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;links&#34;</span>: <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;self&#34;</span>: <span class="s2">&#34;/api/v2/users/user-&lt;DELETED&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">MY_ORG</span><span class="o">=</span>&lt;YOUR-ORG-IN-TERRAFORM-CLOUD-NAME&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Get the teams for the organization</span>
+</span></span><span class="line"><span class="cl">curl -s --header <span class="s2">&#34;Authorization: Bearer </span><span class="nv">$TFE_TOKEN</span><span class="s2">&#34;</span> --request GET  https://app.terraform.io/api/v2/organizations/<span class="nv">$MY_ORG</span>/teams <span class="p">|</span> jq .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">curl -s --header <span class="s2">&#34;Authorization: Bearer </span><span class="nv">$TFE_TOKEN</span><span class="s2">&#34;</span> --request GET  https://app.terraform.io/api/v2/organizations/<span class="nv">$MY_ORG</span>/workspaces <span class="p">|</span> jq .
+</span></span></code></pre></div><p>In order to list modules (my original intent), one must use V1 of the API:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -s --header <span class="s2">&#34;Authorization: Bearer </span><span class="nv">$TFE_TOKEN</span><span class="s2">&#34;</span> --request GET  https://app.terraform.io/api/registry/v1/modules <span class="p">|</span> jq .
+</span></span><span class="line"><span class="cl"><span class="o">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;meta&#34;</span>: <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;limit&#34;</span>: 15,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;current_offset&#34;</span>: 0,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;next_offset&#34;</span>: 15,
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;next_url&#34;</span>: <span class="s2">&#34;//@/v1/modules?namespace=&lt;DELETED&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;modules&#34;</span>: <span class="o">[</span>
+</span></span><span class="line"><span class="cl">    <span class="o">{</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;id&#34;</span>: <span class="s2">&#34;&lt;DELETED/iam-role/aws/0.5.1&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;owner&#34;</span>: <span class="s2">&#34;&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;namespace&#34;</span>: <span class="s2">&#34;&lt;DELETED&gt;&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;name&#34;</span>: <span class="s2">&#34;iam-role&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;version&#34;</span>: <span class="s2">&#34;0.5.1&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;provider&#34;</span>: <span class="s2">&#34;aws&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;description&#34;</span>: <span class="s2">&#34;Terraform Module - AWS IAM Role&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;source&#34;</span>: <span class="s2">&#34;https://github.com/&lt;DELETED&gt;&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;tag&#34;</span>: <span class="s2">&#34;&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;published_at&#34;</span>: <span class="s2">&#34;2020-04-18T13:53:47.261884Z&#34;</span>,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;downloads&#34;</span>: 1345,
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;verified&#34;</span>: <span class="nb">false</span>
+</span></span><span class="line"><span class="cl">    <span class="o">}</span>,
+</span></span><span class="line"><span class="cl">    &lt;DELETED&gt;
+</span></span><span class="line"><span class="cl">  <span class="o">]</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span></code></pre></div><p>In order to retrieve more than 15 , use the <code>limit</code> URL parameter:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">curl -s --header &#34;Authorization: Bearer $TFE_TOKEN&#34; --request GET  https://app.terraform.io/api/registry/v1/modules\?limit\=100  
+</span></span></code></pre></div><p>Here is example that lists only the names of the modules in the repository.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">curl -s --header &#34;Authorization: Bearer $TFE_TOKEN&#34; --request GET  https://app.terraform.io/api/registry/v1/modules\?limit\=100  | jq &#39;.modules[].id&#39; | sort 
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -309,7 +324,7 @@ curl -s --header <span class="s2">&#34;Authorization: Bearer </span><span class=
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -327,13 +342,10 @@ curl -s --header <span class="s2">&#34;Authorization: Bearer </span><span class=
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -344,7 +356,10 @@ curl -s --header <span class="s2">&#34;Authorization: Bearer </span><span class=
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

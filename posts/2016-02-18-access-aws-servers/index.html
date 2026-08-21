@@ -18,14 +18,15 @@
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.
 The credit for finding out about approach is blog post by James McOrmond - VPN over SSH - who is using this neat trick from Linux for quite some time.
-The software mentioned https://github.com/apenwarr/sshuttle supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite)." /><meta name="keywords" content="blog, Miro" />
+The software mentioned https://github.com/apenwarr/sshuttle supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2016-02-18-access-aws-servers/" />
@@ -36,34 +37,38 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Accessing internal AWS servers directly from Mac" />
-<meta property="og:description" content="Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.
-The credit for finding out about approach is blog post by James McOrmond - VPN over SSH - who is using this neat trick from Linux for quite some time.
-The software mentioned https://github.com/apenwarr/sshuttle supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite)." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2016-02-18-access-aws-servers/" />
-<meta property="article:published_time" content="2016-02-18T00:57:35-05:00" />
-<meta property="article:modified_time" content="2016-02-18T00:57:35-05:00" />
-<meta itemprop="name" content="Accessing internal AWS servers directly from Mac">
-<meta itemprop="description" content="Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.
+<meta property="og:url" content="https://miroadamy.com/posts/2016-02-18-access-aws-servers/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Accessing internal AWS servers directly from Mac">
+	<meta property="og:description" content="Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.
 The credit for finding out about approach is blog post by James McOrmond - VPN over SSH - who is using this neat trick from Linux for quite some time.
 The software mentioned https://github.com/apenwarr/sshuttle supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).">
-<meta itemprop="datePublished" content="2016-02-18T00:57:35-05:00" />
-<meta itemprop="dateModified" content="2016-02-18T00:57:35-05:00" />
-<meta itemprop="wordCount" content="723">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2016-02-18T00:57:35-05:00">
+		<meta property="article:modified_time" content="2016-02-18T00:57:35-05:00">
+		<meta property="article:tag" content="Osx">
+		<meta property="article:tag" content="Git">
 
-
-
-<meta itemprop="keywords" content="osx,git," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Accessing internal AWS servers directly from Mac"/>
-<meta name="twitter:description" content="Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.
+	<meta itemprop="name" content="Accessing internal AWS servers directly from Mac">
+	<meta itemprop="description" content="Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.
 The credit for finding out about approach is blog post by James McOrmond - VPN over SSH - who is using this neat trick from Linux for quite some time.
-The software mentioned https://github.com/apenwarr/sshuttle supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite)."/>
+The software mentioned https://github.com/apenwarr/sshuttle supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).">
+	<meta itemprop="datePublished" content="2016-02-18T00:57:35-05:00">
+	<meta itemprop="dateModified" content="2016-02-18T00:57:35-05:00">
+	<meta itemprop="wordCount" content="723">
+	<meta itemprop="keywords" content="Osx,Git">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Accessing internal AWS servers directly from Mac">
+	<meta name="twitter:description" content="Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.
+The credit for finding out about approach is blog post by James McOrmond - VPN over SSH - who is using this neat trick from Linux for quite some time.
+The software mentioned https://github.com/apenwarr/sshuttle supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -100,12 +105,21 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -122,6 +136,7 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -164,42 +179,42 @@ The software mentioned https://github.com/apenwarr/sshuttle supposedly works on 
 <p>The software mentioned <a href="https://github.com/apenwarr/sshuttle">https://github.com/apenwarr/sshuttle</a> supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).</p>
 <p>This <a href="https://github.com/jagheterfredrik/sshuttle">version</a> seems to work on 10.10  - but Homebrew is better anyway.</p>
 <p>Fortunately, in the meantime somebody created brew cask, so to install functioning version run</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">brew install sshuttle
-</code></pre></div><h3 id="how-it-works">How it works</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">brew install sshuttle
+</span></span></code></pre></div><h3 id="how-it-works">How it works</h3>
 <p>Options available</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">~  sshuttle
-error: at least one subnet, subnet file, or -N expected
-usage: sshuttle [-l [ip:]port] [-r [username@]sshserver[:port]] &lt;subnets...&gt;
-   or: sshuttle --firewall &lt;port&gt; &lt;subnets...&gt;
-   or: sshuttle --hostwatch
- 
-    -l, --listen ...      transproxy to this ip address and port number
-    -H, --auto-hosts      scan for remote hostnames and update local /etc/hosts
-    -N, --auto-nets       automatically determine subnets to route
-    --dns                 capture local DNS requests and forward to the remote DNS server
-    --ns-hosts ...        capture and forward remote DNS requests to the following servers
-    --method ...          auto, nat, tproxy or pf
-    --python ...          path to python interpreter on the remote server
-    -r, --remote ...      ssh hostname (and optional username) of remote sshuttle server
-    -x, --exclude ...     exclude this subnet (can be used more than once)
-    -X, --exclude-from ...  exclude the subnets in a file (whitespace separated)
-    -v, --verbose         increase debug message verbosity
-    -e, --ssh-cmd ...     the command to use to connect to the remote [ssh]
-    --seed-hosts ...      with -H, use these hostnames for initial scan (comma-separated)
-    --no-latency-control  sacrifice latency to improve bandwidth benchmarks
-    --wrap ...            restart counting channel numbers after this number (for testing)
-    -D, --daemon          run in the background as a daemon
-    -s, --subnets ...     file where the subnets are stored, instead of on the command line
-    --syslog              send log messages to syslog (default if you use --daemon)
-    --pidfile ...         pidfile name (only if using --daemon) [./sshuttle.pid]
-    --server              (internal use only)
-    --firewall            (internal use only)
-    --hostwatch           (internal use only)
-</code></pre></div><p>This is example from UAT environment in the clpud.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">~  sshuttle
+</span></span><span class="line"><span class="cl">error: at least one subnet, subnet file, or -N expected
+</span></span><span class="line"><span class="cl">usage: sshuttle [-l [ip:]port] [-r [username@]sshserver[:port]] &lt;subnets...&gt;
+</span></span><span class="line"><span class="cl">   or: sshuttle --firewall &lt;port&gt; &lt;subnets...&gt;
+</span></span><span class="line"><span class="cl">   or: sshuttle --hostwatch
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">    -l, --listen ...      transproxy to this ip address and port number
+</span></span><span class="line"><span class="cl">    -H, --auto-hosts      scan for remote hostnames and update local /etc/hosts
+</span></span><span class="line"><span class="cl">    -N, --auto-nets       automatically determine subnets to route
+</span></span><span class="line"><span class="cl">    --dns                 capture local DNS requests and forward to the remote DNS server
+</span></span><span class="line"><span class="cl">    --ns-hosts ...        capture and forward remote DNS requests to the following servers
+</span></span><span class="line"><span class="cl">    --method ...          auto, nat, tproxy or pf
+</span></span><span class="line"><span class="cl">    --python ...          path to python interpreter on the remote server
+</span></span><span class="line"><span class="cl">    -r, --remote ...      ssh hostname (and optional username) of remote sshuttle server
+</span></span><span class="line"><span class="cl">    -x, --exclude ...     exclude this subnet (can be used more than once)
+</span></span><span class="line"><span class="cl">    -X, --exclude-from ...  exclude the subnets in a file (whitespace separated)
+</span></span><span class="line"><span class="cl">    -v, --verbose         increase debug message verbosity
+</span></span><span class="line"><span class="cl">    -e, --ssh-cmd ...     the command to use to connect to the remote [ssh]
+</span></span><span class="line"><span class="cl">    --seed-hosts ...      with -H, use these hostnames for initial scan (comma-separated)
+</span></span><span class="line"><span class="cl">    --no-latency-control  sacrifice latency to improve bandwidth benchmarks
+</span></span><span class="line"><span class="cl">    --wrap ...            restart counting channel numbers after this number (for testing)
+</span></span><span class="line"><span class="cl">    -D, --daemon          run in the background as a daemon
+</span></span><span class="line"><span class="cl">    -s, --subnets ...     file where the subnets are stored, instead of on the command line
+</span></span><span class="line"><span class="cl">    --syslog              send log messages to syslog (default if you use --daemon)
+</span></span><span class="line"><span class="cl">    --pidfile ...         pidfile name (only if using --daemon) [./sshuttle.pid]
+</span></span><span class="line"><span class="cl">    --server              (internal use only)
+</span></span><span class="line"><span class="cl">    --firewall            (internal use only)
+</span></span><span class="line"><span class="cl">    --hostwatch           (internal use only)
+</span></span></code></pre></div><p>This is example from UAT environment in the clpud.</p>
 <p>The externally visible box is uat-nat. If I ssh to this box, I am able to see the uat-mgmt box running BCC (which is otherwise inaccessible). I cannot however create ssh tunnel from uat-nat to uat-mgmt exposing 8080 port on mgmt, because this port would not be allowed for external access.</p>
 <p>Instead, I can use the sshuttle to direct all (or some) network traffic from local mac to the uat-nat box:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle  -vr miro.adamy@uat-nat 0/0
-</code></pre></div><p>The -v flag means verbose - you will see the communication in the command line</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sshuttle  -vr miro.adamy@uat-nat 0/0
+</span></span></code></pre></div><p>The -v flag means verbose - you will see the communication in the command line</p>
 <p>It asks for 2 passwords:</p>
 <ul>
 <li>first, sudo password on local Mac</li>
@@ -212,62 +227,62 @@ usage: sshuttle [-l [ip:]port] [-r [username@]sshserver[:port]] &lt;subnets...&g
 <p>Source: <a href="http://teohm.com/blog/2012/04/01/using-sshuttle-in-daily-work/">http://teohm.com/blog/2012/04/01/using-sshuttle-in-daily-work/</a></p>
 <h4 id="redirect-the-dns-as-well">Redirect the DNS as well</h4>
 <p>uses ssh_server from ~/.ssh/config</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle --dns -vr ssh_server 0/0
-</code></pre></div><h4 id="exclude-some-traffic">Exclude some traffic</h4>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle --dns -vr ssh_server -x 121.9.204.0/24 -x 61.135.196.21 0/0
-</code></pre></div><h4 id="redirect-only-some-traffic">Redirect ONLY some traffic</h4>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sshuttle -vr ssh_server 121.9.204.0/24 61.135.196.21
-</code></pre></div><h4 id="few-helpers">Few helpers</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sshuttle --dns -vr ssh_server 0/0
+</span></span></code></pre></div><h4 id="exclude-some-traffic">Exclude some traffic</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sshuttle --dns -vr ssh_server -x 121.9.204.0/24 -x 61.135.196.21 0/0
+</span></span></code></pre></div><h4 id="redirect-only-some-traffic">Redirect ONLY some traffic</h4>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sshuttle -vr ssh_server 121.9.204.0/24 61.135.196.21
+</span></span></code></pre></div><h4 id="few-helpers">Few helpers</h4>
 <p>(after some search found at )</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback"># sshuttle helpers
- 
-# set default SSH server:
-#   user@hostname or a host in ~/.ssh/config
-TNL_SERVER=default_ssh
- 
-# tunnel all traffic including DNS
-alias tnl=&#34;sshuttle --dns -vr $TNL_SERVER 0/0&#34;
- 
-# returns a list of IP addresses from given domain(s).
-#
-# Examples:
-#  dns2ip google.com
-#  dns2ip netflix.com movies.netflix.com
-#
-function dns2ip() {
-  dig +short $* | sed &#34;/[^0-9\.]/d&#34; # use sed to remove non-IPv4 line e.g. alias
-}
- 
-# tunnel specified domain(s) only.
-#
-# Examples:
-#  tnlonly google.com
-#  tnlonly netflix.com movies.netflix.com
-#
-function tnlonly() {
-  sshuttle -vr $TNL_SERVER `dns2ip $*`;
-}
- 
-# tunnel all traffic including DNS, except the specified domain(s).
-#
-# Examples:
-#  tnlbut youku.com
-#  tnlbut youku.com weibo.com
-#
-function tnlbut() {
-  sshuttle --dns -vr $TNL_SERVER `dns2ip $* | sed &#34;s/^/-x/&#34;` 0/0; # use sed to append &#39;-x&#39; prefix
-}
- 
-# vpn to a ssh server.
-#
-# Examples:
-#  vpnto my_office_server      # host in ~/.ssh/config
-#  vpnto user@123.123.123.123
-#
-function vpnto() {
-  sshuttle -HNvr $1;
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># sshuttle helpers
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># set default SSH server:
+</span></span><span class="line"><span class="cl">#   user@hostname or a host in ~/.ssh/config
+</span></span><span class="line"><span class="cl">TNL_SERVER=default_ssh
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># tunnel all traffic including DNS
+</span></span><span class="line"><span class="cl">alias tnl=&#34;sshuttle --dns -vr $TNL_SERVER 0/0&#34;
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># returns a list of IP addresses from given domain(s).
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Examples:
+</span></span><span class="line"><span class="cl">#  dns2ip google.com
+</span></span><span class="line"><span class="cl">#  dns2ip netflix.com movies.netflix.com
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">function dns2ip() {
+</span></span><span class="line"><span class="cl">  dig +short $* | sed &#34;/[^0-9\.]/d&#34; # use sed to remove non-IPv4 line e.g. alias
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># tunnel specified domain(s) only.
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Examples:
+</span></span><span class="line"><span class="cl">#  tnlonly google.com
+</span></span><span class="line"><span class="cl">#  tnlonly netflix.com movies.netflix.com
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">function tnlonly() {
+</span></span><span class="line"><span class="cl">  sshuttle -vr $TNL_SERVER `dns2ip $*`;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># tunnel all traffic including DNS, except the specified domain(s).
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Examples:
+</span></span><span class="line"><span class="cl">#  tnlbut youku.com
+</span></span><span class="line"><span class="cl">#  tnlbut youku.com weibo.com
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">function tnlbut() {
+</span></span><span class="line"><span class="cl">  sshuttle --dns -vr $TNL_SERVER `dns2ip $* | sed &#34;s/^/-x/&#34;` 0/0; # use sed to append &#39;-x&#39; prefix
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"># vpn to a ssh server.
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl"># Examples:
+</span></span><span class="line"><span class="cl">#  vpnto my_office_server      # host in ~/.ssh/config
+</span></span><span class="line"><span class="cl">#  vpnto user@123.123.123.123
+</span></span><span class="line"><span class="cl">#
+</span></span><span class="line"><span class="cl">function vpnto() {
+</span></span><span class="line"><span class="cl">  sshuttle -HNvr $1;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -328,7 +343,7 @@ function vpnto() {
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -346,13 +361,10 @@ function vpnto() {
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -363,7 +375,10 @@ function vpnto() {
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

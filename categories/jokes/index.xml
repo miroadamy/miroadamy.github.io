@@ -1,115 +1,73 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>jokes on Miro&#39;s World</title>
-    <link>https://miroadamy.com/categories/jokes/</link>
-    <description>Recent content in jokes on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 12 Sep 2019 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/categories/jokes/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Spanish and Catalan</title>
-      <link>https://miroadamy.com/posts/2019-09-12-post/</link>
-      <pubDate>Thu, 12 Sep 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2019-09-12-post/</guid>
-      <description>The current weather in Valencia summed up: https://www.youtube.com/watch?v=j2VHUP7R2CY
-Note for my friends who think Catalan is more or less same as Spanish: go for it and translate :-)</description>
-    </item>
-    
-    <item>
-      <title>Finland Män</title>
-      <link>https://miroadamy.com/posts/2019-07-18-finland-man/</link>
-      <pubDate>Tue, 16 Jul 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2019-07-18-finland-man/</guid>
-      <description>Lost and then found again - here:https://angrytouristblog.blogspot.com/2015/10/rejoice-finland-man-is-back.html
-Here is the copy, just in case
-Rejoice! The Finland Män is back! Source
-Finland Män Not Like Smalltalk. Is Horror.
-Finland Män not kän underständ smalltalk. When kuud silense, samwan open mouth, silense destroid, why do tis?
-One time Finland Män ko tu bar. Finland Män sit ät kounter, entshoi trink, look onli mopile phone. Is kuud silense. Then kam womän nekst tu Finland Män.</description>
-    </item>
-    
-    <item>
-      <title>This made my day</title>
-      <link>https://miroadamy.com/posts/2018-07-31-spanish/</link>
-      <pubDate>Tue, 31 Jul 2018 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2018-07-31-spanish/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Per core licensing</title>
-      <link>https://miroadamy.com/posts/2018-06-25-oracle/</link>
-      <pubDate>Mon, 25 Jun 2018 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2018-06-25-oracle/</guid>
-      <description>If one uses Oracle per core licensing strategy in cloud:</description>
-    </item>
-    
-    <item>
-      <title>Double negative</title>
-      <link>https://miroadamy.com/posts/2007-09-03-double-negative/</link>
-      <pubDate>Mon, 03 Sep 2007 19:58:15 -0400</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-09-03-double-negative/</guid>
-      <description>A linguistics professor was lecturing to his class one day. &#34;In
-English,&#34; he said, &#34;A double negative forms a positive. In some
-languages, though, such as Russian, a double negative is still a
-negative. However, there is no language wherein a double
-positive can form a negative.&#34; 
-A voice from the back of the room piped up, &#34;Yeah, right.&#34;
-Found on the Net :-)</description>
-    </item>
-    
-    <item>
-      <title>Evolution of the math problem or dumbing down the recent grads</title>
-      <link>https://miroadamy.com/posts/2007-02-19-evolution-of-the-math-problem-or-dumbing-down-the-recent-grads/</link>
-      <pubDate>Mon, 19 Feb 2007 23:37:54 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-02-19-evolution-of-the-math-problem-or-dumbing-down-the-recent-grads/</guid>
-      <description>1960
-A logger sells a truckload of lumber for $100. His cost of production is 4/5 of this price. What is his profit?
-1970 (Traditional)
-A logger sells a truckload of lumber for $100. His cost of production
-is 4/5 of this price, or in other words, $80. What is his profit?
-1970 (New Math)
-A logger exchanges a set L of lumber for a set M of money. The cardinality of set M is 100 and each element is worth a dollar.</description>
-    </item>
-    
-    <item>
-      <title>Programmers and programming in quotes</title>
-      <link>https://miroadamy.com/posts/2007-02-17-programmers-and-programming-in-quotes/</link>
-      <pubDate>Sat, 17 Feb 2007 23:01:08 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-02-17-programmers-and-programming-in-quotes/</guid>
-      <description>Few of my favorites:
-Most software today is very much like an Egyptian pyramid with millions of bricks piled on top of each other, with no structural integrity, but just done by brute force and thousands of slaves. [Alan Kay]
-Hofstadter&#39;s Law: It always takes longer than you expect, even when you take into account Hofstadter&#39;s Law.
-Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.</description>
-    </item>
-    
-    <item>
-      <title>Why Engineers Don&#39;t Write Cookbooks</title>
-      <link>https://miroadamy.com/posts/2007-01-14-why-engineers-dont-write-cookbooks/</link>
-      <pubDate>Sun, 14 Jan 2007 23:44:52 -0500</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2007-01-14-why-engineers-dont-write-cookbooks/</guid>
-      <description>Chocolate Chip Cookies Recipe
-1.) 532.35 cm3 gluten
-2.) 4.9 cm3 NaHCO3
-3.) 4.9 cm3 refined halite
-4.) 236 cm3 partially hydrogenated tallow triglyceride
-5.) 177.45 cm3 crystalline C12H22O11
-6.) 177.45 cm3 unrefined C12H22O11
-7.) 4.9 cm3 methyl ether of protocatechuic aldehyde
-8.) Two calcium carbonate-encapsulated avian albumen-coated protein ovoids
-9.) 473.2 cm3 theobroma cacao
-10.) 236 cm3 de-encapsulated legume meats (sieve size #10)
-To a 2-L jacketed round reactor vessel (reactor #1) with an overall heat transfer coefficient of about 100 Btu/F-ft2-hr, add ingredients one, two and three with constant agitation.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Jokes on Miro&#39;s World</title>
+		<link>https://miroadamy.com/categories/jokes/</link>
+		<description>Recent content in Jokes on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 12 Sep 2019 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/categories/jokes/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Spanish and Catalan</title>
+				<link>https://miroadamy.com/posts/2019-09-12-post/</link>
+				<pubDate>Thu, 12 Sep 2019 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2019-09-12-post/</guid>
+				<description>&lt;p&gt;The current weather in Valencia summed up: &lt;a href=&#34;https://www.youtube.com/watch?v=j2VHUP7R2CY&#34;&gt;https://www.youtube.com/watch?v=j2VHUP7R2CY&lt;/a&gt;&lt;/p&gt;&#xA;&lt;iframe width=&#34;600&#34; height=&#34;380&#34; src=&#34;https://www.youtube.com/embed/j2VHUP7R2CY&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;Note for my friends who think Catalan is more or less same as Spanish: go for it and translate :-)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Finland Män</title>
+				<link>https://miroadamy.com/posts/2019-07-18-finland-man/</link>
+				<pubDate>Tue, 16 Jul 2019 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2019-07-18-finland-man/</guid>
+				<description>&lt;p&gt;Lost and then found again - here:https://angrytouristblog.blogspot.com/2015/10/rejoice-finland-man-is-back.html&lt;/p&gt;&#xA;&lt;p&gt;Here is the copy, just in case&lt;/p&gt;&#xA;&lt;h1 id=&#34;rejoice-the-finland-män-is-back&#34;&gt;Rejoice! The Finland Män is back!&lt;/h1&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://angrytouristblog.blogspot.com/2015/10/rejoice-finland-man-is-back.html&#34; title=&#34;Permalink to Rejoice! The Finland Män is back!&#34;&gt;Source&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Finland Män Not Like Smalltalk. Is Horror.&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Finland Män not kän underständ smalltalk. When kuud silense, samwan open mouth, silense destroid, why do tis?&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;One time Finland Män&lt;/strong&gt; ko tu bar. Finland Män sit ät kounter, entshoi trink, look onli mopile phone. Is kuud silense.&#xA;Then kam womän nekst tu Finland Män. She äsk: “Do you kam hiör often?”&#xA;Finland Män pärälised. Is horror. Why she äsk tis? Is häv tu reäkt samhau?&#xA;Finland Män luuk onli mopile phone. Tsek emails. Kiip luuking mopile phone. Then änssör: “Why you äsk? Is you kondukting sam sörvey?”&#xA;Womän not say enitink. She ko öwei. Is kuud silense.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>This made my day</title>
+				<link>https://miroadamy.com/posts/2018-07-31-spanish/</link>
+				<pubDate>Tue, 31 Jul 2018 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2018-07-31-spanish/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/guiri.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Per core licensing</title>
+				<link>https://miroadamy.com/posts/2018-06-25-oracle/</link>
+				<pubDate>Mon, 25 Jun 2018 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2018-06-25-oracle/</guid>
+				<description>&lt;p&gt;If one uses Oracle per core licensing strategy in cloud:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/oracle.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Double negative</title>
+				<link>https://miroadamy.com/posts/2007-09-03-double-negative/</link>
+				<pubDate>Mon, 03 Sep 2007 19:58:15 -0400</pubDate>
+				<guid>https://miroadamy.com/posts/2007-09-03-double-negative/</guid>
+				<description>&lt;p&gt;&lt;em&gt; A linguistics professor was lecturing to his class one day.  &#34;In&lt;br /&gt;&#xA;English,&#34; he said, &#34;A double negative forms a positive.  In some&lt;br /&gt;&#xA;languages, though, such as Russian, a double negative is still a&lt;br /&gt;&#xA;negative.  However, there is no language wherein a double&lt;br /&gt;&#xA;positive can form a negative.&#34; &lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;A voice from the back of the room piped up, &#34;Yeah, right.&#34;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Found on the Net :-)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Evolution of the math problem or dumbing down the recent grads</title>
+				<link>https://miroadamy.com/posts/2007-02-19-evolution-of-the-math-problem-or-dumbing-down-the-recent-grads/</link>
+				<pubDate>Mon, 19 Feb 2007 23:37:54 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2007-02-19-evolution-of-the-math-problem-or-dumbing-down-the-recent-grads/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;1960&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;A logger sells a truckload of lumber for $100.  His cost of production is 4/5 of this price. What is his profit?&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1970 (Traditional)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;A logger sells a truckload of lumber for $100.  His cost of production&lt;br /&gt;&#xA;is 4/5 of this price, or in other words, $80.  What is his profit?&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;1970 (New Math)&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;A logger exchanges a set L of lumber for a set M of money.  The cardinality of set M is 100 and each element is worth a dollar.  Make a square array of 100 dots to represent the elements of set M.  The set C of the cost of production contains 20 fewer elements than set M. Represent set C as a subset of K and answer the following question:&lt;br /&gt;&#xA;What is the cardinality of set P of profits?&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Programmers and programming in quotes</title>
+				<link>https://miroadamy.com/posts/2007-02-17-programmers-and-programming-in-quotes/</link>
+				<pubDate>Sat, 17 Feb 2007 23:01:08 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2007-02-17-programmers-and-programming-in-quotes/</guid>
+				<description>&lt;p&gt;Few of my favorites:&lt;/p&gt;&#xA;&lt;p&gt;Most software today is very much like an Egyptian pyramid with millions of  bricks piled on top of each other, with no structural integrity, but just done  by brute force and thousands of slaves. [Alan Kay]&lt;/p&gt;&#xA;&lt;p&gt;Hofstadter&#39;s Law: It always takes longer than you expect, even when you take into account  Hofstadter&#39;s Law.&lt;/p&gt;&#xA;&lt;p&gt;Debugging is twice as hard as writing the code in the first place. Therefore, if  you write the code as cleverly as possible, you are, by definition, not smart  enough to debug it. [Brian W. Kernighan]&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Why Engineers Don&#39;t Write Cookbooks</title>
+				<link>https://miroadamy.com/posts/2007-01-14-why-engineers-dont-write-cookbooks/</link>
+				<pubDate>Sun, 14 Jan 2007 23:44:52 -0500</pubDate>
+				<guid>https://miroadamy.com/posts/2007-01-14-why-engineers-dont-write-cookbooks/</guid>
+				<description>&lt;p&gt;&lt;strong&gt;Chocolate Chip Cookies Recipe&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;1.) 532.35 cm3 gluten&lt;br /&gt;&#xA;2.) 4.9 cm3 NaHCO3&lt;br /&gt;&#xA;3.) 4.9 cm3 refined halite&lt;br /&gt;&#xA;4.) 236 cm3 partially hydrogenated tallow triglyceride&lt;br /&gt;&#xA;5.) 177.45 cm3 crystalline C12H22O11&lt;br /&gt;&#xA;6.) 177.45 cm3 unrefined C12H22O11&lt;br /&gt;&#xA;7.) 4.9 cm3 methyl ether of protocatechuic aldehyde&lt;br /&gt;&#xA;8.) Two calcium carbonate-encapsulated avian albumen-coated protein ovoids&lt;br /&gt;&#xA;9.) 473.2 cm3 theobroma cacao&lt;br /&gt;&#xA;10.) 236 cm3 de-encapsulated legume meats (sieve size #10)&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

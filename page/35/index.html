@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -36,20 +36,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Miro&#39;s World" />
-<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
-<meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Miro&#39;s World"/>
-<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
+<meta property="og:url" content="https://miroadamy.com/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Miro&#39;s World">
+	<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+	<meta itemprop="name" content="Miro&#39;s World">
+	<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta itemprop="datePublished" content="2026-08-21T14:31:54+00:00">
+	<meta itemprop="dateModified" content="2026-08-21T14:31:54+00:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Miro&#39;s World">
+	<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,12 +91,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -108,6 +122,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -116,123 +131,247 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2009-01-09-vmware-and-slow-clocks-take-2/">VMWare and slow clocks - take 2</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2007-09-10-new-ipod-touch-as-ebook-reader/">New iPod touch as ebook reader ?</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2009-01-09 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 101 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      The centos 4.x we are using as platform for the VMWare VMs (yes, I know there is version 5, but we need to be compliant with RHEL 4.x because of the ATG requirements) installs by default the NTP client.
-Here is sequence of steps that needs to be performed to enable automatic synchronization of the clocks.
- make sure the DNS works  cat /etc/resolv.conf sudo vi /etc/resolv.conf and check that nameservers point to something meaningfull, e.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2009-01-09-vmware-and-slow-clocks-take-2/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2009-01-04-vmware-and-slow-clocks/">VMWare and slow clocks</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2009-01-04 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 31 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      [tkuser@jci-app ~]$ date Sat Jan 3 11:28:12 EST 2009 [tkuser@jci-app ~]$ sudo date -s &#34;13:45&#34; Password: Sat Jan 3 13:45:00 EST 2009 [tkuser@jci-app ~]$ date Sat Jan 3 13:45:04 EST 2009 
-    </div>
-    <div class="read-more">
-      <a href="/posts/2009-01-04-vmware-and-slow-clocks/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2009-01-02-weird-rogers-3g-network-error-fixed/">Weird Rogers 3G network error - fixed ?</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2009-01-02 </span>
+      <span class="post-time"> 2007-09-10 </span>
       <div class="post-category">
           <a href="/categories/general/"> general </a>
           </div>
-        <span class="more-meta"> 48 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Just tried out to switch the iPhone to automatic Date and Time setting with 3G on. The time jumped from 11:31 to 11:30 (my iPhone was about 1 minute too fast) and STAYED THERE.
-This could mean that the issue is finally fixed. Can anybody confirm that ?
-    </div>
-    <div class="read-more">
-      <a href="/posts/2009-01-02-weird-rogers-3g-network-error-fixed/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2009-01-02-excellent-free-git-tutorial/">Excellent free Git tutorial</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2009-01-02 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-        <span class="more-meta"> 49 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Two screencasts, about 80 and 40 minutes long are available at:
-http://excess.org/article/2008/07/ogre-git-tutorial/
-Courtesy by fellow Ottawan Bert Trojanowski. Really nice job of providing deep enough technical understanding with good illustrative examples.
-If you want to get into distributed version control (which is IMHO way to go), check this out.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2009-01-02-excellent-free-git-tutorial/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2008-12-16-weird-rogers-3g-network-error/">Weird Rogers 3G network error</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2008-12-16 </span>
-      <div class="post-category">
-          <a href="/categories/general/"> general </a>
-          </div>
-        <span class="more-meta"> 309 words </span>
+        <span class="more-meta"> 307 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Since about Sunday, Dec 7th (I remember exactly because I noticed it when leaving the regular ByMUG meeting at Patty Bolands) my iPhone for no particular reason decided to translocate itself to GMT+1 time zone. It was not visible immediately, only emails received at 16:20 were shown as received 6 hour in the future.
-All this without any changes or installing anything on my end ...
-The Clock application showed what was wrong (this snapshot was taken on Sunday, 16:02 Ottawa time):
+      <p>As the September 28th is approaching (the day when the new <a href="http://www.apple.com/ca/ipodtouch/" target="_blank">iPod touch</a> will be available in Canada), I have a real dilemma: do I go with the "iPhone without the phone" or not ? The price $329 for 8 GB iPod is pretty high - compared to $279 for 80GB classic - which would allow me to carry all my music, some movies and all podcasts with me. On the other hand, the Touch has WiFi and can be used as pretty decent Web browser on top of iPod functionality.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2008-12-16-weird-rogers-3g-network-error/" class="read-more-link">Read more...</a>
+      <a href="/posts/2007-09-10-new-ipod-touch-as-ebook-reader/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2007-09-09-great-article-on-data-visualization/">Great article on data visualization</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2007-09-09 </span>
+      <div class="post-category">
+          <a href="/categories/general/"> general </a>
+          </div>
+        <span class="more-meta"> 11 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>"Data visualization: Modern approaches" - great read, highly recommended. Available<a href="http://www.smashingmagazine.com/2007/08/02/data-visualization-modern-approaches/" target="_blank"> here</a>.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2007-09-09-great-article-on-data-visualization/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2007-09-06-fresh-cup-of-java/">Fresh cup of Java</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2007-09-06 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          <a href="/categories/startup-life/"> startup-life </a>
+          </div>
+        <span class="more-meta"> 668 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Hi, all Java gurus inside and outside of <a href="http://www.thinknostic.com/" target="_blank">Thinknostic</a> - I have a very interesting problem. Imagine the following situation: we have three existing Java Web applications, written back in 2000/2001, based on open source libraries of that time: Struts 0.9/1.0 and JSP 1.x (no JSTL) with Tiles for Web layer, Apache Torque for ORM, early version of Quartz for job scheduling, Jasper Reports for PDF reports and Freemarker as template engine for email creation. The application has been (and still is) in production for almost 7 years and works great. Now the customer is expanding the functionality and wants add several Ajax features - in short, version 2.0 is on the table.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2007-09-06-fresh-cup-of-java/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2007-09-03-double-negative/">Double negative</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2007-09-03 </span>
+      <div class="post-category">
+          <a href="/categories/jokes/"> jokes </a>
+          </div>
+        <span class="more-meta"> 64 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p><em> A linguistics professor was lecturing to his class one day.  "In<br />
+English," he said, "A double negative forms a positive.  In some<br />
+languages, though, such as Russian, a double negative is still a<br />
+negative.  However, there is no language wherein a double<br />
+positive can form a negative." </em></p>
+<p><em>A voice from the back of the room piped up, "Yeah, right."</em></p>
+<p>Found on the Net :-)</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2007-09-03-double-negative/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2007-08-28-back-again-2/">Back again</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2007-08-28 </span>
+      <div class="post-category">
+          <a href="/categories/travel/"> travel </a>
+          </div>
+        <span class="more-meta"> 57 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>After three amazing weeks, I am back again on-line - reading through emails and trying to sort out and process over 15 GB images. Shooting RAW has consequences :-).</p>
+<p>Some of the see-worthy places and stories from the trip will start appearing <a href="http://thinkwrap.wordpress.com/europe-2007/" target="_blank">here</a> as the time permits to process my notes from the road. Stay tuned ...</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2007-08-28-back-again-2/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2007-08-20-europe-2007-1/">Europe 2007 - 1</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2007-08-20 </span>
+      <div class="post-category">
+          <a href="/categories/travel/"> travel </a>
+          </div>
+        <span class="more-meta"> 1706 words </span>
+        <span class="more-meta"> 9 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="europe-2007---1-switzerland-lower-engadin">Europe 2007 - 1: Switzerland, Lower Engadin</h1>
+<p>The flight went pretty quickly. It was less than 7 hours, anyway. We crossed the night and the Atlantic in a short time and landed at 6 AM in rainy, wet <a href="http://en.wikipedia.org/wiki/Z%C3%BCrich">Zurich</a>.</p>
+<p>The car I have retrieved from Europa car was Spanish Volkswagen make – <a href="http://en.wikipedia.org/wiki/SEAT_Le%C3%B3n">Seat Leon</a>. According the specification, it was a “medium size car”. And it maybe was, for European circumstances. For me it felt fairly small – our luggage did barely fit into the trunk. If we had more than two normal size and one half size cases, we would be in trouble. One small piece had to fit behind my seat.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2007-08-20-europe-2007-1/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2007-08-20-europe-2007-2/">Europe 2007 - 2</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2007-08-20 </span>
+      <div class="post-category">
+          <a href="/categories/travel/"> travel </a>
+          </div>
+        <span class="more-meta"> 808 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="europe-2007---2-südtirol-and-verona">Europe 2007 - 2: Südtirol and Verona</h1>
+<h2 id="welcome-to-italy-verona">Welcome to Italy: Verona</h2>
+<p>After the breakfast, we took off from Scuol direction Martina, via brief drive through Austria to Italy. If I would not consult the map, I would barely noticed the border crossing, because there was no passport control on neither of the Switzerland-Austria or Austria-Italy border. You will not really notice that you have left Switzerland either, unless you notice the prices on gas stations being suddenly in Euro. And you will definitely not notice you are in Italy for quite a some time as the villages will still look very German (or Austrian, if you wish), with signs in German (and often in gothic Schwabach letters). This region – <a href="http://en.wikipedia.org/wiki/Trentino-Alto_Adige/S%C3%BCdtirol">south Tirol aka Sud-Tirol aka Trentino – Alto Adige</a> – is ethnically and historically part of Austrian empire and is part of Italy for less than 100 years.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2007-08-20-europe-2007-2/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2007-08-20-europe-2007-3/">Europe 2007 - 3</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2007-08-20 </span>
+      <div class="post-category">
+          <a href="/categories/travel/"> travel </a>
+          </div>
+        <span class="more-meta"> 1345 words </span>
+        <span class="more-meta"> 7 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="europe-2007---3-pisa-tirrenia-and-firenze">Europe 2007 - 3: Pisa, Tirrenia and Firenze</h1>
+<h2 id="pisa-and-firenze">Pisa and Firenze</h2>
+<p>After wonderful evening in Verona, the next day after a very good breakfast (they even had whole-wheat breads), we spend few hours in the garden of the hotel and taking pictures of the peacocks and around 10:30 we left towards the coast, south and the leaning tower.</p>
+<p>The road we took was mostly on toll highways – the directions in Google maps were very useful. Not far away from Pisa you start to see the oleanders in the space dividing the highway directions – something that in my mind was always intimately related to being in Italy.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2007-08-20-europe-2007-3/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2007-08-15-on-vacations/">On vacation</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2007-08-15 </span>
+      <div class="post-category">
+          <a href="/categories/travel/"> travel </a>
+          </div>
+        <span class="more-meta"> 40 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>In case you were wondering why the blog went silent - I am touring Europe (Switzerland and Italy). Will post some stories after return ... and pictures on Smugmug - promise !</p>
+<p>Greetings from Rome (just made it here tonight)</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2007-08-15-on-vacations/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2007-08-06-sony-ereader-charging-problem-fixed/">Sony eReader - charging problem fixed ?</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2007-08-06 </span>
+      <div class="post-category">
+          <a href="/categories/technology/"> technology </a>
+          </div>
+        <span class="more-meta"> 79 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>With the latest software update (I am now on 1.0.3), one of the issues to be fixed was the "charging indicator behaviour". Looks like it was indeed the software bug. After upgrade, the indicator jumped to full 4 bars and stayed there. Beforehand, I had usually only 3 bars regardless how long it was charged.</p>
+<p>Time will tell - I am taking the reader with me to Italy to get some mileage out of it, during transatlantic flight ...</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2007-08-06-sony-ereader-charging-problem-fixed/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -266,7 +405,9 @@ The Clock application showed what was wrong (this snapshot was taken on Sunday, 
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -284,13 +425,10 @@ The Clock application showed what was wrong (this snapshot was taken on Sunday, 
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -301,7 +439,10 @@ The Clock application showed what was wrong (this snapshot was taken on Sunday, 
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

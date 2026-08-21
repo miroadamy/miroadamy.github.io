@@ -18,14 +18,15 @@
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Two small utilities I have places into ~/bin:
 git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
-#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&amp;#34;%h %cd&amp;#34; &amp;#34;$@&amp;#34; | awk &amp;#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;amp;&amp;amp; $5 == &amp;#34;D&amp;#34; { print date, commit &amp;#34;^:&amp;#34; $6 }&amp;#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst." /><meta name="keywords" content="blog, Miro" />
+#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.rst 2019-11-17 7911114^:src/certificates/admin-csr.json 2019-11-17 7911114^:src/certificates/admin-key.pem 2019-11-17 7911114^:src/certificates/admin.csr 2019-11-17 7911114^:src/certificates/admin.pem 2019-11-17 7911114^:src/certificates/ca-config.json 2019-11-17 7911114^:src/certificates/ca-csr.json 2019-11-17 7911114^:src/certificates/ca-key.pem 2019-11-17 7911114^:src/certificates/ca.csr 2019-11-17 7911114^:src/certificates/ca.pem 2019-11-17 7911114^:src/certificates/copy-certificates-to-servers.sh git trail I cannot remember where is this one from :-(
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2019-01-14-gitbits/" />
@@ -36,34 +37,38 @@ git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/gi
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Gitbits" />
-<meta property="og:description" content="Two small utilities I have places into ~/bin:
+<meta property="og:url" content="https://miroadamy.com/posts/2019-01-14-gitbits/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Gitbits">
+	<meta property="og:description" content="Two small utilities I have places into ~/bin:
 git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
-#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2019-01-14-gitbits/" />
-<meta property="article:published_time" content="2019-01-14T11:22:48+08:00" />
-<meta property="article:modified_time" content="2019-01-14T11:22:48+08:00" />
-<meta itemprop="name" content="Gitbits">
-<meta itemprop="description" content="Two small utilities I have places into ~/bin:
+#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.rst 2019-11-17 7911114^:src/certificates/admin-csr.json 2019-11-17 7911114^:src/certificates/admin-key.pem 2019-11-17 7911114^:src/certificates/admin.csr 2019-11-17 7911114^:src/certificates/admin.pem 2019-11-17 7911114^:src/certificates/ca-config.json 2019-11-17 7911114^:src/certificates/ca-csr.json 2019-11-17 7911114^:src/certificates/ca-key.pem 2019-11-17 7911114^:src/certificates/ca.csr 2019-11-17 7911114^:src/certificates/ca.pem 2019-11-17 7911114^:src/certificates/copy-certificates-to-servers.sh git trail I cannot remember where is this one from :-(">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2019-01-14T11:22:48+08:00">
+		<meta property="article:modified_time" content="2019-01-14T11:22:48+08:00">
+		<meta property="article:tag" content="Git">
+		<meta property="article:tag" content="Tools">
+
+	<meta itemprop="name" content="Gitbits">
+	<meta itemprop="description" content="Two small utilities I have places into ~/bin:
 git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
-#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.">
-<meta itemprop="datePublished" content="2019-01-14T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2019-01-14T11:22:48+08:00" />
-<meta itemprop="wordCount" content="255">
-
-
-
-<meta itemprop="keywords" content="git,tools," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Gitbits"/>
-<meta name="twitter:description" content="Two small utilities I have places into ~/bin:
+#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.rst 2019-11-17 7911114^:src/certificates/admin-csr.json 2019-11-17 7911114^:src/certificates/admin-key.pem 2019-11-17 7911114^:src/certificates/admin.csr 2019-11-17 7911114^:src/certificates/admin.pem 2019-11-17 7911114^:src/certificates/ca-config.json 2019-11-17 7911114^:src/certificates/ca-csr.json 2019-11-17 7911114^:src/certificates/ca-key.pem 2019-11-17 7911114^:src/certificates/ca.csr 2019-11-17 7911114^:src/certificates/ca.pem 2019-11-17 7911114^:src/certificates/copy-certificates-to-servers.sh git trail I cannot remember where is this one from :-(">
+	<meta itemprop="datePublished" content="2019-01-14T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2019-01-14T11:22:48+08:00">
+	<meta itemprop="wordCount" content="259">
+	<meta itemprop="keywords" content="Git,Tools">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Gitbits">
+	<meta name="twitter:description" content="Two small utilities I have places into ~/bin:
 git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
-#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst."/>
+#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.rst 2019-11-17 7911114^:src/certificates/admin-csr.json 2019-11-17 7911114^:src/certificates/admin-key.pem 2019-11-17 7911114^:src/certificates/admin.csr 2019-11-17 7911114^:src/certificates/admin.pem 2019-11-17 7911114^:src/certificates/ca-config.json 2019-11-17 7911114^:src/certificates/ca-csr.json 2019-11-17 7911114^:src/certificates/ca-key.pem 2019-11-17 7911114^:src/certificates/ca.csr 2019-11-17 7911114^:src/certificates/ca.pem 2019-11-17 7911114^:src/certificates/copy-certificates-to-servers.sh git trail I cannot remember where is this one from :-(">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -100,12 +105,21 @@ git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/gi
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -122,6 +136,7 @@ git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/gi
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -137,7 +152,7 @@ git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/gi
         <div class="post-category">
             <a href="/categories/devops/"> DevOps </a>
             </div>
-          <span class="more-meta"> 255 words </span>
+          <span class="more-meta"> 259 words </span>
           <span class="more-meta"> 2 mins read </span>
         
       </div>
@@ -157,57 +172,55 @@ git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/gi
       <p>Two small utilities I have places into <code>~/bin</code>:</p>
 <h1 id="git-attic">git-attic</h1>
 <p>Source: <a href="https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic">https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic</a></p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh
-</span><span class="cp"></span><span class="c1"># git-attic [-M] [PATH] - list deleted files of Git repositories</span>
-<span class="c1">#</span>
-<span class="c1"># Use -M to not show renamed files, and other git-log options as you like.</span>
-
-git log --raw --no-renames --date<span class="o">=</span>short --format<span class="o">=</span><span class="s2">&#34;%h %cd&#34;</span> <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span> <span class="p">|</span>
-  awk <span class="s1">&#39;/^[0-9a-f]/ { commit=$1; date=$2 }
-</span><span class="s1">       /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39;</span> <span class="p">|</span>
-  less
-
-</code></pre></div><h2 id="example">Example</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; |
-  awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 }
-       /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39;
-2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.rst
-2019-11-17 7911114^:src/certificates/admin-csr.json
-2019-11-17 7911114^:src/certificates/admin-key.pem
-2019-11-17 7911114^:src/certificates/admin.csr
-2019-11-17 7911114^:src/certificates/admin.pem
-2019-11-17 7911114^:src/certificates/ca-config.json
-2019-11-17 7911114^:src/certificates/ca-csr.json
-2019-11-17 7911114^:src/certificates/ca-key.pem
-2019-11-17 7911114^:src/certificates/ca.csr
-2019-11-17 7911114^:src/certificates/ca.pem
-2019-11-17 7911114^:src/certificates/copy-certificates-to-servers.sh
-</code></pre></div><h1 id="git-trail">git trail</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/sh
+</span></span></span><span class="line"><span class="cl"><span class="c1"># git-attic [-M] [PATH] - list deleted files of Git repositories</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use -M to not show renamed files, and other git-log options as you like.</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">git log --raw --no-renames --date<span class="o">=</span>short --format<span class="o">=</span><span class="s2">&#34;%h %cd&#34;</span> <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span> <span class="p">|</span>
+</span></span><span class="line"><span class="cl">  awk <span class="s1">&#39;/^[0-9a-f]/ { commit=$1; date=$2 }
+</span></span></span><span class="line"><span class="cl"><span class="s1">       /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39;</span> <span class="p">|</span>
+</span></span><span class="line"><span class="cl">  less
+</span></span></code></pre></div><h2 id="example">Example</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; |
+</span></span><span class="line"><span class="cl">  awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 }
+</span></span><span class="line"><span class="cl">       /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39;
+</span></span><span class="line"><span class="cl">2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.rst
+</span></span><span class="line"><span class="cl">2019-11-17 7911114^:src/certificates/admin-csr.json
+</span></span><span class="line"><span class="cl">2019-11-17 7911114^:src/certificates/admin-key.pem
+</span></span><span class="line"><span class="cl">2019-11-17 7911114^:src/certificates/admin.csr
+</span></span><span class="line"><span class="cl">2019-11-17 7911114^:src/certificates/admin.pem
+</span></span><span class="line"><span class="cl">2019-11-17 7911114^:src/certificates/ca-config.json
+</span></span><span class="line"><span class="cl">2019-11-17 7911114^:src/certificates/ca-csr.json
+</span></span><span class="line"><span class="cl">2019-11-17 7911114^:src/certificates/ca-key.pem
+</span></span><span class="line"><span class="cl">2019-11-17 7911114^:src/certificates/ca.csr
+</span></span><span class="line"><span class="cl">2019-11-17 7911114^:src/certificates/ca.pem
+</span></span><span class="line"><span class="cl">2019-11-17 7911114^:src/certificates/copy-certificates-to-servers.sh
+</span></span></code></pre></div><h1 id="git-trail">git trail</h1>
 <p>I cannot remember where is this one from :-(</p>
-<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="cp">#!/bin/sh -e
-</span><span class="cp"></span><span class="c1"># git trail [-r] [-t] [COMMIT] - show all branching points in Git history</span>
-
-<span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span> -r <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">shift</span> <span class="o">||</span> <span class="nv">REMOTES</span><span class="o">=</span><span class="s2">&#34;-e refs/remotes/&#34;</span>
-<span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span> -t <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">shift</span> <span class="o">||</span> <span class="nv">TAGS</span><span class="o">=</span><span class="s2">&#34;-e refs/tags/&#34;</span>
-<span class="nv">COMMIT</span><span class="o">=</span><span class="k">$(</span>git rev-parse --no-flags --default HEAD <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span><span class="k">)</span>
-
-<span class="o">{</span> git <span class="k">for</span>-each-ref <span class="p">|</span> grep -v -e <span class="s1">&#39;^$&#39;</span> <span class="nv">$TAGS</span> <span class="nv">$REMOTES</span>
-  git log --date<span class="o">=</span>short --format<span class="o">=</span><span class="s2">&#34;%cd %h %H&#34;</span> <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
-<span class="o">}</span> <span class="p">|</span> awk <span class="s1">&#39;
-</span><span class="s1">    $2 == &#34;commit&#34; || $2 == &#34;tag&#34; {
-</span><span class="s1">      &#34;git merge-base &#39;</span><span class="nv">$COMMIT</span><span class="err">&#39;</span> <span class="s2">&#34; </span><span class="nv">$1</span><span class="s2"> | getline mb
-</span><span class="s2">      merge[mb] = merge[mb] &#34;</span> <span class="s2">&#34; </span><span class="nv">$3</span><span class="s2">
-</span><span class="s2">    }
-</span><span class="s2">    {
-</span><span class="s2">      if (</span><span class="nv">$3</span><span class="s2"> in merge) {
-</span><span class="s2">        split(merge[</span><span class="nv">$3</span><span class="s2">], mbs, &#34;</span> <span class="s2">&#34;)
-</span><span class="s2">        for (i in mbs) {
-</span><span class="s2">          &#34;</span>git name-rev --name-only --refs<span class="o">=</span><span class="se">\&#34;</span><span class="s2">&#34; mbs[i] &#34;</span><span class="se">\&#34;</span> <span class="s2">&#34; </span><span class="nv">$3</span><span class="s2"> | getline nr
-</span><span class="s2">          if (nr != &#34;</span>undefined<span class="s2">&#34;) print </span><span class="nv">$1</span><span class="s2">, </span><span class="nv">$2</span><span class="s2">, nr   # skip unreachable commits
-</span><span class="s2">        }
-</span><span class="s2">      } 
-</span><span class="s2">
-</span></code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/sh -e
+</span></span></span><span class="line"><span class="cl"><span class="c1"># git trail [-r] [-t] [COMMIT] - show all branching points in Git history</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span> -r <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">shift</span> <span class="o">||</span> <span class="nv">REMOTES</span><span class="o">=</span><span class="s2">&#34;-e refs/remotes/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> <span class="o">=</span> -t <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="nb">shift</span> <span class="o">||</span> <span class="nv">TAGS</span><span class="o">=</span><span class="s2">&#34;-e refs/tags/&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">COMMIT</span><span class="o">=</span><span class="k">$(</span>git rev-parse --no-flags --default HEAD <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span><span class="k">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">{</span> git <span class="k">for</span>-each-ref <span class="p">|</span> grep -v -e <span class="s1">&#39;^$&#39;</span> <span class="nv">$TAGS</span> <span class="nv">$REMOTES</span>
+</span></span><span class="line"><span class="cl">  git log --date<span class="o">=</span>short --format<span class="o">=</span><span class="s2">&#34;%cd %h %H&#34;</span> <span class="s2">&#34;</span><span class="nv">$@</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span> <span class="p">|</span> awk <span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">    $2 == &#34;commit&#34; || $2 == &#34;tag&#34; {
+</span></span></span><span class="line"><span class="cl"><span class="s1">      &#34;git merge-base &#39;</span><span class="nv">$COMMIT</span><span class="err">&#39;</span> <span class="s2">&#34; </span><span class="nv">$1</span><span class="s2"> | getline mb
+</span></span></span><span class="line"><span class="cl"><span class="s2">      merge[mb] = merge[mb] &#34;</span> <span class="s2">&#34; </span><span class="nv">$3</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    }
+</span></span></span><span class="line"><span class="cl"><span class="s2">    {
+</span></span></span><span class="line"><span class="cl"><span class="s2">      if (</span><span class="nv">$3</span><span class="s2"> in merge) {
+</span></span></span><span class="line"><span class="cl"><span class="s2">        split(merge[</span><span class="nv">$3</span><span class="s2">], mbs, &#34;</span> <span class="s2">&#34;)
+</span></span></span><span class="line"><span class="cl"><span class="s2">        for (i in mbs) {
+</span></span></span><span class="line"><span class="cl"><span class="s2">          &#34;</span>git name-rev --name-only --refs<span class="o">=</span><span class="se">\&#34;</span><span class="s2">&#34; mbs[i] &#34;</span><span class="se">\&#34;</span> <span class="s2">&#34; </span><span class="nv">$3</span><span class="s2"> | getline nr
+</span></span></span><span class="line"><span class="cl"><span class="s2">          if (nr != &#34;</span>undefined<span class="s2">&#34;) print </span><span class="nv">$1</span><span class="s2">, </span><span class="nv">$2</span><span class="s2">, nr   # skip unreachable commits
+</span></span></span><span class="line"><span class="cl"><span class="s2">        }
+</span></span></span><span class="line"><span class="cl"><span class="s2">      } 
+</span></span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -268,7 +281,7 @@ git log --raw --no-renames --date<span class="o">=</span>short --format<span cla
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -286,13 +299,10 @@ git log --raw --no-renames --date<span class="o">=</span>short --format<span cla
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -303,7 +313,10 @@ git log --raw --no-renames --date<span class="o">=</span>short --format<span cla
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>keepass on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/keepass/</link>
-    <description>Recent content in keepass on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 08 Jul 2015 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/keepass/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Accessing Keepass information from command line</title>
-      <link>https://miroadamy.com/posts/2015-07-08-keepass-cli/</link>
-      <pubDate>Wed, 08 Jul 2015 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2015-07-08-keepass-cli/</guid>
-      <description>This is mainly for Linux and Mac as they do not have good client.
-It requires relatively modern Perl - 5.1x should work. I have
-➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail) Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.0.pl
-Make it executable and put it on the path:</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Keepass on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/keepass/</link>
+		<description>Recent content in Keepass on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 08 Jul 2015 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/keepass/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Accessing Keepass information from command line</title>
+				<link>https://miroadamy.com/posts/2015-07-08-keepass-cli/</link>
+				<pubDate>Wed, 08 Jul 2015 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2015-07-08-keepass-cli/</guid>
+				<description>&lt;p&gt;This is mainly for Linux and Mac as they do not have good client.&lt;/p&gt;&#xA;&lt;p&gt;It requires relatively modern Perl - 5.1x should work. I have&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➜  ~  perl --version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;(with 2 registered patches, see perl -V for more detail)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Get the kpcli distribution&#xA;Download from Sourceforge - &lt;a href=&#34;http://sourceforge.net/projects/kpcli/&#34;&gt;http://sourceforge.net/projects/kpcli/&lt;/a&gt; or get the attached script kpcli-3.0.pl&lt;/p&gt;&#xA;&lt;p&gt;Make it executable and put it on the path:&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

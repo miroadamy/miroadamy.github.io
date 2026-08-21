@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -36,20 +36,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Miro&#39;s World" />
-<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
-<meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Miro&#39;s World"/>
-<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
+<meta property="og:url" content="https://miroadamy.com/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Miro&#39;s World">
+	<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+	<meta itemprop="name" content="Miro&#39;s World">
+	<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta itemprop="datePublished" content="2026-08-21T14:31:54+00:00">
+	<meta itemprop="dateModified" content="2026-08-21T14:31:54+00:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Miro&#39;s World">
+	<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,12 +91,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -108,6 +122,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -116,124 +131,323 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-16-docker-machine-error-after-upgrade/">Fixing docker-machine error after upgrade</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2012-03-21-remote-origin/">How to fix the remote origin from read only</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2016-03-16 </span>
+      <span class="post-time"> 2012-03-21 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
+          <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 387 words </span>
+        <span class="more-meta"> 311 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      I had to upgrade docker toolbox on Yosemite to get latest docker-compose additions.
-After installing the new package, I was not able to connect to docker machine:
-➜ ~ docker-machine status Stopped ➜ ~ docker-machine start default Starting &#34;default&#34;... (default) Check network to re-create if needed... (default) Waiting for an IP... Machine &#34;default&#34; was started. Waiting for SSH to be available... Detecting the provisioner... Started machines may have new IP addresses.
+      <h2 id="issue">Issue</h2>
+<p>In dotvim repo, I used readonly URL for cloning the repository. Now I have created local branch ( linux-vm ) to track Linux specific font settings and need them to push up.</p>
+<p>After creating new SSH pair and adding to GitHub, does not work</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@cplx-dev-vf .vim]$ git status
+</span></span><span class="line"><span class="cl"># On branch linux-vm
+</span></span><span class="line"><span class="cl">nothing to commit (working directory clean)[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm
+</span></span><span class="line"><span class="cl">fatal: remote error:
+</span></span><span class="line"><span class="cl"> You can&#39;t push to git://github.com/radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> Use git@github.com:radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">[tkuser@cplx-dev-vf .vim]$ git remote show origin
+</span></span><span class="line"><span class="cl">* remote origin
+</span></span><span class="line"><span class="cl"> Fetch URL: git://github.com/radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> Push URL: git://github.com/radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> HEAD branch: master
+</span></span><span class="line"><span class="cl"> Remote branch:
+</span></span><span class="line"><span class="cl"> master tracked
+</span></span><span class="line"><span class="cl"> Local branch configured for &#39;git pull&#39;:
+</span></span><span class="line"><span class="cl"> master merges with remote master
+</span></span><span class="line"><span class="cl"> Local ref configured for &#39;git push&#39;:
+</span></span><span class="line"><span class="cl"> master pushes to master (up to date)
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">[tkuser@cplx-dev-vf .vim]$ git remote set-url --push origin git@github.com:radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">[tkuser@cplx-dev-vf .vim]$ git remote show origin
+</span></span><span class="line"><span class="cl">* remote origin
+</span></span><span class="line"><span class="cl"> Fetch URL: git://github.com/radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> Push URL: git@github.com:radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> HEAD branch: master
+</span></span><span class="line"><span class="cl"> Remote branch:
+</span></span><span class="line"><span class="cl"> master tracked
+</span></span><span class="line"><span class="cl"> Local branch configured for &#39;git pull&#39;:
+</span></span><span class="line"><span class="cl"> master merges with remote master
+</span></span><span class="line"><span class="cl"> Local ref configured for &#39;git push&#39;:
+</span></span><span class="line"><span class="cl"> master pushes to master (up to date)
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">[tkuser@cplx-dev-vf .vim]$ git push origin linux-vm
+</span></span><span class="line"><span class="cl">Enter passphrase for key &#39;/home/tkuser/.ssh/id_rsa&#39;:
+</span></span><span class="line"><span class="cl">Counting objects: 5, done.
+</span></span><span class="line"><span class="cl">Compressing objects: 100% (2/2), done.
+</span></span><span class="line"><span class="cl">Writing objects: 100% (3/3), 306 bytes, done.
+</span></span><span class="line"><span class="cl">Total 3 (delta 1), reused 0 (delta 0)
+</span></span><span class="line"><span class="cl">To git@github.com:radegast/dotvim.git
+</span></span><span class="line"><span class="cl"> * [new branch] linux-vm -&gt; linux-vm
+</span></span></code></pre></div><p>The important line is</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2016-03-16-docker-machine-error-after-upgrade/" class="read-more-link">Read more...</a>
+      <a href="/posts/2012-03-21-remote-origin/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2016-02-18-access-aws-servers/">Accessing internal AWS servers directly from Mac</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2012-02-15-miro-manifesto/">Miro Manifesto</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2016-02-18 </span>
+      <span class="post-time"> 2012-02-15 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
+          <a href="/categories/technology/"> technology </a>
+          <a href="/categories/startup-life/"> startup-life </a>
           </div>
-        <span class="more-meta"> 723 words </span>
-        <span class="more-meta"> 4 mins read </span>
+        <span class="more-meta"> 2360 words </span>
+        <span class="more-meta"> 12 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.
-The credit for finding out about approach is blog post by James McOrmond - VPN over SSH - who is using this neat trick from Linux for quite some time.
-The software mentioned https://github.com/apenwarr/sshuttle supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).
+      <h1 id="miro-manifesto">Miro Manifesto</h1>
+<p>Original text of the memo, written in February 2012 and shared with limited audience, until it surfaced up as main them of the planning meeting in December 2012.</p>
+<p>This is an attempt to come up with better answers to the following questions:</p>
+<ul>
+<li>what issues and challenges I see on our way ahead from the technology point of view and what needs to be done to address them</li>
+<li>where do I see my professional and personal career go over next 12 to 18 months and in long run</li>
+<li>how to best align those two streams</li>
+</ul>
+<p>In the spirit of my latest “back to the basics” obsession, it was written in Markdown format and in Vi, copied and pasted into Google Doc, btw.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2016-02-18-access-aws-servers/" class="read-more-link">Read more...</a>
+      <a href="/posts/2012-02-15-miro-manifesto/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-12-22-p4merge/">p4merge as default file compare for PathFinder</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/">Tomcat 5 not reloading changes in JSP</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2015-12-22 </span>
+      <span class="post-time"> 2011-07-24 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 36 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 513 words </span>
+        <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      p4merge as default file compare for PathFinder Set the tool in File Comparison
-How to use it  Select 2 files, right click, compare from context menu In dual mode, select one file on each side, compare  
+      <p>Part of the beauty of JSP development is the easy of trying out the change. All you have to do is edit the JSP file, save it and reload the page. Yesterday I got caught by surprise by not being able to do exactly that.
+I saw some strange behaviour in an EL expression used JSP tag. As it was nothing ATG specific, I decided to try it out in plain old Tomcat rather than full ATG application. So I located the instance of Tomcat 5.5 (I always have couple of Tomcats lying around) and being lazy, I decided to inject the change into out-of the box jsp-examples Web application that comes with it.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2015-12-22-p4merge/" class="read-more-link">Read more...</a>
+      <a href="/posts/2011-07-24-tomcat-5-not-reloading-changes-in-jsp/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-12-11-docker-starting/">Docker - getting started</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2011-07-11-google-is-superset-of-both-facebook-and-twitter/">Google&#43; is superset of both Facebook and Twitter</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2015-12-11 </span>
+      <span class="post-time"> 2011-07-11 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
+          <a href="/categories/general/"> general </a>
           </div>
-        <span class="more-meta"> 199 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 522 words </span>
+        <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      After the reboot docker version Client: Version: 1.9.1 API version: 1.21 Go version: go1.4.3 Git commit: a34a1d5 Built: Fri Nov 20 17:56:04 UTC 2015 OS/Arch: darwin/amd64 Cannot connect to the Docker daemon. Is the docker daemon running on this host? ➜ gitolite-admin git:(master) docker-machine active No active host found ➜ gitolite-admin git:(master) docker-machine env default Error checking TLS connection: default is not running. Please start it in order to use the connection settings ➜ gitolite-admin git:(master) docker-machine start Error: Expected to get one or more machine names as arguments ➜ gitolite-admin git:(master) docker-machine start default (default) Starting VM.
+      <p>It may be too early to express opinions about something so new as Google+, but in the short few days I was playing with it, I started to like it a lot. Many bloggers consider it to be a Facebook killer - and it (unlike two previous Google attempts on social networking) eventually may become that. Conceptually, however  it is much closer to Twitter than Facebook.</p>
+<p>The biggest difference is that in G+ there is no peer relation - "friendship" that needs to be confirmed by both parties. Both ends are disconnected in Google+ - set of people whose updates you see in your stream and set of people that see your updates is not the same and can be in extreme case disjunct.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2015-12-11-docker-starting/" class="read-more-link">Read more...</a>
+      <a href="/posts/2011-07-11-google-is-superset-of-both-facebook-and-twitter/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-15-acc-in-vm/">Starting ACC in VM</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2011-06-19-back-to-twitter/">Back to Twitter</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2015-07-15 </span>
+      <span class="post-time"> 2011-06-19 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
+          <a href="/categories/lifehacks/"> lifehacks </a>
           </div>
-        <span class="more-meta"> 177 words </span>
+        <span class="more-meta"> 156 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      The ACC is installed in default location: ~/ATG/ACC11.1
-This does not work OOTB. You must set 2 additional ENV properties
-cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp; Starting from dyn/admin The start in separate VM works OK.
-Start in server VM brings errors message very often complaining of malformed Help URL. The issue is documented here: http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg - for JBOSS.
-I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no difference.
+      <p>After being away for over 4 months, I am back on Twitter. No, I did not miss the stream of 160 character mixture of news, trivia, white noise and occasional nuggets. Three main reasons:</p>
+<p>1) Twitter seems to to become  unavoidable - more and more services assume that one has twitter account. Many cyberevents rules start with "retweet this" or "tweet that" which of course one cannot do without Twitter account</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2015-07-15-acc-in-vm/" class="read-more-link">Read more...</a>
+      <a href="/posts/2011-06-19-back-to-twitter/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2011-06-18-dear-cultured-code-you-are-history/">Dear Cultured Code, you are history ...</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2011-06-18 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 449 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I have been <a href="http://culturedcode.com/">Cultured Code</a> customer for over 2 years and used multiple their products: <a href="http://culturedcode.com/things/">Things on OS-X</a>, <a href="http://culturedcode.com/things/ipad/">Things for iPad</a> and <a href="http://culturedcode.com/things/iphone/">iPhone</a> on daily basis.</p>
+<p>Not any more.</p>
+<p>I am definitely giving up on Things and Cultured Code products.</p>
+<p>The reason why is sheer frustration from long wait on usable synchronization between Things on Mac, iPad and iPhone. Something that have been discussed, promised, <a href="http://culturedcode.com/things/blog/2009/08/this-is-not-a-roadmap.html">chewed over 2 years</a> and that still does not work.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2011-06-18-dear-cultured-code-you-are-history/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2011-04-07-facebook-or-linkedin-thats-the-question/">Facebook or LinkedIn - that&#39;s the question</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2011-04-07 </span>
+      <div class="post-category">
+          <a href="/categories/lifehacks/"> lifehacks </a>
+          </div>
+        <span class="more-meta"> 335 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Few weeks ago, I canceled my Twitter account and stopped using Twitter altogether. I do not miss it at all.</p>
+<p>The next vector of distraction to be brought under control is Facebook. This is a tougher nut to crack - because of wide variety of people in my circle of friends, Facebook plays many different roles.</p>
+<ul>
+<li>It is a connection to old friends and colleagues from the old continent and old country.</li>
+<li>It is a family connection.</li>
+<li>It is a connection to people that are not on FB through their friends or relatives that are.</li>
+<li>It is a link to people I worked with and wanted to keep in touch.</li>
+<li>It is a link to people I share common interest with</li>
+</ul>
+<p>This variety creates a problem of itself (which is multiplied by English/non English division).  Tool that does too many things, does not do them very well.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2011-04-07-facebook-or-linkedin-thats-the-question/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2011-02-11-better-gmail-than-gmail/">Better GMail than GMail</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2011-02-11 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 277 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Since 2005 when I switched to GMail, I was living in browser. For better or worse, I learn to put up with issues like speed, lack of hotkeys, UI that is not as responsive as it should be, drag and drop that works most of the time. To be fair, in these five years browsers and GMail UI improved tremendously. It was rational decision to trade all these for simplicity of the UI.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2011-02-11-better-gmail-than-gmail/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2011-02-03-linux-time/">Configuring permanent time updates for Linux</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2011-02-03 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 58 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="1-make-sure-the-dns-works">1) make sure the DNS works</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo vi /etc/resolv.conf
+</span></span><span class="line"><span class="cl">cat /etc/resolv.conf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">nameserver 208.67.222.222
+</span></span><span class="line"><span class="cl">nameserver 208.67.220.220
+</span></span><span class="line"><span class="cl">nameserver 192.168.16.1
+</span></span></code></pre></div><h2 id="2-check-that-you-have-ntpd-installed">2) check that you have ntpd installed</h2>
+<blockquote>
+<p>cat /etc/ntp.conf</p>
+</blockquote>
+<h2 id="3-make-it-work-in-all">3) make it work in all</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/sbin/chkconfig --list | grep ntpd
+</span></span><span class="line"><span class="cl">sudo /sbin/chkconfig --level 2345 ntpd on
+</span></span></code></pre></div><h2 id="4-initial-sync">4) Initial sync</h2>
+<blockquote>
+<p>sudo /usr/sbin/ntpdate pool.ntp.org</p>
+</blockquote>
+<h2 id="5-start-service--restart">5) Start service / restart</h2>
+<blockquote>
+<p>sudo /sbin/service ntpd start</p>
+</blockquote>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2011-02-03-linux-time/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2011-01-30-bye-bye-twitter/">Bye bye Twitter</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2011-01-30 </span>
+      <div class="post-category">
+          <a href="/categories/lifehacks/"> lifehacks </a>
+          </div>
+        <span class="more-meta"> 256 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I have came to a conclusion that I do have too much <em>stuff</em> in my life.</p>
+<p>Too much and too little and the same time.</p>
+<p>Too much information. Too many interruptions and distractions. Too little time to think.</p>
+<p>Too much consumption of information and not enough time to process it and do anything meaningful with it - learn from it or create something new.</p>
+<p>The only way how to get out of the self-digged hole is to start cutting.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2011-01-30-bye-bye-twitter/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -267,7 +481,9 @@ I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no dif
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -285,13 +501,10 @@ I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no dif
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -302,7 +515,10 @@ I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no dif
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

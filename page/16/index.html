@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -36,20 +36,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Miro&#39;s World" />
-<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
-<meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Miro&#39;s World"/>
-<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
+<meta property="og:url" content="https://miroadamy.com/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Miro&#39;s World">
+	<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+	<meta itemprop="name" content="Miro&#39;s World">
+	<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta itemprop="datePublished" content="2026-08-21T14:31:54+00:00">
+	<meta itemprop="dateModified" content="2026-08-21T14:31:54+00:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Miro&#39;s World">
+	<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,12 +91,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -108,6 +122,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -116,127 +131,266 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-15-07-git-history/">How to truncate Git history</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2010-11-24-podcast-recommendation/">Podcast recommendation</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2015-07-14 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 648 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      The general idea #!/bin/bash # Parameter: tag or sha1 git checkout --orphan temp $1 git commit -m &#34;Truncated history&#34; git rebase --onto temp $1 master git branch -D temp Requires Git 1.8+
-Works well for mostly linear history (aka Git used for diff-ing of the catalog feeds).
-How it works Starting repo (training):
-➜ test git:(master) git last fe4e396 2015-07-13 | Fix for BuildInfo in TDD, database connectivity works (HEAD, origin/dynamovies/main, master) [Miro Adamy] f1b8636 2015-07-13 | Tables and database creation [Miro Adamy] d4c182b 2015-07-13 | Added template of dynamovies module - with empty UI.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-15-07-git-history/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-12-component-report/">How to get information about all ATG components</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-07-12 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 792 words </span>
-        <span class="more-meta"> 4 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      How to get information about all ATG Nucleus components Dyn Admin has useful feature - Configuration reporter: http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml
-There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes
--rw-r--r-- 1 miro 2.2M Jul 12 14:07 bean1 -rw-r--r-- 1 miro 2.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-07-12-component-report/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-08-keepass-cli/">Accessing Keepass information from command line</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-07-08 </span>
-      <div class="post-category">
-          <a href="/categories/tools/"> tools </a>
-          </div>
-        <span class="more-meta"> 592 words </span>
-        <span class="more-meta"> 3 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      This is mainly for Linux and Mac as they do not have good client.
-It requires relatively modern Perl - 5.1x should work. I have
-➜ ~ perl --version This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level (with 2 registered patches, see perl -V for more detail) Get the kpcli distribution Download from Sourceforge - http://sourceforge.net/projects/kpcli/ or get the attached script kpcli-3.0.pl
-Make it executable and put it on the path:
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-07-08-keepass-cli/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-07-osx-web/">Setting up a local web server on a Mac</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-07-07 </span>
+      <span class="post-time"> 2010-11-24 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 25 words </span>
-        <span class="more-meta"> 1 min read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      See
- Setting up a local web server on OS X 10.9 &ldquo;Mavericks&rdquo; Setting up a local web server on OS X 10.10 &ldquo;Yosemite&rdquo;  Meta-List
-https://discussions.apple.com/docs/DOC-3083
-    </div>
-    <div class="read-more">
-      <a href="/posts/2015-07-07-osx-web/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-06-18-jenkins-git/">How to fix Jenkins build issues related to Git connectivity</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-06-18 </span>
-      <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
-          </div>
-        <span class="more-meta"> 407 words </span>
+        <span class="more-meta"> 226 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Symptoms:  build fails cannot checkout / connect to GIT  Validate this is the case  ssh to jenkins2 assume identity of jenkins user (VERY IMPORTANT) go to /home/projects/workspace/PROJECTNAME directory  This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like
--bash-3.2$ git status fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253 the git repo is corrupted and needs to be reloaded.
-Step 1 - Get the remote repo URL -bash-3.
+      <p>I have find new podcast that I want to share with you. It is called "This Developer's Life" and is produced by well known digerati Scott Hanselman and Rob Conery.</p>
+<p>I listen to a lot of podcasts, about 50 % of them produced by Leo Laporte's TWIT Network (This Week in Tech, Macbreak, This Week in Google, FLOSS Weekly and occasional Security Now).</p>
+<p>What I like about Leo's network is professionalism of audio production, usually good and interesting panel with topics that are worth listening to. Few other podcasts come even close to the TWIT level of perfection.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2015-06-18-jenkins-git/" class="read-more-link">Read more...</a>
+      <a href="/posts/2010-11-24-podcast-recommendation/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2010-02-24-jsp-compiler-configuration-in-jboss-4-2-x-for-atg/">JSP compiler configuration in JBoss 4.2.x for ATG</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2010-02-24 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 8 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>The post is on corporate blog - <a href="https://web.archive.org/web/20111114225413/http://blog.thinkwrap.com/blog/2010/2/24/jsp-compiler-configuration-in-jboss-42x-for-atg.html">http://blog.thinkwrap.com/blog/2010/2/24/jsp-compiler-configuration-in-jboss-42x-for-atg.html</a></p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2010-02-24-jsp-compiler-configuration-in-jboss-4-2-x-for-atg/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2010-01-26-thanks-for-all-the-adds/">Thanks for all the adds</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2010-01-26 </span>
+      <div class="post-category">
+          <a href="/categories/lifehacks/"> lifehacks </a>
+          </div>
+        <span class="more-meta"> 473 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>As regular listener to multiple <a href="http://twit.tv/" target="_blank">TWIT Network</a> podcasts (This Week In tech, Macbreak Weekly, This Week in Google, Free Libre Opensource Software, Security Now, Windows Weekly) I am very much aware of all the advertisers that keep Leo and the gang in business and make the podcast's stream going. I have even acted upon several of the ads: we are customer of SquareSpace.com (the corporate blog runs on that platform), GoToMeeting is regular part of day-to-day business - we have several accounts and use it regularly for meetings. I would use GoToMyPC if I had any need to go to a PC :-). I bought Spinrite, although I used it only once over last 3 years.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2010-01-26-thanks-for-all-the-adds/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2010-01-25-one-month-with-windows-7/">One month with Windows 7</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2010-01-25 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 562 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>It has been one month now that I started to use Windows 7 based Dell Vostro 1320 notebook on daily basis. The hardware parameters of this little thing are: Core 2 Duo 2.26, 500 GB HDD, 8 GB of RAM, 13" screen, Windows 7 Professional (64 bit of course, how else with all that RAM). All this with 3 year next business day warranty for about $1400 CAD - not bad deal at all.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2010-01-25-one-month-with-windows-7/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2010-01-24-unintended-coincidence/">Unintended coincidence</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2010-01-24 </span>
+      <div class="post-category">
+          <a href="/categories/general/"> general </a>
+          </div>
+        <span class="more-meta"> 40 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p><img class="alignnone size-medium wp-image-753" title="Ilustrated" src="/images/ilustrated.png?w=300" alt=""  /></p>
+<p>To be fair, the book is to appear in March 2010, so most likely the cover image is not ready yet. But I found lack of images for book whose main point is to make explanation illustrated quite ironical :-).</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2010-01-24-unintended-coincidence/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2010-01-11-cure-for-crashing-foursquare-and-runkeeper-on-iphone/">Cure for crashing FourSquare and RunKeeper on iPhone</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2010-01-11 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 169 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Few weeks ago, first Foursquare application and then my favorite RunKeeper app started to fail. The symptoms were simple:</p>
+<p>1) attempt to start</p>
+<p>2) wait for for 2-10 seconds</p>
+<p>3) exit</p>
+<p>Analysis of the crash logs did not reveal anything obvious (see ~/Library/Logs/CrashReporter/MobileDevice/NAME:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Process</span><span class="p">:</span>         <span class="n">foursquare</span> <span class="p">[</span><span class="mi">374</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Path</span><span class="p">:</span>            <span class="o">/</span><span class="k">var</span><span class="o">/</span><span class="n">mobile</span><span class="o">/</span><span class="n">Applications</span><span class="o">/</span><span class="mi">7</span><span class="n">F37347B</span><span class="o">-......</span><span class="mi">1663</span><span class="n">AA5</span><span class="o">/</span><span class="n">foursquare</span><span class="o">.</span><span class="n">app</span><span class="o">/</span><span class="n">foursquare</span>
+</span></span><span class="line"><span class="cl"><span class="n">Identifier</span><span class="p">:</span>      <span class="n">foursquare</span>
+</span></span><span class="line"><span class="cl"><span class="n">Version</span><span class="p">:</span>         <span class="err">???</span> <span class="p">(</span><span class="err">???</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Code</span> <span class="n">Type</span><span class="p">:</span>       <span class="n">ARM</span> <span class="p">(</span><span class="n">Native</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Parent</span> <span class="n">Process</span><span class="p">:</span>  <span class="n">launchd</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">Date</span><span class="o">/</span><span class="n">Time</span><span class="p">:</span>       <span class="mi">2009</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">22</span> <span class="mi">12</span><span class="p">:</span><span class="mi">39</span><span class="p">:</span><span class="mf">11.260</span> <span class="o">-</span><span class="mi">0500</span>
+</span></span><span class="line"><span class="cl"><span class="ne">OS</span> <span class="n">Version</span><span class="p">:</span>      <span class="n">iPhone</span> <span class="ne">OS</span> <span class="mf">3.1</span><span class="o">.</span><span class="mi">2</span> <span class="p">(</span><span class="mi">7</span><span class="n">D11</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Report</span> <span class="n">Version</span><span class="p">:</span>  <span class="mi">104</span>
+</span></span><span class="line"><span class="cl"><span class="n">Exception</span> <span class="n">Type</span><span class="p">:</span>  <span class="n">EXC_BAD_ACCESS</span> <span class="p">(</span><span class="n">SIGSEGV</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">Exception</span> <span class="n">Codes</span><span class="p">:</span> <span class="n">KERN_INVALID_ADDRESS</span> <span class="n">at</span> <span class="mh">0x20294628</span>
+</span></span><span class="line"><span class="cl"><span class="n">Crashed</span> <span class="ne">Thread</span><span class="p">:</span>  <span class="mi">0</span><span class="o">&lt;</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Thread</span> <span class="mi">0</span> <span class="n">Crashed</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"><span class="mi">0</span>   <span class="n">libobjc</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">dylib</span>                   <span class="mh">0x32668ecc</span> <span class="mh">0x32665000</span> <span class="o">+</span> <span class="mi">16076</span>
+</span></span><span class="line"><span class="cl"><span class="mi">1</span>   <span class="n">CoreFoundation</span>                    <span class="mh">0x32d83d6a</span> <span class="mh">0x32d4d000</span> <span class="o">+</span> <span class="mi">224618</span>
+</span></span><span class="line"><span class="cl"><span class="mi">2</span>   <span class="n">CoreFoundation</span>                    <span class="mh">0x32d4fc28</span> <span class="mh">0x32d4d000</span> <span class="o">+</span> <span class="mi">11304</span><span class="o">&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span></span></code></pre></div><p>What helped was to delete both applications from the phone, including data and let the iTunes install it back. No data is lost, because both services are cloud based - only minor inconvenience was to re-enter login information.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2010-01-11-cure-for-crashing-foursquare-and-runkeeper-on-iphone/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2010-01-05-attention-is-new-currency/">Attention is new currency</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2010-01-05 </span>
+      <div class="post-category">
+          <a href="/categories/general/"> general </a>
+          </div>
+        <span class="more-meta"> 539 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Some companies just do not get it.</p>
+<p>It starts with an email, like this one:</p>
+<p><a href="/images/screen-shot-2010-01-05-at-12-13-40-am.png">
+<img class="alignnone size-medium wp-image-737" title="email" src="/images/screen-shot-2010-01-05-at-12-13-40-am.png?w=300" alt="" width="300" height="145" /></a></p>
+<p>By coincidence, you are on project that has the CRM component so you decide to check it out and click on link. After all, it is free, right, so why wouldn't you ?</p>
+<p>The catch is that it is not free at all. Without realizing it, you have already made your first payment, by doing the sender a favor: as we know, clicking on a link in email is definitely not a good idea and recommended behaviour, unless you know the sender and trust the sender. Which - in this case - you have absolutely no reason to.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2010-01-05-attention-is-new-currency/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2009-12-30-blog-reloade/">Here we go again</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2009-12-30 </span>
+      <div class="post-category">
+          <a href="/categories/general/"> general </a>
+          <a href="/categories/startup-life/"> startup-life </a>
+          </div>
+        <span class="more-meta"> 558 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>This is reloaded version of my <a href="http://thinkwrap.wordpress.com/2009/12/29/the-fork-at-the-end-of-this-blog/">previous blog </a>- or continuation of the fork.</p>
+<p>First thing to start is to explain why did I do something quite contra-productive as relocate the blog and loose all the audience - however small it could have been.</p>
+<p>It would seem that I like restarts and things reloaded. I did pick a <a href="http://canada.gc.ca/">new country</a> to become new home for me and my family (if emigration is not a restart, what else is ?).  Back in 2004 we have started Thinknostic to be "Montage Reloaded" - a new incarnation of the company I worked for before and liked it a lot. The same story repeats with blogging.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2009-12-30-blog-reloade/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2009-07-24-facebook-domain-type-in-hack/">Facebook domain type-in hack</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2009-07-24 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 292 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>You know the drill: open browser, new tab, type 'www.facebook.com' and in moment you can see who of your online buddies is up to something interesting. This is exactly what I did. Only I did not end up in well known Facebook page, but on something really fishy:</p>
+<p><img class="alignnone size-full wp-image-722" title="Picture 3" src="/images/picture-3-fb.png" alt="Picture 3" width="450" height="339" /></p>
+<p>This is definitely NOT facebook. How come I ended up on 'quiz.us' site when I typed in www.facebook.com. Or did I ? Let's do it again:</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2009-07-24-facebook-domain-type-in-hack/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2009-05-23-forget-me-not-web2-0-edition/">Forget me not, Web2.0 edition</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2009-05-23 </span>
+      <div class="post-category">
+          <a href="/categories/lifehacks/"> lifehacks </a>
+          </div>
+        <span class="more-meta"> 364 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I stumbled upon this pretty nice little application or service - depends how you see it. It is called <a href="http://www.reqall.com/about" target="_blank">reQall</a> (obviously would have been recall, but <a href="http://www.recall.com/" target="_blank">recall.com</a> as every good domain is taken.</p>
+<p>What it does is that allows you to set a reminder in the future to do something - at given time and date: buy X, call Y, do Z. Nothing to earth-shattering about that.</p>
+<p>What is neat is the way how you do it. Actually, many ways:</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2009-05-23-forget-me-not-web2-0-edition/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -270,7 +424,9 @@ Step 1 - Get the remote repo URL -bash-3.
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -288,13 +444,10 @@ Step 1 - Get the remote repo URL -bash-3.
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -305,7 +458,10 @@ Step 1 - Get the remote repo URL -bash-3.
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

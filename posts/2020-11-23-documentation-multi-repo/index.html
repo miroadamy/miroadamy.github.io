@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2020-11-23-documentation-multi-repo/" />
@@ -34,28 +34,35 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Documenting multi-repository projects" />
-<meta property="og:description" content="Documentation best practices, tools and techniquest for cloud-native multi-repository projects" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2020-11-23-documentation-multi-repo/" />
-<meta property="article:published_time" content="2020-11-23T13:00:00+08:00" />
-<meta property="article:modified_time" content="2020-11-23T13:00:00+08:00" />
-<meta itemprop="name" content="Documenting multi-repository projects">
-<meta itemprop="description" content="Documentation best practices, tools and techniquest for cloud-native multi-repository projects">
-<meta itemprop="datePublished" content="2020-11-23T13:00:00+08:00" />
-<meta itemprop="dateModified" content="2020-11-23T13:00:00+08:00" />
-<meta itemprop="wordCount" content="4169">
+<meta property="og:url" content="https://miroadamy.com/posts/2020-11-23-documentation-multi-repo/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Documenting multi-repository projects">
+	<meta property="og:description" content="Documentation best practices, tools and techniquest for cloud-native multi-repository projects">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2020-11-23T13:00:00+08:00">
+		<meta property="article:modified_time" content="2020-11-23T13:00:00+08:00">
+		<meta property="article:tag" content="Restructuredtext">
+		<meta property="article:tag" content="Markup">
+		<meta property="article:tag" content="Markdown">
+		<meta property="article:tag" content="Asciidoc">
+		<meta property="article:tag" content="Mkdocs">
 
-
-
-<meta itemprop="keywords" content="Restructuredtext,Markup,Markdown,Asciidoc,Mkdocs," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Documenting multi-repository projects"/>
-<meta name="twitter:description" content="Documentation best practices, tools and techniquest for cloud-native multi-repository projects"/>
+	<meta itemprop="name" content="Documenting multi-repository projects">
+	<meta itemprop="description" content="Documentation best practices, tools and techniquest for cloud-native multi-repository projects">
+	<meta itemprop="datePublished" content="2020-11-23T13:00:00+08:00">
+	<meta itemprop="dateModified" content="2020-11-23T13:00:00+08:00">
+	<meta itemprop="wordCount" content="4169">
+	<meta itemprop="keywords" content="Restructuredtext,Markup,Markdown,Asciidoc,Mkdocs">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Documenting multi-repository projects">
+	<meta name="twitter:description" content="Documentation best practices, tools and techniquest for cloud-native multi-repository projects">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -92,12 +99,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -114,6 +130,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -224,13 +241,12 @@ focusing on details such as explaining purpose and functionality of functions, p
 <p>There are several advantages of using the same repository as the source code:</p>
 <p>First, it is the audience - big part of the documentation is written by (current) developers for (future) developers. This way it can be managed together, using code version friendly tools. In order to do that, we need to use code version friendly formats - text based formats.</p>
 <p>Second - using the same repository synchronizes release cycles of the documentation. It is much easier to update the CHANGELOG.md when it is right there and to make it part of the next commit than to remember to go to some Wiki and do it there. How many similar lines as the following one have you seen during your career ?</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">... SOME CODE
-
-# TODO: Update the Release Notes in the Wiki - URL
-
-... more code
-
-</code></pre></div><p>Which gets us to second location for the documentation: somewhere else - meaning &ldquo;separate from the code&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">... SOME CODE
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># TODO: Update the Release Notes in the Wiki - URL
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">... more code
+</span></span></code></pre></div><p>Which gets us to second location for the documentation: somewhere else - meaning &ldquo;separate from the code&rdquo;.</p>
 <p>Elsewhere can include places like &ldquo;in a Wiki&rdquo; - which is not great to really unhappy places such as Word documents on a file share.</p>
 <p>There are many issues with this approach: by going elsewhere for the documentation, we need to use separate credentials, loose the direct link to code. Some part of documentation (source code comments) still stays with the source, but other parts - the higher level - are now elsewhere. The &ldquo;one source of truth&rdquo; is lost and often documentation in Wiki contains different information than the actual code.</p>
 <p>With &ldquo;elsewhere&rdquo; we get inherently different release cycles for project code and documentation: updating the documentation is decoupled from code changes and project releases which impacts the &ldquo;up-to-dateness&rdquo; of the information. It also makes the automation and CI/CD much more complicated.</p>
@@ -325,67 +341,67 @@ The second disadvantage is being less expressive / less powerful than the others
 <li>add file <code>mkdocs.yml</code> to the root of the project that defines configuration of the documentation</li>
 </ul>
 <p>Here is an example of a config file</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">site_name: Reference Architecture for $PRODUCTNAME
-repo_url: https://bitbucket.org/pivotree/$PRODUCTNAME-ref-arch/src/master/
-repo_name: $PRODUCTNAME-ref-arch
-site_description: $PRODUCTNAME Reference Architecture - Infrastructure Documentation
-site_author: miro.adamy@pivotree.com
-copyright: (c) 2020 Pivotree - https://pivotree.com/
-
-nav:
-    - Home: index.md
-    - Environments:
-        - Staging: STAG.md
-        - Production: PROD.md
-        - Dev/QA: DEV.md
-    - Modules:
-        - Module 1: module-demo-1.md
-        - Module 2: module-demo-2.md
-    - Examples:
-        - Minimal: example-minimal.md
-        - Typical: example-typical.md
-        - Everything: example-everything.md
-    - About this Documentation:
-        - Intro to MkDocs: mkdocs/about.md
-        - Markdown Demo: mkdocs/markdown-demo.md
-        - Macros Demo: mkdocs/macros-demo1.md
-#        - Diagrams: plantuml/diagrams.md
-theme:
-    name: material
-
-markdown_extensions:
-    - admonition
-    - codehilite
-    - footnotes
-    - meta
-    - toc:
-        permalink: True
-    - sane_lists
-    - pymdownx.arithmatex
-    - pymdownx.emoji:
-        emoji_index: !!python/name:materialx.emoji.twemoji
-        emoji_generator: !!python/name:materialx.emoji.to_svg
-    - pymdownx.superfences
-    - pymdownx.tasklist:
-        custom_checkbox: true
-    - pymdownx.tabbed
-    - pymdownx.tilde
-    - pymdownx.magiclink
-    - pymdownx.details
-
-
-plugins:
-    - search
-    - macros:
-        include_dir: .
-
-extra:
-    price: 12.50
-    company:
-        name: Pivotree
-        address: March 450
-        website: https://pivotree.com/
-</code></pre></div><p>It contains 5 parts:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">site_name: Reference Architecture for $PRODUCTNAME
+</span></span><span class="line"><span class="cl">repo_url: https://bitbucket.org/pivotree/$PRODUCTNAME-ref-arch/src/master/
+</span></span><span class="line"><span class="cl">repo_name: $PRODUCTNAME-ref-arch
+</span></span><span class="line"><span class="cl">site_description: $PRODUCTNAME Reference Architecture - Infrastructure Documentation
+</span></span><span class="line"><span class="cl">site_author: miro.adamy@pivotree.com
+</span></span><span class="line"><span class="cl">copyright: (c) 2020 Pivotree - https://pivotree.com/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">nav:
+</span></span><span class="line"><span class="cl">    - Home: index.md
+</span></span><span class="line"><span class="cl">    - Environments:
+</span></span><span class="line"><span class="cl">        - Staging: STAG.md
+</span></span><span class="line"><span class="cl">        - Production: PROD.md
+</span></span><span class="line"><span class="cl">        - Dev/QA: DEV.md
+</span></span><span class="line"><span class="cl">    - Modules:
+</span></span><span class="line"><span class="cl">        - Module 1: module-demo-1.md
+</span></span><span class="line"><span class="cl">        - Module 2: module-demo-2.md
+</span></span><span class="line"><span class="cl">    - Examples:
+</span></span><span class="line"><span class="cl">        - Minimal: example-minimal.md
+</span></span><span class="line"><span class="cl">        - Typical: example-typical.md
+</span></span><span class="line"><span class="cl">        - Everything: example-everything.md
+</span></span><span class="line"><span class="cl">    - About this Documentation:
+</span></span><span class="line"><span class="cl">        - Intro to MkDocs: mkdocs/about.md
+</span></span><span class="line"><span class="cl">        - Markdown Demo: mkdocs/markdown-demo.md
+</span></span><span class="line"><span class="cl">        - Macros Demo: mkdocs/macros-demo1.md
+</span></span><span class="line"><span class="cl">#        - Diagrams: plantuml/diagrams.md
+</span></span><span class="line"><span class="cl">theme:
+</span></span><span class="line"><span class="cl">    name: material
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">markdown_extensions:
+</span></span><span class="line"><span class="cl">    - admonition
+</span></span><span class="line"><span class="cl">    - codehilite
+</span></span><span class="line"><span class="cl">    - footnotes
+</span></span><span class="line"><span class="cl">    - meta
+</span></span><span class="line"><span class="cl">    - toc:
+</span></span><span class="line"><span class="cl">        permalink: True
+</span></span><span class="line"><span class="cl">    - sane_lists
+</span></span><span class="line"><span class="cl">    - pymdownx.arithmatex
+</span></span><span class="line"><span class="cl">    - pymdownx.emoji:
+</span></span><span class="line"><span class="cl">        emoji_index: !!python/name:materialx.emoji.twemoji
+</span></span><span class="line"><span class="cl">        emoji_generator: !!python/name:materialx.emoji.to_svg
+</span></span><span class="line"><span class="cl">    - pymdownx.superfences
+</span></span><span class="line"><span class="cl">    - pymdownx.tasklist:
+</span></span><span class="line"><span class="cl">        custom_checkbox: true
+</span></span><span class="line"><span class="cl">    - pymdownx.tabbed
+</span></span><span class="line"><span class="cl">    - pymdownx.tilde
+</span></span><span class="line"><span class="cl">    - pymdownx.magiclink
+</span></span><span class="line"><span class="cl">    - pymdownx.details
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">plugins:
+</span></span><span class="line"><span class="cl">    - search
+</span></span><span class="line"><span class="cl">    - macros:
+</span></span><span class="line"><span class="cl">        include_dir: .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">extra:
+</span></span><span class="line"><span class="cl">    price: 12.50
+</span></span><span class="line"><span class="cl">    company:
+</span></span><span class="line"><span class="cl">        name: Pivotree
+</span></span><span class="line"><span class="cl">        address: March 450
+</span></span><span class="line"><span class="cl">        website: https://pivotree.com/
+</span></span></code></pre></div><p>It contains 5 parts:</p>
 <ul>
 <li>header - name of the site</li>
 <li>navigational structure - which files create site and how</li>
@@ -405,27 +421,26 @@ extra:
 <h2 id="documentation-generation-and-hosting">Documentation Generation and Hosting</h2>
 <p>The process of transformation of the Markdown files to a website can be fully automated using CI/CD pipelines in each of the major hosting sites. The best support (IMHO) has Gitlab where this is an OOTB feature:</p>
 <p>This is .gitlab-ci.yml that generates HTML sites accessible as Gitlab Pages attached to the repository. The great advantage of Gitlab is support for private Gitlab pages for private repositories, which simplify setup for authentication / authorization.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">image: python:3.8-buster
-
-before_script:
-  - pip install mkdocs &#39;mkdocs-minify-plugin&gt;=0.2&#39; 
-  - pip install &#39;mkdocs-git-revision-date-localized-plugin&gt;=0.4&#39; &#39;mkdocs-awesome-pages-plugin&gt;=2.2.1&#39; &#39;mkdocs-macros-plugin&#39;
-
-  # Add your custom theme if not inside a theme_dir
-  # (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
-  # - pip install mkdocs-material
-
-pages:
-  script:
-  - mkdocs build
-  - mv site public
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
-
-</code></pre></div><p>Similar setup works for Github by generating the website into a second, dedicated &ldquo;published&rdquo; Github pages repository. Unlike in the Gitlab case, all Github pages are public. For more information, refer to <a href="https://www.mkdocs.org/user-guide/deploying-your-docs/">this</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">image: python:3.8-buster
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">before_script:
+</span></span><span class="line"><span class="cl">  - pip install mkdocs &#39;mkdocs-minify-plugin&gt;=0.2&#39; 
+</span></span><span class="line"><span class="cl">  - pip install &#39;mkdocs-git-revision-date-localized-plugin&gt;=0.4&#39; &#39;mkdocs-awesome-pages-plugin&gt;=2.2.1&#39; &#39;mkdocs-macros-plugin&#39;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  # Add your custom theme if not inside a theme_dir
+</span></span><span class="line"><span class="cl">  # (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
+</span></span><span class="line"><span class="cl">  # - pip install mkdocs-material
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">pages:
+</span></span><span class="line"><span class="cl">  script:
+</span></span><span class="line"><span class="cl">  - mkdocs build
+</span></span><span class="line"><span class="cl">  - mv site public
+</span></span><span class="line"><span class="cl">  artifacts:
+</span></span><span class="line"><span class="cl">    paths:
+</span></span><span class="line"><span class="cl">    - public
+</span></span><span class="line"><span class="cl">  only:
+</span></span><span class="line"><span class="cl">  - master
+</span></span></code></pre></div><p>Similar setup works for Github by generating the website into a second, dedicated &ldquo;published&rdquo; Github pages repository. Unlike in the Gitlab case, all Github pages are public. For more information, refer to <a href="https://www.mkdocs.org/user-guide/deploying-your-docs/">this</a></p>
 <p>Another option is dedicated hosting site for MkDocs documentatio <a href="https://docs.readthedocs.io/en/stable/intro/getting-started-with-mkdocs.html">ReadTheDocs</a> which also supports Sphinx and RestructuredText</p>
 <p>And of course, there is always an option to use mkdocs build and copy the generated static site from <code>./public</code> site to the hosting provider - e.g. an S3 bucket.</p>
 <h2 id="single-vs-multi-repository-projects">Single vs Multi-repository projects</h2>
@@ -438,106 +453,105 @@ pages:
 </ul>
 <p>As a proof of concept, we use this technique for documentation of the DIVE2 machine learning platform.</p>
 <p>Here is the &ldquo;top level&rdquo; repository:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  tree -L 2
-.
-└── dive-documentation
-    ├── CHANGELOG.md
-    ├── README.md
-    ├── dive-data-manager
-    ├── dive-data-manager-api
-    ├── dive-data-schema-svc
-    ├── dive-infra
-    ├── dive-job-manager
-    ├── dive-model-manager
-    ├── dive-prg-control-svc
-    ├── dive-sgm-control-svc
-    ├── dive-sgm-lib
-    ├── dive-sgm-svc-template
-    ├── dive-sls-batch
-    ├── dive-user-mgmt
-    ├── docs
-    ├── document_server.sh
-    ├── local-links.md
-    ├── mkdocs.yml
-    ├── pvt-python-commons
-    ├── pvt-python-rest
-    ├── pvt-sgm-color-norm-svc
-    └── tr-sgm-duplicates-svc
-
-18 directories, 5 files
-</code></pre></div><p>and here is the subset of the <code>mkdocs.yml</code> file:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">site_name: DIVE2 joint Documentation
-repo_url: https://bitbucket.org/pivotree_h3/dive-documentation/src/master/
-repo_name: dive-documentation
-site_description: DIVE2  Documentation
-site_author: miro.adamy@pivotree.com
-copyright: (c) 2020 Pivotree - https://pivotree.com/
-
-nav:
-    - Home: index.md
-    - Infra: dive-infra.md
-    - Data:
-        Manager: data-manager.md
-        Manager API: data-manager-api.md
-        Schema: data-schema-svc.md
-    - Job Manager: job-manager.md
-    - Model Manager: model-manager.md
-    - User Management: user-mgmt.md
-    - Prg control: prg-control-svc.md
-    - Sagemaker:
-        - Sagemaker Control: sgm-control-svc.md
-        - Sagemaker Lib: sgm-lib.md
-        - Service Template: sgm-svc-template.md
-        - Duplicates Svc: tr-sgm-duplicates-svc.md
-        - Color Normalization: pvt-sgm-color-norm-svc.md
-    - Batch: sls-batch.md
-    - Libs:
-        pvt-python-commons: pvt-python-commons.md
-        pvt-python-rest: pvt-python-rest.md
-
-
-theme:
-    name: material
-
-markdown_extensions:
-
-... DELETED ...
-
-
-plugins:
-    - search
-    - macros:
-        include_dir: .
-
-</code></pre></div><p>The rendered website reaches into the submodules and displays information from services in one consistent unit, combined with additional information about architecture, module relations ect. All this without duplication or requirements for the service team to work outside of their area of focus.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  tree -L 2
+</span></span><span class="line"><span class="cl">.
+</span></span><span class="line"><span class="cl">└── dive-documentation
+</span></span><span class="line"><span class="cl">    ├── CHANGELOG.md
+</span></span><span class="line"><span class="cl">    ├── README.md
+</span></span><span class="line"><span class="cl">    ├── dive-data-manager
+</span></span><span class="line"><span class="cl">    ├── dive-data-manager-api
+</span></span><span class="line"><span class="cl">    ├── dive-data-schema-svc
+</span></span><span class="line"><span class="cl">    ├── dive-infra
+</span></span><span class="line"><span class="cl">    ├── dive-job-manager
+</span></span><span class="line"><span class="cl">    ├── dive-model-manager
+</span></span><span class="line"><span class="cl">    ├── dive-prg-control-svc
+</span></span><span class="line"><span class="cl">    ├── dive-sgm-control-svc
+</span></span><span class="line"><span class="cl">    ├── dive-sgm-lib
+</span></span><span class="line"><span class="cl">    ├── dive-sgm-svc-template
+</span></span><span class="line"><span class="cl">    ├── dive-sls-batch
+</span></span><span class="line"><span class="cl">    ├── dive-user-mgmt
+</span></span><span class="line"><span class="cl">    ├── docs
+</span></span><span class="line"><span class="cl">    ├── document_server.sh
+</span></span><span class="line"><span class="cl">    ├── local-links.md
+</span></span><span class="line"><span class="cl">    ├── mkdocs.yml
+</span></span><span class="line"><span class="cl">    ├── pvt-python-commons
+</span></span><span class="line"><span class="cl">    ├── pvt-python-rest
+</span></span><span class="line"><span class="cl">    ├── pvt-sgm-color-norm-svc
+</span></span><span class="line"><span class="cl">    └── tr-sgm-duplicates-svc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">18 directories, 5 files
+</span></span></code></pre></div><p>and here is the subset of the <code>mkdocs.yml</code> file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">site_name: DIVE2 joint Documentation
+</span></span><span class="line"><span class="cl">repo_url: https://bitbucket.org/pivotree_h3/dive-documentation/src/master/
+</span></span><span class="line"><span class="cl">repo_name: dive-documentation
+</span></span><span class="line"><span class="cl">site_description: DIVE2  Documentation
+</span></span><span class="line"><span class="cl">site_author: miro.adamy@pivotree.com
+</span></span><span class="line"><span class="cl">copyright: (c) 2020 Pivotree - https://pivotree.com/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">nav:
+</span></span><span class="line"><span class="cl">    - Home: index.md
+</span></span><span class="line"><span class="cl">    - Infra: dive-infra.md
+</span></span><span class="line"><span class="cl">    - Data:
+</span></span><span class="line"><span class="cl">        Manager: data-manager.md
+</span></span><span class="line"><span class="cl">        Manager API: data-manager-api.md
+</span></span><span class="line"><span class="cl">        Schema: data-schema-svc.md
+</span></span><span class="line"><span class="cl">    - Job Manager: job-manager.md
+</span></span><span class="line"><span class="cl">    - Model Manager: model-manager.md
+</span></span><span class="line"><span class="cl">    - User Management: user-mgmt.md
+</span></span><span class="line"><span class="cl">    - Prg control: prg-control-svc.md
+</span></span><span class="line"><span class="cl">    - Sagemaker:
+</span></span><span class="line"><span class="cl">        - Sagemaker Control: sgm-control-svc.md
+</span></span><span class="line"><span class="cl">        - Sagemaker Lib: sgm-lib.md
+</span></span><span class="line"><span class="cl">        - Service Template: sgm-svc-template.md
+</span></span><span class="line"><span class="cl">        - Duplicates Svc: tr-sgm-duplicates-svc.md
+</span></span><span class="line"><span class="cl">        - Color Normalization: pvt-sgm-color-norm-svc.md
+</span></span><span class="line"><span class="cl">    - Batch: sls-batch.md
+</span></span><span class="line"><span class="cl">    - Libs:
+</span></span><span class="line"><span class="cl">        pvt-python-commons: pvt-python-commons.md
+</span></span><span class="line"><span class="cl">        pvt-python-rest: pvt-python-rest.md
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">theme:
+</span></span><span class="line"><span class="cl">    name: material
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">markdown_extensions:
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">... DELETED ...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">plugins:
+</span></span><span class="line"><span class="cl">    - search
+</span></span><span class="line"><span class="cl">    - macros:
+</span></span><span class="line"><span class="cl">        include_dir: .
+</span></span></code></pre></div><p>The rendered website reaches into the submodules and displays information from services in one consistent unit, combined with additional information about architecture, module relations ect. All this without duplication or requirements for the service team to work outside of their area of focus.</p>
 <p>The mechanics is quite simple. The main menu - nav structure - refers to the files representing the submodule entry points. These files are located in the <code>docs</code> directory of the &ldquo;roof&rdquo; repository.</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  dive-documentation git:(master) tree docs
-docs
-├── data-manager-api.md
-├── data-manager.md
-├── data-schema-svc.md
-├── dive-infra.md
-├── index.md
-├── job-manager.md
-├── model-manager.md
-├── prg-control-svc.md
-├── pvt-python-commons.md
-├── pvt-python-rest.md
-├── pvt-sgm-color-norm-svc.md
-├── sgm-control-svc.md
-├── sgm-lib.md
-├── sgm-svc-template.md
-├── sls-batch.md
-├── tr-sgm-duplicates-svc.md
-└── user-mgmt.md
-
-0 directories, 17 files
-</code></pre></div><p>How are these files hierarchically arranged is decided in the <code>nav</code> part of the YML file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  dive-documentation git:(master) tree docs
+</span></span><span class="line"><span class="cl">docs
+</span></span><span class="line"><span class="cl">├── data-manager-api.md
+</span></span><span class="line"><span class="cl">├── data-manager.md
+</span></span><span class="line"><span class="cl">├── data-schema-svc.md
+</span></span><span class="line"><span class="cl">├── dive-infra.md
+</span></span><span class="line"><span class="cl">├── index.md
+</span></span><span class="line"><span class="cl">├── job-manager.md
+</span></span><span class="line"><span class="cl">├── model-manager.md
+</span></span><span class="line"><span class="cl">├── prg-control-svc.md
+</span></span><span class="line"><span class="cl">├── pvt-python-commons.md
+</span></span><span class="line"><span class="cl">├── pvt-python-rest.md
+</span></span><span class="line"><span class="cl">├── pvt-sgm-color-norm-svc.md
+</span></span><span class="line"><span class="cl">├── sgm-control-svc.md
+</span></span><span class="line"><span class="cl">├── sgm-lib.md
+</span></span><span class="line"><span class="cl">├── sgm-svc-template.md
+</span></span><span class="line"><span class="cl">├── sls-batch.md
+</span></span><span class="line"><span class="cl">├── tr-sgm-duplicates-svc.md
+</span></span><span class="line"><span class="cl">└── user-mgmt.md
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">0 directories, 17 files
+</span></span></code></pre></div><p>How are these files hierarchically arranged is decided in the <code>nav</code> part of the YML file:</p>
 <p><img src="/img/markup/multi1.png" alt=""></p>
 <p>Each of this file contains one or more include directives, which are operating from the top directory of the repository and have therefore access to any submodule markdown files:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">➜  dive-documentation git:(master) cat docs/model-manager.md
-{% include &#39;dive-model-manager/README.md&#39; %}
-</code></pre></div><p>If the structure of the submodule is more complex, the &ldquo;module file&rdquo; can contain more directives or links.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  dive-documentation git:(master) cat docs/model-manager.md
+</span></span><span class="line"><span class="cl">{% include &#39;dive-model-manager/README.md&#39; %}
+</span></span></code></pre></div><p>If the structure of the submodule is more complex, the &ldquo;module file&rdquo; can contain more directives or links.</p>
 <p>When all this is put together, we get a combined, unified view of the system documentation with all submodules included. It is fully in the hands of the services team what the service documentation looks like and it is fully in the hands of the documentation repository maintainer which of those will be published and where in the navigation tree.</p>
 <p><img src="/img/markup/multi5.png" alt=""></p>
 <h2 id="other-tools">Other tools:</h2>
@@ -613,7 +627,7 @@ docs
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -631,13 +645,10 @@ docs
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -648,7 +659,10 @@ docs
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

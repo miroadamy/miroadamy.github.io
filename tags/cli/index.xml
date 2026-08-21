@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>cli on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/cli/</link>
-    <description>Recent content in cli on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 14 May 2020 21:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/cli/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Accessing Terraform cloud Module registry programatically</title>
-      <link>https://miroadamy.com/posts/2020-05-14-accessing-tfcloud-api/</link>
-      <pubDate>Thu, 14 May 2020 21:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2020-05-14-accessing-tfcloud-api/</guid>
-      <description>First step is to get your personal token. Log on to Terraform Cloud, go to https://app.terraform.io/app/settings/tokens and generate new token.
-Note: it is important to save the token to safe place - this is only time you will see it.
-Export the token:
-export TFE_TOKEN=&amp;lt;THE-TOKEN-VALUE&amp;gt; The documentation for Terraform API is here
-It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Cli on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/cli/</link>
+		<description>Recent content in Cli on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 14 May 2020 21:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/cli/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Accessing Terraform cloud Module registry programatically</title>
+				<link>https://miroadamy.com/posts/2020-05-14-accessing-tfcloud-api/</link>
+				<pubDate>Thu, 14 May 2020 21:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2020-05-14-accessing-tfcloud-api/</guid>
+				<description>&lt;p&gt;First step is to get your personal token. Log on to Terraform Cloud, go to &lt;a href=&#34;https://app.terraform.io/app/settings/tokens&#34;&gt;https://app.terraform.io/app/settings/tokens&lt;/a&gt; and generate new token.&lt;/p&gt;&#xA;&lt;p&gt;Note: it is important to save the token to safe place - this is only time you will see it.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/terraform-token.png&#34; alt=&#34;token&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Export the token:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;TFE_TOKEN&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&amp;lt;THE-TOKEN-VALUE&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The documentation for Terraform API is &lt;a href=&#34;https://www.terraform.io/docs/cloud/api/index.html&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;It is OK documentation but not the greatest one, however. There are two versions of the API - v1 and v2 and this is not clearly described. It could also used better examples.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

@@ -17,17 +17,18 @@
 
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
-Get the &amp;lsquo;epel&amp;rsquo; repos wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm Validate
+Get the &rsquo;epel&rsquo; repos wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm Validate
 $ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo It if good idea to enable the remi by default
 sudo vim /etc/yum.repos.d/remi.repo
-Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap Using Mount the host directory" /><meta name="keywords" content="blog, Miro" />
+Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap Using Mount the host directory
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2014-03-11-sshf-in-vm/" />
@@ -38,40 +39,44 @@ Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPE
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Installation of sshfs in the new VM" />
-<meta property="og:description" content="Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
-Get the &lsquo;epel&rsquo; repos wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm Validate
-$ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo It if good idea to enable the remi by default
-sudo vim /etc/yum.repos.d/remi.repo
-Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap Using Mount the host directory" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2014-03-11-sshf-in-vm/" />
-<meta property="article:published_time" content="2014-03-11T11:22:48+08:00" />
-<meta property="article:modified_time" content="2014-03-11T11:22:48+08:00" />
-<meta itemprop="name" content="Installation of sshfs in the new VM">
-<meta itemprop="description" content="Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
-Get the &lsquo;epel&rsquo; repos wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm Validate
+<meta property="og:url" content="https://miroadamy.com/posts/2014-03-11-sshf-in-vm/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Installation of sshfs in the new VM">
+	<meta property="og:description" content="Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
+Get the ’epel’ repos wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm Validate
 $ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo It if good idea to enable the remi by default
 sudo vim /etc/yum.repos.d/remi.repo
 Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap Using Mount the host directory">
-<meta itemprop="datePublished" content="2014-03-11T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2014-03-11T11:22:48+08:00" />
-<meta itemprop="wordCount" content="78">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2014-03-11T11:22:48+08:00">
+		<meta property="article:modified_time" content="2014-03-11T11:22:48+08:00">
+		<meta property="article:tag" content="Linux">
+		<meta property="article:tag" content="Virtualbox">
 
-
-
-<meta itemprop="keywords" content="linux,virtualbox," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Installation of sshfs in the new VM"/>
-<meta name="twitter:description" content="Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
-Get the &lsquo;epel&rsquo; repos wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm Validate
+	<meta itemprop="name" content="Installation of sshfs in the new VM">
+	<meta itemprop="description" content="Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
+Get the ’epel’ repos wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm Validate
 $ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo It if good idea to enable the remi by default
 sudo vim /etc/yum.repos.d/remi.repo
-Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap Using Mount the host directory"/>
+Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap Using Mount the host directory">
+	<meta itemprop="datePublished" content="2014-03-11T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2014-03-11T11:22:48+08:00">
+	<meta itemprop="wordCount" content="78">
+	<meta itemprop="keywords" content="Linux,Virtualbox">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Installation of sshfs in the new VM">
+	<meta name="twitter:description" content="Installation of sshfs in the new VM On Centos 6, the fuse-sshfs is not part of default YUM repos.
+Get the ’epel’ repos wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm Validate
+$ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo /etc/yum.repos.d/epel.repo /etc/yum.repos.d/epel-testing.repo /etc/yum.repos.d/remi.repo It if good idea to enable the remi by default
+sudo vim /etc/yum.repos.d/remi.repo
+Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL usermod -a -G fuse thinkwrap Using Mount the host directory">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -108,12 +113,21 @@ Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPE
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -130,6 +144,7 @@ Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPE
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -156,7 +171,7 @@ Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPE
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#get-the-epel-repos">Get the &lsquo;epel&rsquo; repos</a></li>
+    <li><a href="#get-the-epel-repos">Get the &rsquo;epel&rsquo; repos</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#using">Using</a></li>
   </ul>
@@ -166,25 +181,25 @@ Installation sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPE
     <div class="post-content">
       <h1 id="installation-of-sshfs-in-the-new-vm">Installation of sshfs in the new VM</h1>
 <p>On Centos 6, the fuse-sshfs is not part of default YUM repos.</p>
-<h2 id="get-the-epel-repos">Get the &lsquo;epel&rsquo; repos</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
-sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm
-</code></pre></div><p>Validate</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo
-/etc/yum.repos.d/epel.repo
-/etc/yum.repos.d/epel-testing.repo
-/etc/yum.repos.d/remi.repo
-</code></pre></div><p>It if good idea to enable the remi by default</p>
+<h2 id="get-the-epel-repos">Get the &rsquo;epel&rsquo; repos</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+</span></span><span class="line"><span class="cl">wget http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+</span></span><span class="line"><span class="cl">sudo rpm -Uvh remi-release-6*.rpm epel-release-6*.rpm
+</span></span></code></pre></div><p>Validate</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ ls -1 /etc/yum.repos.d/epel* /etc/yum.repos.d/remi.repo
+</span></span><span class="line"><span class="cl">/etc/yum.repos.d/epel.repo
+</span></span><span class="line"><span class="cl">/etc/yum.repos.d/epel-testing.repo
+</span></span><span class="line"><span class="cl">/etc/yum.repos.d/remi.repo
+</span></span></code></pre></div><p>It if good idea to enable the remi by default</p>
 <p><code>sudo vim /etc/yum.repos.d/remi.repo</code></p>
 <h2 id="installation">Installation</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL
- 
-usermod -a -G fuse thinkwrap
-</code></pre></div><h2 id="using">Using</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sudo yum --enablerepo=epel -y install fuse-sshfs # install from EPEL
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">usermod -a -G fuse thinkwrap
+</span></span></code></pre></div><h2 id="using">Using</h2>
 <p>Mount the host directory</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">sshfs miro@10.0.2.2:/Users/miro/src /home/thinkwrap/MAC
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sshfs miro@10.0.2.2:/Users/miro/src /home/thinkwrap/MAC
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -245,7 +260,7 @@ usermod -a -G fuse thinkwrap
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -263,13 +278,10 @@ usermod -a -G fuse thinkwrap
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -280,7 +292,10 @@ usermod -a -G fuse thinkwrap
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

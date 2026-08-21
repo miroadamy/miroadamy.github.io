@@ -1,59 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>spanish on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/spanish/</link>
-    <description>Recent content in spanish on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 12 Sep 2019 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/spanish/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Spanish and Catalan</title>
-      <link>https://miroadamy.com/posts/2019-09-12-post/</link>
-      <pubDate>Thu, 12 Sep 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2019-09-12-post/</guid>
-      <description>The current weather in Valencia summed up: https://www.youtube.com/watch?v=j2VHUP7R2CY
-Note for my friends who think Catalan is more or less same as Spanish: go for it and translate :-)</description>
-    </item>
-    
-    <item>
-      <title>Mission (almost) accomplished</title>
-      <link>https://miroadamy.com/posts/2018-10-02-spanish/</link>
-      <pubDate>Tue, 02 Oct 2018 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2018-10-02-spanish/</guid>
-      <description>It&amp;rsquo;s been five years since I started toying with idea to learn first romance language in my collection - despite living in Canada for over 18 years, I never picked up French.
-The learning was slow during 2014 and 2015 (just summer school in Spain and Duolingo) - but it accelerated a lot in last 2 years.
-Fast forward to now: on Sunday while watching Prime (https://en.wikipedia.org/wiki/Prime_(film)) we have decided to switch from English to Spanish (with Spanish subtitles) to enjoy the movie better than in original.</description>
-    </item>
-    
-    <item>
-      <title>This made my day</title>
-      <link>https://miroadamy.com/posts/2018-07-31-spanish/</link>
-      <pubDate>Tue, 31 Jul 2018 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2018-07-31-spanish/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Per core licensing</title>
-      <link>https://miroadamy.com/posts/2018-06-25-oracle/</link>
-      <pubDate>Mon, 25 Jun 2018 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2018-06-25-oracle/</guid>
-      <description>If one uses Oracle per core licensing strategy in cloud:</description>
-    </item>
-    
-    <item>
-      <title>Europanto</title>
-      <link>https://miroadamy.com/posts/2018-03-05-poly/</link>
-      <pubDate>Tue, 06 Mar 2018 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2018-03-05-poly/</guid>
-      <description>This is how my mind often works, triggered by using 4 languages every day and 5-6 every week</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Spanish on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/spanish/</link>
+		<description>Recent content in Spanish on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 12 Sep 2019 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/spanish/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Spanish and Catalan</title>
+				<link>https://miroadamy.com/posts/2019-09-12-post/</link>
+				<pubDate>Thu, 12 Sep 2019 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2019-09-12-post/</guid>
+				<description>&lt;p&gt;The current weather in Valencia summed up: &lt;a href=&#34;https://www.youtube.com/watch?v=j2VHUP7R2CY&#34;&gt;https://www.youtube.com/watch?v=j2VHUP7R2CY&lt;/a&gt;&lt;/p&gt;&#xA;&lt;iframe width=&#34;600&#34; height=&#34;380&#34; src=&#34;https://www.youtube.com/embed/j2VHUP7R2CY&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;Note for my friends who think Catalan is more or less same as Spanish: go for it and translate :-)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Mission (almost) accomplished</title>
+				<link>https://miroadamy.com/posts/2018-10-02-spanish/</link>
+				<pubDate>Tue, 02 Oct 2018 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2018-10-02-spanish/</guid>
+				<description>&lt;p&gt;It&amp;rsquo;s been five years since I started toying with idea to learn first romance language in my collection - despite living in Canada for over 18 years, I never picked up French.&lt;/p&gt;&#xA;&lt;p&gt;The learning was slow during 2014 and 2015 (just summer school in Spain and Duolingo) - but it accelerated a lot in last 2 years.&lt;/p&gt;&#xA;&lt;p&gt;Fast forward to now: on Sunday while watching Prime (&lt;a href=&#34;https://en.wikipedia.org/wiki/Prime_(film)&#34;&gt;https://en.wikipedia.org/wiki/Prime_(film)&lt;/a&gt;) we have decided to switch from English to Spanish (with Spanish subtitles) to enjoy the movie better than in original.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>This made my day</title>
+				<link>https://miroadamy.com/posts/2018-07-31-spanish/</link>
+				<pubDate>Tue, 31 Jul 2018 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2018-07-31-spanish/</guid>
+				<description>&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/guiri.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Per core licensing</title>
+				<link>https://miroadamy.com/posts/2018-06-25-oracle/</link>
+				<pubDate>Mon, 25 Jun 2018 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2018-06-25-oracle/</guid>
+				<description>&lt;p&gt;If one uses Oracle per core licensing strategy in cloud:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/oracle.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Europanto</title>
+				<link>https://miroadamy.com/posts/2018-03-05-poly/</link>
+				<pubDate>Tue, 06 Mar 2018 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2018-03-05-poly/</guid>
+				<description>&lt;p&gt;This is how my mind often works, triggered by using 4 languages every day and 5-6 every week&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/poly.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

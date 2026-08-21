@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>dynadmin on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/dynadmin/</link>
-    <description>Recent content in dynadmin on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 12 Jul 2015 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/dynadmin/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How to get information about all ATG components</title>
-      <link>https://miroadamy.com/posts/2015-07-12-component-report/</link>
-      <pubDate>Sun, 12 Jul 2015 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2015-07-12-component-report/</guid>
-      <description>How to get information about all ATG Nucleus components Dyn Admin has useful feature - Configuration reporter: http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml
-There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes
--rw-r--r-- 1 miro 2.2M Jul 12 14:07 bean1 -rw-r--r-- 1 miro 2.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Dynadmin on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/dynadmin/</link>
+		<description>Recent content in Dynadmin on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 12 Jul 2015 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/dynadmin/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>How to get information about all ATG components</title>
+				<link>https://miroadamy.com/posts/2015-07-12-component-report/</link>
+				<pubDate>Sun, 12 Jul 2015 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2015-07-12-component-report/</guid>
+				<description>&lt;h1 id=&#34;how-to-get-information-about-all-atg-nucleus-components&#34;&gt;How to get information about all ATG Nucleus components&lt;/h1&gt;&#xA;&lt;p&gt;Dyn Admin has useful feature - Configuration reporter: &lt;a href=&#34;http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml&#34;&gt;http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/da-1.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 2.2M Jul 12 14:07 bean1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 2.5M Jul 12 14:07 bean1.xml&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 275K Jul 12 13:50 file1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 572K Jul 12 13:51 file1.xml&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/da-2.jpeg&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;https://miroadamy.com/images/da-3.jpeg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

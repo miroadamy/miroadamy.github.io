@@ -18,16 +18,17 @@
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="The ACC is installed in default location: ~/ATG/ACC11.1
 This does not work OOTB. You must set 2 additional ENV properties
-cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp;amp; Starting from dyn/admin The start in separate VM works OK.
+cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp; Starting from dyn/admin The start in separate VM works OK.
 Start in server VM brings errors message very often complaining of malformed Help URL. The issue is documented here: http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg - for JBOSS.
-I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no difference." /><meta name="keywords" content="blog, Miro" />
+I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no difference.
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2015-07-15-acc-in-vm/" />
@@ -38,40 +39,44 @@ I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no dif
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Starting ACC in VM" />
-<meta property="og:description" content="The ACC is installed in default location: ~/ATG/ACC11.1
-This does not work OOTB. You must set 2 additional ENV properties
-cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp; Starting from dyn/admin The start in separate VM works OK.
-Start in server VM brings errors message very often complaining of malformed Help URL. The issue is documented here: http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg - for JBOSS.
-I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no difference." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2015-07-15-acc-in-vm/" />
-<meta property="article:published_time" content="2015-07-15T11:22:48+08:00" />
-<meta property="article:modified_time" content="2015-07-15T11:22:48+08:00" />
-<meta itemprop="name" content="Starting ACC in VM">
-<meta itemprop="description" content="The ACC is installed in default location: ~/ATG/ACC11.1
+<meta property="og:url" content="https://miroadamy.com/posts/2015-07-15-acc-in-vm/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Starting ACC in VM">
+	<meta property="og:description" content="The ACC is installed in default location: ~/ATG/ACC11.1
 This does not work OOTB. You must set 2 additional ENV properties
 cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp; Starting from dyn/admin The start in separate VM works OK.
 Start in server VM brings errors message very often complaining of malformed Help URL. The issue is documented here: http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg - for JBOSS.
 I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no difference.">
-<meta itemprop="datePublished" content="2015-07-15T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2015-07-15T11:22:48+08:00" />
-<meta itemprop="wordCount" content="177">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2015-07-15T11:22:48+08:00">
+		<meta property="article:modified_time" content="2015-07-15T11:22:48+08:00">
+		<meta property="article:tag" content="Atg">
+		<meta property="article:tag" content="Virtualization">
 
-
-
-<meta itemprop="keywords" content="atg,virtualization," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Starting ACC in VM"/>
-<meta name="twitter:description" content="The ACC is installed in default location: ~/ATG/ACC11.1
+	<meta itemprop="name" content="Starting ACC in VM">
+	<meta itemprop="description" content="The ACC is installed in default location: ~/ATG/ACC11.1
 This does not work OOTB. You must set 2 additional ENV properties
 cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp; Starting from dyn/admin The start in separate VM works OK.
 Start in server VM brings errors message very often complaining of malformed Help URL. The issue is documented here: http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg - for JBOSS.
-I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no difference."/>
+I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no difference.">
+	<meta itemprop="datePublished" content="2015-07-15T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2015-07-15T11:22:48+08:00">
+	<meta itemprop="wordCount" content="177">
+	<meta itemprop="keywords" content="Atg,Virtualization">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Starting ACC in VM">
+	<meta name="twitter:description" content="The ACC is installed in default location: ~/ATG/ACC11.1
+This does not work OOTB. You must set 2 additional ENV properties
+cd ~/ATG/ACC11.0 export ACC_HOME=`pwd` export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java bin/startClient &amp; Starting from dyn/admin The start in separate VM works OK.
+Start in server VM brings errors message very often complaining of malformed Help URL. The issue is documented here: http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg - for JBOSS.
+I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no difference.">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -108,12 +113,21 @@ I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no dif
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -130,6 +144,7 @@ I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no dif
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -165,11 +180,11 @@ I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no dif
     <div class="post-content">
       <p>The ACC is installed in default location: <code>~/ATG/ACC11.1</code></p>
 <p>This does not work OOTB. You must set 2 additional ENV properties</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">cd ~/ATG/ACC11.0
-export ACC_HOME=`pwd`
-export JAVA_VM=/usr/java/jdk1.7.0_51//bin/java
-bin/startClient &amp;
-</code></pre></div><h2 id="starting-from-dynadmin">Starting from dyn/admin</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="n">cd</span><span class="w"> </span><span class="o">~/</span><span class="n">ATG</span><span class="o">/</span><span class="n">ACC11</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">export</span><span class="w"> </span><span class="n">ACC_HOME</span><span class="o">=`</span><span class="n">pwd</span><span class="o">`</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">export</span><span class="w"> </span><span class="n">JAVA_VM</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">jdk1</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">0</span><span class="n">_51</span><span class="o">//</span><span class="n">bin</span><span class="o">/</span><span class="n">java</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">bin</span><span class="o">/</span><span class="n">startClient</span><span class="w"> </span><span class="o">&amp;</span><span class="w">
+</span></span></span></code></pre></div><h2 id="starting-from-dynadmin">Starting from dyn/admin</h2>
 <p>The start in separate VM works OK.</p>
 <p>Start in server VM brings errors message very often complaining of malformed Help URL.
 <img src="/images/acc-1.png" alt=""></p>
@@ -185,18 +200,18 @@ bin/startClient &amp;
 <li>the classes.jar must be created (run ant jar)</li>
 <li>the MANIFEST.MF must contain download directive</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Manifest-Version: 1.0
-ATG-Config-Path: config/
-ATG-Required: DSS DPS
-ATG-Class-Path: classes/ testclasses/ lib/apache-commons/commons-lang-2.6.jar
-ATG-Client-Class-Path: lib/classes.jar
-ATG-Assembler-Import-File: true
-
-
-Name: lib/classes.jar
-ATG-Client-Update-File: true
-ATG-Client-Update-Version: 1.0
-</code></pre></div><p>After this it works:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Manifest-Version: 1.0
+</span></span><span class="line"><span class="cl">ATG-Config-Path: config/
+</span></span><span class="line"><span class="cl">ATG-Required: DSS DPS
+</span></span><span class="line"><span class="cl">ATG-Class-Path: classes/ testclasses/ lib/apache-commons/commons-lang-2.6.jar
+</span></span><span class="line"><span class="cl">ATG-Client-Class-Path: lib/classes.jar
+</span></span><span class="line"><span class="cl">ATG-Assembler-Import-File: true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Name: lib/classes.jar
+</span></span><span class="line"><span class="cl">ATG-Client-Update-File: true
+</span></span><span class="line"><span class="cl">ATG-Client-Update-Version: 1.0
+</span></span></code></pre></div><p>After this it works:</p>
 <p><img src="/images/acc-3.jpeg" alt=""></p>
 
     </div>
@@ -259,7 +274,7 @@ ATG-Client-Update-Version: 1.0
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -277,13 +292,10 @@ ATG-Client-Update-Version: 1.0
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -294,7 +306,10 @@ ATG-Client-Update-Version: 1.0
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

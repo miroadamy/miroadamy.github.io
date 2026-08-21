@@ -1,34 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>editors on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/editors/</link>
-    <description>Recent content in editors on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 25 Sep 2013 16:12:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/editors/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Sublime text macro to insert timestamp</title>
-      <link>https://miroadamy.com/posts/2013-09-25-sublime-text-macro-timestamp/</link>
-      <pubDate>Wed, 25 Sep 2013 16:12:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2013-09-25-sublime-text-macro-timestamp/</guid>
-      <description>Sublime text macro to insert timestamp platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&amp;#34;%Y-%m-%d_%H:%M:%S&amp;#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $ Documentation - see
-Installation: Add this to Keybindings / User
-![](/images/2013-09-23_8.02.19 PM.png)</description>
-    </item>
-    
-    <item>
-      <title>Fixing Git plugin for Sublime Text 2</title>
-      <link>https://miroadamy.com/posts/2012-09-21-post/</link>
-      <pubDate>Fri, 21 Sep 2012 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2012-09-21-post/</guid>
-      <description>After update, the ST2 started to complain about missing git command.
-Finding out Git on MBP:
-platform $ which git git is /usr/bin/git git is /usr/local/bin/git platform $ git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/bin/git --version git version 1.7.7.5 (Apple Git-26) platform $ /usr/local/bin/git --version git version 1.7.3.2 Fix the the Package file in /Users/miro/Library/Application Support/Sublime Text 2/Packages/Git - Git.sublime-settings (it is JSON file)
-{ // save before running commands &amp;#34;save_first&amp;#34;: true // if present, use this command instead of plain &amp;#34;git&amp;#34; // e.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Editors on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/editors/</link>
+		<description>Recent content in Editors on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 25 Sep 2013 16:12:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/editors/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Sublime text macro to insert timestamp</title>
+				<link>https://miroadamy.com/posts/2013-09-25-sublime-text-macro-timestamp/</link>
+				<pubDate>Wed, 25 Sep 2013 16:12:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2013-09-25-sublime-text-macro-timestamp/</guid>
+				<description>&lt;h1 id=&#34;sublime-text-macro-to-insert-timestamp&#34;&gt;Sublime text macro to insert timestamp&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;import sublime_plugin&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;from datetime import datetime&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;class TimeStampCommand(sublime_plugin.TextCommand):&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    def run(self, edit):&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        stamp = datetime.now().strftime(&amp;#34;%Y-%m-%d_%H:%M:%S&amp;#34;)  # 2013-07-18 14:54:23&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;        for r in self.view.sel():&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            if r.empty():&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                self.view.insert(edit, r.a, stamp)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            else:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;                self.view.replace(edit, r,   stamp)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;platform-edc $&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Documentation - &lt;a href=&#34;http://docs.python.org/2/library/datetime.html#datetime.datetime&#34;&gt;see&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;installation&#34;&gt;Installation:&lt;/h2&gt;&#xA;&lt;p&gt;Add this to Keybindings / User&lt;/p&gt;&#xA;&lt;p&gt;![](/images/2013-09-23_8.02.19 PM.png)&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Fixing Git plugin for Sublime Text 2</title>
+				<link>https://miroadamy.com/posts/2012-09-21-post/</link>
+				<pubDate>Fri, 21 Sep 2012 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2012-09-21-post/</guid>
+				<description>&lt;p&gt;After update, the ST2 started to complain about missing git command.&lt;/p&gt;&#xA;&lt;p&gt;Finding out Git on MBP:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;platform $ which git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git is /usr/bin/git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git is /usr/local/bin/git&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;platform $ git --version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git version 1.7.7.5 (Apple Git-26)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;platform $ /usr/bin/git --version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git version 1.7.7.5 (Apple Git-26)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;platform $ /usr/local/bin/git --version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git version 1.7.3.2&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Fix the the Package file in /Users/miro/Library/Application Support/Sublime Text 2/Packages/Git - Git.sublime-settings (it is JSON file)&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

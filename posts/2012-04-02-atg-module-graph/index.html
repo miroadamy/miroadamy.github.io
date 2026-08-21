@@ -18,15 +18,15 @@
 
 <meta name="author" content="Miro Adamy" /><meta name="description" content="Notes from weekend hack: Project is in Bitbucket - https://bitbucket.org/miroadamy/atgdiagram/overview
 Run in Diagrams/ATGDiagram
-Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStore.eStore &amp;gt;uml/test2.uml Radegast:ATGDiagram miro$ ./processUml.sh uml/test2.uml Radegast:ATGDiagram miro$ open uml/test2.png Radegast:ATGDiagram miro$ =&amp;gt; Output test2.uml
- the &amp;lsquo;.&amp;rsquo; in names is converted to &amp;lsquo;_&amp;rsquo; - GraphViz does not like it the &amp;lsquo;-&amp;rsquo; in names detto  Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2 Using /opt/ATG/ATG10.0.2 installation Dependants of module TWeStore." /><meta name="keywords" content="blog, Miro" />
+Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStore.eStore &gt;uml/test2.uml Radegast:ATGDiagram miro$ ./processUml.sh uml/test2.uml Radegast:ATGDiagram miro$ open uml/test2.png Radegast:ATGDiagram miro$ =&gt; Output test2.uml
+the &lsquo;.&rsquo; in names is converted to &lsquo;_&rsquo; - GraphViz does not like it the &lsquo;-&rsquo; in names detto Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2 Using /opt/ATG/ATG10.0.2 installation Dependants of module TWeStore.eStore =&gt; [DCS.Search.Query, B2CCommerce, DAF.Search.Query, DAF.Search.Base, DCS.Search.common, DPS.Search.Index, DAF.Search.common, DAS-UI, DCS.Search.Index, DPS, DCS, DCS.Search.CustomCatalogs, DCS.Search.CustomCatalogs.Query, DCS.Search.CustomCatalogs.Index, DAF.Search.Routing, DCS.Search.CustomCatalogs.common, DAF.Search.Index, DSS, DCS.CustomCatalogs, DAS] @startuml Object TWeStore_eStore Object DCS Object B2CCommerce Object DCS_Search_CustomCatalogs Object DAF_Search_Routing Object DCS_CustomCatalogs Object DPS Object DCS_Search_CustomCatalogs_Query Object DAF_Search_Base Object DCS_Search_CustomCatalogs_Index Object DSS Object DAS_UI Object DCS_Search_Query Object DCS_Search_CustomCatalogs_common Object DAS Object DCS_Search_Index Object DAF_Search_Query Object DCS_Search_common Object DPS_Search_Index Object DAF_Search_Index Object DAF_Search_common TWeStore_eStore &lt;|-- DCS TWeStore_eStore &lt;|-- DCS_CustomCatalogs TWeStore_eStore &lt;|-- B2CCommerce TWeStore_eStore &lt;|-- DCS_Search_CustomCatalogs TWeStore_eStore &lt;|-- DAF_Search_Routing DCS &lt;|-- DPS DCS &lt;|-- DSS B2CCommerce &lt;|-- DCS DCS_Search_CustomCatalogs &lt;|-- DCS_Search_CustomCatalogs_Index DCS_Search_CustomCatalogs &lt;|-- DCS_Search_CustomCatalogs_Query DAF_Search_Routing &lt;|-- DAS_UI DAF_Search_Routing &lt;|-- DAF_Search_Base DCS_CustomCatalogs &lt;|-- DCS DPS &lt;|-- DAS DCS_Search_CustomCatalogs_Query &lt;|-- DCS_Search_Query DCS_Search_CustomCatalogs_Query &lt;|-- DCS_Search_CustomCatalogs_common DAF_Search_Base &lt;|-- DAS_UI DCS_Search_CustomCatalogs_Index &lt;|-- DCS_Search_Index DCS_Search_CustomCatalogs_Index &lt;|-- DCS_Search_CustomCatalogs_common DSS &lt;|-- DPS DAS_UI &lt;|-- DAS DCS_Search_Query &lt;|-- DAF_Search_Query DCS_Search_Query &lt;|-- DCS_Search_common DCS_Search_Query &lt;|-- DCS DCS_Search_CustomCatalogs_common &lt;|-- DCS_Search_common DCS_Search_CustomCatalogs_common &lt;|-- DCS_CustomCatalogs DCS_Search_Index &lt;|-- DPS_Search_Index DCS_Search_Index &lt;|-- DCS_Search_common DCS_Search_Index &lt;|-- DCS DAF_Search_Query &lt;|-- DAF_Search_common DCS_Search_common &lt;|-- DAF_Search_common DCS_Search_common &lt;|-- DCS DPS_Search_Index &lt;|-- DPS DPS_Search_Index &lt;|-- DAF_Search_Index DAF_Search_Index &lt;|-- DAS_UI DAF_Search_Index &lt;|-- DAF_Search_Base DAF_Search_common &lt;|-- DAS_UI DAF_Search_common &lt;|-- DAF_Search_Base DAF_Search_common &lt;|-- DAF_Search_Routing @enduml Visualization (uml/test2.png) " /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2012-04-02-atg-module-graph/" />
@@ -37,37 +37,43 @@ Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStor
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="ATG module graph" />
-<meta property="og:description" content="Notes from weekend hack: Project is in Bitbucket - https://bitbucket.org/miroadamy/atgdiagram/overview
+<meta property="og:url" content="https://miroadamy.com/posts/2012-04-02-atg-module-graph/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="ATG module graph">
+	<meta property="og:description" content="Notes from weekend hack: Project is in Bitbucket - https://bitbucket.org/miroadamy/atgdiagram/overview
 Run in Diagrams/ATGDiagram
 Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStore.eStore &gt;uml/test2.uml Radegast:ATGDiagram miro$ ./processUml.sh uml/test2.uml Radegast:ATGDiagram miro$ open uml/test2.png Radegast:ATGDiagram miro$ =&gt; Output test2.uml
- the &lsquo;.&rsquo; in names is converted to &lsquo;_&rsquo; - GraphViz does not like it the &lsquo;-&rsquo; in names detto  Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2 Using /opt/ATG/ATG10.0.2 installation Dependants of module TWeStore." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2012-04-02-atg-module-graph/" />
-<meta property="article:published_time" content="2012-04-02T11:22:48+08:00" />
-<meta property="article:modified_time" content="2012-04-02T11:22:48+08:00" />
-<meta itemprop="name" content="ATG module graph">
-<meta itemprop="description" content="Notes from weekend hack: Project is in Bitbucket - https://bitbucket.org/miroadamy/atgdiagram/overview
+the ‘.’ in names is converted to ‘_’ - GraphViz does not like it the ‘-’ in names detto Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2 Using /opt/ATG/ATG10.0.2 installation Dependants of module TWeStore.eStore =&gt; [DCS.Search.Query, B2CCommerce, DAF.Search.Query, DAF.Search.Base, DCS.Search.common, DPS.Search.Index, DAF.Search.common, DAS-UI, DCS.Search.Index, DPS, DCS, DCS.Search.CustomCatalogs, DCS.Search.CustomCatalogs.Query, DCS.Search.CustomCatalogs.Index, DAF.Search.Routing, DCS.Search.CustomCatalogs.common, DAF.Search.Index, DSS, DCS.CustomCatalogs, DAS] @startuml Object TWeStore_eStore Object DCS Object B2CCommerce Object DCS_Search_CustomCatalogs Object DAF_Search_Routing Object DCS_CustomCatalogs Object DPS Object DCS_Search_CustomCatalogs_Query Object DAF_Search_Base Object DCS_Search_CustomCatalogs_Index Object DSS Object DAS_UI Object DCS_Search_Query Object DCS_Search_CustomCatalogs_common Object DAS Object DCS_Search_Index Object DAF_Search_Query Object DCS_Search_common Object DPS_Search_Index Object DAF_Search_Index Object DAF_Search_common TWeStore_eStore &lt;|-- DCS TWeStore_eStore &lt;|-- DCS_CustomCatalogs TWeStore_eStore &lt;|-- B2CCommerce TWeStore_eStore &lt;|-- DCS_Search_CustomCatalogs TWeStore_eStore &lt;|-- DAF_Search_Routing DCS &lt;|-- DPS DCS &lt;|-- DSS B2CCommerce &lt;|-- DCS DCS_Search_CustomCatalogs &lt;|-- DCS_Search_CustomCatalogs_Index DCS_Search_CustomCatalogs &lt;|-- DCS_Search_CustomCatalogs_Query DAF_Search_Routing &lt;|-- DAS_UI DAF_Search_Routing &lt;|-- DAF_Search_Base DCS_CustomCatalogs &lt;|-- DCS DPS &lt;|-- DAS DCS_Search_CustomCatalogs_Query &lt;|-- DCS_Search_Query DCS_Search_CustomCatalogs_Query &lt;|-- DCS_Search_CustomCatalogs_common DAF_Search_Base &lt;|-- DAS_UI DCS_Search_CustomCatalogs_Index &lt;|-- DCS_Search_Index DCS_Search_CustomCatalogs_Index &lt;|-- DCS_Search_CustomCatalogs_common DSS &lt;|-- DPS DAS_UI &lt;|-- DAS DCS_Search_Query &lt;|-- DAF_Search_Query DCS_Search_Query &lt;|-- DCS_Search_common DCS_Search_Query &lt;|-- DCS DCS_Search_CustomCatalogs_common &lt;|-- DCS_Search_common DCS_Search_CustomCatalogs_common &lt;|-- DCS_CustomCatalogs DCS_Search_Index &lt;|-- DPS_Search_Index DCS_Search_Index &lt;|-- DCS_Search_common DCS_Search_Index &lt;|-- DCS DAF_Search_Query &lt;|-- DAF_Search_common DCS_Search_common &lt;|-- DAF_Search_common DCS_Search_common &lt;|-- DCS DPS_Search_Index &lt;|-- DPS DPS_Search_Index &lt;|-- DAF_Search_Index DAF_Search_Index &lt;|-- DAS_UI DAF_Search_Index &lt;|-- DAF_Search_Base DAF_Search_common &lt;|-- DAS_UI DAF_Search_common &lt;|-- DAF_Search_Base DAF_Search_common &lt;|-- DAF_Search_Routing @enduml Visualization (uml/test2.png)">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2012-04-02T11:22:48+08:00">
+		<meta property="article:modified_time" content="2012-04-02T11:22:48+08:00">
+		<meta property="article:tag" content="Groovy">
+		<meta property="article:tag" content="Tools">
+		<meta property="article:tag" content="Atg">
+		<meta property="article:tag" content="Plaintext">
+
+	<meta itemprop="name" content="ATG module graph">
+	<meta itemprop="description" content="Notes from weekend hack: Project is in Bitbucket - https://bitbucket.org/miroadamy/atgdiagram/overview
 Run in Diagrams/ATGDiagram
 Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStore.eStore &gt;uml/test2.uml Radegast:ATGDiagram miro$ ./processUml.sh uml/test2.uml Radegast:ATGDiagram miro$ open uml/test2.png Radegast:ATGDiagram miro$ =&gt; Output test2.uml
- the &lsquo;.&rsquo; in names is converted to &lsquo;_&rsquo; - GraphViz does not like it the &lsquo;-&rsquo; in names detto  Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2 Using /opt/ATG/ATG10.0.2 installation Dependants of module TWeStore.">
-<meta itemprop="datePublished" content="2012-04-02T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2012-04-02T11:22:48+08:00" />
-<meta itemprop="wordCount" content="318">
-
-
-
-<meta itemprop="keywords" content="groovy,tools,atg,plaintext," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ATG module graph"/>
-<meta name="twitter:description" content="Notes from weekend hack: Project is in Bitbucket - https://bitbucket.org/miroadamy/atgdiagram/overview
+the ‘.’ in names is converted to ‘_’ - GraphViz does not like it the ‘-’ in names detto Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2 Using /opt/ATG/ATG10.0.2 installation Dependants of module TWeStore.eStore =&gt; [DCS.Search.Query, B2CCommerce, DAF.Search.Query, DAF.Search.Base, DCS.Search.common, DPS.Search.Index, DAF.Search.common, DAS-UI, DCS.Search.Index, DPS, DCS, DCS.Search.CustomCatalogs, DCS.Search.CustomCatalogs.Query, DCS.Search.CustomCatalogs.Index, DAF.Search.Routing, DCS.Search.CustomCatalogs.common, DAF.Search.Index, DSS, DCS.CustomCatalogs, DAS] @startuml Object TWeStore_eStore Object DCS Object B2CCommerce Object DCS_Search_CustomCatalogs Object DAF_Search_Routing Object DCS_CustomCatalogs Object DPS Object DCS_Search_CustomCatalogs_Query Object DAF_Search_Base Object DCS_Search_CustomCatalogs_Index Object DSS Object DAS_UI Object DCS_Search_Query Object DCS_Search_CustomCatalogs_common Object DAS Object DCS_Search_Index Object DAF_Search_Query Object DCS_Search_common Object DPS_Search_Index Object DAF_Search_Index Object DAF_Search_common TWeStore_eStore &lt;|-- DCS TWeStore_eStore &lt;|-- DCS_CustomCatalogs TWeStore_eStore &lt;|-- B2CCommerce TWeStore_eStore &lt;|-- DCS_Search_CustomCatalogs TWeStore_eStore &lt;|-- DAF_Search_Routing DCS &lt;|-- DPS DCS &lt;|-- DSS B2CCommerce &lt;|-- DCS DCS_Search_CustomCatalogs &lt;|-- DCS_Search_CustomCatalogs_Index DCS_Search_CustomCatalogs &lt;|-- DCS_Search_CustomCatalogs_Query DAF_Search_Routing &lt;|-- DAS_UI DAF_Search_Routing &lt;|-- DAF_Search_Base DCS_CustomCatalogs &lt;|-- DCS DPS &lt;|-- DAS DCS_Search_CustomCatalogs_Query &lt;|-- DCS_Search_Query DCS_Search_CustomCatalogs_Query &lt;|-- DCS_Search_CustomCatalogs_common DAF_Search_Base &lt;|-- DAS_UI DCS_Search_CustomCatalogs_Index &lt;|-- DCS_Search_Index DCS_Search_CustomCatalogs_Index &lt;|-- DCS_Search_CustomCatalogs_common DSS &lt;|-- DPS DAS_UI &lt;|-- DAS DCS_Search_Query &lt;|-- DAF_Search_Query DCS_Search_Query &lt;|-- DCS_Search_common DCS_Search_Query &lt;|-- DCS DCS_Search_CustomCatalogs_common &lt;|-- DCS_Search_common DCS_Search_CustomCatalogs_common &lt;|-- DCS_CustomCatalogs DCS_Search_Index &lt;|-- DPS_Search_Index DCS_Search_Index &lt;|-- DCS_Search_common DCS_Search_Index &lt;|-- DCS DAF_Search_Query &lt;|-- DAF_Search_common DCS_Search_common &lt;|-- DAF_Search_common DCS_Search_common &lt;|-- DCS DPS_Search_Index &lt;|-- DPS DPS_Search_Index &lt;|-- DAF_Search_Index DAF_Search_Index &lt;|-- DAS_UI DAF_Search_Index &lt;|-- DAF_Search_Base DAF_Search_common &lt;|-- DAS_UI DAF_Search_common &lt;|-- DAF_Search_Base DAF_Search_common &lt;|-- DAF_Search_Routing @enduml Visualization (uml/test2.png)">
+	<meta itemprop="datePublished" content="2012-04-02T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2012-04-02T11:22:48+08:00">
+	<meta itemprop="wordCount" content="318">
+	<meta itemprop="keywords" content="Groovy,Tools,Atg,Plaintext">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="ATG module graph">
+	<meta name="twitter:description" content="Notes from weekend hack: Project is in Bitbucket - https://bitbucket.org/miroadamy/atgdiagram/overview
 Run in Diagrams/ATGDiagram
 Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStore.eStore &gt;uml/test2.uml Radegast:ATGDiagram miro$ ./processUml.sh uml/test2.uml Radegast:ATGDiagram miro$ open uml/test2.png Radegast:ATGDiagram miro$ =&gt; Output test2.uml
- the &lsquo;.&rsquo; in names is converted to &lsquo;_&rsquo; - GraphViz does not like it the &lsquo;-&rsquo; in names detto  Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2 Using /opt/ATG/ATG10.0.2 installation Dependants of module TWeStore."/>
+the ‘.’ in names is converted to ‘_’ - GraphViz does not like it the ‘-’ in names detto Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2 Using /opt/ATG/ATG10.0.2 installation Dependants of module TWeStore.eStore =&gt; [DCS.Search.Query, B2CCommerce, DAF.Search.Query, DAF.Search.Base, DCS.Search.common, DPS.Search.Index, DAF.Search.common, DAS-UI, DCS.Search.Index, DPS, DCS, DCS.Search.CustomCatalogs, DCS.Search.CustomCatalogs.Query, DCS.Search.CustomCatalogs.Index, DAF.Search.Routing, DCS.Search.CustomCatalogs.common, DAF.Search.Index, DSS, DCS.CustomCatalogs, DAS] @startuml Object TWeStore_eStore Object DCS Object B2CCommerce Object DCS_Search_CustomCatalogs Object DAF_Search_Routing Object DCS_CustomCatalogs Object DPS Object DCS_Search_CustomCatalogs_Query Object DAF_Search_Base Object DCS_Search_CustomCatalogs_Index Object DSS Object DAS_UI Object DCS_Search_Query Object DCS_Search_CustomCatalogs_common Object DAS Object DCS_Search_Index Object DAF_Search_Query Object DCS_Search_common Object DPS_Search_Index Object DAF_Search_Index Object DAF_Search_common TWeStore_eStore &lt;|-- DCS TWeStore_eStore &lt;|-- DCS_CustomCatalogs TWeStore_eStore &lt;|-- B2CCommerce TWeStore_eStore &lt;|-- DCS_Search_CustomCatalogs TWeStore_eStore &lt;|-- DAF_Search_Routing DCS &lt;|-- DPS DCS &lt;|-- DSS B2CCommerce &lt;|-- DCS DCS_Search_CustomCatalogs &lt;|-- DCS_Search_CustomCatalogs_Index DCS_Search_CustomCatalogs &lt;|-- DCS_Search_CustomCatalogs_Query DAF_Search_Routing &lt;|-- DAS_UI DAF_Search_Routing &lt;|-- DAF_Search_Base DCS_CustomCatalogs &lt;|-- DCS DPS &lt;|-- DAS DCS_Search_CustomCatalogs_Query &lt;|-- DCS_Search_Query DCS_Search_CustomCatalogs_Query &lt;|-- DCS_Search_CustomCatalogs_common DAF_Search_Base &lt;|-- DAS_UI DCS_Search_CustomCatalogs_Index &lt;|-- DCS_Search_Index DCS_Search_CustomCatalogs_Index &lt;|-- DCS_Search_CustomCatalogs_common DSS &lt;|-- DPS DAS_UI &lt;|-- DAS DCS_Search_Query &lt;|-- DAF_Search_Query DCS_Search_Query &lt;|-- DCS_Search_common DCS_Search_Query &lt;|-- DCS DCS_Search_CustomCatalogs_common &lt;|-- DCS_Search_common DCS_Search_CustomCatalogs_common &lt;|-- DCS_CustomCatalogs DCS_Search_Index &lt;|-- DPS_Search_Index DCS_Search_Index &lt;|-- DCS_Search_common DCS_Search_Index &lt;|-- DCS DAF_Search_Query &lt;|-- DAF_Search_common DCS_Search_common &lt;|-- DAF_Search_common DCS_Search_common &lt;|-- DCS DPS_Search_Index &lt;|-- DPS DPS_Search_Index &lt;|-- DAF_Search_Index DAF_Search_Index &lt;|-- DAS_UI DAF_Search_Index &lt;|-- DAF_Search_Base DAF_Search_common &lt;|-- DAS_UI DAF_Search_common &lt;|-- DAF_Search_Base DAF_Search_common &lt;|-- DAF_Search_Routing @enduml Visualization (uml/test2.png)">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -104,12 +110,21 @@ Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStor
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -126,6 +141,7 @@ Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStor
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -165,97 +181,96 @@ Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStor
 <p>Project is in Bitbucket - <a href="https://bitbucket.org/miroadamy/atgdiagram/overview">https://bitbucket.org/miroadamy/atgdiagram/overview</a></p>
 <h2 id="run">Run</h2>
 <p>in  Diagrams/ATGDiagram</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStore.eStore &gt;uml/test2.uml
-Radegast:ATGDiagram miro$ ./processUml.sh uml/test2.uml
-Radegast:ATGDiagram miro$ open uml/test2.png
-Radegast:ATGDiagram miro$
-</code></pre></div><p>=&gt; Output test2.uml</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy -e -m TWeStore.eStore &gt;uml/test2.uml
+</span></span><span class="line"><span class="cl">Radegast:ATGDiagram miro$ ./processUml.sh uml/test2.uml
+</span></span><span class="line"><span class="cl">Radegast:ATGDiagram miro$ open uml/test2.png
+</span></span><span class="line"><span class="cl">Radegast:ATGDiagram miro$
+</span></span></code></pre></div><p>=&gt; Output test2.uml</p>
 <ul>
 <li>the &lsquo;.&rsquo; in names is converted to &lsquo;_&rsquo; - GraphViz does not like it</li>
 <li>the &lsquo;-&rsquo; in names detto</li>
 </ul>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Using ATG_ROOT from environment variable $ATG_ROOT: /opt/ATG/ATG10.0.2
-Using /opt/ATG/ATG10.0.2 installation
-Dependants of module TWeStore.eStore =&gt; [DCS.Search.Query, B2CCommerce, DAF.Search.Query, DAF.Search.Base, DCS.Search.common, DPS.Search.Index, DAF.Search.common, DAS-UI, DCS.Search.Index, DPS, DCS, DCS.Search.CustomCatalogs, DCS.Search.CustomCatalogs.Query, DCS.Search.CustomCatalogs.Index, DAF.Search.Routing, DCS.Search.CustomCatalogs.common, DAF.Search.Index, DSS, DCS.CustomCatalogs, DAS]
-@startuml
-Object TWeStore_eStore
-Object DCS
-Object B2CCommerce
-Object DCS_Search_CustomCatalogs
-Object DAF_Search_Routing
-Object DCS_CustomCatalogs
-Object DPS
-Object DCS_Search_CustomCatalogs_Query
-Object DAF_Search_Base
-Object DCS_Search_CustomCatalogs_Index
-Object DSS
-Object DAS_UI
-Object DCS_Search_Query
-Object DCS_Search_CustomCatalogs_common
-Object DAS
-Object DCS_Search_Index
-Object DAF_Search_Query
-Object DCS_Search_common
-Object DPS_Search_Index
-Object DAF_Search_Index
-Object DAF_Search_common
-TWeStore_eStore &lt;|-- DCS
-TWeStore_eStore &lt;|-- DCS_CustomCatalogs
-TWeStore_eStore &lt;|-- B2CCommerce
-TWeStore_eStore &lt;|-- DCS_Search_CustomCatalogs
-TWeStore_eStore &lt;|-- DAF_Search_Routing
-DCS &lt;|-- DPS
-DCS &lt;|-- DSS
-B2CCommerce &lt;|-- DCS
-DCS_Search_CustomCatalogs &lt;|-- DCS_Search_CustomCatalogs_Index
-DCS_Search_CustomCatalogs &lt;|-- DCS_Search_CustomCatalogs_Query
-DAF_Search_Routing &lt;|-- DAS_UI
-DAF_Search_Routing &lt;|-- DAF_Search_Base
-DCS_CustomCatalogs &lt;|-- DCS
-DPS &lt;|-- DAS
-DCS_Search_CustomCatalogs_Query &lt;|-- DCS_Search_Query
-DCS_Search_CustomCatalogs_Query &lt;|-- DCS_Search_CustomCatalogs_common
-DAF_Search_Base &lt;|-- DAS_UI
-DCS_Search_CustomCatalogs_Index &lt;|-- DCS_Search_Index
-DCS_Search_CustomCatalogs_Index &lt;|-- DCS_Search_CustomCatalogs_common
-DSS &lt;|-- DPS
-DAS_UI &lt;|-- DAS
-DCS_Search_Query &lt;|-- DAF_Search_Query
-DCS_Search_Query &lt;|-- DCS_Search_common
-DCS_Search_Query &lt;|-- DCS
-DCS_Search_CustomCatalogs_common &lt;|-- DCS_Search_common
-DCS_Search_CustomCatalogs_common &lt;|-- DCS_CustomCatalogs
-DCS_Search_Index &lt;|-- DPS_Search_Index
-DCS_Search_Index &lt;|-- DCS_Search_common
-DCS_Search_Index &lt;|-- DCS
-DAF_Search_Query &lt;|-- DAF_Search_common
-DCS_Search_common &lt;|-- DAF_Search_common
-DCS_Search_common &lt;|-- DCS
-DPS_Search_Index &lt;|-- DPS
-DPS_Search_Index &lt;|-- DAF_Search_Index
-DAF_Search_Index &lt;|-- DAS_UI
-DAF_Search_Index &lt;|-- DAF_Search_Base
-DAF_Search_common &lt;|-- DAS_UI
-DAF_Search_common &lt;|-- DAF_Search_Base
-DAF_Search_common &lt;|-- DAF_Search_Routing
-@enduml
-</code></pre></div><h2 id="visualization-umltest2png">Visualization (uml/test2.png)</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Using</span> <span class="n">ATG_ROOT</span> <span class="n">from</span> <span class="n">environment</span> <span class="n">variable</span> <span class="o">$</span><span class="n">ATG_ROOT</span><span class="p">:</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ATG</span><span class="o">/</span><span class="n">ATG10</span><span class="o">.</span><span class="mf">0.2</span>
+</span></span><span class="line"><span class="cl"><span class="n">Using</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ATG</span><span class="o">/</span><span class="n">ATG10</span><span class="o">.</span><span class="mf">0.2</span> <span class="n">installation</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dependants</span> <span class="n">of</span> <span class="n">module</span> <span class="n">TWeStore</span><span class="o">.</span><span class="n">eStore</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="n">DCS</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">Query</span><span class="p">,</span> <span class="n">B2CCommerce</span><span class="p">,</span> <span class="n">DAF</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">Query</span><span class="p">,</span> <span class="n">DAF</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">Base</span><span class="p">,</span> <span class="n">DCS</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">common</span><span class="p">,</span> <span class="n">DPS</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">Index</span><span class="p">,</span> <span class="n">DAF</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">common</span><span class="p">,</span> <span class="n">DAS</span><span class="o">-</span><span class="n">UI</span><span class="p">,</span> <span class="n">DCS</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">Index</span><span class="p">,</span> <span class="n">DPS</span><span class="p">,</span> <span class="n">DCS</span><span class="p">,</span> <span class="n">DCS</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">CustomCatalogs</span><span class="p">,</span> <span class="n">DCS</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">CustomCatalogs</span><span class="o">.</span><span class="n">Query</span><span class="p">,</span> <span class="n">DCS</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">CustomCatalogs</span><span class="o">.</span><span class="n">Index</span><span class="p">,</span> <span class="n">DAF</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">Routing</span><span class="p">,</span> <span class="n">DCS</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">CustomCatalogs</span><span class="o">.</span><span class="n">common</span><span class="p">,</span> <span class="n">DAF</span><span class="o">.</span><span class="n">Search</span><span class="o">.</span><span class="n">Index</span><span class="p">,</span> <span class="n">DSS</span><span class="p">,</span> <span class="n">DCS</span><span class="o">.</span><span class="n">CustomCatalogs</span><span class="p">,</span> <span class="n">DAS</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="n">startuml</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">TWeStore_eStore</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DCS</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">B2CCommerce</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DCS_Search_CustomCatalogs</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DAF_Search_Routing</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DCS_CustomCatalogs</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DPS</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DCS_Search_CustomCatalogs_Query</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DAF_Search_Base</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DCS_Search_CustomCatalogs_Index</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DSS</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DAS_UI</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DCS_Search_Query</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DCS_Search_CustomCatalogs_common</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DAS</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DCS_Search_Index</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DAF_Search_Query</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DCS_Search_common</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DPS_Search_Index</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DAF_Search_Index</span>
+</span></span><span class="line"><span class="cl"><span class="ne">Object</span> <span class="n">DAF_Search_common</span>
+</span></span><span class="line"><span class="cl"><span class="n">TWeStore_eStore</span> <span class="o">&lt;|--</span> <span class="n">DCS</span>
+</span></span><span class="line"><span class="cl"><span class="n">TWeStore_eStore</span> <span class="o">&lt;|--</span> <span class="n">DCS_CustomCatalogs</span>
+</span></span><span class="line"><span class="cl"><span class="n">TWeStore_eStore</span> <span class="o">&lt;|--</span> <span class="n">B2CCommerce</span>
+</span></span><span class="line"><span class="cl"><span class="n">TWeStore_eStore</span> <span class="o">&lt;|--</span> <span class="n">DCS_Search_CustomCatalogs</span>
+</span></span><span class="line"><span class="cl"><span class="n">TWeStore_eStore</span> <span class="o">&lt;|--</span> <span class="n">DAF_Search_Routing</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS</span> <span class="o">&lt;|--</span> <span class="n">DPS</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS</span> <span class="o">&lt;|--</span> <span class="n">DSS</span>
+</span></span><span class="line"><span class="cl"><span class="n">B2CCommerce</span> <span class="o">&lt;|--</span> <span class="n">DCS</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_CustomCatalogs</span> <span class="o">&lt;|--</span> <span class="n">DCS_Search_CustomCatalogs_Index</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_CustomCatalogs</span> <span class="o">&lt;|--</span> <span class="n">DCS_Search_CustomCatalogs_Query</span>
+</span></span><span class="line"><span class="cl"><span class="n">DAF_Search_Routing</span> <span class="o">&lt;|--</span> <span class="n">DAS_UI</span>
+</span></span><span class="line"><span class="cl"><span class="n">DAF_Search_Routing</span> <span class="o">&lt;|--</span> <span class="n">DAF_Search_Base</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_CustomCatalogs</span> <span class="o">&lt;|--</span> <span class="n">DCS</span>
+</span></span><span class="line"><span class="cl"><span class="n">DPS</span> <span class="o">&lt;|--</span> <span class="n">DAS</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_CustomCatalogs_Query</span> <span class="o">&lt;|--</span> <span class="n">DCS_Search_Query</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_CustomCatalogs_Query</span> <span class="o">&lt;|--</span> <span class="n">DCS_Search_CustomCatalogs_common</span>
+</span></span><span class="line"><span class="cl"><span class="n">DAF_Search_Base</span> <span class="o">&lt;|--</span> <span class="n">DAS_UI</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_CustomCatalogs_Index</span> <span class="o">&lt;|--</span> <span class="n">DCS_Search_Index</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_CustomCatalogs_Index</span> <span class="o">&lt;|--</span> <span class="n">DCS_Search_CustomCatalogs_common</span>
+</span></span><span class="line"><span class="cl"><span class="n">DSS</span> <span class="o">&lt;|--</span> <span class="n">DPS</span>
+</span></span><span class="line"><span class="cl"><span class="n">DAS_UI</span> <span class="o">&lt;|--</span> <span class="n">DAS</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_Query</span> <span class="o">&lt;|--</span> <span class="n">DAF_Search_Query</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_Query</span> <span class="o">&lt;|--</span> <span class="n">DCS_Search_common</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_Query</span> <span class="o">&lt;|--</span> <span class="n">DCS</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_CustomCatalogs_common</span> <span class="o">&lt;|--</span> <span class="n">DCS_Search_common</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_CustomCatalogs_common</span> <span class="o">&lt;|--</span> <span class="n">DCS_CustomCatalogs</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_Index</span> <span class="o">&lt;|--</span> <span class="n">DPS_Search_Index</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_Index</span> <span class="o">&lt;|--</span> <span class="n">DCS_Search_common</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_Index</span> <span class="o">&lt;|--</span> <span class="n">DCS</span>
+</span></span><span class="line"><span class="cl"><span class="n">DAF_Search_Query</span> <span class="o">&lt;|--</span> <span class="n">DAF_Search_common</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_common</span> <span class="o">&lt;|--</span> <span class="n">DAF_Search_common</span>
+</span></span><span class="line"><span class="cl"><span class="n">DCS_Search_common</span> <span class="o">&lt;|--</span> <span class="n">DCS</span>
+</span></span><span class="line"><span class="cl"><span class="n">DPS_Search_Index</span> <span class="o">&lt;|--</span> <span class="n">DPS</span>
+</span></span><span class="line"><span class="cl"><span class="n">DPS_Search_Index</span> <span class="o">&lt;|--</span> <span class="n">DAF_Search_Index</span>
+</span></span><span class="line"><span class="cl"><span class="n">DAF_Search_Index</span> <span class="o">&lt;|--</span> <span class="n">DAS_UI</span>
+</span></span><span class="line"><span class="cl"><span class="n">DAF_Search_Index</span> <span class="o">&lt;|--</span> <span class="n">DAF_Search_Base</span>
+</span></span><span class="line"><span class="cl"><span class="n">DAF_Search_common</span> <span class="o">&lt;|--</span> <span class="n">DAS_UI</span>
+</span></span><span class="line"><span class="cl"><span class="n">DAF_Search_common</span> <span class="o">&lt;|--</span> <span class="n">DAF_Search_Base</span>
+</span></span><span class="line"><span class="cl"><span class="n">DAF_Search_common</span> <span class="o">&lt;|--</span> <span class="n">DAF_Search_Routing</span>
+</span></span><span class="line"><span class="cl"><span class="err">@</span><span class="n">enduml</span>
+</span></span></code></pre></div><h2 id="visualization-umltest2png">Visualization (uml/test2.png)</h2>
 <p><img src="/images/test2.png" alt=""></p>
 <h2 id="other-functions">Other functions</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Radegast:ATGDiagram miro$ groovy -cp src src/listATGModules.groovy
-Cannot determine ATG installation directory
-usage: groovy listATGModules.groovy
- -a,--list-all             List all modules
- -d,--debug                Provide extra debug information
- -e,--env                  Use environment variable ATG_ROOT
- -h,--help                 Show usage information
- -m,--mod-dep &lt;module&gt;     Show recursive dependencies of a module and UM
-                           diagram for it
- -p,--gen-plantuml         Generate PlantUML format
- -r,--atg-root &lt;atgRoot&gt;   Installation directory of the ATG - full path
-                           that contains DAS subdirectory
-
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Radegast</span><span class="p">:</span><span class="n">ATGDiagram</span> <span class="n">miro</span><span class="o">$</span> <span class="n">groovy</span> <span class="o">-</span><span class="n">cp</span> <span class="n">src</span> <span class="n">src</span><span class="o">/</span><span class="n">listATGModules</span><span class="o">.</span><span class="n">groovy</span>
+</span></span><span class="line"><span class="cl"><span class="n">Cannot</span> <span class="n">determine</span> <span class="n">ATG</span> <span class="n">installation</span> <span class="n">directory</span>
+</span></span><span class="line"><span class="cl"><span class="n">usage</span><span class="p">:</span> <span class="n">groovy</span> <span class="n">listATGModules</span><span class="o">.</span><span class="n">groovy</span>
+</span></span><span class="line"><span class="cl"> <span class="o">-</span><span class="n">a</span><span class="p">,</span><span class="o">--</span><span class="n">list</span><span class="o">-</span><span class="n">all</span>             <span class="n">List</span> <span class="n">all</span> <span class="n">modules</span>
+</span></span><span class="line"><span class="cl"> <span class="o">-</span><span class="n">d</span><span class="p">,</span><span class="o">--</span><span class="n">debug</span>                <span class="n">Provide</span> <span class="n">extra</span> <span class="n">debug</span> <span class="n">information</span>
+</span></span><span class="line"><span class="cl"> <span class="o">-</span><span class="n">e</span><span class="p">,</span><span class="o">--</span><span class="n">env</span>                  <span class="n">Use</span> <span class="n">environment</span> <span class="n">variable</span> <span class="n">ATG_ROOT</span>
+</span></span><span class="line"><span class="cl"> <span class="o">-</span><span class="n">h</span><span class="p">,</span><span class="o">--</span><span class="n">help</span>                 <span class="n">Show</span> <span class="n">usage</span> <span class="n">information</span>
+</span></span><span class="line"><span class="cl"> <span class="o">-</span><span class="n">m</span><span class="p">,</span><span class="o">--</span><span class="n">mod</span><span class="o">-</span><span class="n">dep</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>     <span class="n">Show</span> <span class="n">recursive</span> <span class="n">dependencies</span> <span class="n">of</span> <span class="n">a</span> <span class="n">module</span> <span class="ow">and</span> <span class="n">UM</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">diagram</span> <span class="k">for</span> <span class="n">it</span>
+</span></span><span class="line"><span class="cl"> <span class="o">-</span><span class="n">p</span><span class="p">,</span><span class="o">--</span><span class="n">gen</span><span class="o">-</span><span class="n">plantuml</span>         <span class="n">Generate</span> <span class="n">PlantUML</span> <span class="n">format</span>
+</span></span><span class="line"><span class="cl"> <span class="o">-</span><span class="n">r</span><span class="p">,</span><span class="o">--</span><span class="n">atg</span><span class="o">-</span><span class="n">root</span> <span class="o">&lt;</span><span class="n">atgRoot</span><span class="o">&gt;</span>   <span class="n">Installation</span> <span class="n">directory</span> <span class="n">of</span> <span class="n">the</span> <span class="n">ATG</span> <span class="o">-</span> <span class="n">full</span> <span class="n">path</span>
+</span></span><span class="line"><span class="cl">                           <span class="n">that</span> <span class="n">contains</span> <span class="n">DAS</span> <span class="n">subdirectory</span>
+</span></span></code></pre></div>
     </div>
 
     <div class="post-copyright">
@@ -318,7 +333,7 @@ usage: groovy listATGModules.groovy
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -336,13 +351,10 @@ usage: groovy listATGModules.groovy
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -353,7 +365,10 @@ usage: groovy listATGModules.groovy
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

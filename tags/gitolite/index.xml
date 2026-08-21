@@ -1,53 +1,45 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>gitolite on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/gitolite/</link>
-    <description>Recent content in gitolite on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 02 Nov 2016 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/gitolite/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Process for transferring Git repo from Gitolite to Bitbucket</title>
-      <link>https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/</link>
-      <pubDate>Wed, 02 Nov 2016 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/</guid>
-      <description>Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
-User setup  List all keys in Gitolite must have access to Gitolite admin interface  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2.</description>
-    </item>
-    
-    <item>
-      <title>Gitolite permissions setup</title>
-      <link>https://miroadamy.com/posts/2014-04-02-gitolite-permissions/</link>
-      <pubDate>Wed, 02 Apr 2014 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2014-04-02-gitolite-permissions/</guid>
-      <description>This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads
-How gitolite works Repository permission structure This is general format of repo definition
-REPO NAME rule line rule line for example
-@staff = dilbert alice wally bob repo foo RW+ = dilbert # line 1 RW+ dev = alice # line 2 - = wally # line 3 RW temp/ = @staff # line 4 R = ashok # line 5 The Rule line has format:</description>
-    </item>
-    
-    <item>
-      <title>Gitolite Administration Guide</title>
-      <link>https://miroadamy.com/posts/2012-08-06-gitilite-admin/</link>
-      <pubDate>Mon, 06 Aug 2012 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2012-08-06-gitilite-admin/</guid>
-      <description>How to setup new client You need to be pensieve admin to do this. You will have to login as service user (non-host account) and su to root.
- create new Linux user on pensieve setup gitolite:  git clone &amp;lt;git://github.com/sitaramc/gitolite&amp;gt; mkdir bin; export PATH=$PATH:~/bin gitolite/install -ln   add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)  gitolite setup -pk miro.pub   get public key for the client account admin and add it (there can be multiple admins) clone the gitolite-admin repo from workstation whose pub key was added  git clone &amp;lt;client@pensieve.</description>
-    </item>
-    
-    <item>
-      <title>Using Gitolite for code sharing setup</title>
-      <link>https://miroadamy.com/posts/2012-06-21-gitolite-setup/</link>
-      <pubDate>Thu, 21 Jun 2012 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2012-06-21-gitolite-setup/</guid>
-      <description>General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
-Main features  multiple users each user represent a client:  e.g. users client1    Users are separated by Unix permissions:  access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes  Inside each user, there are multiple projects.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Gitolite on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/gitolite/</link>
+		<description>Recent content in Gitolite on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 02 Nov 2016 11:22:48 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/gitolite/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Process for transferring Git repo from Gitolite to Bitbucket</title>
+				<link>https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/</link>
+				<pubDate>Wed, 02 Nov 2016 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/</guid>
+				<description>&lt;h2 id=&#34;task&#34;&gt;Task&lt;/h2&gt;&#xA;&lt;p&gt;Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there&lt;/p&gt;&#xA;&lt;h2 id=&#34;user-setup&#34;&gt;User setup&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;List all keys in Gitolite&lt;/li&gt;&#xA;&lt;li&gt;must have access to Gitolite admin interface&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➜  gitolite-admin git:(master) ll keydir&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total 144K&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 401 Jun 29  2015 alter.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 397 Jun 29  2015 codereview.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 400 Apr 18  2016 hybris.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 400 Apr 19  2016 hybris2.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r----- 1 miro 398 Mar 30  2016 irae.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;... DELETED ...&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 401 Jun 29  2015 miro.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 411 Jun 29  2015 tkuser.jenkins0.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 411 Jun 29  2015 tkuser.jenkins2.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;These will be split to 5 usergroups&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Gitolite permissions setup</title>
+				<link>https://miroadamy.com/posts/2014-04-02-gitolite-permissions/</link>
+				<pubDate>Wed, 02 Apr 2014 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2014-04-02-gitolite-permissions/</guid>
+				<description>&lt;p&gt;This documents how to enforce the Gitolite permission to make LIVE branch writeable only by team leads&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-gitolite-works&#34;&gt;How gitolite works&lt;/h2&gt;&#xA;&lt;h3 id=&#34;repository-permission-structure&#34;&gt;Repository permission structure&lt;/h3&gt;&#xA;&lt;p&gt;This is general format of repo definition&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;REPO NAME&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   rule line&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   rule line&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;for example&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;@staff          =   dilbert alice wally bob&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;repo foo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    RW+         =   dilbert     # line 1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    RW+ dev     =   alice       # line 2&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    -           =   wally       # line 3&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    RW  temp/   =   @staff      # line 4&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    R           =   ashok       # line 5&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The Rule line has format:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Gitolite Administration Guide</title>
+				<link>https://miroadamy.com/posts/2012-08-06-gitilite-admin/</link>
+				<pubDate>Mon, 06 Aug 2012 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2012-08-06-gitilite-admin/</guid>
+				<description>&lt;h2 id=&#34;how-to-setup-new-client&#34;&gt;How to setup new client&lt;/h2&gt;&#xA;&lt;p&gt;You need to be &lt;strong&gt;pensieve admin&lt;/strong&gt; to do this.&#xA;You will have to login as service user (non-host account) and su to root.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;create new Linux user on pensieve&lt;/li&gt;&#xA;&lt;li&gt;setup gitolite:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;git clone &amp;lt;git://github.com/sitaramc/gitolite&amp;gt;&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;mkdir bin; export PATH=$PATH:~/bin&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;gitolite/install -ln&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;add own public key to gitolite to get access to gilotile-admin repo (note the naming restrictions!!)&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;gitolite setup -pk miro.pub&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;get public key for the client account admin and add it (there can be multiple admins)&lt;/li&gt;&#xA;&lt;li&gt;clone the gitolite-admin repo from workstation whose pub key was added&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;git clone &amp;lt;client@pensieve.thinkwrap&amp;gt;.[com:gitolite-admin.git](http://comgitolite-admin.git/)&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;add the key to the repo&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;cd gitolite-admin&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;cp ~/mykey.pub keydir&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;vim conf/gitolite conf&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;add the newly added account admit to repos, create new repos if required&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;All gitolite installs are independent so modification in one hosting user have zero impact on others.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Using Gitolite for code sharing setup</title>
+				<link>https://miroadamy.com/posts/2012-06-21-gitolite-setup/</link>
+				<pubDate>Thu, 21 Jun 2012 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2012-06-21-gitolite-setup/</guid>
+				<description>&lt;h2 id=&#34;general-setup-of-code-sharing-host&#34;&gt;General setup of code sharing host&lt;/h2&gt;&#xA;&lt;p&gt;The code sharing host (&lt;strong&gt;Pensieve&lt;/strong&gt;) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network&#xA;(dual homed) - for the build server access.&lt;/p&gt;&#xA;&lt;h3 id=&#34;main-features&#34;&gt;Main features&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;multiple users&lt;/li&gt;&#xA;&lt;li&gt;each user represent a client:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;e.g. users client1&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;users-are-separated-by-unix-permissions&#34;&gt;Users are separated by Unix permissions:&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;access rights to /home/USER are 0700 - no access except the dedicated user&lt;/li&gt;&#xA;&lt;li&gt;only ThinkWrap has root access or sudo access&lt;/li&gt;&#xA;&lt;li&gt;the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;inside-each-user-there-are-multiple-projects&#34;&gt;Inside each user, there are multiple projects.&lt;/h3&gt;&#xA;&lt;p&gt;These projects will have multiple repositiories and will follow the naming convention:&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

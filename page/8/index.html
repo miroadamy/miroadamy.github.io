@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -36,20 +36,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Miro&#39;s World" />
-<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
-<meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Miro&#39;s World"/>
-<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
+<meta property="og:url" content="https://miroadamy.com/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Miro&#39;s World">
+	<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+	<meta itemprop="name" content="Miro&#39;s World">
+	<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta itemprop="datePublished" content="2026-08-21T14:31:54+00:00">
+	<meta itemprop="dateModified" content="2026-08-21T14:31:54+00:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Miro&#39;s World">
+	<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,12 +91,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -108,6 +122,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -116,124 +131,411 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-05-07-aws-summit/">AWS Summit Madrid</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-03-16-docker-machine-error-after-upgrade/">Fixing docker-machine error after upgrade</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2019-05-07 </span>
+      <span class="post-time"> 2016-03-16 </span>
       <div class="post-category">
-          <a href="/categories/events/"> events </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 96 words </span>
-        <span class="more-meta"> 1 min read </span>
+        <span class="more-meta"> 387 words </span>
+        <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      One day round trip Valencia to Madrid and back.
-It is 350 km, but AVE (high velocity train) makes it in 1.5 hr. Take that, Via Rail !!
-Travelling at 300 km/h is unreal. It is actually quieter and more smooth than Canadian train at 80 - all that makes the speed believable is the velocity display and view out of the window when train goes around something closer to the rails.
+      <p>I had to upgrade docker toolbox on Yosemite to get latest docker-compose additions.</p>
+<p>After installing the new package, I was not able to connect to docker machine:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  ~ docker-machine status
+</span></span><span class="line"><span class="cl">Stopped
+</span></span><span class="line"><span class="cl">➜  ~ docker-machine start default
+</span></span><span class="line"><span class="cl">Starting &#34;default&#34;...
+</span></span><span class="line"><span class="cl">(default) Check network to re-create if needed...
+</span></span><span class="line"><span class="cl">(default) Waiting for an IP...
+</span></span><span class="line"><span class="cl">Machine &#34;default&#34; was started.
+</span></span><span class="line"><span class="cl">Waiting for SSH to be available...
+</span></span><span class="line"><span class="cl">Detecting the provisioner...
+</span></span><span class="line"><span class="cl">Started machines may have new IP addresses. You may need to re-run the `docker-machine env` command.
+</span></span><span class="line"><span class="cl">➜  ~ docker-machine env default
+</span></span><span class="line"><span class="cl">Error checking TLS connection: Error checking and/or regenerating the certs: There was an error validating certificates for host &#34;192.168.99.100:2376&#34;: tls: DialWithDialer timed out
+</span></span><span class="line"><span class="cl">You can attempt to regenerate them using &#39;docker-machine regenerate-certs [name]&#39;.
+</span></span><span class="line"><span class="cl">Be advised that this will trigger a Docker daemon restart which will stop running containers.
+</span></span></code></pre></div><p>Regenerating the certificates did not solve the problem. Neither did reboot.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2019-05-07-aws-summit/" class="read-more-link">Read more...</a>
+      <a href="/posts/2016-03-16-docker-machine-error-after-upgrade/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-03-16-jupyter-bash/">Jupyter notebook with Bash kernel</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2016-02-18-access-aws-servers/">Accessing internal AWS servers directly from Mac</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2019-03-16 </span>
+      <span class="post-time"> 2016-02-18 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 723 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Motivation for this hack is my unwillingness to suffer the pain of using Windows UI just to access BCC, ACC or other ATG tools requiring non command-line interface.</p>
+<p>The credit for finding out about approach is blog post by James McOrmond - VPN over SSH - who is using this neat trick from Linux for quite some time.</p>
+<p>The software mentioned <a href="https://github.com/apenwarr/sshuttle">https://github.com/apenwarr/sshuttle</a> supposedly works on OS-X, however, it has not been updated for 4-5 years and would not function for me (OS-X Yosemite).</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2016-02-18-access-aws-servers/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-12-22-p4merge/">p4merge as default file compare for PathFinder</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-12-22 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 334 words </span>
-        <span class="more-meta"> 2 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      Adding Bash to Tensorflow notebook I commented out PHP and C++ stuff that I do not really need:
-FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;&amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;&amp; \ # tar -xvf zeromq-4.1.5.tar.gz &amp;&amp; \ # cd zeromq-* &amp;&amp; \ # .
-    </div>
-    <div class="read-more">
-      <a href="/posts/2019-03-16-jupyter-bash/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-02-10-ssl-poke/">SSL Poke</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-02-10 </span>
-      <div class="post-category">
-          <a href="/categories/tools/"> tools </a>
-          </div>
-        <span class="more-meta"> 83 words </span>
+        <span class="more-meta"> 36 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Cybersource Testing Tool Java utility that we used before when we were debugging the TLS 1.2 issues.
-It needs to be compiled with JDK 1.8 - ideally the same one that runs in production and then run like:
-java -Djavax.net.debug=ssl🤝verbose SSLPoke api.cybersource.com 443 replace api.cybersource.com with whatever the cybersource endpoint needs to be.
-If the utility responds with &lsquo;Successfully connected’, it was able to handshake with the SSL server and establish the secure connection.
+      <h1 id="p4merge-as-default-file-compare-for-pathfinder">p4merge as default file compare for PathFinder</h1>
+<p>Set the tool in File Comparison</p>
+<img src="/images/Screen%20Shot%202015-12-22%20at%2009.30.23.png" alt="" width="600"  />
+<h2 id="how-to-use-it">How to use it</h2>
+<ul>
+<li>Select 2 files, right click, compare from context menu</li>
+<li>In dual mode, select one file on each side, compare</li>
+</ul>
+<img src="/images/2015-12-22_09-30-47.png" alt="" width="600"  />
+<img src="/images/2015-12-22_09-30-34.png" alt="" width="600"  />
     </div>
     <div class="read-more">
-      <a href="/posts/2019-02-10-ssl-poke/" class="read-more-link">Read more...</a>
+      <a href="/posts/2015-12-22-p4merge/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2019-01-14-gitbits/">Gitbits</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-12-11-docker-starting/">Docker - getting started</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2019-01-14 </span>
+      <span class="post-time"> 2015-12-11 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> DevOps </a>
+          <a href="/categories/devops/"> devops </a>
           </div>
-        <span class="more-meta"> 255 words </span>
+        <span class="more-meta"> 199 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="after-the-reboot">After the reboot</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">version</span>
+</span></span><span class="line"><span class="cl"><span class="n">Client</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Version</span><span class="p">:</span>      <span class="mf">1.9</span><span class="o">.</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"> <span class="n">API</span> <span class="n">version</span><span class="p">:</span>  <span class="mf">1.21</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Go</span> <span class="n">version</span><span class="p">:</span>   <span class="n">go1</span><span class="o">.</span><span class="mf">4.3</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Git</span> <span class="n">commit</span><span class="p">:</span>   <span class="n">a34a1d5</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Built</span><span class="p">:</span>        <span class="n">Fri</span> <span class="n">Nov</span> <span class="mi">20</span> <span class="mi">17</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">04</span> <span class="n">UTC</span> <span class="mi">2015</span>
+</span></span><span class="line"><span class="cl"> <span class="ne">OS</span><span class="o">/</span><span class="n">Arch</span><span class="p">:</span>      <span class="n">darwin</span><span class="o">/</span><span class="n">amd64</span>
+</span></span><span class="line"><span class="cl"><span class="n">Cannot</span> <span class="n">connect</span> <span class="n">to</span> <span class="n">the</span> <span class="n">Docker</span> <span class="n">daemon</span><span class="o">.</span> <span class="n">Is</span> <span class="n">the</span> <span class="n">docker</span> <span class="n">daemon</span> <span class="n">running</span> <span class="n">on</span> <span class="n">this</span> <span class="n">host</span><span class="err">?</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">gitolite</span><span class="o">-</span><span class="n">admin</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="n">docker</span><span class="o">-</span><span class="n">machine</span> <span class="n">active</span>
+</span></span><span class="line"><span class="cl"><span class="n">No</span> <span class="n">active</span> <span class="n">host</span> <span class="n">found</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">gitolite</span><span class="o">-</span><span class="n">admin</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="n">docker</span><span class="o">-</span><span class="n">machine</span> <span class="n">env</span> <span class="n">default</span>
+</span></span><span class="line"><span class="cl"><span class="n">Error</span> <span class="n">checking</span> <span class="n">TLS</span> <span class="n">connection</span><span class="p">:</span> <span class="n">default</span> <span class="n">is</span> <span class="ow">not</span> <span class="n">running</span><span class="o">.</span> <span class="n">Please</span> <span class="n">start</span> <span class="n">it</span> <span class="ow">in</span> <span class="n">order</span> <span class="n">to</span> <span class="n">use</span> <span class="n">the</span> <span class="n">connection</span> <span class="n">settings</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">gitolite</span><span class="o">-</span><span class="n">admin</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="n">docker</span><span class="o">-</span><span class="n">machine</span> <span class="n">start</span>
+</span></span><span class="line"><span class="cl"><span class="n">Error</span><span class="p">:</span> <span class="n">Expected</span> <span class="n">to</span> <span class="n">get</span> <span class="n">one</span> <span class="ow">or</span> <span class="n">more</span> <span class="n">machine</span> <span class="n">names</span> <span class="n">as</span> <span class="n">arguments</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">gitolite</span><span class="o">-</span><span class="n">admin</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="n">docker</span><span class="o">-</span><span class="n">machine</span> <span class="n">start</span> <span class="n">default</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">default</span><span class="p">)</span> <span class="n">Starting</span> <span class="n">VM</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Started</span> <span class="n">machines</span> <span class="n">may</span> <span class="n">have</span> <span class="n">new</span> <span class="ne">IP</span> <span class="n">addresses</span><span class="o">.</span> <span class="n">You</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">re</span><span class="o">-</span><span class="n">run</span> <span class="n">the</span> <span class="err">`</span><span class="n">docker</span><span class="o">-</span><span class="n">machine</span> <span class="n">env</span><span class="err">`</span> <span class="n">command</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">gitolite</span><span class="o">-</span><span class="n">admin</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="n">docker</span><span class="o">-</span><span class="n">machine</span> <span class="n">env</span> <span class="n">default</span>
+</span></span><span class="line"><span class="cl"><span class="k">export</span> <span class="n">DOCKER_TLS_VERIFY</span><span class="o">=</span><span class="s2">&#34;1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">export</span> <span class="n">DOCKER_HOST</span><span class="o">=</span><span class="s2">&#34;tcp://192.168.99.100:2376&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">export</span> <span class="n">DOCKER_CERT_PATH</span><span class="o">=</span><span class="s2">&#34;/Users/miro/.docker/machine/machines/default&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="k">export</span> <span class="n">DOCKER_MACHINE_NAME</span><span class="o">=</span><span class="s2">&#34;default&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Run this command to configure your shell:</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># eval &#34;$(docker-machine env default)&#34;</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">gitolite</span><span class="o">-</span><span class="n">admin</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="n">eval</span> <span class="s2">&#34;$(docker-machine env default)&#34;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">gitolite</span><span class="o">-</span><span class="n">admin</span> <span class="n">git</span><span class="p">:(</span><span class="n">master</span><span class="p">)</span> <span class="n">docker</span> <span class="n">version</span>
+</span></span><span class="line"><span class="cl"><span class="n">Client</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Version</span><span class="p">:</span>      <span class="mf">1.9</span><span class="o">.</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"> <span class="n">API</span> <span class="n">version</span><span class="p">:</span>  <span class="mf">1.21</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Go</span> <span class="n">version</span><span class="p">:</span>   <span class="n">go1</span><span class="o">.</span><span class="mf">4.3</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Git</span> <span class="n">commit</span><span class="p">:</span>   <span class="n">a34a1d5</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Built</span><span class="p">:</span>        <span class="n">Fri</span> <span class="n">Nov</span> <span class="mi">20</span> <span class="mi">17</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">04</span> <span class="n">UTC</span> <span class="mi">2015</span>
+</span></span><span class="line"><span class="cl"> <span class="ne">OS</span><span class="o">/</span><span class="n">Arch</span><span class="p">:</span>      <span class="n">darwin</span><span class="o">/</span><span class="n">amd64</span>
+</span></span><span class="line"><span class="cl"><span class="n">Server</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Version</span><span class="p">:</span>      <span class="mf">1.9</span><span class="o">.</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl"> <span class="n">API</span> <span class="n">version</span><span class="p">:</span>  <span class="mf">1.21</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Go</span> <span class="n">version</span><span class="p">:</span>   <span class="n">go1</span><span class="o">.</span><span class="mf">4.3</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Git</span> <span class="n">commit</span><span class="p">:</span>   <span class="n">a34a1d5</span>
+</span></span><span class="line"><span class="cl"> <span class="n">Built</span><span class="p">:</span>        <span class="n">Fri</span> <span class="n">Nov</span> <span class="mi">20</span> <span class="mi">17</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span><span class="mi">04</span> <span class="n">UTC</span> <span class="mi">2015</span>
+</span></span><span class="line"><span class="cl"> <span class="ne">OS</span><span class="o">/</span><span class="n">Arch</span><span class="p">:</span>      <span class="n">linux</span><span class="o">/</span><span class="n">amd64</span>
+</span></span><span class="line"><span class="cl">  
+</span></span></code></pre></div><h2 id="useful-guide">Useful guide</h2>
+<p>See <a href="https://viget.com/extend/how-to-use-docker-on-os-x-the-missing-guide">https://viget.com/extend/how-to-use-docker-on-os-x-the-missing-guide</a></p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-12-11-docker-starting/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-15-acc-in-vm/">Starting ACC in VM</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-07-15 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 177 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>The ACC is installed in default location: <code>~/ATG/ACC11.1</code></p>
+<p>This does not work OOTB. You must set 2 additional ENV properties</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="n">cd</span><span class="w"> </span><span class="o">~/</span><span class="n">ATG</span><span class="o">/</span><span class="n">ACC11</span><span class="p">.</span><span class="mi">0</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">export</span><span class="w"> </span><span class="n">ACC_HOME</span><span class="o">=`</span><span class="n">pwd</span><span class="o">`</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">export</span><span class="w"> </span><span class="n">JAVA_VM</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">java</span><span class="o">/</span><span class="n">jdk1</span><span class="p">.</span><span class="mi">7</span><span class="p">.</span><span class="mi">0</span><span class="n">_51</span><span class="o">//</span><span class="n">bin</span><span class="o">/</span><span class="n">java</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="n">bin</span><span class="o">/</span><span class="n">startClient</span><span class="w"> </span><span class="o">&amp;</span><span class="w">
+</span></span></span></code></pre></div><h2 id="starting-from-dynadmin">Starting from dyn/admin</h2>
+<p>The start in separate VM works OK.</p>
+<p>Start in server VM brings errors message very often complaining of malformed Help URL.
+<img src="/images/acc-1.png" alt=""></p>
+<p>The issue is documented here: <a href="http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg">http://stackoverflow.com/questions/20868244/how-to-fix-malformed-help-url-while-opening-acc-atg</a> - for JBOSS.</p>
+<p>I tried to add the protocol.jar from DAS/lib into Tomcat lib, but it made no difference.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-07-15-acc-in-vm/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-15-07-git-history/">How to truncate Git history</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-07-14 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 648 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="the-general-idea">The general idea</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
+</span></span></span><span class="line"><span class="cl"><span class="c1"># Parameter: tag or sha1</span>
+</span></span><span class="line"><span class="cl">git checkout --orphan temp <span class="nv">$1</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Truncated history&#34;</span>
+</span></span><span class="line"><span class="cl">git rebase --onto temp <span class="nv">$1</span> master
+</span></span><span class="line"><span class="cl">git branch -D temp
+</span></span></code></pre></div><p>Requires Git 1.8+</p>
+<p>Works well for mostly linear history (aka Git used for diff-ing of the catalog feeds).</p>
+<h2 id="how-it-works">How it works</h2>
+<p>Starting repo (training):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  test git:(master) git last
+</span></span><span class="line"><span class="cl">fe4e396 2015-07-13 | Fix for BuildInfo in TDD, database connectivity works (HEAD, origin/dynamovies/main, master) [Miro Adamy]
+</span></span><span class="line"><span class="cl">f1b8636 2015-07-13 | Tables and database creation [Miro Adamy]
+</span></span><span class="line"><span class="cl">d4c182b 2015-07-13 | Added template of dynamovies module - with empty UI. No database yet [Miro Adamy]
+</span></span><span class="line"><span class="cl">f8df977 2015-07-13 | Enabling the Tomcat Manager (origin/d1-200/main) [Miro Adamy]
+</span></span><span class="line"><span class="cl">9f68fe9 2015-07-13 | Initial for Persons [Miro Adamy]
+</span></span><span class="line"><span class="cl">9bd92e3 2015-07-13 | BuildInfo returns String (tag: d1-160-end, origin/d1-160/main) [Miro Adamy]
+</span></span><span class="line"><span class="cl">d319c11 2015-07-12 | Experimenting with remote debug [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">4d06a1c 2015-07-12 | Fix for TDD integration, BuildInfo [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">af66abb 2015-07-12 | Added TDD + build works [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">967e368 2015-07-12 | Added first source to test libraries [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">83755b2 2015-07-12 | Libraries for Mac [Miro Adamy]
+</span></span><span class="line"><span class="cl">b805361 2015-07-12 | Eclipse project + userlib [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">13a0b1c 2015-07-12 | Cleaner Manifest (tag: d1-160-start, tag: d1-150-end, origin/d1-150/main) [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">246dd9f 2015-07-11 | Better way how to create tables [Miro Adamy]
+</span></span><span class="line"><span class="cl">41c626f 2015-07-11 | Resolved tomcat issues on Mac [Miro Adamy]
+</span></span><span class="line"><span class="cl">59c55c2 2015-07-11 | Runnable configuration [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">f3649e6 2015-07-11 | Fixed dependencies (tag: d1-150-start, tag: d1-140-end, origin/d1-140/main) [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">9007415 2015-07-11 | No classes.jar yet [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">6d45bf5 2015-07-11 | Removed web modules, using DCS [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">3acbc08 2015-07-11 | Introduced module structure - template [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">365ce26 2015-07-11 | Fixed the table creation for usage counter (tag: d1-140-start, origin/master, origin/HEAD) [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">e01305e 2015-07-11 | Added skeleton [ATG Training VM 11.1]
+</span></span><span class="line"><span class="cl">1672624 2015-07-11 | New module [ATG Training VM 11.1]
+</span></span></code></pre></div><p>How it looks</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-15-07-git-history/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-12-component-report/">How to get information about all ATG components</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-07-12 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 792 words </span>
+        <span class="more-meta"> 4 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h1 id="how-to-get-information-about-all-atg-nucleus-components">How to get information about all ATG Nucleus components</h1>
+<p>Dyn Admin has useful feature - Configuration reporter: <a href="http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml">http://localhost:8080/dyn/admin/atg/dynamo/admin/en/config-reporter-property-representation1.jhtml</a></p>
+<p><img src="/images/da-1.jpeg" alt=""></p>
+<p>There are two variations of the report: Property representation report - PRR (shorter version) and Bean representation report (BRR). The PRR does not report properties that have default values, while BRR is reporting current values of all properties. Compare the sizes</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-rw-r--r-- 1 miro 2.2M Jul 12 14:07 bean1
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 2.5M Jul 12 14:07 bean1.xml
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 275K Jul 12 13:50 file1
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro 572K Jul 12 13:51 file1.xml
+</span></span></code></pre></div><p><img src="/images/da-2.jpeg" alt="">
+<img src="/images/da-3.jpeg" alt=""></p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-07-12-component-report/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-08-keepass-cli/">Accessing Keepass information from command line</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-07-08 </span>
+      <div class="post-category">
+          <a href="/categories/tools/"> tools </a>
+          </div>
+        <span class="more-meta"> 592 words </span>
+        <span class="more-meta"> 3 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>This is mainly for Linux and Mac as they do not have good client.</p>
+<p>It requires relatively modern Perl - 5.1x should work. I have</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  ~  perl --version
+</span></span><span class="line"><span class="cl">This is perl 5, version 18, subversion 2 (v5.18.2) built for darwin-thread-multi-2level
+</span></span><span class="line"><span class="cl">(with 2 registered patches, see perl -V for more detail)
+</span></span></code></pre></div><p>Get the kpcli distribution
+Download from Sourceforge - <a href="http://sourceforge.net/projects/kpcli/">http://sourceforge.net/projects/kpcli/</a> or get the attached script kpcli-3.0.pl</p>
+<p>Make it executable and put it on the path:</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-07-08-keepass-cli/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-07-07-osx-web/">Setting up a local web server on a Mac</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-07-07 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 25 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>See</p>
+<ul>
+<li><a href="https://discussions.apple.com/docs/DOC-11235">Setting up a local web server on OS X 10.9 &ldquo;Mavericks&rdquo;</a></li>
+<li><a href="https://discussions.apple.com/docs/DOC-11236">Setting up a local web server on OS X 10.10 &ldquo;Yosemite&rdquo;</a></li>
+</ul>
+<p>Meta-List</p>
+<p><a href="https://discussions.apple.com/docs/DOC-3083">https://discussions.apple.com/docs/DOC-3083</a></p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2015-07-07-osx-web/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2015-06-18-jenkins-git/">How to fix Jenkins build issues related to Git connectivity</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-06-18 </span>
+      <div class="post-category">
+          <a href="/categories/devops/"> devops </a>
+          </div>
+        <span class="more-meta"> 407 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      Two small utilities I have places into ~/bin:
-git-attic Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
-#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.
+      <h2 id="symptoms">Symptoms:</h2>
+<ul>
+<li>build fails</li>
+<li>cannot checkout / connect to GIT</li>
+</ul>
+<h2 id="validate-this-is-the-case">Validate this is the case</h2>
+<ul>
+<li>ssh to jenkins2</li>
+<li>assume identity of jenkins user (VERY IMPORTANT)</li>
+<li>go to <code>/home/projects/workspace/PROJECTNAME</code> directory</li>
+</ul>
+<p>This directory is repository clone. Try &lsquo;git status&rsquo; in that directory. If you see something like</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-bash-3.2$ git status
+</span></span><span class="line"><span class="cl">fatal: unable to read tree 2d0456480112e9f9a8508bb47dc3863112cc6253
+</span></span></code></pre></div><p>the git repo is corrupted and needs to be reloaded.</p>
+<h1 id="step-1---get-the-remote-repo-url">Step 1 - Get the remote repo URL</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-bash-3.2$ git remote -v
+</span></span><span class="line"><span class="cl">origin  client@pensieve.thinkwrap.com:client-store.git (fetch)
+</span></span><span class="line"><span class="cl">origin  client@pensieve.thinkwrap.com:client-store.git (push)
+</span></span></code></pre></div><h1 id="step-2---clone-the-repo-to-tmp-location">Step 2 - Clone the repo to /tmp location</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-bash-3.2$ git clone client@pensieve.thinkwrap.com:client-store.git /tmp/client-store
+</span></span><span class="line"><span class="cl">Cloning into /tmp/client-store...
+</span></span><span class="line"><span class="cl">remote: Counting objects: 129011, done.
+</span></span><span class="line"><span class="cl">remote: Compressing objects: 100% (36403/36403), done.
+</span></span><span class="line"><span class="cl">remote: Total 129011 (delta 80801), reused 124811 (delta 77481)
+</span></span><span class="line"><span class="cl">Receiving objects: 100% (129011/129011), 250.76 MiB | 30.13 MiB/s, done.
+</span></span><span class="line"><span class="cl">Resolving deltas: 100% (80801/80801), done.
+</span></span></code></pre></div><p>The directory you clone into must not exist</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2019-01-14-gitbits/" class="read-more-link">Read more...</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2018-12-07-dockercon-2018/">DockerCon 2018 - great event (with a small fly in the ointment)</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2018-12-07 </span>
-      <div class="post-category">
-          <a href="/categories/events/"> Events </a>
-          </div>
-        <span class="more-meta"> 2035 words </span>
-        <span class="more-meta"> 10 mins read </span>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      I have just returned from DockerCon Europe 2018 and I’d like to share my impressions while they are fresh in my mind. It was my first DockerCon so I was not quite sure what to expect. As the title says, it was great experience and barring the scaling issue (more below) could have been really awesome experience.
-But let&rsquo;s take things in order. First location - Barcelona. Hard to pick better place in December than Spain.
-    </div>
-    <div class="read-more">
-      <a href="/posts/2018-12-07-dockercon-2018/" class="read-more-link">Read more...</a>
+      <a href="/posts/2015-06-18-jenkins-git/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -267,7 +569,9 @@ But let&rsquo;s take things in order. First location - Barcelona. Hard to pick b
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -285,13 +589,10 @@ But let&rsquo;s take things in order. First location - Barcelona. Hard to pick b
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -302,7 +603,10 @@ But let&rsquo;s take things in order. First location - Barcelona. Hard to pick b
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

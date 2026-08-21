@@ -16,17 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="Installing and running &amp;ldquo;naked&amp;rdquo; hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Installing and running &ldquo;naked&rdquo; hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
 Starting point: hybris-platform-4.7.1.zip
 Install point: /opt/hybris-platform/hybris-platform-4.7.1
-Start (with HSQLdb) ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all.log =&amp;gt; Select develop" /><meta name="keywords" content="blog, Miro" />
+Start (with HSQLdb) ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all.log =&gt; Select develop
+" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/posts/2012-08-17-install-hybris/" />
@@ -37,37 +38,41 @@ Start (with HSQLdb) ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-pla
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Installing and running &#39;naked&#39; hybris platform" />
-<meta property="og:description" content="Installing and running &ldquo;naked&rdquo; hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
-Starting point: hybris-platform-4.7.1.zip
-Install point: /opt/hybris-platform/hybris-platform-4.7.1
-Start (with HSQLdb) ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all.log =&gt; Select develop" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://miroadamy.com/posts/2012-08-17-install-hybris/" />
-<meta property="article:published_time" content="2012-08-17T11:22:48+08:00" />
-<meta property="article:modified_time" content="2012-08-17T11:22:48+08:00" />
-<meta itemprop="name" content="Installing and running &#39;naked&#39; hybris platform">
-<meta itemprop="description" content="Installing and running &ldquo;naked&rdquo; hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
+<meta property="og:url" content="https://miroadamy.com/posts/2012-08-17-install-hybris/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Installing and running &#39;naked&#39; hybris platform">
+	<meta property="og:description" content="Installing and running “naked” hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
 Starting point: hybris-platform-4.7.1.zip
 Install point: /opt/hybris-platform/hybris-platform-4.7.1
 Start (with HSQLdb) ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all.log =&gt; Select develop">
-<meta itemprop="datePublished" content="2012-08-17T11:22:48+08:00" />
-<meta itemprop="dateModified" content="2012-08-17T11:22:48+08:00" />
-<meta itemprop="wordCount" content="775">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2012-08-17T11:22:48+08:00">
+		<meta property="article:modified_time" content="2012-08-17T11:22:48+08:00">
+		<meta property="article:tag" content="Hybris">
+		<meta property="article:tag" content="Ecommerce">
 
-
-
-<meta itemprop="keywords" content="hybris,ecommerce," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Installing and running &#39;naked&#39; hybris platform"/>
-<meta name="twitter:description" content="Installing and running &ldquo;naked&rdquo; hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
+	<meta itemprop="name" content="Installing and running &#39;naked&#39; hybris platform">
+	<meta itemprop="description" content="Installing and running “naked” hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
 Starting point: hybris-platform-4.7.1.zip
 Install point: /opt/hybris-platform/hybris-platform-4.7.1
-Start (with HSQLdb) ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all.log =&gt; Select develop"/>
+Start (with HSQLdb) ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all.log =&gt; Select develop">
+	<meta itemprop="datePublished" content="2012-08-17T11:22:48+08:00">
+	<meta itemprop="dateModified" content="2012-08-17T11:22:48+08:00">
+	<meta itemprop="wordCount" content="775">
+	<meta itemprop="keywords" content="Hybris,Ecommerce">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Installing and running &#39;naked&#39; hybris platform">
+	<meta name="twitter:description" content="Installing and running “naked” hybris platform Log of an exercise to install and start the Hybris without all those fancy modules
+Starting point: hybris-platform-4.7.1.zip
+Install point: /opt/hybris-platform/hybris-platform-4.7.1
+Start (with HSQLdb) ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-platform-4.7.1 $ cd bin/platform/ platform $ pwd /opt/hybris-platform/hybris-platform-4.7.1/bin/platform platform $ . ./setantenv.sh Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2 Apache Ant(TM) version 1.8.2 compiled on April 21 2011 platform $ ant clean all | tee ant-clean-all.log =&gt; Select develop">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -104,12 +109,21 @@ Start (with HSQLdb) ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-pla
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -126,6 +140,7 @@ Start (with HSQLdb) ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-pla
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -172,149 +187,149 @@ Start (with HSQLdb) ~ $ cd /opt/hybris-platform/hybris-platform-4.7.1 hybris-pla
 <p>Starting point: <code>hybris-platform-4.7.1.zip</code></p>
 <p>Install point: <code>/opt/hybris-platform/hybris-platform-4.7.1</code></p>
 <h2 id="start-with-hsqldb">Start (with HSQLdb)</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">~ $ cd /opt/hybris-platform/hybris-platform-4.7.1
-hybris-platform-4.7.1 $ cd bin/platform/
-platform $ pwd
-/opt/hybris-platform/hybris-platform-4.7.1/bin/platform
- 
- 
-platform $ . ./setantenv.sh
-Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2
-Apache Ant(TM) version 1.8.2 compiled on April 21 2011
-platform $ ant clean all | tee ant-clean-all.log
-</code></pre></div><p>=&gt; Select <code>develop</code></p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">....
-....
-   
-   [echo] [jspcompile] compiling.. /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/work/Catalina/localhost/hmc
-   [yjavac] Compiling 205 source files to /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/work/Catalina/localhost/hmc
-    [touch] Creating /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/work/Catalina/localhost/hmc/jspcompile_touch
-[stopwatch] [build: 43.686 sec]
-server:
-     [echo]
-     [echo] Configuring server at /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6
-     [echo] Using config set at /opt/hybris-platform/hybris-platform-4.7.1/config/tomcat
-     [echo]            
-    [mkdir] Created dir: /opt/hybris-platform/hybris-platform-4.7.1/log/tomcat
-    [mkdir] Created dir: /opt/hybris-platform/hybris-platform-4.7.1/data/media
-     [copy] Copying 8 files to /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6
-     [copy] Copying 6 files to /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6
-     [copy] Copying 1 file to /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/lib
-     [echo]
-     [echo] Embedded server does not seem to be running (no PID found). No restart necessary.
-     [echo]                        
-all:
-     [echo] Build finished on 17-August-2012 19:43:22.
-     [echo]        
-BUILD SUCCESSFUL
-Total time: 1 minute 26 seconds
-</code></pre></div><p>Goto http://localhost:9001/ - redirects to http://localhost:9001/platform/init</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">~ $ cd /opt/hybris-platform/hybris-platform-4.7.1
+</span></span><span class="line"><span class="cl">hybris-platform-4.7.1 $ cd bin/platform/
+</span></span><span class="line"><span class="cl">platform $ pwd
+</span></span><span class="line"><span class="cl">/opt/hybris-platform/hybris-platform-4.7.1/bin/platform
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl">platform $ . ./setantenv.sh
+</span></span><span class="line"><span class="cl">Setting ant home to: /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/apache-ant-1.8.2
+</span></span><span class="line"><span class="cl">Apache Ant(TM) version 1.8.2 compiled on April 21 2011
+</span></span><span class="line"><span class="cl">platform $ ant clean all | tee ant-clean-all.log
+</span></span></code></pre></div><p>=&gt; Select <code>develop</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">....
+</span></span><span class="line"><span class="cl">....
+</span></span><span class="line"><span class="cl">   
+</span></span><span class="line"><span class="cl">   [echo] [jspcompile] compiling.. /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/work/Catalina/localhost/hmc
+</span></span><span class="line"><span class="cl">   [yjavac] Compiling 205 source files to /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/work/Catalina/localhost/hmc
+</span></span><span class="line"><span class="cl">    [touch] Creating /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/work/Catalina/localhost/hmc/jspcompile_touch
+</span></span><span class="line"><span class="cl">[stopwatch] [build: 43.686 sec]
+</span></span><span class="line"><span class="cl">server:
+</span></span><span class="line"><span class="cl">     [echo]
+</span></span><span class="line"><span class="cl">     [echo] Configuring server at /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6
+</span></span><span class="line"><span class="cl">     [echo] Using config set at /opt/hybris-platform/hybris-platform-4.7.1/config/tomcat
+</span></span><span class="line"><span class="cl">     [echo]            
+</span></span><span class="line"><span class="cl">    [mkdir] Created dir: /opt/hybris-platform/hybris-platform-4.7.1/log/tomcat
+</span></span><span class="line"><span class="cl">    [mkdir] Created dir: /opt/hybris-platform/hybris-platform-4.7.1/data/media
+</span></span><span class="line"><span class="cl">     [copy] Copying 8 files to /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6
+</span></span><span class="line"><span class="cl">     [copy] Copying 6 files to /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6
+</span></span><span class="line"><span class="cl">     [copy] Copying 1 file to /opt/hybris-platform/hybris-platform-4.7.1/bin/platform/tomcat-6/lib
+</span></span><span class="line"><span class="cl">     [echo]
+</span></span><span class="line"><span class="cl">     [echo] Embedded server does not seem to be running (no PID found). No restart necessary.
+</span></span><span class="line"><span class="cl">     [echo]                        
+</span></span><span class="line"><span class="cl">all:
+</span></span><span class="line"><span class="cl">     [echo] Build finished on 17-August-2012 19:43:22.
+</span></span><span class="line"><span class="cl">     [echo]        
+</span></span><span class="line"><span class="cl">BUILD SUCCESSFUL
+</span></span><span class="line"><span class="cl">Total time: 1 minute 26 seconds
+</span></span></code></pre></div><p>Goto http://localhost:9001/ - redirects to http://localhost:9001/platform/init</p>
 <h2 id="list-of-modules-that-goes-up">List of modules that goes up:</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">core
-hmc
-servicelayer
-task
-commons
-cronjob
-lucenesearch
-impex
-validation
-variants
-europe1
-category
-catalog
-virtualjdbc
-platformservices
-workflow
-processengine
-ldap
-comments
-cockpit
-mcc
-advancedsavedquery
-admincockpit
-</code></pre></div><h2 id="initialization-log">Initialization log</h2>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">Initialization
-Dropping ALL tables ...
- 
-Initialize system ...
- 
-Please wait. This step can take some minutes to complete.
-If you do not receive any feedback on this page in this time, consult the applicationserver logs for possible errors.
-Dropping old and creating new empty system ...
-&gt;&gt;&gt; Remove objects ...
-&gt;&gt;&gt; Create types ...
-&gt;&gt;&gt; Modify types ...
-&gt;&gt;&gt; Create objects ...
-&gt;&gt;&gt; Setting licence ...
-Restarting tenant ...
- 
-Clearing hmc configuration from database ...
- 
- 
-Creating essential data ...
- 
-Creating essential data for core ...
-Creating essential data for mediaweb ...
-Creating essential data for maintenanceweb ...
-Creating essential data for hmc ...
-Creating essential data for servicelayer ...
-Creating essential data for task ...
-Creating essential data for paymentstandard ...
-Creating essential data for deliveryzone ...
-Creating essential data for commons ...
-Creating essential data for cronjob ...
-Creating essential data for lucenesearch ...
-Creating essential data for impex ...
-Creating essential data for validation ...
-Creating essential data for variants ...
-Creating essential data for europe1 ...
-Creating essential data for category ...
-Creating essential data for catalog ...
-Creating essential data for virtualjdbc ...
-Creating essential data for platformservices ...
-Creating essential data for workflow ...
-Creating essential data for processengine ...
-Creating essential data for platformwebservices ...
-Creating essential data for ldap ...
-Creating essential data for hac ...
-Creating essential data for comments ...
-Creating essential data for cockpit ...
-Creating essential data for mcc ...
-Creating essential data for advancedsavedquery ...
-Creating essential data for admincockpit ...
- 
-Localizing types ...
- 
-Creating project data ...
- 
-Creating project data for core ...
-Creating project data for hmc ...
-Creating project data for servicelayer ...
-Creating project data for task ...
-Creating project data for commons ...
-Creating project data for cronjob ...
-Creating project data for lucenesearch ...
-Creating project data for impex ...
-Creating project data for validation ...
-Creating project data for variants ...
-Creating project data for europe1 ...
-Creating project data for category ...
-Creating project data for catalog ...
-Creating project data for virtualjdbc ...
-Creating project data for platformservices ...
-Creating project data for workflow ...
-Creating project data for processengine ...
-Creating project data for ldap ...
-Creating project data for comments ...
-Creating project data for cockpit ...
-Creating project data for mcc ...
-Creating project data for advancedsavedquery ...
-Creating project data for admincockpit ...
- 
- 
-FINISHED. The initialization took: 0d 00h:01m:08s:235ms
-</code></pre></div><h3 id="exploring">Exploring</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">core</span>
+</span></span><span class="line"><span class="cl"><span class="n">hmc</span>
+</span></span><span class="line"><span class="cl"><span class="n">servicelayer</span>
+</span></span><span class="line"><span class="cl"><span class="n">task</span>
+</span></span><span class="line"><span class="cl"><span class="n">commons</span>
+</span></span><span class="line"><span class="cl"><span class="n">cronjob</span>
+</span></span><span class="line"><span class="cl"><span class="n">lucenesearch</span>
+</span></span><span class="line"><span class="cl"><span class="n">impex</span>
+</span></span><span class="line"><span class="cl"><span class="n">validation</span>
+</span></span><span class="line"><span class="cl"><span class="n">variants</span>
+</span></span><span class="line"><span class="cl"><span class="n">europe1</span>
+</span></span><span class="line"><span class="cl"><span class="n">category</span>
+</span></span><span class="line"><span class="cl"><span class="n">catalog</span>
+</span></span><span class="line"><span class="cl"><span class="n">virtualjdbc</span>
+</span></span><span class="line"><span class="cl"><span class="n">platformservices</span>
+</span></span><span class="line"><span class="cl"><span class="n">workflow</span>
+</span></span><span class="line"><span class="cl"><span class="n">processengine</span>
+</span></span><span class="line"><span class="cl"><span class="n">ldap</span>
+</span></span><span class="line"><span class="cl"><span class="n">comments</span>
+</span></span><span class="line"><span class="cl"><span class="n">cockpit</span>
+</span></span><span class="line"><span class="cl"><span class="n">mcc</span>
+</span></span><span class="line"><span class="cl"><span class="n">advancedsavedquery</span>
+</span></span><span class="line"><span class="cl"><span class="n">admincockpit</span>
+</span></span></code></pre></div><h2 id="initialization-log">Initialization log</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Initialization</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dropping</span> <span class="n">ALL</span> <span class="n">tables</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">Initialize</span> <span class="n">system</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">Please</span> <span class="n">wait</span><span class="o">.</span> <span class="n">This</span> <span class="n">step</span> <span class="n">can</span> <span class="n">take</span> <span class="n">some</span> <span class="n">minutes</span> <span class="n">to</span> <span class="n">complete</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">If</span> <span class="n">you</span> <span class="k">do</span> <span class="ow">not</span> <span class="n">receive</span> <span class="n">any</span> <span class="n">feedback</span> <span class="n">on</span> <span class="n">this</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">this</span> <span class="n">time</span><span class="p">,</span> <span class="n">consult</span> <span class="n">the</span> <span class="n">applicationserver</span> <span class="n">logs</span> <span class="k">for</span> <span class="n">possible</span> <span class="n">errors</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">Dropping</span> <span class="n">old</span> <span class="ow">and</span> <span class="n">creating</span> <span class="n">new</span> <span class="n">empty</span> <span class="n">system</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">Remove</span> <span class="n">objects</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">Create</span> <span class="n">types</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">Modify</span> <span class="n">types</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">Create</span> <span class="n">objects</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="o">&gt;&gt;&gt;</span> <span class="n">Setting</span> <span class="n">licence</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Restarting</span> <span class="n">tenant</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">Clearing</span> <span class="n">hmc</span> <span class="n">configuration</span> <span class="n">from</span> <span class="n">database</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">core</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">mediaweb</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">maintenanceweb</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">hmc</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">servicelayer</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">task</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">paymentstandard</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">deliveryzone</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">commons</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">cronjob</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">lucenesearch</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">impex</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">validation</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">variants</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">europe1</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">category</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">catalog</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">virtualjdbc</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">platformservices</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">workflow</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">processengine</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">platformwebservices</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">ldap</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">hac</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">comments</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">cockpit</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">mcc</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">advancedsavedquery</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">essential</span> <span class="n">data</span> <span class="k">for</span> <span class="n">admincockpit</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">Localizing</span> <span class="n">types</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">core</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">hmc</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">servicelayer</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">task</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">commons</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">cronjob</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">lucenesearch</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">impex</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">validation</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">variants</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">europe1</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">category</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">catalog</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">virtualjdbc</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">platformservices</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">workflow</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">processengine</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">ldap</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">comments</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">cockpit</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">mcc</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">advancedsavedquery</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"><span class="n">Creating</span> <span class="n">project</span> <span class="n">data</span> <span class="k">for</span> <span class="n">admincockpit</span> <span class="o">...</span>
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"> 
+</span></span><span class="line"><span class="cl"><span class="n">FINISHED</span><span class="o">.</span> <span class="n">The</span> <span class="n">initialization</span> <span class="n">took</span><span class="p">:</span> <span class="mi">0</span><span class="n">d</span> <span class="mi">00</span><span class="n">h</span><span class="p">:</span><span class="mi">01</span><span class="n">m</span><span class="p">:</span><span class="mi">08</span><span class="n">s</span><span class="p">:</span><span class="mi">235</span><span class="n">ms</span>
+</span></span></code></pre></div><h3 id="exploring">Exploring</h3>
 <ul>
 <li>look at the configuration parameters under <a href="http://localhost:9001/platform/config">http://localhost:9001/platform/config</a></li>
 <li>logging - <a href="http://localhost:9001/platform/log4j">http://localhost:9001/platform/log4j</a></li>
@@ -335,19 +350,19 @@ FINISHED. The initialization took: 0d 00h:01m:08s:235ms
 </li>
 </ul>
 <h3 id="rest-client">REST Client</h3>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">$ cd /opt/restClient/
-restClient $ ll
-total 44280
--rw-r--r--@ 1 miro  staff   8.4M 17 Aug 20:15 restclient-cli-2.5-jar-with-dependencies.jar
--rw-r--r--@ 1 miro  staff    13M 17 Aug 20:16 restclient-ui-2.5-jar-with-dependencies.jar
-restClient $ java -jar restclient-ui-2.5-jar-with-dependencies.jar
-</code></pre></div><p>must enter admin/nimda into tool</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ cd /opt/restClient/
+</span></span><span class="line"><span class="cl">restClient $ ll
+</span></span><span class="line"><span class="cl">total 44280
+</span></span><span class="line"><span class="cl">-rw-r--r--@ 1 miro  staff   8.4M 17 Aug 20:15 restclient-cli-2.5-jar-with-dependencies.jar
+</span></span><span class="line"><span class="cl">-rw-r--r--@ 1 miro  staff    13M 17 Aug 20:16 restclient-ui-2.5-jar-with-dependencies.jar
+</span></span><span class="line"><span class="cl">restClient $ java -jar restclient-ui-2.5-jar-with-dependencies.jar
+</span></span></code></pre></div><p>must enter admin/nimda into tool</p>
 <p>Follow <a href="http://localhost:9001/ws410/rest/countries">http://localhost:9001/ws410/rest/countries</a></p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;
-&lt;countries xmlns:ns2=&#34;http://wadl.dev.java.net/2009/02&#34; uri=&#34;http://localhost:9001/ws410/rest/countries&#34;&gt;
-&lt;country isocode=&#34;DE&#34; pk=&#34;8796093055010&#34; uri=&#34;http://localhost:9001/ws410/rest/countries/DE&#34;/&gt;
-&lt;/countries&gt;
-</code></pre></div><p>Interesting catalog tool - comparison:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;yes&#34;?&gt;
+</span></span><span class="line"><span class="cl">&lt;countries xmlns:ns2=&#34;http://wadl.dev.java.net/2009/02&#34; uri=&#34;http://localhost:9001/ws410/rest/countries&#34;&gt;
+</span></span><span class="line"><span class="cl">&lt;country isocode=&#34;DE&#34; pk=&#34;8796093055010&#34; uri=&#34;http://localhost:9001/ws410/rest/countries/DE&#34;/&gt;
+</span></span><span class="line"><span class="cl">&lt;/countries&gt;
+</span></span></code></pre></div><p>Interesting catalog tool - comparison:</p>
 <ul>
 <li><a href="http://localhost:9001/hmc/hybris?wid=MC1x745&amp;prgrequest=true&amp;null">http://localhost:9001/hmc/hybris?wid=MC1x745&amp;prgrequest=true&amp;null</a></li>
 </ul>
@@ -358,9 +373,9 @@ restClient $ java -jar restclient-ui-2.5-jar-with-dependencies.jar
 <p>This extension offers the functionality to connect to a database using a virtual JDBC connection.
 This allows to create reports in real-time on live data without risks of corrupting data.</p>
 <p>To connect via HTTP the jdbc url looks like:</p>
-<div class="highlight"><pre class="chroma"><code class="language-fallback" data-lang="fallback">[jdbc:hybris:sql:http://localhost:9001/virtualjdbc/service]()
-[jdbc:hybris:flexiblesearch:http://localhost:9001/virtualjdbc/service;tenant=master]()
-</code></pre></div><p>Detailed documentation can be found at <a href="https://wiki.hybris.com/x/waEFAw">virtualjdbc Extension</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[jdbc:hybris:sql:http://localhost:9001/virtualjdbc/service]()
+</span></span><span class="line"><span class="cl">[jdbc:hybris:flexiblesearch:http://localhost:9001/virtualjdbc/service;tenant=master]()
+</span></span></code></pre></div><p>Detailed documentation can be found at <a href="https://wiki.hybris.com/x/waEFAw">virtualjdbc Extension</a>.</p>
 
     </div>
 
@@ -422,7 +437,7 @@ This allows to create reports in real-time on live data without risks of corrupt
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -440,13 +455,10 @@ This allows to create reports in real-time on live data without risks of corrupt
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -457,7 +469,10 @@ This allows to create reports in real-time on live data without risks of corrupt
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

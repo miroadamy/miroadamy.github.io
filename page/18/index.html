@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="olOwOlo" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
+<meta name="author" content="Miro Adamy" /><meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy" /><meta name="keywords" content="blog, Miro" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.164.0 with theme even" />
 
 
 <link rel="canonical" href="https://miroadamy.com/" />
@@ -36,20 +36,25 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 
-<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+
+<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="Miro&#39;s World" />
-<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://miroadamy.com/" />
-<meta property="og:updated_time" content="2021-02-18T13:00:00+08:00" />
-<meta itemprop="name" content="Miro&#39;s World">
-<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Miro&#39;s World"/>
-<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy"/>
+<meta property="og:url" content="https://miroadamy.com/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="Miro&#39;s World">
+	<meta property="og:description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+	<meta itemprop="name" content="Miro&#39;s World">
+	<meta itemprop="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+	<meta itemprop="datePublished" content="2026-08-21T14:31:54+00:00">
+	<meta itemprop="dateModified" content="2026-08-21T14:31:54+00:00">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Miro&#39;s World">
+	<meta name="twitter:description" content="Miro&#39;s World - personal blog of Miro Adamy">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -86,12 +91,21 @@
         <li class="mobile-menu-item">About</li>
       </a>
   </ul>
+
+  
+
+
 </nav>
+
   <div class="container" id="mobile-panel">
     <header id="header" class="header">
         <div class="logo-wrapper">
   <a href="/" class="logo">Miro&#39;s World</a>
 </div>
+
+
+
+
 
 <nav class="site-navbar">
   <ul id="menu" class="menu">
@@ -108,6 +122,7 @@
       </li>
   </ul>
 </nav>
+
     </header>
 
     <main id="main" class="main">
@@ -116,127 +131,255 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2015-02-05-unmerged/">Finding unmerged commits in all branches</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2009-01-09-vmware-and-slow-clocks-take-2/">VMWare and slow clocks - take 2</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2015-02-05 </span>
+      <span class="post-time"> 2009-01-09 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 666 words </span>
-        <span class="more-meta"> 4 mins read </span>
+        <span class="more-meta"> 187 words </span>
+        <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      This one goes beyond git, but is very useful. Ruby script that produces this:
-Here is the script
-#!/usr/bin/env ruby require &#39;rubygems&#39; gem &#39;term-ansicolor&#39;, &#39;=1.3.0&#39; require &#39;term/ansicolor&#39; class GitCommit attr_reader :content def initialize(content) @content = content end def sha @content.split[1] end def to_s `git log --pretty=format:&#34;%h %ad %an - %s&#34; #{sha}~1..#{sha}` end def unmerged? content =~ /^\+/ end def equivalent? content =~ /^\-/ end end class GitBranch attr_reader :name, :commits def initialize(name, commits) @name = name @commits = commits end def unmerged_commits commits.
+      <p>The centos 4.x we are using as platform for the VMWare VMs (yes, I know there is version 5, but we need to be compliant with RHEL 4.x because of the ATG requirements) installs by default the NTP client.</p>
+<p>Here is sequence of steps that needs to be performed to enable automatic synchronization of the clocks.</p>
+<ol>
+<li>make sure the DNS works</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cat /etc/resolv.conf
+</span></span><span class="line"><span class="cl">sudo vi /etc/resolv.conf
+</span></span></code></pre></div><p>and check that nameservers point to something meaningfull, e.g:</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2015-02-05-unmerged/" class="read-more-link">Read more...</a>
+      <a href="/posts/2009-01-09-vmware-and-slow-clocks-take-2/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-11-04-atg-repo-visualizer/">ATG Repository structure visualizer</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2009-01-04-vmware-and-slow-clocks/">VMWare and slow clocks</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2014-11-04 </span>
+      <span class="post-time"> 2009-01-04 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
+          <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 310 words </span>
+        <span class="more-meta"> 122 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I have noticed recently that most of our VMWare instances (and we are running decent fleet of them for the ATG Lab as well as internal system) if left without time synchronization, will loose get late quite a bit: some of them as much as hour or more a week.</p>
+<p>Unix date command unfortunately belongs to those commands that I am having troubles to remember and everytime I have to use it with parameters, I end up googling for examples ...</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2009-01-04-vmware-and-slow-clocks/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2009-01-02-weird-rogers-3g-network-error-fixed/">Weird Rogers 3G network error - fixed ?</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2009-01-02 </span>
+      <div class="post-category">
+          <a href="/categories/general/"> general </a>
+          </div>
+        <span class="more-meta"> 48 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Just tried out to switch the iPhone to automatic Date and Time setting with 3G on. The time jumped from 11:31 to 11:30 (my iPhone was about 1 minute too fast) and STAYED THERE.</p>
+<p>This could mean that the issue is finally fixed. Can anybody confirm that ?</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2009-01-02-weird-rogers-3g-network-error-fixed/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2009-01-02-excellent-free-git-tutorial/">Excellent free Git tutorial</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2009-01-02 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+        <span class="more-meta"> 49 words </span>
+        <span class="more-meta"> 1 min read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Two screencasts, about 80 and 40 minutes long are available at:</p>
+<p><a href="http://excess.org/article/2008/07/ogre-git-tutorial/" target="_blank">http://excess.org/article/2008/07/ogre-git-tutorial/</a></p>
+<p>Courtesy by fellow Ottawan <a href="http://www.jukie.net/~bart/" target="_blank">Bert Trojanowski</a>. Really nice job of providing deep enough technical understanding with good illustrative examples.</p>
+<p>If you want to get into distributed version control (which is IMHO way to go), check this out.</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2009-01-02-excellent-free-git-tutorial/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-12-16-weird-rogers-3g-network-error/">Weird Rogers 3G network error</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-12-16 </span>
+      <div class="post-category">
+          <a href="/categories/general/"> general </a>
+          </div>
+        <span class="more-meta"> 309 words </span>
         <span class="more-meta"> 2 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      The groovy script does parse the XML files (scraped from dyn-admin, or output of the XML combine) and produces file in the syntax of Plant UML - http://plantuml.sourceforge.net
-if (args.size() == 0) { println &#34;Usage: groovy extractItems.groovy XMLFILE-IN-GSA-FORMAT.xml&#34; System.exit(1) } def gsaFile = new XmlSlurper().parseText(new File(args[0]).text) def desc = gsaFile.&#39;item-descriptor&#39; def processItemDescriptor(myDesc) { def info = [:] def tables = [] def props = [:] def descriptors = [:] for (table in myDesc.
+      <p>Since about Sunday, Dec 7th (I remember exactly because I noticed it when leaving the regular ByMUG meeting at Patty Bolands) my iPhone for no particular reason decided to translocate itself to GMT+1 time zone. It was not visible immediately, only emails received at 16:20 were shown as received 6 hour in the future.</p>
+<p>All this without any changes or installing anything on my end ...</p>
+<p>The Clock application showed what was wrong (this snapshot was taken on Sunday, 16:02 Ottawa time):</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2014-11-04-atg-repo-visualizer/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-12-16-weird-rogers-3g-network-error/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-11-02-bsd-grep-gnu/">Replace BSD grep with GNU grep</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-12-01-chapters-goes-mac/">Chapters goes Mac</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2014-11-02 </span>
+      <span class="post-time"> 2008-12-01 </span>
       <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
+          <a href="/categories/general/"> general </a>
           </div>
-        <span class="more-meta"> 169 words </span>
+        <span class="more-meta"> 79 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      If annoyed with: ➜ ~ echo $PATH | tr &#39;:&#39; &#39;\n&#39; /usr/local/opt/coreutils/libexec/gnubin /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin /opt/ant/bin /opt/groovy/bin /opt/gradle/bin /Users/miro/bin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /opt/X11/bin /usr/texbin # YEs I am using GNU core utils but grep is not there # The issue ➜ ~ grep --version grep (BSD grep) 2.5.1-FreeBSD Here is the receipt
-http://www.heystephenwood.com/2013/09/install-gnu-grep-on-mac-osx.html
-Did not install it as the issue was not with grep:
-Instead, use findInJars.sh
-➜ ~ cat ~/bin/findInJars.
+      <p>I have noticed few of this beauties in Kanata Chapters. Nice replacement for the beaten up CRT terminals that used to be around. They somehow looked right and familiar from the distance.</p>
+<p><a href="http://miroadamy.files.wordpress.com/2008/12/img_0834.jpg"><img class="alignnone size-full wp-image-614" title="img_0834" src="/images/img_0834.jpg" alt="img_0834" width="450" height="337" /></a></p>
+<p>Beautiful screen, with touch capability.</p>
+<p>Nice presentation and user interface.</p>
+<p><a href="http://miroadamy.files.wordpress.com/2008/12/img_0835.jpg"><img class="alignnone size-full wp-image-615" title="img_0835" src="/images/img_0835.jpg" alt="img_0835" width="450" height="337" /></a></p>
+<p>The keyboard with unique personality.</p>
+<p>And after looking closer, it was very obvious why:</p>
+<p><a href="http://miroadamy.files.wordpress.com/2008/12/img_0836.jpg"><img class="alignnone size-full wp-image-616" title="img_0836" src="/images/img_0836.jpg" alt="img_0836" width="450" height="337" /></a></p>
+<p>Proper keyboard simply must have Command key ;-)</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2014-11-02-bsd-grep-gnu/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-12-01-chapters-goes-mac/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-10-14-java6required/">Dealing with &#39;Java Runtime SE 6&#39; required error</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-11-24-fix-for-sender-address-is-invalid-error-on-iphone-3g/">Fix for &#39;Sender address is invalid&#39; error on iPhone 3G</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2014-10-14 </span>
+      <span class="post-time"> 2008-11-24 </span>
       <div class="post-category">
-          <a href="/categories/devops/"> devops </a>
+          <a href="/categories/lifehacks/"> lifehacks </a>
           </div>
-        <span class="more-meta"> 148 words </span>
+        <span class="more-meta"> 214 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>I started to have this error about week ago, out of the blue. I was not aware of making any changes, but suddenly could not reply to an email, send new email or even forward existing email in the iPhone default Mail application. I am using GMail account and because other clients on different platforms worked OK, I suspected either Rogers or Apple. I was trying several possible fixes (and used Safari and Gmail web access - which is not much fun).</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-11-24-fix-for-sender-address-is-invalid-error-on-iphone-3g/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-11-20-how-to-save-local-copy-of-youtube-video/">How to save local copy of YouTube video</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-11-20 </span>
+      <div class="post-category">
+          <a href="/categories/lifehacks/"> lifehacks </a>
+          </div>
+        <span class="more-meta"> 165 words </span>
         <span class="more-meta"> 1 min read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      When trying to start DBeaver (http://dbeaver.jkiss.org) I got this
-I do have Java 7 installed:
-➜ Contents java -version java version &#34;1.7.0_55&#34; Java(TM) SE Runtime Environment (build 1.7.0_55-b13) Java HotSpot(TM) 64-Bit Server VM (build 24.55-b03, mixed mode) ➜ Contents which java java is /Library/Java/JavaVirtualMachines/jdk1.7.0_55.jdk/Contents/Home/bin/java java is /usr/bin/java which should be a superset. But it is not.
-Solution Oracle seems to screw up the PLIST capabilities in JAva7 install
-Go to
+      <p>If you want to watch YouTube video on the plane (and Google TechChannel has some amazing collection of videos), here is how to save it to disk, without any tools or third party program, using just your Mac and Safari out of the box.</p>
+<p>Go to YouTube page and select video you are interested in in Safari. While playing, press Option-Command-A which opens Activity window. Locate the video stream - it will be the largest item in the list. Double click it, which causes Safari to download it.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2014-10-14-java6required/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-11-20-how-to-save-local-copy-of-youtube-video/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
 
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/posts/2014-10-03-keepas-node/">Keepass-Node install</a></h1>
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-11-18-sane-version-of-twitter/">Sane version of Twitter</a></h1>
     <div class="post-meta">
-      <span class="post-time"> 2014-10-03 </span>
+      <span class="post-time"> 2008-11-18 </span>
       <div class="post-category">
           <a href="/categories/programming/"> programming </a>
           </div>
-        <span class="more-meta"> 453 words </span>
+        <span class="more-meta"> 333 words </span>
+        <span class="more-meta"> 2 mins read </span>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Since few weeks we have started internally use an <a href="http://www.techcrunch.com/2008/09/10/yammer-takes-techcrunch50s-top-prize/" target="_blank">interesting microblogging tool</a> named <a href="https://www.yammer.com/home">Yammer</a>. It works very similarly to Twitter, which means that you are posting very short posts, focusing on the stuff you are doing or working on. Unlike with Twitter, Yammer is company oriented and your posts will be visible ONLY to the recipients that share your company's email address.</p>
+<p>Yammer is free service with interesting business model: everybody can join your company's network (if that person has proper email address), but to gain administrative rights, you have to pay dollar a month per user. I actually like this approach because it gives hope that the service will be around and available next year :-)</p>
+    </div>
+    <div class="read-more">
+      <a href="/posts/2008-11-18-sane-version-of-twitter/" class="read-more-link">Read more...</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/posts/2008-11-16-about-time-to-break-the-silence/">About time to break the silence</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2008-11-16 </span>
+      <div class="post-category">
+          <a href="/categories/general/"> general </a>
+          </div>
+        <span class="more-meta"> 463 words </span>
         <span class="more-meta"> 3 mins read </span>
     </div>
   </header>
   
   <div class="post-content">
     <div class="post-summary">
-      See https://github.com/gesellix/keepass-node
-➜ keepass-node git:(master) pwd /Users/miro/src/PLG/keepass-node Install ➜ keepass-node git:(master) ✗ sudo npm install Password: &gt; dejavu@0.4.4 postinstall /Users/miro/src/PLG/keepass-node/node_modules/keepass.io/node_modules/dejavu &gt; node bin/post_install.js Saving runtime configuration in /Users/miro/src/PLG/keepass-node/node_modules/keepass.io/.dejavurc &gt; keepass.io@1.0.5 install /Users/miro/src/PLG/keepass-node/node_modules/keepass.io &gt; (node-gyp rebuild 2&gt;&amp;1) || (echo &#39;DO NOT WORRY ABOUT THESE MESSAGES. KEEPASS.IO WILL FALLBACK TO SLOWER NODE.JS METHODS, SO THERE ARE NO LIMITATIONS EXCEPT SLOWER PERFORMANCE.&#39;; exit 0) \ Agreeing to the Xcode/iOS license requires admin privileges, please re-run as root via sudo.
+      <p>Several people asked what is going on with me: no blog posts for almost a month, litlle presence on Gtalk / MSN. It is simpler to answer this way that write same email over and over.</p>
+<p>Unfortunately the reason for being quiet is not that I am taking time off and enjoying myself somewhere in Caribbean on a secluded island without internet connection. Those who know me well also know that I would never go somewhere without access to Web for longer period of time than week - and even that would cause serious withdrawal issues. I am in Ottawa or Montreal or somewhere in between - physically or virtually.</p>
     </div>
     <div class="read-more">
-      <a href="/posts/2014-10-03-keepas-node/" class="read-more-link">Read more...</a>
+      <a href="/posts/2008-11-16-about-time-to-break-the-silence/" class="read-more-link">Read more...</a>
     </div>
   </div>
 </article>
@@ -270,7 +413,9 @@ Go to
       <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
       <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
       <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
-  <a href="https://miroadamy.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
+    <a href="/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+  
 </div>
 
 <div class="copyright">
@@ -288,13 +433,10 @@ Go to
   <span class="copyright-year">
     &copy; 
     2006 - 
-    2021
-    <span class="heart">
-      <i class="iconfont icon-heart"></i>
-    </span>
-    <span class="author">olOwOlo</span>
+    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
   </span>
 </div>
+
     </footer>
 
     <div class="back-to-top" id="back-to-top">
@@ -305,7 +447,10 @@ Go to
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 

@@ -1,64 +1,52 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>bitbucket on Miro&#39;s World</title>
-    <link>https://miroadamy.com/tags/bitbucket/</link>
-    <description>Recent content in bitbucket on Miro&#39;s World</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 18 Feb 2021 13:00:00 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/bitbucket/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How to monitor Bitbucket user and group permissions with API</title>
-      <link>https://miroadamy.com/posts/2021-02-18-bitbucket-user-groups/</link>
-      <pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2021-02-18-bitbucket-user-groups/</guid>
-      <description>How to manage users and groups in Bitbucket Use case:
-I want to maintain users and groups and their access to repositories in an organization in Bitbucket. To make sure I do not miss newly changed admin access, I want to use the Bitbucket API to retrieve the list of permissions on repository basis and on user/group bases.
-Setup Bitbucket requires a username and password to access the API. This information is stored in environment variables BBUSER and BBPASSWORD.</description>
-    </item>
-    
-    <item>
-      <title>How to mirror Github and Bitbucket repositories</title>
-      <link>https://miroadamy.com/posts/2021-02-17-mirroring-repos/</link>
-      <pubDate>Wed, 17 Feb 2021 13:00:00 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2021-02-17-mirroring-repos/</guid>
-      <description>Mirroring large number of GitHub or Bitbucket repositories Use case:
-I want to create local clone of a large number of repositories from an organization in GitHub / Bitbucket.
-Assumptions  user has SSH key registered with the GH / BB - can clone using ssh protocol user has successfully cloned at least one repo from command line before (the /etc/hosts contains host entries for BB and GH) user has modern version of Python 3 installed (3.</description>
-    </item>
-    
-    <item>
-      <title>How to list Bitbucket repositories and users</title>
-      <link>https://miroadamy.com/posts/2021-02-15-bitbucket-list-repos/</link>
-      <pubDate>Mon, 15 Feb 2021 13:00:00 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2021-02-15-bitbucket-list-repos/</guid>
-      <description>How to list repositories in Bitbucket Use case:
-I want to maintain repositories in an organization in Bitbucket. To make sure I do not miss newly added ones, I want to use API access to retrieve the list of all repositories in the organization.
-Setup Bitbucket requires a username and password to access the API. This information is stored in the environment variables BBUSER and BBPASSWORD. The BBPASSWORD should be an access token / app password defined in the App passwords section of the user settings:</description>
-    </item>
-    
-    <item>
-      <title>Using SSH keys with multiple Bitbucket accounts</title>
-      <link>https://miroadamy.com/posts/2020-05-12-bitbucket-keys/</link>
-      <pubDate>Tue, 12 May 2020 22:34:38 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2020-05-12-bitbucket-keys/</guid>
-      <description>I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.
-With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification.</description>
-    </item>
-    
-    <item>
-      <title>Process for transferring Git repo from Gitolite to Bitbucket</title>
-      <link>https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/</link>
-      <pubDate>Wed, 02 Nov 2016 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/</guid>
-      <description>Task Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there
-User setup  List all keys in Gitolite must have access to Gitolite admin interface  cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin ➜ gitolite-admin git:(master) ll keydir total 144K -rw-r--r-- 1 miro 401 Jun 29 2015 alter.pub -rw-r--r-- 1 miro 397 Jun 29 2015 codereview.pub -rw-r--r-- 1 miro 400 Apr 18 2016 hybris.pub -rw-r--r-- 1 miro 400 Apr 19 2016 hybris2.</description>
-    </item>
-    
-  </channel>
+	<channel>
+		<title>Bitbucket on Miro&#39;s World</title>
+		<link>https://miroadamy.com/tags/bitbucket/</link>
+		<description>Recent content in Bitbucket on Miro&#39;s World</description>
+		<generator>Hugo</generator>
+		<language>en</language>
+		
+		
+		
+		
+			<lastBuildDate>Thu, 18 Feb 2021 13:00:00 +0800</lastBuildDate>
+		
+			<atom:link href="https://miroadamy.com/tags/bitbucket/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>How to monitor Bitbucket user and group permissions with API</title>
+				<link>https://miroadamy.com/posts/2021-02-18-bitbucket-user-groups/</link>
+				<pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2021-02-18-bitbucket-user-groups/</guid>
+				<description>&lt;h1 id=&#34;how-to-manage-users-and-groups-in-bitbucket&#34;&gt;How to manage users and groups in Bitbucket&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Use case&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;p&gt;I want to maintain users and groups and their access to repositories in an organization in Bitbucket.&#xA;To make sure I do not miss newly changed admin access, I want to use the Bitbucket API to retrieve the list of permissions on repository basis and on user/group bases.&lt;/p&gt;&#xA;&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;&#xA;&lt;p&gt;Bitbucket requires a username and password to access the API. This information is stored in environment variables&#xA;&lt;code&gt;BBUSER&lt;/code&gt; and &lt;code&gt;BBPASSWORD&lt;/code&gt;.  &lt;code&gt;BBPASSWORD&lt;/code&gt; should be an access token / app password defined in the &lt;code&gt;App passwords&lt;/code&gt; section&#xA;of the user settings:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>How to mirror Github and Bitbucket repositories</title>
+				<link>https://miroadamy.com/posts/2021-02-17-mirroring-repos/</link>
+				<pubDate>Wed, 17 Feb 2021 13:00:00 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2021-02-17-mirroring-repos/</guid>
+				<description>&lt;h1 id=&#34;mirroring-large-number-of-github-or-bitbucket-repositories&#34;&gt;Mirroring large number of GitHub or Bitbucket repositories&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Use case&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;p&gt;I want to create local clone of a large number of repositories from an organization in GitHub / Bitbucket.&lt;/p&gt;&#xA;&lt;h2 id=&#34;assumptions&#34;&gt;Assumptions&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;user has SSH key registered with the GH / BB - can clone using ssh protocol&lt;/li&gt;&#xA;&lt;li&gt;user has successfully cloned at least one repo from command line before (the /etc/hosts contains host entries for BB and GH)&lt;/li&gt;&#xA;&lt;li&gt;user has modern version of Python 3 installed (3.6 or better)&lt;/li&gt;&#xA;&lt;li&gt;user has local installation of a reasonably modern Git&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;&#xA;&lt;p&gt;First I use the &lt;code&gt;./bb-repo-links.sh&lt;/code&gt; and &lt;code&gt;./gh-repo-links.sh&lt;/code&gt; to generate list of repositories.&#xA;See these blog articles: &lt;a href=&#34;https://miroadamy.com/posts/2021-02-15-bitbucket-list-repos/&#34;&gt;How to list repositories in Bitbucket&lt;/a&gt; and &lt;a href=&#34;https://miroadamy.com/posts/2021-02-16-github-list-repos/&#34;&gt;How to list repositories in github&lt;/a&gt;&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>How to list Bitbucket repositories and users</title>
+				<link>https://miroadamy.com/posts/2021-02-15-bitbucket-list-repos/</link>
+				<pubDate>Mon, 15 Feb 2021 13:00:00 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2021-02-15-bitbucket-list-repos/</guid>
+				<description>&lt;h1 id=&#34;how-to-list-repositories-in-bitbucket&#34;&gt;How to list repositories in Bitbucket&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Use case&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;p&gt;I want to maintain repositories in an organization in Bitbucket. To make sure I do not miss newly added ones,&#xA;I want to use API access to retrieve the list of all repositories in the organization.&lt;/p&gt;&#xA;&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;&#xA;&lt;p&gt;Bitbucket requires a username and password to access the API. This information is stored in the environment variables&#xA;&lt;code&gt;BBUSER&lt;/code&gt; and &lt;code&gt;BBPASSWORD&lt;/code&gt;. The &lt;code&gt;BBPASSWORD&lt;/code&gt; should be an access token / app password defined in the &lt;code&gt;App passwords&lt;/code&gt; section&#xA;of the user settings:&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Using SSH keys with multiple Bitbucket accounts</title>
+				<link>https://miroadamy.com/posts/2020-05-12-bitbucket-keys/</link>
+				<pubDate>Tue, 12 May 2020 22:34:38 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2020-05-12-bitbucket-keys/</guid>
+				<description>&lt;p&gt;I have been using Bitbucket since 2012, long before my company moved from in-house hosted server running Gitolite and in-house instances of FishEye and Crucible to cloud based source control on Bitbucket Cloud. As legacy I was using my personal login with my gmail account as my Bitbucket identity.&lt;/p&gt;&#xA;&lt;p&gt;With merge of 3 companies in 2018 and rebranding as Pivotree, we are in process of streamlining the identity management and using SSO for identification. Time has come to split my personal identity and work identity.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Process for transferring Git repo from Gitolite to Bitbucket</title>
+				<link>https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/</link>
+				<pubDate>Wed, 02 Nov 2016 11:22:48 +0800</pubDate>
+				<guid>https://miroadamy.com/posts/2016-11-02-pensieve-to-bitbucket/</guid>
+				<description>&lt;h2 id=&#34;task&#34;&gt;Task&lt;/h2&gt;&#xA;&lt;p&gt;Transfer full Git history (all branches, tags, etc) to Bitbucket so that development can continue from there&lt;/p&gt;&#xA;&lt;h2 id=&#34;user-setup&#34;&gt;User setup&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;List all keys in Gitolite&lt;/li&gt;&#xA;&lt;li&gt;must have access to Gitolite admin interface&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;cd $ADMIN_HOME/pensieve/PRJ-admin/gitolite-admin&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;➜  gitolite-admin git:(master) ll keydir&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;total 144K&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 401 Jun 29  2015 alter.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 397 Jun 29  2015 codereview.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 400 Apr 18  2016 hybris.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 400 Apr 19  2016 hybris2.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r----- 1 miro 398 Mar 30  2016 irae.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;... DELETED ...&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 401 Jun 29  2015 miro.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 411 Jun 29  2015 tkuser.jenkins0.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-rw-r--r-- 1 miro 411 Jun 29  2015 tkuser.jenkins2.pub&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;These will be split to 5 usergroups&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>
