@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Bratislava on Miro&#39;s World</title>
-		<link>https://miroadamy.com/tags/bratislava/</link>
-		<description>Recent content in Bratislava on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Thu, 29 Aug 2019 11:22:48 +0800</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/tags/bratislava/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Cafe Eleven</title>
-				<link>https://miroadamy.com/posts/2019-08-29-post/</link>
-				<pubDate>Thu, 29 Aug 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-08-29-post/</guid>
-				<description>&lt;p&gt;Cafe and books. &amp;rsquo;nough said &amp;hellip;&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiro.adamy%2Fposts%2F10218202703953045&amp;width=500&#34; width=&#34;500&#34; height=&#34;586&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;</description>
-			</item>
-			<item>
-				<title>Favorite places</title>
-				<link>https://miroadamy.com/posts/2019-08-25-foldvari/</link>
-				<pubDate>Sun, 25 Aug 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-08-25-foldvari/</guid>
-				<description>&lt;p&gt;I discovered this place rather late - at the end of my vacations.&lt;/p&gt;&#xA;&lt;p&gt;Maybe it was better so, otherwise I would my vacation here :-)&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://spectator.sme.sk/c/22160317/bookworms-get-a-sanctuary-in-the-slovak-national-gallery.html&#34;&gt;https://spectator.sme.sk/c/22160317/bookworms-get-a-sanctuary-in-the-slovak-national-gallery.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ll be back !!!&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiro.adamy%2Fposts%2F10218129332798812&amp;width=500&#34; width=&#34;500&#34; height=&#34;592&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Bratislava on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/bratislava/</link>
+    <description>Recent content in Bratislava on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Thu, 29 Aug 2019 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/bratislava/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cafe Eleven</title>
+      <link>https://miroadamy.com/posts/2019-08-29-post/</link>
+      <pubDate>Thu, 29 Aug 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-08-29-post/</guid>
+      <description>&lt;p&gt;Cafe and books. &amp;rsquo;nough said &amp;hellip;&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiro.adamy%2Fposts%2F10218202703953045&amp;width=500&#34; width=&#34;500&#34; height=&#34;586&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Favorite places</title>
+      <link>https://miroadamy.com/posts/2019-08-25-foldvari/</link>
+      <pubDate>Sun, 25 Aug 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-08-25-foldvari/</guid>
+      <description>&lt;p&gt;I discovered this place rather late - at the end of my vacations.&lt;/p&gt;&#xA;&lt;p&gt;Maybe it was better so, otherwise I would my vacation here :-)&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://spectator.sme.sk/c/22160317/bookworms-get-a-sanctuary-in-the-slovak-national-gallery.html&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://spectator.sme.sk/c/22160317/bookworms-get-a-sanctuary-in-the-slovak-national-gallery.html&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I&amp;rsquo;ll be back !!!&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiro.adamy%2Fposts%2F10218129332798812&amp;width=500&#34; width=&#34;500&#34; height=&#34;592&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;</description>
+      
+    </item>
+    
+  </channel>
 </rss>

@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>C-Sharp on Miro&#39;s World</title>
-		<link>https://miroadamy.com/tags/c-sharp/</link>
-		<description>Recent content in C-Sharp on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Mon, 04 Dec 2006 22:54:43 -0500</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/tags/c-sharp/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Will C# 3.0 become an uglier version of Python ?</title>
-				<link>https://miroadamy.com/posts/2006-12-04-will-c-30-become-a-uglier-version-of-python/</link>
-				<pubDate>Mon, 04 Dec 2006 22:54:43 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-12-04-will-c-30-become-a-uglier-version-of-python/</guid>
-				<description>&lt;p&gt;It is now about 1 year since official release of C# 2.0 and .NET framework 2.0. The next version of C# language - the C# 3.0 seems to get more and more attention - in &lt;a href=&#34;http://blogs.tedneward.com/2005/09/22/Language+Innovation+C+30+Explained.aspx&#34;&gt;blogs&lt;/a&gt;, official channels and MSDN. There is lot of excitement and big expectations - but I have nagging feeling that the general direction of the C# development is not necessary an improvement.&lt;/p&gt;&#xA;&lt;p&gt;The main new features of the C# 3.0 language are  implicitly typed variables and anonymous types, extension methods, lambda expressions, and LINQ - possibility of using SQL-ish dialect inside the C#. With exception of the last, all of them must sound very familiar to every Python programmer. All variables in Python are implicitly typed, we can extend classes to much larger degree than extension methods and lambda expressions were always integral part of Python (inherited from Lisp and Scheme).&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>C-Sharp on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/c-sharp/</link>
+    <description>Recent content in C-Sharp on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Mon, 04 Dec 2006 22:54:43 -0500</lastBuildDate><atom:link href="https://miroadamy.com/tags/c-sharp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Will C# 3.0 become an uglier version of Python ?</title>
+      <link>https://miroadamy.com/posts/2006-12-04-will-c-30-become-a-uglier-version-of-python/</link>
+      <pubDate>Mon, 04 Dec 2006 22:54:43 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-04-will-c-30-become-a-uglier-version-of-python/</guid>
+      <description>&lt;p&gt;It is now about 1 year since official release of C# 2.0 and .NET framework 2.0. The next version of C# language - the C# 3.0 seems to get more and more attention - in &lt;a href=&#34;http://blogs.tedneward.com/2005/09/22/Language+Innovation+C+30+Explained.aspx&#34;&gt;blogs&lt;/a&gt;, official channels and MSDN. There is lot of excitement and big expectations - but I have nagging feeling that the general direction of the C# development is not necessary an improvement.&lt;/p&gt;&#xA;&lt;p&gt;The main new features of the C# 3.0 language are  implicitly typed variables and anonymous types, extension methods, lambda expressions, and LINQ - possibility of using SQL-ish dialect inside the C#. With exception of the last, all of them must sound very familiar to every Python programmer. All variables in Python are implicitly typed, we can extend classes to much larger degree than extension methods and lambda expressions were always integral part of Python (inherited from Lisp and Scheme).&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
 </rss>

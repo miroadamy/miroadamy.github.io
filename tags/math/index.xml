@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Math on Miro&#39;s World</title>
-		<link>https://miroadamy.com/tags/math/</link>
-		<description>Recent content in Math on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sat, 10 Feb 2007 23:23:54 -0500</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/tags/math/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Math is fun</title>
-				<link>https://miroadamy.com/posts/2007-02-10-math-is-fun/</link>
-				<pubDate>Sat, 10 Feb 2007 23:23:54 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-02-10-math-is-fun/</guid>
-				<description>&lt;p&gt;I&#39;ve stumbled upon &lt;a href=&#34;http://www.math.utah.edu/~cherk/mathjokes.html&#34;&gt;this page&lt;/a&gt;, full of math jokes. Many of them are IMHO really good and extremly funny (your mileage may vary, though).&lt;/p&gt;&#xA;&lt;p&gt;My favorite few:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;Two male mathematicians are in a bar. The first one says to the second that the average person knows very little about basic mathematics. The second one disagrees, and claims that most people can cope with a reasonable amount of math.&lt;/p&gt;&#xA;&lt;p&gt;The first mathematician goes off to the washroom, and in his absence the second calls over the waitress. He tells her that in a few minutes, after his friend has returned, he will call her over and ask her a question. All she has to do is answer one third x cubed.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Math on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/math/</link>
+    <description>Recent content in Math on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Sat, 10 Feb 2007 23:23:54 -0500</lastBuildDate><atom:link href="https://miroadamy.com/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Math is fun</title>
+      <link>https://miroadamy.com/posts/2007-02-10-math-is-fun/</link>
+      <pubDate>Sat, 10 Feb 2007 23:23:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-10-math-is-fun/</guid>
+      <description>&lt;p&gt;I&#39;ve stumbled upon &lt;a href=&#34;http://www.math.utah.edu/~cherk/mathjokes.html&#34;&gt;this page&lt;/a&gt;, full of math jokes. Many of them are IMHO really good and extremly funny (your mileage may vary, though).&lt;/p&gt;&#xA;&lt;p&gt;My favorite few:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;Two male mathematicians are in a bar. The first one says to the second that the average person knows very little about basic mathematics. The second one disagrees, and claims that most people can cope with a reasonable amount of math.&lt;/p&gt;&#xA;&lt;p&gt;The first mathematician goes off to the washroom, and in his absence the second calls over the waitress. He tells her that in a few minutes, after his friend has returned, he will call her over and ask her a question. All she has to do is answer one third x cubed.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
 </rss>

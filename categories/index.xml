@@ -1,136 +1,183 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Categories on Miro&#39;s World</title>
-		<link>https://miroadamy.com/categories/</link>
-		<description>Recent content in Categories on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Thu, 18 Feb 2021 13:00:00 +0800</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/categories/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>DevOps</title>
-				<link>https://miroadamy.com/categories/devops/</link>
-				<pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/devops/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>HowTo</title>
-				<link>https://miroadamy.com/categories/howto/</link>
-				<pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/howto/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Version Control</title>
-				<link>https://miroadamy.com/categories/version-control/</link>
-				<pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/version-control/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Best Practices</title>
-				<link>https://miroadamy.com/categories/best-practices/</link>
-				<pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/best-practices/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Documentation</title>
-				<link>https://miroadamy.com/categories/documentation/</link>
-				<pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/documentation/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Architecture</title>
-				<link>https://miroadamy.com/categories/architecture/</link>
-				<pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/architecture/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Events</title>
-				<link>https://miroadamy.com/categories/events/</link>
-				<pubDate>Sat, 30 May 2020 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/events/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Startup-Life</title>
-				<link>https://miroadamy.com/categories/startup-life/</link>
-				<pubDate>Tue, 31 Mar 2020 11:24:48 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/startup-life/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Lifehacks</title>
-				<link>https://miroadamy.com/categories/lifehacks/</link>
-				<pubDate>Tue, 17 Dec 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/lifehacks/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Travel</title>
-				<link>https://miroadamy.com/categories/travel/</link>
-				<pubDate>Thu, 05 Dec 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/travel/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>General</title>
-				<link>https://miroadamy.com/categories/general/</link>
-				<pubDate>Tue, 26 Nov 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/general/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Life</title>
-				<link>https://miroadamy.com/categories/life/</link>
-				<pubDate>Sun, 24 Nov 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/life/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Jokes</title>
-				<link>https://miroadamy.com/categories/jokes/</link>
-				<pubDate>Thu, 12 Sep 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/jokes/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Programming</title>
-				<link>https://miroadamy.com/categories/programming/</link>
-				<pubDate>Sat, 16 Mar 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/programming/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Tools</title>
-				<link>https://miroadamy.com/categories/tools/</link>
-				<pubDate>Sun, 10 Feb 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/tools/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Technology</title>
-				<link>https://miroadamy.com/categories/technology/</link>
-				<pubDate>Wed, 23 Mar 2016 12:57:35 -0500</pubDate>
-				<guid>https://miroadamy.com/categories/technology/</guid>
-				<description></description>
-			</item>
-			<item>
-				<title>Startuplife</title>
-				<link>https://miroadamy.com/categories/startuplife/</link>
-				<pubDate>Mon, 16 Feb 2015 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/categories/startuplife/</guid>
-				<description></description>
-			</item>
-	</channel>
+  <channel>
+    <title>Categories on Miro&#39;s World</title>
+    <link>https://miroadamy.com/categories/</link>
+    <description>Recent content in Categories on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Thu, 18 Feb 2021 13:00:00 +0800</lastBuildDate><atom:link href="https://miroadamy.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>DevOps</title>
+      <link>https://miroadamy.com/categories/devops/</link>
+      <pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/devops/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>HowTo</title>
+      <link>https://miroadamy.com/categories/howto/</link>
+      <pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/howto/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Version Control</title>
+      <link>https://miroadamy.com/categories/version-control/</link>
+      <pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/version-control/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Best Practices</title>
+      <link>https://miroadamy.com/categories/best-practices/</link>
+      <pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/best-practices/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Documentation</title>
+      <link>https://miroadamy.com/categories/documentation/</link>
+      <pubDate>Mon, 23 Nov 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/documentation/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Architecture</title>
+      <link>https://miroadamy.com/categories/architecture/</link>
+      <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/architecture/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Events</title>
+      <link>https://miroadamy.com/categories/events/</link>
+      <pubDate>Sat, 30 May 2020 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/events/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Startup-Life</title>
+      <link>https://miroadamy.com/categories/startup-life/</link>
+      <pubDate>Tue, 31 Mar 2020 11:24:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/startup-life/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Lifehacks</title>
+      <link>https://miroadamy.com/categories/lifehacks/</link>
+      <pubDate>Tue, 17 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/lifehacks/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Travel</title>
+      <link>https://miroadamy.com/categories/travel/</link>
+      <pubDate>Thu, 05 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/travel/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>General</title>
+      <link>https://miroadamy.com/categories/general/</link>
+      <pubDate>Tue, 26 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/general/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>https://miroadamy.com/categories/life/</link>
+      <pubDate>Sun, 24 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/life/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Jokes</title>
+      <link>https://miroadamy.com/categories/jokes/</link>
+      <pubDate>Thu, 12 Sep 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/jokes/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://miroadamy.com/categories/programming/</link>
+      <pubDate>Sat, 16 Mar 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/programming/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://miroadamy.com/categories/tools/</link>
+      <pubDate>Sun, 10 Feb 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/tools/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Technology</title>
+      <link>https://miroadamy.com/categories/technology/</link>
+      <pubDate>Wed, 23 Mar 2016 12:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/categories/technology/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Startuplife</title>
+      <link>https://miroadamy.com/categories/startuplife/</link>
+      <pubDate>Mon, 16 Feb 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/categories/startuplife/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
 </rss>

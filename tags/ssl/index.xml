@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Ssl on Miro&#39;s World</title>
-		<link>https://miroadamy.com/tags/ssl/</link>
-		<description>Recent content in Ssl on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sun, 10 Feb 2019 11:22:48 +0800</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>SSL Poke</title>
-				<link>https://miroadamy.com/posts/2019-02-10-ssl-poke/</link>
-				<pubDate>Sun, 10 Feb 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-02-10-ssl-poke/</guid>
-				<description>&lt;h1 id=&#34;cybersource-testing-tool&#34;&gt;Cybersource Testing Tool&lt;/h1&gt;&#xA;&lt;p&gt;Java utility that we used before when we were debugging the TLS 1.2 issues.&lt;/p&gt;&#xA;&lt;p&gt;It needs to be compiled with JDK 1.8 - ideally the same one that runs in production and then run like:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;java -Djavax.net.debug=ssl:handshake:verbose SSLPoke api.cybersource.com 443&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;replace api.cybersource.com with whatever the cybersource endpoint needs to be.&lt;/p&gt;&#xA;&lt;p&gt;If the utility responds with &amp;lsquo;Successfully connected’, it was able to handshake with the SSL server and establish the secure connection.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Ssl on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/ssl/</link>
+    <description>Recent content in Ssl on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Sun, 10 Feb 2019 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>SSL Poke</title>
+      <link>https://miroadamy.com/posts/2019-02-10-ssl-poke/</link>
+      <pubDate>Sun, 10 Feb 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-02-10-ssl-poke/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;Cybersource Testing Tool&#xA;    &lt;div id=&#34;cybersource-testing-tool&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#cybersource-testing-tool&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Java utility that we used before when we were debugging the TLS 1.2 issues.&lt;/p&gt;&#xA;&lt;p&gt;It needs to be compiled with JDK 1.8 - ideally the same one that runs in production and then run like:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;java -Djavax.net.debug=ssl:handshake:verbose SSLPoke api.cybersource.com 443&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;replace api.cybersource.com with whatever the cybersource endpoint needs to be.&lt;/p&gt;&#xA;&lt;p&gt;If the utility responds with &amp;lsquo;Successfully connected’, it was able to handshake with the SSL server and establish the secure connection.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
 </rss>

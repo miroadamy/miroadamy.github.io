@@ -1,143 +1,193 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Webapp on Miro&#39;s World</title>
-		<link>https://miroadamy.com/tags/webapp/</link>
-		<description>Recent content in Webapp on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sat, 23 May 2009 16:07:13 -0400</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/tags/webapp/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Forget me not, Web2.0 edition</title>
-				<link>https://miroadamy.com/posts/2009-05-23-forget-me-not-web2-0-edition/</link>
-				<pubDate>Sat, 23 May 2009 16:07:13 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2009-05-23-forget-me-not-web2-0-edition/</guid>
-				<description>&lt;p&gt;I stumbled upon this pretty nice little application or service - depends how you see it. It is called &lt;a href=&#34;http://www.reqall.com/about&#34; target=&#34;_blank&#34;&gt;reQall&lt;/a&gt; (obviously would have been recall, but &lt;a href=&#34;http://www.recall.com/&#34; target=&#34;_blank&#34;&gt;recall.com&lt;/a&gt; as every good domain is taken.&lt;/p&gt;&#xA;&lt;p&gt;What it does is that allows you to set a reminder in the future to do something - at given time and date: buy X, call Y, do Z. Nothing to earth-shattering about that.&lt;/p&gt;&#xA;&lt;p&gt;What is neat is the way how you do it. Actually, many ways:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Calendar synchronization between iPhone, Google calendars and iCal</title>
-				<link>https://miroadamy.com/posts/2008-09-09-calendar-synchronization-between-iphone-google-calendars-and-ical/</link>
-				<pubDate>Tue, 09 Sep 2008 02:08:08 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-09-09-calendar-synchronization-between-iphone-google-calendars-and-ical/</guid>
-				<description>&lt;p&gt;Here is my situation: I am using three different Macs (Macbook Pro and two iMacs - one at home and occasionally second one at work) and need to keep the contacts and calendars synchronized at least between two of them (MBP and home iMac). I use iPhone which also has calendar and contacts. And in the cloud, there is Google calendar. Actually, more than one: my own calendar and company shared calendar of my colleagues from Thinknostic. Quite a challenge to keep it all in sync.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Chrome is interesting, but I&#39;ll stick with Firefox ...</title>
-				<link>https://miroadamy.com/posts/2008-09-04-chrome-is-interesting-but-ill-stick-with-firefox/</link>
-				<pubDate>Thu, 04 Sep 2008 22:21:34 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-09-04-chrome-is-interesting-but-ill-stick-with-firefox/</guid>
-				<description>&lt;p&gt;Everybody seems to be crazy about Chrome, the new superfast Google browser. The odes on speed sounded quite exaggerated, so I had to try it. I opened up again my old battered Fujitsu Lifebook and after 3 reboots (it was not used for about 2 months and Windows update had to have its patching done) I downloaded and installed it.&lt;/p&gt;&#xA;&lt;p&gt;The rumors were not unsubstantiated ... it IS considerably speedier  than anything else, including Opera. I have not seen any issues on the few sites I have tried - everything seems to work just fine.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Easy way how to transfer really big files</title>
-				<link>https://miroadamy.com/posts/2008-04-29-easy-way-how-to-transfer-really-big-files/</link>
-				<pubDate>Tue, 29 Apr 2008 11:42:32 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-04-29-easy-way-how-to-transfer-really-big-files/</guid>
-				<description>&lt;p&gt;What does really big mean ? In my case few hundred megabytes, up to 1 GB. Clearly, too much for email attachments - most providers caps them at around 5-15 MB.&lt;/p&gt;&#xA;&lt;p&gt;Since we started doing screencasts, I need quite often to transfer  work in progress - screen recordings, rendered MOV files between me and my co-host of the screencasts. I tried to upload the file to the company servers using VPN, but the speed of the secure uploads is nowhere close to being practical.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Quick online diagramming tool</title>
-				<link>https://miroadamy.com/posts/2008-04-28-quick-online-diagramming-tool/</link>
-				<pubDate>Mon, 28 Apr 2008 21:28:22 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-04-28-quick-online-diagramming-tool/</guid>
-				<description>&lt;p&gt;I am using OmniGraffle for most of my diagrams. OmniGraffle is an OS-X platform replacement for Visio - only easier to use and better looking (in my opinion). On rare occasions I do not work on my notebook, it is quite useful to have free alternative that allows to create a diagram that does not look too awful, without going through the hoops of downloading and installing software. The bubl.us is exactly that tool.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Web based task manager with offline mode - finally !</title>
-				<link>https://miroadamy.com/posts/2007-07-29-web-based-task-manager-with-offline-mode-finally/</link>
-				<pubDate>Sun, 29 Jul 2007 23:08:50 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-07-29-web-based-task-manager-with-offline-mode-finally/</guid>
-				<description>&lt;p&gt;Yes, such nice tool really exists and it&#39;s name is &lt;a href=&#34;http://www.rememberthemilk.com/&#34; target=&#34;_blank&#34;&gt;Remember the Milk&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At first sight, RTM is not extremely visually appealing, but very nice and very usable Ajax application. After some time using it, you may better appreciate the &#34;less is more&#34; design. The offline access is thanks to Google Gears magic. Just flip the small green arrow (which will download your data to local cache) and voila - you can go offline, keep editing or adding tasks - your changes will be remembered. Later on, after going online the changes will be synced back.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Adding image to link with CSS only</title>
-				<link>https://miroadamy.com/posts/2007-06-21-adding-image-to-link-with-css-only/</link>
-				<pubDate>Thu, 21 Jun 2007 08:55:27 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-06-21-adding-image-to-link-with-css-only/</guid>
-				<description>&lt;p&gt;As seen in the video at &lt;a href=&#34;http://sciencehack.com/videos/view/IDT2RMJNvSA#searchkeywords&#34; target=&#34;_blank&#34;&gt;http://sciencehack.com/videos/view/IDT2RMJNvSA#searchkeywords&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The source code:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://miroadamy.com/images/screen-16.png&#34; title=&#34;screen-16.png&#34;&gt;&lt;img src=&#34;https://miroadamy.com/images/screen-16.png&#34; alt=&#34;screen-16.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Very good explanation is in the video mentioned above. So far so good - unfortunately the technique, however cool it is, does seem to work in Firefox only. Or at least it does not work in the still most prevalent browser on the Net.&lt;/p&gt;&#xA;&lt;p&gt;Here is how it renders (properly) in Firefox (tested with 1.5)&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://miroadamy.com/images/screen-14.png&#34; title=&#34;screen-14.png&#34;&gt;&lt;img src=&#34;https://miroadamy.com/images/screen-14.png&#34; alt=&#34;screen-14.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;and here is how it looks in IE7:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>New version of Del.icio.us extension for Firefox</title>
-				<link>https://miroadamy.com/posts/2007-05-25-new-version-of-delicious-extension-for-firefox/</link>
-				<pubDate>Fri, 25 May 2007 22:14:12 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-05-25-new-version-of-delicious-extension-for-firefox/</guid>
-				<description>&lt;p&gt;Wonderful thing about Firefox extensions is the autoupdate feature. Go to Tools-&amp;gt;Extensions, select Find update and for all installed extensions you get the latest and greatest .... usually.&lt;/p&gt;&#xA;&lt;p&gt;One extension where the update did not work was the Del.icio.us button for Firefox. I was happily using version 1.2 of the plugin and would never found out about the update, if I had not set the new workstation. The latest version 1.5.29 did not show in the updates. Which is too bad, because it is so much better ...&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>DHH on RIA</title>
-				<link>https://miroadamy.com/posts/2007-05-24-dhh-on-ria/</link>
-				<pubDate>Thu, 24 May 2007 20:46:02 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-05-24-dhh-on-ria/</guid>
-				<description>&lt;p&gt;DHH is (obviously) &lt;a href=&#34;http://en.wikipedia.org/wiki/David_Heinemeier_Hansson&#34; target=&#34;_blank&#34;&gt;David Heinemeier Hansson&lt;/a&gt; (the creator of Rails) and RIA (in this context) means &lt;em&gt;Rich Internet Applications&lt;/em&gt;. And here is the quote:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;I think there&#39;s always room for new ideas, but I don&#39;t think that the whole fuss that&#39;s currently going on about RIA, rich Internet applications, is justified. I think we&#39;ve been through this cycle so many times before that it in some ways amazes me how history seems to be ignored. We went through this with Java applets, they were going to rule the Web. Everything was going to be in a Java applet. HTML and CSS is history. And Flash came around, and Flash started focusing on applications. Now Flash is going to rule the Web and HTML and so on is yesterday. Now, &lt;a href=&#34;http://www.microsoft.com/silverlight/default01.aspx&#34; target=&#34;_blank&#34;&gt;Silverlight&lt;/a&gt;, &lt;a href=&#34;http://labs.adobe.com/technologies/apollo/&#34; target=&#34;_blank&#34;&gt;Apollo&lt;/a&gt;, &lt;a href=&#34;http://www.sun.com/software/javafx/&#34; target=&#34;_blank&#34;&gt;JavaFX&lt;/a&gt;, they&#39;re all bidding to take over the JavaScript, HTML and CSS [spaces], and I just don&#39;t buy it. I don&#39;t buy that developers by and large are going to jump into a proprietary technology and replace what HTML and CSS has given them.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to access GMail with multiple POP clients</title>
-				<link>https://miroadamy.com/posts/2007-03-30-how-to-access-gmail-with-multiple-pop-clients/</link>
-				<pubDate>Fri, 30 Mar 2007 20:39:35 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-03-30-how-to-access-gmail-with-multiple-pop-clients/</guid>
-				<description>&lt;p&gt;Man lernt nie aus - as the German say - one never stops learning. Thanks to comment found on my blog I found out that there is very nice solution problem of disappearing emails (after you download it with one POP client, other POP client would not get it). It is even documented in GMail help:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://mail.google.com/support/bin/answer.py?answer=47948&amp;amp;topic=1556&#34; target=&#34;_blank&#34;&gt;http://mail.google.com/support/bin/answer.py?answer=47948&amp;amp;topic=1556&lt;/a&gt;&lt;em&gt;If you&#39;re accessing your Gmail using POP from multiple clients, Gmail&#39;s &lt;strong&gt;recent&lt;/strong&gt; mode makes sure that all messages are made available to each client, rather than only to the first client to access new mail.&lt;/em&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>What is wrong with GMail</title>
-				<link>https://miroadamy.com/posts/2007-03-02-what-is-wrong-with-gmail/</link>
-				<pubDate>Fri, 02 Mar 2007 22:57:17 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-03-02-what-is-wrong-with-gmail/</guid>
-				<description>&lt;p&gt;Disclaimer first: I really like GMail. Since I started using it (about year ago), I learned to appreciate the beautiful simplicity and elegance of the Web interface. And since I switched completely to GMail as foundation of all my email systems (about November 2006), I have managed to simplify most of my email related chores. But let&#39;s face it - GMail is far from perfect. Here is list of the annoyances and missing features that I have collected:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Surf more in less time: Google Reader</title>
-				<link>https://miroadamy.com/posts/2007-02-07-surf-more-in-less-time-google-reader/</link>
-				<pubDate>Wed, 07 Feb 2007 23:33:33 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-02-07-surf-more-in-less-time-google-reader/</guid>
-				<description>&lt;p&gt;Back in stone age when most information available was actually printed on paper in forms of magazines and books , people experiencing the information overload invented techniques of &lt;a href=&#34;http://en.wikipedia.org/wiki/Speed_reading&#34;&gt;speed reading&lt;/a&gt; to deal with it.&lt;/p&gt;&#xA;&lt;p&gt;It worked - mostly.&lt;/p&gt;&#xA;&lt;p&gt;Nowadays, we have most of the content coming to you through the browser window. Even if you can still speed read the web page, you can get even more speed advantage and quickly sort out the interesting content from the fluff by using the magic of news feeds, RSS, Atom and wonderful free tool &lt;a href=&#34;http://www.google.com/reader/view/&#34;&gt;Google Reader&lt;/a&gt;.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Offline access to GMail and Google Docs coming ?</title>
-				<link>https://miroadamy.com/posts/2007-02-06-offline-access-to-gmail-and-google-docs-coming/</link>
-				<pubDate>Tue, 06 Feb 2007 09:39:42 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-02-06-offline-access-to-gmail-and-google-docs-coming/</guid>
-				<description>&lt;p&gt;However I like the Web applications, the fact is that as soon as you do not have connectivity, they are of very little use. Well - maybe not for long. The &lt;a href=&#34;http://www.sitepen.com/blog/2007/01/02/the-dojo-offline-toolkit/&#34;&gt;Dojo Offline Toolkit&lt;/a&gt; makes promise that sounds almost too good to be true:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Imagine a version of &lt;a href=&#34;http://gmail.com/&#34;&gt;GMail&lt;/a&gt; with a “Work Offline” button on the left-hand side of the screen. When pressed, GMail downloads 100 of your most recent emails into Dojo Offline, including pieces of it’s user-interface. A user can now close their browser and leave the network, stepping on an airplane for example. Once in the air, the user can then simply open their laptop and browser and type in mail.google.com. The GMail UI magically appears, along with their 100 most recent emails. A user can read these mails, compose new ones, or reply to existing ones. A flight attendant announces that the plane will land soon; the user closes their browser and laptop. Later, when they are back on the network, they can click the “Work Online” button, which will send all of their locally written emails to the GMail server. &lt;/em&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Using multiple GMail/GCalendar accounts</title>
-				<link>https://miroadamy.com/posts/2007-02-01-using-multiple-gmailgcalendar-accounts/</link>
-				<pubDate>Thu, 01 Feb 2007 23:46:34 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-02-01-using-multiple-gmailgcalendar-accounts/</guid>
-				<description>&lt;p&gt;Since last week we have switched our corporate emails from our ISP to  &lt;a href=&#34;http://www.google.com/a/&#34;&gt;Google Apps for Domains&lt;/a&gt;.  This gives everybody very easy way how to access and share the Calendar and Contacts, provides Web interface that really works - as well as capability to access your emails via POP3. So far I am very happy with it and the feedback I have got from other Thinknostickers was positive (or none, which means everything is likely OK).&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>FEOTD: Clippings - GMail&#39;s best friend</title>
-				<link>https://miroadamy.com/posts/2007-01-22-feotd-clipping-gmails-best-friend/</link>
-				<pubDate>Mon, 22 Jan 2007 19:43:51 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-01-22-feotd-clipping-gmails-best-friend/</guid>
-				<description>&lt;ul&gt;&#xA;&lt;li&gt;Thanks to Lifehacker I have discovered this extension which add missing piece of GMail functionality:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;This very simple extension allows you to enter multiple sets of text (such as e-mail signatures) and paste them into forms simply by right-clicking.&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Why is this such a big deal ? I am using GMail for both my personal and work stuff. To make sure my work related email appear as coming from company email address, I set the proper From address when composing an email. GMail can be configured to stay with the recipient address when replying. The only problem is signature. In private emails, I want to have link to the blog, in work emails, to company site. And GMail offers only one signature. With this extension, I do not use any signature from GMail, just simply insert correct one from the Clippings buffer.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>FEOTD: well hidden secret</title>
-				<link>https://miroadamy.com/posts/2007-01-04-feotd-well-hidden-secret/</link>
-				<pubDate>Thu, 04 Jan 2007 23:27:54 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-01-04-feotd-well-hidden-secret/</guid>
-				<description>&lt;p&gt;Today&#39;s extension is one that most people do not know about - and still almost everybody has it installed. The explanation for both is that it is distributed with Firefox, and unless you specifically prevent it&#39;s installation, you will get it. It is DOM Inspector.&lt;/p&gt;&#xA;&lt;p&gt;Why would you care about something like this ? Unless you make living by creating Web applications, you probably would not. But if you do, it can help you a lot !&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>To upgrade or not to upgrade ?</title>
-				<link>https://miroadamy.com/posts/2006-10-28-to-upgrade-or-not-to-upgrade/</link>
-				<pubDate>Sat, 28 Oct 2006 21:48:10 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2006-10-28-to-upgrade-or-not-to-upgrade/</guid>
-				<description>&lt;p&gt;It&#39;s official. The Browser version 2 final is out. I mean Firefox, of course - it should be quite obvious what is &#34;the browser&#34; these days. Yes, I know - IE still holds majority of the browser share and yes, Safari is really really nice, fast and good looking application - but let&#39;s face it: browser is not just another application - it is a *platform* these days. Platform means extensibility and extensibility means being a good foundation for add-ons, extensions and plugins. And from the platform perspective, the Firefox is the king.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Working On-Line: Excell-ent On-Line Spreadsheets</title>
-				<link>https://miroadamy.com/posts/2006-09-02-working-on-line-excell-ent-on-line-spreadsheets/</link>
-				<pubDate>Sat, 02 Sep 2006 23:15:20 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2006-09-02-working-on-line-excell-ent-on-line-spreadsheets/</guid>
-				<description>&lt;p&gt;&lt;i&gt;Continuing in Working On-Line Series - see previous post on &lt;a href=&#34;http://thinkwrap.wordpress.com/2006/08/30/working-on-line-word-processors/&#34;&gt;word processors&lt;/a&gt; &lt;/i&gt;&lt;/p&gt;&#xA;&lt;p&gt;Spreadsheet is after editing text probably second most important business application. Let&#39;s explore what is out there for those of us, who do not want to install Microsoft Office or commit yourself to one particular platform. Most of the spreadsheet try to copy or emulate subset of the features of &#34;de-facto&#34; spreadsheet standard &lt;a href=&#34;http://office.microsoft.com/en-us/FX010858001033.aspx&#34;&gt;Microsoft Excel&lt;br /&gt;&#xA;&lt;/a&gt;&lt;br /&gt;&#xA;Good starting points for search is (obviously) Google search for &#34;on-line spreadsheet&#34; and Wikipedia. The offer of Web based spreadsheet programs is surprisingly large. They differ in capabilities, but typically allow import and export of Excel spreadsheets and CSV files, entering formulas (with subset of Excel functions), text formating, some form of graph creation and most importantly - colaboration and shared viewing/editing of the spreadsheet. I tried accomplish two task with some of them: import my timesheet from XLS and edit it online and do shared editing of a spreadsheet. Here is quick summary of the features and personal experience working with them.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Webapp on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/webapp/</link>
+    <description>Recent content in Webapp on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Sat, 23 May 2009 16:07:13 -0400</lastBuildDate><atom:link href="https://miroadamy.com/tags/webapp/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Forget me not, Web2.0 edition</title>
+      <link>https://miroadamy.com/posts/2009-05-23-forget-me-not-web2-0-edition/</link>
+      <pubDate>Sat, 23 May 2009 16:07:13 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-05-23-forget-me-not-web2-0-edition/</guid>
+      <description>&lt;p&gt;I stumbled upon this pretty nice little application or service - depends how you see it. It is called &lt;a href=&#34;http://www.reqall.com/about&#34; target=&#34;_blank&#34;&gt;reQall&lt;/a&gt; (obviously would have been recall, but &lt;a href=&#34;http://www.recall.com/&#34; target=&#34;_blank&#34;&gt;recall.com&lt;/a&gt; as every good domain is taken.&lt;/p&gt;&#xA;&lt;p&gt;What it does is that allows you to set a reminder in the future to do something - at given time and date: buy X, call Y, do Z. Nothing to earth-shattering about that.&lt;/p&gt;&#xA;&lt;p&gt;What is neat is the way how you do it. Actually, many ways:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Calendar synchronization between iPhone, Google calendars and iCal</title>
+      <link>https://miroadamy.com/posts/2008-09-09-calendar-synchronization-between-iphone-google-calendars-and-ical/</link>
+      <pubDate>Tue, 09 Sep 2008 02:08:08 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-09-09-calendar-synchronization-between-iphone-google-calendars-and-ical/</guid>
+      <description>&lt;p&gt;Here is my situation: I am using three different Macs (Macbook Pro and two iMacs - one at home and occasionally second one at work) and need to keep the contacts and calendars synchronized at least between two of them (MBP and home iMac). I use iPhone which also has calendar and contacts. And in the cloud, there is Google calendar. Actually, more than one: my own calendar and company shared calendar of my colleagues from Thinknostic. Quite a challenge to keep it all in sync.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Chrome is interesting, but I&#39;ll stick with Firefox ...</title>
+      <link>https://miroadamy.com/posts/2008-09-04-chrome-is-interesting-but-ill-stick-with-firefox/</link>
+      <pubDate>Thu, 04 Sep 2008 22:21:34 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-09-04-chrome-is-interesting-but-ill-stick-with-firefox/</guid>
+      <description>&lt;p&gt;Everybody seems to be crazy about Chrome, the new superfast Google browser. The odes on speed sounded quite exaggerated, so I had to try it. I opened up again my old battered Fujitsu Lifebook and after 3 reboots (it was not used for about 2 months and Windows update had to have its patching done) I downloaded and installed it.&lt;/p&gt;&#xA;&lt;p&gt;The rumors were not unsubstantiated ... it IS considerably speedier  than anything else, including Opera. I have not seen any issues on the few sites I have tried - everything seems to work just fine.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Easy way how to transfer really big files</title>
+      <link>https://miroadamy.com/posts/2008-04-29-easy-way-how-to-transfer-really-big-files/</link>
+      <pubDate>Tue, 29 Apr 2008 11:42:32 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-29-easy-way-how-to-transfer-really-big-files/</guid>
+      <description>&lt;p&gt;What does really big mean ? In my case few hundred megabytes, up to 1 GB. Clearly, too much for email attachments - most providers caps them at around 5-15 MB.&lt;/p&gt;&#xA;&lt;p&gt;Since we started doing screencasts, I need quite often to transfer  work in progress - screen recordings, rendered MOV files between me and my co-host of the screencasts. I tried to upload the file to the company servers using VPN, but the speed of the secure uploads is nowhere close to being practical.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Quick online diagramming tool</title>
+      <link>https://miroadamy.com/posts/2008-04-28-quick-online-diagramming-tool/</link>
+      <pubDate>Mon, 28 Apr 2008 21:28:22 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-28-quick-online-diagramming-tool/</guid>
+      <description>&lt;p&gt;I am using OmniGraffle for most of my diagrams. OmniGraffle is an OS-X platform replacement for Visio - only easier to use and better looking (in my opinion). On rare occasions I do not work on my notebook, it is quite useful to have free alternative that allows to create a diagram that does not look too awful, without going through the hoops of downloading and installing software. The bubl.us is exactly that tool.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Web based task manager with offline mode - finally !</title>
+      <link>https://miroadamy.com/posts/2007-07-29-web-based-task-manager-with-offline-mode-finally/</link>
+      <pubDate>Sun, 29 Jul 2007 23:08:50 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-07-29-web-based-task-manager-with-offline-mode-finally/</guid>
+      <description>&lt;p&gt;Yes, such nice tool really exists and it&#39;s name is &lt;a href=&#34;http://www.rememberthemilk.com/&#34; target=&#34;_blank&#34;&gt;Remember the Milk&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At first sight, RTM is not extremely visually appealing, but very nice and very usable Ajax application. After some time using it, you may better appreciate the &#34;less is more&#34; design. The offline access is thanks to Google Gears magic. Just flip the small green arrow (which will download your data to local cache) and voila - you can go offline, keep editing or adding tasks - your changes will be remembered. Later on, after going online the changes will be synced back.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Adding image to link with CSS only</title>
+      <link>https://miroadamy.com/posts/2007-06-21-adding-image-to-link-with-css-only/</link>
+      <pubDate>Thu, 21 Jun 2007 08:55:27 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-21-adding-image-to-link-with-css-only/</guid>
+      <description>&lt;p&gt;As seen in the video at &lt;a href=&#34;http://sciencehack.com/videos/view/IDT2RMJNvSA#searchkeywords&#34; target=&#34;_blank&#34;&gt;http://sciencehack.com/videos/view/IDT2RMJNvSA#searchkeywords&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;The source code:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://miroadamy.com/images/screen-16.png&#34; title=&#34;screen-16.png&#34;&gt;&lt;img src=&#34;https://miroadamy.com/images/screen-16.png&#34; alt=&#34;screen-16.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Very good explanation is in the video mentioned above. So far so good - unfortunately the technique, however cool it is, does seem to work in Firefox only. Or at least it does not work in the still most prevalent browser on the Net.&lt;/p&gt;&#xA;&lt;p&gt;Here is how it renders (properly) in Firefox (tested with 1.5)&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://miroadamy.com/images/screen-14.png&#34; title=&#34;screen-14.png&#34;&gt;&lt;img src=&#34;https://miroadamy.com/images/screen-14.png&#34; alt=&#34;screen-14.png&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;and here is how it looks in IE7:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>New version of Del.icio.us extension for Firefox</title>
+      <link>https://miroadamy.com/posts/2007-05-25-new-version-of-delicious-extension-for-firefox/</link>
+      <pubDate>Fri, 25 May 2007 22:14:12 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-25-new-version-of-delicious-extension-for-firefox/</guid>
+      <description>&lt;p&gt;Wonderful thing about Firefox extensions is the autoupdate feature. Go to Tools-&amp;gt;Extensions, select Find update and for all installed extensions you get the latest and greatest .... usually.&lt;/p&gt;&#xA;&lt;p&gt;One extension where the update did not work was the Del.icio.us button for Firefox. I was happily using version 1.2 of the plugin and would never found out about the update, if I had not set the new workstation. The latest version 1.5.29 did not show in the updates. Which is too bad, because it is so much better ...&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>DHH on RIA</title>
+      <link>https://miroadamy.com/posts/2007-05-24-dhh-on-ria/</link>
+      <pubDate>Thu, 24 May 2007 20:46:02 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-24-dhh-on-ria/</guid>
+      <description>&lt;p&gt;DHH is (obviously) &lt;a href=&#34;http://en.wikipedia.org/wiki/David_Heinemeier_Hansson&#34; target=&#34;_blank&#34;&gt;David Heinemeier Hansson&lt;/a&gt; (the creator of Rails) and RIA (in this context) means &lt;em&gt;Rich Internet Applications&lt;/em&gt;. And here is the quote:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;I think there&#39;s always room for new ideas, but I don&#39;t think that the whole fuss that&#39;s currently going on about RIA, rich Internet applications, is justified. I think we&#39;ve been through this cycle so many times before that it in some ways amazes me how history seems to be ignored. We went through this with Java applets, they were going to rule the Web. Everything was going to be in a Java applet. HTML and CSS is history. And Flash came around, and Flash started focusing on applications. Now Flash is going to rule the Web and HTML and so on is yesterday. Now, &lt;a href=&#34;http://www.microsoft.com/silverlight/default01.aspx&#34; target=&#34;_blank&#34;&gt;Silverlight&lt;/a&gt;, &lt;a href=&#34;http://labs.adobe.com/technologies/apollo/&#34; target=&#34;_blank&#34;&gt;Apollo&lt;/a&gt;, &lt;a href=&#34;http://www.sun.com/software/javafx/&#34; target=&#34;_blank&#34;&gt;JavaFX&lt;/a&gt;, they&#39;re all bidding to take over the JavaScript, HTML and CSS [spaces], and I just don&#39;t buy it. I don&#39;t buy that developers by and large are going to jump into a proprietary technology and replace what HTML and CSS has given them.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How to access GMail with multiple POP clients</title>
+      <link>https://miroadamy.com/posts/2007-03-30-how-to-access-gmail-with-multiple-pop-clients/</link>
+      <pubDate>Fri, 30 Mar 2007 20:39:35 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-30-how-to-access-gmail-with-multiple-pop-clients/</guid>
+      <description>&lt;p&gt;Man lernt nie aus - as the German say - one never stops learning. Thanks to comment found on my blog I found out that there is very nice solution problem of disappearing emails (after you download it with one POP client, other POP client would not get it). It is even documented in GMail help:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://mail.google.com/support/bin/answer.py?answer=47948&amp;amp;topic=1556&#34; target=&#34;_blank&#34;&gt;http://mail.google.com/support/bin/answer.py?answer=47948&amp;amp;topic=1556&lt;/a&gt;&lt;em&gt;If you&#39;re accessing your Gmail using POP from multiple clients, Gmail&#39;s &lt;strong&gt;recent&lt;/strong&gt; mode makes sure that all messages are made available to each client, rather than only to the first client to access new mail.&lt;/em&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>What is wrong with GMail</title>
+      <link>https://miroadamy.com/posts/2007-03-02-what-is-wrong-with-gmail/</link>
+      <pubDate>Fri, 02 Mar 2007 22:57:17 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-02-what-is-wrong-with-gmail/</guid>
+      <description>&lt;p&gt;Disclaimer first: I really like GMail. Since I started using it (about year ago), I learned to appreciate the beautiful simplicity and elegance of the Web interface. And since I switched completely to GMail as foundation of all my email systems (about November 2006), I have managed to simplify most of my email related chores. But let&#39;s face it - GMail is far from perfect. Here is list of the annoyances and missing features that I have collected:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Surf more in less time: Google Reader</title>
+      <link>https://miroadamy.com/posts/2007-02-07-surf-more-in-less-time-google-reader/</link>
+      <pubDate>Wed, 07 Feb 2007 23:33:33 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-07-surf-more-in-less-time-google-reader/</guid>
+      <description>&lt;p&gt;Back in stone age when most information available was actually printed on paper in forms of magazines and books , people experiencing the information overload invented techniques of &lt;a href=&#34;http://en.wikipedia.org/wiki/Speed_reading&#34;&gt;speed reading&lt;/a&gt; to deal with it.&lt;/p&gt;&#xA;&lt;p&gt;It worked - mostly.&lt;/p&gt;&#xA;&lt;p&gt;Nowadays, we have most of the content coming to you through the browser window. Even if you can still speed read the web page, you can get even more speed advantage and quickly sort out the interesting content from the fluff by using the magic of news feeds, RSS, Atom and wonderful free tool &lt;a href=&#34;http://www.google.com/reader/view/&#34;&gt;Google Reader&lt;/a&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Offline access to GMail and Google Docs coming ?</title>
+      <link>https://miroadamy.com/posts/2007-02-06-offline-access-to-gmail-and-google-docs-coming/</link>
+      <pubDate>Tue, 06 Feb 2007 09:39:42 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-06-offline-access-to-gmail-and-google-docs-coming/</guid>
+      <description>&lt;p&gt;However I like the Web applications, the fact is that as soon as you do not have connectivity, they are of very little use. Well - maybe not for long. The &lt;a href=&#34;http://www.sitepen.com/blog/2007/01/02/the-dojo-offline-toolkit/&#34;&gt;Dojo Offline Toolkit&lt;/a&gt; makes promise that sounds almost too good to be true:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Imagine a version of &lt;a href=&#34;http://gmail.com/&#34;&gt;GMail&lt;/a&gt; with a “Work Offline” button on the left-hand side of the screen. When pressed, GMail downloads 100 of your most recent emails into Dojo Offline, including pieces of it’s user-interface. A user can now close their browser and leave the network, stepping on an airplane for example. Once in the air, the user can then simply open their laptop and browser and type in mail.google.com. The GMail UI magically appears, along with their 100 most recent emails. A user can read these mails, compose new ones, or reply to existing ones. A flight attendant announces that the plane will land soon; the user closes their browser and laptop. Later, when they are back on the network, they can click the “Work Online” button, which will send all of their locally written emails to the GMail server. &lt;/em&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Using multiple GMail/GCalendar accounts</title>
+      <link>https://miroadamy.com/posts/2007-02-01-using-multiple-gmailgcalendar-accounts/</link>
+      <pubDate>Thu, 01 Feb 2007 23:46:34 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-01-using-multiple-gmailgcalendar-accounts/</guid>
+      <description>&lt;p&gt;Since last week we have switched our corporate emails from our ISP to  &lt;a href=&#34;http://www.google.com/a/&#34;&gt;Google Apps for Domains&lt;/a&gt;.  This gives everybody very easy way how to access and share the Calendar and Contacts, provides Web interface that really works - as well as capability to access your emails via POP3. So far I am very happy with it and the feedback I have got from other Thinknostickers was positive (or none, which means everything is likely OK).&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>FEOTD: Clippings - GMail&#39;s best friend</title>
+      <link>https://miroadamy.com/posts/2007-01-22-feotd-clipping-gmails-best-friend/</link>
+      <pubDate>Mon, 22 Jan 2007 19:43:51 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-22-feotd-clipping-gmails-best-friend/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;Thanks to Lifehacker I have discovered this extension which add missing piece of GMail functionality:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;This very simple extension allows you to enter multiple sets of text (such as e-mail signatures) and paste them into forms simply by right-clicking.&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Why is this such a big deal ? I am using GMail for both my personal and work stuff. To make sure my work related email appear as coming from company email address, I set the proper From address when composing an email. GMail can be configured to stay with the recipient address when replying. The only problem is signature. In private emails, I want to have link to the blog, in work emails, to company site. And GMail offers only one signature. With this extension, I do not use any signature from GMail, just simply insert correct one from the Clippings buffer.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>FEOTD: well hidden secret</title>
+      <link>https://miroadamy.com/posts/2007-01-04-feotd-well-hidden-secret/</link>
+      <pubDate>Thu, 04 Jan 2007 23:27:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-04-feotd-well-hidden-secret/</guid>
+      <description>&lt;p&gt;Today&#39;s extension is one that most people do not know about - and still almost everybody has it installed. The explanation for both is that it is distributed with Firefox, and unless you specifically prevent it&#39;s installation, you will get it. It is DOM Inspector.&lt;/p&gt;&#xA;&lt;p&gt;Why would you care about something like this ? Unless you make living by creating Web applications, you probably would not. But if you do, it can help you a lot !&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>To upgrade or not to upgrade ?</title>
+      <link>https://miroadamy.com/posts/2006-10-28-to-upgrade-or-not-to-upgrade/</link>
+      <pubDate>Sat, 28 Oct 2006 21:48:10 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-10-28-to-upgrade-or-not-to-upgrade/</guid>
+      <description>&lt;p&gt;It&#39;s official. The Browser version 2 final is out. I mean Firefox, of course - it should be quite obvious what is &#34;the browser&#34; these days. Yes, I know - IE still holds majority of the browser share and yes, Safari is really really nice, fast and good looking application - but let&#39;s face it: browser is not just another application - it is a *platform* these days. Platform means extensibility and extensibility means being a good foundation for add-ons, extensions and plugins. And from the platform perspective, the Firefox is the king.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Working On-Line: Excell-ent On-Line Spreadsheets</title>
+      <link>https://miroadamy.com/posts/2006-09-02-working-on-line-excell-ent-on-line-spreadsheets/</link>
+      <pubDate>Sat, 02 Sep 2006 23:15:20 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-09-02-working-on-line-excell-ent-on-line-spreadsheets/</guid>
+      <description>&lt;p&gt;&lt;i&gt;Continuing in Working On-Line Series - see previous post on &lt;a href=&#34;http://thinkwrap.wordpress.com/2006/08/30/working-on-line-word-processors/&#34;&gt;word processors&lt;/a&gt; &lt;/i&gt;&lt;/p&gt;&#xA;&lt;p&gt;Spreadsheet is after editing text probably second most important business application. Let&#39;s explore what is out there for those of us, who do not want to install Microsoft Office or commit yourself to one particular platform. Most of the spreadsheet try to copy or emulate subset of the features of &#34;de-facto&#34; spreadsheet standard &lt;a href=&#34;http://office.microsoft.com/en-us/FX010858001033.aspx&#34;&gt;Microsoft Excel&lt;br /&gt;&#xA;&lt;/a&gt;&lt;br /&gt;&#xA;Good starting points for search is (obviously) Google search for &#34;on-line spreadsheet&#34; and Wikipedia. The offer of Web based spreadsheet programs is surprisingly large. They differ in capabilities, but typically allow import and export of Excel spreadsheets and CSV files, entering formulas (with subset of Excel functions), text formating, some form of graph creation and most importantly - colaboration and shared viewing/editing of the spreadsheet. I tried accomplish two task with some of them: import my timesheet from XLS and edit it online and do shared editing of a spreadsheet. Here is quick summary of the features and personal experience working with them.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
 </rss>

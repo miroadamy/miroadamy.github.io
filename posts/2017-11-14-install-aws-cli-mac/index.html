@@ -1,53 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Install AWS CLI on Mac - Miro&#39;s World</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+  
+  
+    <title>Install AWS CLI on Mac &middot; Miro&#39;s World</title>
+    <meta name="title" content="Install AWS CLI on Mac &middot; Miro&#39;s World">
+  
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+  
+  
+    <meta name="keywords" content="aws,cloud,commandline,">
+  
+  
+  
+  <link rel="canonical" href="https://miroadamy.com/posts/2017-11-14-install-aws-cli-mac/">
+  
+  
 
+  
+  
+    <meta name="author" content="Miro Adamy">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/miroadamy/" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://stackoverflow.com/users/369692/miro-a" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://github.com/miroadamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://gitlab.com/miro.adamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://twitter.com/miroadamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.facebook.com/miro.adamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.instagram.com/miro.adamy/?hl=sk" rel="me">
+        
+      
+    
+  
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="Install AWS CLI on Mac The Mac comes with Python 2.7 and no pip
-This guide recommends upgrade to Python 3 which I want to avoid: http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html
-Unsuccesfull path - keep the Python 2.7 ➜ ~ pip --version zsh: command not found: pip ➜ ~ sudo easy_install pip Password: Searching for pip Reading https://pypi.python.org/simple/pip/ Best match: pip 9.0.1 Downloading https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9 Processing pip-9.0.1.tar.gz Writing /tmp/easy_install-QnLLJp/pip-9.0.1/setup.cfg Running pip-9.0.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-QnLLJp/pip-9.0.1/egg-dist-tmp-03hMh7 /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: &#39;python_requires&#39; warnings.warn(msg) warning: no previously-included files found matching &#39;.coveragerc&#39; warning: no previously-included files found matching &#39;.mailmap&#39; warning: no previously-included files found matching &#39;.travis.yml&#39; warning: no previously-included files found matching &#39;.landscape.yml&#39; warning: no previously-included files found matching &#39;pip/_vendor/Makefile&#39; warning: no previously-included files found matching &#39;tox.ini&#39; warning: no previously-included files found matching &#39;dev-requirements.txt&#39; warning: no previously-included files found matching &#39;appveyor.yml&#39; no previously-included directories found matching &#39;.github&#39; no previously-included directories found matching &#39;.travis&#39; no previously-included directories found matching &#39;docs/_build&#39; no previously-included directories found matching &#39;contrib&#39; no previously-included directories found matching &#39;tasks&#39; no previously-included directories found matching &#39;tests&#39; creating /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Extracting pip-9.0.1-py2.7.egg to /Library/Python/2.7/site-packages Adding pip 9.0.1 to easy-install.pth file Installing pip script to /usr/local/bin Installing pip2.7 script to /usr/local/bin Installing pip2 script to /usr/local/bin Installed /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Processing dependencies for pip Finished processing dependencies for pip ➜ ~ pip --version pip 9.0.1 from /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7) ➜ ~ pip install awscli --upgrade --user Collecting awscli Downloading awscli-1.11.185-py2.py3-none-any.whl (1.2MB) 100% |████████████████████████████████| 1.2MB 1.1MB/s Collecting colorama&lt;=0.3.7,&gt;=0.2.5 (from awscli) Downloading colorama-0.3.7-py2.py3-none-any.whl Collecting s3transfer&lt;0.2.0,&gt;=0.1.9 (from awscli) Downloading s3transfer-0.1.11-py2.py3-none-any.whl (54kB) 100% |████████████████████████████████| 61kB 6.2MB/s Collecting botocore==1.7.43 (from awscli) Downloading botocore-1.7.43-py2.py3-none-any.whl (3.7MB) 100% |████████████████████████████████| 3.7MB 363kB/s Collecting docutils&gt;=0.10 (from awscli) Downloading docutils-0.14-py2-none-any.whl (543kB) 100% |████████████████████████████████| 552kB 2.4MB/s Collecting rsa&lt;=3.5.0,&gt;=3.1.2 (from awscli) Downloading rsa-3.4.2-py2.py3-none-any.whl (46kB) 100% |████████████████████████████████| 51kB 5.9MB/s Collecting PyYAML&lt;=3.12,&gt;=3.10 (from awscli) Downloading PyYAML-3.12.tar.gz (253kB) 100% |████████████████████████████████| 256kB 3.5MB/s Collecting futures&lt;4.0.0,&gt;=2.2.0; python_version == &#34;2.6&#34; or python_version == &#34;2.7&#34; (from s3transfer&lt;0.2.0,&gt;=0.1.9-&gt;awscli) Downloading futures-3.1.1-py2-none-any.whl Collecting jmespath&lt;1.0.0,&gt;=0.7.1 (from botocore==1.7.43-&gt;awscli) Downloading jmespath-0.9.3-py2.py3-none-any.whl Collecting python-dateutil&lt;3.0.0,&gt;=2.1 (from botocore==1.7.43-&gt;awscli) Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB) 100% |████████████████████████████████| 194kB 4.5MB/s Collecting pyasn1&gt;=0.1.3 (from rsa&lt;=3.5.0,&gt;=3.1.2-&gt;awscli) Downloading pyasn1-0.3.7-py2.py3-none-any.whl (63kB) 100% |████████████████████████████████| 71kB 7.8MB/s Collecting six&gt;=1.5 (from python-dateutil&lt;3.0.0,&gt;=2.1-&gt;botocore==1.7.43-&gt;awscli) Downloading six-1.11.0-py2.py3-none-any.whl Installing collected packages: colorama, futures, jmespath, docutils, six, python-dateutil, botocore, s3transfer, pyasn1, rsa, PyYAML, awscli Running setup.py install for PyYAML ... done Successfully installed PyYAML-3.12 awscli-1.11.185 botocore-1.7.43 colorama-0.3.7 docutils-0.14 futures-3.1.1 jmespath-0.9.3 pyasn1-0.3.7 python-dateutil-2.6.1 rsa-3.4.2 s3transfer-0.1.11 six-1.11.0 ➜ ~ aws --version zsh: command not found: aws ➜ ~ sw_vers ProductName: Mac OS X ProductVersion: 10.13.1 BuildVersion: 17B48 This does not work.
-" /><meta name="keywords" content="blog, Miro" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.164.0 with theme even" />
-
-
-<link rel="canonical" href="https://miroadamy.com/posts/2017-11-14-install-aws-cli-mac/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:url" content="https://miroadamy.com/posts/2017-11-14-install-aws-cli-mac/">
+  
+  <meta property="og:url" content="https://miroadamy.com/posts/2017-11-14-install-aws-cli-mac/">
 	<meta property="og:site_name" content="Miro&#39;s World">
 	<meta property="og:title" content="Install AWS CLI on Mac">
-	<meta property="og:description" content="Install AWS CLI on Mac The Mac comes with Python 2.7 and no pip
+	<meta property="og:description" content="Install AWS CLI on Mac # The Mac comes with Python 2.7 and no pip
 This guide recommends upgrade to Python 3 which I want to avoid: http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html
-Unsuccesfull path - keep the Python 2.7 ➜ ~ pip --version zsh: command not found: pip ➜ ~ sudo easy_install pip Password: Searching for pip Reading https://pypi.python.org/simple/pip/ Best match: pip 9.0.1 Downloading https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9 Processing pip-9.0.1.tar.gz Writing /tmp/easy_install-QnLLJp/pip-9.0.1/setup.cfg Running pip-9.0.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-QnLLJp/pip-9.0.1/egg-dist-tmp-03hMh7 /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: &#39;python_requires&#39; warnings.warn(msg) warning: no previously-included files found matching &#39;.coveragerc&#39; warning: no previously-included files found matching &#39;.mailmap&#39; warning: no previously-included files found matching &#39;.travis.yml&#39; warning: no previously-included files found matching &#39;.landscape.yml&#39; warning: no previously-included files found matching &#39;pip/_vendor/Makefile&#39; warning: no previously-included files found matching &#39;tox.ini&#39; warning: no previously-included files found matching &#39;dev-requirements.txt&#39; warning: no previously-included files found matching &#39;appveyor.yml&#39; no previously-included directories found matching &#39;.github&#39; no previously-included directories found matching &#39;.travis&#39; no previously-included directories found matching &#39;docs/_build&#39; no previously-included directories found matching &#39;contrib&#39; no previously-included directories found matching &#39;tasks&#39; no previously-included directories found matching &#39;tests&#39; creating /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Extracting pip-9.0.1-py2.7.egg to /Library/Python/2.7/site-packages Adding pip 9.0.1 to easy-install.pth file Installing pip script to /usr/local/bin Installing pip2.7 script to /usr/local/bin Installing pip2 script to /usr/local/bin Installed /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Processing dependencies for pip Finished processing dependencies for pip ➜ ~ pip --version pip 9.0.1 from /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7) ➜ ~ pip install awscli --upgrade --user Collecting awscli Downloading awscli-1.11.185-py2.py3-none-any.whl (1.2MB) 100% |████████████████████████████████| 1.2MB 1.1MB/s Collecting colorama&lt;=0.3.7,&gt;=0.2.5 (from awscli) Downloading colorama-0.3.7-py2.py3-none-any.whl Collecting s3transfer&lt;0.2.0,&gt;=0.1.9 (from awscli) Downloading s3transfer-0.1.11-py2.py3-none-any.whl (54kB) 100% |████████████████████████████████| 61kB 6.2MB/s Collecting botocore==1.7.43 (from awscli) Downloading botocore-1.7.43-py2.py3-none-any.whl (3.7MB) 100% |████████████████████████████████| 3.7MB 363kB/s Collecting docutils&gt;=0.10 (from awscli) Downloading docutils-0.14-py2-none-any.whl (543kB) 100% |████████████████████████████████| 552kB 2.4MB/s Collecting rsa&lt;=3.5.0,&gt;=3.1.2 (from awscli) Downloading rsa-3.4.2-py2.py3-none-any.whl (46kB) 100% |████████████████████████████████| 51kB 5.9MB/s Collecting PyYAML&lt;=3.12,&gt;=3.10 (from awscli) Downloading PyYAML-3.12.tar.gz (253kB) 100% |████████████████████████████████| 256kB 3.5MB/s Collecting futures&lt;4.0.0,&gt;=2.2.0; python_version == &#34;2.6&#34; or python_version == &#34;2.7&#34; (from s3transfer&lt;0.2.0,&gt;=0.1.9-&gt;awscli) Downloading futures-3.1.1-py2-none-any.whl Collecting jmespath&lt;1.0.0,&gt;=0.7.1 (from botocore==1.7.43-&gt;awscli) Downloading jmespath-0.9.3-py2.py3-none-any.whl Collecting python-dateutil&lt;3.0.0,&gt;=2.1 (from botocore==1.7.43-&gt;awscli) Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB) 100% |████████████████████████████████| 194kB 4.5MB/s Collecting pyasn1&gt;=0.1.3 (from rsa&lt;=3.5.0,&gt;=3.1.2-&gt;awscli) Downloading pyasn1-0.3.7-py2.py3-none-any.whl (63kB) 100% |████████████████████████████████| 71kB 7.8MB/s Collecting six&gt;=1.5 (from python-dateutil&lt;3.0.0,&gt;=2.1-&gt;botocore==1.7.43-&gt;awscli) Downloading six-1.11.0-py2.py3-none-any.whl Installing collected packages: colorama, futures, jmespath, docutils, six, python-dateutil, botocore, s3transfer, pyasn1, rsa, PyYAML, awscli Running setup.py install for PyYAML ... done Successfully installed PyYAML-3.12 awscli-1.11.185 botocore-1.7.43 colorama-0.3.7 docutils-0.14 futures-3.1.1 jmespath-0.9.3 pyasn1-0.3.7 python-dateutil-2.6.1 rsa-3.4.2 s3transfer-0.1.11 six-1.11.0 ➜ ~ aws --version zsh: command not found: aws ➜ ~ sw_vers ProductName: Mac OS X ProductVersion: 10.13.1 BuildVersion: 17B48 This does not work.">
+Unsuccesfull path - keep the Python 2.7 # ➜ ~ pip --version zsh: command not found: pip ➜ ~ sudo easy_install pip Password: Searching for pip Reading https://pypi.python.org/simple/pip/ Best match: pip 9.0.1 Downloading https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9 Processing pip-9.0.1.tar.gz Writing /tmp/easy_install-QnLLJp/pip-9.0.1/setup.cfg Running pip-9.0.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-QnLLJp/pip-9.0.1/egg-dist-tmp-03hMh7 /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: &#39;python_requires&#39; warnings.warn(msg) warning: no previously-included files found matching &#39;.coveragerc&#39; warning: no previously-included files found matching &#39;.mailmap&#39; warning: no previously-included files found matching &#39;.travis.yml&#39; warning: no previously-included files found matching &#39;.landscape.yml&#39; warning: no previously-included files found matching &#39;pip/_vendor/Makefile&#39; warning: no previously-included files found matching &#39;tox.ini&#39; warning: no previously-included files found matching &#39;dev-requirements.txt&#39; warning: no previously-included files found matching &#39;appveyor.yml&#39; no previously-included directories found matching &#39;.github&#39; no previously-included directories found matching &#39;.travis&#39; no previously-included directories found matching &#39;docs/_build&#39; no previously-included directories found matching &#39;contrib&#39; no previously-included directories found matching &#39;tasks&#39; no previously-included directories found matching &#39;tests&#39; creating /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Extracting pip-9.0.1-py2.7.egg to /Library/Python/2.7/site-packages Adding pip 9.0.1 to easy-install.pth file Installing pip script to /usr/local/bin Installing pip2.7 script to /usr/local/bin Installing pip2 script to /usr/local/bin Installed /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Processing dependencies for pip Finished processing dependencies for pip ➜ ~ pip --version pip 9.0.1 from /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7) ➜ ~ pip install awscli --upgrade --user Collecting awscli Downloading awscli-1.11.185-py2.py3-none-any.whl (1.2MB) 100% |████████████████████████████████| 1.2MB 1.1MB/s Collecting colorama&lt;=0.3.7,&gt;=0.2.5 (from awscli) Downloading colorama-0.3.7-py2.py3-none-any.whl Collecting s3transfer&lt;0.2.0,&gt;=0.1.9 (from awscli) Downloading s3transfer-0.1.11-py2.py3-none-any.whl (54kB) 100% |████████████████████████████████| 61kB 6.2MB/s Collecting botocore==1.7.43 (from awscli) Downloading botocore-1.7.43-py2.py3-none-any.whl (3.7MB) 100% |████████████████████████████████| 3.7MB 363kB/s Collecting docutils&gt;=0.10 (from awscli) Downloading docutils-0.14-py2-none-any.whl (543kB) 100% |████████████████████████████████| 552kB 2.4MB/s Collecting rsa&lt;=3.5.0,&gt;=3.1.2 (from awscli) Downloading rsa-3.4.2-py2.py3-none-any.whl (46kB) 100% |████████████████████████████████| 51kB 5.9MB/s Collecting PyYAML&lt;=3.12,&gt;=3.10 (from awscli) Downloading PyYAML-3.12.tar.gz (253kB) 100% |████████████████████████████████| 256kB 3.5MB/s Collecting futures&lt;4.0.0,&gt;=2.2.0; python_version == &#34;2.6&#34; or python_version == &#34;2.7&#34; (from s3transfer&lt;0.2.0,&gt;=0.1.9-&gt;awscli) Downloading futures-3.1.1-py2-none-any.whl Collecting jmespath&lt;1.0.0,&gt;=0.7.1 (from botocore==1.7.43-&gt;awscli) Downloading jmespath-0.9.3-py2.py3-none-any.whl Collecting python-dateutil&lt;3.0.0,&gt;=2.1 (from botocore==1.7.43-&gt;awscli) Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB) 100% |████████████████████████████████| 194kB 4.5MB/s Collecting pyasn1&gt;=0.1.3 (from rsa&lt;=3.5.0,&gt;=3.1.2-&gt;awscli) Downloading pyasn1-0.3.7-py2.py3-none-any.whl (63kB) 100% |████████████████████████████████| 71kB 7.8MB/s Collecting six&gt;=1.5 (from python-dateutil&lt;3.0.0,&gt;=2.1-&gt;botocore==1.7.43-&gt;awscli) Downloading six-1.11.0-py2.py3-none-any.whl Installing collected packages: colorama, futures, jmespath, docutils, six, python-dateutil, botocore, s3transfer, pyasn1, rsa, PyYAML, awscli Running setup.py install for PyYAML ... done Successfully installed PyYAML-3.12 awscli-1.11.185 botocore-1.7.43 colorama-0.3.7 docutils-0.14 futures-3.1.1 jmespath-0.9.3 pyasn1-0.3.7 python-dateutil-2.6.1 rsa-3.4.2 s3transfer-0.1.11 six-1.11.0 ➜ ~ aws --version zsh: command not found: aws ➜ ~ sw_vers ProductName: Mac OS X ProductVersion: 10.13.1 BuildVersion: 17B48 This does not work.">
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
@@ -57,214 +112,955 @@ Unsuccesfull path - keep the Python 2.7 ➜ ~ pip --version zsh: command not fou
 		<meta property="article:tag" content="Cloud">
 		<meta property="article:tag" content="Commandline">
 
-	<meta itemprop="name" content="Install AWS CLI on Mac">
-	<meta itemprop="description" content="Install AWS CLI on Mac The Mac comes with Python 2.7 and no pip
-This guide recommends upgrade to Python 3 which I want to avoid: http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html
-Unsuccesfull path - keep the Python 2.7 ➜ ~ pip --version zsh: command not found: pip ➜ ~ sudo easy_install pip Password: Searching for pip Reading https://pypi.python.org/simple/pip/ Best match: pip 9.0.1 Downloading https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9 Processing pip-9.0.1.tar.gz Writing /tmp/easy_install-QnLLJp/pip-9.0.1/setup.cfg Running pip-9.0.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-QnLLJp/pip-9.0.1/egg-dist-tmp-03hMh7 /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: &#39;python_requires&#39; warnings.warn(msg) warning: no previously-included files found matching &#39;.coveragerc&#39; warning: no previously-included files found matching &#39;.mailmap&#39; warning: no previously-included files found matching &#39;.travis.yml&#39; warning: no previously-included files found matching &#39;.landscape.yml&#39; warning: no previously-included files found matching &#39;pip/_vendor/Makefile&#39; warning: no previously-included files found matching &#39;tox.ini&#39; warning: no previously-included files found matching &#39;dev-requirements.txt&#39; warning: no previously-included files found matching &#39;appveyor.yml&#39; no previously-included directories found matching &#39;.github&#39; no previously-included directories found matching &#39;.travis&#39; no previously-included directories found matching &#39;docs/_build&#39; no previously-included directories found matching &#39;contrib&#39; no previously-included directories found matching &#39;tasks&#39; no previously-included directories found matching &#39;tests&#39; creating /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Extracting pip-9.0.1-py2.7.egg to /Library/Python/2.7/site-packages Adding pip 9.0.1 to easy-install.pth file Installing pip script to /usr/local/bin Installing pip2.7 script to /usr/local/bin Installing pip2 script to /usr/local/bin Installed /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Processing dependencies for pip Finished processing dependencies for pip ➜ ~ pip --version pip 9.0.1 from /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7) ➜ ~ pip install awscli --upgrade --user Collecting awscli Downloading awscli-1.11.185-py2.py3-none-any.whl (1.2MB) 100% |████████████████████████████████| 1.2MB 1.1MB/s Collecting colorama&lt;=0.3.7,&gt;=0.2.5 (from awscli) Downloading colorama-0.3.7-py2.py3-none-any.whl Collecting s3transfer&lt;0.2.0,&gt;=0.1.9 (from awscli) Downloading s3transfer-0.1.11-py2.py3-none-any.whl (54kB) 100% |████████████████████████████████| 61kB 6.2MB/s Collecting botocore==1.7.43 (from awscli) Downloading botocore-1.7.43-py2.py3-none-any.whl (3.7MB) 100% |████████████████████████████████| 3.7MB 363kB/s Collecting docutils&gt;=0.10 (from awscli) Downloading docutils-0.14-py2-none-any.whl (543kB) 100% |████████████████████████████████| 552kB 2.4MB/s Collecting rsa&lt;=3.5.0,&gt;=3.1.2 (from awscli) Downloading rsa-3.4.2-py2.py3-none-any.whl (46kB) 100% |████████████████████████████████| 51kB 5.9MB/s Collecting PyYAML&lt;=3.12,&gt;=3.10 (from awscli) Downloading PyYAML-3.12.tar.gz (253kB) 100% |████████████████████████████████| 256kB 3.5MB/s Collecting futures&lt;4.0.0,&gt;=2.2.0; python_version == &#34;2.6&#34; or python_version == &#34;2.7&#34; (from s3transfer&lt;0.2.0,&gt;=0.1.9-&gt;awscli) Downloading futures-3.1.1-py2-none-any.whl Collecting jmespath&lt;1.0.0,&gt;=0.7.1 (from botocore==1.7.43-&gt;awscli) Downloading jmespath-0.9.3-py2.py3-none-any.whl Collecting python-dateutil&lt;3.0.0,&gt;=2.1 (from botocore==1.7.43-&gt;awscli) Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB) 100% |████████████████████████████████| 194kB 4.5MB/s Collecting pyasn1&gt;=0.1.3 (from rsa&lt;=3.5.0,&gt;=3.1.2-&gt;awscli) Downloading pyasn1-0.3.7-py2.py3-none-any.whl (63kB) 100% |████████████████████████████████| 71kB 7.8MB/s Collecting six&gt;=1.5 (from python-dateutil&lt;3.0.0,&gt;=2.1-&gt;botocore==1.7.43-&gt;awscli) Downloading six-1.11.0-py2.py3-none-any.whl Installing collected packages: colorama, futures, jmespath, docutils, six, python-dateutil, botocore, s3transfer, pyasn1, rsa, PyYAML, awscli Running setup.py install for PyYAML ... done Successfully installed PyYAML-3.12 awscli-1.11.185 botocore-1.7.43 colorama-0.3.7 docutils-0.14 futures-3.1.1 jmespath-0.9.3 pyasn1-0.3.7 python-dateutil-2.6.1 rsa-3.4.2 s3transfer-0.1.11 six-1.11.0 ➜ ~ aws --version zsh: command not found: aws ➜ ~ sw_vers ProductName: Mac OS X ProductVersion: 10.13.1 BuildVersion: 17B48 This does not work.">
-	<meta itemprop="datePublished" content="2017-11-14T14:22:48+08:00">
-	<meta itemprop="dateModified" content="2017-11-14T14:22:48+08:00">
-	<meta itemprop="wordCount" content="1226">
-	<meta itemprop="keywords" content="Aws,Cloud,Commandline">
+  
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Install AWS CLI on Mac">
-	<meta name="twitter:description" content="Install AWS CLI on Mac The Mac comes with Python 2.7 and no pip
+	<meta name="twitter:description" content="Install AWS CLI on Mac # The Mac comes with Python 2.7 and no pip
 This guide recommends upgrade to Python 3 which I want to avoid: http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html
-Unsuccesfull path - keep the Python 2.7 ➜ ~ pip --version zsh: command not found: pip ➜ ~ sudo easy_install pip Password: Searching for pip Reading https://pypi.python.org/simple/pip/ Best match: pip 9.0.1 Downloading https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9 Processing pip-9.0.1.tar.gz Writing /tmp/easy_install-QnLLJp/pip-9.0.1/setup.cfg Running pip-9.0.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-QnLLJp/pip-9.0.1/egg-dist-tmp-03hMh7 /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: &#39;python_requires&#39; warnings.warn(msg) warning: no previously-included files found matching &#39;.coveragerc&#39; warning: no previously-included files found matching &#39;.mailmap&#39; warning: no previously-included files found matching &#39;.travis.yml&#39; warning: no previously-included files found matching &#39;.landscape.yml&#39; warning: no previously-included files found matching &#39;pip/_vendor/Makefile&#39; warning: no previously-included files found matching &#39;tox.ini&#39; warning: no previously-included files found matching &#39;dev-requirements.txt&#39; warning: no previously-included files found matching &#39;appveyor.yml&#39; no previously-included directories found matching &#39;.github&#39; no previously-included directories found matching &#39;.travis&#39; no previously-included directories found matching &#39;docs/_build&#39; no previously-included directories found matching &#39;contrib&#39; no previously-included directories found matching &#39;tasks&#39; no previously-included directories found matching &#39;tests&#39; creating /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Extracting pip-9.0.1-py2.7.egg to /Library/Python/2.7/site-packages Adding pip 9.0.1 to easy-install.pth file Installing pip script to /usr/local/bin Installing pip2.7 script to /usr/local/bin Installing pip2 script to /usr/local/bin Installed /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Processing dependencies for pip Finished processing dependencies for pip ➜ ~ pip --version pip 9.0.1 from /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7) ➜ ~ pip install awscli --upgrade --user Collecting awscli Downloading awscli-1.11.185-py2.py3-none-any.whl (1.2MB) 100% |████████████████████████████████| 1.2MB 1.1MB/s Collecting colorama&lt;=0.3.7,&gt;=0.2.5 (from awscli) Downloading colorama-0.3.7-py2.py3-none-any.whl Collecting s3transfer&lt;0.2.0,&gt;=0.1.9 (from awscli) Downloading s3transfer-0.1.11-py2.py3-none-any.whl (54kB) 100% |████████████████████████████████| 61kB 6.2MB/s Collecting botocore==1.7.43 (from awscli) Downloading botocore-1.7.43-py2.py3-none-any.whl (3.7MB) 100% |████████████████████████████████| 3.7MB 363kB/s Collecting docutils&gt;=0.10 (from awscli) Downloading docutils-0.14-py2-none-any.whl (543kB) 100% |████████████████████████████████| 552kB 2.4MB/s Collecting rsa&lt;=3.5.0,&gt;=3.1.2 (from awscli) Downloading rsa-3.4.2-py2.py3-none-any.whl (46kB) 100% |████████████████████████████████| 51kB 5.9MB/s Collecting PyYAML&lt;=3.12,&gt;=3.10 (from awscli) Downloading PyYAML-3.12.tar.gz (253kB) 100% |████████████████████████████████| 256kB 3.5MB/s Collecting futures&lt;4.0.0,&gt;=2.2.0; python_version == &#34;2.6&#34; or python_version == &#34;2.7&#34; (from s3transfer&lt;0.2.0,&gt;=0.1.9-&gt;awscli) Downloading futures-3.1.1-py2-none-any.whl Collecting jmespath&lt;1.0.0,&gt;=0.7.1 (from botocore==1.7.43-&gt;awscli) Downloading jmespath-0.9.3-py2.py3-none-any.whl Collecting python-dateutil&lt;3.0.0,&gt;=2.1 (from botocore==1.7.43-&gt;awscli) Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB) 100% |████████████████████████████████| 194kB 4.5MB/s Collecting pyasn1&gt;=0.1.3 (from rsa&lt;=3.5.0,&gt;=3.1.2-&gt;awscli) Downloading pyasn1-0.3.7-py2.py3-none-any.whl (63kB) 100% |████████████████████████████████| 71kB 7.8MB/s Collecting six&gt;=1.5 (from python-dateutil&lt;3.0.0,&gt;=2.1-&gt;botocore==1.7.43-&gt;awscli) Downloading six-1.11.0-py2.py3-none-any.whl Installing collected packages: colorama, futures, jmespath, docutils, six, python-dateutil, botocore, s3transfer, pyasn1, rsa, PyYAML, awscli Running setup.py install for PyYAML ... done Successfully installed PyYAML-3.12 awscli-1.11.185 botocore-1.7.43 colorama-0.3.7 docutils-0.14 futures-3.1.1 jmespath-0.9.3 pyasn1-0.3.7 python-dateutil-2.6.1 rsa-3.4.2 s3transfer-0.1.11 six-1.11.0 ➜ ~ aws --version zsh: command not found: aws ➜ ~ sw_vers ProductName: Mac OS X ProductVersion: 10.13.1 BuildVersion: 17B48 This does not work.">
+Unsuccesfull path - keep the Python 2.7 # ➜ ~ pip --version zsh: command not found: pip ➜ ~ sudo easy_install pip Password: Searching for pip Reading https://pypi.python.org/simple/pip/ Best match: pip 9.0.1 Downloading https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9 Processing pip-9.0.1.tar.gz Writing /tmp/easy_install-QnLLJp/pip-9.0.1/setup.cfg Running pip-9.0.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-QnLLJp/pip-9.0.1/egg-dist-tmp-03hMh7 /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: &#39;python_requires&#39; warnings.warn(msg) warning: no previously-included files found matching &#39;.coveragerc&#39; warning: no previously-included files found matching &#39;.mailmap&#39; warning: no previously-included files found matching &#39;.travis.yml&#39; warning: no previously-included files found matching &#39;.landscape.yml&#39; warning: no previously-included files found matching &#39;pip/_vendor/Makefile&#39; warning: no previously-included files found matching &#39;tox.ini&#39; warning: no previously-included files found matching &#39;dev-requirements.txt&#39; warning: no previously-included files found matching &#39;appveyor.yml&#39; no previously-included directories found matching &#39;.github&#39; no previously-included directories found matching &#39;.travis&#39; no previously-included directories found matching &#39;docs/_build&#39; no previously-included directories found matching &#39;contrib&#39; no previously-included directories found matching &#39;tasks&#39; no previously-included directories found matching &#39;tests&#39; creating /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Extracting pip-9.0.1-py2.7.egg to /Library/Python/2.7/site-packages Adding pip 9.0.1 to easy-install.pth file Installing pip script to /usr/local/bin Installing pip2.7 script to /usr/local/bin Installing pip2 script to /usr/local/bin Installed /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Processing dependencies for pip Finished processing dependencies for pip ➜ ~ pip --version pip 9.0.1 from /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7) ➜ ~ pip install awscli --upgrade --user Collecting awscli Downloading awscli-1.11.185-py2.py3-none-any.whl (1.2MB) 100% |████████████████████████████████| 1.2MB 1.1MB/s Collecting colorama&lt;=0.3.7,&gt;=0.2.5 (from awscli) Downloading colorama-0.3.7-py2.py3-none-any.whl Collecting s3transfer&lt;0.2.0,&gt;=0.1.9 (from awscli) Downloading s3transfer-0.1.11-py2.py3-none-any.whl (54kB) 100% |████████████████████████████████| 61kB 6.2MB/s Collecting botocore==1.7.43 (from awscli) Downloading botocore-1.7.43-py2.py3-none-any.whl (3.7MB) 100% |████████████████████████████████| 3.7MB 363kB/s Collecting docutils&gt;=0.10 (from awscli) Downloading docutils-0.14-py2-none-any.whl (543kB) 100% |████████████████████████████████| 552kB 2.4MB/s Collecting rsa&lt;=3.5.0,&gt;=3.1.2 (from awscli) Downloading rsa-3.4.2-py2.py3-none-any.whl (46kB) 100% |████████████████████████████████| 51kB 5.9MB/s Collecting PyYAML&lt;=3.12,&gt;=3.10 (from awscli) Downloading PyYAML-3.12.tar.gz (253kB) 100% |████████████████████████████████| 256kB 3.5MB/s Collecting futures&lt;4.0.0,&gt;=2.2.0; python_version == &#34;2.6&#34; or python_version == &#34;2.7&#34; (from s3transfer&lt;0.2.0,&gt;=0.1.9-&gt;awscli) Downloading futures-3.1.1-py2-none-any.whl Collecting jmespath&lt;1.0.0,&gt;=0.7.1 (from botocore==1.7.43-&gt;awscli) Downloading jmespath-0.9.3-py2.py3-none-any.whl Collecting python-dateutil&lt;3.0.0,&gt;=2.1 (from botocore==1.7.43-&gt;awscli) Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB) 100% |████████████████████████████████| 194kB 4.5MB/s Collecting pyasn1&gt;=0.1.3 (from rsa&lt;=3.5.0,&gt;=3.1.2-&gt;awscli) Downloading pyasn1-0.3.7-py2.py3-none-any.whl (63kB) 100% |████████████████████████████████| 71kB 7.8MB/s Collecting six&gt;=1.5 (from python-dateutil&lt;3.0.0,&gt;=2.1-&gt;botocore==1.7.43-&gt;awscli) Downloading six-1.11.0-py2.py3-none-any.whl Installing collected packages: colorama, futures, jmespath, docutils, six, python-dateutil, botocore, s3transfer, pyasn1, rsa, PyYAML, awscli Running setup.py install for PyYAML ... done Successfully installed PyYAML-3.12 awscli-1.11.185 botocore-1.7.43 colorama-0.3.7 docutils-0.14 futures-3.1.1 jmespath-0.9.3 pyasn1-0.3.7 python-dateutil-2.6.1 rsa-3.4.2 s3transfer-0.1.11 six-1.11.0 ➜ ~ aws --version zsh: command not found: aws ➜ ~ sw_vers ProductName: Mac OS X ProductVersion: 10.13.1 BuildVersion: 17B48 This does not work.">
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+  
+  
+  
+  
+  
+  
 
-</head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Miro&#39;s World</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/posts/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">About</li>
-      </a>
-  </ul>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.109d05baab980c4b552cffcf3c585559d3979bc7da97727e30e07886dec2dffbcf308e213e7e92a19c9c1641392f2901de07dcd784b311ec17dfaa88200741d9.css"
+    integrity="sha512-EJ0FuquYDEtVLP/PPFhVWdOXm8fal3J&#43;MOB4ht7C3/vPMI4hPn6SoZycFkE5LykB3gfc14SzEewX36qIIAdB2Q==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.764f412f07ea715415e9123a5eb5f355429502d0b760146b9bcab854bc50829dee14488594acd935dfcdc6a0fe7e6d14d7bee914ebb9272b251aa238cb52c4dd.js"
+    integrity="sha512-dk9BLwfqcVQV6RI6XrXzVUKVAtC3YBRrm8q4VLxQgp3uFEiFlKzZNd/NxqD&#43;fm0U177pFOu5JyslGqI4y1LE3Q=="></script>
+  
+
+
+  
+  
+  
+  
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+    
+    <script defer src="/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js" integrity="sha512-Z7cez37szjhnOpIkTR/9k&#43;218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script>
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.42ef5f784093496e25f94d15338b6c70dc981b8b54837a408ae9cc81222241540a0d2efec4410f1854208aa3b3609c9af7a33b83656eecd42187a1f9c6f7b459.js"
+      integrity="sha512-Qu9feECTSW4l&#43;U0VM4tscNyYG4tUg3pAiunMgSIiQVQKDS7&#43;xEEPGFQgiqOzYJya96M7g2Vu7NQhh6H5xve0WQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
 
   
 
 
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Install AWS CLI on Mac",
+    "headline": "Install AWS CLI on Mac",
+    
+    "inLanguage": "en",
+    "url" : "https://miroadamy.com/posts/2017-11-14-install-aws-cli-mac/",
+    "author" : {
+      "@type": "Person",
+      "name": "Miro Adamy",
+      "sameAs": ["https://www.linkedin.com/in/miroadamy/", "https://stackoverflow.com/users/369692/miro-a", "https://github.com/miroadamy", "https://gitlab.com/miro.adamy", "https://twitter.com/miroadamy", "https://www.facebook.com/miro.adamy", "https://www.instagram.com/miro.adamy/?hl=sk"]
+    },
+    "copyrightYear": "2017",
+    "dateCreated": "2017-11-14T14:22:48\u002b08:00",
+    "datePublished": "2017-11-14T14:22:48\u002b08:00",
+    
+    "dateModified": "2017-11-14T14:22:48\u002b08:00",
+    
+    "keywords": ["aws","cloud","commandline"],
+    
+    "mainEntityOfPage": "https://miroadamy.com/posts/2017-11-14-install-aws-cli-mac/",
+    "wordCount":  1229 
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    <header>
+      
+      
+        <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Miro&rsquo;s World
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="Main menu" class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Archives"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Archives
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Categories"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Categories
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Switch to dark appearance"
+        type="button"
+        class="text-sm bf-icon-color-hover"
+        title="Switch to dark appearance">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd
+        id="search-shortcut-hint"
+        class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400"
+        aria-hidden="true">
+        ⌘K
+      </kbd>
+    </button>
+  
 </nav>
 
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">Miro&#39;s World</a>
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row mobile-menu-fullscreen relative flex items-center h-14 gap-4">
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Switch to dark appearance"
+      title="Switch to dark appearance"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label
+      for="mobile-menu-toggle"
+      tabindex="0"
+      role="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu-dialog"
+      aria-label="Main menu"
+      class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      id="mobile-menu-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Main menu"
+      style="scrollbar-gutter: stable;"
+      class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100
+      
+        fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99
+      
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        tabindex="0"
+        role="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu-dialog"
+        class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only">Close menu</span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav
+        aria-label="Mobile menu"
+        class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/"
+          aria-label="Home"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Home
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/posts/"
+          aria-label="Archives"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Archives
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/tags/"
+          aria-label="Tags"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Tags
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/categories/"
+          aria-label="Categories"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Categories
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/about/"
+          aria-label="About"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="About" class="text-2xl font-bold tracking-tight">
+            About
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
 </div>
 
 
 
 
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/posts/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">About</a>
-      </li>
-  </ul>
-</nav>
 
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+      
     </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">Install AWS CLI on Mac</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2017-11-14 </span>
-        <div class="post-category">
-            <a href="/categories/devops/"> DevOps </a>
-            </div>
-          <span class="more-meta"> 1226 words </span>
-          <span class="more-meta"> 6 mins read </span>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
         
+  
+  
+  
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Install AWS CLI on Mac
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2017-11-14T14:22:48&#43;08:00">November 14, 2017</time><span class="px-2 text-primary-500">&middot;</span><span>1229 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/devops/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    DevOps
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/aws/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Aws
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/cloud/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Cloud
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/commandline/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Commandline
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
       </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+  
+
+  
+
+      
     </header>
 
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents" aria-label="Table of Contents">
   <ul>
     <li><a href="#unsuccesfull-path---keep-the-python-27">Unsuccesfull path - keep the Python 2.7</a></li>
     <li><a href="#simple-and-working---brew-to-the-rescue">Simple and working - brew to the rescue</a></li>
   </ul>
 </nav>
   </div>
-</div>
-    <div class="post-content">
-      <h1 id="install-aws-cli-on-mac">Install AWS CLI on Mac</h1>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContentsMobile" aria-label="Table of Contents">
+  <ul>
+    <li><a href="#unsuccesfull-path---keep-the-python-27">Unsuccesfull path - keep the Python 2.7</a></li>
+    <li><a href="#simple-and-working---brew-to-the-rescue">Simple and working - brew to the rescue</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h1 class="relative group">Install AWS CLI on Mac
+    <div id="install-aws-cli-on-mac" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#install-aws-cli-on-mac" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
 <p>The Mac comes with Python 2.7 and no pip</p>
-<p>This guide recommends upgrade to Python 3 which I want to avoid: <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html">http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html</a></p>
-<h2 id="unsuccesfull-path---keep-the-python-27">Unsuccesfull path - keep the Python 2.7</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span> <span class="n">pip</span> <span class="o">--</span><span class="n">version</span>
-</span></span><span class="line"><span class="cl"><span class="n">zsh</span><span class="p">:</span> <span class="n">command</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span> <span class="n">pip</span>
+<p>This guide recommends upgrade to Python 3 which I want to avoid: <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html"  target="_blank" rel="noreferrer">http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html</a></p>
+
+<h2 class="relative group">Unsuccesfull path - keep the Python 2.7
+    <div id="unsuccesfull-path---keep-the-python-27" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#unsuccesfull-path---keep-the-python-27" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">➜  ~ pip --version
+</span></span><span class="line"><span class="cl">zsh: command not found: pip
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span> <span class="n">sudo</span> <span class="n">easy_install</span> <span class="n">pip</span>
-</span></span><span class="line"><span class="cl"><span class="n">Password</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl"><span class="n">Searching</span> <span class="k">for</span> <span class="n">pip</span>
-</span></span><span class="line"><span class="cl"><span class="n">Reading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">simple</span><span class="o">/</span><span class="n">pip</span><span class="o">/</span>
-</span></span><span class="line"><span class="cl"><span class="n">Best</span> <span class="n">match</span><span class="p">:</span> <span class="n">pip</span> <span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl"><span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="n">b6</span><span class="o">/</span><span class="n">abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447</span><span class="o">/</span><span class="n">pip</span><span class="o">-</span><span class="mf">9.0</span><span class="o">.</span><span class="mf">1.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span><span class="c1">#md5=35f01da33009719497f01a4ba69d63c9</span>
-</span></span><span class="line"><span class="cl"><span class="n">Processing</span> <span class="n">pip</span><span class="o">-</span><span class="mf">9.0</span><span class="o">.</span><span class="mf">1.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-</span></span><span class="line"><span class="cl"><span class="n">Writing</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">easy_install</span><span class="o">-</span><span class="n">QnLLJp</span><span class="o">/</span><span class="n">pip</span><span class="o">-</span><span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">cfg</span>
-</span></span><span class="line"><span class="cl"><span class="n">Running</span> <span class="n">pip</span><span class="o">-</span><span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">q</span> <span class="n">bdist_egg</span> <span class="o">--</span><span class="n">dist</span><span class="o">-</span><span class="n">dir</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">easy_install</span><span class="o">-</span><span class="n">QnLLJp</span><span class="o">/</span><span class="n">pip</span><span class="o">-</span><span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span><span class="o">/</span><span class="n">egg</span><span class="o">-</span><span class="n">dist</span><span class="o">-</span><span class="n">tmp</span><span class="o">-</span><span class="mi">03</span><span class="n">hMh7</span>
-</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">System</span><span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Frameworks</span><span class="o">/</span><span class="n">Python</span><span class="o">.</span><span class="n">framework</span><span class="o">/</span><span class="n">Versions</span><span class="o">/</span><span class="mf">2.7</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python2</span><span class="o">.</span><span class="mi">7</span><span class="o">/</span><span class="n">distutils</span><span class="o">/</span><span class="n">dist</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">267</span><span class="p">:</span> <span class="n">UserWarning</span><span class="p">:</span> <span class="n">Unknown</span> <span class="n">distribution</span> <span class="n">option</span><span class="p">:</span> <span class="s1">&#39;python_requires&#39;</span>
-</span></span><span class="line"><span class="cl">  <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">warning</span><span class="p">:</span> <span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">files</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;.coveragerc&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">warning</span><span class="p">:</span> <span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">files</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;.mailmap&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">warning</span><span class="p">:</span> <span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">files</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;.travis.yml&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">warning</span><span class="p">:</span> <span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">files</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;.landscape.yml&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">warning</span><span class="p">:</span> <span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">files</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;pip/_vendor/Makefile&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">warning</span><span class="p">:</span> <span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">files</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;tox.ini&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">warning</span><span class="p">:</span> <span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">files</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;dev-requirements.txt&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">warning</span><span class="p">:</span> <span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">files</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;appveyor.yml&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">directories</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;.github&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">directories</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;.travis&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">directories</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;docs/_build&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">directories</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;contrib&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">directories</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;tasks&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">no</span> <span class="n">previously</span><span class="o">-</span><span class="n">included</span> <span class="n">directories</span> <span class="n">found</span> <span class="n">matching</span> <span class="s1">&#39;tests&#39;</span>
-</span></span><span class="line"><span class="cl"><span class="n">creating</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">2.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pip</span><span class="o">-</span><span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="mf">7.</span><span class="n">egg</span>
-</span></span><span class="line"><span class="cl"><span class="n">Extracting</span> <span class="n">pip</span><span class="o">-</span><span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="mf">7.</span><span class="n">egg</span> <span class="n">to</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">2.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span>
-</span></span><span class="line"><span class="cl"><span class="n">Adding</span> <span class="n">pip</span> <span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span> <span class="n">to</span> <span class="n">easy</span><span class="o">-</span><span class="n">install</span><span class="o">.</span><span class="n">pth</span> <span class="n">file</span>
-</span></span><span class="line"><span class="cl"><span class="n">Installing</span> <span class="n">pip</span> <span class="n">script</span> <span class="n">to</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span>
-</span></span><span class="line"><span class="cl"><span class="n">Installing</span> <span class="n">pip2</span><span class="o">.</span><span class="mi">7</span> <span class="n">script</span> <span class="n">to</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span>
-</span></span><span class="line"><span class="cl"><span class="n">Installing</span> <span class="n">pip2</span> <span class="n">script</span> <span class="n">to</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span>
+</span></span><span class="line"><span class="cl">➜  ~ sudo easy_install pip
+</span></span><span class="line"><span class="cl">Password:
+</span></span><span class="line"><span class="cl">Searching for pip
+</span></span><span class="line"><span class="cl">Reading https://pypi.python.org/simple/pip/
+</span></span><span class="line"><span class="cl">Best match: pip 9.0.1
+</span></span><span class="line"><span class="cl">Downloading https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9
+</span></span><span class="line"><span class="cl">Processing pip-9.0.1.tar.gz
+</span></span><span class="line"><span class="cl">Writing /tmp/easy_install-QnLLJp/pip-9.0.1/setup.cfg
+</span></span><span class="line"><span class="cl">Running pip-9.0.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-QnLLJp/pip-9.0.1/egg-dist-tmp-03hMh7
+</span></span><span class="line"><span class="cl">/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: &#39;python_requires&#39;
+</span></span><span class="line"><span class="cl">  warnings.warn(msg)
+</span></span><span class="line"><span class="cl">warning: no previously-included files found matching &#39;.coveragerc&#39;
+</span></span><span class="line"><span class="cl">warning: no previously-included files found matching &#39;.mailmap&#39;
+</span></span><span class="line"><span class="cl">warning: no previously-included files found matching &#39;.travis.yml&#39;
+</span></span><span class="line"><span class="cl">warning: no previously-included files found matching &#39;.landscape.yml&#39;
+</span></span><span class="line"><span class="cl">warning: no previously-included files found matching &#39;pip/_vendor/Makefile&#39;
+</span></span><span class="line"><span class="cl">warning: no previously-included files found matching &#39;tox.ini&#39;
+</span></span><span class="line"><span class="cl">warning: no previously-included files found matching &#39;dev-requirements.txt&#39;
+</span></span><span class="line"><span class="cl">warning: no previously-included files found matching &#39;appveyor.yml&#39;
+</span></span><span class="line"><span class="cl">no previously-included directories found matching &#39;.github&#39;
+</span></span><span class="line"><span class="cl">no previously-included directories found matching &#39;.travis&#39;
+</span></span><span class="line"><span class="cl">no previously-included directories found matching &#39;docs/_build&#39;
+</span></span><span class="line"><span class="cl">no previously-included directories found matching &#39;contrib&#39;
+</span></span><span class="line"><span class="cl">no previously-included directories found matching &#39;tasks&#39;
+</span></span><span class="line"><span class="cl">no previously-included directories found matching &#39;tests&#39;
+</span></span><span class="line"><span class="cl">creating /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg
+</span></span><span class="line"><span class="cl">Extracting pip-9.0.1-py2.7.egg to /Library/Python/2.7/site-packages
+</span></span><span class="line"><span class="cl">Adding pip 9.0.1 to easy-install.pth file
+</span></span><span class="line"><span class="cl">Installing pip script to /usr/local/bin
+</span></span><span class="line"><span class="cl">Installing pip2.7 script to /usr/local/bin
+</span></span><span class="line"><span class="cl">Installing pip2 script to /usr/local/bin
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">Installed</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">2.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pip</span><span class="o">-</span><span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="mf">7.</span><span class="n">egg</span>
-</span></span><span class="line"><span class="cl"><span class="n">Processing</span> <span class="n">dependencies</span> <span class="k">for</span> <span class="n">pip</span>
-</span></span><span class="line"><span class="cl"><span class="n">Finished</span> <span class="n">processing</span> <span class="n">dependencies</span> <span class="k">for</span> <span class="n">pip</span>
+</span></span><span class="line"><span class="cl">Installed /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg
+</span></span><span class="line"><span class="cl">Processing dependencies for pip
+</span></span><span class="line"><span class="cl">Finished processing dependencies for pip
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span> <span class="n">pip</span> <span class="o">--</span><span class="n">version</span>
-</span></span><span class="line"><span class="cl"><span class="n">pip</span> <span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span> <span class="n">from</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">2.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pip</span><span class="o">-</span><span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="mf">7.</span><span class="n">egg</span> <span class="p">(</span><span class="n">python</span> <span class="mf">2.7</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">➜  ~ pip --version
+</span></span><span class="line"><span class="cl">pip 9.0.1 from /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7)
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">awscli</span> <span class="o">--</span><span class="n">upgrade</span> <span class="o">--</span><span class="n">user</span>
-</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">awscli</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Downloading</span> <span class="n">awscli</span><span class="o">-</span><span class="mf">1.11</span><span class="o">.</span><span class="mi">185</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mf">1.2</span><span class="n">MB</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">100</span><span class="o">%</span> <span class="o">|</span><span class="err">████████████████████████████████</span><span class="o">|</span> <span class="mf">1.2</span><span class="n">MB</span> <span class="mf">1.1</span><span class="n">MB</span><span class="o">/</span><span class="n">s</span>
-</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">colorama</span><span class="o">&lt;=</span><span class="mf">0.3</span><span class="o">.</span><span class="mi">7</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">0.2</span><span class="o">.</span><span class="mi">5</span> <span class="p">(</span><span class="n">from</span> <span class="n">awscli</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Downloading</span> <span class="n">colorama</span><span class="o">-</span><span class="mf">0.3</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span>
-</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">s3transfer</span><span class="o">&lt;</span><span class="mf">0.2</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">0.1</span><span class="o">.</span><span class="mi">9</span> <span class="p">(</span><span class="n">from</span> <span class="n">awscli</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Downloading</span> <span class="n">s3transfer</span><span class="o">-</span><span class="mf">0.1</span><span class="o">.</span><span class="mi">11</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mi">54</span><span class="n">kB</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">100</span><span class="o">%</span> <span class="o">|</span><span class="err">████████████████████████████████</span><span class="o">|</span> <span class="mi">61</span><span class="n">kB</span> <span class="mf">6.2</span><span class="n">MB</span><span class="o">/</span><span class="n">s</span>
-</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">botocore</span><span class="o">==</span><span class="mf">1.7</span><span class="o">.</span><span class="mi">43</span> <span class="p">(</span><span class="n">from</span> <span class="n">awscli</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Downloading</span> <span class="n">botocore</span><span class="o">-</span><span class="mf">1.7</span><span class="o">.</span><span class="mi">43</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mf">3.7</span><span class="n">MB</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">100</span><span class="o">%</span> <span class="o">|</span><span class="err">████████████████████████████████</span><span class="o">|</span> <span class="mf">3.7</span><span class="n">MB</span> <span class="mi">363</span><span class="n">kB</span><span class="o">/</span><span class="n">s</span>
-</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">docutils</span><span class="o">&gt;=</span><span class="mf">0.10</span> <span class="p">(</span><span class="n">from</span> <span class="n">awscli</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Downloading</span> <span class="n">docutils</span><span class="o">-</span><span class="mf">0.14</span><span class="o">-</span><span class="n">py2</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mi">543</span><span class="n">kB</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">100</span><span class="o">%</span> <span class="o">|</span><span class="err">████████████████████████████████</span><span class="o">|</span> <span class="mi">552</span><span class="n">kB</span> <span class="mf">2.4</span><span class="n">MB</span><span class="o">/</span><span class="n">s</span>
-</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">rsa</span><span class="o">&lt;=</span><span class="mf">3.5</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">2</span> <span class="p">(</span><span class="n">from</span> <span class="n">awscli</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Downloading</span> <span class="n">rsa</span><span class="o">-</span><span class="mf">3.4</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mi">46</span><span class="n">kB</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">100</span><span class="o">%</span> <span class="o">|</span><span class="err">████████████████████████████████</span><span class="o">|</span> <span class="mi">51</span><span class="n">kB</span> <span class="mf">5.9</span><span class="n">MB</span><span class="o">/</span><span class="n">s</span>
-</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">PyYAML</span><span class="o">&lt;=</span><span class="mf">3.12</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">3.10</span> <span class="p">(</span><span class="n">from</span> <span class="n">awscli</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Downloading</span> <span class="n">PyYAML</span><span class="o">-</span><span class="mf">3.12</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="p">(</span><span class="mi">253</span><span class="n">kB</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">100</span><span class="o">%</span> <span class="o">|</span><span class="err">████████████████████████████████</span><span class="o">|</span> <span class="mi">256</span><span class="n">kB</span> <span class="mf">3.5</span><span class="n">MB</span><span class="o">/</span><span class="n">s</span>
-</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">futures</span><span class="o">&lt;</span><span class="mf">4.0</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">0</span><span class="p">;</span> <span class="n">python_version</span> <span class="o">==</span> <span class="s2">&#34;2.6&#34;</span> <span class="ow">or</span> <span class="n">python_version</span> <span class="o">==</span> <span class="s2">&#34;2.7&#34;</span> <span class="p">(</span><span class="n">from</span> <span class="n">s3transfer</span><span class="o">&lt;</span><span class="mf">0.2</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">0.1</span><span class="o">.</span><span class="mi">9</span><span class="o">-&gt;</span><span class="n">awscli</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Downloading</span> <span class="n">futures</span><span class="o">-</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py2</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span>
-</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">jmespath</span><span class="o">&lt;</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">0.7</span><span class="o">.</span><span class="mi">1</span> <span class="p">(</span><span class="n">from</span> <span class="n">botocore</span><span class="o">==</span><span class="mf">1.7</span><span class="o">.</span><span class="mi">43</span><span class="o">-&gt;</span><span class="n">awscli</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Downloading</span> <span class="n">jmespath</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span>
-</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">python</span><span class="o">-</span><span class="n">dateutil</span><span class="o">&lt;</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">2.1</span> <span class="p">(</span><span class="n">from</span> <span class="n">botocore</span><span class="o">==</span><span class="mf">1.7</span><span class="o">.</span><span class="mi">43</span><span class="o">-&gt;</span><span class="n">awscli</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Downloading</span> <span class="n">python_dateutil</span><span class="o">-</span><span class="mf">2.6</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mi">194</span><span class="n">kB</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">100</span><span class="o">%</span> <span class="o">|</span><span class="err">████████████████████████████████</span><span class="o">|</span> <span class="mi">194</span><span class="n">kB</span> <span class="mf">4.5</span><span class="n">MB</span><span class="o">/</span><span class="n">s</span>
-</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">pyasn1</span><span class="o">&gt;=</span><span class="mf">0.1</span><span class="o">.</span><span class="mi">3</span> <span class="p">(</span><span class="n">from</span> <span class="n">rsa</span><span class="o">&lt;=</span><span class="mf">3.5</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">2</span><span class="o">-&gt;</span><span class="n">awscli</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Downloading</span> <span class="n">pyasn1</span><span class="o">-</span><span class="mf">0.3</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mi">63</span><span class="n">kB</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">100</span><span class="o">%</span> <span class="o">|</span><span class="err">████████████████████████████████</span><span class="o">|</span> <span class="mi">71</span><span class="n">kB</span> <span class="mf">7.8</span><span class="n">MB</span><span class="o">/</span><span class="n">s</span>
-</span></span><span class="line"><span class="cl"><span class="n">Collecting</span> <span class="n">six</span><span class="o">&gt;=</span><span class="mf">1.5</span> <span class="p">(</span><span class="n">from</span> <span class="n">python</span><span class="o">-</span><span class="n">dateutil</span><span class="o">&lt;</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">0</span><span class="p">,</span><span class="o">&gt;=</span><span class="mf">2.1</span><span class="o">-&gt;</span><span class="n">botocore</span><span class="o">==</span><span class="mf">1.7</span><span class="o">.</span><span class="mi">43</span><span class="o">-&gt;</span><span class="n">awscli</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Downloading</span> <span class="n">six</span><span class="o">-</span><span class="mf">1.11</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span>
-</span></span><span class="line"><span class="cl"><span class="n">Installing</span> <span class="n">collected</span> <span class="n">packages</span><span class="p">:</span> <span class="n">colorama</span><span class="p">,</span> <span class="n">futures</span><span class="p">,</span> <span class="n">jmespath</span><span class="p">,</span> <span class="n">docutils</span><span class="p">,</span> <span class="n">six</span><span class="p">,</span> <span class="n">python</span><span class="o">-</span><span class="n">dateutil</span><span class="p">,</span> <span class="n">botocore</span><span class="p">,</span> <span class="n">s3transfer</span><span class="p">,</span> <span class="n">pyasn1</span><span class="p">,</span> <span class="n">rsa</span><span class="p">,</span> <span class="n">PyYAML</span><span class="p">,</span> <span class="n">awscli</span>
-</span></span><span class="line"><span class="cl">  <span class="n">Running</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="k">for</span> <span class="n">PyYAML</span> <span class="o">...</span> <span class="n">done</span>
-</span></span><span class="line"><span class="cl"><span class="n">Successfully</span> <span class="n">installed</span> <span class="n">PyYAML</span><span class="o">-</span><span class="mf">3.12</span> <span class="n">awscli</span><span class="o">-</span><span class="mf">1.11</span><span class="o">.</span><span class="mi">185</span> <span class="n">botocore</span><span class="o">-</span><span class="mf">1.7</span><span class="o">.</span><span class="mi">43</span> <span class="n">colorama</span><span class="o">-</span><span class="mf">0.3</span><span class="o">.</span><span class="mi">7</span> <span class="n">docutils</span><span class="o">-</span><span class="mf">0.14</span> <span class="n">futures</span><span class="o">-</span><span class="mf">3.1</span><span class="o">.</span><span class="mi">1</span> <span class="n">jmespath</span><span class="o">-</span><span class="mf">0.9</span><span class="o">.</span><span class="mi">3</span> <span class="n">pyasn1</span><span class="o">-</span><span class="mf">0.3</span><span class="o">.</span><span class="mi">7</span> <span class="n">python</span><span class="o">-</span><span class="n">dateutil</span><span class="o">-</span><span class="mf">2.6</span><span class="o">.</span><span class="mi">1</span> <span class="n">rsa</span><span class="o">-</span><span class="mf">3.4</span><span class="o">.</span><span class="mi">2</span> <span class="n">s3transfer</span><span class="o">-</span><span class="mf">0.1</span><span class="o">.</span><span class="mi">11</span> <span class="n">six</span><span class="o">-</span><span class="mf">1.11</span><span class="o">.</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl">➜  ~ pip install awscli --upgrade --user
+</span></span><span class="line"><span class="cl">Collecting awscli
+</span></span><span class="line"><span class="cl">  Downloading awscli-1.11.185-py2.py3-none-any.whl (1.2MB)
+</span></span><span class="line"><span class="cl">    100% |████████████████████████████████| 1.2MB 1.1MB/s
+</span></span><span class="line"><span class="cl">Collecting colorama&lt;=0.3.7,&gt;=0.2.5 (from awscli)
+</span></span><span class="line"><span class="cl">  Downloading colorama-0.3.7-py2.py3-none-any.whl
+</span></span><span class="line"><span class="cl">Collecting s3transfer&lt;0.2.0,&gt;=0.1.9 (from awscli)
+</span></span><span class="line"><span class="cl">  Downloading s3transfer-0.1.11-py2.py3-none-any.whl (54kB)
+</span></span><span class="line"><span class="cl">    100% |████████████████████████████████| 61kB 6.2MB/s
+</span></span><span class="line"><span class="cl">Collecting botocore==1.7.43 (from awscli)
+</span></span><span class="line"><span class="cl">  Downloading botocore-1.7.43-py2.py3-none-any.whl (3.7MB)
+</span></span><span class="line"><span class="cl">    100% |████████████████████████████████| 3.7MB 363kB/s
+</span></span><span class="line"><span class="cl">Collecting docutils&gt;=0.10 (from awscli)
+</span></span><span class="line"><span class="cl">  Downloading docutils-0.14-py2-none-any.whl (543kB)
+</span></span><span class="line"><span class="cl">    100% |████████████████████████████████| 552kB 2.4MB/s
+</span></span><span class="line"><span class="cl">Collecting rsa&lt;=3.5.0,&gt;=3.1.2 (from awscli)
+</span></span><span class="line"><span class="cl">  Downloading rsa-3.4.2-py2.py3-none-any.whl (46kB)
+</span></span><span class="line"><span class="cl">    100% |████████████████████████████████| 51kB 5.9MB/s
+</span></span><span class="line"><span class="cl">Collecting PyYAML&lt;=3.12,&gt;=3.10 (from awscli)
+</span></span><span class="line"><span class="cl">  Downloading PyYAML-3.12.tar.gz (253kB)
+</span></span><span class="line"><span class="cl">    100% |████████████████████████████████| 256kB 3.5MB/s
+</span></span><span class="line"><span class="cl">Collecting futures&lt;4.0.0,&gt;=2.2.0; python_version == &#34;2.6&#34; or python_version == &#34;2.7&#34; (from s3transfer&lt;0.2.0,&gt;=0.1.9-&gt;awscli)
+</span></span><span class="line"><span class="cl">  Downloading futures-3.1.1-py2-none-any.whl
+</span></span><span class="line"><span class="cl">Collecting jmespath&lt;1.0.0,&gt;=0.7.1 (from botocore==1.7.43-&gt;awscli)
+</span></span><span class="line"><span class="cl">  Downloading jmespath-0.9.3-py2.py3-none-any.whl
+</span></span><span class="line"><span class="cl">Collecting python-dateutil&lt;3.0.0,&gt;=2.1 (from botocore==1.7.43-&gt;awscli)
+</span></span><span class="line"><span class="cl">  Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB)
+</span></span><span class="line"><span class="cl">    100% |████████████████████████████████| 194kB 4.5MB/s
+</span></span><span class="line"><span class="cl">Collecting pyasn1&gt;=0.1.3 (from rsa&lt;=3.5.0,&gt;=3.1.2-&gt;awscli)
+</span></span><span class="line"><span class="cl">  Downloading pyasn1-0.3.7-py2.py3-none-any.whl (63kB)
+</span></span><span class="line"><span class="cl">    100% |████████████████████████████████| 71kB 7.8MB/s
+</span></span><span class="line"><span class="cl">Collecting six&gt;=1.5 (from python-dateutil&lt;3.0.0,&gt;=2.1-&gt;botocore==1.7.43-&gt;awscli)
+</span></span><span class="line"><span class="cl">  Downloading six-1.11.0-py2.py3-none-any.whl
+</span></span><span class="line"><span class="cl">Installing collected packages: colorama, futures, jmespath, docutils, six, python-dateutil, botocore, s3transfer, pyasn1, rsa, PyYAML, awscli
+</span></span><span class="line"><span class="cl">  Running setup.py install for PyYAML ... done
+</span></span><span class="line"><span class="cl">Successfully installed PyYAML-3.12 awscli-1.11.185 botocore-1.7.43 colorama-0.3.7 docutils-0.14 futures-3.1.1 jmespath-0.9.3 pyasn1-0.3.7 python-dateutil-2.6.1 rsa-3.4.2 s3transfer-0.1.11 six-1.11.0
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span> <span class="n">aws</span> <span class="o">--</span><span class="n">version</span>
-</span></span><span class="line"><span class="cl"><span class="n">zsh</span><span class="p">:</span> <span class="n">command</span> <span class="ow">not</span> <span class="n">found</span><span class="p">:</span> <span class="n">aws</span>
+</span></span><span class="line"><span class="cl">➜  ~ aws --version
+</span></span><span class="line"><span class="cl">zsh: command not found: aws
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span> <span class="n">sw_vers</span>
-</span></span><span class="line"><span class="cl"><span class="n">ProductName</span><span class="p">:</span>    <span class="n">Mac</span> <span class="ne">OS</span> <span class="n">X</span>
-</span></span><span class="line"><span class="cl"><span class="n">ProductVersion</span><span class="p">:</span> <span class="mf">10.13</span><span class="o">.</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl"><span class="n">BuildVersion</span><span class="p">:</span>   <span class="mi">17</span><span class="n">B48</span>
-</span></span></code></pre></div><p>This does not work.</p>
+</span></span><span class="line"><span class="cl">➜  ~ sw_vers
+</span></span><span class="line"><span class="cl">ProductName:    Mac OS X
+</span></span><span class="line"><span class="cl">ProductVersion: 10.13.1
+</span></span><span class="line"><span class="cl">BuildVersion:   17B48</span></span></code></pre></div></div>
+<p>This does not work.</p>
 <p>There is no aws script in <code>~/.local/bin</code>, the pip install just added som python libraries</p>
 <p>=&gt; Repeating did not help either</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Requirement already up-to-date: awscli in ./Library/Python/2.7/lib/python/site-packages
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">Requirement already up-to-date: awscli in ./Library/Python/2.7/lib/python/site-packages
 </span></span><span class="line"><span class="cl">Requirement already up-to-date: colorama&lt;=0.3.7,&gt;=0.2.5 in ./Library/Python/2.7/lib/python/site-packages (from awscli)
 </span></span><span class="line"><span class="cl">Requirement already up-to-date: s3transfer&lt;0.2.0,&gt;=0.1.9 in ./Library/Python/2.7/lib/python/site-packages (from awscli)
 </span></span><span class="line"><span class="cl">Requirement already up-to-date: botocore==1.7.43 in ./Library/Python/2.7/lib/python/site-packages (from awscli)
@@ -275,267 +1071,332 @@ Unsuccesfull path - keep the Python 2.7 ➜ ~ pip --version zsh: command not fou
 </span></span><span class="line"><span class="cl">Requirement already up-to-date: jmespath&lt;1.0.0,&gt;=0.7.1 in ./Library/Python/2.7/lib/python/site-packages (from botocore==1.7.43-&gt;awscli)
 </span></span><span class="line"><span class="cl">Requirement already up-to-date: python-dateutil&lt;3.0.0,&gt;=2.1 in ./Library/Python/2.7/lib/python/site-packages (from botocore==1.7.43-&gt;awscli)
 </span></span><span class="line"><span class="cl">Requirement already up-to-date: pyasn1&gt;=0.1.3 in ./Library/Python/2.7/lib/python/site-packages (from rsa&lt;=3.5.0,&gt;=3.1.2-&gt;awscli)
-</span></span><span class="line"><span class="cl">Requirement already up-to-date: six&gt;=1.5 in ./Library/Python/2.7/lib/python/site-packages (from python-dateutil&lt;3.0.0,&gt;=2.1-&gt;botocore==1.7.43-&gt;awscli)
-</span></span></code></pre></div><h2 id="simple-and-working---brew-to-the-rescue">Simple and working - brew to the rescue</h2>
+</span></span><span class="line"><span class="cl">Requirement already up-to-date: six&gt;=1.5 in ./Library/Python/2.7/lib/python/site-packages (from python-dateutil&lt;3.0.0,&gt;=2.1-&gt;botocore==1.7.43-&gt;awscli)</span></span></code></pre></div></div>
+
+<h2 class="relative group">Simple and working - brew to the rescue
+    <div id="simple-and-working---brew-to-the-rescue" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#simple-and-working---brew-to-the-rescue" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>Redoing with brew =&gt; installs Python 3 :-( but it works</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span> <span class="n">brew</span> <span class="n">install</span> <span class="n">awscli</span>
-</span></span><span class="line"><span class="cl"><span class="n">Updating</span> <span class="n">Homebrew</span><span class="o">...</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Auto</span><span class="o">-</span><span class="n">updated</span> <span class="n">Homebrew</span><span class="o">!</span>
-</span></span><span class="line"><span class="cl"><span class="n">Updated</span> <span class="mi">1</span> <span class="n">tap</span> <span class="p">(</span><span class="n">homebrew</span><span class="o">/</span><span class="n">core</span><span class="p">)</span><span class="o">.</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">New</span> <span class="n">Formulae</span>
-</span></span><span class="line"><span class="cl"><span class="n">dps8m</span>                                 <span class="n">heartbeat</span>                             <span class="n">simg2img</span>
-</span></span><span class="line"><span class="cl"><span class="n">e2tools</span>                               <span class="n">kaitai</span><span class="o">-</span><span class="n">struct</span><span class="o">-</span><span class="n">compiler</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Updated</span> <span class="n">Formulae</span>
-</span></span><span class="line"><span class="cl"><span class="n">libuv</span> <span class="err">✔</span>            <span class="n">exploitdb</span>          <span class="n">grpc</span>               <span class="n">logstash</span>           <span class="n">paket</span>              <span class="n">singular</span>
-</span></span><span class="line"><span class="cl"><span class="n">abcmidi</span>            <span class="n">faac</span>               <span class="n">gsmartcontrol</span>      <span class="n">mdds</span>               <span class="n">pandoc</span>             <span class="n">sjk</span>
-</span></span><span class="line"><span class="cl"><span class="n">amazon</span><span class="o">-</span><span class="n">ecs</span><span class="o">-</span><span class="n">cli</span>     <span class="n">faas</span><span class="o">-</span><span class="n">cli</span>           <span class="n">harfbuzz</span>           <span class="n">mercurial</span>          <span class="n">pandoc</span><span class="o">-</span><span class="n">crossref</span>    <span class="n">solr</span>
-</span></span><span class="line"><span class="cl"><span class="n">apibuilder</span><span class="o">-</span><span class="n">cli</span>     <span class="n">ffmpeg</span><span class="err">@</span><span class="mf">2.8</span>         <span class="n">i2p</span>                <span class="n">mighttpd2</span>          <span class="n">pcl</span>                <span class="n">source</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">image</span>
-</span></span><span class="line"><span class="cl"><span class="n">asciidoc</span>           <span class="n">firebase</span><span class="o">-</span><span class="n">cli</span>       <span class="n">imagemagick</span>        <span class="n">mikutter</span>           <span class="n">pipenv</span>             <span class="n">sourcekitten</span>
-</span></span><span class="line"><span class="cl"><span class="n">b2</span><span class="o">-</span><span class="n">tools</span>           <span class="n">flow</span>               <span class="n">imagemagick</span><span class="err">@</span><span class="mi">6</span>      <span class="n">mingw</span><span class="o">-</span><span class="n">w64</span>          <span class="n">poco</span>               <span class="n">supersonic</span>
-</span></span><span class="line"><span class="cl"><span class="n">babl</span>               <span class="n">fluent</span><span class="o">-</span><span class="n">bit</span>         <span class="n">influxdb</span>           <span class="n">mosh</span>               <span class="n">poppler</span>            <span class="n">swift</span><span class="o">-</span><span class="n">protobuf</span>
-</span></span><span class="line"><span class="cl"><span class="n">bash</span><span class="o">-</span><span class="n">snippets</span>      <span class="n">fn</span>                 <span class="n">inspircd</span>           <span class="n">mupdf</span>              <span class="n">postgresql</span>         <span class="n">swiftformat</span>
-</span></span><span class="line"><span class="cl"><span class="n">bazel</span>              <span class="n">folly</span>              <span class="n">iron</span><span class="o">-</span><span class="n">functions</span>     <span class="n">mupdf</span><span class="o">-</span><span class="n">tools</span>        <span class="n">postgresql</span><span class="err">@</span><span class="mf">9.4</span>     <span class="n">swiftlint</span>
-</span></span><span class="line"><span class="cl"><span class="n">bchunk</span>             <span class="n">frugal</span>             <span class="n">itstool</span>            <span class="n">mypy</span>               <span class="n">postgresql</span><span class="err">@</span><span class="mf">9.5</span>     <span class="n">temporal_tables</span>
-</span></span><span class="line"><span class="cl"><span class="n">binaryen</span>           <span class="n">gdcm</span>               <span class="n">jenkins</span>            <span class="n">nativefier</span>         <span class="n">postgresql</span><span class="err">@</span><span class="mf">9.6</span>     <span class="n">terragrunt</span>
-</span></span><span class="line"><span class="cl"><span class="n">bit</span>                <span class="n">gegl</span>               <span class="n">jenkins</span><span class="o">-</span><span class="n">lts</span>        <span class="n">nco</span>                <span class="n">pre</span><span class="o">-</span><span class="n">commit</span>         <span class="n">tintin</span>
-</span></span><span class="line"><span class="cl"><span class="n">bitrise</span>            <span class="n">getdns</span>             <span class="n">jfrog</span><span class="o">-</span><span class="n">cli</span><span class="o">-</span><span class="n">go</span>       <span class="n">ncview</span>             <span class="n">prometheus</span>         <span class="n">upscaledb</span>
-</span></span><span class="line"><span class="cl"><span class="n">buku</span>               <span class="n">geth</span>               <span class="n">jruby</span>              <span class="n">netcdf</span>             <span class="n">protobuf</span>           <span class="n">urh</span>
-</span></span><span class="line"><span class="cl"><span class="n">cmake</span>              <span class="n">git</span><span class="o">-</span><span class="n">annex</span>          <span class="n">kerl</span>               <span class="n">nickle</span>             <span class="n">protobuf</span><span class="o">-</span><span class="n">c</span>         <span class="n">vapoursynth</span>
-</span></span><span class="line"><span class="cl"><span class="n">convox</span>             <span class="n">git</span><span class="o">-</span><span class="n">cinnabar</span>       <span class="n">kubectx</span>            <span class="n">node</span><span class="o">-</span><span class="n">build</span>         <span class="n">protobuf</span><span class="o">-</span><span class="n">swift</span>     <span class="n">vtk</span>
-</span></span><span class="line"><span class="cl"><span class="n">couchdb</span>            <span class="n">gjstest</span>            <span class="n">libgsf</span>             <span class="n">ntl</span>                <span class="n">pumba</span>              <span class="n">wireguard</span><span class="o">-</span><span class="n">tools</span>
-</span></span><span class="line"><span class="cl"><span class="n">cppad</span>              <span class="n">glide</span>              <span class="n">libmaxminddb</span>       <span class="n">nuttcp</span>             <span class="n">resty</span>              <span class="n">xtensor</span>
-</span></span><span class="line"><span class="cl"><span class="n">dbus</span>               <span class="n">gmt</span>                <span class="n">libogg</span>             <span class="n">omniorb</span>            <span class="n">ringojs</span>            <span class="n">yara</span>
-</span></span><span class="line"><span class="cl"><span class="n">debianutils</span>        <span class="n">gmt</span><span class="err">@</span><span class="mi">4</span>              <span class="n">libopusenc</span>         <span class="n">ompl</span>               <span class="n">sassc</span>              <span class="n">zabbix</span>
-</span></span><span class="line"><span class="cl"><span class="n">docfx</span>              <span class="n">gofabric8</span>          <span class="n">libphonenumber</span>     <span class="n">opencoarrays</span>       <span class="n">scalaenv</span>           <span class="n">zbackup</span>
-</span></span><span class="line"><span class="cl"><span class="n">dssim</span>              <span class="n">grafana</span>            <span class="n">libpq</span>              <span class="n">ortp</span>               <span class="n">scalastyle</span>         <span class="n">zenity</span>
-</span></span><span class="line"><span class="cl"><span class="n">erlang</span>             <span class="n">grakn</span>              <span class="n">libpqxx</span>            <span class="n">packetq</span>            <span class="n">scm</span><span class="o">-</span><span class="n">manager</span>        <span class="n">zimg</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Renamed</span> <span class="n">Formulae</span>
-</span></span><span class="line"><span class="cl"><span class="n">newsbeuter</span> <span class="o">-&gt;</span> <span class="n">newsboat</span>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">➜  ~ brew install awscli
+</span></span><span class="line"><span class="cl">Updating Homebrew...
+</span></span><span class="line"><span class="cl">==&gt; Auto-updated Homebrew!
+</span></span><span class="line"><span class="cl">Updated 1 tap (homebrew/core).
+</span></span><span class="line"><span class="cl">==&gt; New Formulae
+</span></span><span class="line"><span class="cl">dps8m                                 heartbeat                             simg2img
+</span></span><span class="line"><span class="cl">e2tools                               kaitai-struct-compiler
+</span></span><span class="line"><span class="cl">==&gt; Updated Formulae
+</span></span><span class="line"><span class="cl">libuv ✔            exploitdb          grpc               logstash           paket              singular
+</span></span><span class="line"><span class="cl">abcmidi            faac               gsmartcontrol      mdds               pandoc             sjk
+</span></span><span class="line"><span class="cl">amazon-ecs-cli     faas-cli           harfbuzz           mercurial          pandoc-crossref    solr
+</span></span><span class="line"><span class="cl">apibuilder-cli     ffmpeg@2.8         i2p                mighttpd2          pcl                source-to-image
+</span></span><span class="line"><span class="cl">asciidoc           firebase-cli       imagemagick        mikutter           pipenv             sourcekitten
+</span></span><span class="line"><span class="cl">b2-tools           flow               imagemagick@6      mingw-w64          poco               supersonic
+</span></span><span class="line"><span class="cl">babl               fluent-bit         influxdb           mosh               poppler            swift-protobuf
+</span></span><span class="line"><span class="cl">bash-snippets      fn                 inspircd           mupdf              postgresql         swiftformat
+</span></span><span class="line"><span class="cl">bazel              folly              iron-functions     mupdf-tools        postgresql@9.4     swiftlint
+</span></span><span class="line"><span class="cl">bchunk             frugal             itstool            mypy               postgresql@9.5     temporal_tables
+</span></span><span class="line"><span class="cl">binaryen           gdcm               jenkins            nativefier         postgresql@9.6     terragrunt
+</span></span><span class="line"><span class="cl">bit                gegl               jenkins-lts        nco                pre-commit         tintin
+</span></span><span class="line"><span class="cl">bitrise            getdns             jfrog-cli-go       ncview             prometheus         upscaledb
+</span></span><span class="line"><span class="cl">buku               geth               jruby              netcdf             protobuf           urh
+</span></span><span class="line"><span class="cl">cmake              git-annex          kerl               nickle             protobuf-c         vapoursynth
+</span></span><span class="line"><span class="cl">convox             git-cinnabar       kubectx            node-build         protobuf-swift     vtk
+</span></span><span class="line"><span class="cl">couchdb            gjstest            libgsf             ntl                pumba              wireguard-tools
+</span></span><span class="line"><span class="cl">cppad              glide              libmaxminddb       nuttcp             resty              xtensor
+</span></span><span class="line"><span class="cl">dbus               gmt                libogg             omniorb            ringojs            yara
+</span></span><span class="line"><span class="cl">debianutils        gmt@4              libopusenc         ompl               sassc              zabbix
+</span></span><span class="line"><span class="cl">docfx              gofabric8          libphonenumber     opencoarrays       scalaenv           zbackup
+</span></span><span class="line"><span class="cl">dssim              grafana            libpq              ortp               scalastyle         zenity
+</span></span><span class="line"><span class="cl">erlang             grakn              libpqxx            packetq            scm-manager        zimg
+</span></span><span class="line"><span class="cl">==&gt; Renamed Formulae
+</span></span><span class="line"><span class="cl">newsbeuter -&gt; newsboat
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Installing</span> <span class="n">dependencies</span> <span class="k">for</span> <span class="n">awscli</span><span class="p">:</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span><span class="p">,</span> <span class="n">sqlite</span><span class="p">,</span> <span class="n">openssl</span><span class="p">,</span> <span class="n">python3</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Installing</span> <span class="n">awscli</span> <span class="n">dependency</span><span class="p">:</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">homebrew</span><span class="o">.</span><span class="n">bintray</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">bottles</span><span class="o">/</span><span class="n">pkg</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="mf">0.29</span><span class="o">.</span><span class="mf">2.</span><span class="n">high_sierra</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">from</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">akamai</span><span class="o">.</span><span class="n">bintray</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">f1</span><span class="o">/</span><span class="n">f1b29fb5388dccab0fcaf665ab43d308ee51816b24262417bf83a686b6e30</span>
-</span></span><span class="line"><span class="cl"><span class="c1">######################################################################## 100.0%</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Pouring</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span><span class="o">-</span><span class="mf">0.29</span><span class="o">.</span><span class="mf">2.</span><span class="n">high_sierra</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-</span></span><span class="line"><span class="cl"><span class="err">🍺</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">pkg</span><span class="o">-</span><span class="n">config</span><span class="o">/</span><span class="mf">0.29</span><span class="o">.</span><span class="mi">2</span><span class="p">:</span> <span class="mi">11</span> <span class="n">files</span><span class="p">,</span> <span class="mf">627.2</span><span class="n">KB</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Installing</span> <span class="n">awscli</span> <span class="n">dependency</span><span class="p">:</span> <span class="n">sqlite</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">homebrew</span><span class="o">.</span><span class="n">bintray</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">bottles</span><span class="o">/</span><span class="n">sqlite</span><span class="o">-</span><span class="mf">3.21</span><span class="o">.</span><span class="mf">0.</span><span class="n">high_sierra</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">from</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">akamai</span><span class="o">.</span><span class="n">bintray</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">7</span><span class="n">d</span><span class="o">/</span><span class="mi">7</span><span class="n">d2f6274d626acafed914d37e953cac4e33022eb889c6998af19bf1932270</span>
-</span></span><span class="line"><span class="cl"><span class="c1">######################################################################## 100.0%</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Pouring</span> <span class="n">sqlite</span><span class="o">-</span><span class="mf">3.21</span><span class="o">.</span><span class="mf">0.</span><span class="n">high_sierra</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Caveats</span>
-</span></span><span class="line"><span class="cl"><span class="n">This</span> <span class="n">formula</span> <span class="n">is</span> <span class="n">keg</span><span class="o">-</span><span class="n">only</span><span class="p">,</span> <span class="n">which</span> <span class="n">means</span> <span class="n">it</span> <span class="n">was</span> <span class="ow">not</span> <span class="n">symlinked</span> <span class="n">into</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="n">because</span> <span class="n">macOS</span> <span class="n">provides</span> <span class="n">an</span> <span class="n">older</span> <span class="n">sqlite3</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">==&gt; Installing dependencies for awscli: pkg-config, sqlite, openssl, python3
+</span></span><span class="line"><span class="cl">==&gt; Installing awscli dependency: pkg-config
+</span></span><span class="line"><span class="cl">==&gt; Downloading https://homebrew.bintray.com/bottles/pkg-config-0.29.2.high_sierra.bottle.tar.gz
+</span></span><span class="line"><span class="cl">==&gt; Downloading from https://akamai.bintray.com/f1/f1b29fb5388dccab0fcaf665ab43d308ee51816b24262417bf83a686b6e30
+</span></span><span class="line"><span class="cl">######################################################################## 100.0%
+</span></span><span class="line"><span class="cl">==&gt; Pouring pkg-config-0.29.2.high_sierra.bottle.tar.gz
+</span></span><span class="line"><span class="cl">🍺  /usr/local/Cellar/pkg-config/0.29.2: 11 files, 627.2KB
+</span></span><span class="line"><span class="cl">==&gt; Installing awscli dependency: sqlite
+</span></span><span class="line"><span class="cl">==&gt; Downloading https://homebrew.bintray.com/bottles/sqlite-3.21.0.high_sierra.bottle.tar.gz
+</span></span><span class="line"><span class="cl">==&gt; Downloading from https://akamai.bintray.com/7d/7d2f6274d626acafed914d37e953cac4e33022eb889c6998af19bf1932270
+</span></span><span class="line"><span class="cl">######################################################################## 100.0%
+</span></span><span class="line"><span class="cl">==&gt; Pouring sqlite-3.21.0.high_sierra.bottle.tar.gz
+</span></span><span class="line"><span class="cl">==&gt; Caveats
+</span></span><span class="line"><span class="cl">This formula is keg-only, which means it was not symlinked into /usr/local,
+</span></span><span class="line"><span class="cl">because macOS provides an older sqlite3.
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">If</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">have</span> <span class="n">this</span> <span class="n">software</span> <span class="n">first</span> <span class="ow">in</span> <span class="n">your</span> <span class="n">PATH</span> <span class="n">run</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">  <span class="n">echo</span> <span class="s1">&#39;export PATH=&#34;/usr/local/opt/sqlite/bin:$PATH&#34;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</span></span><span class="line"><span class="cl">If you need to have this software first in your PATH run:
+</span></span><span class="line"><span class="cl">  echo &#39;export PATH=&#34;/usr/local/opt/sqlite/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">For</span> <span class="n">compilers</span> <span class="n">to</span> <span class="n">find</span> <span class="n">this</span> <span class="n">software</span> <span class="n">you</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">set</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">LDFLAGS</span><span class="p">:</span>  <span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">sqlite</span><span class="o">/</span><span class="n">lib</span>
-</span></span><span class="line"><span class="cl">    <span class="n">CPPFLAGS</span><span class="p">:</span> <span class="o">-</span><span class="n">I</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">sqlite</span><span class="o">/</span><span class="n">include</span>
-</span></span><span class="line"><span class="cl"><span class="n">For</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span> <span class="n">to</span> <span class="n">find</span> <span class="n">this</span> <span class="n">software</span> <span class="n">you</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">set</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">PKG_CONFIG_PATH</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">sqlite</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pkgconfig</span>
+</span></span><span class="line"><span class="cl">For compilers to find this software you may need to set:
+</span></span><span class="line"><span class="cl">    LDFLAGS:  -L/usr/local/opt/sqlite/lib
+</span></span><span class="line"><span class="cl">    CPPFLAGS: -I/usr/local/opt/sqlite/include
+</span></span><span class="line"><span class="cl">For pkg-config to find this software you may need to set:
+</span></span><span class="line"><span class="cl">    PKG_CONFIG_PATH: /usr/local/opt/sqlite/lib/pkgconfig
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Summary</span>
-</span></span><span class="line"><span class="cl"><span class="err">🍺</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">sqlite</span><span class="o">/</span><span class="mf">3.21</span><span class="o">.</span><span class="mi">0</span><span class="p">:</span> <span class="mi">11</span> <span class="n">files</span><span class="p">,</span> <span class="mf">3.0</span><span class="n">MB</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Installing</span> <span class="n">awscli</span> <span class="n">dependency</span><span class="p">:</span> <span class="n">openssl</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">homebrew</span><span class="o">.</span><span class="n">bintray</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">bottles</span><span class="o">/</span><span class="n">openssl</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">2</span><span class="n">m</span><span class="o">.</span><span class="n">high_sierra</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">from</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">akamai</span><span class="o">.</span><span class="n">bintray</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">0</span><span class="n">e</span><span class="o">/</span><span class="mi">0</span><span class="n">eeee936b7f362ec5d2d844deb74ec92b79d3105445e5ca5e8767df4aabde</span>
-</span></span><span class="line"><span class="cl"><span class="c1">######################################################################## 100.0%</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Pouring</span> <span class="n">openssl</span><span class="o">-</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">2</span><span class="n">m</span><span class="o">.</span><span class="n">high_sierra</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Caveats</span>
-</span></span><span class="line"><span class="cl"><span class="n">A</span> <span class="n">CA</span> <span class="n">file</span> <span class="n">has</span> <span class="n">been</span> <span class="n">bootstrapped</span> <span class="n">using</span> <span class="n">certificates</span> <span class="n">from</span> <span class="n">the</span> <span class="n">SystemRoots</span>
-</span></span><span class="line"><span class="cl"><span class="n">keychain</span><span class="o">.</span> <span class="n">To</span> <span class="n">add</span> <span class="n">additional</span> <span class="n">certificates</span> <span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="n">the</span> <span class="n">certificates</span> <span class="n">added</span> <span class="ow">in</span>
-</span></span><span class="line"><span class="cl"><span class="n">the</span> <span class="n">System</span> <span class="n">keychain</span><span class="p">),</span> <span class="n">place</span> <span class="o">.</span><span class="n">pem</span> <span class="n">files</span> <span class="ow">in</span>
-</span></span><span class="line"><span class="cl">  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">certs</span>
+</span></span><span class="line"><span class="cl">==&gt; Summary
+</span></span><span class="line"><span class="cl">🍺  /usr/local/Cellar/sqlite/3.21.0: 11 files, 3.0MB
+</span></span><span class="line"><span class="cl">==&gt; Installing awscli dependency: openssl
+</span></span><span class="line"><span class="cl">==&gt; Downloading https://homebrew.bintray.com/bottles/openssl-1.0.2m.high_sierra.bottle.tar.gz
+</span></span><span class="line"><span class="cl">==&gt; Downloading from https://akamai.bintray.com/0e/0eeee936b7f362ec5d2d844deb74ec92b79d3105445e5ca5e8767df4aabde
+</span></span><span class="line"><span class="cl">######################################################################## 100.0%
+</span></span><span class="line"><span class="cl">==&gt; Pouring openssl-1.0.2m.high_sierra.bottle.tar.gz
+</span></span><span class="line"><span class="cl">==&gt; Caveats
+</span></span><span class="line"><span class="cl">A CA file has been bootstrapped using certificates from the SystemRoots
+</span></span><span class="line"><span class="cl">keychain. To add additional certificates (e.g. the certificates added in
+</span></span><span class="line"><span class="cl">the System keychain), place .pem files in
+</span></span><span class="line"><span class="cl">  /usr/local/etc/openssl/certs
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="ow">and</span> <span class="n">run</span>
-</span></span><span class="line"><span class="cl">  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">c_rehash</span>
+</span></span><span class="line"><span class="cl">and run
+</span></span><span class="line"><span class="cl">  /usr/local/opt/openssl/bin/c_rehash
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">This</span> <span class="n">formula</span> <span class="n">is</span> <span class="n">keg</span><span class="o">-</span><span class="n">only</span><span class="p">,</span> <span class="n">which</span> <span class="n">means</span> <span class="n">it</span> <span class="n">was</span> <span class="ow">not</span> <span class="n">symlinked</span> <span class="n">into</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="n">because</span> <span class="n">Apple</span> <span class="n">has</span> <span class="n">deprecated</span> <span class="n">use</span> <span class="n">of</span> <span class="n">OpenSSL</span> <span class="ow">in</span> <span class="n">favor</span> <span class="n">of</span> <span class="n">its</span> <span class="n">own</span> <span class="n">TLS</span> <span class="ow">and</span> <span class="n">crypto</span> <span class="n">libraries</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">This formula is keg-only, which means it was not symlinked into /usr/local,
+</span></span><span class="line"><span class="cl">because Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries.
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">If</span> <span class="n">you</span> <span class="n">need</span> <span class="n">to</span> <span class="n">have</span> <span class="n">this</span> <span class="n">software</span> <span class="n">first</span> <span class="ow">in</span> <span class="n">your</span> <span class="n">PATH</span> <span class="n">run</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">  <span class="n">echo</span> <span class="s1">&#39;export PATH=&#34;/usr/local/opt/openssl/bin:$PATH&#34;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</span></span><span class="line"><span class="cl">If you need to have this software first in your PATH run:
+</span></span><span class="line"><span class="cl">  echo &#39;export PATH=&#34;/usr/local/opt/openssl/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">For</span> <span class="n">compilers</span> <span class="n">to</span> <span class="n">find</span> <span class="n">this</span> <span class="n">software</span> <span class="n">you</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">set</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">LDFLAGS</span><span class="p">:</span>  <span class="o">-</span><span class="n">L</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">lib</span>
-</span></span><span class="line"><span class="cl">    <span class="n">CPPFLAGS</span><span class="p">:</span> <span class="o">-</span><span class="n">I</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">include</span>
-</span></span><span class="line"><span class="cl"><span class="n">For</span> <span class="n">pkg</span><span class="o">-</span><span class="n">config</span> <span class="n">to</span> <span class="n">find</span> <span class="n">this</span> <span class="n">software</span> <span class="n">you</span> <span class="n">may</span> <span class="n">need</span> <span class="n">to</span> <span class="n">set</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">PKG_CONFIG_PATH</span><span class="p">:</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">pkgconfig</span>
+</span></span><span class="line"><span class="cl">For compilers to find this software you may need to set:
+</span></span><span class="line"><span class="cl">    LDFLAGS:  -L/usr/local/opt/openssl/lib
+</span></span><span class="line"><span class="cl">    CPPFLAGS: -I/usr/local/opt/openssl/include
+</span></span><span class="line"><span class="cl">For pkg-config to find this software you may need to set:
+</span></span><span class="line"><span class="cl">    PKG_CONFIG_PATH: /usr/local/opt/openssl/lib/pkgconfig
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Summary</span>
-</span></span><span class="line"><span class="cl"><span class="err">🍺</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">openssl</span><span class="o">/</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">2</span><span class="n">m</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="mi">792</span> <span class="n">files</span><span class="p">,</span> <span class="mf">12.3</span><span class="n">MB</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Installing</span> <span class="n">awscli</span> <span class="n">dependency</span><span class="p">:</span> <span class="n">python3</span>
-</span></span><span class="line"><span class="cl"><span class="n">Warning</span><span class="p">:</span> <span class="n">Building</span> <span class="n">python3</span> <span class="n">from</span> <span class="n">source</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">  <span class="n">The</span> <span class="n">bottle</span> <span class="n">needs</span> <span class="n">the</span> <span class="n">Apple</span> <span class="n">Command</span> <span class="n">Line</span> <span class="n">Tools</span> <span class="n">to</span> <span class="n">be</span> <span class="n">installed</span><span class="o">.</span>
-</span></span><span class="line"><span class="cl">  <span class="n">You</span> <span class="n">can</span> <span class="n">install</span> <span class="n">them</span><span class="p">,</span> <span class="k">if</span> <span class="n">desired</span><span class="p">,</span> <span class="n">with</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="n">xcode</span><span class="o">-</span><span class="n">select</span> <span class="o">--</span><span class="n">install</span>
+</span></span><span class="line"><span class="cl">==&gt; Summary
+</span></span><span class="line"><span class="cl">🍺  /usr/local/Cellar/openssl/1.0.2m: 1,792 files, 12.3MB
+</span></span><span class="line"><span class="cl">==&gt; Installing awscli dependency: python3
+</span></span><span class="line"><span class="cl">Warning: Building python3 from source:
+</span></span><span class="line"><span class="cl">  The bottle needs the Apple Command Line Tools to be installed.
+</span></span><span class="line"><span class="cl">  You can install them, if desired, with:
+</span></span><span class="line"><span class="cl">    xcode-select --install
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">ftp</span><span class="o">/</span><span class="n">python</span><span class="o">/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">Python</span><span class="o">-</span><span class="mf">3.6</span><span class="o">.</span><span class="mf">3.</span><span class="n">tar</span><span class="o">.</span><span class="n">xz</span>
-</span></span><span class="line"><span class="cl"><span class="c1">######################################################################## 100.0%</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="o">./</span><span class="n">configure</span> <span class="o">--</span><span class="n">prefix</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">3</span> <span class="o">--</span><span class="n">enable</span><span class="o">-</span><span class="n">ipv6</span> <span class="o">--</span><span class="n">datarootdir</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mi">3</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">make</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">make</span> <span class="n">install</span> <span class="n">PYTHONAPPSDIR</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">3</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">make</span> <span class="n">frameworkinstallextras</span> <span class="n">PYTHONAPPSDIR</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">python3</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">files</span><span class="o">.</span><span class="n">pythonhosted</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">a4</span><span class="o">/</span><span class="n">c8</span><span class="o">/</span><span class="mi">9</span><span class="n">a7a47f683d54d83f648d37c3e180317f80dc126a304c45dc6</span>
-</span></span><span class="line"><span class="cl"><span class="c1">######################################################################## 100.0%</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">files</span><span class="o">.</span><span class="n">pythonhosted</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="mi">11</span><span class="o">/</span><span class="n">b6</span><span class="o">/</span><span class="n">abcb525026a4be042b486df43905d6893fb04f05aac21c32c6</span>
-</span></span><span class="line"><span class="cl"><span class="c1">######################################################################## 100.0%</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">files</span><span class="o">.</span><span class="n">pythonhosted</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">fa</span><span class="o">/</span><span class="n">b4</span><span class="o">/</span><span class="n">f9886517624a4dcb81a1d766f68034344b7565db69f13d5269</span>
-</span></span><span class="line"><span class="cl"><span class="c1">######################################################################## 100.0%</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">python3</span> <span class="o">-</span><span class="n">s</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">user</span><span class="o">-</span><span class="n">cfg</span> <span class="n">install</span> <span class="o">--</span><span class="n">force</span> <span class="o">--</span><span class="n">verbose</span> <span class="o">--</span><span class="n">install</span><span class="o">-</span><span class="n">sc</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">python3</span> <span class="o">-</span><span class="n">s</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">user</span><span class="o">-</span><span class="n">cfg</span> <span class="n">install</span> <span class="o">--</span><span class="n">force</span> <span class="o">--</span><span class="n">verbose</span> <span class="o">--</span><span class="n">install</span><span class="o">-</span><span class="n">sc</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">python3</span> <span class="o">-</span><span class="n">s</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">user</span><span class="o">-</span><span class="n">cfg</span> <span class="n">install</span> <span class="o">--</span><span class="n">force</span> <span class="o">--</span><span class="n">verbose</span> <span class="o">--</span><span class="n">install</span><span class="o">-</span><span class="n">sc</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Caveats</span>
-</span></span><span class="line"><span class="cl"><span class="n">Pip</span><span class="p">,</span> <span class="n">setuptools</span><span class="p">,</span> <span class="ow">and</span> <span class="n">wheel</span> <span class="n">have</span> <span class="n">been</span> <span class="n">installed</span><span class="o">.</span> <span class="n">To</span> <span class="n">update</span> <span class="n">them</span>
-</span></span><span class="line"><span class="cl">  <span class="n">pip3</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pip</span> <span class="n">setuptools</span> <span class="n">wheel</span>
+</span></span><span class="line"><span class="cl">==&gt; Downloading https://www.python.org/ftp/python/3.6.3/Python-3.6.3.tar.xz
+</span></span><span class="line"><span class="cl">######################################################################## 100.0%
+</span></span><span class="line"><span class="cl">==&gt; ./configure --prefix=/usr/local/Cellar/python3/3.6.3 --enable-ipv6 --datarootdir=/usr/local/Cellar/python3/3
+</span></span><span class="line"><span class="cl">==&gt; make
+</span></span><span class="line"><span class="cl">==&gt; make install PYTHONAPPSDIR=/usr/local/Cellar/python3/3.6.3
+</span></span><span class="line"><span class="cl">==&gt; make frameworkinstallextras PYTHONAPPSDIR=/usr/local/Cellar/python3/3.6.3/share/python3
+</span></span><span class="line"><span class="cl">==&gt; Downloading https://files.pythonhosted.org/packages/a4/c8/9a7a47f683d54d83f648d37c3e180317f80dc126a304c45dc6
+</span></span><span class="line"><span class="cl">######################################################################## 100.0%
+</span></span><span class="line"><span class="cl">==&gt; Downloading https://files.pythonhosted.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c6
+</span></span><span class="line"><span class="cl">######################################################################## 100.0%
+</span></span><span class="line"><span class="cl">==&gt; Downloading https://files.pythonhosted.org/packages/fa/b4/f9886517624a4dcb81a1d766f68034344b7565db69f13d5269
+</span></span><span class="line"><span class="cl">######################################################################## 100.0%
+</span></span><span class="line"><span class="cl">==&gt; /usr/local/Cellar/python3/3.6.3/bin/python3 -s setup.py --no-user-cfg install --force --verbose --install-sc
+</span></span><span class="line"><span class="cl">==&gt; /usr/local/Cellar/python3/3.6.3/bin/python3 -s setup.py --no-user-cfg install --force --verbose --install-sc
+</span></span><span class="line"><span class="cl">==&gt; /usr/local/Cellar/python3/3.6.3/bin/python3 -s setup.py --no-user-cfg install --force --verbose --install-sc
+</span></span><span class="line"><span class="cl">==&gt; Caveats
+</span></span><span class="line"><span class="cl">Pip, setuptools, and wheel have been installed. To update them
+</span></span><span class="line"><span class="cl">  pip3 install --upgrade pip setuptools wheel
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">You</span> <span class="n">can</span> <span class="n">install</span> <span class="n">Python</span> <span class="n">packages</span> <span class="n">with</span>
-</span></span><span class="line"><span class="cl">  <span class="n">pip3</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">package</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">You can install Python packages with
+</span></span><span class="line"><span class="cl">  pip3 install &lt;package&gt;
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">They</span> <span class="n">will</span> <span class="n">install</span> <span class="n">into</span> <span class="n">the</span> <span class="n">site</span><span class="o">-</span><span class="n">package</span> <span class="n">directory</span>
-</span></span><span class="line"><span class="cl">  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span>
+</span></span><span class="line"><span class="cl">They will install into the site-package directory
+</span></span><span class="line"><span class="cl">  /usr/local/lib/python3.6/site-packages
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">See</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="o">.</span><span class="n">brew</span><span class="o">.</span><span class="n">sh</span><span class="o">/</span><span class="n">Homebrew</span><span class="o">-</span><span class="ow">and</span><span class="o">-</span><span class="n">Python</span><span class="o">.</span><span class="n">html</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Summary</span>
-</span></span><span class="line"><span class="cl"><span class="err">🍺</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">python3</span><span class="o">/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">3</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span><span class="mi">973</span> <span class="n">files</span><span class="p">,</span> <span class="mi">111</span><span class="n">MB</span><span class="p">,</span> <span class="n">built</span> <span class="ow">in</span> <span class="mi">2</span> <span class="n">minutes</span> <span class="mi">14</span> <span class="n">seconds</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Installing</span> <span class="n">awscli</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">homebrew</span><span class="o">.</span><span class="n">bintray</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">bottles</span><span class="o">/</span><span class="n">awscli</span><span class="o">-</span><span class="mf">1.11</span><span class="o">.</span><span class="mi">180</span><span class="n">_1</span><span class="o">.</span><span class="n">high_sierra</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Downloading</span> <span class="n">from</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">akamai</span><span class="o">.</span><span class="n">bintray</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="mi">16</span><span class="o">/</span><span class="mi">168</span><span class="n">d726049366b4cbd1278e0e4a4e0e7e406d555e13e3681a968ca629776c</span>
-</span></span><span class="line"><span class="cl"><span class="c1">######################################################################## 100.0%</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Pouring</span> <span class="n">awscli</span><span class="o">-</span><span class="mf">1.11</span><span class="o">.</span><span class="mi">180</span><span class="n">_1</span><span class="o">.</span><span class="n">high_sierra</span><span class="o">.</span><span class="n">bottle</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Caveats</span>
-</span></span><span class="line"><span class="cl"><span class="n">The</span> <span class="s2">&#34;examples&#34;</span> <span class="n">directory</span> <span class="n">has</span> <span class="n">been</span> <span class="n">installed</span> <span class="n">to</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">awscli</span><span class="o">/</span><span class="n">examples</span>
+</span></span><span class="line"><span class="cl">See: https://docs.brew.sh/Homebrew-and-Python.html
+</span></span><span class="line"><span class="cl">==&gt; Summary
+</span></span><span class="line"><span class="cl">🍺  /usr/local/Cellar/python3/3.6.3: 7,973 files, 111MB, built in 2 minutes 14 seconds
+</span></span><span class="line"><span class="cl">==&gt; Installing awscli
+</span></span><span class="line"><span class="cl">==&gt; Downloading https://homebrew.bintray.com/bottles/awscli-1.11.180_1.high_sierra.bottle.tar.gz
+</span></span><span class="line"><span class="cl">==&gt; Downloading from https://akamai.bintray.com/16/168d726049366b4cbd1278e0e4a4e0e7e406d555e13e3681a968ca629776c
+</span></span><span class="line"><span class="cl">######################################################################## 100.0%
+</span></span><span class="line"><span class="cl">==&gt; Pouring awscli-1.11.180_1.high_sierra.bottle.tar.gz
+</span></span><span class="line"><span class="cl">==&gt; Caveats
+</span></span><span class="line"><span class="cl">The &#34;examples&#34; directory has been installed to:
+</span></span><span class="line"><span class="cl">  /usr/local/share/awscli/examples
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">Bash</span> <span class="n">completion</span> <span class="n">has</span> <span class="n">been</span> <span class="n">installed</span> <span class="n">to</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">bash_completion</span><span class="o">.</span><span class="n">d</span>
+</span></span><span class="line"><span class="cl">Bash completion has been installed to:
+</span></span><span class="line"><span class="cl">  /usr/local/etc/bash_completion.d
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">zsh</span> <span class="n">completions</span> <span class="ow">and</span> <span class="n">functions</span> <span class="n">have</span> <span class="n">been</span> <span class="n">installed</span> <span class="n">to</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">zsh</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">functions</span>
-</span></span><span class="line"><span class="cl"><span class="o">==&gt;</span> <span class="n">Summary</span>
-</span></span><span class="line"><span class="cl"><span class="err">🍺</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">Cellar</span><span class="o">/</span><span class="n">awscli</span><span class="o">/</span><span class="mf">1.11</span><span class="o">.</span><span class="mi">180</span><span class="n">_1</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span><span class="mi">119</span> <span class="n">files</span><span class="p">,</span> <span class="mf">35.8</span><span class="n">MB</span>
+</span></span><span class="line"><span class="cl">zsh completions and functions have been installed to:
+</span></span><span class="line"><span class="cl">  /usr/local/share/zsh/site-functions
+</span></span><span class="line"><span class="cl">==&gt; Summary
+</span></span><span class="line"><span class="cl">🍺  /usr/local/Cellar/awscli/1.11.180_1: 4,119 files, 35.8MB
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span> <span class="n">aws</span> <span class="o">--</span><span class="n">version</span>
-</span></span><span class="line"><span class="cl"><span class="n">aws</span><span class="o">-</span><span class="n">cli</span><span class="o">/</span><span class="mf">1.11</span><span class="o">.</span><span class="mi">180</span> <span class="n">Python</span><span class="o">/</span><span class="mf">3.6</span><span class="o">.</span><span class="mi">3</span> <span class="n">Darwin</span><span class="o">/</span><span class="mf">17.2</span><span class="o">.</span><span class="mi">0</span> <span class="n">botocore</span><span class="o">/</span><span class="mf">1.7</span><span class="o">.</span><span class="mi">38</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span> <span class="n">python</span> <span class="o">--</span><span class="n">version</span>
-</span></span><span class="line"><span class="cl"><span class="n">Python</span> <span class="mf">2.7</span><span class="o">.</span><span class="mi">10</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span> <span class="n">python3</span> <span class="o">--</span><span class="n">version</span>
-</span></span><span class="line"><span class="cl"><span class="n">Python</span> <span class="mf">3.6</span><span class="o">.</span><span class="mi">3</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span> <span class="n">pip</span> <span class="o">--</span><span class="n">version</span>
-</span></span><span class="line"><span class="cl"><span class="n">pip</span> <span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span> <span class="n">from</span> <span class="o">/</span><span class="n">Library</span><span class="o">/</span><span class="n">Python</span><span class="o">/</span><span class="mf">2.7</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">pip</span><span class="o">-</span><span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="mf">7.</span><span class="n">egg</span> <span class="p">(</span><span class="n">python</span> <span class="mf">2.7</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="o">~</span> <span class="n">pip3</span> <span class="o">--</span><span class="n">version</span>
-</span></span><span class="line"><span class="cl"><span class="n">pip</span> <span class="mf">9.0</span><span class="o">.</span><span class="mi">1</span> <span class="n">from</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span> <span class="p">(</span><span class="n">python</span> <span class="mf">3.6</span><span class="p">)</span>
-</span></span></code></pre></div><p>Main reason why I was trying to avoid Python3 were some Python2 tools that were reportedly broken by presence of Python3.</p>
+</span></span><span class="line"><span class="cl">➜  ~ aws --version
+</span></span><span class="line"><span class="cl">aws-cli/1.11.180 Python/3.6.3 Darwin/17.2.0 botocore/1.7.38
+</span></span><span class="line"><span class="cl">➜  ~ python --version
+</span></span><span class="line"><span class="cl">Python 2.7.10
+</span></span><span class="line"><span class="cl">➜  ~ python3 --version
+</span></span><span class="line"><span class="cl">Python 3.6.3
+</span></span><span class="line"><span class="cl">➜  ~ pip --version
+</span></span><span class="line"><span class="cl">pip 9.0.1 from /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7)
+</span></span><span class="line"><span class="cl">➜  ~ pip3 --version
+</span></span><span class="line"><span class="cl">pip 9.0.1 from /usr/local/lib/python3.6/site-packages (python 3.6)</span></span></code></pre></div></div>
+<p>Main reason why I was trying to avoid Python3 were some Python2 tools that were reportedly broken by presence of Python3.</p>
 <p>Luckily, it turns out I have both python and python3 working afterward</p>
 
-    </div>
-
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">Miro Adamy</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">LastMod</span>
-    <span class="item-content">
-        2017-11-14
-        
-    </span>
-  </p>
-  
-  <p class="copyright-item">
-    <span class="item-title">License</span>
-    <span class="item-content">(c) 2006-2020 Miro Adamy</span>
-  </p>
-</div>
-<footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/aws/">aws</a>
-          <a href="/tags/cloud/">cloud</a>
-          <a href="/tags/commandline/">commandline</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/posts/2017-11-23-visual-vm/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">VisualVM inside Docker container</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/posts/2017-05-15-sensitive-git/">
-            <span class="next-text nav-default">Storing sensitive information in Git</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
+          
+          
+          
         </div>
         
+        
 
-  
+        
 
-  
+        
 
       </div>
-    </main>
+    </section>
 
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
-      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
-      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
-      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
-      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
   
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2017-05-15-sensitive-git/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Storing sensitive information in Git
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2017-05-17T11:22:48&#43;08:00">May 17, 2017</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2017-11-23-visual-vm/">
+              <span class="leading-6">
+                VisualVM inside Docker container&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2017-11-23T11:22:48&#43;08:00">November 23, 2017</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
   
 
-  <span class="copyright-year">
-    &copy; 
-    2006 - 
-    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
-  </span>
-</div>
+
+      
 
     </footer>
+  </article>
 
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Miro Adamy
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
   </div>
-  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Search"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          aria-label="Search"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
 
-
-
-<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
-
-
-
-
-
-
-
-
-</body>
+    </div>
+    
+    
+  </body>
+  
 </html>

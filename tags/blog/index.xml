@@ -1,255 +1,353 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Blog on Miro&#39;s World</title>
-		<link>https://miroadamy.com/tags/blog/</link>
-		<description>Recent content in Blog on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Tue, 17 Dec 2019 11:22:48 +0800</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>30 day commit challenge - Checkpoint 1</title>
-				<link>https://miroadamy.com/posts/2019-12-17-30-day-commit-challenge-1/</link>
-				<pubDate>Tue, 17 Dec 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-12-17-30-day-commit-challenge-1/</guid>
-				<description>&lt;p&gt;Time to make checkpoint number 1 - it is day 11 of 30.&lt;/p&gt;&#xA;&lt;p&gt;So far - out of this 11 days I have 10 days with commits. The missing day was fully dedicated to working on presentation and documentation, that unfortunately ends up Confluence and Google Doc, not in some proper textual format (read: Markdown or RestructuredText) backed by a repository.&lt;/p&gt;&#xA;&lt;p&gt;Stuff that I worked on:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;some minor updates to resume (added AWS badges, fixed some typos)&lt;/li&gt;&#xA;&lt;li&gt;notes from certification courses + code fragments&lt;/li&gt;&#xA;&lt;li&gt;scripts for automation of documents / ebooks backup from iCloud to local drives&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Most commits went to documentation / practice code for my project &amp;ldquo;Many ways to Kubernetes&amp;rdquo; where I play with building up K8s clusters using different approaches. So far I did the &amp;ldquo;Kubernetes the hard way&amp;rdquo; - following the course from Linux Academy (&lt;a href=&#34;https://linuxacademy.com/cp/modules/view/id/221)&#34;&gt;https://linuxacademy.com/cp/modules/view/id/221)&lt;/a&gt;,&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>30 day commit challenge</title>
-				<link>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</link>
-				<pubDate>Fri, 06 Dec 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</guid>
-				<description>&lt;p&gt;My work in last few years took my away from practical coding towards DevOps. Despite the increased role of IaaC in our DevOps, this often means living in iTerm and AWS console with interaction not being captured in any form.&lt;/p&gt;&#xA;&lt;p&gt;On writing side, lots of my output shifted from code towards writing text in Wiki&amp;rsquo;s, GoogleDocs and more and more in Slack messages. The code I write are short one-liners or small scripts with very short life span. This makes me a bit sad as there is no sense of accomplishment at the end of the day or week. The &lt;code&gt;git log&lt;/code&gt; does not work over Wiki, AWS console, iTerm, Slack and GoogleDrive.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>BOTD - Blog of the Day</title>
-				<link>https://miroadamy.com/posts/2019-12-05-silvias-blog/</link>
-				<pubDate>Thu, 05 Dec 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-12-05-silvias-blog/</guid>
-				<description>&lt;p&gt;Today&amp;rsquo;s blog of the day is a special one. It does not deal with cloud, DevOps or distributed systems. The theme of the blog is travel, life of digital nomad and observations on life from a perspective of a smart young woman, working as Online English teacher and travelling a lot while doing so - &lt;a href=&#34;https://bookandtravel.blog/&#34;&gt;https://bookandtravel.blog/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;What makes this blog dear and interesting to me is that it&amp;rsquo;s author is my daughter Silvia. What could make the blog interesting and valuable for other audience (especially those learning English who are interested in personal development) is the format of the entries - as they combine reading and language teaching. Each post contains 10-20 emphasized words or expressions that are explained in footnotes - check &lt;a href=&#34;https://bookandtravel.blog/2019/11/19/what-traveling-really-means/&#34;&gt;this one&lt;/a&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Building Hugo as well on GitLab pages</title>
-				<link>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</link>
-				<pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</guid>
-				<description>&lt;h1 id=&#34;parallel-building-challenges&#34;&gt;Parallel building challenges&lt;/h1&gt;&#xA;&lt;p&gt;Unlike Github, Gitlab considers Hugo blogs first class citizens and does not impose any restrictions on repo naming.&lt;/p&gt;&#xA;&lt;p&gt;I had 3 challenges to overcome related to co-existence of GH and GL versions:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;I need to use same repo for both GH and GL&lt;/li&gt;&#xA;&lt;li&gt;the submodule link for &lt;code&gt;public&lt;/code&gt; does not work on GL&lt;/li&gt;&#xA;&lt;li&gt;the site root is different - I have no custom domain forward for GitLab&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;using-same-repo&#34;&gt;Using same repo&lt;/h2&gt;&#xA;&lt;p&gt;To separate the GH and GL, I have added 2 remotes to repo and special branch &lt;code&gt;gitlab-pages&lt;/code&gt;.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Current Hugo setup on Github Pages</title>
-				<link>https://miroadamy.com/posts/2019-11-22-hugo-setup/</link>
-				<pubDate>Fri, 22 Nov 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-11-22-hugo-setup/</guid>
-				<description>&lt;h1 id=&#34;how-does-the-blog-setup-and-publishing-work&#34;&gt;How does the blog setup and publishing work&lt;/h1&gt;&#xA;&lt;p&gt;Before I forget, here is how the current configuration works.&lt;/p&gt;&#xA;&lt;p&gt;There are two repositories at play:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;source repo - &lt;a href=&#34;https://github.com/miroadamy/miroadamy.com&#34;&gt;https://github.com/miroadamy/miroadamy.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;github pages repo (== GHPR) - &lt;a href=&#34;https://github.com/miroadamy/miroadamy.github.io&#34;&gt;https://github.com/miroadamy/miroadamy.github.io&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The blog source repo contains only source files (.md, static media etc).&#xA;This repo has usual submodules under the &lt;code&gt;/themes&lt;/code&gt; - e.g. &lt;code&gt;/themes/even&lt;/code&gt; which is one currently used.&lt;/p&gt;&#xA;&lt;p&gt;The Githup pages repo contains generated static site, with &lt;code&gt;index.html&lt;/code&gt; that can be theoretically deployed in any hosting site or S3 bucket. Every push against the GHPR will be immediately visible.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>From Jekyll to Hugo</title>
-				<link>https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/</link>
-				<pubDate>Wed, 20 Nov 2019 23:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/</guid>
-				<description>&lt;p&gt;I have decided to consolidate all piecemeal versions of my blogpost uder one roof and at the same to do these four things&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;technology upgrade - from Jekyll to Hugo&lt;/li&gt;&#xA;&lt;li&gt;visual refresh of the page&lt;/li&gt;&#xA;&lt;li&gt;review tagging and categorization&lt;/li&gt;&#xA;&lt;li&gt;merge hidden posts from Wikis to one place&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;why-hugo-replaced-jekyll&#34;&gt;Why Hugo replaced Jekyll&lt;/h2&gt;&#xA;&lt;p&gt;The version 3 of my blog (see below for a bit of history) has been hosted on &lt;a href=&#34;https://pages.github.com/&#34;&gt;Github pages&lt;/a&gt; and using the default static site generators - &lt;a href=&#34;https://jekyllrb.com/&#34;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>New image that expresses my new undefined job title</title>
-				<link>https://miroadamy.com/posts/2015-02-16-grasshoper/</link>
-				<pubDate>Mon, 16 Feb 2015 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2015-02-16-grasshoper/</guid>
-				<description>&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/grasshopper.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;That is what I do - jump from project to project to topic to project. And back.&lt;/p&gt;&#xA;&lt;p&gt;It is uncertain how good is all this - but as they say:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;&amp;ldquo;If you cannot do something right, learn to enjoy doing it poorly&amp;rdquo;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
-			</item>
-			<item>
-				<title>Third time is a charm</title>
-				<link>https://miroadamy.com/posts/2014-08-22-jekyll-clean-theme/</link>
-				<pubDate>Fri, 22 Aug 2014 16:25:06 -0700</pubDate>
-				<guid>https://miroadamy.com/posts/2014-08-22-jekyll-clean-theme/</guid>
-				<description>&lt;p&gt;As part of &amp;ldquo;back to basics&amp;rdquo; software minimalism movement, I have exported the old Wordpress blog&#xA;and loaded it into Jekyll with intention to publish it on my Github&lt;/p&gt;&#xA;&lt;p&gt;This contains almost 10 years worth of history of my posts, plus few not yet previously unpublished posts.&lt;/p&gt;&#xA;&lt;p&gt;It is based on Jekyll Clean theme,&#xA;created by Scott Emmons - see it / get it from &lt;a href=&#34;https://github.com/scotte/jekyll-clean&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If you are interested in the Jekyll Clean theme:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Miro&#39;s World 2.0</title>
-				<link>https://miroadamy.com/posts/2013-12-31-httpsgithub-comradegastmiroadamy-dot-comwiki/</link>
-				<pubDate>Tue, 31 Dec 2013 00:54:46 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2013-12-31-httpsgithub-comradegastmiroadamy-dot-comwiki/</guid>
-				<description>&lt;p&gt;The continuation of the &lt;a href=&#34;http://miroadamy.wordpress.com&#34;&gt;old Wordpress blog&lt;/a&gt; with more agreeable tools: Github Wiki + Gollum, Markdown and Git.&lt;/p&gt;&#xA;&lt;p&gt;My old blog at Miro&amp;rsquo;s World has been kinda neglected in last two years. I have written several entries and published them only internally. I have decided now to pull those of the entries that do not contain customer references, code or customer IP out.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Here we go again</title>
-				<link>https://miroadamy.com/posts/2009-12-30-blog-reloade/</link>
-				<pubDate>Wed, 30 Dec 2009 12:56:40 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2009-12-30-blog-reloade/</guid>
-				<description>&lt;p&gt;This is reloaded version of my &lt;a href=&#34;http://thinkwrap.wordpress.com/2009/12/29/the-fork-at-the-end-of-this-blog/&#34;&gt;previous blog &lt;/a&gt;- or continuation of the fork.&lt;/p&gt;&#xA;&lt;p&gt;First thing to start is to explain why did I do something quite contra-productive as relocate the blog and loose all the audience - however small it could have been.&lt;/p&gt;&#xA;&lt;p&gt;It would seem that I like restarts and things reloaded. I did pick a &lt;a href=&#34;http://canada.gc.ca/&#34;&gt;new country&lt;/a&gt; to become new home for me and my family (if emigration is not a restart, what else is ?).  Back in 2004 we have started Thinknostic to be &#34;Montage Reloaded&#34; - a new incarnation of the company I worked for before and liked it a lot. The same story repeats with blogging.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Lost in the social networks</title>
-				<link>https://miroadamy.com/posts/2009-05-17-lost-in-the-social-networks/</link>
-				<pubDate>Sun, 17 May 2009 23:09:35 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2009-05-17-lost-in-the-social-networks/</guid>
-				<description>&lt;p&gt;This is public answer to all who were asking why is my blog so badly neglected. Short answer is: It is because I am pretty active elsewhere and did not really find any additional time to allocate. If you are busy person, now you know, see ya later. If you are curious what elsewhere means, read on.&lt;/p&gt;&#xA;&lt;p&gt;Last year and before, blogosphere and this blog was *only* part of the social networking space I was paying attention to. Since about 3-4 months I started to really pay attention to Facebook. I originally joined to find out what my son and couple of friends are up to and somehow I started to see value in this channel of communication. Recently, even my nephews and children of a very good friend that moved from Ottawa to Europe.  So Facebook became the &#34;generation bridge&#34; and channel for stuff out of workspace.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>About time to break the silence</title>
-				<link>https://miroadamy.com/posts/2008-11-16-about-time-to-break-the-silence/</link>
-				<pubDate>Sun, 16 Nov 2008 00:32:03 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2008-11-16-about-time-to-break-the-silence/</guid>
-				<description>&lt;p&gt;Several people asked what is going on with me: no blog posts for almost a month, litlle presence on Gtalk / MSN. It is simpler to answer this way that write same email over and over.&lt;/p&gt;&#xA;&lt;p&gt;Unfortunately the reason for being quiet is not that I am taking time off and enjoying myself somewhere in Caribbean on a secluded island without internet connection. Those who know me well also know that I would never go somewhere without access to Web for longer period of time than week - and even that would cause serious withdrawal issues. I am in Ottawa or Montreal or somewhere in between - physically or virtually.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Weird kind of spam that passes through Akismet</title>
-				<link>https://miroadamy.com/posts/2008-04-20-weird-kind-of-spam-that-passes-through-akismet/</link>
-				<pubDate>Sun, 20 Apr 2008 18:24:19 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-04-20-weird-kind-of-spam-that-passes-through-akismet/</guid>
-				<description>&lt;p&gt;Spam has always been a big problem for all blogs. Fortunately, worpress.com provides wonderfull Akismet  spam filter which is works amazingly well. I do have switched on moderation for all comments, to make sure no spam gets through, but without Akismet it would be impossible to manage it because of the spam volume. Since I started this blog (August 2006), it caught over 17&#39;000 (yes, seventeen thousands) spam posts. In other words, about 30 spam comments a day or almost 60 spam comments per published post.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Finally over 16 :-)</title>
-				<link>https://miroadamy.com/posts/2008-03-26-finally-over-16/</link>
-				<pubDate>Wed, 26 Mar 2008 23:32:36 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-03-26-finally-over-16/</guid>
-				<description>&lt;p&gt;I did not even notice that the visit counter left the 16 bit domain sometimes during last few days. Now it shows about 67 000 visits. Honestly, I am pleasantly surprised how many people found this blog worthy their time :-). Thanks to you all ...&lt;/p&gt;&#xA;&lt;p&gt;Next boundary is of course 128K, 256K, 512K hits and finally a &#34;Megahit&#34;. But that&#39;s far far away.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Joel&#39;s gems</title>
-				<link>https://miroadamy.com/posts/2007-12-20-joels-gems/</link>
-				<pubDate>Thu, 20 Dec 2007 01:51:31 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-12-20-joels-gems/</guid>
-				<description>&lt;p&gt;One of the most readable, original blogers out there, writing on software development practice and techniques - &lt;a href=&#34;http://www.joelonsoftware.com/&#34; target=&#34;_blank&#34;&gt;Joel Spolsky&lt;/a&gt; - published an excellent 3 part Talk at Yale: &lt;a href=&#34;http://www.joelonsoftware.com/items/2007/12/03.html&#34; target=&#34;_blank&#34;&gt;Part1&lt;/a&gt;, &lt;a href=&#34;http://www.joelonsoftware.com/items/2007/12/04.html&#34; target=&#34;_blank&#34;&gt;Part2 &lt;/a&gt;and &lt;a href=&#34;http://www.joelonsoftware.com/items/2007/12/05.html&#34; target=&#34;_blank&#34;&gt;Part3&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;b&gt;You will find out:&lt;/b&gt;&lt;/p&gt;&#xA;&lt;p&gt;- what two computer science courses were most useful in his university studies&lt;br /&gt;&#xA;(one that was not really a comp-sci and one he decided to drop)&lt;br /&gt;&#xA;- why is it tough to be an in-house programmer&lt;br /&gt;&#xA;- why is the quality of many in-house systems so bad&lt;br /&gt;&#xA;- what is this &#34;quality thing&#34; anyway&lt;br /&gt;&#xA;- why is specification futile&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Great Spring blog</title>
-				<link>https://miroadamy.com/posts/2007-12-19-great-spring-blog/</link>
-				<pubDate>Wed, 19 Dec 2007 15:42:54 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-12-19-great-spring-blog/</guid>
-				<description>&lt;p&gt;in case you have not noticed - Interface21 aka SpringSource (great name change, btw) runs a &lt;a href=&#34;http://blog.interface21.com/&#34; target=&#34;_blank&#34;&gt;blog&lt;/a&gt; with lots of hidden treasures inside.&lt;/p&gt;&#xA;&lt;p&gt;Recent article describes new addition to Spring portfolio which is territory within my &#34;watched space&#34;: enterprise integration. See the &lt;a href=&#34;http://blog.interface21.com/main/2007/12/14/spring-integration-a-new-addition-to-the-spring-portfolio/&#34; target=&#34;_blank&#34;&gt;blog entry&lt;/a&gt; for more.&lt;a href=&#34;http://blog.interface21.com/main/2007/12/14/spring-integration-a-new-addition-to-the-spring-portfolio/&#34; target=&#34;_blank&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;If you are in corporate space that is keen on &#34;standards&#34;, the &lt;a href=&#34;http://blog.interface21.com/main/2007/11/09/a-response-to-ejb-3-and-spring-comparative-analysis/&#34; target=&#34;_blank&#34;&gt;comparison of Spring vs EJB3&lt;/a&gt; is very good article as well. Not that EJB would matter too much these days (IMHO) - but a nice read nevertheless.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Crossing bit boundaries</title>
-				<link>https://miroadamy.com/posts/2007-11-19-crossing-bit-boundaries/</link>
-				<pubDate>Mon, 19 Nov 2007 23:41:31 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-11-19-crossing-bit-boundaries/</guid>
-				<description>&lt;p&gt;Today is a special day for this blog as two bit boundaries were crossed. This is post number 256, which means that I have used all 8 bit numbers for numbering and jumped into nine bit space. The byte is not enough any more - vive la 0x100.&lt;/p&gt;&#xA;&lt;p&gt;Another boundary crossed today is number of hits as tracked by Wordpress (which does not count my visits). In this case the number reached and crossed was 0x8000 or 32768 decimal, which brings us to upper half of the 16 bit address space. From today, full 16 bit counter must be used - and it must be even &#34;unsigned short int&#34; :-).&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>BOTD: Raganwald by Reg Braithwaite</title>
-				<link>https://miroadamy.com/posts/2007-10-17-botd-raganwald-by-reg-braithwaite/</link>
-				<pubDate>Wed, 17 Oct 2007 23:10:03 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-10-17-botd-raganwald-by-reg-braithwaite/</guid>
-				<description>&lt;p&gt;Many good posts about programming, coding, business, aesthetics, with nice touch of wisdom, If you are into programming languages, do not miss &lt;a href=&#34;http://weblog.raganwald.com/2007/04/writing-programs-for-people-to-read.html&#34;&gt;this one&lt;/a&gt;, &lt;a href=&#34;http://weblog.raganwald.com/2006/11/significance-of-meta-circular_22.html&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; and &lt;a href=&#34;http://weblog.raganwald.com/2007/01/closures-and-higher-order-functions.html&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt;. If you are more into process and management, try &lt;a href=&#34;http://weblog.raganwald.com/2007/09/ockhams-razor-as-it-applies-to-big.html&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; and &lt;a href=&#34;http://weblog.raganwald.com/2004/08/taking-work-personally.html&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; or &lt;a href=&#34;http://weblog.raganwald.com/2005/10/im-not-young-enough-to-know-everything.html&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt;. There also &lt;a href=&#34;http://weblog.raganwald.com/2007/10/three-stories-about-tao.html&#34; target=&#34;_blank&#34;&gt;deeper&lt;/a&gt; and &lt;a href=&#34;http://weblog.raganwald.com/2007/02/programming-language-stories.html&#34; target=&#34;_blank&#34;&gt;lighter&lt;/a&gt; stuff :-)&lt;br /&gt;&#xA;As Reg says about popular bloposts&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;One model for popular writing is that it panders to the reader&#39;s prejudices. Plain and simple. People like writing that validates them and especially their ideas. &lt;/em&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>BOTD: Figuring out computer science</title>
-				<link>https://miroadamy.com/posts/2007-10-05-botd-figuring-out-computer-science/</link>
-				<pubDate>Fri, 05 Oct 2007 23:18:18 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-10-05-botd-figuring-out-computer-science/</guid>
-				<description>&lt;p&gt;It is all about deep questions and problems computer science. Including the question whether such thing as computer &lt;strong&gt;science&lt;/strong&gt; &lt;a href=&#34;http://www.cs.auckland.ac.nz/~alan/workingnotes/AC65.pdf&#34; target=&#34;_blank&#34;&gt;actually exists&lt;/a&gt;. I thing it does, but have occasional moments of doubts - mostly when I read something related to real science :-).&lt;/p&gt;&#xA;&lt;p&gt;What does Andreas Zwinkau (it is read as ts-win-cow, my anglophone friends ;-)) think about it, can be found &lt;a href=&#34;http://focs.wordpress.com/&#34; target=&#34;_blank&#34;&gt;http://focs.wordpress.com/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;His comments are amazingly deep for such a young guy. I wish when I was getting my comp-sci degree (1981-1986) we have had the same wonderful things these young fellas have now: ubiquitous internet and really world wide web with Google that actually makes it useful, Linux and many other wonderful open source projects (Apache, Jakarta, Firefox, Eclipse - you name it). Can you imagine studying computer science in a world where the Web does not exist (yet) ?&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>BOTD: Michael&#39;s Thoughts</title>
-				<link>https://miroadamy.com/posts/2007-10-04-botd-michaels-thoughts/</link>
-				<pubDate>Thu, 04 Oct 2007 21:34:56 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-10-04-botd-michaels-thoughts/</guid>
-				<description>&lt;p&gt;Good selection of news, observations and comments on stuff that is happening around. There seems to be pretty good match between what &lt;a href=&#34;http://www.michaelsampson.net/&#34; target=&#34;_blank&#34;&gt;Michael&lt;/a&gt; considers blogworthy and my areas of interest - as I found there lot of interesting pieces.&lt;/p&gt;&#xA;&lt;p&gt;It is mostly news - but not only news. It is worth browsing through archive, just to discover small jewels - like this &lt;a href=&#34;http://www.michaelsampson.net/2006/12/seven_things_de.html&#34; target=&#34;_blank&#34;&gt;one&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;If you had a top 7 tips list for managing the flood of digital information, what would it be?&lt;/em&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>BOTD: The Reader</title>
-				<link>https://miroadamy.com/posts/2007-09-22-botd-the-reader/</link>
-				<pubDate>Sat, 22 Sep 2007 22:06:21 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-09-22-botd-the-reader/</guid>
-				<description>&lt;p&gt;Today&#39;s Blog of the Day is &#34;The Reader&#34;.&lt;/p&gt;&#xA;&lt;p&gt;Everything about ebooks and readers - all the stuff I like. See at &lt;a href=&#34;http://wowio.wordpress.com/&#34; target=&#34;_blank&#34;&gt;http://wowio.wordpress.com/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Here I discovered that Sony is &lt;a href=&#34;http://wowio.wordpress.com/2007/09/10/new-sony-readers/&#34; target=&#34;_blank&#34;&gt;assumably preparing new version of reader - PRS 505&lt;/a&gt;. From the changes that should be included, none is IMHO really so important. The memory capacity of the reader with SD cards (which are reaching 8GB  these days) is much bigger than you ever will need. If I should pick some enhancements hat would make a huge difference, it would be:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>BOTD: Good Math, Bad Math</title>
-				<link>https://miroadamy.com/posts/2007-09-14-botd-good-math-bad-math/</link>
-				<pubDate>Fri, 14 Sep 2007 02:09:48 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-09-14-botd-good-math-bad-math/</guid>
-				<description>&lt;p&gt;Today&#39;s BOTD (Blog of the Day) is &#34;Good Math, Bad math&#34;.&lt;/p&gt;&#xA;&lt;p&gt;What it is about is summarized in its subtitle:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Finding the fun in good math. Squashing the bad math and the fools who promote it. &lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;There is no need to add anything to this.&lt;/p&gt;&#xA;&lt;p&gt;Only maybe an URL: &lt;a href=&#34;http://scienceblogs.com/goodmath/&#34; target=&#34;_blank&#34;&gt;http://scienceblogs.com/goodmath/&lt;/a&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>BOTD: Strange Maps</title>
-				<link>https://miroadamy.com/posts/2007-06-12-botd-strange-maps/</link>
-				<pubDate>Tue, 12 Jun 2007 21:39:44 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-06-12-botd-strange-maps/</guid>
-				<description>&lt;p&gt;Today&#39;s Blog Of The Day is named &lt;a href=&#34;http://strangemaps.wordpress.com/&#34; target=&#34;_blank&#34;&gt;Strange Maps&lt;/a&gt;, which strangely accurate name. If you have are into maps, or information visualization - or combination of both, do NOT visit this link, because you risk sticking there for few hours :-).&lt;/p&gt;&#xA;&lt;p&gt;Some ideas presented are quite original and wonderful: for example the map of the USA, having instead of names of the states name of the countries with same GDP as the state. You will find out that Canada == Texas, France == California and Hungary == New Mexico. Or a transposition of the map of Europe and map of Middle Earth - this places Rohan to southern Germany (not a bad match), Isengard is Hamburg. The Mordor ended up in Transylvania with Mount Doom in Romania, Minas Morgul in Hungary and Minas Tirith approximately in Austria.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Why blogging is important</title>
-				<link>https://miroadamy.com/posts/2007-05-31-why-blogging-is-important/</link>
-				<pubDate>Thu, 31 May 2007 23:06:24 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-05-31-why-blogging-is-important/</guid>
-				<description>&lt;p&gt;Joel Oleson is suffering if you do not blog ! Sounds strange ? Read the article &lt;strong&gt;&lt;em&gt;Join the SharePoint Blogging Revolution!&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;&#xA;at &lt;a href=&#34;http://blogs.msdn.com/joelo/archive/2007/05/25/you-don-t-blog-i-m-suffering-because-you-don-t-blog.aspx&#34; target=&#34;_blank&#34;&gt;http://blogs.msdn.com/joelo/archive/2007/05/25/you-don-t-blog-i-m-suffering-because-you-don-t-blog.aspx&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;He makes several very good points - which have very little to do with Sharepoint - but I think the best one is helping the &#34;organic indexing&#34; of the Web space and helping the search engines out there better rank content. I wrote about this &lt;a href=&#34;http://thinkwrap.wordpress.com/2007/01/11/repetition-is-the-mother-of-the-web/&#34; target=&#34;_blank&#34;&gt;while ago&lt;/a&gt;.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Reading blogs and feeds offline</title>
-				<link>https://miroadamy.com/posts/2007-05-30-reading-blogs-and-feeds-offline/</link>
-				<pubDate>Wed, 30 May 2007 19:30:18 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-05-30-reading-blogs-and-feeds-offline/</guid>
-				<description>&lt;p&gt;It happened! After starting my preferred feed aggregator - Google Reader I have noticed the new feature that sounded so good that I almost could not believe it: offline reading. Using new plugin - Google Gears, the reader can cache 2000 items locally and allows you to go offline and read the news, blogs or whatever you have subscribed to absolutely anywhere.&lt;/p&gt;&#xA;&lt;p&gt;The installation starts with this screen:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://miroadamy.com/images/screen-10.png&#34; title=&#34;screen-10.png&#34;&gt;&lt;img src=&#34;https://miroadamy.com/images/screen-10.png&#34; alt=&#34;screen-10.png&#34;  width=&#34;400&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>You should write blogs</title>
-				<link>https://miroadamy.com/posts/2007-04-18-you-should-write-blogs/</link>
-				<pubDate>Wed, 18 Apr 2007 21:00:05 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-04-18-you-should-write-blogs/</guid>
-				<description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;YOU should write blogs&lt;/strong&gt;. &lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Even if nobody reads them, you should write them. It&#39;s become pretty clear to  me that blogging is a source of both innovation and clarity. I have many of my  best ideas and insights while blogging. Struggling to express things that you&#39;re  thinking or feeling helps you understand them better.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;From &lt;a href=&#34;http://steve.yegge.googlepages.com/you-should-write-blogs&#34; target=&#34;_blank&#34;&gt;http://steve.yegge.googlepages.com/you-should-write-blogs&lt;/a&gt;.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Blogs of the week (9-Feb)</title>
-				<link>https://miroadamy.com/posts/2007-02-09-blogs-of-the-week-9-feb/</link>
-				<pubDate>Fri, 09 Feb 2007 19:51:46 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-02-09-blogs-of-the-week-9-feb/</guid>
-				<description>&lt;p&gt;&lt;strong&gt;1) &lt;a href=&#34;http://www.schneier.com/blog/&#34;&gt;Bruce Schneier&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Bruce is author of several excellent books on cryptography, from very easy, thriller like read to a classic work &lt;a href=&#34;http://www.schneier.com/book-applied.html&#34;&gt;Applied Cryptograhy&lt;/a&gt; (highly recommended). The blog goes back to 2004 and is fascinating read.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;2) &lt;a href=&#34;http://www.internet-nexus.com/&#34;&gt;Paul Thurrott&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Paul is the Windows guy from &lt;a href=&#34;http://www.twit.tv/ww&#34;&gt;Windows Weekly&lt;/a&gt; podcast (recommended) who also runs the &lt;a href=&#34;http://www.winsupersite.com/&#34;&gt;Winsupersite&lt;/a&gt; . He is one of the few people who focus on Microsoft technology and still keep balanced, fair view of the affairs. Paul is certainly not a Microsoft fanboy - and obviously not a Microsoft hater. He seems to share the same balanced approach in case of Apple and OS-X - he appreciates his strengths without being an Apple zealot.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Webbits - 2007-02</title>
-				<link>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</link>
-				<pubDate>Sun, 04 Feb 2007 23:38:11 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</guid>
-				<description>&lt;p&gt;Time to clean up the link cache once again.&lt;/p&gt;&#xA;&lt;p&gt;Obviously, most of the news on Techsites are Vista related. Web Worker&#39;s daily gives you &lt;a href=&#34;http://webworkerdaily.com/2007/01/31/10-reasons-for-the-windows-web-worker-to-upgrade-to-vistaor-not/&#34;&gt;10 reasons why to upgrade to Vista and 10 reasons why not&lt;/a&gt;. MacHouse comments on &lt;a href=&#34;http://homepage.mac.com/mercutio2/MacHouse/page1/page1.html&#34;&gt;complicated upgrade paths&lt;/a&gt; and Brian Briggs offers &lt;a href=&#34;http://www.bbspot.com/News/2007/02/windows-vista-upgrade-decision-flowchart.html&#34;&gt;decision chart for the updgradees&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;General spirit - compared to the launch of Windows 95 - is fairly cynical. The italian Mac bloggers &lt;a href=&#34;http://macintosh.wordpress.com/2007/01/29/prepararsi-non-solo-spiritualmente-alluscita-di-vista/&#34;&gt;sums it up&lt;/a&gt;: Niente di nuovo in Vista. So does &lt;a href=&#34;http://uploads.wordpress.com/2007/02/04/the-%E2%80%9Cwow%E2%80%9D-started-five-years-ago/&#34;&gt;this one&lt;/a&gt;. This site shows some &lt;a href=&#34;http://www.flickr.com/photo_zoom.gne?id=376525899&amp;amp;context=pool-35034346867@N01&amp;amp;size=o&#34;&gt;real innovation&lt;/a&gt; :-). Despite it is Vista launch, Steve Jobs and OS-X seems to get almost as much publicity as Vista and as few bloggers commented - Microsoft does not take it easy - see &lt;a href=&#34;http://psychohistory.wordpress.com/2007/02/04/bill-gates-loses-his-cool/&#34;&gt;Bill Gates TV appearance&lt;/a&gt;.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Repetition is the mother of ... the Web</title>
-				<link>https://miroadamy.com/posts/2007-01-11-repetition-is-the-mother-of-the-web/</link>
-				<pubDate>Thu, 11 Jan 2007 21:39:50 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-01-11-repetition-is-the-mother-of-the-web/</guid>
-				<description>&lt;p&gt;I had a discussion few days ago with a friend of mine on blogging. The topic was that as soon  as something happens on the Net, thousands  and sometimes even more people are  writing, posting, discussing and blogging about the very same topic. A sort of information tidal wave that spreads across the cyberspace. Which was according to my friend huge waste of time and energy. Generally, he meant, from a whole community perspective, it makes no sense to write about something unless there is reasonable chance you will be saying something very unique that nobody else will likely say - otherwise it adds no value, just clutters the content by repeating and rephrasing the already said. At first it sounded reasonably sound ;-), but the longer I was thinking about it, the more I was convinced it may be quite the opposite.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Statistics are fun</title>
-				<link>https://miroadamy.com/posts/2006-12-23-statistics-are-fun/</link>
-				<pubDate>Sat, 23 Dec 2006 23:42:10 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-12-23-statistics-are-fun/</guid>
-				<description>&lt;p&gt;I have discovered recently the nice feature of Wordpress - Dashboard which shows number of visits, but also shows incoming links and search phrases the people used to land on my blog. Sometimes, they provide really interesting and surprising insights. Of course, I do not see who they are or where the visitors are coming from - so no privacy concerns.&lt;/p&gt;&#xA;&lt;p&gt;Because of my first name (which is btw abreviated form of Miroslav), I am getting some visits from the people interested in the works of    &lt;a href=&#34;http://en.wikipedia.org/wiki/Joan_Mir%C3%B3&#34;&gt;Joan Miró&lt;/a&gt; - spanish/catalan artist. Must be quite a disappointment for them, sorry. Nothing to do with visual arts here - unless you count art of coding ;-).&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Are blogs the threat for professional journalists ?</title>
-				<link>https://miroadamy.com/posts/2006-11-25-are-blogs-the-threat-for-professional-journalists/</link>
-				<pubDate>Sat, 25 Nov 2006 23:28:32 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-11-25-are-blogs-the-threat-for-professional-journalists/</guid>
-				<description>&lt;p&gt;Thanks to 6 hours difference, I usually read tomorrow edition of Slovak and Czech newspapers on the Net one day ahead. Most of them switches to new edition at midnight, which is 6PM our time. I am doing this for several years already. What is different between now and 2-3 years ago is what I read. While before it were mostly articles written by journalists  and news industry professionals, now  I read mostly blogs. On &lt;a href=&#34;http://blog.sme.sk/&#34;&gt;SME blog&lt;/a&gt;, there are  few hundreds, maybe few thousands bloggers, and content they produce is usually much more interesting and readable that the content of official newspaper.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>The 30 day challenge</title>
-				<link>https://miroadamy.com/posts/2006-11-16-the-30-day-challenge/</link>
-				<pubDate>Thu, 16 Nov 2006 00:58:12 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-11-16-the-30-day-challenge/</guid>
-				<description>&lt;p&gt;It&#39;s been awfully quiet here in last two weeks. Mostly because it was awfully busy pretty much everywhere else. Being a single parent, even for a short and definite period of time is pretty demanding task. Now when my wife is back from the trip overseas, I do not spend my mornings and evening in various skating rinks, I am slowly catching up on everything that got backlogged, delayd and so on. Starting with my project and progressing slowly through my reading list, lot&#39;s of downloaded podcasts and LBNL (last but not least) the blog.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>On blogs, bloggers, blogging</title>
-				<link>https://miroadamy.com/posts/2006-08-22-on-blogs-bloggers-blogging/</link>
-				<pubDate>Tue, 22 Aug 2006 07:42:55 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2006-08-22-on-blogs-bloggers-blogging/</guid>
-				<description>&lt;p&gt;If you would ask me to pick one technology phenomenon that had the largest   impact on and was the most characteristic for the technology during the years   1995-2000, my answer would be “Web, of course”. For the years 2000-2003 I’d   vote for eCommerce, online applications and collaboration (like Google, eBay,   Amazon and many others). And for the last 3 years, I would definitely pick   online communities and blogs.&lt;/p&gt;&#xA;&lt;p&gt;Blogs are like tsunami that is changing the landscape of online content. There   is nothing really new about   &lt;span&gt;what&lt;/span&gt; they are. Blog   is user editable Web page, with very few features: implicit tracking of   entries by creating calendar-based index of older entries, ability to add   comments to the entries, limited form of categorization and tagging as well as   some simple, blog-2-blog notification mechanisms (backtracks and pings). The   only aspect in which blogs are different is simplicity of creating and running   a blog. The same way as Google made searching for on-line content very easy   and accessible, blogs are the very easy way how to create that content. Good   content is one of the main reasons why people go online.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Hello world!</title>
-				<link>https://miroadamy.com/posts/2006-08-19-hello-world-2/</link>
-				<pubDate>Sat, 19 Aug 2006 18:24:13 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2006-08-19-hello-world-2/</guid>
-				<description>&lt;p&gt;Since R&amp;amp;K published the &lt;a href=&#34;http://cm.bell-labs.com/cm/cs/cbook/&#34; title=&#34;The C Programming Language, Second Edition&#34;&gt;The Book&lt;/a&gt;, the title above became de-facto standard way how to start anything. Which is one of the two reasons why I used it as title for this very first entry. The second reason is that the friendly folks from to &lt;a href=&#34;http://wordpress.com/&#34;&gt;Wordpress.com&lt;/a&gt; have created the title and the first blog entry for me.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Blog on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/blog/</link>
+    <description>Recent content in Blog on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Tue, 17 Dec 2019 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>30 day commit challenge - Checkpoint 1</title>
+      <link>https://miroadamy.com/posts/2019-12-17-30-day-commit-challenge-1/</link>
+      <pubDate>Tue, 17 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-17-30-day-commit-challenge-1/</guid>
+      <description>&lt;p&gt;Time to make checkpoint number 1 - it is day 11 of 30.&lt;/p&gt;&#xA;&lt;p&gt;So far - out of this 11 days I have 10 days with commits. The missing day was fully dedicated to working on presentation and documentation, that unfortunately ends up Confluence and Google Doc, not in some proper textual format (read: Markdown or RestructuredText) backed by a repository.&lt;/p&gt;&#xA;&lt;p&gt;Stuff that I worked on:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;some minor updates to resume (added AWS badges, fixed some typos)&lt;/li&gt;&#xA;&lt;li&gt;notes from certification courses + code fragments&lt;/li&gt;&#xA;&lt;li&gt;scripts for automation of documents / ebooks backup from iCloud to local drives&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Most commits went to documentation / practice code for my project &amp;ldquo;Many ways to Kubernetes&amp;rdquo; where I play with building up K8s clusters using different approaches. So far I did the &amp;ldquo;Kubernetes the hard way&amp;rdquo; - following the course from Linux Academy (&lt;a href=&#34;https://linuxacademy.com/cp/modules/view/id/221%29&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://linuxacademy.com/cp/modules/view/id/221)&lt;/a&gt;,&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>30 day commit challenge</title>
+      <link>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</link>
+      <pubDate>Fri, 06 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</guid>
+      <description>&lt;p&gt;My work in last few years took my away from practical coding towards DevOps. Despite the increased role of IaaC in our DevOps, this often means living in iTerm and AWS console with interaction not being captured in any form.&lt;/p&gt;&#xA;&lt;p&gt;On writing side, lots of my output shifted from code towards writing text in Wiki&amp;rsquo;s, GoogleDocs and more and more in Slack messages. The code I write are short one-liners or small scripts with very short life span. This makes me a bit sad as there is no sense of accomplishment at the end of the day or week. The &lt;code&gt;git log&lt;/code&gt; does not work over Wiki, AWS console, iTerm, Slack and GoogleDrive.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>BOTD - Blog of the Day</title>
+      <link>https://miroadamy.com/posts/2019-12-05-silvias-blog/</link>
+      <pubDate>Thu, 05 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-05-silvias-blog/</guid>
+      <description>&lt;p&gt;Today&amp;rsquo;s blog of the day is a special one. It does not deal with cloud, DevOps or distributed systems. The theme of the blog is travel, life of digital nomad and observations on life from a perspective of a smart young woman, working as Online English teacher and travelling a lot while doing so - &lt;a href=&#34;https://bookandtravel.blog/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://bookandtravel.blog/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;What makes this blog dear and interesting to me is that it&amp;rsquo;s author is my daughter Silvia. What could make the blog interesting and valuable for other audience (especially those learning English who are interested in personal development) is the format of the entries - as they combine reading and language teaching. Each post contains 10-20 emphasized words or expressions that are explained in footnotes - check &lt;a href=&#34;https://bookandtravel.blog/2019/11/19/what-traveling-really-means/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;this one&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Building Hugo as well on GitLab pages</title>
+      <link>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</link>
+      <pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;Parallel building challenges&#xA;    &lt;div id=&#34;parallel-building-challenges&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#parallel-building-challenges&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Unlike Github, Gitlab considers Hugo blogs first class citizens and does not impose any restrictions on repo naming.&lt;/p&gt;&#xA;&lt;p&gt;I had 3 challenges to overcome related to co-existence of GH and GL versions:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;I need to use same repo for both GH and GL&lt;/li&gt;&#xA;&lt;li&gt;the submodule link for &lt;code&gt;public&lt;/code&gt; does not work on GL&lt;/li&gt;&#xA;&lt;li&gt;the site root is different - I have no custom domain forward for GitLab&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Using same repo&#xA;    &lt;div id=&#34;using-same-repo&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#using-same-repo&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;To separate the GH and GL, I have added 2 remotes to repo and special branch &lt;code&gt;gitlab-pages&lt;/code&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Current Hugo setup on Github Pages</title>
+      <link>https://miroadamy.com/posts/2019-11-22-hugo-setup/</link>
+      <pubDate>Fri, 22 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-22-hugo-setup/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;How does the blog setup and publishing work&#xA;    &lt;div id=&#34;how-does-the-blog-setup-and-publishing-work&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#how-does-the-blog-setup-and-publishing-work&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Before I forget, here is how the current configuration works.&lt;/p&gt;&#xA;&lt;p&gt;There are two repositories at play:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;source repo - &lt;a href=&#34;https://github.com/miroadamy/miroadamy.com&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://github.com/miroadamy/miroadamy.com&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;github pages repo (== GHPR) - &lt;a href=&#34;https://github.com/miroadamy/miroadamy.github.io&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://github.com/miroadamy/miroadamy.github.io&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The blog source repo contains only source files (.md, static media etc).&#xA;This repo has usual submodules under the &lt;code&gt;/themes&lt;/code&gt; - e.g. &lt;code&gt;/themes/even&lt;/code&gt; which is one currently used.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>From Jekyll to Hugo</title>
+      <link>https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/</link>
+      <pubDate>Wed, 20 Nov 2019 23:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-20-from-jekyll-to-hugo/</guid>
+      <description>&lt;p&gt;I have decided to consolidate all piecemeal versions of my blogpost uder one roof and at the same to do these four things&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;technology upgrade - from Jekyll to Hugo&lt;/li&gt;&#xA;&lt;li&gt;visual refresh of the page&lt;/li&gt;&#xA;&lt;li&gt;review tagging and categorization&lt;/li&gt;&#xA;&lt;li&gt;merge hidden posts from Wikis to one place&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Why Hugo replaced Jekyll&#xA;    &lt;div id=&#34;why-hugo-replaced-jekyll&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#why-hugo-replaced-jekyll&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The version 3 of my blog (see below for a bit of history) has been hosted on &lt;a href=&#34;https://pages.github.com/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Github pages&lt;/a&gt; and using the default static site generators - &lt;a href=&#34;https://jekyllrb.com/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>New image that expresses my new undefined job title</title>
+      <link>https://miroadamy.com/posts/2015-02-16-grasshoper/</link>
+      <pubDate>Mon, 16 Feb 2015 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-02-16-grasshoper/</guid>
+      <description>&lt;p&gt;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;low&#34;&#xA;    alt=&#34;&#34;&#xA;    src=&#34;https://miroadamy.com/images/grasshopper.png&#34;&#xA;    &gt;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;That is what I do - jump from project to project to topic to project. And back.&lt;/p&gt;&#xA;&lt;p&gt;It is uncertain how good is all this - but as they say:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&amp;ldquo;If you cannot do something right, learn to enjoy doing it poorly&amp;rdquo;&lt;/p&gt;&#xA;&lt;/blockquote&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Third time is a charm</title>
+      <link>https://miroadamy.com/posts/2014-08-22-jekyll-clean-theme/</link>
+      <pubDate>Fri, 22 Aug 2014 16:25:06 -0700</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2014-08-22-jekyll-clean-theme/</guid>
+      <description>&lt;p&gt;As part of &amp;ldquo;back to basics&amp;rdquo; software minimalism movement, I have exported the old Wordpress blog&#xA;and loaded it into Jekyll with intention to publish it on my Github&lt;/p&gt;&#xA;&lt;p&gt;This contains almost 10 years worth of history of my posts, plus few not yet previously unpublished posts.&lt;/p&gt;&#xA;&lt;p&gt;It is based on Jekyll Clean theme,&#xA;created by Scott Emmons - see it / get it from &lt;a href=&#34;https://github.com/scotte/jekyll-clean&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;github&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;If you are interested in the Jekyll Clean theme:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Miro&#39;s World 2.0</title>
+      <link>https://miroadamy.com/posts/2013-12-31-httpsgithub-comradegastmiroadamy-dot-comwiki/</link>
+      <pubDate>Tue, 31 Dec 2013 00:54:46 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-12-31-httpsgithub-comradegastmiroadamy-dot-comwiki/</guid>
+      <description>&lt;p&gt;The continuation of the &lt;a href=&#34;http://miroadamy.wordpress.com&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;old Wordpress blog&lt;/a&gt; with more agreeable tools: Github Wiki + Gollum, Markdown and Git.&lt;/p&gt;&#xA;&lt;p&gt;My old blog at Miro&amp;rsquo;s World has been kinda neglected in last two years. I have written several entries and published them only internally. I have decided now to pull those of the entries that do not contain customer references, code or customer IP out.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Here we go again</title>
+      <link>https://miroadamy.com/posts/2009-12-30-blog-reloade/</link>
+      <pubDate>Wed, 30 Dec 2009 12:56:40 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-12-30-blog-reloade/</guid>
+      <description>&lt;p&gt;This is reloaded version of my &lt;a href=&#34;http://thinkwrap.wordpress.com/2009/12/29/the-fork-at-the-end-of-this-blog/&#34;&gt;previous blog &lt;/a&gt;- or continuation of the fork.&lt;/p&gt;&#xA;&lt;p&gt;First thing to start is to explain why did I do something quite contra-productive as relocate the blog and loose all the audience - however small it could have been.&lt;/p&gt;&#xA;&lt;p&gt;It would seem that I like restarts and things reloaded. I did pick a &lt;a href=&#34;http://canada.gc.ca/&#34;&gt;new country&lt;/a&gt; to become new home for me and my family (if emigration is not a restart, what else is ?).  Back in 2004 we have started Thinknostic to be &#34;Montage Reloaded&#34; - a new incarnation of the company I worked for before and liked it a lot. The same story repeats with blogging.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Lost in the social networks</title>
+      <link>https://miroadamy.com/posts/2009-05-17-lost-in-the-social-networks/</link>
+      <pubDate>Sun, 17 May 2009 23:09:35 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-05-17-lost-in-the-social-networks/</guid>
+      <description>&lt;p&gt;This is public answer to all who were asking why is my blog so badly neglected. Short answer is: It is because I am pretty active elsewhere and did not really find any additional time to allocate. If you are busy person, now you know, see ya later. If you are curious what elsewhere means, read on.&lt;/p&gt;&#xA;&lt;p&gt;Last year and before, blogosphere and this blog was *only* part of the social networking space I was paying attention to. Since about 3-4 months I started to really pay attention to Facebook. I originally joined to find out what my son and couple of friends are up to and somehow I started to see value in this channel of communication. Recently, even my nephews and children of a very good friend that moved from Ottawa to Europe.  So Facebook became the &#34;generation bridge&#34; and channel for stuff out of workspace.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>About time to break the silence</title>
+      <link>https://miroadamy.com/posts/2008-11-16-about-time-to-break-the-silence/</link>
+      <pubDate>Sun, 16 Nov 2008 00:32:03 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-11-16-about-time-to-break-the-silence/</guid>
+      <description>&lt;p&gt;Several people asked what is going on with me: no blog posts for almost a month, litlle presence on Gtalk / MSN. It is simpler to answer this way that write same email over and over.&lt;/p&gt;&#xA;&lt;p&gt;Unfortunately the reason for being quiet is not that I am taking time off and enjoying myself somewhere in Caribbean on a secluded island without internet connection. Those who know me well also know that I would never go somewhere without access to Web for longer period of time than week - and even that would cause serious withdrawal issues. I am in Ottawa or Montreal or somewhere in between - physically or virtually.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Weird kind of spam that passes through Akismet</title>
+      <link>https://miroadamy.com/posts/2008-04-20-weird-kind-of-spam-that-passes-through-akismet/</link>
+      <pubDate>Sun, 20 Apr 2008 18:24:19 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-20-weird-kind-of-spam-that-passes-through-akismet/</guid>
+      <description>&lt;p&gt;Spam has always been a big problem for all blogs. Fortunately, worpress.com provides wonderfull Akismet  spam filter which is works amazingly well. I do have switched on moderation for all comments, to make sure no spam gets through, but without Akismet it would be impossible to manage it because of the spam volume. Since I started this blog (August 2006), it caught over 17&#39;000 (yes, seventeen thousands) spam posts. In other words, about 30 spam comments a day or almost 60 spam comments per published post.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Finally over 16 :-)</title>
+      <link>https://miroadamy.com/posts/2008-03-26-finally-over-16/</link>
+      <pubDate>Wed, 26 Mar 2008 23:32:36 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-03-26-finally-over-16/</guid>
+      <description>&lt;p&gt;I did not even notice that the visit counter left the 16 bit domain sometimes during last few days. Now it shows about 67 000 visits. Honestly, I am pleasantly surprised how many people found this blog worthy their time :-). Thanks to you all ...&lt;/p&gt;&#xA;&lt;p&gt;Next boundary is of course 128K, 256K, 512K hits and finally a &#34;Megahit&#34;. But that&#39;s far far away.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Joel&#39;s gems</title>
+      <link>https://miroadamy.com/posts/2007-12-20-joels-gems/</link>
+      <pubDate>Thu, 20 Dec 2007 01:51:31 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-20-joels-gems/</guid>
+      <description>&lt;p&gt;One of the most readable, original blogers out there, writing on software development practice and techniques - &lt;a href=&#34;http://www.joelonsoftware.com/&#34; target=&#34;_blank&#34;&gt;Joel Spolsky&lt;/a&gt; - published an excellent 3 part Talk at Yale: &lt;a href=&#34;http://www.joelonsoftware.com/items/2007/12/03.html&#34; target=&#34;_blank&#34;&gt;Part1&lt;/a&gt;, &lt;a href=&#34;http://www.joelonsoftware.com/items/2007/12/04.html&#34; target=&#34;_blank&#34;&gt;Part2 &lt;/a&gt;and &lt;a href=&#34;http://www.joelonsoftware.com/items/2007/12/05.html&#34; target=&#34;_blank&#34;&gt;Part3&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;b&gt;You will find out:&lt;/b&gt;&lt;/p&gt;&#xA;&lt;p&gt;- what two computer science courses were most useful in his university studies&lt;br /&gt;&#xA;(one that was not really a comp-sci and one he decided to drop)&lt;br /&gt;&#xA;- why is it tough to be an in-house programmer&lt;br /&gt;&#xA;- why is the quality of many in-house systems so bad&lt;br /&gt;&#xA;- what is this &#34;quality thing&#34; anyway&lt;br /&gt;&#xA;- why is specification futile&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Great Spring blog</title>
+      <link>https://miroadamy.com/posts/2007-12-19-great-spring-blog/</link>
+      <pubDate>Wed, 19 Dec 2007 15:42:54 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-19-great-spring-blog/</guid>
+      <description>&lt;p&gt;in case you have not noticed - Interface21 aka SpringSource (great name change, btw) runs a &lt;a href=&#34;http://blog.interface21.com/&#34; target=&#34;_blank&#34;&gt;blog&lt;/a&gt; with lots of hidden treasures inside.&lt;/p&gt;&#xA;&lt;p&gt;Recent article describes new addition to Spring portfolio which is territory within my &#34;watched space&#34;: enterprise integration. See the &lt;a href=&#34;http://blog.interface21.com/main/2007/12/14/spring-integration-a-new-addition-to-the-spring-portfolio/&#34; target=&#34;_blank&#34;&gt;blog entry&lt;/a&gt; for more.&lt;a href=&#34;http://blog.interface21.com/main/2007/12/14/spring-integration-a-new-addition-to-the-spring-portfolio/&#34; target=&#34;_blank&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;If you are in corporate space that is keen on &#34;standards&#34;, the &lt;a href=&#34;http://blog.interface21.com/main/2007/11/09/a-response-to-ejb-3-and-spring-comparative-analysis/&#34; target=&#34;_blank&#34;&gt;comparison of Spring vs EJB3&lt;/a&gt; is very good article as well. Not that EJB would matter too much these days (IMHO) - but a nice read nevertheless.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Crossing bit boundaries</title>
+      <link>https://miroadamy.com/posts/2007-11-19-crossing-bit-boundaries/</link>
+      <pubDate>Mon, 19 Nov 2007 23:41:31 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-19-crossing-bit-boundaries/</guid>
+      <description>&lt;p&gt;Today is a special day for this blog as two bit boundaries were crossed. This is post number 256, which means that I have used all 8 bit numbers for numbering and jumped into nine bit space. The byte is not enough any more - vive la 0x100.&lt;/p&gt;&#xA;&lt;p&gt;Another boundary crossed today is number of hits as tracked by Wordpress (which does not count my visits). In this case the number reached and crossed was 0x8000 or 32768 decimal, which brings us to upper half of the 16 bit address space. From today, full 16 bit counter must be used - and it must be even &#34;unsigned short int&#34; :-).&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>BOTD: Raganwald by Reg Braithwaite</title>
+      <link>https://miroadamy.com/posts/2007-10-17-botd-raganwald-by-reg-braithwaite/</link>
+      <pubDate>Wed, 17 Oct 2007 23:10:03 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-17-botd-raganwald-by-reg-braithwaite/</guid>
+      <description>&lt;p&gt;Many good posts about programming, coding, business, aesthetics, with nice touch of wisdom, If you are into programming languages, do not miss &lt;a href=&#34;http://weblog.raganwald.com/2007/04/writing-programs-for-people-to-read.html&#34;&gt;this one&lt;/a&gt;, &lt;a href=&#34;http://weblog.raganwald.com/2006/11/significance-of-meta-circular_22.html&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; and &lt;a href=&#34;http://weblog.raganwald.com/2007/01/closures-and-higher-order-functions.html&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt;. If you are more into process and management, try &lt;a href=&#34;http://weblog.raganwald.com/2007/09/ockhams-razor-as-it-applies-to-big.html&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; and &lt;a href=&#34;http://weblog.raganwald.com/2004/08/taking-work-personally.html&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; or &lt;a href=&#34;http://weblog.raganwald.com/2005/10/im-not-young-enough-to-know-everything.html&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt;. There also &lt;a href=&#34;http://weblog.raganwald.com/2007/10/three-stories-about-tao.html&#34; target=&#34;_blank&#34;&gt;deeper&lt;/a&gt; and &lt;a href=&#34;http://weblog.raganwald.com/2007/02/programming-language-stories.html&#34; target=&#34;_blank&#34;&gt;lighter&lt;/a&gt; stuff :-)&lt;br /&gt;&#xA;As Reg says about popular bloposts&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;One model for popular writing is that it panders to the reader&#39;s prejudices. Plain and simple. People like writing that validates them and especially their ideas. &lt;/em&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>BOTD: Figuring out computer science</title>
+      <link>https://miroadamy.com/posts/2007-10-05-botd-figuring-out-computer-science/</link>
+      <pubDate>Fri, 05 Oct 2007 23:18:18 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-05-botd-figuring-out-computer-science/</guid>
+      <description>&lt;p&gt;It is all about deep questions and problems computer science. Including the question whether such thing as computer &lt;strong&gt;science&lt;/strong&gt; &lt;a href=&#34;http://www.cs.auckland.ac.nz/~alan/workingnotes/AC65.pdf&#34; target=&#34;_blank&#34;&gt;actually exists&lt;/a&gt;. I thing it does, but have occasional moments of doubts - mostly when I read something related to real science :-).&lt;/p&gt;&#xA;&lt;p&gt;What does Andreas Zwinkau (it is read as ts-win-cow, my anglophone friends ;-)) think about it, can be found &lt;a href=&#34;http://focs.wordpress.com/&#34; target=&#34;_blank&#34;&gt;http://focs.wordpress.com/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;His comments are amazingly deep for such a young guy. I wish when I was getting my comp-sci degree (1981-1986) we have had the same wonderful things these young fellas have now: ubiquitous internet and really world wide web with Google that actually makes it useful, Linux and many other wonderful open source projects (Apache, Jakarta, Firefox, Eclipse - you name it). Can you imagine studying computer science in a world where the Web does not exist (yet) ?&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>BOTD: Michael&#39;s Thoughts</title>
+      <link>https://miroadamy.com/posts/2007-10-04-botd-michaels-thoughts/</link>
+      <pubDate>Thu, 04 Oct 2007 21:34:56 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-04-botd-michaels-thoughts/</guid>
+      <description>&lt;p&gt;Good selection of news, observations and comments on stuff that is happening around. There seems to be pretty good match between what &lt;a href=&#34;http://www.michaelsampson.net/&#34; target=&#34;_blank&#34;&gt;Michael&lt;/a&gt; considers blogworthy and my areas of interest - as I found there lot of interesting pieces.&lt;/p&gt;&#xA;&lt;p&gt;It is mostly news - but not only news. It is worth browsing through archive, just to discover small jewels - like this &lt;a href=&#34;http://www.michaelsampson.net/2006/12/seven_things_de.html&#34; target=&#34;_blank&#34;&gt;one&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;If you had a top 7 tips list for managing the flood of digital information, what would it be?&lt;/em&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>BOTD: The Reader</title>
+      <link>https://miroadamy.com/posts/2007-09-22-botd-the-reader/</link>
+      <pubDate>Sat, 22 Sep 2007 22:06:21 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-22-botd-the-reader/</guid>
+      <description>&lt;p&gt;Today&#39;s Blog of the Day is &#34;The Reader&#34;.&lt;/p&gt;&#xA;&lt;p&gt;Everything about ebooks and readers - all the stuff I like. See at &lt;a href=&#34;http://wowio.wordpress.com/&#34; target=&#34;_blank&#34;&gt;http://wowio.wordpress.com/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Here I discovered that Sony is &lt;a href=&#34;http://wowio.wordpress.com/2007/09/10/new-sony-readers/&#34; target=&#34;_blank&#34;&gt;assumably preparing new version of reader - PRS 505&lt;/a&gt;. From the changes that should be included, none is IMHO really so important. The memory capacity of the reader with SD cards (which are reaching 8GB  these days) is much bigger than you ever will need. If I should pick some enhancements hat would make a huge difference, it would be:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>BOTD: Good Math, Bad Math</title>
+      <link>https://miroadamy.com/posts/2007-09-14-botd-good-math-bad-math/</link>
+      <pubDate>Fri, 14 Sep 2007 02:09:48 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-14-botd-good-math-bad-math/</guid>
+      <description>&lt;p&gt;Today&#39;s BOTD (Blog of the Day) is &#34;Good Math, Bad math&#34;.&lt;/p&gt;&#xA;&lt;p&gt;What it is about is summarized in its subtitle:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Finding the fun in good math. Squashing the bad math and the fools who promote it. &lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;There is no need to add anything to this.&lt;/p&gt;&#xA;&lt;p&gt;Only maybe an URL: &lt;a href=&#34;http://scienceblogs.com/goodmath/&#34; target=&#34;_blank&#34;&gt;http://scienceblogs.com/goodmath/&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>BOTD: Strange Maps</title>
+      <link>https://miroadamy.com/posts/2007-06-12-botd-strange-maps/</link>
+      <pubDate>Tue, 12 Jun 2007 21:39:44 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-12-botd-strange-maps/</guid>
+      <description>&lt;p&gt;Today&#39;s Blog Of The Day is named &lt;a href=&#34;http://strangemaps.wordpress.com/&#34; target=&#34;_blank&#34;&gt;Strange Maps&lt;/a&gt;, which strangely accurate name. If you have are into maps, or information visualization - or combination of both, do NOT visit this link, because you risk sticking there for few hours :-).&lt;/p&gt;&#xA;&lt;p&gt;Some ideas presented are quite original and wonderful: for example the map of the USA, having instead of names of the states name of the countries with same GDP as the state. You will find out that Canada == Texas, France == California and Hungary == New Mexico. Or a transposition of the map of Europe and map of Middle Earth - this places Rohan to southern Germany (not a bad match), Isengard is Hamburg. The Mordor ended up in Transylvania with Mount Doom in Romania, Minas Morgul in Hungary and Minas Tirith approximately in Austria.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Why blogging is important</title>
+      <link>https://miroadamy.com/posts/2007-05-31-why-blogging-is-important/</link>
+      <pubDate>Thu, 31 May 2007 23:06:24 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-31-why-blogging-is-important/</guid>
+      <description>&lt;p&gt;Joel Oleson is suffering if you do not blog ! Sounds strange ? Read the article &lt;strong&gt;&lt;em&gt;Join the SharePoint Blogging Revolution!&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;&#xA;at &lt;a href=&#34;http://blogs.msdn.com/joelo/archive/2007/05/25/you-don-t-blog-i-m-suffering-because-you-don-t-blog.aspx&#34; target=&#34;_blank&#34;&gt;http://blogs.msdn.com/joelo/archive/2007/05/25/you-don-t-blog-i-m-suffering-because-you-don-t-blog.aspx&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;He makes several very good points - which have very little to do with Sharepoint - but I think the best one is helping the &#34;organic indexing&#34; of the Web space and helping the search engines out there better rank content. I wrote about this &lt;a href=&#34;http://thinkwrap.wordpress.com/2007/01/11/repetition-is-the-mother-of-the-web/&#34; target=&#34;_blank&#34;&gt;while ago&lt;/a&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Reading blogs and feeds offline</title>
+      <link>https://miroadamy.com/posts/2007-05-30-reading-blogs-and-feeds-offline/</link>
+      <pubDate>Wed, 30 May 2007 19:30:18 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-30-reading-blogs-and-feeds-offline/</guid>
+      <description>&lt;p&gt;It happened! After starting my preferred feed aggregator - Google Reader I have noticed the new feature that sounded so good that I almost could not believe it: offline reading. Using new plugin - Google Gears, the reader can cache 2000 items locally and allows you to go offline and read the news, blogs or whatever you have subscribed to absolutely anywhere.&lt;/p&gt;&#xA;&lt;p&gt;The installation starts with this screen:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://miroadamy.com/images/screen-10.png&#34; title=&#34;screen-10.png&#34;&gt;&lt;img src=&#34;https://miroadamy.com/images/screen-10.png&#34; alt=&#34;screen-10.png&#34;  width=&#34;400&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>You should write blogs</title>
+      <link>https://miroadamy.com/posts/2007-04-18-you-should-write-blogs/</link>
+      <pubDate>Wed, 18 Apr 2007 21:00:05 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-18-you-should-write-blogs/</guid>
+      <description>&lt;p&gt;&lt;em&gt;&lt;strong&gt;YOU should write blogs&lt;/strong&gt;. &lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Even if nobody reads them, you should write them. It&#39;s become pretty clear to  me that blogging is a source of both innovation and clarity. I have many of my  best ideas and insights while blogging. Struggling to express things that you&#39;re  thinking or feeling helps you understand them better.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;From &lt;a href=&#34;http://steve.yegge.googlepages.com/you-should-write-blogs&#34; target=&#34;_blank&#34;&gt;http://steve.yegge.googlepages.com/you-should-write-blogs&lt;/a&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Blogs of the week (9-Feb)</title>
+      <link>https://miroadamy.com/posts/2007-02-09-blogs-of-the-week-9-feb/</link>
+      <pubDate>Fri, 09 Feb 2007 19:51:46 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-09-blogs-of-the-week-9-feb/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;1) &lt;a href=&#34;http://www.schneier.com/blog/&#34;&gt;Bruce Schneier&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Bruce is author of several excellent books on cryptography, from very easy, thriller like read to a classic work &lt;a href=&#34;http://www.schneier.com/book-applied.html&#34;&gt;Applied Cryptograhy&lt;/a&gt; (highly recommended). The blog goes back to 2004 and is fascinating read.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;2) &lt;a href=&#34;http://www.internet-nexus.com/&#34;&gt;Paul Thurrott&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Paul is the Windows guy from &lt;a href=&#34;http://www.twit.tv/ww&#34;&gt;Windows Weekly&lt;/a&gt; podcast (recommended) who also runs the &lt;a href=&#34;http://www.winsupersite.com/&#34;&gt;Winsupersite&lt;/a&gt; . He is one of the few people who focus on Microsoft technology and still keep balanced, fair view of the affairs. Paul is certainly not a Microsoft fanboy - and obviously not a Microsoft hater. He seems to share the same balanced approach in case of Apple and OS-X - he appreciates his strengths without being an Apple zealot.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Webbits - 2007-02</title>
+      <link>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</link>
+      <pubDate>Sun, 04 Feb 2007 23:38:11 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-04-webbits-2007-02/</guid>
+      <description>&lt;p&gt;Time to clean up the link cache once again.&lt;/p&gt;&#xA;&lt;p&gt;Obviously, most of the news on Techsites are Vista related. Web Worker&#39;s daily gives you &lt;a href=&#34;http://webworkerdaily.com/2007/01/31/10-reasons-for-the-windows-web-worker-to-upgrade-to-vistaor-not/&#34;&gt;10 reasons why to upgrade to Vista and 10 reasons why not&lt;/a&gt;. MacHouse comments on &lt;a href=&#34;http://homepage.mac.com/mercutio2/MacHouse/page1/page1.html&#34;&gt;complicated upgrade paths&lt;/a&gt; and Brian Briggs offers &lt;a href=&#34;http://www.bbspot.com/News/2007/02/windows-vista-upgrade-decision-flowchart.html&#34;&gt;decision chart for the updgradees&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;General spirit - compared to the launch of Windows 95 - is fairly cynical. The italian Mac bloggers &lt;a href=&#34;http://macintosh.wordpress.com/2007/01/29/prepararsi-non-solo-spiritualmente-alluscita-di-vista/&#34;&gt;sums it up&lt;/a&gt;: Niente di nuovo in Vista. So does &lt;a href=&#34;http://uploads.wordpress.com/2007/02/04/the-%E2%80%9Cwow%E2%80%9D-started-five-years-ago/&#34;&gt;this one&lt;/a&gt;. This site shows some &lt;a href=&#34;http://www.flickr.com/photo_zoom.gne?id=376525899&amp;amp;context=pool-35034346867@N01&amp;amp;size=o&#34;&gt;real innovation&lt;/a&gt; :-). Despite it is Vista launch, Steve Jobs and OS-X seems to get almost as much publicity as Vista and as few bloggers commented - Microsoft does not take it easy - see &lt;a href=&#34;http://psychohistory.wordpress.com/2007/02/04/bill-gates-loses-his-cool/&#34;&gt;Bill Gates TV appearance&lt;/a&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Repetition is the mother of ... the Web</title>
+      <link>https://miroadamy.com/posts/2007-01-11-repetition-is-the-mother-of-the-web/</link>
+      <pubDate>Thu, 11 Jan 2007 21:39:50 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-11-repetition-is-the-mother-of-the-web/</guid>
+      <description>&lt;p&gt;I had a discussion few days ago with a friend of mine on blogging. The topic was that as soon  as something happens on the Net, thousands  and sometimes even more people are  writing, posting, discussing and blogging about the very same topic. A sort of information tidal wave that spreads across the cyberspace. Which was according to my friend huge waste of time and energy. Generally, he meant, from a whole community perspective, it makes no sense to write about something unless there is reasonable chance you will be saying something very unique that nobody else will likely say - otherwise it adds no value, just clutters the content by repeating and rephrasing the already said. At first it sounded reasonably sound ;-), but the longer I was thinking about it, the more I was convinced it may be quite the opposite.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Statistics are fun</title>
+      <link>https://miroadamy.com/posts/2006-12-23-statistics-are-fun/</link>
+      <pubDate>Sat, 23 Dec 2006 23:42:10 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-23-statistics-are-fun/</guid>
+      <description>&lt;p&gt;I have discovered recently the nice feature of Wordpress - Dashboard which shows number of visits, but also shows incoming links and search phrases the people used to land on my blog. Sometimes, they provide really interesting and surprising insights. Of course, I do not see who they are or where the visitors are coming from - so no privacy concerns.&lt;/p&gt;&#xA;&lt;p&gt;Because of my first name (which is btw abreviated form of Miroslav), I am getting some visits from the people interested in the works of    &lt;a href=&#34;http://en.wikipedia.org/wiki/Joan_Mir%C3%B3&#34;&gt;Joan Miró&lt;/a&gt; - spanish/catalan artist. Must be quite a disappointment for them, sorry. Nothing to do with visual arts here - unless you count art of coding ;-).&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Are blogs the threat for professional journalists ?</title>
+      <link>https://miroadamy.com/posts/2006-11-25-are-blogs-the-threat-for-professional-journalists/</link>
+      <pubDate>Sat, 25 Nov 2006 23:28:32 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-11-25-are-blogs-the-threat-for-professional-journalists/</guid>
+      <description>&lt;p&gt;Thanks to 6 hours difference, I usually read tomorrow edition of Slovak and Czech newspapers on the Net one day ahead. Most of them switches to new edition at midnight, which is 6PM our time. I am doing this for several years already. What is different between now and 2-3 years ago is what I read. While before it were mostly articles written by journalists  and news industry professionals, now  I read mostly blogs. On &lt;a href=&#34;http://blog.sme.sk/&#34;&gt;SME blog&lt;/a&gt;, there are  few hundreds, maybe few thousands bloggers, and content they produce is usually much more interesting and readable that the content of official newspaper.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>The 30 day challenge</title>
+      <link>https://miroadamy.com/posts/2006-11-16-the-30-day-challenge/</link>
+      <pubDate>Thu, 16 Nov 2006 00:58:12 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-11-16-the-30-day-challenge/</guid>
+      <description>&lt;p&gt;It&#39;s been awfully quiet here in last two weeks. Mostly because it was awfully busy pretty much everywhere else. Being a single parent, even for a short and definite period of time is pretty demanding task. Now when my wife is back from the trip overseas, I do not spend my mornings and evening in various skating rinks, I am slowly catching up on everything that got backlogged, delayd and so on. Starting with my project and progressing slowly through my reading list, lot&#39;s of downloaded podcasts and LBNL (last but not least) the blog.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>On blogs, bloggers, blogging</title>
+      <link>https://miroadamy.com/posts/2006-08-22-on-blogs-bloggers-blogging/</link>
+      <pubDate>Tue, 22 Aug 2006 07:42:55 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-22-on-blogs-bloggers-blogging/</guid>
+      <description>&lt;p&gt;If you would ask me to pick one technology phenomenon that had the largest   impact on and was the most characteristic for the technology during the years   1995-2000, my answer would be “Web, of course”. For the years 2000-2003 I’d   vote for eCommerce, online applications and collaboration (like Google, eBay,   Amazon and many others). And for the last 3 years, I would definitely pick   online communities and blogs.&lt;/p&gt;&#xA;&lt;p&gt;Blogs are like tsunami that is changing the landscape of online content. There   is nothing really new about   &lt;span&gt;what&lt;/span&gt; they are. Blog   is user editable Web page, with very few features: implicit tracking of   entries by creating calendar-based index of older entries, ability to add   comments to the entries, limited form of categorization and tagging as well as   some simple, blog-2-blog notification mechanisms (backtracks and pings). The   only aspect in which blogs are different is simplicity of creating and running   a blog. The same way as Google made searching for on-line content very easy   and accessible, blogs are the very easy way how to create that content. Good   content is one of the main reasons why people go online.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Hello world!</title>
+      <link>https://miroadamy.com/posts/2006-08-19-hello-world-2/</link>
+      <pubDate>Sat, 19 Aug 2006 18:24:13 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-08-19-hello-world-2/</guid>
+      <description>&lt;p&gt;Since R&amp;amp;K published the &lt;a href=&#34;http://cm.bell-labs.com/cm/cs/cbook/&#34; title=&#34;The C Programming Language, Second Edition&#34;&gt;The Book&lt;/a&gt;, the title above became de-facto standard way how to start anything. Which is one of the two reasons why I used it as title for this very first entry. The second reason is that the friendly folks from to &lt;a href=&#34;http://wordpress.com/&#34;&gt;Wordpress.com&lt;/a&gt; have created the title and the first blog entry for me.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
 </rss>

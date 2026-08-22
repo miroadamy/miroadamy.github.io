@@ -1,52 +1,63 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Valencia on Miro&#39;s World</title>
-		<link>https://miroadamy.com/tags/valencia/</link>
-		<description>Recent content in Valencia on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sun, 24 Nov 2019 11:22:48 +0800</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/tags/valencia/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>November in Valencia</title>
-				<link>https://miroadamy.com/posts/2019-11-24-valencia/</link>
-				<pubDate>Sun, 24 Nov 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-11-24-valencia/</guid>
-				<description>&lt;p&gt;Lovely November day in Valencia&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/2019-11-24-a.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/2019-11-24B.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/2019-11-24C.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Welcome back present</title>
-				<link>https://miroadamy.com/posts/2019-09-03-bloom/</link>
-				<pubDate>Tue, 03 Sep 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-09-03-bloom/</guid>
-				<description>&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiro.adamy%2Fposts%2F10218202703953045&amp;width=500&#34; width=&#34;500&#34; height=&#34;586&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;</description>
-			</item>
-			<item>
-				<title>Company picnic</title>
-				<link>https://miroadamy.com/posts/2019-07-06-picnic/</link>
-				<pubDate>Sat, 06 Jul 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-07-06-picnic/</guid>
-				<description>&lt;p&gt;with great paella.&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiro.adamy%2Fposts%2F10217753278917700&amp;width=500&#34; width=&#34;500&#34; height=&#34;650&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;</description>
-			</item>
-			<item>
-				<title>Tim Hortons in Valencia</title>
-				<link>https://miroadamy.com/posts/2019-06-23-tim-hortons/</link>
-				<pubDate>Sun, 23 Jun 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-06-23-tim-hortons/</guid>
-				<description>&lt;p&gt;I have my doubts whether it will survive. It is next to Starbucks (one of several, albeit nothing like Toronto) so there is competition for tourists looking for the familiar logo.&lt;/p&gt;&#xA;&lt;p&gt;As for locals, Spanish coffee culture is quite different, and if I am allowed to say so - Spanish coffee is both better AND less expensive as&lt;/p&gt;&#xA;&lt;p&gt;So let&amp;rsquo;s hope Timbits will save the day. Who could resist deep fried sugary dough, eh ?&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Simonyi Karoly in Valencia</title>
-				<link>https://miroadamy.com/posts/2018-09-06-simonyi/</link>
-				<pubDate>Thu, 06 Sep 2018 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2018-09-06-simonyi/</guid>
-				<description>&lt;p&gt;One of the Microsoft old-timer bilionaries, Charles Simonyi, Hungarian born software engineer, famous for his &lt;code&gt;Hungarian naming notation&lt;/code&gt; - who would not remember &lt;code&gt;lpstrzDescription&lt;/code&gt; or &lt;code&gt;wFlag&lt;/code&gt; - is visiting Valencia on his yacht Skat.&lt;/p&gt;&#xA;&lt;p&gt;Those who do not write code (or better said - did not write code 20 years ago) may be familiar with his other contribution - Microsoft Word, something I feel much less positive about than &lt;code&gt;lpstrzDescription&lt;/code&gt;.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Valencia on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/valencia/</link>
+    <description>Recent content in Valencia on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Sun, 24 Nov 2019 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/valencia/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>November in Valencia</title>
+      <link>https://miroadamy.com/posts/2019-11-24-valencia/</link>
+      <pubDate>Sun, 24 Nov 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-24-valencia/</guid>
+      <description>&lt;p&gt;Lovely November day in Valencia&lt;/p&gt;&#xA;&lt;p&gt;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;low&#34;&#xA;    alt=&#34;&#34;&#xA;    src=&#34;https://miroadamy.com/images/2019-11-24-a.jpg&#34;&#xA;    &gt;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;low&#34;&#xA;    alt=&#34;&#34;&#xA;    src=&#34;https://miroadamy.com/images/2019-11-24B.jpg&#34;&#xA;    &gt;&lt;/figure&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;low&#34;&#xA;    alt=&#34;&#34;&#xA;    src=&#34;https://miroadamy.com/images/2019-11-24C.jpg&#34;&#xA;    &gt;&lt;/figure&gt;&#xA;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Welcome back present</title>
+      <link>https://miroadamy.com/posts/2019-09-03-bloom/</link>
+      <pubDate>Tue, 03 Sep 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-09-03-bloom/</guid>
+      <description>&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiro.adamy%2Fposts%2F10218202703953045&amp;width=500&#34; width=&#34;500&#34; height=&#34;586&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Company picnic</title>
+      <link>https://miroadamy.com/posts/2019-07-06-picnic/</link>
+      <pubDate>Sat, 06 Jul 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-07-06-picnic/</guid>
+      <description>&lt;p&gt;with great paella.&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiro.adamy%2Fposts%2F10217753278917700&amp;width=500&#34; width=&#34;500&#34; height=&#34;650&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Tim Hortons in Valencia</title>
+      <link>https://miroadamy.com/posts/2019-06-23-tim-hortons/</link>
+      <pubDate>Sun, 23 Jun 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-06-23-tim-hortons/</guid>
+      <description>&lt;p&gt;I have my doubts whether it will survive. It is next to Starbucks (one of several, albeit nothing like Toronto) so there is competition for tourists looking for the familiar logo.&lt;/p&gt;&#xA;&lt;p&gt;As for locals, Spanish coffee culture is quite different, and if I am allowed to say so - Spanish coffee is both better AND less expensive as&lt;/p&gt;&#xA;&lt;p&gt;So let&amp;rsquo;s hope Timbits will save the day. Who could resist deep fried sugary dough, eh ?&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Simonyi Karoly in Valencia</title>
+      <link>https://miroadamy.com/posts/2018-09-06-simonyi/</link>
+      <pubDate>Thu, 06 Sep 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-09-06-simonyi/</guid>
+      <description>&lt;p&gt;One of the Microsoft old-timer bilionaries, Charles Simonyi, Hungarian born software engineer, famous for his &lt;code&gt;Hungarian naming notation&lt;/code&gt; - who would not remember &lt;code&gt;lpstrzDescription&lt;/code&gt; or &lt;code&gt;wFlag&lt;/code&gt; - is visiting Valencia on his yacht Skat.&lt;/p&gt;&#xA;&lt;p&gt;Those who do not write code (or better said - did not write code 20 years ago) may be familiar with his other contribution - Microsoft Word, something I feel much less positive about than &lt;code&gt;lpstrzDescription&lt;/code&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
 </rss>

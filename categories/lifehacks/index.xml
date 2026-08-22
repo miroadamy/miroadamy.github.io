@@ -1,409 +1,573 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Lifehacks on Miro&#39;s World</title>
-		<link>https://miroadamy.com/categories/lifehacks/</link>
-		<description>Recent content in Lifehacks on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Tue, 17 Dec 2019 11:22:48 +0800</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/categories/lifehacks/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>30 day commit challenge - Checkpoint 1</title>
-				<link>https://miroadamy.com/posts/2019-12-17-30-day-commit-challenge-1/</link>
-				<pubDate>Tue, 17 Dec 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-12-17-30-day-commit-challenge-1/</guid>
-				<description>&lt;p&gt;Time to make checkpoint number 1 - it is day 11 of 30.&lt;/p&gt;&#xA;&lt;p&gt;So far - out of this 11 days I have 10 days with commits. The missing day was fully dedicated to working on presentation and documentation, that unfortunately ends up Confluence and Google Doc, not in some proper textual format (read: Markdown or RestructuredText) backed by a repository.&lt;/p&gt;&#xA;&lt;p&gt;Stuff that I worked on:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;some minor updates to resume (added AWS badges, fixed some typos)&lt;/li&gt;&#xA;&lt;li&gt;notes from certification courses + code fragments&lt;/li&gt;&#xA;&lt;li&gt;scripts for automation of documents / ebooks backup from iCloud to local drives&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Most commits went to documentation / practice code for my project &amp;ldquo;Many ways to Kubernetes&amp;rdquo; where I play with building up K8s clusters using different approaches. So far I did the &amp;ldquo;Kubernetes the hard way&amp;rdquo; - following the course from Linux Academy (&lt;a href=&#34;https://linuxacademy.com/cp/modules/view/id/221)&#34;&gt;https://linuxacademy.com/cp/modules/view/id/221)&lt;/a&gt;,&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>30 day commit challenge</title>
-				<link>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</link>
-				<pubDate>Fri, 06 Dec 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</guid>
-				<description>&lt;p&gt;My work in last few years took my away from practical coding towards DevOps. Despite the increased role of IaaC in our DevOps, this often means living in iTerm and AWS console with interaction not being captured in any form.&lt;/p&gt;&#xA;&lt;p&gt;On writing side, lots of my output shifted from code towards writing text in Wiki&amp;rsquo;s, GoogleDocs and more and more in Slack messages. The code I write are short one-liners or small scripts with very short life span. This makes me a bit sad as there is no sense of accomplishment at the end of the day or week. The &lt;code&gt;git log&lt;/code&gt; does not work over Wiki, AWS console, iTerm, Slack and GoogleDrive.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>BOTD - Blog of the Day</title>
-				<link>https://miroadamy.com/posts/2019-12-05-silvias-blog/</link>
-				<pubDate>Thu, 05 Dec 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-12-05-silvias-blog/</guid>
-				<description>&lt;p&gt;Today&amp;rsquo;s blog of the day is a special one. It does not deal with cloud, DevOps or distributed systems. The theme of the blog is travel, life of digital nomad and observations on life from a perspective of a smart young woman, working as Online English teacher and travelling a lot while doing so - &lt;a href=&#34;https://bookandtravel.blog/&#34;&gt;https://bookandtravel.blog/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;What makes this blog dear and interesting to me is that it&amp;rsquo;s author is my daughter Silvia. What could make the blog interesting and valuable for other audience (especially those learning English who are interested in personal development) is the format of the entries - as they combine reading and language teaching. Each post contains 10-20 emphasized words or expressions that are explained in footnotes - check &lt;a href=&#34;https://bookandtravel.blog/2019/11/19/what-traveling-really-means/&#34;&gt;this one&lt;/a&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Google Wifi</title>
-				<link>https://miroadamy.com/posts/2018-10-23-google-wifi/</link>
-				<pubDate>Tue, 23 Oct 2018 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2018-10-23-google-wifi/</guid>
-				<description>&lt;p&gt;Installed Google Wifi - three access points. Finally I have good coverage on both floors of the appartment including the upper terrace and will be able to work at night outside during hot summer nights when temperature does not drop under 25.&lt;/p&gt;&#xA;&lt;p&gt;The setup was supereasy and iOS app is very well made and gives interesting insights.&lt;/p&gt;&#xA;&lt;p&gt;Happy.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/google-wifi.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to keep git log and less output on the screen</title>
-				<link>https://miroadamy.com/posts/2015-03-10-git-log-output-less/</link>
-				<pubDate>Tue, 10 Mar 2015 00:57:35 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2015-03-10-git-log-output-less/</guid>
-				<description>&lt;p&gt;When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.&lt;/p&gt;&#xA;&lt;p&gt;Just for git commands:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global --replace-all core.pager &amp;#34;less -iXFR&amp;#34;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;For less globally (including git) - add to .bashrc / .zshrc / etc:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;LESS&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;iXFR&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The options we set for less are:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* -i - ignore case when searching (but respect case if search term contains uppercase letters)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* -X - do not clear screen on exit&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* -F - exit if text is less then one screen long&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;* -R - was on by default on my system, something related to colors&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Source: &lt;a href=&#34;http://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html&#34;&gt;http://serebrov.github.io/html/2014-01-04-git-log-and-less-keep-output.html&lt;/a&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to make screenshot from command line</title>
-				<link>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</link>
-				<pubDate>Tue, 24 Sep 2013 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</guid>
-				<description>&lt;h1 id=&#34;how-to-make-screenshot-from-command-line&#34;&gt;How to make screenshot from command line&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libpng warning: zero length keyword&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libpng warning: Empty language field in iTXt chunk&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;platform-edc $ screencapture  ~/Desktop/A$(date +%Y%m%d%H%M%S).png&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libpng warning: zero length keyword&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libpng warning: Empty language field in iTXt chunk&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;First one is &amp;ldquo;interactive&amp;rdquo; - Cmd-Shift-3 with selection tool, second is full screen&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/20130923195517.png&#34; alt=&#34;&#34;&gt;&#xA;&lt;img src=&#34;https://miroadamy.com/images/A20130923195544.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Back to Twitter</title>
-				<link>https://miroadamy.com/posts/2011-06-19-back-to-twitter/</link>
-				<pubDate>Sun, 19 Jun 2011 23:16:10 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2011-06-19-back-to-twitter/</guid>
-				<description>&lt;p&gt;After being away for over 4 months, I am back on Twitter. No, I did not miss the stream of 160 character mixture of news, trivia, white noise and occasional nuggets. Three main reasons:&lt;/p&gt;&#xA;&lt;p&gt;1) Twitter seems to to become  unavoidable - more and more services assume that one has twitter account. Many cyberevents rules start with &#34;retweet this&#34; or &#34;tweet that&#34; which of course one cannot do without Twitter account&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Facebook or LinkedIn - that&#39;s the question</title>
-				<link>https://miroadamy.com/posts/2011-04-07-facebook-or-linkedin-thats-the-question/</link>
-				<pubDate>Thu, 07 Apr 2011 22:51:48 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2011-04-07-facebook-or-linkedin-thats-the-question/</guid>
-				<description>&lt;p&gt;Few weeks ago, I canceled my Twitter account and stopped using Twitter altogether. I do not miss it at all.&lt;/p&gt;&#xA;&lt;p&gt;The next vector of distraction to be brought under control is Facebook. This is a tougher nut to crack - because of wide variety of people in my circle of friends, Facebook plays many different roles.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It is a connection to old friends and colleagues from the old continent and old country.&lt;/li&gt;&#xA;&lt;li&gt;It is a family connection.&lt;/li&gt;&#xA;&lt;li&gt;It is a connection to people that are not on FB through their friends or relatives that are.&lt;/li&gt;&#xA;&lt;li&gt;It is a link to people I worked with and wanted to keep in touch.&lt;/li&gt;&#xA;&lt;li&gt;It is a link to people I share common interest with&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This variety creates a problem of itself (which is multiplied by English/non English division).  Tool that does too many things, does not do them very well.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Bye bye Twitter</title>
-				<link>https://miroadamy.com/posts/2011-01-30-bye-bye-twitter/</link>
-				<pubDate>Sun, 30 Jan 2011 18:12:29 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2011-01-30-bye-bye-twitter/</guid>
-				<description>&lt;p&gt;I have came to a conclusion that I do have too much &lt;em&gt;stuff&lt;/em&gt; in my life.&lt;/p&gt;&#xA;&lt;p&gt;Too much and too little and the same time.&lt;/p&gt;&#xA;&lt;p&gt;Too much information. Too many interruptions and distractions. Too little time to think.&lt;/p&gt;&#xA;&lt;p&gt;Too much consumption of information and not enough time to process it and do anything meaningful with it - learn from it or create something new.&lt;/p&gt;&#xA;&lt;p&gt;The only way how to get out of the self-digged hole is to start cutting.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Thanks for all the adds</title>
-				<link>https://miroadamy.com/posts/2010-01-26-thanks-for-all-the-adds/</link>
-				<pubDate>Tue, 26 Jan 2010 02:57:31 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2010-01-26-thanks-for-all-the-adds/</guid>
-				<description>&lt;p&gt;As regular listener to multiple &lt;a href=&#34;http://twit.tv/&#34; target=&#34;_blank&#34;&gt;TWIT Network&lt;/a&gt; podcasts (This Week In tech, Macbreak Weekly, This Week in Google, Free Libre Opensource Software, Security Now, Windows Weekly) I am very much aware of all the advertisers that keep Leo and the gang in business and make the podcast&#39;s stream going. I have even acted upon several of the ads: we are customer of SquareSpace.com (the corporate blog runs on that platform), GoToMeeting is regular part of day-to-day business - we have several accounts and use it regularly for meetings. I would use GoToMyPC if I had any need to go to a PC :-). I bought Spinrite, although I used it only once over last 3 years.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Forget me not, Web2.0 edition</title>
-				<link>https://miroadamy.com/posts/2009-05-23-forget-me-not-web2-0-edition/</link>
-				<pubDate>Sat, 23 May 2009 16:07:13 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2009-05-23-forget-me-not-web2-0-edition/</guid>
-				<description>&lt;p&gt;I stumbled upon this pretty nice little application or service - depends how you see it. It is called &lt;a href=&#34;http://www.reqall.com/about&#34; target=&#34;_blank&#34;&gt;reQall&lt;/a&gt; (obviously would have been recall, but &lt;a href=&#34;http://www.recall.com/&#34; target=&#34;_blank&#34;&gt;recall.com&lt;/a&gt; as every good domain is taken.&lt;/p&gt;&#xA;&lt;p&gt;What it does is that allows you to set a reminder in the future to do something - at given time and date: buy X, call Y, do Z. Nothing to earth-shattering about that.&lt;/p&gt;&#xA;&lt;p&gt;What is neat is the way how you do it. Actually, many ways:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Almost perfect backup backup solution</title>
-				<link>https://miroadamy.com/posts/2009-03-24-almost-perfect-backup-backup-solution/</link>
-				<pubDate>Tue, 24 Mar 2009 21:19:36 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2009-03-24-almost-perfect-backup-backup-solution/</guid>
-				<description>&lt;p&gt;The double backup word in the title is not an oversight. If I would be talking about &#34;almost perfect backup solution&#34;, it would be Time Machine - which has proven, despite it&#39;s minor annoyances (see this) to be very unobtrusive and functional. As long as you have Mac and Leopard, of course.&lt;/p&gt;&#xA;&lt;p&gt;What I am talking about here is second level - an offsite backup, that you may need in case you house burns down, gets flooded or your computer with time machine disk gets stolen. I do not live in tornado valley, earthquake zone and crime rate around Westboro is fairly low even compared to low Canadian levels, but anyway.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Evernote Firefox plugin version 3.0.0.45382 - do NOT update</title>
-				<link>https://miroadamy.com/posts/2009-03-22-evernote-firefox-plugin-version-30045382-do-not-update/</link>
-				<pubDate>Sun, 22 Mar 2009 18:35:07 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2009-03-22-evernote-firefox-plugin-version-30045382-do-not-update/</guid>
-				<description>&lt;p&gt;Since few months I have slowly switched all my online notebooks to &lt;a href=&#34;http://www.evernote.com/&#34; target=&#34;_self&#34;&gt;Evernote&lt;/a&gt;. In case you are not familiar with it, it is a great service. You can clip pieces of Web pages, type in notes, attach documents and multimedia files (pictures, sounds) and store them online to be always available through nicely done Ajaxian Web interface. The notes can be tagged, organized into notebooks and full text searched. One of the killer features is that for uploaded pictures, Evernote will do OCR and include the photographed tex into full text search&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Fix for &#39;Sender address is invalid&#39; error on iPhone 3G</title>
-				<link>https://miroadamy.com/posts/2008-11-24-fix-for-sender-address-is-invalid-error-on-iphone-3g/</link>
-				<pubDate>Mon, 24 Nov 2008 23:08:20 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2008-11-24-fix-for-sender-address-is-invalid-error-on-iphone-3g/</guid>
-				<description>&lt;p&gt;I started to have this error about week ago, out of the blue. I was not aware of making any changes, but suddenly could not reply to an email, send new email or even forward existing email in the iPhone default Mail application. I am using GMail account and because other clients on different platforms worked OK, I suspected either Rogers or Apple. I was trying several possible fixes (and used Safari and Gmail web access - which is not much fun).&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to save local copy of YouTube video</title>
-				<link>https://miroadamy.com/posts/2008-11-20-how-to-save-local-copy-of-youtube-video/</link>
-				<pubDate>Thu, 20 Nov 2008 23:37:25 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2008-11-20-how-to-save-local-copy-of-youtube-video/</guid>
-				<description>&lt;p&gt;If you want to watch YouTube video on the plane (and Google TechChannel has some amazing collection of videos), here is how to save it to disk, without any tools or third party program, using just your Mac and Safari out of the box.&lt;/p&gt;&#xA;&lt;p&gt;Go to YouTube page and select video you are interested in in Safari. While playing, press Option-Command-A which opens Activity window. Locate the video stream - it will be the largest item in the list. Double click it, which causes Safari to download it.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>The Things bliss</title>
-				<link>https://miroadamy.com/posts/2008-08-24-the-things-bliss/</link>
-				<pubDate>Sun, 24 Aug 2008 23:08:37 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-08-24-the-things-bliss/</guid>
-				<description>&lt;p&gt;Finally - the new version of &lt;a href=&#34;http://culturedcode.com/things/iphone/&#34; target=&#34;_blank&#34;&gt;Things&lt;/a&gt; on iPhone can synchronize with &lt;a href=&#34;http://culturedcode.com/things/&#34; target=&#34;_blank&#34;&gt;Things&lt;/a&gt; on Mac desktop.&lt;/p&gt;&#xA;&lt;p&gt;It actually works - no strings attached. Assumed that:&lt;/p&gt;&#xA;&lt;p&gt;1) the WiFi on iPhone is on&lt;/p&gt;&#xA;&lt;p&gt;2) iPhone and Mac are on same network (so that Bonjour magic can work)&lt;/p&gt;&#xA;&lt;p&gt;3) the Mac Things is running when you start Things on iPhone&lt;/p&gt;&#xA;&lt;p&gt;the synchronization happens automatically and is VERY fast (few seconds max).&lt;/p&gt;&#xA;&lt;p&gt;Finally a portable GTD application that works for me :-).&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>OS-X near-death experience</title>
-				<link>https://miroadamy.com/posts/2008-06-06-os-x-near-death-experience/</link>
-				<pubDate>Fri, 06 Jun 2008 02:08:27 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-06-06-os-x-near-death-experience/</guid>
-				<description>&lt;p&gt;It happened on Wednesday afternoon. I knew something is wrong with my MacBook Pro immediately - when I saw semi-dark screen, unresponsive machine - even mouse cursor was frozen - and heard fans blowing full speed, making the strange, clicking noise coming from inside almost disappear ...&lt;/p&gt;&#xA;&lt;p&gt;OS-X does not freeze too often, but it can happen and as a matter of fact, I have seen it happen before during my almost two years with Mac, so I did not panic. As expected, the Alt-Option trick did not work, so all I could do was to force power off.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Easy way how to transfer really big files</title>
-				<link>https://miroadamy.com/posts/2008-04-29-easy-way-how-to-transfer-really-big-files/</link>
-				<pubDate>Tue, 29 Apr 2008 11:42:32 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-04-29-easy-way-how-to-transfer-really-big-files/</guid>
-				<description>&lt;p&gt;What does really big mean ? In my case few hundred megabytes, up to 1 GB. Clearly, too much for email attachments - most providers caps them at around 5-15 MB.&lt;/p&gt;&#xA;&lt;p&gt;Since we started doing screencasts, I need quite often to transfer  work in progress - screen recordings, rendered MOV files between me and my co-host of the screencasts. I tried to upload the file to the company servers using VPN, but the speed of the secure uploads is nowhere close to being practical.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>The best GTD tool is still a Wiki - part I</title>
-				<link>https://miroadamy.com/posts/2008-01-06-the-best-gtd-tool-is-still-a-wiki-part-i/</link>
-				<pubDate>Sun, 06 Jan 2008 23:55:52 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2008-01-06-the-best-gtd-tool-is-still-a-wiki-part-i/</guid>
-				<description>&lt;p&gt;Did you notice that there are seasons for software as well ? Similarly as with other merchandise, there are times during the year when many more people suddenly decide they need that one application X. Luckily, this trend is not as extreme as with e.g. Santa hats or carved pumpkins, which are impossible to find in stores outside of the narrow window around Christmas and Halloween (I am grateful for that :-)). In software world, the most seasonal category is tax preparation software, for obvious reasons. Taxes, like the dentist checkup are not something you will be crazy even thinking about, unless it is that time of year ....&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to show preview for CHM file in Leopard</title>
-				<link>https://miroadamy.com/posts/2007-12-10-how-to-show-preview-for-chm-file-in-leopard/</link>
-				<pubDate>Mon, 10 Dec 2007 01:02:32 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-12-10-how-to-show-preview-for-chm-file-in-leopard/</guid>
-				<description>&lt;p&gt;The CHM files (Microsoft compiled HTML help files) are often used for eBooks. They are readable on OS-X using excellent open source CHMOX application. If you want to get more useful preview in OuickView than the not very helpfull static icon, get this plugin.&lt;/p&gt;&#xA;&lt;p&gt;Download here&lt;br /&gt;&#xA;&lt;a href=&#34;https://sourceforge.net/project/showfiles.php?group_id=211847&#34; target=&#34;_blank&#34;&gt;https://sourceforge.net/project/showfiles.p...group_id=211847&lt;br /&gt;&#xA;&lt;/a&gt;&lt;br /&gt;&#xA;How to install it: Unzip it, take the proper package for your system (the ZIP file contains several architectures, on modern Intel-based Mac&#39;s you want to use x64), put it inside&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to show ZIP file content in QuickView (Leopard)</title>
-				<link>https://miroadamy.com/posts/2007-11-28-how-to-show-zip-file-content-in-quickview-leopard/</link>
-				<pubDate>Wed, 28 Nov 2007 23:15:52 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-11-28-how-to-show-zip-file-content-in-quickview-leopard/</guid>
-				<description>&lt;p&gt;As time passes, I am discovering more little features that either fill in the still existing gaps from my Windows toolchain or add new features. Today, at Apple presentation about Leopard Client and Leopard Server I have heard great tip.&lt;/p&gt;&#xA;&lt;p&gt;The QuickView in Leopard is extensible with plugins. One very obvious and very useful plugin is ZIP View that gives you content of the ZIP file in preview without unzipping it. This is finally a workable replacement for Ctrl-PgDn of &lt;a href=&#34;http://www.ghisler.com/&#34; target=&#34;_blank&#34;&gt;TotalCommander&lt;/a&gt; that allowed to &#34;walk into&#34; archive and treat ZIP file as  part of the file system.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Great solution for offsite backup</title>
-				<link>https://miroadamy.com/posts/2007-10-25-great-solution-for-offsite-backup/</link>
-				<pubDate>Thu, 25 Oct 2007 00:06:35 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-10-25-great-solution-for-offsite-backup/</guid>
-				<description>&lt;p&gt;I have been using it for over half year now and was very happy with it. After I did today hear Steve Gibson mentioning (and recommending) it on Security Now!, I want to share my experience and add my vote of confidence.&lt;/p&gt;&#xA;&lt;p&gt;The solution is &lt;a href=&#34;http://www.amazon.com/gp/browse.html?node=16427261&#34; target=&#34;_blank&#34;&gt;Amazon S3 service&lt;/a&gt; (Simple Storage Service), fantastically affordable system to store your data securely on-line. You pay as you go - the size is unlimited and you are charged only for what you store and bandwidth  you consume. Fantastically affordable means 15 cents for gigabyte-month storage and 10 cents for gigabyte transfer in / 18 cents for transfer out which will drop to 13 cents if you use it more. This means that to store my approximately 30 GB collection of pictures I need to upload them first (for $3) and then pay $4.50 monthly for storage - plus the download traffic. But of course, I am not using it for the images because I really need and like the nice album user interface which &lt;a href=&#34;http://adamy.smugmug.com/&#34; target=&#34;_blank&#34;&gt;SmugMug&lt;/a&gt; provides. But to archive documents - this is just the perfect solution.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Good way how to improve your English</title>
-				<link>https://miroadamy.com/posts/2007-10-23-good-way-how-to-improve-your-english/</link>
-				<pubDate>Tue, 23 Oct 2007 00:27:32 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-10-23-good-way-how-to-improve-your-english/</guid>
-				<description>&lt;p&gt;Audiobooks and podcasts can be an excellent way how improve your vocabulary and improve your English. If you are suffering of &#34;written English only&#34; syndrome, this may be an excellent remedy.&lt;/p&gt;&#xA;&lt;p&gt;What is that funny syndrome ? Many people from information technology (including myself) actually had to learn English twice. During the late teens and university we managed to get reasonable command of written English, so that we could (and did) read the books. Mostly about computers, of course. With that, we managed to build decent vocabulary of words which we knew ONLY in written form, and for many of them have absolutely no idea how this could be pronounced. This had two consequences: we had hard time to recognize the word when we heard for the first time pronounced the way how it should be pronounced - and - which is even worse - often our own audio rendering was be a big surprise to native anglophones :-) ...&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Great way how to deal with telemarketers</title>
-				<link>https://miroadamy.com/posts/2007-10-08-great-way-how-to-deal-with-telemarketers/</link>
-				<pubDate>Mon, 08 Oct 2007 22:39:03 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-10-08-great-way-how-to-deal-with-telemarketers/</guid>
-				<description>&lt;p&gt;and similar plague (for some reason they were pretty active last few days):&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=un_PjRXV5l8&#34; target=&#34;_blank&#34;&gt;http://www.youtube.com/watch?v=un_PjRXV5l8&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I wish I could pull similar stunt - but I am not really a good actor and my accent would make it hard to believe. But it is hilarious anyway (video is a recording of phone call and contains text transcription ...). Enjoy.&lt;/p&gt;&#xA;&lt;p&gt;Thanks to Peter M. for the link. I would link his blog or home page, if he had one :-).&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>BOTD: Michael&#39;s Thoughts</title>
-				<link>https://miroadamy.com/posts/2007-10-04-botd-michaels-thoughts/</link>
-				<pubDate>Thu, 04 Oct 2007 21:34:56 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-10-04-botd-michaels-thoughts/</guid>
-				<description>&lt;p&gt;Good selection of news, observations and comments on stuff that is happening around. There seems to be pretty good match between what &lt;a href=&#34;http://www.michaelsampson.net/&#34; target=&#34;_blank&#34;&gt;Michael&lt;/a&gt; considers blogworthy and my areas of interest - as I found there lot of interesting pieces.&lt;/p&gt;&#xA;&lt;p&gt;It is mostly news - but not only news. It is worth browsing through archive, just to discover small jewels - like this &lt;a href=&#34;http://www.michaelsampson.net/2006/12/seven_things_de.html&#34; target=&#34;_blank&#34;&gt;one&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;If you had a top 7 tips list for managing the flood of digital information, what would it be?&lt;/em&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Adding week numbers to Google Calendar</title>
-				<link>https://miroadamy.com/posts/2007-09-26-adding-week-numbers-to-google-calendar/</link>
-				<pubDate>Wed, 26 Sep 2007 11:57:25 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-09-26-adding-week-numbers-to-google-calendar/</guid>
-				<description>&lt;p&gt;If you live on week cycles, it is quite nice to see the week number in your calendar. It is not (yet) provided as standard feature in the user settings for my calendar solution of choice.&lt;/p&gt;&#xA;&lt;p&gt;An obvious solution is to run user script in the browser that will decorate the calendar page - using the fabulous &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/748&#34; target=&#34;_blank&#34;&gt;Grease Monkey&lt;/a&gt;. The user script to install (after installing the plugin) is &lt;a href=&#34;http://userscripts.org/scripts/show/9407&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;It works, but ... However I admire the power and possibilities of the user-scripts, it is fairly heavy tool for such simple thing. My Firefox install is pretty large thanks to variety of developer-oriented plugins, and I do not want to slow it down even more. Another issue with scripts is potential security implication - recently (as you will see on the script site) a malicious user started to upload scripts stealing cookies. What this means for &lt;strike&gt;slightly paranoid&lt;/strike&gt; security-aware person like me, is to read and understand the source - and that is way too much trouble.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Web based task manager with offline mode - finally !</title>
-				<link>https://miroadamy.com/posts/2007-07-29-web-based-task-manager-with-offline-mode-finally/</link>
-				<pubDate>Sun, 29 Jul 2007 23:08:50 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-07-29-web-based-task-manager-with-offline-mode-finally/</guid>
-				<description>&lt;p&gt;Yes, such nice tool really exists and it&#39;s name is &lt;a href=&#34;http://www.rememberthemilk.com/&#34; target=&#34;_blank&#34;&gt;Remember the Milk&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At first sight, RTM is not extremely visually appealing, but very nice and very usable Ajax application. After some time using it, you may better appreciate the &#34;less is more&#34; design. The offline access is thanks to Google Gears magic. Just flip the small green arrow (which will download your data to local cache) and voila - you can go offline, keep editing or adding tasks - your changes will be remembered. Later on, after going online the changes will be synced back.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Reading blogs and feeds offline</title>
-				<link>https://miroadamy.com/posts/2007-05-30-reading-blogs-and-feeds-offline/</link>
-				<pubDate>Wed, 30 May 2007 19:30:18 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-05-30-reading-blogs-and-feeds-offline/</guid>
-				<description>&lt;p&gt;It happened! After starting my preferred feed aggregator - Google Reader I have noticed the new feature that sounded so good that I almost could not believe it: offline reading. Using new plugin - Google Gears, the reader can cache 2000 items locally and allows you to go offline and read the news, blogs or whatever you have subscribed to absolutely anywhere.&lt;/p&gt;&#xA;&lt;p&gt;The installation starts with this screen:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://miroadamy.com/images/screen-10.png&#34; title=&#34;screen-10.png&#34;&gt;&lt;img src=&#34;https://miroadamy.com/images/screen-10.png&#34; alt=&#34;screen-10.png&#34;  width=&#34;400&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>New version of Del.icio.us extension for Firefox</title>
-				<link>https://miroadamy.com/posts/2007-05-25-new-version-of-delicious-extension-for-firefox/</link>
-				<pubDate>Fri, 25 May 2007 22:14:12 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-05-25-new-version-of-delicious-extension-for-firefox/</guid>
-				<description>&lt;p&gt;Wonderful thing about Firefox extensions is the autoupdate feature. Go to Tools-&amp;gt;Extensions, select Find update and for all installed extensions you get the latest and greatest .... usually.&lt;/p&gt;&#xA;&lt;p&gt;One extension where the update did not work was the Del.icio.us button for Firefox. I was happily using version 1.2 of the plugin and would never found out about the update, if I had not set the new workstation. The latest version 1.5.29 did not show in the updates. Which is too bad, because it is so much better ...&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Synchronizing GCalendar and Thunderbird</title>
-				<link>https://miroadamy.com/posts/2007-04-12-synchronizin-gcalendar-and-thunderbird/</link>
-				<pubDate>Thu, 12 Apr 2007 22:25:19 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-04-12-synchronizin-gcalendar-and-thunderbird/</guid>
-				<description>&lt;p&gt;Another important step forward for all who are looking for alternatives  to replace Outlook. With latest Thunderbird 2.0rc1 release it is now possible to add calendaring capability to Thunderbird (using the &lt;a href=&#34;http://www.mozilla.org/projects/calendar/lightning/&#34; target=&#34;_blank&#34;&gt;Lightning&lt;/a&gt; add-on) with Google calendar synchronization that works even with iCal invitations :-). Really nice.&lt;/p&gt;&#xA;&lt;p&gt;The author&#39;s blog at &lt;a href=&#34;http://bfish.xaedalus.net/?p=239&#34; target=&#34;_blank&#34;&gt;http://bfish.xaedalus.net/?p=239&lt;/a&gt; seems to be down, but cached version &lt;a href=&#34;http://duggmirror.com/software/Stay_in_Sync_with_GCal_and_Thunderbird/&#34; target=&#34;_blank&#34;&gt;is available&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Credits and thanks to Joel for finding it.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Quote of the day</title>
-				<link>https://miroadamy.com/posts/2007-04-10-quote-of-the-day-6/</link>
-				<pubDate>Tue, 10 Apr 2007 22:34:59 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-04-10-quote-of-the-day-6/</guid>
-				<description>&lt;p&gt;Goal is a dream with a deadline.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Found on the Net&lt;/em&gt; &lt;em&gt;- probably by Napoleon Hill&lt;br /&gt;&#xA;&lt;/em&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Useful hacks for TotalCommander</title>
-				<link>https://miroadamy.com/posts/2007-03-09-useful-hacks-for-totalcommander/</link>
-				<pubDate>Fri, 09 Mar 2007 19:18:35 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-03-09-useful-hacks-for-totalcommander/</guid>
-				<description>&lt;p&gt;The following may interest you only if you are using my &lt;a href=&#34;http://www.ghisler.com/index.htm&#34; target=&#34;_blank&#34;&gt;favorite file manager&lt;/a&gt; (IMHO, it is the best file manager ever created, but your mileage may vary ..)&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;List of selected files to Clipboard&lt;/strong&gt;&lt;br /&gt;&#xA;One of the things that I am doing over and over is to search subtree - set of files for some content and then do something with the result. Let&#39;s say for example that I need all SQL files which refer to TESTDATABASE. On Unix, fastest way is to use &lt;em&gt;&lt;strong&gt;find&lt;/strong&gt;&lt;/em&gt; and pipe the result. On Windows, my workflow (using TotalCommander) is:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>What is wrong with GMail</title>
-				<link>https://miroadamy.com/posts/2007-03-02-what-is-wrong-with-gmail/</link>
-				<pubDate>Fri, 02 Mar 2007 22:57:17 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-03-02-what-is-wrong-with-gmail/</guid>
-				<description>&lt;p&gt;Disclaimer first: I really like GMail. Since I started using it (about year ago), I learned to appreciate the beautiful simplicity and elegance of the Web interface. And since I switched completely to GMail as foundation of all my email systems (about November 2006), I have managed to simplify most of my email related chores. But let&#39;s face it - GMail is far from perfect. Here is list of the annoyances and missing features that I have collected:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>On Myers-Briggs, Spaghetti Sauce and Getting Things Done</title>
-				<link>https://miroadamy.com/posts/2007-02-15-on-myers-briggs-spaghetti-sauce-and-getting-things-done/</link>
-				<pubDate>Thu, 15 Feb 2007 23:33:21 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-02-15-on-myers-briggs-spaghetti-sauce-and-getting-things-done/</guid>
-				<description>&lt;p&gt;Connie, our HR director came few weeks ago with interesting idea: give the team a chance to get better understanding of &#34;implementation details&#34; of their very own &#34;inner software&#34; - the personality type evaluation using &lt;a href=&#34;http://en.wikipedia.org/wiki/Myers-Briggs_Type_Indicator&#34; target=&#34;_blank&#34;&gt;Myers-Briggs&lt;/a&gt; approach. Connie holds certification for this type of classification.&lt;/p&gt;&#xA;&lt;p&gt;The classification in a nutshell, assigns to everybody four letters, one from each pair: E or I, N or S, T or F, J or P. The first letter indicates preference for Extraversion or Introversion, the second characterizes the main source of information input: Sensation or iNtuition, the third the way how the information is processed - by Thinking or Feeling and the last one characterizes the degree of &#34;structure&#34; and organization in all the previous: more organized and structured (Judging) or less organized and more ad-hoc (Perceiving). Now all this is terrible oversimplification (sorry Connie), so if you really want to get more information try &lt;a href=&#34;http://www.amazon.ca/What-You-Are-Featuring-E-Careers/dp/0316880655/sr=8-1/qid=1171599771/ref=sr_1_1/702-8105306-3232069?ie=UTF8&amp;amp;s=books&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; - or if you are in Ottawa, call Connie Deschamps at Thinknostic dot com and schedule a session :-).&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Surf more in less time: Google Reader</title>
-				<link>https://miroadamy.com/posts/2007-02-07-surf-more-in-less-time-google-reader/</link>
-				<pubDate>Wed, 07 Feb 2007 23:33:33 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-02-07-surf-more-in-less-time-google-reader/</guid>
-				<description>&lt;p&gt;Back in stone age when most information available was actually printed on paper in forms of magazines and books , people experiencing the information overload invented techniques of &lt;a href=&#34;http://en.wikipedia.org/wiki/Speed_reading&#34;&gt;speed reading&lt;/a&gt; to deal with it.&lt;/p&gt;&#xA;&lt;p&gt;It worked - mostly.&lt;/p&gt;&#xA;&lt;p&gt;Nowadays, we have most of the content coming to you through the browser window. Even if you can still speed read the web page, you can get even more speed advantage and quickly sort out the interesting content from the fluff by using the magic of news feeds, RSS, Atom and wonderful free tool &lt;a href=&#34;http://www.google.com/reader/view/&#34;&gt;Google Reader&lt;/a&gt;.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Offline access to GMail and Google Docs coming ?</title>
-				<link>https://miroadamy.com/posts/2007-02-06-offline-access-to-gmail-and-google-docs-coming/</link>
-				<pubDate>Tue, 06 Feb 2007 09:39:42 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-02-06-offline-access-to-gmail-and-google-docs-coming/</guid>
-				<description>&lt;p&gt;However I like the Web applications, the fact is that as soon as you do not have connectivity, they are of very little use. Well - maybe not for long. The &lt;a href=&#34;http://www.sitepen.com/blog/2007/01/02/the-dojo-offline-toolkit/&#34;&gt;Dojo Offline Toolkit&lt;/a&gt; makes promise that sounds almost too good to be true:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Imagine a version of &lt;a href=&#34;http://gmail.com/&#34;&gt;GMail&lt;/a&gt; with a “Work Offline” button on the left-hand side of the screen. When pressed, GMail downloads 100 of your most recent emails into Dojo Offline, including pieces of it’s user-interface. A user can now close their browser and leave the network, stepping on an airplane for example. Once in the air, the user can then simply open their laptop and browser and type in mail.google.com. The GMail UI magically appears, along with their 100 most recent emails. A user can read these mails, compose new ones, or reply to existing ones. A flight attendant announces that the plane will land soon; the user closes their browser and laptop. Later, when they are back on the network, they can click the “Work Online” button, which will send all of their locally written emails to the GMail server. &lt;/em&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Using multiple GMail/GCalendar accounts</title>
-				<link>https://miroadamy.com/posts/2007-02-01-using-multiple-gmailgcalendar-accounts/</link>
-				<pubDate>Thu, 01 Feb 2007 23:46:34 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-02-01-using-multiple-gmailgcalendar-accounts/</guid>
-				<description>&lt;p&gt;Since last week we have switched our corporate emails from our ISP to  &lt;a href=&#34;http://www.google.com/a/&#34;&gt;Google Apps for Domains&lt;/a&gt;.  This gives everybody very easy way how to access and share the Calendar and Contacts, provides Web interface that really works - as well as capability to access your emails via POP3. So far I am very happy with it and the feedback I have got from other Thinknostickers was positive (or none, which means everything is likely OK).&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Dealing with digital mess: Local (offline) File Storage</title>
-				<link>https://miroadamy.com/posts/2007-01-20-dealing-with-digital-mess-local-offline-file-storage/</link>
-				<pubDate>Sat, 20 Jan 2007 23:39:40 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-01-20-dealing-with-digital-mess-local-offline-file-storage/</guid>
-				<description>&lt;p&gt;If you have digital camera or digital camcorder, you probably have a problem where to store the pictures and video so that they are readily available for viewing and protected against loss caused by hardware failure. How much storage you need depends on how many and how large pictures do you take and how heavy camcorder user you are. In my case, I have switched to shooting RAW on my D70, doing about 2000-4000 shots a year and the camcorder produces about 4-5 GB unprocessed video per hour of recording. After adding some free capacity for the document archives, some MP3 files, anything smaller than 500 GB will be probably too small. To have some space, I decided I better go for 1 Terrabyte of space.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to recover lost Win XP password</title>
-				<link>https://miroadamy.com/posts/2007-01-16-how-to-recover-lost-win-xp-password/</link>
-				<pubDate>Tue, 16 Jan 2007 23:42:24 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-01-16-how-to-recover-lost-win-xp-password/</guid>
-				<description>&lt;p&gt;If it ever happens to you that you need to restart old computer which you have not logged on for 2-3 months and you find out you have no clue what the password could be, do not panick. Exactly this happened to me yesterday. Fortunately I have remembered reading something on &lt;a href=&#34;http://www.lifehacker.com/software/password-recovery/download-of-the-day-ophcrack-live-cd-226996.php&#34;&gt;lifehacker&lt;/a&gt; few days ago about &lt;a href=&#34;http://www.lifehacker.com/software/cds/download-of-the-day-iso-recorder-175027.php&#34;&gt;bootable CD&lt;/a&gt; which contains live Linux distribution with password cracking open source software &lt;a href=&#34;http://sourceforge.net/projects/ophcrack/&#34;&gt;Ophcrack&lt;/a&gt;. It runs from CD only, does not touch your file system, only loads local SAM and tries cracking the hashes. And boy, it works !&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Automating iTunes</title>
-				<link>https://miroadamy.com/posts/2007-01-15-automating-itunes/</link>
-				<pubDate>Mon, 15 Jan 2007 23:15:28 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-01-15-automating-itunes/</guid>
-				<description>&lt;p&gt;With great horror I have discovered that from my 80 GB hardrive in Macbook already over 76 GB was full. Mostly because of the hidden activity of iTunes and silent downloading of new podcast episodes. Especially video podcasts - such as Mac break - are disk heavy, since they are produced in HD - and as result, look remarkably beautiful on the screen.&lt;/p&gt;&#xA;&lt;p&gt;While cleaning up, I have decided to burn few of my very favorite podcasts to the MP3 CD and keep it in the car. Doing that is really easy in iTunes - all you have to do is to select MP3 CD in Preferences -&amp;gt; Advanced -&amp;gt; Burning, create a playlist that will contain all MP3&#39;s you want to burn, control-click it and select Burn. So far so good. There are some situations when yu want to have more control over the process: for example you want to put the files to subfolders or need to adjust / cleanup the names of files before burning.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Dealing with digital mess: Bookmarks</title>
-				<link>https://miroadamy.com/posts/2007-01-08-dealing-with-digital-mess-bookmarks/</link>
-				<pubDate>Mon, 08 Jan 2007 23:03:03 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-01-08-dealing-with-digital-mess-bookmarks/</guid>
-				<description>&lt;p&gt;As I mentioned &lt;a href=&#34;http://thinkwrap.wordpress.com/2006/11/17/feotd-firefox-extension-of-the-day-delicious/&#34;&gt;before&lt;/a&gt;, I am keeping all my bookmarks in del.icio.us account. Thanks to excellent Firefox extension and available bookmarklets, posting new URL&#39;s is very comfortable. After using the del.icio.us for some time, here is few tips how get best of it:&lt;/p&gt;&#xA;&lt;p&gt;- use the post buttons - they are available for Firefox as well as IE&lt;br /&gt;&#xA;- post often and tag a lot. Tags are the only way how to search the non-public posts&lt;br /&gt;&#xA;- keep consistent approach to tag names. I use singular, replace the &#39;.&#39; with word dot (dotnet) and write all lowercase&lt;br /&gt;&#xA;- follow the crowd - consider using similar tags as others, it makes it easier to be part of community&lt;br /&gt;&#xA;- use wisdom of the crowd. Look what else did other people tagged with the same tag as you did. You will be surprised what you may discover.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Installophobia a Setupanxiety</title>
-				<link>https://miroadamy.com/posts/2007-01-07-installophobia-a-setupanxiety/</link>
-				<pubDate>Sun, 07 Jan 2007 22:40:16 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-01-07-installophobia-a-setupanxiety/</guid>
-				<description>&lt;p&gt;I have to admit that I am suffering from severe case of installophobia. Every time I start installation program on Windows, I am very vividly imagining all the terrible things that may happen in next few minutes. Like overwriting some system DLL&#39;s with some old or wrong version which will break half dozen of other programs. Or messing up my registry so badly that I will have have to spend few days of backing up my system data and installing XP from scratch (and inevitably loose something very important in the process). The introduction of the system installer and MSI format few years ago helped a little for a while - up to the point when I wrote my first own installation program and fully understood what exactly can be done with it :-). Then it come back. I guess this may have contributed to two major shifts during last year - moving to Mac platform (which has no registry) and moving on-line (which has no install at all).&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to reset an iPod</title>
-				<link>https://miroadamy.com/posts/2007-01-06-how-to-reset-an-ipod/</link>
-				<pubDate>Sat, 06 Jan 2007 23:58:31 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-01-06-how-to-reset-an-ipod/</guid>
-				<description>&lt;p&gt;when it hangs and does not react. I am posting it so that I do not have to google it out again :-). Key is Menu + Select combination.&lt;/p&gt;&#xA;&lt;p&gt;Here comes the detailed version (saved from Google Notebook):&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Toggle the Hold switch on and off to avoid &#34;hold trap&#34;&lt;/li&gt;&#xA;&lt;li&gt;Press and hold the Menu and Select buttons until the Apple logo appears, about 6 to 10 seconds. You may need to repeat this step.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;strong&gt;Tips&lt;/strong&gt;:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Speaking to the Dragon</title>
-				<link>https://miroadamy.com/posts/2007-01-05-speaking-to-the-dragon/</link>
-				<pubDate>Fri, 05 Jan 2007 23:45:12 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-01-05-speaking-to-the-dragon/</guid>
-				<description>&lt;p&gt;It was Rod who started this by saying how great it is to replace slow typing with faster speaking and mentioning some kind of magical software package (appropriately named &lt;a href=&#34;http://www.digitalriver.com/v2.0-img/operations/scansoft/site/html/dragon/Preferred_9.htm&#34;&gt;Dragon Naturally Speaking&lt;/a&gt;) which does transform your voice to written properly spelled English text with amazing accuracy. I was pretty sceptical, after seeing few years ago similar software from IBM with not-so-great accuracy, and even more recently the famous &lt;a href=&#34;http://www.youtube.com/watch?v=2Y_Jp6PxsSQ&#34;&gt;Vista speech wreckognition&lt;/a&gt;.  Then Peter bought the software as well and had similarly good results as Rod. Now I got really interested. Both Peter and Rod and native speakers of English and I was very curious  how will the software deal with my very own version of English  pronunciation and fairly thick  Slovak accent. So we did try it today.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Looking back on 2006</title>
-				<link>https://miroadamy.com/posts/2007-01-01-looking-back-on-2006/</link>
-				<pubDate>Mon, 01 Jan 2007 21:46:33 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2007-01-01-looking-back-on-2006/</guid>
-				<description>&lt;p&gt;The 2006 was truly amazing year. We have accomplished so much - we have created the West end development centre, brought in and started several projects, completed phase 1 of employee conversion, started benefits program, ESOP program, redefined the company visual presence, grew the business and the company size considerably and created foundation for future growth.&lt;/p&gt;&#xA;&lt;p&gt;Most important achievemnt is the fun factor - I am again looking forward to go to work - and again since the Montage days the synergy is coming back. Thanks so much to all of you who helped it happen.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Dealing with digital mess - Part 2: Passwords</title>
-				<link>https://miroadamy.com/posts/2006-12-31-dealing-with-digital-mess-part-2/</link>
-				<pubDate>Sun, 31 Dec 2006 23:48:11 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-12-31-dealing-with-digital-mess-part-2/</guid>
-				<description>&lt;p&gt;Today&#39;s topic is dealing with sensitive information - such as logins, passwords, PIN numbers, credit card numbers and so on.&lt;/p&gt;&#xA;&lt;p&gt;Up to last week, I was using the &lt;a href=&#34;http://www.splashdata.com/splashid/&#34;&gt;SplashID&lt;/a&gt; software to keep everything worth securing secure. I started to use SplashID back in 2001 when I bought the Palm based Sony Clie SJ30 (as replacement for wonderful Palm IIIxe). The Palm based program came with desktop counterpart that allowed editing of entries. Later in 2004 when I switched to Pocket PC, I simply purchased Windows Mobile version of the same software.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to get rid of Outlook: the plan</title>
-				<link>https://miroadamy.com/posts/2006-12-30-how-to-get-rid-of-outlook-part-1/</link>
-				<pubDate>Sat, 30 Dec 2006 00:38:28 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-12-30-how-to-get-rid-of-outlook-part-1/</guid>
-				<description>&lt;p&gt;I have decided to stop using Microsoft Outlook. No, I did not have any major issues with it, no horror stories of crashed, unreadable emails or viruses. As long as you use decent anti-virus (for example &lt;a href=&#34;http://www.nod32.com/&#34;&gt;this one&lt;/a&gt;), switch off automatic loading of images and never do anything stupid such as clicking on an attachment or a link in email, you are reasonably safe. What got me to switch was lack of interoperability between anything non-Windows and Outlook and headaches of synchronization with on-line information. Using Outlook-only everywhere is not an option for me, because I need to use Mac as well as Windows and buying license of Outlook for every notebook, PC and virtual machine would be prohibitively expensive.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Dealing with digital mess - Part 1</title>
-				<link>https://miroadamy.com/posts/2006-12-29-dealing-with-digital-mess-part-1/</link>
-				<pubDate>Fri, 29 Dec 2006 03:14:59 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-12-29-dealing-with-digital-mess-part-1/</guid>
-				<description>&lt;p&gt;In certain sense, people and companies have one things in common. If have been around for few years, you collect, acquire or create very strange collection of tools, platforms, software and data formats. In short, you end up with lots of digital mess. I am planning to make major cleanup and streamlining in 2007 - consolidate the hardware, software, data formats and workflows both at home and at work.&lt;/p&gt;&#xA;&lt;p&gt;I have read the &lt;a href=&#34;http://en.wikipedia.org/wiki/Getting_Things_Done&#34;&gt;GTD&lt;/a&gt; &lt;a href=&#34;http://www.businessweek.com/smallbiz/content/aug2001/sb20010824_770.htm&#34;&gt;book&lt;/a&gt; and many interesting &lt;a href=&#34;http://wiki.43folders.com/index.php/Main_Page&#34;&gt;articles&lt;/a&gt; and &lt;a href=&#34;http://www.lifehack.org/&#34;&gt;blogs&lt;/a&gt; on how people implement it. I noticed that the best way how to succeed is try to follow and customize the GTD approach for own circumstances, and build set of tools and processes that would make dealing with stuff easier, faster and more efficient.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Publish your own book - or Lulu.com rocks!</title>
-				<link>https://miroadamy.com/posts/2006-12-27-publish-your-own-book-or-lulucom-rocks/</link>
-				<pubDate>Wed, 27 Dec 2006 23:17:19 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-12-27-publish-your-own-book-or-lulucom-rocks/</guid>
-				<description>&lt;p&gt;One of the most successful presents this Christmas was five copies of the same book. Not just some kind of a book. Our daughter got five copies of the book she authored as a surprise. How can this happen ?&lt;/p&gt;&#xA;&lt;p&gt;I was toying with an idea to try out self-publishing on-demand printing company that would allow you to create and publish book without spending hundreds or thousands of dollars as investment - sort of &#34;pay as go&#34; plan.  The only way how to do it is create the the printable book yourself and find publisher that can do print on demand. Most companies that I found were selling packages in price segment $800 to few thousands of dollars, which included professional assistance in book creation: proofreading, editing, graphics design etc. One company however, offered exactly what I needed: a service that allows you to upload content file, design the cover and order as little as single copy - or as many as you need. No setup fees, publishing packages or minimum orders. See &lt;a href=&#34;http://www.lulu.com/&#34;&gt;www.lulu.com&lt;/a&gt; for more detail. So we have decided to give it a try. It was an easy decision because manually printing the color pages and paying for binding would cost about 3 times more as was the price on Lulu.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to synchronize Pocket PC with Mac</title>
-				<link>https://miroadamy.com/posts/2006-12-18-how-to-synchronize-pocket-pc-with-mac/</link>
-				<pubDate>Mon, 18 Dec 2006 22:06:18 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-12-18-how-to-synchronize-pocket-pc-with-mac/</guid>
-				<description>&lt;p&gt;Using PocketPC with Windows is very easy, assumed that you are using Outlook. Synchronization is  straightforward, works out of the box. If you are keeping your contacts in other software than Outlook, you can often find 3rd party software that does the synchronization - or at least provides the plugin. The selection of the solutions is fairly large.&lt;/p&gt;&#xA;&lt;p&gt;On Mac, you are in similar situation if you want to use Palm based PDA. With Pocket PC synchronization, selection is limited. For direct synchronization between Mac address book and iCal, you have basically 2 options (or more precisely, at least two options): &lt;a href=&#34;http://www.pocketmac.net/products.html&#34;&gt;PocketMac&lt;/a&gt; or &lt;a href=&#34;http://www.markspace.com/missingsync_windowsmobile.php&#34;&gt;The Missing Sync&lt;/a&gt;. Both will do the job, but the Missing Sync seems to be more modern: it supports Intel processors on Mac side and Windows Mobile 5. Also the Web site of the Missing sync has more professional, Mac-like look. I found the &lt;a href=&#34;http://www.pdantic.com/reviews/macs2ppcs.htm&#34;&gt;review of both&lt;/a&gt;, but little bit dated ...&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Weekend special</title>
-				<link>https://miroadamy.com/posts/2006-12-16-weekend-special/</link>
-				<pubDate>Sat, 16 Dec 2006 18:47:37 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-12-16-weekend-special/</guid>
-				<description>&lt;p&gt;Weekend time again. As few times before, here are few discoveries from the Web:&lt;/p&gt;&#xA;&lt;p&gt;Google is pushing Internet Explorer 7. Their &lt;a href=&#34;http://www.google.com/toolbar/ie7/&#34;&gt;own version&lt;/a&gt;,  using new &lt;em&gt;Internet Explorer Administration Kit. &lt;/em&gt;It is not really different version - just configured with Google as default search engine and Google toolbar. Nothing that little more experienced user would not do himself. I am not sure how successfull this will be - but I am pretty sure that this was not what Microsoft had in mind how this tools should be used for.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to duplicate CD on a Mac</title>
-				<link>https://miroadamy.com/posts/2006-12-11-how-to-duplicate-cd-on-a-mac/</link>
-				<pubDate>Mon, 11 Dec 2006 20:20:52 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-12-11-how-to-duplicate-cd-on-a-mac/</guid>
-				<description>&lt;p&gt;My daughter&#39;s music CD for her skating short program got badly scratched and because it was the last-but-one copy (as skater you need many copies, in case you loose/forget/scratch/misplace it),  I was confronted with the task to create a new copy. Rather than starting Nero on Win-XP notebook, I have decided to learn (finally) how to do it on Mac. It must be simple, intuititive and much easier than on Windows. Right ? Wrong ! To my big surprise, there was no easy, idiot proof, very obvious way mac-ish drag and drop way how to acomplish it. It was not exactly hard either, but it actually took consulting the omniviscent Google to find it out. To save the search for the next time, I&#39;ll write it down. Here is what you have to do:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Apple makes me healthier :-)</title>
-				<link>https://miroadamy.com/posts/2006-11-19-apple-makes-me-healthier/</link>
-				<pubDate>Sun, 19 Nov 2006 23:47:11 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-11-19-apple-makes-me-healthier/</guid>
-				<description>&lt;p&gt;Not only apple the fruit, but also Apple the company. How does it work ?&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;Step 1: Buy an iPod. Any model will do, I have got Nano 2Gen, 4 GB&lt;/p&gt;&#xA;&lt;p&gt;Step 2: Subscribe to some good podcasts&lt;/p&gt;&#xA;&lt;p&gt;Step 3: Listen to a podcasts while taking long walks - outdoors (preferred) or in a fittness studio.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;That&#39;s it. It works great for me. During last four weeks I have digested lots of podcasts, inclusive &lt;a href=&#34;http://www.twit.tv/&#34;&gt;TWIT &lt;/a&gt;(This Week In Tech) netcasts  from August 2006 almost up to today.  It is a great way how to stay informed and get more interesting news while spending less time in front of the computer. And on top of that, you can have fun along the way. &lt;a href=&#34;http://leoville.com/&#34;&gt;Leo Laporte&lt;/a&gt; is great host and personalities like &lt;a href=&#34;http://dvorak.org/blog/&#34;&gt;John C Dvorak&lt;/a&gt; add lot&#39;s of flavor to the discussion. Few items from latest edition:&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>The 30 day challenge</title>
-				<link>https://miroadamy.com/posts/2006-11-16-the-30-day-challenge/</link>
-				<pubDate>Thu, 16 Nov 2006 00:58:12 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-11-16-the-30-day-challenge/</guid>
-				<description>&lt;p&gt;It&#39;s been awfully quiet here in last two weeks. Mostly because it was awfully busy pretty much everywhere else. Being a single parent, even for a short and definite period of time is pretty demanding task. Now when my wife is back from the trip overseas, I do not spend my mornings and evening in various skating rinks, I am slowly catching up on everything that got backlogged, delayd and so on. Starting with my project and progressing slowly through my reading list, lot&#39;s of downloaded podcasts and LBNL (last but not least) the blog.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>On Ottawa beduins - or - We want Starbucks with whiteboards</title>
-				<link>https://miroadamy.com/posts/2006-09-07-on-ottawa-beduins-or-we-want-starbucks-with-whiteboards/</link>
-				<pubDate>Thu, 07 Sep 2006 22:50:34 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2006-09-07-on-ottawa-beduins-or-we-want-starbucks-with-whiteboards/</guid>
-				<description>&lt;p&gt;We will be moving into new office space soon. It is exciting time, stepping from working (mostly) at customer&#39;s locations to own project office. Location is of course &lt;a href=&#34;http://en.wikipedia.org/wiki/Kanata,_Ontario&#34;&gt;Kanata&lt;/a&gt; Business Park North, with nice view to a golf course. This location brings several changes against the office in downtown - some of them are great - such as 1) we have lot&#39;s of space and 2) parking is not an issue - arrive any time, park as long as you wish. Some of them are not so great - selection of possible choices for lunch shrunk considerably (with very few in walking distance) and to get to closest &lt;a href=&#34;http://www.timhortons.com/&#34; title=&#34;Tim Hortons&#34;&gt;Tim Hortons&lt;/a&gt; you have to drive (unless you are ready for 25 minute walk one way). In case you are wondering - we are keeping the office at Albert Street - it is managed by &lt;a href=&#34;http://www.tcccanada.com/&#34;&gt;same company&lt;/a&gt; as the new place, so we are just scaling up.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Working On-Line: Excell-ent On-Line Spreadsheets</title>
-				<link>https://miroadamy.com/posts/2006-09-02-working-on-line-excell-ent-on-line-spreadsheets/</link>
-				<pubDate>Sat, 02 Sep 2006 23:15:20 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2006-09-02-working-on-line-excell-ent-on-line-spreadsheets/</guid>
-				<description>&lt;p&gt;&lt;i&gt;Continuing in Working On-Line Series - see previous post on &lt;a href=&#34;http://thinkwrap.wordpress.com/2006/08/30/working-on-line-word-processors/&#34;&gt;word processors&lt;/a&gt; &lt;/i&gt;&lt;/p&gt;&#xA;&lt;p&gt;Spreadsheet is after editing text probably second most important business application. Let&#39;s explore what is out there for those of us, who do not want to install Microsoft Office or commit yourself to one particular platform. Most of the spreadsheet try to copy or emulate subset of the features of &#34;de-facto&#34; spreadsheet standard &lt;a href=&#34;http://office.microsoft.com/en-us/FX010858001033.aspx&#34;&gt;Microsoft Excel&lt;br /&gt;&#xA;&lt;/a&gt;&lt;br /&gt;&#xA;Good starting points for search is (obviously) Google search for &#34;on-line spreadsheet&#34; and Wikipedia. The offer of Web based spreadsheet programs is surprisingly large. They differ in capabilities, but typically allow import and export of Excel spreadsheets and CSV files, entering formulas (with subset of Excel functions), text formating, some form of graph creation and most importantly - colaboration and shared viewing/editing of the spreadsheet. I tried accomplish two task with some of them: import my timesheet from XLS and edit it online and do shared editing of a spreadsheet. Here is quick summary of the features and personal experience working with them.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Lifehacks on Miro&#39;s World</title>
+    <link>https://miroadamy.com/categories/lifehacks/</link>
+    <description>Recent content in Lifehacks on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Tue, 17 Dec 2019 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/categories/lifehacks/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>30 day commit challenge - Checkpoint 1</title>
+      <link>https://miroadamy.com/posts/2019-12-17-30-day-commit-challenge-1/</link>
+      <pubDate>Tue, 17 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-17-30-day-commit-challenge-1/</guid>
+      <description>&lt;p&gt;Time to make checkpoint number 1 - it is day 11 of 30.&lt;/p&gt;&#xA;&lt;p&gt;So far - out of this 11 days I have 10 days with commits. The missing day was fully dedicated to working on presentation and documentation, that unfortunately ends up Confluence and Google Doc, not in some proper textual format (read: Markdown or RestructuredText) backed by a repository.&lt;/p&gt;&#xA;&lt;p&gt;Stuff that I worked on:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;some minor updates to resume (added AWS badges, fixed some typos)&lt;/li&gt;&#xA;&lt;li&gt;notes from certification courses + code fragments&lt;/li&gt;&#xA;&lt;li&gt;scripts for automation of documents / ebooks backup from iCloud to local drives&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Most commits went to documentation / practice code for my project &amp;ldquo;Many ways to Kubernetes&amp;rdquo; where I play with building up K8s clusters using different approaches. So far I did the &amp;ldquo;Kubernetes the hard way&amp;rdquo; - following the course from Linux Academy (&lt;a href=&#34;https://linuxacademy.com/cp/modules/view/id/221%29&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://linuxacademy.com/cp/modules/view/id/221)&lt;/a&gt;,&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>30 day commit challenge</title>
+      <link>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</link>
+      <pubDate>Fri, 06 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-06-30-day-commit-challenge/</guid>
+      <description>&lt;p&gt;My work in last few years took my away from practical coding towards DevOps. Despite the increased role of IaaC in our DevOps, this often means living in iTerm and AWS console with interaction not being captured in any form.&lt;/p&gt;&#xA;&lt;p&gt;On writing side, lots of my output shifted from code towards writing text in Wiki&amp;rsquo;s, GoogleDocs and more and more in Slack messages. The code I write are short one-liners or small scripts with very short life span. This makes me a bit sad as there is no sense of accomplishment at the end of the day or week. The &lt;code&gt;git log&lt;/code&gt; does not work over Wiki, AWS console, iTerm, Slack and GoogleDrive.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>BOTD - Blog of the Day</title>
+      <link>https://miroadamy.com/posts/2019-12-05-silvias-blog/</link>
+      <pubDate>Thu, 05 Dec 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-12-05-silvias-blog/</guid>
+      <description>&lt;p&gt;Today&amp;rsquo;s blog of the day is a special one. It does not deal with cloud, DevOps or distributed systems. The theme of the blog is travel, life of digital nomad and observations on life from a perspective of a smart young woman, working as Online English teacher and travelling a lot while doing so - &lt;a href=&#34;https://bookandtravel.blog/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://bookandtravel.blog/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;What makes this blog dear and interesting to me is that it&amp;rsquo;s author is my daughter Silvia. What could make the blog interesting and valuable for other audience (especially those learning English who are interested in personal development) is the format of the entries - as they combine reading and language teaching. Each post contains 10-20 emphasized words or expressions that are explained in footnotes - check &lt;a href=&#34;https://bookandtravel.blog/2019/11/19/what-traveling-really-means/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;this one&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Google Wifi</title>
+      <link>https://miroadamy.com/posts/2018-10-23-google-wifi/</link>
+      <pubDate>Tue, 23 Oct 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-10-23-google-wifi/</guid>
+      <description>&lt;p&gt;Installed Google Wifi - three access points. Finally I have good coverage on both floors of the appartment including the upper terrace and will be able to work at night outside during hot summer nights when temperature does not drop under 25.&lt;/p&gt;&#xA;&lt;p&gt;The setup was supereasy and iOS app is very well made and gives interesting insights.&lt;/p&gt;&#xA;&lt;p&gt;Happy.&lt;/p&gt;&#xA;&lt;p&gt;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;low&#34;&#xA;    alt=&#34;&#34;&#xA;    src=&#34;https://miroadamy.com/images/google-wifi.jpg&#34;&#xA;    &gt;&lt;/figure&gt;&#xA;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How to keep git log and less output on the screen</title>
+      <link>https://miroadamy.com/posts/2015-03-10-git-log-output-less/</link>
+      <pubDate>Tue, 10 Mar 2015 00:57:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2015-03-10-git-log-output-less/</guid>
+      <description>&lt;p&gt;When git uses less as pager the output of commands like git log disappears from the console screen when you exit from less. This is not convenient in many cases so here is how to fix this.&lt;/p&gt;&#xA;&lt;p&gt;Just for git commands:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git config --global --replace-all core.pager &amp;#34;less -iXFR&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;For less globally (including git) - add to .bashrc / .zshrc / etc:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;export LESS=-iXFR&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;The options we set for less are:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How to make screenshot from command line</title>
+      <link>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</link>
+      <pubDate>Tue, 24 Sep 2013 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2013-09-24-screenshot-cli/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;How to make screenshot from command line&#xA;    &lt;div id=&#34;how-to-make-screenshot-from-command-line&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#how-to-make-screenshot-from-command-line&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight-wrapper&#34;&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libpng warning: zero length keyword&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libpng warning: Empty language field in iTXt chunk&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; &#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;platform-edc $ screencapture  ~/Desktop/A$(date +%Y%m%d%H%M%S).png&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libpng warning: zero length keyword&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;libpng warning: Empty language field in iTXt chunk&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&#xA;&lt;p&gt;First one is &amp;ldquo;interactive&amp;rdquo; - Cmd-Shift-3 with selection tool, second is full screen&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Back to Twitter</title>
+      <link>https://miroadamy.com/posts/2011-06-19-back-to-twitter/</link>
+      <pubDate>Sun, 19 Jun 2011 23:16:10 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2011-06-19-back-to-twitter/</guid>
+      <description>&lt;p&gt;After being away for over 4 months, I am back on Twitter. No, I did not miss the stream of 160 character mixture of news, trivia, white noise and occasional nuggets. Three main reasons:&lt;/p&gt;&#xA;&lt;p&gt;1) Twitter seems to to become  unavoidable - more and more services assume that one has twitter account. Many cyberevents rules start with &#34;retweet this&#34; or &#34;tweet that&#34; which of course one cannot do without Twitter account&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Facebook or LinkedIn - that&#39;s the question</title>
+      <link>https://miroadamy.com/posts/2011-04-07-facebook-or-linkedin-thats-the-question/</link>
+      <pubDate>Thu, 07 Apr 2011 22:51:48 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2011-04-07-facebook-or-linkedin-thats-the-question/</guid>
+      <description>&lt;p&gt;Few weeks ago, I canceled my Twitter account and stopped using Twitter altogether. I do not miss it at all.&lt;/p&gt;&#xA;&lt;p&gt;The next vector of distraction to be brought under control is Facebook. This is a tougher nut to crack - because of wide variety of people in my circle of friends, Facebook plays many different roles.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;It is a connection to old friends and colleagues from the old continent and old country.&lt;/li&gt;&#xA;&lt;li&gt;It is a family connection.&lt;/li&gt;&#xA;&lt;li&gt;It is a connection to people that are not on FB through their friends or relatives that are.&lt;/li&gt;&#xA;&lt;li&gt;It is a link to people I worked with and wanted to keep in touch.&lt;/li&gt;&#xA;&lt;li&gt;It is a link to people I share common interest with&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This variety creates a problem of itself (which is multiplied by English/non English division).  Tool that does too many things, does not do them very well.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Bye bye Twitter</title>
+      <link>https://miroadamy.com/posts/2011-01-30-bye-bye-twitter/</link>
+      <pubDate>Sun, 30 Jan 2011 18:12:29 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2011-01-30-bye-bye-twitter/</guid>
+      <description>&lt;p&gt;I have came to a conclusion that I do have too much &lt;em&gt;stuff&lt;/em&gt; in my life.&lt;/p&gt;&#xA;&lt;p&gt;Too much and too little and the same time.&lt;/p&gt;&#xA;&lt;p&gt;Too much information. Too many interruptions and distractions. Too little time to think.&lt;/p&gt;&#xA;&lt;p&gt;Too much consumption of information and not enough time to process it and do anything meaningful with it - learn from it or create something new.&lt;/p&gt;&#xA;&lt;p&gt;The only way how to get out of the self-digged hole is to start cutting.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Thanks for all the adds</title>
+      <link>https://miroadamy.com/posts/2010-01-26-thanks-for-all-the-adds/</link>
+      <pubDate>Tue, 26 Jan 2010 02:57:31 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2010-01-26-thanks-for-all-the-adds/</guid>
+      <description>&lt;p&gt;As regular listener to multiple &lt;a href=&#34;http://twit.tv/&#34; target=&#34;_blank&#34;&gt;TWIT Network&lt;/a&gt; podcasts (This Week In tech, Macbreak Weekly, This Week in Google, Free Libre Opensource Software, Security Now, Windows Weekly) I am very much aware of all the advertisers that keep Leo and the gang in business and make the podcast&#39;s stream going. I have even acted upon several of the ads: we are customer of SquareSpace.com (the corporate blog runs on that platform), GoToMeeting is regular part of day-to-day business - we have several accounts and use it regularly for meetings. I would use GoToMyPC if I had any need to go to a PC :-). I bought Spinrite, although I used it only once over last 3 years.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Forget me not, Web2.0 edition</title>
+      <link>https://miroadamy.com/posts/2009-05-23-forget-me-not-web2-0-edition/</link>
+      <pubDate>Sat, 23 May 2009 16:07:13 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-05-23-forget-me-not-web2-0-edition/</guid>
+      <description>&lt;p&gt;I stumbled upon this pretty nice little application or service - depends how you see it. It is called &lt;a href=&#34;http://www.reqall.com/about&#34; target=&#34;_blank&#34;&gt;reQall&lt;/a&gt; (obviously would have been recall, but &lt;a href=&#34;http://www.recall.com/&#34; target=&#34;_blank&#34;&gt;recall.com&lt;/a&gt; as every good domain is taken.&lt;/p&gt;&#xA;&lt;p&gt;What it does is that allows you to set a reminder in the future to do something - at given time and date: buy X, call Y, do Z. Nothing to earth-shattering about that.&lt;/p&gt;&#xA;&lt;p&gt;What is neat is the way how you do it. Actually, many ways:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Almost perfect backup backup solution</title>
+      <link>https://miroadamy.com/posts/2009-03-24-almost-perfect-backup-backup-solution/</link>
+      <pubDate>Tue, 24 Mar 2009 21:19:36 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-03-24-almost-perfect-backup-backup-solution/</guid>
+      <description>&lt;p&gt;The double backup word in the title is not an oversight. If I would be talking about &#34;almost perfect backup solution&#34;, it would be Time Machine - which has proven, despite it&#39;s minor annoyances (see this) to be very unobtrusive and functional. As long as you have Mac and Leopard, of course.&lt;/p&gt;&#xA;&lt;p&gt;What I am talking about here is second level - an offsite backup, that you may need in case you house burns down, gets flooded or your computer with time machine disk gets stolen. I do not live in tornado valley, earthquake zone and crime rate around Westboro is fairly low even compared to low Canadian levels, but anyway.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Evernote Firefox plugin version 3.0.0.45382 - do NOT update</title>
+      <link>https://miroadamy.com/posts/2009-03-22-evernote-firefox-plugin-version-30045382-do-not-update/</link>
+      <pubDate>Sun, 22 Mar 2009 18:35:07 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2009-03-22-evernote-firefox-plugin-version-30045382-do-not-update/</guid>
+      <description>&lt;p&gt;Since few months I have slowly switched all my online notebooks to &lt;a href=&#34;http://www.evernote.com/&#34; target=&#34;_self&#34;&gt;Evernote&lt;/a&gt;. In case you are not familiar with it, it is a great service. You can clip pieces of Web pages, type in notes, attach documents and multimedia files (pictures, sounds) and store them online to be always available through nicely done Ajaxian Web interface. The notes can be tagged, organized into notebooks and full text searched. One of the killer features is that for uploaded pictures, Evernote will do OCR and include the photographed tex into full text search&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Fix for &#39;Sender address is invalid&#39; error on iPhone 3G</title>
+      <link>https://miroadamy.com/posts/2008-11-24-fix-for-sender-address-is-invalid-error-on-iphone-3g/</link>
+      <pubDate>Mon, 24 Nov 2008 23:08:20 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-11-24-fix-for-sender-address-is-invalid-error-on-iphone-3g/</guid>
+      <description>&lt;p&gt;I started to have this error about week ago, out of the blue. I was not aware of making any changes, but suddenly could not reply to an email, send new email or even forward existing email in the iPhone default Mail application. I am using GMail account and because other clients on different platforms worked OK, I suspected either Rogers or Apple. I was trying several possible fixes (and used Safari and Gmail web access - which is not much fun).&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How to save local copy of YouTube video</title>
+      <link>https://miroadamy.com/posts/2008-11-20-how-to-save-local-copy-of-youtube-video/</link>
+      <pubDate>Thu, 20 Nov 2008 23:37:25 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-11-20-how-to-save-local-copy-of-youtube-video/</guid>
+      <description>&lt;p&gt;If you want to watch YouTube video on the plane (and Google TechChannel has some amazing collection of videos), here is how to save it to disk, without any tools or third party program, using just your Mac and Safari out of the box.&lt;/p&gt;&#xA;&lt;p&gt;Go to YouTube page and select video you are interested in in Safari. While playing, press Option-Command-A which opens Activity window. Locate the video stream - it will be the largest item in the list. Double click it, which causes Safari to download it.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>The Things bliss</title>
+      <link>https://miroadamy.com/posts/2008-08-24-the-things-bliss/</link>
+      <pubDate>Sun, 24 Aug 2008 23:08:37 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-24-the-things-bliss/</guid>
+      <description>&lt;p&gt;Finally - the new version of &lt;a href=&#34;http://culturedcode.com/things/iphone/&#34; target=&#34;_blank&#34;&gt;Things&lt;/a&gt; on iPhone can synchronize with &lt;a href=&#34;http://culturedcode.com/things/&#34; target=&#34;_blank&#34;&gt;Things&lt;/a&gt; on Mac desktop.&lt;/p&gt;&#xA;&lt;p&gt;It actually works - no strings attached. Assumed that:&lt;/p&gt;&#xA;&lt;p&gt;1) the WiFi on iPhone is on&lt;/p&gt;&#xA;&lt;p&gt;2) iPhone and Mac are on same network (so that Bonjour magic can work)&lt;/p&gt;&#xA;&lt;p&gt;3) the Mac Things is running when you start Things on iPhone&lt;/p&gt;&#xA;&lt;p&gt;the synchronization happens automatically and is VERY fast (few seconds max).&lt;/p&gt;&#xA;&lt;p&gt;Finally a portable GTD application that works for me :-).&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>OS-X near-death experience</title>
+      <link>https://miroadamy.com/posts/2008-06-06-os-x-near-death-experience/</link>
+      <pubDate>Fri, 06 Jun 2008 02:08:27 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-06-06-os-x-near-death-experience/</guid>
+      <description>&lt;p&gt;It happened on Wednesday afternoon. I knew something is wrong with my MacBook Pro immediately - when I saw semi-dark screen, unresponsive machine - even mouse cursor was frozen - and heard fans blowing full speed, making the strange, clicking noise coming from inside almost disappear ...&lt;/p&gt;&#xA;&lt;p&gt;OS-X does not freeze too often, but it can happen and as a matter of fact, I have seen it happen before during my almost two years with Mac, so I did not panic. As expected, the Alt-Option trick did not work, so all I could do was to force power off.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Easy way how to transfer really big files</title>
+      <link>https://miroadamy.com/posts/2008-04-29-easy-way-how-to-transfer-really-big-files/</link>
+      <pubDate>Tue, 29 Apr 2008 11:42:32 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-29-easy-way-how-to-transfer-really-big-files/</guid>
+      <description>&lt;p&gt;What does really big mean ? In my case few hundred megabytes, up to 1 GB. Clearly, too much for email attachments - most providers caps them at around 5-15 MB.&lt;/p&gt;&#xA;&lt;p&gt;Since we started doing screencasts, I need quite often to transfer  work in progress - screen recordings, rendered MOV files between me and my co-host of the screencasts. I tried to upload the file to the company servers using VPN, but the speed of the secure uploads is nowhere close to being practical.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>The best GTD tool is still a Wiki - part I</title>
+      <link>https://miroadamy.com/posts/2008-01-06-the-best-gtd-tool-is-still-a-wiki-part-i/</link>
+      <pubDate>Sun, 06 Jan 2008 23:55:52 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-01-06-the-best-gtd-tool-is-still-a-wiki-part-i/</guid>
+      <description>&lt;p&gt;Did you notice that there are seasons for software as well ? Similarly as with other merchandise, there are times during the year when many more people suddenly decide they need that one application X. Luckily, this trend is not as extreme as with e.g. Santa hats or carved pumpkins, which are impossible to find in stores outside of the narrow window around Christmas and Halloween (I am grateful for that :-)). In software world, the most seasonal category is tax preparation software, for obvious reasons. Taxes, like the dentist checkup are not something you will be crazy even thinking about, unless it is that time of year ....&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How to show preview for CHM file in Leopard</title>
+      <link>https://miroadamy.com/posts/2007-12-10-how-to-show-preview-for-chm-file-in-leopard/</link>
+      <pubDate>Mon, 10 Dec 2007 01:02:32 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-12-10-how-to-show-preview-for-chm-file-in-leopard/</guid>
+      <description>&lt;p&gt;The CHM files (Microsoft compiled HTML help files) are often used for eBooks. They are readable on OS-X using excellent open source CHMOX application. If you want to get more useful preview in OuickView than the not very helpfull static icon, get this plugin.&lt;/p&gt;&#xA;&lt;p&gt;Download here&lt;br /&gt;&#xA;&lt;a href=&#34;https://sourceforge.net/project/showfiles.php?group_id=211847&#34; target=&#34;_blank&#34;&gt;https://sourceforge.net/project/showfiles.p...group_id=211847&lt;br /&gt;&#xA;&lt;/a&gt;&lt;br /&gt;&#xA;How to install it: Unzip it, take the proper package for your system (the ZIP file contains several architectures, on modern Intel-based Mac&#39;s you want to use x64), put it inside&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How to show ZIP file content in QuickView (Leopard)</title>
+      <link>https://miroadamy.com/posts/2007-11-28-how-to-show-zip-file-content-in-quickview-leopard/</link>
+      <pubDate>Wed, 28 Nov 2007 23:15:52 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-11-28-how-to-show-zip-file-content-in-quickview-leopard/</guid>
+      <description>&lt;p&gt;As time passes, I am discovering more little features that either fill in the still existing gaps from my Windows toolchain or add new features. Today, at Apple presentation about Leopard Client and Leopard Server I have heard great tip.&lt;/p&gt;&#xA;&lt;p&gt;The QuickView in Leopard is extensible with plugins. One very obvious and very useful plugin is ZIP View that gives you content of the ZIP file in preview without unzipping it. This is finally a workable replacement for Ctrl-PgDn of &lt;a href=&#34;http://www.ghisler.com/&#34; target=&#34;_blank&#34;&gt;TotalCommander&lt;/a&gt; that allowed to &#34;walk into&#34; archive and treat ZIP file as  part of the file system.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Great solution for offsite backup</title>
+      <link>https://miroadamy.com/posts/2007-10-25-great-solution-for-offsite-backup/</link>
+      <pubDate>Thu, 25 Oct 2007 00:06:35 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-25-great-solution-for-offsite-backup/</guid>
+      <description>&lt;p&gt;I have been using it for over half year now and was very happy with it. After I did today hear Steve Gibson mentioning (and recommending) it on Security Now!, I want to share my experience and add my vote of confidence.&lt;/p&gt;&#xA;&lt;p&gt;The solution is &lt;a href=&#34;http://www.amazon.com/gp/browse.html?node=16427261&#34; target=&#34;_blank&#34;&gt;Amazon S3 service&lt;/a&gt; (Simple Storage Service), fantastically affordable system to store your data securely on-line. You pay as you go - the size is unlimited and you are charged only for what you store and bandwidth  you consume. Fantastically affordable means 15 cents for gigabyte-month storage and 10 cents for gigabyte transfer in / 18 cents for transfer out which will drop to 13 cents if you use it more. This means that to store my approximately 30 GB collection of pictures I need to upload them first (for $3) and then pay $4.50 monthly for storage - plus the download traffic. But of course, I am not using it for the images because I really need and like the nice album user interface which &lt;a href=&#34;http://adamy.smugmug.com/&#34; target=&#34;_blank&#34;&gt;SmugMug&lt;/a&gt; provides. But to archive documents - this is just the perfect solution.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Good way how to improve your English</title>
+      <link>https://miroadamy.com/posts/2007-10-23-good-way-how-to-improve-your-english/</link>
+      <pubDate>Tue, 23 Oct 2007 00:27:32 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-23-good-way-how-to-improve-your-english/</guid>
+      <description>&lt;p&gt;Audiobooks and podcasts can be an excellent way how improve your vocabulary and improve your English. If you are suffering of &#34;written English only&#34; syndrome, this may be an excellent remedy.&lt;/p&gt;&#xA;&lt;p&gt;What is that funny syndrome ? Many people from information technology (including myself) actually had to learn English twice. During the late teens and university we managed to get reasonable command of written English, so that we could (and did) read the books. Mostly about computers, of course. With that, we managed to build decent vocabulary of words which we knew ONLY in written form, and for many of them have absolutely no idea how this could be pronounced. This had two consequences: we had hard time to recognize the word when we heard for the first time pronounced the way how it should be pronounced - and - which is even worse - often our own audio rendering was be a big surprise to native anglophones :-) ...&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Great way how to deal with telemarketers</title>
+      <link>https://miroadamy.com/posts/2007-10-08-great-way-how-to-deal-with-telemarketers/</link>
+      <pubDate>Mon, 08 Oct 2007 22:39:03 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-08-great-way-how-to-deal-with-telemarketers/</guid>
+      <description>&lt;p&gt;and similar plague (for some reason they were pretty active last few days):&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=un_PjRXV5l8&#34; target=&#34;_blank&#34;&gt;http://www.youtube.com/watch?v=un_PjRXV5l8&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I wish I could pull similar stunt - but I am not really a good actor and my accent would make it hard to believe. But it is hilarious anyway (video is a recording of phone call and contains text transcription ...). Enjoy.&lt;/p&gt;&#xA;&lt;p&gt;Thanks to Peter M. for the link. I would link his blog or home page, if he had one :-).&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>BOTD: Michael&#39;s Thoughts</title>
+      <link>https://miroadamy.com/posts/2007-10-04-botd-michaels-thoughts/</link>
+      <pubDate>Thu, 04 Oct 2007 21:34:56 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-04-botd-michaels-thoughts/</guid>
+      <description>&lt;p&gt;Good selection of news, observations and comments on stuff that is happening around. There seems to be pretty good match between what &lt;a href=&#34;http://www.michaelsampson.net/&#34; target=&#34;_blank&#34;&gt;Michael&lt;/a&gt; considers blogworthy and my areas of interest - as I found there lot of interesting pieces.&lt;/p&gt;&#xA;&lt;p&gt;It is mostly news - but not only news. It is worth browsing through archive, just to discover small jewels - like this &lt;a href=&#34;http://www.michaelsampson.net/2006/12/seven_things_de.html&#34; target=&#34;_blank&#34;&gt;one&lt;/a&gt;:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;If you had a top 7 tips list for managing the flood of digital information, what would it be?&lt;/em&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Adding week numbers to Google Calendar</title>
+      <link>https://miroadamy.com/posts/2007-09-26-adding-week-numbers-to-google-calendar/</link>
+      <pubDate>Wed, 26 Sep 2007 11:57:25 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-09-26-adding-week-numbers-to-google-calendar/</guid>
+      <description>&lt;p&gt;If you live on week cycles, it is quite nice to see the week number in your calendar. It is not (yet) provided as standard feature in the user settings for my calendar solution of choice.&lt;/p&gt;&#xA;&lt;p&gt;An obvious solution is to run user script in the browser that will decorate the calendar page - using the fabulous &lt;a href=&#34;https://addons.mozilla.org/en-US/firefox/addon/748&#34; target=&#34;_blank&#34;&gt;Grease Monkey&lt;/a&gt;. The user script to install (after installing the plugin) is &lt;a href=&#34;http://userscripts.org/scripts/show/9407&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;It works, but ... However I admire the power and possibilities of the user-scripts, it is fairly heavy tool for such simple thing. My Firefox install is pretty large thanks to variety of developer-oriented plugins, and I do not want to slow it down even more. Another issue with scripts is potential security implication - recently (as you will see on the script site) a malicious user started to upload scripts stealing cookies. What this means for &lt;strike&gt;slightly paranoid&lt;/strike&gt; security-aware person like me, is to read and understand the source - and that is way too much trouble.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Web based task manager with offline mode - finally !</title>
+      <link>https://miroadamy.com/posts/2007-07-29-web-based-task-manager-with-offline-mode-finally/</link>
+      <pubDate>Sun, 29 Jul 2007 23:08:50 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-07-29-web-based-task-manager-with-offline-mode-finally/</guid>
+      <description>&lt;p&gt;Yes, such nice tool really exists and it&#39;s name is &lt;a href=&#34;http://www.rememberthemilk.com/&#34; target=&#34;_blank&#34;&gt;Remember the Milk&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;At first sight, RTM is not extremely visually appealing, but very nice and very usable Ajax application. After some time using it, you may better appreciate the &#34;less is more&#34; design. The offline access is thanks to Google Gears magic. Just flip the small green arrow (which will download your data to local cache) and voila - you can go offline, keep editing or adding tasks - your changes will be remembered. Later on, after going online the changes will be synced back.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Reading blogs and feeds offline</title>
+      <link>https://miroadamy.com/posts/2007-05-30-reading-blogs-and-feeds-offline/</link>
+      <pubDate>Wed, 30 May 2007 19:30:18 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-30-reading-blogs-and-feeds-offline/</guid>
+      <description>&lt;p&gt;It happened! After starting my preferred feed aggregator - Google Reader I have noticed the new feature that sounded so good that I almost could not believe it: offline reading. Using new plugin - Google Gears, the reader can cache 2000 items locally and allows you to go offline and read the news, blogs or whatever you have subscribed to absolutely anywhere.&lt;/p&gt;&#xA;&lt;p&gt;The installation starts with this screen:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://miroadamy.com/images/screen-10.png&#34; title=&#34;screen-10.png&#34;&gt;&lt;img src=&#34;https://miroadamy.com/images/screen-10.png&#34; alt=&#34;screen-10.png&#34;  width=&#34;400&#34; /&gt;&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>New version of Del.icio.us extension for Firefox</title>
+      <link>https://miroadamy.com/posts/2007-05-25-new-version-of-delicious-extension-for-firefox/</link>
+      <pubDate>Fri, 25 May 2007 22:14:12 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-25-new-version-of-delicious-extension-for-firefox/</guid>
+      <description>&lt;p&gt;Wonderful thing about Firefox extensions is the autoupdate feature. Go to Tools-&amp;gt;Extensions, select Find update and for all installed extensions you get the latest and greatest .... usually.&lt;/p&gt;&#xA;&lt;p&gt;One extension where the update did not work was the Del.icio.us button for Firefox. I was happily using version 1.2 of the plugin and would never found out about the update, if I had not set the new workstation. The latest version 1.5.29 did not show in the updates. Which is too bad, because it is so much better ...&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Synchronizing GCalendar and Thunderbird</title>
+      <link>https://miroadamy.com/posts/2007-04-12-synchronizin-gcalendar-and-thunderbird/</link>
+      <pubDate>Thu, 12 Apr 2007 22:25:19 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-12-synchronizin-gcalendar-and-thunderbird/</guid>
+      <description>&lt;p&gt;Another important step forward for all who are looking for alternatives  to replace Outlook. With latest Thunderbird 2.0rc1 release it is now possible to add calendaring capability to Thunderbird (using the &lt;a href=&#34;http://www.mozilla.org/projects/calendar/lightning/&#34; target=&#34;_blank&#34;&gt;Lightning&lt;/a&gt; add-on) with Google calendar synchronization that works even with iCal invitations :-). Really nice.&lt;/p&gt;&#xA;&lt;p&gt;The author&#39;s blog at &lt;a href=&#34;http://bfish.xaedalus.net/?p=239&#34; target=&#34;_blank&#34;&gt;http://bfish.xaedalus.net/?p=239&lt;/a&gt; seems to be down, but cached version &lt;a href=&#34;http://duggmirror.com/software/Stay_in_Sync_with_GCal_and_Thunderbird/&#34; target=&#34;_blank&#34;&gt;is available&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Credits and thanks to Joel for finding it.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Quote of the day</title>
+      <link>https://miroadamy.com/posts/2007-04-10-quote-of-the-day-6/</link>
+      <pubDate>Tue, 10 Apr 2007 22:34:59 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-10-quote-of-the-day-6/</guid>
+      <description>&lt;p&gt;Goal is a dream with a deadline.&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Found on the Net&lt;/em&gt; &lt;em&gt;- probably by Napoleon Hill&lt;br /&gt;&#xA;&lt;/em&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Useful hacks for TotalCommander</title>
+      <link>https://miroadamy.com/posts/2007-03-09-useful-hacks-for-totalcommander/</link>
+      <pubDate>Fri, 09 Mar 2007 19:18:35 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-09-useful-hacks-for-totalcommander/</guid>
+      <description>&lt;p&gt;The following may interest you only if you are using my &lt;a href=&#34;http://www.ghisler.com/index.htm&#34; target=&#34;_blank&#34;&gt;favorite file manager&lt;/a&gt; (IMHO, it is the best file manager ever created, but your mileage may vary ..)&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;List of selected files to Clipboard&lt;/strong&gt;&lt;br /&gt;&#xA;One of the things that I am doing over and over is to search subtree - set of files for some content and then do something with the result. Let&#39;s say for example that I need all SQL files which refer to TESTDATABASE. On Unix, fastest way is to use &lt;em&gt;&lt;strong&gt;find&lt;/strong&gt;&lt;/em&gt; and pipe the result. On Windows, my workflow (using TotalCommander) is:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>What is wrong with GMail</title>
+      <link>https://miroadamy.com/posts/2007-03-02-what-is-wrong-with-gmail/</link>
+      <pubDate>Fri, 02 Mar 2007 22:57:17 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-03-02-what-is-wrong-with-gmail/</guid>
+      <description>&lt;p&gt;Disclaimer first: I really like GMail. Since I started using it (about year ago), I learned to appreciate the beautiful simplicity and elegance of the Web interface. And since I switched completely to GMail as foundation of all my email systems (about November 2006), I have managed to simplify most of my email related chores. But let&#39;s face it - GMail is far from perfect. Here is list of the annoyances and missing features that I have collected:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>On Myers-Briggs, Spaghetti Sauce and Getting Things Done</title>
+      <link>https://miroadamy.com/posts/2007-02-15-on-myers-briggs-spaghetti-sauce-and-getting-things-done/</link>
+      <pubDate>Thu, 15 Feb 2007 23:33:21 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-15-on-myers-briggs-spaghetti-sauce-and-getting-things-done/</guid>
+      <description>&lt;p&gt;Connie, our HR director came few weeks ago with interesting idea: give the team a chance to get better understanding of &#34;implementation details&#34; of their very own &#34;inner software&#34; - the personality type evaluation using &lt;a href=&#34;http://en.wikipedia.org/wiki/Myers-Briggs_Type_Indicator&#34; target=&#34;_blank&#34;&gt;Myers-Briggs&lt;/a&gt; approach. Connie holds certification for this type of classification.&lt;/p&gt;&#xA;&lt;p&gt;The classification in a nutshell, assigns to everybody four letters, one from each pair: E or I, N or S, T or F, J or P. The first letter indicates preference for Extraversion or Introversion, the second characterizes the main source of information input: Sensation or iNtuition, the third the way how the information is processed - by Thinking or Feeling and the last one characterizes the degree of &#34;structure&#34; and organization in all the previous: more organized and structured (Judging) or less organized and more ad-hoc (Perceiving). Now all this is terrible oversimplification (sorry Connie), so if you really want to get more information try &lt;a href=&#34;http://www.amazon.ca/What-You-Are-Featuring-E-Careers/dp/0316880655/sr=8-1/qid=1171599771/ref=sr_1_1/702-8105306-3232069?ie=UTF8&amp;amp;s=books&#34; target=&#34;_blank&#34;&gt;this&lt;/a&gt; - or if you are in Ottawa, call Connie Deschamps at Thinknostic dot com and schedule a session :-).&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Surf more in less time: Google Reader</title>
+      <link>https://miroadamy.com/posts/2007-02-07-surf-more-in-less-time-google-reader/</link>
+      <pubDate>Wed, 07 Feb 2007 23:33:33 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-07-surf-more-in-less-time-google-reader/</guid>
+      <description>&lt;p&gt;Back in stone age when most information available was actually printed on paper in forms of magazines and books , people experiencing the information overload invented techniques of &lt;a href=&#34;http://en.wikipedia.org/wiki/Speed_reading&#34;&gt;speed reading&lt;/a&gt; to deal with it.&lt;/p&gt;&#xA;&lt;p&gt;It worked - mostly.&lt;/p&gt;&#xA;&lt;p&gt;Nowadays, we have most of the content coming to you through the browser window. Even if you can still speed read the web page, you can get even more speed advantage and quickly sort out the interesting content from the fluff by using the magic of news feeds, RSS, Atom and wonderful free tool &lt;a href=&#34;http://www.google.com/reader/view/&#34;&gt;Google Reader&lt;/a&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Offline access to GMail and Google Docs coming ?</title>
+      <link>https://miroadamy.com/posts/2007-02-06-offline-access-to-gmail-and-google-docs-coming/</link>
+      <pubDate>Tue, 06 Feb 2007 09:39:42 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-06-offline-access-to-gmail-and-google-docs-coming/</guid>
+      <description>&lt;p&gt;However I like the Web applications, the fact is that as soon as you do not have connectivity, they are of very little use. Well - maybe not for long. The &lt;a href=&#34;http://www.sitepen.com/blog/2007/01/02/the-dojo-offline-toolkit/&#34;&gt;Dojo Offline Toolkit&lt;/a&gt; makes promise that sounds almost too good to be true:&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;&lt;em&gt;Imagine a version of &lt;a href=&#34;http://gmail.com/&#34;&gt;GMail&lt;/a&gt; with a “Work Offline” button on the left-hand side of the screen. When pressed, GMail downloads 100 of your most recent emails into Dojo Offline, including pieces of it’s user-interface. A user can now close their browser and leave the network, stepping on an airplane for example. Once in the air, the user can then simply open their laptop and browser and type in mail.google.com. The GMail UI magically appears, along with their 100 most recent emails. A user can read these mails, compose new ones, or reply to existing ones. A flight attendant announces that the plane will land soon; the user closes their browser and laptop. Later, when they are back on the network, they can click the “Work Online” button, which will send all of their locally written emails to the GMail server. &lt;/em&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Using multiple GMail/GCalendar accounts</title>
+      <link>https://miroadamy.com/posts/2007-02-01-using-multiple-gmailgcalendar-accounts/</link>
+      <pubDate>Thu, 01 Feb 2007 23:46:34 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-02-01-using-multiple-gmailgcalendar-accounts/</guid>
+      <description>&lt;p&gt;Since last week we have switched our corporate emails from our ISP to  &lt;a href=&#34;http://www.google.com/a/&#34;&gt;Google Apps for Domains&lt;/a&gt;.  This gives everybody very easy way how to access and share the Calendar and Contacts, provides Web interface that really works - as well as capability to access your emails via POP3. So far I am very happy with it and the feedback I have got from other Thinknostickers was positive (or none, which means everything is likely OK).&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Dealing with digital mess: Local (offline) File Storage</title>
+      <link>https://miroadamy.com/posts/2007-01-20-dealing-with-digital-mess-local-offline-file-storage/</link>
+      <pubDate>Sat, 20 Jan 2007 23:39:40 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-20-dealing-with-digital-mess-local-offline-file-storage/</guid>
+      <description>&lt;p&gt;If you have digital camera or digital camcorder, you probably have a problem where to store the pictures and video so that they are readily available for viewing and protected against loss caused by hardware failure. How much storage you need depends on how many and how large pictures do you take and how heavy camcorder user you are. In my case, I have switched to shooting RAW on my D70, doing about 2000-4000 shots a year and the camcorder produces about 4-5 GB unprocessed video per hour of recording. After adding some free capacity for the document archives, some MP3 files, anything smaller than 500 GB will be probably too small. To have some space, I decided I better go for 1 Terrabyte of space.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How to recover lost Win XP password</title>
+      <link>https://miroadamy.com/posts/2007-01-16-how-to-recover-lost-win-xp-password/</link>
+      <pubDate>Tue, 16 Jan 2007 23:42:24 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-16-how-to-recover-lost-win-xp-password/</guid>
+      <description>&lt;p&gt;If it ever happens to you that you need to restart old computer which you have not logged on for 2-3 months and you find out you have no clue what the password could be, do not panick. Exactly this happened to me yesterday. Fortunately I have remembered reading something on &lt;a href=&#34;http://www.lifehacker.com/software/password-recovery/download-of-the-day-ophcrack-live-cd-226996.php&#34;&gt;lifehacker&lt;/a&gt; few days ago about &lt;a href=&#34;http://www.lifehacker.com/software/cds/download-of-the-day-iso-recorder-175027.php&#34;&gt;bootable CD&lt;/a&gt; which contains live Linux distribution with password cracking open source software &lt;a href=&#34;http://sourceforge.net/projects/ophcrack/&#34;&gt;Ophcrack&lt;/a&gt;. It runs from CD only, does not touch your file system, only loads local SAM and tries cracking the hashes. And boy, it works !&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Automating iTunes</title>
+      <link>https://miroadamy.com/posts/2007-01-15-automating-itunes/</link>
+      <pubDate>Mon, 15 Jan 2007 23:15:28 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-15-automating-itunes/</guid>
+      <description>&lt;p&gt;With great horror I have discovered that from my 80 GB hardrive in Macbook already over 76 GB was full. Mostly because of the hidden activity of iTunes and silent downloading of new podcast episodes. Especially video podcasts - such as Mac break - are disk heavy, since they are produced in HD - and as result, look remarkably beautiful on the screen.&lt;/p&gt;&#xA;&lt;p&gt;While cleaning up, I have decided to burn few of my very favorite podcasts to the MP3 CD and keep it in the car. Doing that is really easy in iTunes - all you have to do is to select MP3 CD in Preferences -&amp;gt; Advanced -&amp;gt; Burning, create a playlist that will contain all MP3&#39;s you want to burn, control-click it and select Burn. So far so good. There are some situations when yu want to have more control over the process: for example you want to put the files to subfolders or need to adjust / cleanup the names of files before burning.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Dealing with digital mess: Bookmarks</title>
+      <link>https://miroadamy.com/posts/2007-01-08-dealing-with-digital-mess-bookmarks/</link>
+      <pubDate>Mon, 08 Jan 2007 23:03:03 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-08-dealing-with-digital-mess-bookmarks/</guid>
+      <description>&lt;p&gt;As I mentioned &lt;a href=&#34;http://thinkwrap.wordpress.com/2006/11/17/feotd-firefox-extension-of-the-day-delicious/&#34;&gt;before&lt;/a&gt;, I am keeping all my bookmarks in del.icio.us account. Thanks to excellent Firefox extension and available bookmarklets, posting new URL&#39;s is very comfortable. After using the del.icio.us for some time, here is few tips how get best of it:&lt;/p&gt;&#xA;&lt;p&gt;- use the post buttons - they are available for Firefox as well as IE&lt;br /&gt;&#xA;- post often and tag a lot. Tags are the only way how to search the non-public posts&lt;br /&gt;&#xA;- keep consistent approach to tag names. I use singular, replace the &#39;.&#39; with word dot (dotnet) and write all lowercase&lt;br /&gt;&#xA;- follow the crowd - consider using similar tags as others, it makes it easier to be part of community&lt;br /&gt;&#xA;- use wisdom of the crowd. Look what else did other people tagged with the same tag as you did. You will be surprised what you may discover.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Installophobia a Setupanxiety</title>
+      <link>https://miroadamy.com/posts/2007-01-07-installophobia-a-setupanxiety/</link>
+      <pubDate>Sun, 07 Jan 2007 22:40:16 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-07-installophobia-a-setupanxiety/</guid>
+      <description>&lt;p&gt;I have to admit that I am suffering from severe case of installophobia. Every time I start installation program on Windows, I am very vividly imagining all the terrible things that may happen in next few minutes. Like overwriting some system DLL&#39;s with some old or wrong version which will break half dozen of other programs. Or messing up my registry so badly that I will have have to spend few days of backing up my system data and installing XP from scratch (and inevitably loose something very important in the process). The introduction of the system installer and MSI format few years ago helped a little for a while - up to the point when I wrote my first own installation program and fully understood what exactly can be done with it :-). Then it come back. I guess this may have contributed to two major shifts during last year - moving to Mac platform (which has no registry) and moving on-line (which has no install at all).&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How to reset an iPod</title>
+      <link>https://miroadamy.com/posts/2007-01-06-how-to-reset-an-ipod/</link>
+      <pubDate>Sat, 06 Jan 2007 23:58:31 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-06-how-to-reset-an-ipod/</guid>
+      <description>&lt;p&gt;when it hangs and does not react. I am posting it so that I do not have to google it out again :-). Key is Menu + Select combination.&lt;/p&gt;&#xA;&lt;p&gt;Here comes the detailed version (saved from Google Notebook):&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Toggle the Hold switch on and off to avoid &#34;hold trap&#34;&lt;/li&gt;&#xA;&lt;li&gt;Press and hold the Menu and Select buttons until the Apple logo appears, about 6 to 10 seconds. You may need to repeat this step.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;&lt;strong&gt;Tips&lt;/strong&gt;:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Speaking to the Dragon</title>
+      <link>https://miroadamy.com/posts/2007-01-05-speaking-to-the-dragon/</link>
+      <pubDate>Fri, 05 Jan 2007 23:45:12 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-05-speaking-to-the-dragon/</guid>
+      <description>&lt;p&gt;It was Rod who started this by saying how great it is to replace slow typing with faster speaking and mentioning some kind of magical software package (appropriately named &lt;a href=&#34;http://www.digitalriver.com/v2.0-img/operations/scansoft/site/html/dragon/Preferred_9.htm&#34;&gt;Dragon Naturally Speaking&lt;/a&gt;) which does transform your voice to written properly spelled English text with amazing accuracy. I was pretty sceptical, after seeing few years ago similar software from IBM with not-so-great accuracy, and even more recently the famous &lt;a href=&#34;http://www.youtube.com/watch?v=2Y_Jp6PxsSQ&#34;&gt;Vista speech wreckognition&lt;/a&gt;.  Then Peter bought the software as well and had similarly good results as Rod. Now I got really interested. Both Peter and Rod and native speakers of English and I was very curious  how will the software deal with my very own version of English  pronunciation and fairly thick  Slovak accent. So we did try it today.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Looking back on 2006</title>
+      <link>https://miroadamy.com/posts/2007-01-01-looking-back-on-2006/</link>
+      <pubDate>Mon, 01 Jan 2007 21:46:33 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-01-01-looking-back-on-2006/</guid>
+      <description>&lt;p&gt;The 2006 was truly amazing year. We have accomplished so much - we have created the West end development centre, brought in and started several projects, completed phase 1 of employee conversion, started benefits program, ESOP program, redefined the company visual presence, grew the business and the company size considerably and created foundation for future growth.&lt;/p&gt;&#xA;&lt;p&gt;Most important achievemnt is the fun factor - I am again looking forward to go to work - and again since the Montage days the synergy is coming back. Thanks so much to all of you who helped it happen.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Dealing with digital mess - Part 2: Passwords</title>
+      <link>https://miroadamy.com/posts/2006-12-31-dealing-with-digital-mess-part-2/</link>
+      <pubDate>Sun, 31 Dec 2006 23:48:11 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-31-dealing-with-digital-mess-part-2/</guid>
+      <description>&lt;p&gt;Today&#39;s topic is dealing with sensitive information - such as logins, passwords, PIN numbers, credit card numbers and so on.&lt;/p&gt;&#xA;&lt;p&gt;Up to last week, I was using the &lt;a href=&#34;http://www.splashdata.com/splashid/&#34;&gt;SplashID&lt;/a&gt; software to keep everything worth securing secure. I started to use SplashID back in 2001 when I bought the Palm based Sony Clie SJ30 (as replacement for wonderful Palm IIIxe). The Palm based program came with desktop counterpart that allowed editing of entries. Later in 2004 when I switched to Pocket PC, I simply purchased Windows Mobile version of the same software.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How to get rid of Outlook: the plan</title>
+      <link>https://miroadamy.com/posts/2006-12-30-how-to-get-rid-of-outlook-part-1/</link>
+      <pubDate>Sat, 30 Dec 2006 00:38:28 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-30-how-to-get-rid-of-outlook-part-1/</guid>
+      <description>&lt;p&gt;I have decided to stop using Microsoft Outlook. No, I did not have any major issues with it, no horror stories of crashed, unreadable emails or viruses. As long as you use decent anti-virus (for example &lt;a href=&#34;http://www.nod32.com/&#34;&gt;this one&lt;/a&gt;), switch off automatic loading of images and never do anything stupid such as clicking on an attachment or a link in email, you are reasonably safe. What got me to switch was lack of interoperability between anything non-Windows and Outlook and headaches of synchronization with on-line information. Using Outlook-only everywhere is not an option for me, because I need to use Mac as well as Windows and buying license of Outlook for every notebook, PC and virtual machine would be prohibitively expensive.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Dealing with digital mess - Part 1</title>
+      <link>https://miroadamy.com/posts/2006-12-29-dealing-with-digital-mess-part-1/</link>
+      <pubDate>Fri, 29 Dec 2006 03:14:59 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-29-dealing-with-digital-mess-part-1/</guid>
+      <description>&lt;p&gt;In certain sense, people and companies have one things in common. If have been around for few years, you collect, acquire or create very strange collection of tools, platforms, software and data formats. In short, you end up with lots of digital mess. I am planning to make major cleanup and streamlining in 2007 - consolidate the hardware, software, data formats and workflows both at home and at work.&lt;/p&gt;&#xA;&lt;p&gt;I have read the &lt;a href=&#34;http://en.wikipedia.org/wiki/Getting_Things_Done&#34;&gt;GTD&lt;/a&gt; &lt;a href=&#34;http://www.businessweek.com/smallbiz/content/aug2001/sb20010824_770.htm&#34;&gt;book&lt;/a&gt; and many interesting &lt;a href=&#34;http://wiki.43folders.com/index.php/Main_Page&#34;&gt;articles&lt;/a&gt; and &lt;a href=&#34;http://www.lifehack.org/&#34;&gt;blogs&lt;/a&gt; on how people implement it. I noticed that the best way how to succeed is try to follow and customize the GTD approach for own circumstances, and build set of tools and processes that would make dealing with stuff easier, faster and more efficient.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Publish your own book - or Lulu.com rocks!</title>
+      <link>https://miroadamy.com/posts/2006-12-27-publish-your-own-book-or-lulucom-rocks/</link>
+      <pubDate>Wed, 27 Dec 2006 23:17:19 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-27-publish-your-own-book-or-lulucom-rocks/</guid>
+      <description>&lt;p&gt;One of the most successful presents this Christmas was five copies of the same book. Not just some kind of a book. Our daughter got five copies of the book she authored as a surprise. How can this happen ?&lt;/p&gt;&#xA;&lt;p&gt;I was toying with an idea to try out self-publishing on-demand printing company that would allow you to create and publish book without spending hundreds or thousands of dollars as investment - sort of &#34;pay as go&#34; plan.  The only way how to do it is create the the printable book yourself and find publisher that can do print on demand. Most companies that I found were selling packages in price segment $800 to few thousands of dollars, which included professional assistance in book creation: proofreading, editing, graphics design etc. One company however, offered exactly what I needed: a service that allows you to upload content file, design the cover and order as little as single copy - or as many as you need. No setup fees, publishing packages or minimum orders. See &lt;a href=&#34;http://www.lulu.com/&#34;&gt;www.lulu.com&lt;/a&gt; for more detail. So we have decided to give it a try. It was an easy decision because manually printing the color pages and paying for binding would cost about 3 times more as was the price on Lulu.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How to synchronize Pocket PC with Mac</title>
+      <link>https://miroadamy.com/posts/2006-12-18-how-to-synchronize-pocket-pc-with-mac/</link>
+      <pubDate>Mon, 18 Dec 2006 22:06:18 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-18-how-to-synchronize-pocket-pc-with-mac/</guid>
+      <description>&lt;p&gt;Using PocketPC with Windows is very easy, assumed that you are using Outlook. Synchronization is  straightforward, works out of the box. If you are keeping your contacts in other software than Outlook, you can often find 3rd party software that does the synchronization - or at least provides the plugin. The selection of the solutions is fairly large.&lt;/p&gt;&#xA;&lt;p&gt;On Mac, you are in similar situation if you want to use Palm based PDA. With Pocket PC synchronization, selection is limited. For direct synchronization between Mac address book and iCal, you have basically 2 options (or more precisely, at least two options): &lt;a href=&#34;http://www.pocketmac.net/products.html&#34;&gt;PocketMac&lt;/a&gt; or &lt;a href=&#34;http://www.markspace.com/missingsync_windowsmobile.php&#34;&gt;The Missing Sync&lt;/a&gt;. Both will do the job, but the Missing Sync seems to be more modern: it supports Intel processors on Mac side and Windows Mobile 5. Also the Web site of the Missing sync has more professional, Mac-like look. I found the &lt;a href=&#34;http://www.pdantic.com/reviews/macs2ppcs.htm&#34;&gt;review of both&lt;/a&gt;, but little bit dated ...&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Weekend special</title>
+      <link>https://miroadamy.com/posts/2006-12-16-weekend-special/</link>
+      <pubDate>Sat, 16 Dec 2006 18:47:37 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-16-weekend-special/</guid>
+      <description>&lt;p&gt;Weekend time again. As few times before, here are few discoveries from the Web:&lt;/p&gt;&#xA;&lt;p&gt;Google is pushing Internet Explorer 7. Their &lt;a href=&#34;http://www.google.com/toolbar/ie7/&#34;&gt;own version&lt;/a&gt;,  using new &lt;em&gt;Internet Explorer Administration Kit. &lt;/em&gt;It is not really different version - just configured with Google as default search engine and Google toolbar. Nothing that little more experienced user would not do himself. I am not sure how successfull this will be - but I am pretty sure that this was not what Microsoft had in mind how this tools should be used for.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How to duplicate CD on a Mac</title>
+      <link>https://miroadamy.com/posts/2006-12-11-how-to-duplicate-cd-on-a-mac/</link>
+      <pubDate>Mon, 11 Dec 2006 20:20:52 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-11-how-to-duplicate-cd-on-a-mac/</guid>
+      <description>&lt;p&gt;My daughter&#39;s music CD for her skating short program got badly scratched and because it was the last-but-one copy (as skater you need many copies, in case you loose/forget/scratch/misplace it),  I was confronted with the task to create a new copy. Rather than starting Nero on Win-XP notebook, I have decided to learn (finally) how to do it on Mac. It must be simple, intuititive and much easier than on Windows. Right ? Wrong ! To my big surprise, there was no easy, idiot proof, very obvious way mac-ish drag and drop way how to acomplish it. It was not exactly hard either, but it actually took consulting the omniviscent Google to find it out. To save the search for the next time, I&#39;ll write it down. Here is what you have to do:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Apple makes me healthier :-)</title>
+      <link>https://miroadamy.com/posts/2006-11-19-apple-makes-me-healthier/</link>
+      <pubDate>Sun, 19 Nov 2006 23:47:11 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-11-19-apple-makes-me-healthier/</guid>
+      <description>&lt;p&gt;Not only apple the fruit, but also Apple the company. How does it work ?&lt;/p&gt;&#xA;&lt;blockquote&gt;&lt;p&gt;Step 1: Buy an iPod. Any model will do, I have got Nano 2Gen, 4 GB&lt;/p&gt;&#xA;&lt;p&gt;Step 2: Subscribe to some good podcasts&lt;/p&gt;&#xA;&lt;p&gt;Step 3: Listen to a podcasts while taking long walks - outdoors (preferred) or in a fittness studio.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;That&#39;s it. It works great for me. During last four weeks I have digested lots of podcasts, inclusive &lt;a href=&#34;http://www.twit.tv/&#34;&gt;TWIT &lt;/a&gt;(This Week In Tech) netcasts  from August 2006 almost up to today.  It is a great way how to stay informed and get more interesting news while spending less time in front of the computer. And on top of that, you can have fun along the way. &lt;a href=&#34;http://leoville.com/&#34;&gt;Leo Laporte&lt;/a&gt; is great host and personalities like &lt;a href=&#34;http://dvorak.org/blog/&#34;&gt;John C Dvorak&lt;/a&gt; add lot&#39;s of flavor to the discussion. Few items from latest edition:&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>The 30 day challenge</title>
+      <link>https://miroadamy.com/posts/2006-11-16-the-30-day-challenge/</link>
+      <pubDate>Thu, 16 Nov 2006 00:58:12 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-11-16-the-30-day-challenge/</guid>
+      <description>&lt;p&gt;It&#39;s been awfully quiet here in last two weeks. Mostly because it was awfully busy pretty much everywhere else. Being a single parent, even for a short and definite period of time is pretty demanding task. Now when my wife is back from the trip overseas, I do not spend my mornings and evening in various skating rinks, I am slowly catching up on everything that got backlogged, delayd and so on. Starting with my project and progressing slowly through my reading list, lot&#39;s of downloaded podcasts and LBNL (last but not least) the blog.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>On Ottawa beduins - or - We want Starbucks with whiteboards</title>
+      <link>https://miroadamy.com/posts/2006-09-07-on-ottawa-beduins-or-we-want-starbucks-with-whiteboards/</link>
+      <pubDate>Thu, 07 Sep 2006 22:50:34 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-09-07-on-ottawa-beduins-or-we-want-starbucks-with-whiteboards/</guid>
+      <description>&lt;p&gt;We will be moving into new office space soon. It is exciting time, stepping from working (mostly) at customer&#39;s locations to own project office. Location is of course &lt;a href=&#34;http://en.wikipedia.org/wiki/Kanata,_Ontario&#34;&gt;Kanata&lt;/a&gt; Business Park North, with nice view to a golf course. This location brings several changes against the office in downtown - some of them are great - such as 1) we have lot&#39;s of space and 2) parking is not an issue - arrive any time, park as long as you wish. Some of them are not so great - selection of possible choices for lunch shrunk considerably (with very few in walking distance) and to get to closest &lt;a href=&#34;http://www.timhortons.com/&#34; title=&#34;Tim Hortons&#34;&gt;Tim Hortons&lt;/a&gt; you have to drive (unless you are ready for 25 minute walk one way). In case you are wondering - we are keeping the office at Albert Street - it is managed by &lt;a href=&#34;http://www.tcccanada.com/&#34;&gt;same company&lt;/a&gt; as the new place, so we are just scaling up.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Working On-Line: Excell-ent On-Line Spreadsheets</title>
+      <link>https://miroadamy.com/posts/2006-09-02-working-on-line-excell-ent-on-line-spreadsheets/</link>
+      <pubDate>Sat, 02 Sep 2006 23:15:20 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-09-02-working-on-line-excell-ent-on-line-spreadsheets/</guid>
+      <description>&lt;p&gt;&lt;i&gt;Continuing in Working On-Line Series - see previous post on &lt;a href=&#34;http://thinkwrap.wordpress.com/2006/08/30/working-on-line-word-processors/&#34;&gt;word processors&lt;/a&gt; &lt;/i&gt;&lt;/p&gt;&#xA;&lt;p&gt;Spreadsheet is after editing text probably second most important business application. Let&#39;s explore what is out there for those of us, who do not want to install Microsoft Office or commit yourself to one particular platform. Most of the spreadsheet try to copy or emulate subset of the features of &#34;de-facto&#34; spreadsheet standard &lt;a href=&#34;http://office.microsoft.com/en-us/FX010858001033.aspx&#34;&gt;Microsoft Excel&lt;br /&gt;&#xA;&lt;/a&gt;&lt;br /&gt;&#xA;Good starting points for search is (obviously) Google search for &#34;on-line spreadsheet&#34; and Wikipedia. The offer of Web based spreadsheet programs is surprisingly large. They differ in capabilities, but typically allow import and export of Excel spreadsheets and CSV files, entering formulas (with subset of Excel functions), text formating, some form of graph creation and most importantly - colaboration and shared viewing/editing of the spreadsheet. I tried accomplish two task with some of them: import my timesheet from XLS and edit it online and do shared editing of a spreadsheet. Here is quick summary of the features and personal experience working with them.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
 </rss>

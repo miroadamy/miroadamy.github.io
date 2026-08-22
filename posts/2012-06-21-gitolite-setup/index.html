@@ -1,51 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Using Gitolite for code sharing setup - Miro&#39;s World</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+  
+  
+    <title>Using Gitolite for code sharing setup &middot; Miro&#39;s World</title>
+    <meta name="title" content="Using Gitolite for code sharing setup &middot; Miro&#39;s World">
+  
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+  
+  
+    <meta name="keywords" content="git,gitolite,">
+  
+  
+  
+  <link rel="canonical" href="https://miroadamy.com/posts/2012-06-21-gitolite-setup/">
+  
+  
 
+  
+  
+    <meta name="author" content="Miro Adamy">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/miroadamy/" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://stackoverflow.com/users/369692/miro-a" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://github.com/miroadamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://gitlab.com/miro.adamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://twitter.com/miroadamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.facebook.com/miro.adamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.instagram.com/miro.adamy/?hl=sk" rel="me">
+        
+      
+    
+  
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
-Main features multiple users each user represent a client: e.g. users client1 Users are separated by Unix permissions: access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes Inside each user, there are multiple projects. These projects will have multiple repositiories and will follow the naming convention:
-" /><meta name="keywords" content="blog, Miro" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.164.0 with theme even" />
-
-
-<link rel="canonical" href="https://miroadamy.com/posts/2012-06-21-gitolite-setup/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:url" content="https://miroadamy.com/posts/2012-06-21-gitolite-setup/">
+  
+  <meta property="og:url" content="https://miroadamy.com/posts/2012-06-21-gitolite-setup/">
 	<meta property="og:site_name" content="Miro&#39;s World">
 	<meta property="og:title" content="Using Gitolite for code sharing setup">
-	<meta property="og:description" content="General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
-Main features multiple users each user represent a client: e.g. users client1 Users are separated by Unix permissions: access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes Inside each user, there are multiple projects. These projects will have multiple repositiories and will follow the naming convention:">
+	<meta property="og:description" content="General setup of code sharing host # The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
+Main features # multiple users each user represent a client: e.g. users client1 Users are separated by Unix permissions: # access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes Inside each user, there are multiple projects. # These projects will have multiple repositiories and will follow the naming convention:">
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
@@ -54,110 +110,789 @@ Main features multiple users each user represent a client: e.g. users client1 Us
 		<meta property="article:tag" content="Git">
 		<meta property="article:tag" content="Gitolite">
 
-	<meta itemprop="name" content="Using Gitolite for code sharing setup">
-	<meta itemprop="description" content="General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
-Main features multiple users each user represent a client: e.g. users client1 Users are separated by Unix permissions: access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes Inside each user, there are multiple projects. These projects will have multiple repositiories and will follow the naming convention:">
-	<meta itemprop="datePublished" content="2012-06-21T11:22:48+08:00">
-	<meta itemprop="dateModified" content="2012-06-21T11:22:48+08:00">
-	<meta itemprop="wordCount" content="4713">
-	<meta itemprop="keywords" content="Git,Gitolite">
+  
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Using Gitolite for code sharing setup">
-	<meta name="twitter:description" content="General setup of code sharing host The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
-Main features multiple users each user represent a client: e.g. users client1 Users are separated by Unix permissions: access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes Inside each user, there are multiple projects. These projects will have multiple repositiories and will follow the naming convention:">
+	<meta name="twitter:description" content="General setup of code sharing host # The code sharing host (Pensieve) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network (dual homed) - for the build server access.
+Main features # multiple users each user represent a client: e.g. users client1 Users are separated by Unix permissions: # access rights to /home/USER are 0700 - no access except the dedicated user only ThinkWrap has root access or sudo access the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes Inside each user, there are multiple projects. # These projects will have multiple repositiories and will follow the naming convention:">
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+  
+  
+  
+  
+  
+  
 
-</head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Miro&#39;s World</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/posts/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">About</li>
-      </a>
-  </ul>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.109d05baab980c4b552cffcf3c585559d3979bc7da97727e30e07886dec2dffbcf308e213e7e92a19c9c1641392f2901de07dcd784b311ec17dfaa88200741d9.css"
+    integrity="sha512-EJ0FuquYDEtVLP/PPFhVWdOXm8fal3J&#43;MOB4ht7C3/vPMI4hPn6SoZycFkE5LykB3gfc14SzEewX36qIIAdB2Q==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.764f412f07ea715415e9123a5eb5f355429502d0b760146b9bcab854bc50829dee14488594acd935dfcdc6a0fe7e6d14d7bee914ebb9272b251aa238cb52c4dd.js"
+    integrity="sha512-dk9BLwfqcVQV6RI6XrXzVUKVAtC3YBRrm8q4VLxQgp3uFEiFlKzZNd/NxqD&#43;fm0U177pFOu5JyslGqI4y1LE3Q=="></script>
+  
+
+
+  
+  
+  
+  
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+    
+    <script defer src="/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js" integrity="sha512-Z7cez37szjhnOpIkTR/9k&#43;218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script>
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.42ef5f784093496e25f94d15338b6c70dc981b8b54837a408ae9cc81222241540a0d2efec4410f1854208aa3b3609c9af7a33b83656eecd42187a1f9c6f7b459.js"
+      integrity="sha512-Qu9feECTSW4l&#43;U0VM4tscNyYG4tUg3pAiunMgSIiQVQKDS7&#43;xEEPGFQgiqOzYJya96M7g2Vu7NQhh6H5xve0WQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
 
   
 
 
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Using Gitolite for code sharing setup",
+    "headline": "Using Gitolite for code sharing setup",
+    
+    "inLanguage": "en",
+    "url" : "https://miroadamy.com/posts/2012-06-21-gitolite-setup/",
+    "author" : {
+      "@type": "Person",
+      "name": "Miro Adamy",
+      "sameAs": ["https://www.linkedin.com/in/miroadamy/", "https://stackoverflow.com/users/369692/miro-a", "https://github.com/miroadamy", "https://gitlab.com/miro.adamy", "https://twitter.com/miroadamy", "https://www.facebook.com/miro.adamy", "https://www.instagram.com/miro.adamy/?hl=sk"]
+    },
+    "copyrightYear": "2012",
+    "dateCreated": "2012-06-21T11:22:48\u002b08:00",
+    "datePublished": "2012-06-21T11:22:48\u002b08:00",
+    
+    "dateModified": "2012-06-21T11:22:48\u002b08:00",
+    
+    "keywords": ["git","gitolite"],
+    
+    "mainEntityOfPage": "https://miroadamy.com/posts/2012-06-21-gitolite-setup/",
+    "wordCount":  4736 
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    <header>
+      
+      
+        <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Miro&rsquo;s World
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="Main menu" class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Archives"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Archives
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Categories"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Categories
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Switch to dark appearance"
+        type="button"
+        class="text-sm bf-icon-color-hover"
+        title="Switch to dark appearance">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd
+        id="search-shortcut-hint"
+        class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400"
+        aria-hidden="true">
+        ⌘K
+      </kbd>
+    </button>
+  
 </nav>
 
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">Miro&#39;s World</a>
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row mobile-menu-fullscreen relative flex items-center h-14 gap-4">
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Switch to dark appearance"
+      title="Switch to dark appearance"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label
+      for="mobile-menu-toggle"
+      tabindex="0"
+      role="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu-dialog"
+      aria-label="Main menu"
+      class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      id="mobile-menu-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Main menu"
+      style="scrollbar-gutter: stable;"
+      class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100
+      
+        fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99
+      
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        tabindex="0"
+        role="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu-dialog"
+        class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only">Close menu</span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav
+        aria-label="Mobile menu"
+        class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/"
+          aria-label="Home"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Home
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/posts/"
+          aria-label="Archives"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Archives
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/tags/"
+          aria-label="Tags"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Tags
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/categories/"
+          aria-label="Categories"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Categories
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/about/"
+          aria-label="About"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="About" class="text-2xl font-bold tracking-tight">
+            About
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
 </div>
 
 
 
 
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/posts/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">About</a>
-      </li>
-  </ul>
-</nav>
 
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+      
     </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">Using Gitolite for code sharing setup</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2012-06-21 </span>
-        <div class="post-category">
-            <a href="/categories/devops/"> devops </a>
-            </div>
-          <span class="more-meta"> 4713 words </span>
-          <span class="more-meta"> 23 mins read </span>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
         
+  
+  
+  
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Using Gitolite for code sharing setup
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2012-06-21T11:22:48&#43;08:00">June 21, 2012</time><span class="px-2 text-primary-500">&middot;</span><span>4736 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">23 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/devops/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    DevOps
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/git/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Git
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/gitolite/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Gitolite
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
       </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+  
+
+  
+
+      
     </header>
 
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents" aria-label="Table of Contents">
   <ul>
     <li><a href="#general-setup-of-code-sharing-host">General setup of code sharing host</a>
       <ul>
@@ -172,9 +907,24 @@ Main features multiple users each user represent a client: e.g. users client1 Us
     </li>
     <li><a href="#detailed-walkthrough-of-setup">Detailed walkthrough of setup</a>
       <ul>
-        <li><a href="#on-codeshare">On CodeShare</a></li>
-        <li><a href="#on-client">On Client</a></li>
-        <li><a href="#time-to-simulate-some-development">Time to simulate some development.</a></li>
+        <li><a href="#on-codeshare">On CodeShare</a>
+          <ul>
+            <li><a href="#step-one---setup-gitolite">Step one - setup Gitolite</a></li>
+            <li><a href="#create-bin-directory">Create bin directory</a></li>
+            <li><a href="#install-it">Install it:</a></li>
+            <li><a href="#add-private-key">Add private key:</a></li>
+          </ul>
+        </li>
+        <li><a href="#on-client">On Client</a>
+          <ul>
+            <li><a href="#next-step-will-be-editing-gitoliteconf">Next step will be editing gitolite.conf</a></li>
+          </ul>
+        </li>
+        <li><a href="#time-to-simulate-some-development">Time to simulate some development.</a>
+          <ul>
+            <li><a href="#second-developer">Second developer</a></li>
+          </ul>
+        </li>
         <li><a href="#back-to-macbook-and-put-on-my-integration-manager-hat">Back to Macbook and put on my Integration Manager hat:</a></li>
         <li><a href="#back-on-luke-i-am-tkuser-now">Back on Luke, I am tkuser now:</a></li>
       </ul>
@@ -188,12 +938,95 @@ Main features multiple users each user represent a client: e.g. users client1 Us
   </ul>
 </nav>
   </div>
-</div>
-    <div class="post-content">
-      <h2 id="general-setup-of-code-sharing-host">General setup of code sharing host</h2>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContentsMobile" aria-label="Table of Contents">
+  <ul>
+    <li><a href="#general-setup-of-code-sharing-host">General setup of code sharing host</a>
+      <ul>
+        <li><a href="#main-features">Main features</a></li>
+        <li><a href="#users-are-separated-by-unix-permissions">Users are separated by Unix permissions:</a></li>
+        <li><a href="#inside-each-user-there-are-multiple-projects">Inside each user, there are multiple projects.</a></li>
+        <li><a href="#pensieve-and-codeserver">Pensieve and CodeServer</a></li>
+        <li><a href="#how-gitolite-works">How Gitolite works</a></li>
+        <li><a href="#how-external-developers-access-codeshare">How external developers access CodeShare</a></li>
+        <li><a href="#security-and-packability---sidenote">Security and packability - Sidenote</a></li>
+      </ul>
+    </li>
+    <li><a href="#detailed-walkthrough-of-setup">Detailed walkthrough of setup</a>
+      <ul>
+        <li><a href="#on-codeshare">On CodeShare</a>
+          <ul>
+            <li><a href="#step-one---setup-gitolite">Step one - setup Gitolite</a></li>
+            <li><a href="#create-bin-directory">Create bin directory</a></li>
+            <li><a href="#install-it">Install it:</a></li>
+            <li><a href="#add-private-key">Add private key:</a></li>
+          </ul>
+        </li>
+        <li><a href="#on-client">On Client</a>
+          <ul>
+            <li><a href="#next-step-will-be-editing-gitoliteconf">Next step will be editing gitolite.conf</a></li>
+          </ul>
+        </li>
+        <li><a href="#time-to-simulate-some-development">Time to simulate some development.</a>
+          <ul>
+            <li><a href="#second-developer">Second developer</a></li>
+          </ul>
+        </li>
+        <li><a href="#back-to-macbook-and-put-on-my-integration-manager-hat">Back to Macbook and put on my Integration Manager hat:</a></li>
+        <li><a href="#back-on-luke-i-am-tkuser-now">Back on Luke, I am tkuser now:</a></li>
+      </ul>
+    </li>
+    <li><a href="#sharing-external-repo-among-developers">Sharing external repo among developers</a></li>
+    <li><a href="#security-and-hackability">Security and hackability</a>
+      <ul>
+        <li><a href="#attempt-to-bypass-the-security-by-logging-on-as-hosting-user">Attempt to bypass the security by logging on as hosting user</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">General setup of code sharing host
+    <div id="general-setup-of-code-sharing-host" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#general-setup-of-code-sharing-host" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>The code sharing host (<strong>Pensieve</strong>) is dedicated Linux server in DMZ, accessible from external locations as well as from internal network
 (dual homed) - for the build server access.</p>
-<h3 id="main-features">Main features</h3>
+
+<h3 class="relative group">Main features
+    <div id="main-features" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#main-features" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <ul>
 <li>multiple users</li>
 <li>each user represent a client:
@@ -202,13 +1035,31 @@ Main features multiple users each user represent a client: e.g. users client1 Us
 </ul>
 </li>
 </ul>
-<h3 id="users-are-separated-by-unix-permissions">Users are separated by Unix permissions:</h3>
+
+<h3 class="relative group">Users are separated by Unix permissions:
+    <div id="users-are-separated-by-unix-permissions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#users-are-separated-by-unix-permissions" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <ul>
 <li>access rights to /home/USER are 0700 - no access except the dedicated user</li>
 <li>only ThinkWrap has root access or sudo access</li>
 <li>the access via ssh for the user is blocked - the user client1 cannot log in using ssh and get shell, only use git to pull or push changes</li>
 </ul>
-<h3 id="inside-each-user-there-are-multiple-projects">Inside each user, there are multiple projects.</h3>
+
+<h3 class="relative group">Inside each user, there are multiple projects.
+    <div id="inside-each-user-there-are-multiple-projects" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#inside-each-user-there-are-multiple-projects" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <p>These projects will have multiple repositiories and will follow the naming convention:</p>
 <ul>
 <li>PROJECT_BASE_NAME-DEV_NAME</li>
@@ -223,7 +1074,16 @@ All external developers will have pull (read-only) access to blessed repository.
 <p>Depending on project setup, external developers may or may not have pull access to each other repositories
 (for sharing code before it goes through integration).</p>
 <p>Internal counterpart for the code sharing</p>
-<h3 id="pensieve-and-codeserver">Pensieve and CodeServer</h3>
+
+<h3 class="relative group">Pensieve and CodeServer
+    <div id="pensieve-and-codeserver" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pensieve-and-codeserver" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <p>Internally, we will have per-project area on internal repositories host - <strong>CodeServer</strong></p>
 <p>Each project code area will follow exactly same naming convention:</p>
 <ul>
@@ -243,13 +1103,22 @@ All external developers will have pull (read-only) access to blessed repository.
 <li>&ldquo;minimized&rdquo; model - there is only RELEASE repository on CodeServer and developers push directly to it (aka Subversion model).</li>
 </ul>
 <p>Team lead or IM is responsible to handle code transitions between Pensieve and CodeServer</p>
-<p>All this access magic is possible because of the combination of the SSH and Gitolite (see <a href="http://sitaramc.github.com/gitolite/master-toc.html">http://sitaramc.github.com/gitolite/master-toc.html</a>)</p>
-<h3 id="how-gitolite-works">How Gitolite works</h3>
+<p>All this access magic is possible because of the combination of the SSH and Gitolite (see <a href="http://sitaramc.github.com/gitolite/master-toc.html"  target="_blank" rel="noreferrer">http://sitaramc.github.com/gitolite/master-toc.html</a>)</p>
+
+<h3 class="relative group">How Gitolite works
+    <div id="how-gitolite-works" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#how-gitolite-works" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <p>Everything is described in the manual, MAKE SURE you read these parts:</p>
 <ul>
-<li><a href="http://sitaramc.github.com/gitolite/ssh.html">http://sitaramc.github.com/gitolite/ssh.html</a></li>
-<li><a href="http://sitaramc.github.com/gitolite/glssh.html">http://sitaramc.github.com/gitolite/glssh.html</a> - how it uses SSH</li>
-<li><a href="http://sitaramc.github.com/gitolite/auth.html">http://sitaramc.github.com/gitolite/auth.html</a></li>
+<li><a href="http://sitaramc.github.com/gitolite/ssh.html"  target="_blank" rel="noreferrer">http://sitaramc.github.com/gitolite/ssh.html</a></li>
+<li><a href="http://sitaramc.github.com/gitolite/glssh.html"  target="_blank" rel="noreferrer">http://sitaramc.github.com/gitolite/glssh.html</a> - how it uses SSH</li>
+<li><a href="http://sitaramc.github.com/gitolite/auth.html"  target="_blank" rel="noreferrer">http://sitaramc.github.com/gitolite/auth.html</a></li>
 </ul>
 <p>Gitolite provide access to repositories using single &ldquo;hosting user&rdquo; - this is the only Unix user that actually exists.
 In documentation, this hosting user is called git.</p>
@@ -259,7 +1128,16 @@ two data directories and one small administration Git repository.</p>
 <p>So there will be separate Gitolite setup for client1, where user &lsquo;client1&rsquo; will play the role of &lsquo;git user&rsquo;, separate and completely
 independent Gitolite setup for client2, where unix user &lsquo;client2&rsquo; will play the role &lsquo;git user&rsquo; etc etc. This can be easily scaled up
 to using separate hosts for customers if required.</p>
-<h3 id="how-external-developers-access-codeshare">How external developers access CodeShare</h3>
+
+<h3 class="relative group">How external developers access CodeShare
+    <div id="how-external-developers-access-codeshare" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#how-external-developers-access-codeshare" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <p>The only access mode is using the public key and SSH. We do not support</p>
 <ul>
 <li>logging in using password</li>
@@ -275,16 +1153,43 @@ account admin (the person setting up Gitolite for the account, e.g. client1) wil
 <p>The Integration Manager can be the same person managing the account but it does not have to be. It is easy to allow
 multiple developers with write access to blessed repositories. Unlike the identity of the account admin (which is determined
 when Gitolite is set up for the account), these users can be added or removed at any time.</p>
-<p>The setup of Gitolite is described here: <a href="http://sitaramc.github.com/gitolite/qi.html">http://sitaramc.github.com/gitolite/qi.html</a> - it described &ldquo;single account&rdquo; hosting.</p>
+<p>The setup of Gitolite is described here: <a href="http://sitaramc.github.com/gitolite/qi.html"  target="_blank" rel="noreferrer">http://sitaramc.github.com/gitolite/qi.html</a> - it described &ldquo;single account&rdquo; hosting.</p>
 <p>To make sure that everybody understands how does this translate to our situation, here is detailed step-by-step walkthrough to
 both setting up one user account and simulation of the development .</p>
-<h3 id="security-and-packability---sidenote">Security and packability - Sidenote</h3>
+
+<h3 class="relative group">Security and packability - Sidenote
+    <div id="security-and-packability---sidenote" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#security-and-packability---sidenote" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <p>The only way how to use Git is ssh with public key and we will not provide shell access, only git access. This makes sure that nobody from external developers can log into CodeShare and poke around in the repositories he/she does not have access to  or even trying to gain root access or access othe accounts.</p>
 <p>Keeping very long password and rotating it can further increase security. For really paranoid customers, we can disable login shell access in <code>/etc/passwd</code>, but this will cause additional work the system administrator to make sure file ownership and permission are correct (when using root access).</p>
-<h2 id="detailed-walkthrough-of-setup">Detailed walkthrough of setup</h2>
+
+<h2 class="relative group">Detailed walkthrough of setup
+    <div id="detailed-walkthrough-of-setup" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#detailed-walkthrough-of-setup" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>This guide is using &ldquo;temporary&rdquo; VM named jenkins0 (the playground for build server) playing the role of CodeShare and shows all steps for setting up Gitolite on Jenkins0 for user client1.</p>
 <p>Main reason for this detailed log is to allow somebody else administer it and help my memory after the vacation !</p>
-<h3 id="on-codeshare">On CodeShare</h3>
+
+<h3 class="relative group">On CodeShare
+    <div id="on-codeshare" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#on-codeshare" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <p>I have created users:</p>
 <ul>
 <li>client1</li>
@@ -292,9 +1197,18 @@ both setting up one user account and simulation of the development .</p>
 <li>client3</li>
 </ul>
 <p>This setup describes process for client1 and can be repeated for any other.</p>
-<h4 id="step-one---setup-gitolite">Step one - setup Gitolite</h4>
+
+<h4 class="relative group">Step one - setup Gitolite
+    <div id="step-one---setup-gitolite" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#step-one---setup-gitolite" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
 <p>Gitolite is distributred as Git repo, so we clone into home directory of hosting user (==client1)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[client1@jenkins0 ~]$ pwd
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[client1@jenkins0 ~]$ pwd
 </span></span><span class="line"><span class="cl">/home/client1
 </span></span><span class="line"><span class="cl">[client1@jenkins0 ~]$ git clone git://github.com/sitaramc/gitolite
 </span></span><span class="line"><span class="cl">Cloning into gitolite...
@@ -302,32 +1216,50 @@ both setting up one user account and simulation of the development .</p>
 </span></span><span class="line"><span class="cl">remote: Compressing objects: 100% (2829/2829), done.
 </span></span><span class="line"><span class="cl">remote: Total 8267 (delta 5682), reused 7848 (delta 5318)
 </span></span><span class="line"><span class="cl">Receiving objects: 100% (8267/8267), 2.52 MiB | 1.12 MiB/s, done.
-</span></span><span class="line"><span class="cl">Resolving deltas: 100% (5682/5682), done.
-</span></span></code></pre></div><p>It creates directory &lsquo;~/gitolite&rsquo; which contains few scripts</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[client1@jenkins0 ~]$ ll
+</span></span><span class="line"><span class="cl">Resolving deltas: 100% (5682/5682), done.</span></span></code></pre></div></div>
+<p>It creates directory &lsquo;~/gitolite&rsquo; which contains few scripts</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[client1@jenkins0 ~]$ ll
 </span></span><span class="line"><span class="cl">total 16
 </span></span><span class="line"><span class="cl">drwxr-xr-x 6 client1 client1 4096 Jun 17 16:38 gitolite
 </span></span><span class="line"><span class="cl">-rw-r--r-- 1 client1 client1 393 Jun 17 12:02 luke.pub
 </span></span><span class="line"><span class="cl">-rw-r--r-- 1 client1 client1 401 Jun 13 16:07 miro-radegast.pub
-</span></span><span class="line"><span class="cl">drwxrwxr-x 5 client1 client1 4096 Jun 17 12:09 projects
-</span></span></code></pre></div><p>Pre-requisites for next step are:</p>
+</span></span><span class="line"><span class="cl">drwxrwxr-x 5 client1 client1 4096 Jun 17 12:09 projects</span></span></code></pre></div></div>
+<p>Pre-requisites for next step are:</p>
 <ul>
 <li>existing <code>~/bin</code> directory</li>
 <li>this directory as part of PATH</li>
 </ul>
-<h4 id="create-bin-directory">Create bin directory</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="p">[</span><span class="n">client1</span><span class="err">@</span><span class="n">jenkins0</span> <span class="o">~</span><span class="p">]</span><span class="o">$</span> <span class="n">mkdir</span> <span class="o">~/</span><span class="n">bin</span>
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">client1</span><span class="err">@</span><span class="n">jenkins0</span> <span class="o">~</span><span class="p">]</span><span class="o">$</span> <span class="k">export</span> <span class="n">PATH</span><span class="o">=$</span><span class="n">PATH</span><span class="p">:</span><span class="o">~/</span><span class="n">bin</span>
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">client1</span><span class="err">@</span><span class="n">jenkins0</span> <span class="o">~</span><span class="p">]</span><span class="o">$</span> <span class="n">echo</span> <span class="o">$</span><span class="n">PATH</span>
-</span></span><span class="line"><span class="cl"><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">kerberos</span><span class="o">/</span><span class="n">bin</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">bin</span><span class="p">:</span><span class="o">/</span><span class="n">bin</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">client1</span><span class="o">/</span><span class="n">bin</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">client1</span><span class="o">/</span><span class="n">bin</span>
-</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">client1</span><span class="err">@</span><span class="n">jenkins0</span> <span class="o">~</span><span class="p">]</span><span class="o">$</span>
-</span></span></code></pre></div><h4 id="install-it">Install it:</h4>
+
+<h4 class="relative group">Create bin directory
+    <div id="create-bin-directory" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#create-bin-directory" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[client1@jenkins0 ~]$ mkdir ~/bin
+</span></span><span class="line"><span class="cl">[client1@jenkins0 ~]$ export PATH=$PATH:~/bin
+</span></span><span class="line"><span class="cl">[client1@jenkins0 ~]$ echo $PATH
+</span></span><span class="line"><span class="cl">/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/home/client1/bin:/home/client1/bin
+</span></span><span class="line"><span class="cl">[client1@jenkins0 ~]$</span></span></code></pre></div></div>
+
+<h4 class="relative group">Install it:
+    <div id="install-it" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#install-it" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
 <p>The install just creates symlink in <code>~/bin</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[client1@jenkins0 ~]$ gitolite/install -ln
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[client1@jenkins0 ~]$ gitolite/install -ln
 </span></span><span class="line"><span class="cl">[client1@jenkins0 ~]$ ll ~/bin/
 </span></span><span class="line"><span class="cl">total 0
-</span></span><span class="line"><span class="cl">lrwxrwxrwx 1 client1 client1 35 Jun 17 16:40 gitolite -&gt; /home/client1/gitolite/src/gitolite
-</span></span></code></pre></div><p><strong>Next part is to setup Gitolite admin account.</strong></p>
+</span></span><span class="line"><span class="cl">lrwxrwxrwx 1 client1 client1 35 Jun 17 16:40 gitolite -&gt; /home/client1/gitolite/src/gitolite</span></span></code></pre></div></div>
+<p><strong>Next part is to setup Gitolite admin account.</strong></p>
 <p>We need a public key of the person that will be admininistering this hosting account.</p>
 <p>It must satisfy few requirements:</p>
 <ul>
@@ -338,12 +1270,21 @@ both setting up one user account and simulation of the development .</p>
 <p>I have already copied my public key to jenkins0 - it is there as file &lsquo;miro.pub&rsquo;</p>
 <p>Inside this file, there is username@hostname - it is important that you name the file properly (I found out the hard way)</p>
 <p><code>ssh-rsa AAAAB3NzaC..... DELETED .... d9jajwIsLnJjw== miro``@Radegast``.local</code></p>
-<h4 id="add-private-key">Add private key:</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[client1@jenkins0 ~]$ gitolite setup -pk miro.pub
+
+<h4 class="relative group">Add private key:
+    <div id="add-private-key" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#add-private-key" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[client1@jenkins0 ~]$ gitolite setup -pk miro.pub
 </span></span><span class="line"><span class="cl">Initialized empty Git repository in /home/client1/repositories/gitolite-admin.git/
 </span></span><span class="line"><span class="cl">Initialized empty Git repository in /home/client1/repositories/testing.git/
-</span></span><span class="line"><span class="cl">[client1@jenkins0 ~]$
-</span></span></code></pre></div><p>This created two Git repositories: gitolite-admin (which will be used for all administration) and test one.</p>
+</span></span><span class="line"><span class="cl">[client1@jenkins0 ~]$</span></span></code></pre></div></div>
+<p>This created two Git repositories: gitolite-admin (which will be used for all administration) and test one.</p>
 <p>It also adds user &lsquo;miro&rsquo; as admin of the gitolite with write access (push) to gitolite-admin repo</p>
 <p><strong>Under the hood:</strong></p>
 <ul>
@@ -352,16 +1293,25 @@ This command causes that whenever user with this public key logs in, instead of 
 <li>The setup also adds special hooks to gitolite-admin repository that help enforce access and trigger additional action after pushing changes.</li>
 </ul>
 <p>All this had to be done on jenkins0 (the CodeShare host)</p>
-<h3 id="on-client">On Client</h3>
+
+<h3 class="relative group">On Client
+    <div id="on-client" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#on-client" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <p>On workstation from which the public key originated, I will need to clone the gitolite-admin repo:</p>
 <p>I am in the temp working directory &lsquo;gitolite-on-jenkins0&rsquo;, and &lsquo;gs&rsquo; is an alias for &lsquo;git status&rsquo;</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gitolite-on-jenkins0 $ git clone client1@192.168.16.144:gitolite-admin.git
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">gitolite-on-jenkins0 $ git clone client1@192.168.16.144:gitolite-admin.git
 </span></span><span class="line"><span class="cl">Cloning into &#39;gitolite-admin&#39;...
 </span></span><span class="line"><span class="cl">remote: Counting objects: 6, done.
 </span></span><span class="line"><span class="cl">remote: Compressing objects: 100% (4/4), done.
 </span></span><span class="line"><span class="cl">remote: Total 6 (delta 0), reused 0 (delta 0)
-</span></span><span class="line"><span class="cl">Receiving objects: 100% (6/6), done.
-</span></span></code></pre></div><p>Please note that I have used url &lsquo;client1@hostname&rsquo; format - not &lsquo;miro@hostname&rsquo;.
+</span></span><span class="line"><span class="cl">Receiving objects: 100% (6/6), done.</span></span></code></pre></div></div>
+<p>Please note that I have used url &lsquo;client1@hostname&rsquo; format - not &lsquo;miro@hostname&rsquo;.
 We always connect using host identity.</p>
 <p>Here is what happens under the hood:</p>
 <ul>
@@ -376,10 +1326,10 @@ This is the same key we set up on hostname</li>
 <li>gitolite config files</li>
 </ul>
 <p>To add user for the hosting account, all you need to do is to copy properly named public key file under keydir/, add it and push the change.</p>
-<p>Here I have added <a href="mailto:tkuser@luke.pub">tkuser@luke.pub</a> (note that this naming is OK - see Gitolite docs for details).</p>
+<p>Here I have added <a href="mailto:tkuser@luke.pub" >tkuser@luke.pub</a> (note that this naming is OK - see Gitolite docs for details).</p>
 <p>The other file I am adding is from third VM and has weird name. I wanted to test the third format with two @ signs but get to it. Ignore this file.</p>
 <p>After copying the files, we add them in git, commit locally and push</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gitolite-admin $ gs
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">gitolite-admin $ gs
 </span></span><span class="line"><span class="cl"># On branch master
 </span></span><span class="line"><span class="cl"># Untracked files:
 </span></span><span class="line"><span class="cl"># (use &#34;git add &lt;file&gt;...&#34; to include in what will be committed)
@@ -400,9 +1350,18 @@ This is the same key we set up on hostname</li>
 </span></span><span class="line"><span class="cl">[master 18caa3d] Added 2 users
 </span></span><span class="line"><span class="cl">2 files changed, 2 insertions(+), 0 deletions(-)
 </span></span><span class="line"><span class="cl">create mode 100644 keydir/miro.adamy+client3-dev-vf-osx@gmail.com@client3-dev-vf.pub
-</span></span><span class="line"><span class="cl">create mode 100644 keydir/tkuser@luke.pub
-</span></span></code></pre></div><h4 id="next-step-will-be-editing-gitoliteconf">Next step will be editing gitolite.conf</h4>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gitolite-admin $ vi conf/gitolite.conf
+</span></span><span class="line"><span class="cl">create mode 100644 keydir/tkuser@luke.pub</span></span></code></pre></div></div>
+
+<h4 class="relative group">Next step will be editing gitolite.conf
+    <div id="next-step-will-be-editing-gitoliteconf" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#next-step-will-be-editing-gitoliteconf" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">gitolite-admin $ vi conf/gitolite.conf
 </span></span><span class="line"><span class="cl">gitolite-admin $ cat conf/gitolite.conf
 </span></span><span class="line"><span class="cl">repo gitolite-admin
 </span></span><span class="line"><span class="cl">RW+ = miro
@@ -413,15 +1372,15 @@ This is the same key we set up on hostname</li>
 </span></span><span class="line"><span class="cl">RW+ = miro
 </span></span><span class="line"><span class="cl">repo projectOne-Blessed
 </span></span><span class="line"><span class="cl">R = tkuser
-</span></span><span class="line"><span class="cl">RW+ = miro
-</span></span></code></pre></div><p>I will create two repositories for project named unimaginatively &lsquo;projectOne&rsquo;.</p>
+</span></span><span class="line"><span class="cl">RW+ = miro</span></span></code></pre></div></div>
+<p>I will create two repositories for project named unimaginatively &lsquo;projectOne&rsquo;.</p>
 <p>The projectOne repository (yes, I know this is not according naming convention - there should have been two repos named projectOne-tkuser, and projectOne-SomeOther developer. I will be cheating a bit and use &ldquo;projectOne&rdquo;
 as developer repository shared by two developers: tkuser@luke, and miro@radegast.</p>
 <p>User miro@radegast will be wearing second hat as integration manager and will also have access to &ldquo;blessed&rdquo; repository named &ldquo;projectOne-Blessed&rdquo;.</p>
 <p>OK, this is also not according naming convention - which I have created AFTER this exercise.</p>
 <p><em><strong>Please do what I say to do, not what I do :-D</strong></em></p>
 <p>The syntax is documented in Gitolite, but here is the idea: but just naming the repositories, they will be created when we push gitolite-admin repo.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gitolite-admin $ gs
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">gitolite-admin $ gs
 </span></span><span class="line"><span class="cl"># On branch master
 </span></span><span class="line"><span class="cl"># Your branch is ahead of &#39;origin/master&#39; by 1 commit.
 </span></span><span class="line"><span class="cl">#
@@ -435,9 +1394,9 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">gitolite-admin $ git add conf/gitolite.conf
 </span></span><span class="line"><span class="cl">gitolite-admin $ git commit -m&#34;Some repos&#34;
 </span></span><span class="line"><span class="cl">[master 35789bb] Some repos
-</span></span><span class="line"><span class="cl">1 files changed, 10 insertions(+), 0 deletions(-)
-</span></span></code></pre></div><p>When we push, lost of magic happens on the other end:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gitolite-admin $ git push
+</span></span><span class="line"><span class="cl">1 files changed, 10 insertions(+), 0 deletions(-)</span></span></code></pre></div></div>
+<p>When we push, lost of magic happens on the other end:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">gitolite-admin $ git push
 </span></span><span class="line"><span class="cl">Counting objects: 13, done.
 </span></span><span class="line"><span class="cl">Delta compression using up to 8 threads.
 </span></span><span class="line"><span class="cl">Compressing objects: 100% (8/8), done.
@@ -447,34 +1406,43 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">remote: Initialized empty Git repository in /home/client1/repositories/projectOne-Blessed.git/
 </span></span><span class="line"><span class="cl">remote: Initialized empty Git repository in /home/client1/repositories/projectTwo.git/
 </span></span><span class="line"><span class="cl">To client1@192.168.16.144:gitolite-admin.git
-</span></span><span class="line"><span class="cl">ca335c9..35789bb master -&gt; master
-</span></span></code></pre></div><p>Also, worth noticing that miro.pub found its way into keydir - even if it was never added (the setup action copied it there).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gitolite-admin $ ll keydir/
+</span></span><span class="line"><span class="cl">ca335c9..35789bb master -&gt; master</span></span></code></pre></div></div>
+<p>Also, worth noticing that miro.pub found its way into keydir - even if it was never added (the setup action copied it there).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">gitolite-admin $ ll keydir/
 </span></span><span class="line"><span class="cl">total 24
 </span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro staff 418B 17 Jun 17:04 miro.adamy+client3-dev-vf-osx@gmail.com@client3-dev-vf.pub
 </span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro staff 401B 17 Jun 16:54 miro.pub
-</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro staff 393B 17 Jun 17:01 tkuser@luke.pub
-</span></span></code></pre></div><h3 id="time-to-simulate-some-development">Time to simulate some development.</h3>
+</span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro staff 393B 17 Jun 17:01 tkuser@luke.pub</span></span></code></pre></div></div>
+
+<h3 class="relative group">Time to simulate some development.
+    <div id="time-to-simulate-some-development" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#time-to-simulate-some-development" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <p>I am still on Macbook, wearing my &ldquo;developer&rdquo; hat, go to directory where I work with client1 project and clone: (the directory is empty as we are just starting):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">client1 $ pwd
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">client1 $ pwd
 </span></span><span class="line"><span class="cl">/Users/miro/Projects/Thinkwrap/Infrastructure/git-repos/client1
 </span></span><span class="line"><span class="cl">client1 $ ll
 </span></span><span class="line"><span class="cl">client1 $ git clone client1@192.168.16.144:projectOne
 </span></span><span class="line"><span class="cl">Cloning into &#39;projectOne&#39;...
-</span></span><span class="line"><span class="cl">warning: You appear to have cloned an empty repository.
-</span></span></code></pre></div><p>Again, I used &lsquo;client1@hostname&rsquo; to connect.</p>
+</span></span><span class="line"><span class="cl">warning: You appear to have cloned an empty repository.</span></span></code></pre></div></div>
+<p>Again, I used &lsquo;client1@hostname&rsquo; to connect.</p>
 <p>Note that the url does contain just repository name, while on server side the repos are stored in folder &lsquo;repositories&rsquo; and the directory is named &lsquo;projectOne.git&rsquo;. This is OK.</p>
 <p>I will also clone the blessed repository (now wearing my Integration manager hat):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">client1 $ git clone client1@192.168.16.144:projectOne-Blessed
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">client1 $ git clone client1@192.168.16.144:projectOne-Blessed
 </span></span><span class="line"><span class="cl">Cloning into &#39;projectOne-Blessed&#39;...
 </span></span><span class="line"><span class="cl">warning: You appear to have cloned an empty repository.
 </span></span><span class="line"><span class="cl">client1 $ ll
 </span></span><span class="line"><span class="cl">total 0
 </span></span><span class="line"><span class="cl">drwxr-xr-x 3 miro staff 102B 17 Jun 17:12 projectOne
-</span></span><span class="line"><span class="cl">drwxr-xr-x 3 miro staff 102B 17 Jun 17:12 projectOne-Blessed
-</span></span></code></pre></div><p>Lets set up some content for the team to work on:</p>
+</span></span><span class="line"><span class="cl">drwxr-xr-x 3 miro staff 102B 17 Jun 17:12 projectOne-Blessed</span></span></code></pre></div></div>
+<p>Lets set up some content for the team to work on:</p>
 <p>I work in blessed - create 2 files, commit locally and push</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">client1 $ cd projectOne-Blessed/
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">client1 $ cd projectOne-Blessed/
 </span></span><span class="line"><span class="cl">projectOne-Blessed $ ll
 </span></span><span class="line"><span class="cl">projectOne-Blessed $ ll ~/bin &gt;bin-dir.txt
 </span></span><span class="line"><span class="cl">projectOne-Blessed $ ll .. &gt;this-dir.txt
@@ -494,27 +1462,36 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">[master (root-commit) 4ecde6e] 2 files
 </span></span><span class="line"><span class="cl">2 files changed, 45 insertions(+), 0 deletions(-)
 </span></span><span class="line"><span class="cl">create mode 100644 bin-dir.txt
-</span></span><span class="line"><span class="cl">create mode 100644 this-dir.txt
-</span></span></code></pre></div><p>For the first push, you MUST specify the upstream repo and branch. Here is what happens if you do not:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">projectOne-Blessed $ git push
+</span></span><span class="line"><span class="cl">create mode 100644 this-dir.txt</span></span></code></pre></div></div>
+<p>For the first push, you MUST specify the upstream repo and branch. Here is what happens if you do not:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">projectOne-Blessed $ git push
 </span></span><span class="line"><span class="cl">No refs in common and none specified; doing nothing.
 </span></span><span class="line"><span class="cl">Perhaps you should specify a branch such as &#39;master&#39;.
 </span></span><span class="line"><span class="cl">fatal: The remote end hung up unexpectedly
-</span></span><span class="line"><span class="cl">error: failed to push some refs to &#39;client1@192.168.16.144:projectOne-Blessed&#39;
-</span></span></code></pre></div><p>OK then, I will push to origin (this is where I got the blessed repo from) and push the only branch - master</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">projectOne-Blessed $ git push origin master
+</span></span><span class="line"><span class="cl">error: failed to push some refs to &#39;client1@192.168.16.144:projectOne-Blessed&#39;</span></span></code></pre></div></div>
+<p>OK then, I will push to origin (this is where I got the blessed repo from) and push the only branch - master</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">projectOne-Blessed $ git push origin master
 </span></span><span class="line"><span class="cl">Counting objects: 4, done.
 </span></span><span class="line"><span class="cl">Delta compression using up to 8 threads.
 </span></span><span class="line"><span class="cl">Compressing objects: 100% (4/4), done.
 </span></span><span class="line"><span class="cl">Writing objects: 100% (4/4), 1.21 KiB, done.
 </span></span><span class="line"><span class="cl">Total 4 (delta 0), reused 0 (delta 0)
 </span></span><span class="line"><span class="cl">To client1@192.168.16.144:projectOne-Blessed
-</span></span><span class="line"><span class="cl">* [new branch] master -&gt; master
-</span></span></code></pre></div><p>Now it works.</p>
-<h4 id="second-developer">Second developer</h4>
+</span></span><span class="line"><span class="cl">* [new branch] master -&gt; master</span></span></code></pre></div></div>
+<p>Now it works.</p>
+
+<h4 class="relative group">Second developer
+    <div id="second-developer" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#second-developer" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
 <p>Now, second developer joined project. I will simulate him from Luke. His name is tkuser and his public key was already added to gitolite-admin</p>
 <p>I ssh to Luke - checkout the ProjectOne, connect upstream ProjectOne-blessed, add some files / modify some</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE temp]$ git clone client1@192.168.16.144:projectOne
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE temp]$ git clone client1@192.168.16.144:projectOne
 </span></span><span class="line"><span class="cl">Cloning into projectOne...
 </span></span><span class="line"><span class="cl">warning: You appear to have cloned an empty repository.
 </span></span><span class="line"><span class="cl">[tkuser@LUKE temp]$ cd projectOne/
@@ -534,13 +1511,13 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">After doing this, you may fix the identity used for this commit with:
 </span></span><span class="line"><span class="cl">git commit --amend --reset-author
 </span></span><span class="line"><span class="cl">1 files changed, 16 insertions(+), 0 deletions(-)
-</span></span><span class="line"><span class="cl">create mode 100644 my-home.txt
-</span></span></code></pre></div><p>From first commit (as there was never any development from Luke, I just installed Git there today), we get message that Git has trouble determining committer info and is using Thinknostic User &lt;tkuser@LUKE.(none)&gt;</p>
+</span></span><span class="line"><span class="cl">create mode 100644 my-home.txt</span></span></code></pre></div></div>
+<p>From first commit (as there was never any development from Luke, I just installed Git there today), we get message that Git has trouble determining committer info and is using Thinknostic User &lt;tkuser@LUKE.(none)&gt;</p>
 <p><strong>We can fix this easily:</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git config --global user.name &#34;ThinkWrap User&#34;
-</span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git config --global user.email tkuser.luke@thinkwrap.net
-</span></span></code></pre></div><p>The next commit will be better</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git commit -m &#34;tkuser started&#34;
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git config --global user.name &#34;ThinkWrap User&#34;
+</span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git config --global user.email tkuser.luke@thinkwrap.net</span></span></code></pre></div></div>
+<p>The next commit will be better</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git commit -m &#34;tkuser started&#34;
 </span></span><span class="line"><span class="cl"># On branch master
 </span></span><span class="line"><span class="cl">nothing to commit (working directory clean)
 </span></span><span class="line"><span class="cl"> 
@@ -552,15 +1529,15 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">total 8
 </span></span><span class="line"><span class="cl">-rw-rw-r-- 1 tkuser tkuser 1040 Jun 17 17:17 my-home.txt
 </span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ pwd
-</span></span><span class="line"><span class="cl">/home/tkuser/temp/projectOne
-</span></span></code></pre></div><p>As we see, two commits to local repo have different indentities. I could fix that by ammending the commit, and I would in real project, but lets move on:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git log
+</span></span><span class="line"><span class="cl">/home/tkuser/temp/projectOne</span></span></code></pre></div></div>
+<p>As we see, two commits to local repo have different indentities. I could fix that by ammending the commit, and I would in real project, but lets move on:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git log
 </span></span><span class="line"><span class="cl">commit ac419625e9bef60a8bfb4f78c676eb25b7dc85b9
 </span></span><span class="line"><span class="cl">Author: Thinknostic User &lt;tkuser@LUKE.(none)&gt;
 </span></span><span class="line"><span class="cl">Date: Sun Jun 17 17:18:41 2012 -0400
-</span></span><span class="line"><span class="cl">tkuser started
-</span></span></code></pre></div><p>OK, some more hard development:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ vim my-home.txt
+</span></span><span class="line"><span class="cl">tkuser started</span></span></code></pre></div></div>
+<p>OK, some more hard development:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ vim my-home.txt
 </span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git status
 </span></span><span class="line"><span class="cl"># On branch master
 </span></span><span class="line"><span class="cl"># Changes not staged for commit:
@@ -581,43 +1558,43 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">commit ac419625e9bef60a8bfb4f78c676eb25b7dc85b9
 </span></span><span class="line"><span class="cl">Author: Thinknostic User &lt;tkuser@LUKE.(none)&gt;
 </span></span><span class="line"><span class="cl">Date: Sun Jun 17 17:18:41 2012 -0400
-</span></span><span class="line"><span class="cl">tkuser started
-</span></span></code></pre></div><p>Now we will share the code with the users on the CodeShare:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git push origin master
+</span></span><span class="line"><span class="cl">tkuser started</span></span></code></pre></div></div>
+<p>Now we will share the code with the users on the CodeShare:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git push origin master
 </span></span><span class="line"><span class="cl">Counting objects: 6, done.
 </span></span><span class="line"><span class="cl">Delta compression using up to 8 threads.
 </span></span><span class="line"><span class="cl">Compressing objects: 100% (4/4), done.
 </span></span><span class="line"><span class="cl">Writing objects: 100% (6/6), 867 bytes, done.
 </span></span><span class="line"><span class="cl">Total 6 (delta 1), reused 0 (delta 0)
 </span></span><span class="line"><span class="cl">To client1@192.168.16.144:projectOne
-</span></span><span class="line"><span class="cl">* [new branch] master -&gt; master
-</span></span></code></pre></div><p>What we have forgotten to do was to integrate code coming from ThinkWrap and shared in blessed repo.</p>
+</span></span><span class="line"><span class="cl">* [new branch] master -&gt; master</span></span></code></pre></div></div>
+<p>What we have forgotten to do was to integrate code coming from ThinkWrap and shared in blessed repo.</p>
 <p>Let&rsquo;s hook up the blessed to my local repository on Luke:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git remote add blessed client1@192.168.16.144:projectOne-Blessed
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git remote add blessed client1@192.168.16.144:projectOne-Blessed
 </span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git remote -v
 </span></span><span class="line"><span class="cl">blessed client1@192.168.16.144:projectOne-Blessed (fetch)
 </span></span><span class="line"><span class="cl">blessed client1@192.168.16.144:projectOne-Blessed (push)
 </span></span><span class="line"><span class="cl">origin client1@192.168.16.144:projectOne (fetch)
-</span></span><span class="line"><span class="cl">origin client1@192.168.16.144:projectOne (push)
-</span></span></code></pre></div><p>This is &ldquo;read-only&rdquo; link even if it does not say so. We can now fetch the changes from blessed (I could have named it anything, it is just name).</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git fetch blessed master
+</span></span><span class="line"><span class="cl">origin client1@192.168.16.144:projectOne (push)</span></span></code></pre></div></div>
+<p>This is &ldquo;read-only&rdquo; link even if it does not say so. We can now fetch the changes from blessed (I could have named it anything, it is just name).</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git fetch blessed master
 </span></span><span class="line"><span class="cl">warning: no common commits
 </span></span><span class="line"><span class="cl">remote: Counting objects: 4, done.
 </span></span><span class="line"><span class="cl">remote: Compressing objects: 100% (4/4), done.
 </span></span><span class="line"><span class="cl">remote: Total 4 (delta 0), reused 0 (delta 0)
 </span></span><span class="line"><span class="cl">Unpacking objects: 100% (4/4), done.
 </span></span><span class="line"><span class="cl">From 192.168.16.144:projectOne-Blessed
-</span></span><span class="line"><span class="cl">* branch master -&gt; FETCH_HEAD
-</span></span></code></pre></div><p>This would be ideal situation if I want just to see what is going on, without impacting my local master.</p>
+</span></span><span class="line"><span class="cl">* branch master -&gt; FETCH_HEAD</span></span></code></pre></div></div>
+<p>This would be ideal situation if I want just to see what is going on, without impacting my local master.</p>
 <p>More practical would be to merge the changes into my master, which is what pull does. Again, for first time I must be explicit what do I want to pull - here is what happens if I am not:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git pull blessed
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git pull blessed
 </span></span><span class="line"><span class="cl">From 192.168.16.144:projectOne-Blessed
 </span></span><span class="line"><span class="cl">* [new branch] master -&gt; blessed/master
 </span></span><span class="line"><span class="cl">You asked to pull from the remote &#39;blessed&#39;, but did not specify
 </span></span><span class="line"><span class="cl">a branch. Because this is not the default configured remote
-</span></span><span class="line"><span class="cl">for your current branch, you must specify a branch on the command line.
-</span></span></code></pre></div><p>OK, we want master:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git pull blessed master
+</span></span><span class="line"><span class="cl">for your current branch, you must specify a branch on the command line.</span></span></code></pre></div></div>
+<p>OK, we want master:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git pull blessed master
 </span></span><span class="line"><span class="cl">From 192.168.16.144:projectOne-Blessed
 </span></span><span class="line"><span class="cl">* branch master -&gt; FETCH_HEAD
 </span></span><span class="line"><span class="cl">Merge made by recursive.
@@ -632,47 +1609,47 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">ESP Ghostscript 815.02 (2006-04-19)
 </span></span><span class="line"><span class="cl">Copyright (C) 2004 artofcode LLC, Benicia, CA. All rights reserved.
 </span></span><span class="line"><span class="cl">This software comes with NO WARRANTY: see the file PUBLIC for details.
-</span></span><span class="line"><span class="cl">GS&gt;
-</span></span></code></pre></div><p>Eventually, I will get annoyed by GhostScript and kill it by defining my favorite alias:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ alias gs=&#39;git status&#39;
+</span></span><span class="line"><span class="cl">GS&gt;</span></span></code></pre></div></div>
+<p>Eventually, I will get annoyed by GhostScript and kill it by defining my favorite alias:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ alias gs=&#39;git status&#39;
 </span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ gs
 </span></span><span class="line"><span class="cl"># On branch master
 </span></span><span class="line"><span class="cl"># Your branch is ahead of &#39;origin/master&#39; by 2 commits.
 </span></span><span class="line"><span class="cl">#
-</span></span><span class="line"><span class="cl">nothing to commit (working directory clean)
-</span></span></code></pre></div><p>So we are fine. All is merged, but only locally. Git indicates we need to push to origin.</p>
+</span></span><span class="line"><span class="cl">nothing to commit (working directory clean)</span></span></code></pre></div></div>
+<p>So we are fine. All is merged, but only locally. Git indicates we need to push to origin.</p>
 <p>I have all files:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ ll
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ ll
 </span></span><span class="line"><span class="cl">total 24
 </span></span><span class="line"><span class="cl">-rw-rw-r-- 1 tkuser tkuser 2704 Jun 17 17:24 bin-dir.txt
 </span></span><span class="line"><span class="cl">-rw-rw-r-- 1 tkuser tkuser 1070 Jun 17 17:20 my-home.txt
-</span></span><span class="line"><span class="cl">-rw-rw-r-- 1 tkuser tkuser 130 Jun 17 17:24 this-dir.txt
-</span></span></code></pre></div><p>Let&rsquo;s push (now there is no need to say &lsquo;master&rsquo;):</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git push origin
+</span></span><span class="line"><span class="cl">-rw-rw-r-- 1 tkuser tkuser 130 Jun 17 17:24 this-dir.txt</span></span></code></pre></div></div>
+<p>Let&rsquo;s push (now there is no need to say &lsquo;master&rsquo;):</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git push origin
 </span></span><span class="line"><span class="cl">Counting objects: 7, done.
 </span></span><span class="line"><span class="cl">Delta compression using up to 8 threads.
 </span></span><span class="line"><span class="cl">Compressing objects: 100% (6/6), done.
 </span></span><span class="line"><span class="cl">Writing objects: 100% (6/6), 1.48 KiB, done.
 </span></span><span class="line"><span class="cl">Total 6 (delta 1), reused 0 (delta 0)
 </span></span><span class="line"><span class="cl">To client1@192.168.16.144:projectOne
-</span></span><span class="line"><span class="cl">a6cbdf9..5d8d73b master -&gt; master
-</span></span></code></pre></div><p>What would happen if I wanted to short circuit the wait for integration manager and see my changes published right away in blessed repo ? Let&rsquo;s try of Gitolite access control works:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git push blessed
+</span></span><span class="line"><span class="cl">a6cbdf9..5d8d73b master -&gt; master</span></span></code></pre></div></div>
+<p>What would happen if I wanted to short circuit the wait for integration manager and see my changes published right away in blessed repo ? Let&rsquo;s try of Gitolite access control works:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git push blessed
 </span></span><span class="line"><span class="cl">FATAL: W any projectOne-Blessed tkuser DENIED by fallthru
 </span></span><span class="line"><span class="cl">(or you mis-spelled the reponame)
 </span></span><span class="line"><span class="cl">fatal: The remote end hung up unexpectedly
-</span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ cd ..
-</span></span></code></pre></div><p>As it looks like, it does :-D</p>
+</span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ cd ..</span></span></code></pre></div></div>
+<p>As it looks like, it does :-D</p>
 <p>I will not give up - in addition to link the blessed repo from my projectOne, I will try to clone it locally (which I can do as I have read access and push it back:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ cd ..
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ cd ..
 </span></span><span class="line"><span class="cl">[tkuser@LUKE temp]$ git clone client1@192.168.16.144:projectOne-Blessed
 </span></span><span class="line"><span class="cl">Cloning into projectOne-Blessed...
 </span></span><span class="line"><span class="cl">remote: Counting objects: 4, done.
 </span></span><span class="line"><span class="cl">remote: Compressing objects: 100% (4/4), done.
 </span></span><span class="line"><span class="cl">remote: Total 4 (delta 0), reused 0 (delta 0)
-</span></span><span class="line"><span class="cl">Receiving objects: 100% (4/4), done.
-</span></span></code></pre></div><p>OK, let&rsquo;s hack it:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE temp]$ cd projectOne-Blessed/
+</span></span><span class="line"><span class="cl">Receiving objects: 100% (4/4), done.</span></span></code></pre></div></div>
+<p>OK, let&rsquo;s hack it:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE temp]$ cd projectOne-Blessed/
 </span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne-Blessed]$ ll
 </span></span><span class="line"><span class="cl">total 16
 </span></span><span class="line"><span class="cl">-rw-rw-r-- 1 tkuser tkuser 2704 Jun 17 17:31 bin-dir.txt
@@ -684,45 +1661,71 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl"># Changes to be committed:
 </span></span><span class="line"><span class="cl"># (use &#34;git reset HEAD &lt;file&gt;...&#34; to unstage)
 </span></span><span class="line"><span class="cl">#
-</span></span><span class="line"><span class="cl"># modified: bin-dir.txt
-</span></span></code></pre></div><p>Local commit will work fine:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne-Blessed]$ git commit -m&#34;Changing Blessed&#34;
+</span></span><span class="line"><span class="cl"># modified: bin-dir.txt</span></span></code></pre></div></div>
+<p>Local commit will work fine:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne-Blessed]$ git commit -m&#34;Changing Blessed&#34;
 </span></span><span class="line"><span class="cl">[master eefd800] Changing Blessed
 </span></span><span class="line"><span class="cl">1 files changed, 2 insertions(+), 1 deletions(-)
 </span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne-Blessed]$ gs
 </span></span><span class="line"><span class="cl"># On branch master
 </span></span><span class="line"><span class="cl"># Your branch is ahead of &#39;origin/master&#39; by 1 commit.
 </span></span><span class="line"><span class="cl">#
-</span></span><span class="line"><span class="cl">nothing to commit (working directory clean)
-</span></span></code></pre></div><p>But push will fail:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne-Blessed]$ git push origin
+</span></span><span class="line"><span class="cl">nothing to commit (working directory clean)</span></span></code></pre></div></div>
+<p>But push will fail:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne-Blessed]$ git push origin
 </span></span><span class="line"><span class="cl">FATAL: W any projectOne-Blessed tkuser DENIED by fallthru
 </span></span><span class="line"><span class="cl">(or you mis-spelled the reponame)
-</span></span><span class="line"><span class="cl">fatal: The remote end hung up unexpectedly
-</span></span></code></pre></div><h3 id="back-to-macbook-and-put-on-my-integration-manager-hat">Back to Macbook and put on my Integration Manager hat:</h3>
+</span></span><span class="line"><span class="cl">fatal: The remote end hung up unexpectedly</span></span></code></pre></div></div>
+
+<h3 class="relative group">Back to Macbook and put on my Integration Manager hat:
+    <div id="back-to-macbook-and-put-on-my-integration-manager-hat" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#back-to-macbook-and-put-on-my-integration-manager-hat" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
 <p>Int Manager on MBP - working with local clone of blessed repo</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">projectOne-Blessed $ hostname
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">projectOne-Blessed $ hostname
 </span></span><span class="line"><span class="cl">Radegast.local
 </span></span><span class="line"><span class="cl">projectOne-Blessed $ pwd
 </span></span><span class="line"><span class="cl">/Users/miro/Projects/Thinkwrap/Infrastructure/git-repos/client1/projectOne-Blessed
-</span></span><span class="line"><span class="cl">projectOne-Blessed $
-</span></span></code></pre></div><p>Integration manager has better tools so I use SourceTree from Atlassian to</p>
+</span></span><span class="line"><span class="cl">projectOne-Blessed $</span></span></code></pre></div></div>
+<p>Integration manager has better tools so I use SourceTree from Atlassian to</p>
 <ul>
 <li>attach developer1 repository on CodeShare (the projectOne tkuser used), fetch the changes</li>
 <li>review them,</li>
 <li>merged developer1/master</li>
 <li>pushed to BLESSED</li>
 </ul>
-<p><img src="/images/sharing-1.png" alt=""></p>
-<h3 id="back-on-luke-i-am-tkuser-now">Back on Luke, I am tkuser now:</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git pull blessed master
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="/images/sharing-1.png"
+    ></figure>
+</p>
+
+<h3 class="relative group">Back on Luke, I am tkuser now:
+    <div id="back-on-luke-i-am-tkuser-now" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#back-on-luke-i-am-tkuser-now" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git pull blessed master
 </span></span><span class="line"><span class="cl">From 192.168.16.144:projectOne-Blessed
 </span></span><span class="line"><span class="cl">* branch master -&gt; FETCH_HEAD
-</span></span><span class="line"><span class="cl">Already up-to-date.
-</span></span></code></pre></div><p>OK, this may be surprising: how come that IM pushed changes to blessed and tkuser does not see them ?</p>
+</span></span><span class="line"><span class="cl">Already up-to-date.</span></span></code></pre></div></div>
+<p>OK, this may be surprising: how come that IM pushed changes to blessed and tkuser does not see them ?</p>
 <p>What happened here is that the merge in Blessed was fast forward to latest and the latest is already in projectOne rep (as it originated from there). So nothing really changed just few references were moved.</p>
 <p>We can verify that we do have the latest commit by checking the sha1</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git log
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git log
 </span></span><span class="line"><span class="cl">commit 5d8d73b7f24307482edbfc4ca1328dabdfcf8353
 </span></span><span class="line"><span class="cl">Merge: a6cbdf9 4ecde6e
 </span></span><span class="line"><span class="cl">Author: ThinkWrap User &lt;tkuser.luke@thinkwrap.net&gt;
@@ -739,9 +1742,9 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">commit 4ecde6eebd93448628c6475e12da380a962aecc9
 </span></span><span class="line"><span class="cl">Author: Miro Adamy &lt;miro.adamy@thinkwrap.com&gt;
 </span></span><span class="line"><span class="cl">Date: Sun Jun 17 17:15:04 2012 -0400
-</span></span><span class="line"><span class="cl">2 files
-</span></span></code></pre></div><p>Or we can even see the fancy ASCII-Artsy graph:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git log --graph
+</span></span><span class="line"><span class="cl">2 files</span></span></code></pre></div></div>
+<p>Or we can even see the fancy ASCII-Artsy graph:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git log --graph
 </span></span><span class="line"><span class="cl">* commit 5d8d73b7f24307482edbfc4ca1328dabdfcf8353
 </span></span><span class="line"><span class="cl">|\ Merge: a6cbdf9 4ecde6e
 </span></span><span class="line"><span class="cl">| | Author: ThinkWrap User &lt;tkuser.luke@thinkwrap.net&gt;
@@ -766,11 +1769,20 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">Date: Sun Jun 17 17:18:41 2012 -0400
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl">tkuser started
-</span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$
-</span></span></code></pre></div><h2 id="sharing-external-repo-among-developers">Sharing external repo among developers</h2>
+</span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$</span></span></code></pre></div></div>
+
+<h2 class="relative group">Sharing external repo among developers
+    <div id="sharing-external-repo-among-developers" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sharing-external-repo-among-developers" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>For the final part, lets create scenario that does not happen if every developer has his/her own external repo on CodeShare, but which will certainly happen in the setup where multiple developer push to same external repo - kinda centralized mode.</p>
 <p>I will start by add local change to projectOne repo on MBPro by Miro. Back on Macbook:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">projectOne-Blessed $ cd ../projectOne
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">projectOne-Blessed $ cd ../projectOne
 </span></span><span class="line"><span class="cl">projectOne $ ll
 </span></span><span class="line"><span class="cl">total 24
 </span></span><span class="line"><span class="cl">-rw-r--r-- 1 miro staff 2.6K 17 Jun 17:47 bin-dir.txt
@@ -787,9 +1799,9 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">Writing objects: 100% (3/3), 297 bytes, done.
 </span></span><span class="line"><span class="cl">Total 3 (delta 2), reused 0 (delta 0)
 </span></span><span class="line"><span class="cl">To client1@192.168.16.144:projectOne
-</span></span><span class="line"><span class="cl">5d8d73b..c62dd90 master -&gt; master
-</span></span></code></pre></div><p>At the same time, tkuser on luke did also change something - starting from same starting code as miron on Radegast: attempt to push will this time end up with conflict</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ ll
+</span></span><span class="line"><span class="cl">5d8d73b..c62dd90 master -&gt; master</span></span></code></pre></div></div>
+<p>At the same time, tkuser on luke did also change something - starting from same starting code as miron on Radegast: attempt to push will this time end up with conflict</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ ll
 </span></span><span class="line"><span class="cl">total 24
 </span></span><span class="line"><span class="cl">-rw-rw-r-- 1 tkuser tkuser 2704 Jun 17 17:24 bin-dir.txt
 </span></span><span class="line"><span class="cl">-rw-rw-r-- 1 tkuser tkuser 1070 Jun 17 17:20 my-home.txt
@@ -797,17 +1809,17 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ vim my-home.txt
 </span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git commit -a -m&#34;Changing my home on Luke&#34;
 </span></span><span class="line"><span class="cl">[master deb5d23] Changing my home on Luke
-</span></span><span class="line"><span class="cl">1 files changed, 0 insertions(+), 1 deletions(-)
-</span></span></code></pre></div><p>Note that local commit is always OK, it will be the push that fails:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git push
+</span></span><span class="line"><span class="cl">1 files changed, 0 insertions(+), 1 deletions(-)</span></span></code></pre></div></div>
+<p>Note that local commit is always OK, it will be the push that fails:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git push
 </span></span><span class="line"><span class="cl">To client1@192.168.16.144:projectOne
 </span></span><span class="line"><span class="cl">! [rejected] master -&gt; master (non-fast-forward)
 </span></span><span class="line"><span class="cl">error: failed to push some refs to &#39;client1@192.168.16.144:projectOne&#39;
 </span></span><span class="line"><span class="cl">To prevent you from losing history, non-fast-forward updates were rejected
 </span></span><span class="line"><span class="cl">Merge the remote changes (e.g. &#39;git pull&#39;) before pushing again. See the
-</span></span><span class="line"><span class="cl">&#39;Note about fast-forwards&#39; section of &#39;git push --help&#39; for details.
-</span></span></code></pre></div><p>Git was nice enough to tell me what to do. Let&rsquo;s pull:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git pull
+</span></span><span class="line"><span class="cl">&#39;Note about fast-forwards&#39; section of &#39;git push --help&#39; for details.</span></span></code></pre></div></div>
+<p>Git was nice enough to tell me what to do. Let&rsquo;s pull:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git pull
 </span></span><span class="line"><span class="cl">remote: Counting objects: 5, done.
 </span></span><span class="line"><span class="cl">remote: Compressing objects: 100% (3/3), done.
 </span></span><span class="line"><span class="cl">remote: Total 3 (delta 2), reused 0 (delta 0)
@@ -816,9 +1828,9 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">5d8d73b..c62dd90 master -&gt; origin/master
 </span></span><span class="line"><span class="cl">Merge made by recursive.
 </span></span><span class="line"><span class="cl">this-dir.txt | 2 +-
-</span></span><span class="line"><span class="cl">1 files changed, 1 insertions(+), 1 deletions(-)
-</span></span></code></pre></div><p>Merge resulted in new commit - it was done right away as there were no conflicts. We can push again:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git push
+</span></span><span class="line"><span class="cl">1 files changed, 1 insertions(+), 1 deletions(-)</span></span></code></pre></div></div>
+<p>Merge resulted in new commit - it was done right away as there were no conflicts. We can push again:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE projectOne]$ git push
 </span></span><span class="line"><span class="cl">Counting objects: 8, done.
 </span></span><span class="line"><span class="cl">Delta compression using up to 8 threads.
 </span></span><span class="line"><span class="cl">Compressing objects: 100% (5/5), done.
@@ -826,132 +1838,207 @@ as developer repository shared by two developers: tkuser@luke, and miro@radegast
 </span></span><span class="line"><span class="cl">Total 5 (delta 2), reused 0 (delta 0)
 </span></span><span class="line"><span class="cl">To client1@192.168.16.144:projectOne
 </span></span><span class="line"><span class="cl">c62dd90..e031acf master -&gt; master
-</span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$
-</span></span></code></pre></div><h2 id="security-and-hackability">Security and hackability</h2>
+</span></span><span class="line"><span class="cl">[tkuser@LUKE projectOne]$</span></span></code></pre></div></div>
+
+<h2 class="relative group">Security and hackability
+    <div id="security-and-hackability" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#security-and-hackability" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>Last note is on security. The hacker&rsquo;s soul in tkuser wants to see what else except projectOne is on CodeShare. Let&rsquo;s log on.</p>
-<h3 id="attempt-to-bypass-the-security-by-logging-on-as-hosting-user">Attempt to bypass the security by logging on as hosting user</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[tkuser@LUKE ~]$ ssh client1@192.168.16.144
+
+<h3 class="relative group">Attempt to bypass the security by logging on as hosting user
+    <div id="attempt-to-bypass-the-security-by-logging-on-as-hosting-user" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#attempt-to-bypass-the-security-by-logging-on-as-hosting-user" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">[tkuser@LUKE ~]$ ssh client1@192.168.16.144
 </span></span><span class="line"><span class="cl">hello tkuser, this is client1@jenkins0 running gitolite3 v3.03-34-ga171053 on git 1.7.7.1
 </span></span><span class="line"><span class="cl">R W projectOne
 </span></span><span class="line"><span class="cl">R projectOne-Blessed
 </span></span><span class="line"><span class="cl">R W projectTwo
 </span></span><span class="line"><span class="cl">R W testing
-</span></span><span class="line"><span class="cl">Connection to 192.168.16.144 closed.
-</span></span></code></pre></div><p>Bummer. Gitolite was nice enough to show all repos made available for the user, but rejected the login.</p>
+</span></span><span class="line"><span class="cl">Connection to 192.168.16.144 closed.</span></span></code></pre></div></div>
+<p>Bummer. Gitolite was nice enough to show all repos made available for the user, but rejected the login.</p>
 <p>Therefore: <strong>public key is the only supported way how to access CodeShare repo.</strong></p>
 <p>For admins and such who know the password the ssh is still there (unless we change it git-shell).</p>
 <p>I will prove this by logging in with different identity (to prevent my public key being sent) - I will use my public key I use for github:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">client1 $ ssh -i ~/.ssh/github_rsa.pub client1@192.168.16.144
 </span></span><span class="line"><span class="cl">client1@192.168.16.144&#39;s password:
 </span></span><span class="line"><span class="cl">Last login: Sun Jun 17 14:38:57 2012 from 192.168.16.108
-</span></span><span class="line"><span class="cl">[client1@jenkins0 ~]$
-</span></span></code></pre></div><p>In this case, it asks for password and logs me in</p>
+</span></span><span class="line"><span class="cl">[client1@jenkins0 ~]$</span></span></code></pre></div></div>
+<p>In this case, it asks for password and logs me in</p>
 <p>And that is end of the walkthrough</p>
 
-    </div>
-
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">Miro Adamy</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">LastMod</span>
-    <span class="item-content">
-        2012-06-21
-        
-    </span>
-  </p>
-  
-  <p class="copyright-item">
-    <span class="item-title">License</span>
-    <span class="item-content">(c) 2006-2020 Miro Adamy</span>
-  </p>
-</div>
-<footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/git/">git</a>
-          <a href="/tags/gitolite/">gitolite</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/posts/2012-08-06-gitilite-admin/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Gitolite Administration Guide</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/posts/2012-05-29-admin-tool-goodies/">
-            <span class="next-text nav-default">Admin tool goodies</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
+          
+          
+          
         </div>
         
+        
 
-  
+        
 
-  
+        
 
       </div>
-    </main>
+    </section>
 
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
-      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
-      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
-      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
-      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
   
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2012-05-29-admin-tool-goodies/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Admin tool goodies
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2012-05-29T11:22:48&#43;08:00">May 29, 2012</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2012-08-06-gitilite-admin/">
+              <span class="leading-6">
+                Gitolite Administration Guide&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2012-08-06T11:22:48&#43;08:00">August 6, 2012</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
   
 
-  <span class="copyright-year">
-    &copy; 
-    2006 - 
-    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
-  </span>
-</div>
+
+      
 
     </footer>
+  </article>
 
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Miro Adamy
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
   </div>
-  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Search"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          aria-label="Search"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
 
-
-
-<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
-
-
-
-
-
-
-
-
-</body>
+    </div>
+    
+    
+  </body>
+  
 </html>

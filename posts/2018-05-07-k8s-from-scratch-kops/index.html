@@ -1,51 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Creating Kubernetes Cluster in AWS from scratch with kops - Miro&#39;s World</title>
-  <meta name="renderer" content="webkit" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
 
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+  
+  
+    <title>Creating Kubernetes Cluster in AWS from scratch with kops &middot; Miro&#39;s World</title>
+    <meta name="title" content="Creating Kubernetes Cluster in AWS from scratch with kops &middot; Miro&#39;s World">
+  
 
-<meta name="theme-color" content="#f8f5ec" />
-<meta name="msapplication-navbutton-color" content="#f8f5ec">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+  
+  
+    <meta name="keywords" content="aws,kubernetes,kops,">
+  
+  
+  
+  <link rel="canonical" href="https://miroadamy.com/posts/2018-05-07-k8s-from-scratch-kops/">
+  
+  
 
+  
+  
+    <meta name="author" content="Miro Adamy">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/miroadamy/" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://stackoverflow.com/users/369692/miro-a" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://github.com/miroadamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://gitlab.com/miro.adamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://twitter.com/miroadamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.facebook.com/miro.adamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.instagram.com/miro.adamy/?hl=sk" rel="me">
+        
+      
+    
+  
 
-<meta name="author" content="Miro Adamy" /><meta name="description" content="This describes creation of K8s cluster in AWS environment from scratch as done for microservices based eCommerce project.
-Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed - https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html CLI credentials (secret key &#43; api Key) - https://docs.aws.amazon.com/cli/latest/reference/iam/index.html Kubectl and Kops local install ** see https://github.com/kubernetes/kops and https://kubernetes.io/docs/tasks/tools/install-kubectl/ Test of access ➜ etc git:(feature/kubernetes) aws --version aws-cli/1.11.180 Python/3.6.4 Darwin/17.5.0 botocore/1.7.38 ➜ etc git:(feature/kubernetes) kubectl version Client Version: version.Info{Major:&#34;1&#34;, Minor:&#34;10&#34;, GitVersion:&#34;v1.10.1&#34;, GitCommit:&#34;d4ab47518836c750f9949b9e0d387f20fb92260b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-04-13T22:27:55Z&#34;, GoVersion:&#34;go1.9.5&#34;, Compiler:&#34;gc&#34;, Platform:&#34;darwin/amd64&#34;} Server Version: version.Info{Major:&#34;1&#34;, Minor:&#34;9&#34;, GitVersion:&#34;v1.9.3&#34;, GitCommit:&#34;d2835416544f298c919e2ead3be3d0864b52323b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-02-07T11:55:20Z&#34;, GoVersion:&#34;go1.9.2&#34;, Compiler:&#34;gc&#34;, Platform:&#34;linux/amd64&#34;} ➜ etc git:(feature/kubernetes) kops version Version 1.9.0 ➜ etc git:(feature/kubernetes) aws --profile twfulfill-miro iam list-users | jq &#39;.Users[].UserName&#39; .. DELETED ... &#34;twfulfillment.prod.miro.adamy&#34; .... Set the environment variables These will be used by subsequent kops / aws commands
-" /><meta name="keywords" content="blog, Miro" />
-
-
-
-
-
-
-<meta name="generator" content="Hugo 0.164.0 with theme even" />
-
-
-<link rel="canonical" href="https://miroadamy.com/posts/2018-05-07-k8s-from-scratch-kops/" />
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-
-
-
-<link href="/sass/main.min.af7fd1da18d66c2b017df5b4cae508ef44cfcac3fb4c7c7a327fe4f4f9e28b08.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
-
-
-<meta property="og:url" content="https://miroadamy.com/posts/2018-05-07-k8s-from-scratch-kops/">
+  
+  <meta property="og:url" content="https://miroadamy.com/posts/2018-05-07-k8s-from-scratch-kops/">
 	<meta property="og:site_name" content="Miro&#39;s World">
 	<meta property="og:title" content="Creating Kubernetes Cluster in AWS from scratch with kops">
 	<meta property="og:description" content="This describes creation of K8s cluster in AWS environment from scratch as done for microservices based eCommerce project.
-Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed - https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html CLI credentials (secret key &#43; api Key) - https://docs.aws.amazon.com/cli/latest/reference/iam/index.html Kubectl and Kops local install ** see https://github.com/kubernetes/kops and https://kubernetes.io/docs/tasks/tools/install-kubectl/ Test of access ➜ etc git:(feature/kubernetes) aws --version aws-cli/1.11.180 Python/3.6.4 Darwin/17.5.0 botocore/1.7.38 ➜ etc git:(feature/kubernetes) kubectl version Client Version: version.Info{Major:&#34;1&#34;, Minor:&#34;10&#34;, GitVersion:&#34;v1.10.1&#34;, GitCommit:&#34;d4ab47518836c750f9949b9e0d387f20fb92260b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-04-13T22:27:55Z&#34;, GoVersion:&#34;go1.9.5&#34;, Compiler:&#34;gc&#34;, Platform:&#34;darwin/amd64&#34;} Server Version: version.Info{Major:&#34;1&#34;, Minor:&#34;9&#34;, GitVersion:&#34;v1.9.3&#34;, GitCommit:&#34;d2835416544f298c919e2ead3be3d0864b52323b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-02-07T11:55:20Z&#34;, GoVersion:&#34;go1.9.2&#34;, Compiler:&#34;gc&#34;, Platform:&#34;linux/amd64&#34;} ➜ etc git:(feature/kubernetes) kops version Version 1.9.0 ➜ etc git:(feature/kubernetes) aws --profile twfulfill-miro iam list-users | jq &#39;.Users[].UserName&#39; .. DELETED ... &#34;twfulfillment.prod.miro.adamy&#34; .... Set the environment variables These will be used by subsequent kops / aws commands">
+Pre-requisites # AWS account access - IAM with Admin privileges AWS CLI installed - https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html CLI credentials (secret key &#43; api Key) - https://docs.aws.amazon.com/cli/latest/reference/iam/index.html Kubectl and Kops local install ** see https://github.com/kubernetes/kops and https://kubernetes.io/docs/tasks/tools/install-kubectl/ Test of access # ➜ etc git:(feature/kubernetes) aws --version aws-cli/1.11.180 Python/3.6.4 Darwin/17.5.0 botocore/1.7.38 ➜ etc git:(feature/kubernetes) kubectl version Client Version: version.Info{Major:&#34;1&#34;, Minor:&#34;10&#34;, GitVersion:&#34;v1.10.1&#34;, GitCommit:&#34;d4ab47518836c750f9949b9e0d387f20fb92260b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-04-13T22:27:55Z&#34;, GoVersion:&#34;go1.9.5&#34;, Compiler:&#34;gc&#34;, Platform:&#34;darwin/amd64&#34;} Server Version: version.Info{Major:&#34;1&#34;, Minor:&#34;9&#34;, GitVersion:&#34;v1.9.3&#34;, GitCommit:&#34;d2835416544f298c919e2ead3be3d0864b52323b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-02-07T11:55:20Z&#34;, GoVersion:&#34;go1.9.2&#34;, Compiler:&#34;gc&#34;, Platform:&#34;linux/amd64&#34;} ➜ etc git:(feature/kubernetes) kops version Version 1.9.0 ➜ etc git:(feature/kubernetes) aws --profile twfulfill-miro iam list-users | jq &#39;.Users[].UserName&#39; .. DELETED ... &#34;twfulfillment.prod.miro.adamy&#34; .... Set the environment variables # These will be used by subsequent kops / aws commands">
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
@@ -55,110 +111,808 @@ Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed 
 		<meta property="article:tag" content="Kubernetes">
 		<meta property="article:tag" content="Kops">
 
-	<meta itemprop="name" content="Creating Kubernetes Cluster in AWS from scratch with kops">
-	<meta itemprop="description" content="This describes creation of K8s cluster in AWS environment from scratch as done for microservices based eCommerce project.
-Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed - https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html CLI credentials (secret key &#43; api Key) - https://docs.aws.amazon.com/cli/latest/reference/iam/index.html Kubectl and Kops local install ** see https://github.com/kubernetes/kops and https://kubernetes.io/docs/tasks/tools/install-kubectl/ Test of access ➜ etc git:(feature/kubernetes) aws --version aws-cli/1.11.180 Python/3.6.4 Darwin/17.5.0 botocore/1.7.38 ➜ etc git:(feature/kubernetes) kubectl version Client Version: version.Info{Major:&#34;1&#34;, Minor:&#34;10&#34;, GitVersion:&#34;v1.10.1&#34;, GitCommit:&#34;d4ab47518836c750f9949b9e0d387f20fb92260b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-04-13T22:27:55Z&#34;, GoVersion:&#34;go1.9.5&#34;, Compiler:&#34;gc&#34;, Platform:&#34;darwin/amd64&#34;} Server Version: version.Info{Major:&#34;1&#34;, Minor:&#34;9&#34;, GitVersion:&#34;v1.9.3&#34;, GitCommit:&#34;d2835416544f298c919e2ead3be3d0864b52323b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-02-07T11:55:20Z&#34;, GoVersion:&#34;go1.9.2&#34;, Compiler:&#34;gc&#34;, Platform:&#34;linux/amd64&#34;} ➜ etc git:(feature/kubernetes) kops version Version 1.9.0 ➜ etc git:(feature/kubernetes) aws --profile twfulfill-miro iam list-users | jq &#39;.Users[].UserName&#39; .. DELETED ... &#34;twfulfillment.prod.miro.adamy&#34; .... Set the environment variables These will be used by subsequent kops / aws commands">
-	<meta itemprop="datePublished" content="2018-05-07T11:22:48+08:00">
-	<meta itemprop="dateModified" content="2018-05-07T11:22:48+08:00">
-	<meta itemprop="wordCount" content="2817">
-	<meta itemprop="keywords" content="Aws,Kubernetes,Kops">
+  
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="Creating Kubernetes Cluster in AWS from scratch with kops">
 	<meta name="twitter:description" content="This describes creation of K8s cluster in AWS environment from scratch as done for microservices based eCommerce project.
-Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed - https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html CLI credentials (secret key &#43; api Key) - https://docs.aws.amazon.com/cli/latest/reference/iam/index.html Kubectl and Kops local install ** see https://github.com/kubernetes/kops and https://kubernetes.io/docs/tasks/tools/install-kubectl/ Test of access ➜ etc git:(feature/kubernetes) aws --version aws-cli/1.11.180 Python/3.6.4 Darwin/17.5.0 botocore/1.7.38 ➜ etc git:(feature/kubernetes) kubectl version Client Version: version.Info{Major:&#34;1&#34;, Minor:&#34;10&#34;, GitVersion:&#34;v1.10.1&#34;, GitCommit:&#34;d4ab47518836c750f9949b9e0d387f20fb92260b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-04-13T22:27:55Z&#34;, GoVersion:&#34;go1.9.5&#34;, Compiler:&#34;gc&#34;, Platform:&#34;darwin/amd64&#34;} Server Version: version.Info{Major:&#34;1&#34;, Minor:&#34;9&#34;, GitVersion:&#34;v1.9.3&#34;, GitCommit:&#34;d2835416544f298c919e2ead3be3d0864b52323b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-02-07T11:55:20Z&#34;, GoVersion:&#34;go1.9.2&#34;, Compiler:&#34;gc&#34;, Platform:&#34;linux/amd64&#34;} ➜ etc git:(feature/kubernetes) kops version Version 1.9.0 ➜ etc git:(feature/kubernetes) aws --profile twfulfill-miro iam list-users | jq &#39;.Users[].UserName&#39; .. DELETED ... &#34;twfulfillment.prod.miro.adamy&#34; .... Set the environment variables These will be used by subsequent kops / aws commands">
+Pre-requisites # AWS account access - IAM with Admin privileges AWS CLI installed - https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html CLI credentials (secret key &#43; api Key) - https://docs.aws.amazon.com/cli/latest/reference/iam/index.html Kubectl and Kops local install ** see https://github.com/kubernetes/kops and https://kubernetes.io/docs/tasks/tools/install-kubectl/ Test of access # ➜ etc git:(feature/kubernetes) aws --version aws-cli/1.11.180 Python/3.6.4 Darwin/17.5.0 botocore/1.7.38 ➜ etc git:(feature/kubernetes) kubectl version Client Version: version.Info{Major:&#34;1&#34;, Minor:&#34;10&#34;, GitVersion:&#34;v1.10.1&#34;, GitCommit:&#34;d4ab47518836c750f9949b9e0d387f20fb92260b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-04-13T22:27:55Z&#34;, GoVersion:&#34;go1.9.5&#34;, Compiler:&#34;gc&#34;, Platform:&#34;darwin/amd64&#34;} Server Version: version.Info{Major:&#34;1&#34;, Minor:&#34;9&#34;, GitVersion:&#34;v1.9.3&#34;, GitCommit:&#34;d2835416544f298c919e2ead3be3d0864b52323b&#34;, GitTreeState:&#34;clean&#34;, BuildDate:&#34;2018-02-07T11:55:20Z&#34;, GoVersion:&#34;go1.9.2&#34;, Compiler:&#34;gc&#34;, Platform:&#34;linux/amd64&#34;} ➜ etc git:(feature/kubernetes) kops version Version 1.9.0 ➜ etc git:(feature/kubernetes) aws --profile twfulfill-miro iam list-users | jq &#39;.Users[].UserName&#39; .. DELETED ... &#34;twfulfillment.prod.miro.adamy&#34; .... Set the environment variables # These will be used by subsequent kops / aws commands">
 
-<!--[if lte IE 9]>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
-<![endif]-->
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
 
-<!--[if lt IE 9]>
-  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-<![endif]-->
+  
+  
+  
+  
+  
+  
 
-</head>
-<body>
-  <div id="mobile-navbar" class="mobile-navbar">
-  <div class="mobile-header-logo">
-    <a href="/" class="logo">Miro&#39;s World</a>
-  </div>
-  <div class="mobile-navbar-icon">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-</div>
-<nav id="mobile-menu" class="mobile-menu slideout-menu">
-  <ul class="mobile-menu-list">
-    <a href="/">
-        <li class="mobile-menu-item">Home</li>
-      </a><a href="/posts/">
-        <li class="mobile-menu-item">Archives</li>
-      </a><a href="/tags/">
-        <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
-      </a><a href="/about/">
-        <li class="mobile-menu-item">About</li>
-      </a>
-  </ul>
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.109d05baab980c4b552cffcf3c585559d3979bc7da97727e30e07886dec2dffbcf308e213e7e92a19c9c1641392f2901de07dcd784b311ec17dfaa88200741d9.css"
+    integrity="sha512-EJ0FuquYDEtVLP/PPFhVWdOXm8fal3J&#43;MOB4ht7C3/vPMI4hPn6SoZycFkE5LykB3gfc14SzEewX36qIIAdB2Q==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.764f412f07ea715415e9123a5eb5f355429502d0b760146b9bcab854bc50829dee14488594acd935dfcdc6a0fe7e6d14d7bee914ebb9272b251aa238cb52c4dd.js"
+    integrity="sha512-dk9BLwfqcVQV6RI6XrXzVUKVAtC3YBRrm8q4VLxQgp3uFEiFlKzZNd/NxqD&#43;fm0U177pFOu5JyslGqI4y1LE3Q=="></script>
+  
+
+
+  
+  
+  
+  
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+    
+    <script defer src="/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js" integrity="sha512-Z7cez37szjhnOpIkTR/9k&#43;218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script>
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.42ef5f784093496e25f94d15338b6c70dc981b8b54837a408ae9cc81222241540a0d2efec4410f1854208aa3b3609c9af7a33b83656eecd42187a1f9c6f7b459.js"
+      integrity="sha512-Qu9feECTSW4l&#43;U0VM4tscNyYG4tUg3pAiunMgSIiQVQKDS7&#43;xEEPGFQgiqOzYJya96M7g2Vu7NQhh6H5xve0WQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
 
   
 
 
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Creating Kubernetes Cluster in AWS from scratch with kops",
+    "headline": "Creating Kubernetes Cluster in AWS from scratch with kops",
+    
+    "inLanguage": "en",
+    "url" : "https://miroadamy.com/posts/2018-05-07-k8s-from-scratch-kops/",
+    "author" : {
+      "@type": "Person",
+      "name": "Miro Adamy",
+      "sameAs": ["https://www.linkedin.com/in/miroadamy/", "https://stackoverflow.com/users/369692/miro-a", "https://github.com/miroadamy", "https://gitlab.com/miro.adamy", "https://twitter.com/miroadamy", "https://www.facebook.com/miro.adamy", "https://www.instagram.com/miro.adamy/?hl=sk"]
+    },
+    "copyrightYear": "2018",
+    "dateCreated": "2018-05-07T11:22:48\u002b08:00",
+    "datePublished": "2018-05-07T11:22:48\u002b08:00",
+    
+    "dateModified": "2018-05-07T11:22:48\u002b08:00",
+    
+    "keywords": ["aws","kubernetes","kops"],
+    
+    "mainEntityOfPage": "https://miroadamy.com/posts/2018-05-07-k8s-from-scratch-kops/",
+    "wordCount":  2828 
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    <header>
+      
+      
+        <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Miro&rsquo;s World
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="Main menu" class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Archives"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Archives
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Categories"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Categories
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Switch to dark appearance"
+        type="button"
+        class="text-sm bf-icon-color-hover"
+        title="Switch to dark appearance">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd
+        id="search-shortcut-hint"
+        class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400"
+        aria-hidden="true">
+        ⌘K
+      </kbd>
+    </button>
+  
 </nav>
 
-  <div class="container" id="mobile-panel">
-    <header id="header" class="header">
-        <div class="logo-wrapper">
-  <a href="/" class="logo">Miro&#39;s World</a>
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row mobile-menu-fullscreen relative flex items-center h-14 gap-4">
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Switch to dark appearance"
+      title="Switch to dark appearance"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label
+      for="mobile-menu-toggle"
+      tabindex="0"
+      role="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu-dialog"
+      aria-label="Main menu"
+      class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      id="mobile-menu-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Main menu"
+      style="scrollbar-gutter: stable;"
+      class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100
+      
+        fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99
+      
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        tabindex="0"
+        role="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu-dialog"
+        class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only">Close menu</span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav
+        aria-label="Mobile menu"
+        class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/"
+          aria-label="Home"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Home
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/posts/"
+          aria-label="Archives"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Archives
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/tags/"
+          aria-label="Tags"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Tags
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/categories/"
+          aria-label="Categories"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Categories
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/about/"
+          aria-label="About"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="About" class="text-2xl font-bold tracking-tight">
+            About
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
 </div>
 
 
 
 
 
-<nav class="site-navbar">
-  <ul id="menu" class="menu">
-    <li class="menu-item">
-        <a class="menu-item-link" href="/">Home</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/posts/">Archives</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/about/">About</a>
-      </li>
-  </ul>
-</nav>
 
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+      
     </header>
-
-    <main id="main" class="main">
-      <div class="content-wrapper">
-        <div id="content" class="content">
-          <article class="post">
-    
-    <header class="post-header">
-      <h1 class="post-title">Creating Kubernetes Cluster in AWS from scratch with kops</h1>
-
-      <div class="post-meta">
-        <span class="post-time"> 2018-05-07 </span>
-        <div class="post-category">
-            <a href="/categories/devops/"> DevOps </a>
-            </div>
-          <span class="more-meta"> 2817 words </span>
-          <span class="more-meta"> 14 mins read </span>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
         
+  
+  
+  
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Creating Kubernetes Cluster in AWS from scratch with kops
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2018-05-07T11:22:48&#43;08:00">May 7, 2018</time><span class="px-2 text-primary-500">&middot;</span><span>2828 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">14 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/devops/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    DevOps
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/aws/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Aws
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/kubernetes/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kubernetes
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/kops/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Kops
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
       </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+  
+
+  
+
+      
     </header>
 
-    <div class="post-toc" id="post-toc">
-  <h2 class="post-toc-title">Contents</h2>
-  <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents" aria-label="Table of Contents">
   <ul>
     <li><a href="#pre-requisites">Pre-requisites</a></li>
     <li><a href="#test-of-access">Test of access</a></li>
@@ -176,19 +930,74 @@ Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed 
   </ul>
 </nav>
   </div>
-</div>
-    <div class="post-content">
-      <p>This describes creation of K8s cluster in AWS environment from scratch as done for microservices based eCommerce project.</p>
-<h2 id="pre-requisites">Pre-requisites</h2>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContentsMobile" aria-label="Table of Contents">
+  <ul>
+    <li><a href="#pre-requisites">Pre-requisites</a></li>
+    <li><a href="#test-of-access">Test of access</a></li>
+    <li><a href="#set-the-environment-variables">Set the environment variables</a></li>
+    <li><a href="#create-kops-iam-group--attach-policies">Create kops IAM group + attach policies</a></li>
+    <li><a href="#create-kops-user">Create kops user</a></li>
+    <li><a href="#s3-buckets">S3 Buckets</a></li>
+    <li><a href="#set-up-cluster-using-kops">Set up cluster using kops</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#preview">Preview</a></li>
+    <li><a href="#actual-creation">Actual creation</a></li>
+    <li><a href="#validation">Validation</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>This describes creation of K8s cluster in AWS environment from scratch as done for microservices based eCommerce project.</p>
+
+<h2 class="relative group">Pre-requisites
+    <div id="pre-requisites" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pre-requisites" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <ul>
 <li>AWS account access - IAM with Admin privileges</li>
-<li>AWS CLI installed - <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html">https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html</a></li>
-<li>CLI credentials (secret key + api Key) - <a href="https://docs.aws.amazon.com/cli/latest/reference/iam/index.html">https://docs.aws.amazon.com/cli/latest/reference/iam/index.html</a></li>
+<li>AWS CLI installed - <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html"  target="_blank" rel="noreferrer">https://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html</a></li>
+<li>CLI credentials (secret key + api Key) - <a href="https://docs.aws.amazon.com/cli/latest/reference/iam/index.html"  target="_blank" rel="noreferrer">https://docs.aws.amazon.com/cli/latest/reference/iam/index.html</a></li>
 <li>Kubectl and Kops local install
-** see <a href="https://github.com/kubernetes/kops">https://github.com/kubernetes/kops</a> and <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">https://kubernetes.io/docs/tasks/tools/install-kubectl/</a></li>
+** see <a href="https://github.com/kubernetes/kops"  target="_blank" rel="noreferrer">https://github.com/kubernetes/kops</a> and <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/"  target="_blank" rel="noreferrer">https://kubernetes.io/docs/tasks/tools/install-kubectl/</a></li>
 </ul>
-<h2 id="test-of-access">Test of access</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws --version
+
+<h2 class="relative group">Test of access
+    <div id="test-of-access" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#test-of-access" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws --version
 </span></span><span class="line"><span class="cl">aws-cli/1.11.180 Python/3.6.4 Darwin/17.5.0 botocore/1.7.38
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) kubectl version
@@ -201,22 +1010,40 @@ Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed 
 </span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws --profile twfulfill-miro iam list-users | jq &#39;.Users[].UserName&#39;
 </span></span><span class="line"><span class="cl">.. DELETED ...
 </span></span><span class="line"><span class="cl">&#34;twfulfillment.prod.miro.adamy&#34;
-</span></span><span class="line"><span class="cl">....
-</span></span></code></pre></div><h2 id="set-the-environment-variables">Set the environment variables</h2>
+</span></span><span class="line"><span class="cl">....</span></span></code></pre></div></div>
+
+<h2 class="relative group">Set the environment variables
+    <div id="set-the-environment-variables" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#set-the-environment-variables" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>These will be used by subsequent kops / aws commands</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="k">export</span> <span class="n">AWS_ACCESS_KEY_ID</span><span class="o">=&lt;</span><span class="n">YOUR</span><span class="o">-</span><span class="n">ACCESS</span><span class="o">-</span><span class="n">KEY</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="k">export</span> <span class="n">AWS_SECRET_ACCESS_KEY</span><span class="o">=&lt;</span><span class="n">YOUR</span><span class="o">-</span><span class="n">SECRET</span><span class="o">-</span><span class="n">KEY</span><span class="o">&gt;</span>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) export AWS_ACCESS_KEY_ID=&lt;YOUR-ACCESS-KEY&gt;
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) export AWS_SECRET_ACCESS_KEY=&lt;YOUR-SECRET-KEY&gt;
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="c1">## Optional - if using ~/.aws/config + ~/.aws/credentials</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="k">export</span> <span class="n">AWS_PROFILE</span><span class="o">=</span><span class="n">twfulfill</span><span class="o">-</span><span class="n">miro</span>
+</span></span><span class="line"><span class="cl">## Optional - if using ~/.aws/config + ~/.aws/credentials
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) export AWS_PROFILE=twfulfill-miro
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="c1">## Validate</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">env</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">AWS_</span>
-</span></span><span class="line"><span class="cl"><span class="n">AWS_ACCESS_KEY_ID</span><span class="o">=.....</span>
-</span></span><span class="line"><span class="cl"><span class="n">AWS_SECRET_ACCESS_KEY</span><span class="o">=</span><span class="n">S</span><span class="o">..................</span><span class="n">t</span>
-</span></span><span class="line"><span class="cl"><span class="n">AWS_PROFILE</span><span class="o">=</span><span class="n">twfulfill</span><span class="o">-</span><span class="n">miro</span>
-</span></span></code></pre></div><h2 id="create-kops-iam-group--attach-policies">Create kops IAM group + attach policies</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws iam create-group --group-name kops
+</span></span><span class="line"><span class="cl">## Validate
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) env | grep AWS_
+</span></span><span class="line"><span class="cl">AWS_ACCESS_KEY_ID=.....
+</span></span><span class="line"><span class="cl">AWS_SECRET_ACCESS_KEY=S..................t
+</span></span><span class="line"><span class="cl">AWS_PROFILE=twfulfill-miro</span></span></code></pre></div></div>
+
+<h2 class="relative group">Create kops IAM group + attach policies
+    <div id="create-kops-iam-group--attach-policies" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#create-kops-iam-group--attach-policies" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws iam create-group --group-name kops
 </span></span><span class="line"><span class="cl">{
 </span></span><span class="line"><span class="cl">    &#34;Group&#34;: {
 </span></span><span class="line"><span class="cl">        &#34;Path&#34;: &#34;/&#34;,
@@ -271,9 +1098,18 @@ Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed 
 </span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws iam list-group-policies --group-name kops
 </span></span><span class="line"><span class="cl">{
 </span></span><span class="line"><span class="cl">    &#34;PolicyNames&#34;: []
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></div><h2 id="create-kops-user">Create kops user</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Before
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+
+<h2 class="relative group">Create kops user
+    <div id="create-kops-user" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#create-kops-user" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">## Before
 </span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws iam list-users | jq &#34;.Users[].UserName&#34; 
 </span></span><span class="line"><span class="cl">&#34;twfulfillment.prod.miro.adamy&#34;
 </span></span><span class="line"><span class="cl">... DELETED ...
@@ -311,80 +1147,98 @@ Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed 
 </span></span><span class="line"><span class="cl">            &#34;CreateDate&#34;: &#34;2018-05-07T15:13:38Z&#34;
 </span></span><span class="line"><span class="cl">        }
 </span></span><span class="line"><span class="cl">    ]
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></div><h2 id="s3-buckets">S3 Buckets</h2>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+
+<h2 class="relative group">S3 Buckets
+    <div id="s3-buckets" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#s3-buckets" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>Kops needs dedicated S3 bucket to store artifacts.</p>
 <p>We will create one for each environment now: DEV, UAT, PROD.</p>
 <p>Naming convention: PROJECT-k8s-ENVIRONMENT</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="c1">## List existing buckets</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">aws</span> <span class="n">s3api</span> <span class="n">list</span><span class="o">-</span><span class="n">buckets</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Buckets&#34;</span><span class="p">:</span> <span class="p">[],</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Owner&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;DisplayName&#34;</span><span class="p">:</span> <span class="s2">&#34;twfulfillment.aws&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;f4d3f1f61cb382de98ebf5b7d58306b66ad6108cdd1916cdd3cce94e88aeeb47&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">## List existing buckets
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws s3api list-buckets
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;Buckets&#34;: [],
+</span></span><span class="line"><span class="cl">    &#34;Owner&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;DisplayName&#34;: &#34;twfulfillment.aws&#34;,
+</span></span><span class="line"><span class="cl">        &#34;ID&#34;: &#34;f4d3f1f61cb382de98ebf5b7d58306b66ad6108cdd1916cdd3cce94e88aeeb47&#34;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="c1">## For buckets not in us-east-1 we need location constraint</span>
+</span></span><span class="line"><span class="cl">## For buckets not in us-east-1 we need location constraint
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">aws</span> <span class="n">s3api</span> <span class="n">create</span><span class="o">-</span><span class="n">bucket</span> <span class="o">--</span><span class="n">bucket</span> <span class="n">twfulfillment</span><span class="o">-</span><span class="n">k8s</span><span class="o">-</span><span class="n">uat</span> <span class="o">--</span><span class="n">region</span> <span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Location&#34;</span><span class="p">:</span> <span class="s2">&#34;/twfulfillment-k8s-uat&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">aws</span> <span class="n">s3api</span> <span class="n">create</span><span class="o">-</span><span class="n">bucket</span> <span class="o">--</span><span class="n">bucket</span> <span class="n">twfulfillment</span><span class="o">-</span><span class="n">k8s</span><span class="o">-</span><span class="n">dev</span> <span class="o">--</span><span class="n">region</span> <span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mi">1</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Location&#34;</span><span class="p">:</span> <span class="s2">&#34;/twfulfillment-k8s-dev&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">aws</span> <span class="n">s3api</span> <span class="n">create</span><span class="o">-</span><span class="n">bucket</span> <span class="o">--</span><span class="n">bucket</span> <span class="n">twfulfillment</span><span class="o">-</span><span class="n">k8s</span><span class="o">-</span><span class="n">prod</span> <span class="o">--</span><span class="n">region</span> <span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mi">2</span>  <span class="o">--</span><span class="n">create</span><span class="o">-</span><span class="n">bucket</span><span class="o">-</span><span class="n">configuration</span> <span class="n">LocationConstraint</span><span class="o">=</span><span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mi">2</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Location&#34;</span><span class="p">:</span> <span class="s2">&#34;http://twfulfillment-k8s-prod.s3.amazonaws.com/&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws s3api create-bucket --bucket twfulfillment-k8s-uat --region us-east-1
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;Location&#34;: &#34;/twfulfillment-k8s-uat&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws s3api create-bucket --bucket twfulfillment-k8s-dev --region us-east-1
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;Location&#34;: &#34;/twfulfillment-k8s-dev&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws s3api create-bucket --bucket twfulfillment-k8s-prod --region us-east-2  --create-bucket-configuration LocationConstraint=us-east-2
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;Location&#34;: &#34;http://twfulfillment-k8s-prod.s3.amazonaws.com/&#34;
+</span></span><span class="line"><span class="cl">}
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">aws</span> <span class="n">s3api</span> <span class="n">list</span><span class="o">-</span><span class="n">buckets</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Buckets&#34;</span><span class="p">:</span> <span class="p">[</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;twfulfillment-k8s-dev&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;CreationDate&#34;</span><span class="p">:</span> <span class="s2">&#34;2018-05-07T15:34:10.000Z&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;twfulfillment-k8s-prod&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;CreationDate&#34;</span><span class="p">:</span> <span class="s2">&#34;2018-05-07T15:34:29.000Z&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">},</span>
-</span></span><span class="line"><span class="cl">        <span class="p">{</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;twfulfillment-k8s-uat&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="s2">&#34;CreationDate&#34;</span><span class="p">:</span> <span class="s2">&#34;2018-05-07T15:33:55.000Z&#34;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">}</span>
-</span></span><span class="line"><span class="cl">    <span class="p">],</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Owner&#34;</span><span class="p">:</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;DisplayName&#34;</span><span class="p">:</span> <span class="s2">&#34;twfulfillment.aws&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">        <span class="s2">&#34;ID&#34;</span><span class="p">:</span> <span class="s2">&#34;f4d3f1f61cb382de98ebf5b7d58306b66ad6108cdd1916cdd3cce94e88aeeb47&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws s3api list-buckets
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;Buckets&#34;: [
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;Name&#34;: &#34;twfulfillment-k8s-dev&#34;,
+</span></span><span class="line"><span class="cl">            &#34;CreationDate&#34;: &#34;2018-05-07T15:34:10.000Z&#34;
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;Name&#34;: &#34;twfulfillment-k8s-prod&#34;,
+</span></span><span class="line"><span class="cl">            &#34;CreationDate&#34;: &#34;2018-05-07T15:34:29.000Z&#34;
+</span></span><span class="line"><span class="cl">        },
+</span></span><span class="line"><span class="cl">        {
+</span></span><span class="line"><span class="cl">            &#34;Name&#34;: &#34;twfulfillment-k8s-uat&#34;,
+</span></span><span class="line"><span class="cl">            &#34;CreationDate&#34;: &#34;2018-05-07T15:33:55.000Z&#34;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    ],
+</span></span><span class="line"><span class="cl">    &#34;Owner&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;DisplayName&#34;: &#34;twfulfillment.aws&#34;,
+</span></span><span class="line"><span class="cl">        &#34;ID&#34;: &#34;f4d3f1f61cb382de98ebf5b7d58306b66ad6108cdd1916cdd3cce94e88aeeb47&#34;
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="c1">## Enable versioning on all 3</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">aws</span> <span class="n">s3api</span> <span class="n">put</span><span class="o">-</span><span class="n">bucket</span><span class="o">-</span><span class="n">versioning</span> <span class="o">--</span><span class="n">bucket</span> <span class="n">twfulfillment</span><span class="o">-</span><span class="n">k8s</span><span class="o">-</span><span class="n">prod</span>  <span class="o">--</span><span class="n">versioning</span><span class="o">-</span><span class="n">configuration</span> <span class="n">Status</span><span class="o">=</span><span class="n">Enabled</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">aws</span> <span class="n">s3api</span> <span class="n">put</span><span class="o">-</span><span class="n">bucket</span><span class="o">-</span><span class="n">versioning</span> <span class="o">--</span><span class="n">bucket</span> <span class="n">twfulfillment</span><span class="o">-</span><span class="n">k8s</span><span class="o">-</span><span class="n">uat</span>  <span class="o">--</span><span class="n">versioning</span><span class="o">-</span><span class="n">configuration</span> <span class="n">Status</span><span class="o">=</span><span class="n">Enabled</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">aws</span> <span class="n">s3api</span> <span class="n">put</span><span class="o">-</span><span class="n">bucket</span><span class="o">-</span><span class="n">versioning</span> <span class="o">--</span><span class="n">bucket</span> <span class="n">twfulfillment</span><span class="o">-</span><span class="n">k8s</span><span class="o">-</span><span class="n">dev</span>  <span class="o">--</span><span class="n">versioning</span><span class="o">-</span><span class="n">configuration</span> <span class="n">Status</span><span class="o">=</span><span class="n">Enabled</span>
+</span></span><span class="line"><span class="cl">## Enable versioning on all 3
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws s3api put-bucket-versioning --bucket twfulfillment-k8s-prod  --versioning-configuration Status=Enabled
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws s3api put-bucket-versioning --bucket twfulfillment-k8s-uat  --versioning-configuration Status=Enabled
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws s3api put-bucket-versioning --bucket twfulfillment-k8s-dev  --versioning-configuration Status=Enabled
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="c1">## ... and verify</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">aws</span> <span class="n">s3api</span> <span class="n">get</span><span class="o">-</span><span class="n">bucket</span><span class="o">-</span><span class="n">versioning</span> <span class="o">--</span><span class="n">bucket</span> <span class="n">twfulfillment</span><span class="o">-</span><span class="n">k8s</span><span class="o">-</span><span class="n">dev</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Status&#34;</span><span class="p">:</span> <span class="s2">&#34;Enabled&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">aws</span> <span class="n">s3api</span> <span class="n">get</span><span class="o">-</span><span class="n">bucket</span><span class="o">-</span><span class="n">versioning</span> <span class="o">--</span><span class="n">bucket</span> <span class="n">twfulfillment</span><span class="o">-</span><span class="n">k8s</span><span class="o">-</span><span class="n">uat</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Status&#34;</span><span class="p">:</span> <span class="s2">&#34;Enabled&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">etc</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">aws</span> <span class="n">s3api</span> <span class="n">get</span><span class="o">-</span><span class="n">bucket</span><span class="o">-</span><span class="n">versioning</span> <span class="o">--</span><span class="n">bucket</span> <span class="n">twfulfillment</span><span class="o">-</span><span class="n">k8s</span><span class="o">-</span><span class="n">prod</span>
-</span></span><span class="line"><span class="cl"><span class="p">{</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Status&#34;</span><span class="p">:</span> <span class="s2">&#34;Enabled&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><h2 id="set-up-cluster-using-kops">Set up cluster using kops</h2>
+</span></span><span class="line"><span class="cl">## ... and verify
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws s3api get-bucket-versioning --bucket twfulfillment-k8s-dev
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;Status&#34;: &#34;Enabled&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws s3api get-bucket-versioning --bucket twfulfillment-k8s-uat
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;Status&#34;: &#34;Enabled&#34;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) aws s3api get-bucket-versioning --bucket twfulfillment-k8s-prod
+</span></span><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">    &#34;Status&#34;: &#34;Enabled&#34;
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+
+<h2 class="relative group">Set up cluster using kops
+    <div id="set-up-cluster-using-kops" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#set-up-cluster-using-kops" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
 <p>From now on, make SURE the AWS_xxx env variables are defined.</p>
 <p>Generate key pairs</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) cd k8s
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">➜  etc git:(feature/kubernetes) cd k8s
 </span></span><span class="line"><span class="cl">➜  k8s git:(feature/kubernetes) ll
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl">## Location of keys for DEV and UAT. See
@@ -405,14 +1259,32 @@ Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed 
 </span></span><span class="line"><span class="cl">-rw-------  1 miro  staff   1.6K  7 May 17:42 twfulfillment-prod-ssh
 </span></span><span class="line"><span class="cl">-rw-r--r--  1 miro  staff   404B  7 May 17:42 twfulfillment-prod-ssh.pub
 </span></span><span class="line"><span class="cl">-rw-------  1 miro  staff   1.6K  7 May 17:42 twfulfillment-uat-ssh
-</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro  staff   403B  7 May 17:42 twfulfillment-uat-ssh.pub
-</span></span></code></pre></div><h1 id="creating-the-clusters">Creating the clusters</h1>
+</span></span><span class="line"><span class="cl">-rw-r--r--  1 miro  staff   403B  7 May 17:42 twfulfillment-uat-ssh.pub</span></span></code></pre></div></div>
+
+<h1 class="relative group">Creating the clusters
+    <div id="creating-the-clusters" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#creating-the-clusters" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
 <p>We will be creating 2 clusters in us-east-1</p>
 <p>The instances used will be 3x t2.medium per cluster - 1x master + 2 worker nodes. We need t2.medium for Java processes and Kuberneters recommends the master to be at least t2.medium (or t2.large for larger number of worker nodes).</p>
 <p>The command</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">kops create cluster --zones us-east-1a,us-east-1b --name twfulfillment-uat.k8s.local --ssh-public-key=./twfulfillment-uat-ssh.pub --state=s3://twfulfillment-k8s-uat --kubernetes-version 1.9.3 --node-count 2 --node-size t2.medium --master-size t2.medium
-</span></span></code></pre></div><h2 id="preview">Preview</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  k8s git:(feature/kubernetes) kops create cluster --zones us-east-1a,us-east-1b --name twfulfillment-uat.k8s.local --ssh-public-key=./twfulfillment-uat-ssh.pub --state=s3://twfulfillment-k8s-uat --kubernetes-version 1.9.3 --node-count 2 --node-size t2.medium --master-size t2.medium
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">kops create cluster --zones us-east-1a,us-east-1b --name twfulfillment-uat.k8s.local --ssh-public-key=./twfulfillment-uat-ssh.pub --state=s3://twfulfillment-k8s-uat --kubernetes-version 1.9.3 --node-count 2 --node-size t2.medium --master-size t2.medium</span></span></code></pre></div></div>
+
+<h2 class="relative group">Preview
+    <div id="preview" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#preview" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">➜  k8s git:(feature/kubernetes) kops create cluster --zones us-east-1a,us-east-1b --name twfulfillment-uat.k8s.local --ssh-public-key=./twfulfillment-uat-ssh.pub --state=s3://twfulfillment-k8s-uat --kubernetes-version 1.9.3 --node-count 2 --node-size t2.medium --master-size t2.medium
 </span></span><span class="line"><span class="cl">I0507 18:22:46.988689   59427 create_cluster.go:1318] Using SSH public key: ./twfulfillment-uat-ssh.pub
 </span></span><span class="line"><span class="cl">I0507 18:22:48.416794   59427 create_cluster.go:472] Inferred --cloud=aws from zone &#34;us-east-1a&#34;
 </span></span><span class="line"><span class="cl">I0507 18:22:49.245107   59427 subnets.go:184] Assigned CIDR 172.20.32.0/19 to subnet us-east-1a
@@ -805,62 +1677,80 @@ Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed 
 </span></span><span class="line"><span class="cl"> * edit your node instance group: kops edit ig --name=twfulfillment-uat.k8s.local nodes
 </span></span><span class="line"><span class="cl"> * edit your master instance group: kops edit ig --name=twfulfillment-uat.k8s.local master-us-east-1a
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl">Finally configure your cluster with: kops update cluster twfulfillment-uat.k8s.local --yes
-</span></span></code></pre></div><h2 id="actual-creation">Actual creation</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">k8s</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">kops</span> <span class="n">get</span> <span class="n">cluster</span>
+</span></span><span class="line"><span class="cl">Finally configure your cluster with: kops update cluster twfulfillment-uat.k8s.local --yes</span></span></code></pre></div></div>
+
+<h2 class="relative group">Actual creation
+    <div id="actual-creation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#actual-creation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">➜  k8s git:(feature/kubernetes) kops get cluster
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="n">State</span> <span class="n">Store</span><span class="p">:</span> <span class="n">Required</span> <span class="n">value</span><span class="p">:</span> <span class="n">Please</span> <span class="n">set</span> <span class="n">the</span> <span class="o">--</span><span class="n">state</span> <span class="n">flag</span> <span class="ow">or</span> <span class="k">export</span> <span class="n">KOPS_STATE_STORE</span><span class="o">.</span>
-</span></span><span class="line"><span class="cl"><span class="n">A</span> <span class="n">valid</span> <span class="n">value</span> <span class="n">follows</span> <span class="n">the</span> <span class="n">format</span> <span class="n">s3</span><span class="p">:</span><span class="o">//&lt;</span><span class="n">bucket</span><span class="o">&gt;.</span>
-</span></span><span class="line"><span class="cl"><span class="n">A</span> <span class="n">s3</span> <span class="n">bucket</span> <span class="n">is</span> <span class="n">required</span> <span class="n">to</span> <span class="n">store</span> <span class="n">cluster</span> <span class="n">state</span> <span class="n">information</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">State Store: Required value: Please set the --state flag or export KOPS_STATE_STORE.
+</span></span><span class="line"><span class="cl">A valid value follows the format s3://&lt;bucket&gt;.
+</span></span><span class="line"><span class="cl">A s3 bucket is required to store cluster state information.
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="c1">## Using explicit bucket</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">k8s</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">kops</span> <span class="n">get</span> <span class="n">cluster</span> <span class="o">--</span><span class="n">state</span><span class="o">=</span><span class="n">s3</span><span class="p">:</span><span class="o">//</span><span class="n">twfulfillment</span><span class="o">-</span><span class="n">k8s</span><span class="o">-</span><span class="n">uat</span>
-</span></span><span class="line"><span class="cl"><span class="n">NAME</span>                <span class="n">CLOUD</span>   <span class="n">ZONES</span>
-</span></span><span class="line"><span class="cl"><span class="n">twfulfillment</span><span class="o">-</span><span class="n">uat</span><span class="o">.</span><span class="n">k8s</span><span class="o">.</span><span class="n">local</span> <span class="n">aws</span> <span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mi">1</span><span class="n">a</span><span class="p">,</span><span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mi">1</span><span class="n">b</span>
+</span></span><span class="line"><span class="cl">## Using explicit bucket
+</span></span><span class="line"><span class="cl">➜  k8s git:(feature/kubernetes) kops get cluster --state=s3://twfulfillment-k8s-uat
+</span></span><span class="line"><span class="cl">NAME                CLOUD   ZONES
+</span></span><span class="line"><span class="cl">twfulfillment-uat.k8s.local aws us-east-1a,us-east-1b
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="c1">## GO!</span>
-</span></span><span class="line"><span class="cl"><span class="err">➜</span>  <span class="n">k8s</span> <span class="n">git</span><span class="p">:(</span><span class="n">feature</span><span class="o">/</span><span class="n">kubernetes</span><span class="p">)</span> <span class="n">kops</span> <span class="n">update</span> <span class="n">cluster</span> <span class="n">twfulfillment</span><span class="o">-</span><span class="n">uat</span><span class="o">.</span><span class="n">k8s</span><span class="o">.</span><span class="n">local</span> <span class="o">--</span><span class="n">state</span><span class="o">=</span><span class="n">s3</span><span class="p">:</span><span class="o">//</span><span class="n">twfulfillment</span><span class="o">-</span><span class="n">k8s</span><span class="o">-</span><span class="n">uat</span> <span class="o">--</span><span class="n">yes</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">34.350553</span>   <span class="mi">59477</span> <span class="n">apply_cluster</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">456</span><span class="p">]</span> <span class="n">Gossip</span> <span class="n">DNS</span><span class="p">:</span> <span class="n">skipping</span> <span class="n">DNS</span> <span class="n">validation</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">35.281401</span>   <span class="mi">59477</span> <span class="n">executor</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">91</span><span class="p">]</span> <span class="n">Tasks</span><span class="p">:</span> <span class="mi">0</span> <span class="n">done</span> <span class="o">/</span> <span class="mi">79</span> <span class="n">total</span><span class="p">;</span> <span class="mi">30</span> <span class="n">can</span> <span class="n">run</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">36.844750</span>   <span class="mi">59477</span> <span class="n">vfs_castore</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">731</span><span class="p">]</span> <span class="n">Issuing</span> <span class="n">new</span> <span class="n">certificate</span><span class="p">:</span> <span class="s2">&#34;ca&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">36.871653</span>   <span class="mi">59477</span> <span class="n">vfs_castore</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">731</span><span class="p">]</span> <span class="n">Issuing</span> <span class="n">new</span> <span class="n">certificate</span><span class="p">:</span> <span class="s2">&#34;apiserver-aggregator-ca&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">40.134585</span>   <span class="mi">59477</span> <span class="n">executor</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">91</span><span class="p">]</span> <span class="n">Tasks</span><span class="p">:</span> <span class="mi">30</span> <span class="n">done</span> <span class="o">/</span> <span class="mi">79</span> <span class="n">total</span><span class="p">;</span> <span class="mi">25</span> <span class="n">can</span> <span class="n">run</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">41.669604</span>   <span class="mi">59477</span> <span class="n">vfs_castore</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">731</span><span class="p">]</span> <span class="n">Issuing</span> <span class="n">new</span> <span class="n">certificate</span><span class="p">:</span> <span class="s2">&#34;apiserver-aggregator&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">41.713562</span>   <span class="mi">59477</span> <span class="n">vfs_castore</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">731</span><span class="p">]</span> <span class="n">Issuing</span> <span class="n">new</span> <span class="n">certificate</span><span class="p">:</span> <span class="s2">&#34;kubecfg&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">41.745488</span>   <span class="mi">59477</span> <span class="n">vfs_castore</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">731</span><span class="p">]</span> <span class="n">Issuing</span> <span class="n">new</span> <span class="n">certificate</span><span class="p">:</span> <span class="s2">&#34;kubelet-api&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">41.785588</span>   <span class="mi">59477</span> <span class="n">vfs_castore</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">731</span><span class="p">]</span> <span class="n">Issuing</span> <span class="n">new</span> <span class="n">certificate</span><span class="p">:</span> <span class="s2">&#34;kube-proxy&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">41.826068</span>   <span class="mi">59477</span> <span class="n">vfs_castore</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">731</span><span class="p">]</span> <span class="n">Issuing</span> <span class="n">new</span> <span class="n">certificate</span><span class="p">:</span> <span class="s2">&#34;kops&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">41.828162</span>   <span class="mi">59477</span> <span class="n">vfs_castore</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">731</span><span class="p">]</span> <span class="n">Issuing</span> <span class="n">new</span> <span class="n">certificate</span><span class="p">:</span> <span class="s2">&#34;kube-scheduler&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">41.834064</span>   <span class="mi">59477</span> <span class="n">vfs_castore</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">731</span><span class="p">]</span> <span class="n">Issuing</span> <span class="n">new</span> <span class="n">certificate</span><span class="p">:</span> <span class="s2">&#34;kube-controller-manager&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">41.918415</span>   <span class="mi">59477</span> <span class="n">vfs_castore</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">731</span><span class="p">]</span> <span class="n">Issuing</span> <span class="n">new</span> <span class="n">certificate</span><span class="p">:</span> <span class="s2">&#34;apiserver-proxy-client&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">41.984042</span>   <span class="mi">59477</span> <span class="n">vfs_castore</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">731</span><span class="p">]</span> <span class="n">Issuing</span> <span class="n">new</span> <span class="n">certificate</span><span class="p">:</span> <span class="s2">&#34;kubelet&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">W0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">44.563905</span>   <span class="mi">59477</span> <span class="n">executor</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">118</span><span class="p">]</span> <span class="n">error</span> <span class="n">running</span> <span class="n">task</span> <span class="s2">&#34;SecurityGroup/api-elb.twfulfillment-uat.k8s.local&#34;</span> <span class="p">(</span><span class="mi">9</span><span class="n">m55s</span> <span class="n">remaining</span> <span class="n">to</span> <span class="n">succeed</span><span class="p">):</span> <span class="n">error</span> <span class="n">listing</span> <span class="n">SecurityGroups</span><span class="p">:</span> <span class="n">InvalidGroup</span><span class="o">.</span><span class="n">NotFound</span><span class="p">:</span> <span class="n">The</span> <span class="n">security</span> <span class="n">group</span> <span class="s1">&#39;sg-0747fcccc1c67f785&#39;</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">exist</span>
-</span></span><span class="line"><span class="cl">    <span class="n">status</span> <span class="n">code</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="n">request</span> <span class="n">id</span><span class="p">:</span> <span class="mi">13</span><span class="n">a0c766</span><span class="o">-</span><span class="n">c04b</span><span class="o">-</span><span class="mi">412</span><span class="n">b</span><span class="o">-</span><span class="n">bbbf</span><span class="o">-</span><span class="mi">09</span><span class="n">ee76f11b72</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">44.563955</span>   <span class="mi">59477</span> <span class="n">executor</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">91</span><span class="p">]</span> <span class="n">Tasks</span><span class="p">:</span> <span class="mi">54</span> <span class="n">done</span> <span class="o">/</span> <span class="mi">79</span> <span class="n">total</span><span class="p">;</span> <span class="mi">17</span> <span class="n">can</span> <span class="n">run</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">46.226024</span>   <span class="mi">59477</span> <span class="n">executor</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">91</span><span class="p">]</span> <span class="n">Tasks</span><span class="p">:</span> <span class="mi">71</span> <span class="n">done</span> <span class="o">/</span> <span class="mi">79</span> <span class="n">total</span><span class="p">;</span> <span class="mi">6</span> <span class="n">can</span> <span class="n">run</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">48.356776</span>   <span class="mi">59477</span> <span class="n">executor</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">91</span><span class="p">]</span> <span class="n">Tasks</span><span class="p">:</span> <span class="mi">77</span> <span class="n">done</span> <span class="o">/</span> <span class="mi">79</span> <span class="n">total</span><span class="p">;</span> <span class="mi">2</span> <span class="n">can</span> <span class="n">run</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">49.685752</span>   <span class="mi">59477</span> <span class="n">vfs_castore</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">731</span><span class="p">]</span> <span class="n">Issuing</span> <span class="n">new</span> <span class="n">certificate</span><span class="p">:</span> <span class="s2">&#34;master&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="n">W0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">50.745302</span>   <span class="mi">59477</span> <span class="n">executor</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">118</span><span class="p">]</span> <span class="n">error</span> <span class="n">running</span> <span class="n">task</span> <span class="s2">&#34;LoadBalancerAttachment/api-master-us-east-1a&#34;</span> <span class="p">(</span><span class="mi">9</span><span class="n">m57s</span> <span class="n">remaining</span> <span class="n">to</span> <span class="n">succeed</span><span class="p">):</span> <span class="n">error</span> <span class="n">attaching</span> <span class="n">autoscaling</span> <span class="n">group</span> <span class="n">to</span> <span class="n">ELB</span><span class="p">:</span> <span class="n">ValidationError</span><span class="p">:</span> <span class="n">Provided</span> <span class="n">Load</span> <span class="n">Balancers</span> <span class="n">may</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">valid</span><span class="o">.</span> <span class="n">Please</span> <span class="n">ensure</span> <span class="n">they</span> <span class="n">exist</span> <span class="ow">and</span> <span class="n">try</span> <span class="n">again</span><span class="o">.</span>
-</span></span><span class="line"><span class="cl">    <span class="n">status</span> <span class="n">code</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="n">request</span> <span class="n">id</span><span class="p">:</span> <span class="mi">4</span><span class="n">d1ccf95</span><span class="o">-</span><span class="mi">5213</span><span class="o">-</span><span class="mf">11e8</span><span class="o">-</span><span class="mi">92</span><span class="n">f5</span><span class="o">-</span><span class="mi">11950813</span><span class="n">b91a</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">50.745339</span>   <span class="mi">59477</span> <span class="n">executor</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">91</span><span class="p">]</span> <span class="n">Tasks</span><span class="p">:</span> <span class="mi">78</span> <span class="n">done</span> <span class="o">/</span> <span class="mi">79</span> <span class="n">total</span><span class="p">;</span> <span class="mi">1</span> <span class="n">can</span> <span class="n">run</span>
-</span></span><span class="line"><span class="cl"><span class="n">W0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">51.150152</span>   <span class="mi">59477</span> <span class="n">executor</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">118</span><span class="p">]</span> <span class="n">error</span> <span class="n">running</span> <span class="n">task</span> <span class="s2">&#34;LoadBalancerAttachment/api-master-us-east-1a&#34;</span> <span class="p">(</span><span class="mi">9</span><span class="n">m57s</span> <span class="n">remaining</span> <span class="n">to</span> <span class="n">succeed</span><span class="p">):</span> <span class="n">error</span> <span class="n">attaching</span> <span class="n">autoscaling</span> <span class="n">group</span> <span class="n">to</span> <span class="n">ELB</span><span class="p">:</span> <span class="n">ValidationError</span><span class="p">:</span> <span class="n">Provided</span> <span class="n">Load</span> <span class="n">Balancers</span> <span class="n">may</span> <span class="ow">not</span> <span class="n">be</span> <span class="n">valid</span><span class="o">.</span> <span class="n">Please</span> <span class="n">ensure</span> <span class="n">they</span> <span class="n">exist</span> <span class="ow">and</span> <span class="n">try</span> <span class="n">again</span><span class="o">.</span>
-</span></span><span class="line"><span class="cl">    <span class="n">status</span> <span class="n">code</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="n">request</span> <span class="n">id</span><span class="p">:</span> <span class="mf">4e822</span><span class="n">b8d</span><span class="o">-</span><span class="mi">5213</span><span class="o">-</span><span class="mf">11e8</span><span class="o">-</span><span class="n">aa30</span><span class="o">-</span><span class="n">b39cf8514ec9</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">25</span><span class="p">:</span><span class="mf">51.150181</span>   <span class="mi">59477</span> <span class="n">executor</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">133</span><span class="p">]</span> <span class="n">No</span> <span class="n">progress</span> <span class="n">made</span><span class="p">,</span> <span class="n">sleeping</span> <span class="n">before</span> <span class="n">retrying</span> <span class="mi">1</span> <span class="n">failed</span> <span class="n">task</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mf">01.154620</span>   <span class="mi">59477</span> <span class="n">executor</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">91</span><span class="p">]</span> <span class="n">Tasks</span><span class="p">:</span> <span class="mi">78</span> <span class="n">done</span> <span class="o">/</span> <span class="mi">79</span> <span class="n">total</span><span class="p">;</span> <span class="mi">1</span> <span class="n">can</span> <span class="n">run</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mf">02.115713</span>   <span class="mi">59477</span> <span class="n">executor</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">91</span><span class="p">]</span> <span class="n">Tasks</span><span class="p">:</span> <span class="mi">79</span> <span class="n">done</span> <span class="o">/</span> <span class="mi">79</span> <span class="n">total</span><span class="p">;</span> <span class="mi">0</span> <span class="n">can</span> <span class="n">run</span>
-</span></span><span class="line"><span class="cl"><span class="n">I0507</span> <span class="mi">18</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mf">02.405109</span>   <span class="mi">59477</span> <span class="n">update_cluster</span><span class="o">.</span><span class="n">go</span><span class="p">:</span><span class="mi">291</span><span class="p">]</span> <span class="n">Exporting</span> <span class="n">kubecfg</span> <span class="k">for</span> <span class="n">cluster</span>
-</span></span><span class="line"><span class="cl"><span class="n">kops</span> <span class="n">has</span> <span class="n">set</span> <span class="n">your</span> <span class="n">kubectl</span> <span class="n">context</span> <span class="n">to</span> <span class="n">twfulfillment</span><span class="o">-</span><span class="n">uat</span><span class="o">.</span><span class="n">k8s</span><span class="o">.</span><span class="n">local</span>
+</span></span><span class="line"><span class="cl">## GO!
+</span></span><span class="line"><span class="cl">➜  k8s git:(feature/kubernetes) kops update cluster twfulfillment-uat.k8s.local --state=s3://twfulfillment-k8s-uat --yes
+</span></span><span class="line"><span class="cl">I0507 18:25:34.350553   59477 apply_cluster.go:456] Gossip DNS: skipping DNS validation
+</span></span><span class="line"><span class="cl">I0507 18:25:35.281401   59477 executor.go:91] Tasks: 0 done / 79 total; 30 can run
+</span></span><span class="line"><span class="cl">I0507 18:25:36.844750   59477 vfs_castore.go:731] Issuing new certificate: &#34;ca&#34;
+</span></span><span class="line"><span class="cl">I0507 18:25:36.871653   59477 vfs_castore.go:731] Issuing new certificate: &#34;apiserver-aggregator-ca&#34;
+</span></span><span class="line"><span class="cl">I0507 18:25:40.134585   59477 executor.go:91] Tasks: 30 done / 79 total; 25 can run
+</span></span><span class="line"><span class="cl">I0507 18:25:41.669604   59477 vfs_castore.go:731] Issuing new certificate: &#34;apiserver-aggregator&#34;
+</span></span><span class="line"><span class="cl">I0507 18:25:41.713562   59477 vfs_castore.go:731] Issuing new certificate: &#34;kubecfg&#34;
+</span></span><span class="line"><span class="cl">I0507 18:25:41.745488   59477 vfs_castore.go:731] Issuing new certificate: &#34;kubelet-api&#34;
+</span></span><span class="line"><span class="cl">I0507 18:25:41.785588   59477 vfs_castore.go:731] Issuing new certificate: &#34;kube-proxy&#34;
+</span></span><span class="line"><span class="cl">I0507 18:25:41.826068   59477 vfs_castore.go:731] Issuing new certificate: &#34;kops&#34;
+</span></span><span class="line"><span class="cl">I0507 18:25:41.828162   59477 vfs_castore.go:731] Issuing new certificate: &#34;kube-scheduler&#34;
+</span></span><span class="line"><span class="cl">I0507 18:25:41.834064   59477 vfs_castore.go:731] Issuing new certificate: &#34;kube-controller-manager&#34;
+</span></span><span class="line"><span class="cl">I0507 18:25:41.918415   59477 vfs_castore.go:731] Issuing new certificate: &#34;apiserver-proxy-client&#34;
+</span></span><span class="line"><span class="cl">I0507 18:25:41.984042   59477 vfs_castore.go:731] Issuing new certificate: &#34;kubelet&#34;
+</span></span><span class="line"><span class="cl">W0507 18:25:44.563905   59477 executor.go:118] error running task &#34;SecurityGroup/api-elb.twfulfillment-uat.k8s.local&#34; (9m55s remaining to succeed): error listing SecurityGroups: InvalidGroup.NotFound: The security group &#39;sg-0747fcccc1c67f785&#39; does not exist
+</span></span><span class="line"><span class="cl">    status code: 400, request id: 13a0c766-c04b-412b-bbbf-09ee76f11b72
+</span></span><span class="line"><span class="cl">I0507 18:25:44.563955   59477 executor.go:91] Tasks: 54 done / 79 total; 17 can run
+</span></span><span class="line"><span class="cl">I0507 18:25:46.226024   59477 executor.go:91] Tasks: 71 done / 79 total; 6 can run
+</span></span><span class="line"><span class="cl">I0507 18:25:48.356776   59477 executor.go:91] Tasks: 77 done / 79 total; 2 can run
+</span></span><span class="line"><span class="cl">I0507 18:25:49.685752   59477 vfs_castore.go:731] Issuing new certificate: &#34;master&#34;
+</span></span><span class="line"><span class="cl">W0507 18:25:50.745302   59477 executor.go:118] error running task &#34;LoadBalancerAttachment/api-master-us-east-1a&#34; (9m57s remaining to succeed): error attaching autoscaling group to ELB: ValidationError: Provided Load Balancers may not be valid. Please ensure they exist and try again.
+</span></span><span class="line"><span class="cl">    status code: 400, request id: 4d1ccf95-5213-11e8-92f5-11950813b91a
+</span></span><span class="line"><span class="cl">I0507 18:25:50.745339   59477 executor.go:91] Tasks: 78 done / 79 total; 1 can run
+</span></span><span class="line"><span class="cl">W0507 18:25:51.150152   59477 executor.go:118] error running task &#34;LoadBalancerAttachment/api-master-us-east-1a&#34; (9m57s remaining to succeed): error attaching autoscaling group to ELB: ValidationError: Provided Load Balancers may not be valid. Please ensure they exist and try again.
+</span></span><span class="line"><span class="cl">    status code: 400, request id: 4e822b8d-5213-11e8-aa30-b39cf8514ec9
+</span></span><span class="line"><span class="cl">I0507 18:25:51.150181   59477 executor.go:133] No progress made, sleeping before retrying 1 failed task(s)
+</span></span><span class="line"><span class="cl">I0507 18:26:01.154620   59477 executor.go:91] Tasks: 78 done / 79 total; 1 can run
+</span></span><span class="line"><span class="cl">I0507 18:26:02.115713   59477 executor.go:91] Tasks: 79 done / 79 total; 0 can run
+</span></span><span class="line"><span class="cl">I0507 18:26:02.405109   59477 update_cluster.go:291] Exporting kubecfg for cluster
+</span></span><span class="line"><span class="cl">kops has set your kubectl context to twfulfillment-uat.k8s.local
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="n">Cluster</span> <span class="n">is</span> <span class="n">starting</span><span class="o">.</span>  <span class="n">It</span> <span class="n">should</span> <span class="n">be</span> <span class="n">ready</span> <span class="ow">in</span> <span class="n">a</span> <span class="n">few</span> <span class="n">minutes</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl">Cluster is starting.  It should be ready in a few minutes.
 </span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"><span class="n">Suggestions</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl"> <span class="o">*</span> <span class="n">validate</span> <span class="n">cluster</span><span class="p">:</span> <span class="n">kops</span> <span class="n">validate</span> <span class="n">cluster</span>
-</span></span><span class="line"><span class="cl"> <span class="o">*</span> <span class="n">list</span> <span class="n">nodes</span><span class="p">:</span> <span class="n">kubectl</span> <span class="n">get</span> <span class="n">nodes</span> <span class="o">--</span><span class="n">show</span><span class="o">-</span><span class="n">labels</span>
-</span></span><span class="line"><span class="cl"> <span class="o">*</span> <span class="n">ssh</span> <span class="n">to</span> <span class="n">the</span> <span class="n">master</span><span class="p">:</span> <span class="n">ssh</span> <span class="o">-</span><span class="n">i</span> <span class="o">~/.</span><span class="n">ssh</span><span class="o">/</span><span class="n">id_rsa</span> <span class="n">admin</span><span class="err">@</span><span class="n">api</span><span class="o">.</span><span class="n">twfulfillment</span><span class="o">-</span><span class="n">uat</span><span class="o">.</span><span class="n">k8s</span><span class="o">.</span><span class="n">local</span>
-</span></span><span class="line"><span class="cl"> <span class="o">*</span> <span class="n">the</span> <span class="n">admin</span> <span class="n">user</span> <span class="n">is</span> <span class="n">specific</span> <span class="n">to</span> <span class="n">Debian</span><span class="o">.</span> <span class="n">If</span> <span class="ow">not</span> <span class="n">using</span> <span class="n">Debian</span> <span class="n">please</span> <span class="n">use</span> <span class="n">the</span> <span class="n">appropriate</span> <span class="n">user</span> <span class="n">based</span> <span class="n">on</span> <span class="n">your</span> <span class="ne">OS</span><span class="o">.</span>
-</span></span><span class="line"><span class="cl"> <span class="o">*</span> <span class="n">read</span> <span class="n">about</span> <span class="n">installing</span> <span class="n">addons</span> <span class="n">at</span><span class="p">:</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">kubernetes</span><span class="o">/</span><span class="n">kops</span><span class="o">/</span><span class="n">blob</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">docs</span><span class="o">/</span><span class="n">addons</span><span class="o">.</span><span class="n">md</span><span class="o">.</span>
-</span></span></code></pre></div><h2 id="validation">Validation</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  k8s git:(feature/kubernetes) kubectl cluster-info
+</span></span><span class="line"><span class="cl">Suggestions:
+</span></span><span class="line"><span class="cl"> * validate cluster: kops validate cluster
+</span></span><span class="line"><span class="cl"> * list nodes: kubectl get nodes --show-labels
+</span></span><span class="line"><span class="cl"> * ssh to the master: ssh -i ~/.ssh/id_rsa admin@api.twfulfillment-uat.k8s.local
+</span></span><span class="line"><span class="cl"> * the admin user is specific to Debian. If not using Debian please use the appropriate user based on your OS.
+</span></span><span class="line"><span class="cl"> * read about installing addons at: https://github.com/kubernetes/kops/blob/master/docs/addons.md.</span></span></code></pre></div></div>
+
+<h2 class="relative group">Validation
+    <div id="validation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#validation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">➜  k8s git:(feature/kubernetes) kubectl cluster-info
 </span></span><span class="line"><span class="cl">Kubernetes master is running at https://api-twfulfillment-uat-k8s-hqhbfl-2093835009.us-east-1.elb.amazonaws.com
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl">To further debug and diagnose cluster problems, use &#39;kubectl cluster-info dump&#39;.
@@ -904,9 +1794,9 @@ Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed 
 </span></span><span class="line"><span class="cl">&#34;i-064d2261b5610715f  :  us-east-1b  =&gt;  &#34;
 </span></span><span class="line"><span class="cl">&#34;i-034013fb3730e284b  :  us-east-1e  =&gt;  54.162.224.243&#34;
 </span></span><span class="line"><span class="cl">&#34;i-09268120fd4b2b95d  :  us-east-1b  =&gt;  34.234.234.77&#34;
-</span></span><span class="line"><span class="cl">&#34;i-007a536fedbdd74bc  :  us-east-1b  =&gt;  34.201.19.66&#34;
-</span></span></code></pre></div><p>We repeat the process for DEV environment cluster</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">➜  k8s git:(feature/kubernetes) ✗ kops create cluster --zones us-east-1c,us-east-1d --name twfulfillment-dev.k8s.local --ssh-public-key=./twfulfillment-dev-ssh.pub --state=s3://twfulfillment-k8s-dev --kubernetes-version 1.9.3 --node-count 2 --node-size t2.medium --master-size t2.medium
+</span></span><span class="line"><span class="cl">&#34;i-007a536fedbdd74bc  :  us-east-1b  =&gt;  34.201.19.66&#34;</span></span></code></pre></div></div>
+<p>We repeat the process for DEV environment cluster</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">➜  k8s git:(feature/kubernetes) ✗ kops create cluster --zones us-east-1c,us-east-1d --name twfulfillment-dev.k8s.local --ssh-public-key=./twfulfillment-dev-ssh.pub --state=s3://twfulfillment-k8s-dev --kubernetes-version 1.9.3 --node-count 2 --node-size t2.medium --master-size t2.medium
 </span></span><span class="line"><span class="cl">I0507 18:43:22.701155   59817 create_cluster.go:1318] Using SSH public key: ./twfulfillment-dev-ssh.pub
 </span></span><span class="line"><span class="cl">I0507 18:43:24.217861   59817 create_cluster.go:472] Inferred --cloud=aws from zone &#34;us-east-1c&#34;
 </span></span><span class="line"><span class="cl">I0507 18:43:25.002584   59817 subnets.go:184] Assigned CIDR 172.20.32.0/19 to subnet us-east-1c
@@ -971,115 +1861,179 @@ Pre-requisites AWS account access - IAM with Admin privileges AWS CLI installed 
 </span></span><span class="line"><span class="cl">&#34;i-034013fb3730e284b  :  dockercloud-2a3769a0-fa94-458c-9e19-b4da1525ece8  =&gt;  54.162.224.243&#34;
 </span></span><span class="line"><span class="cl">&#34;i-00fba10c6d2e2e9bb  :  kubernetes.twfulfillment-dev.k8s.local-3c:05:ac:2d:75:14:21:fa:ab:98:c7:3d:9d:68:8d:1d  =&gt;  54.159.165.112&#34;
 </span></span><span class="line"><span class="cl">&#34;i-09268120fd4b2b95d  :  dockercloud-2a3769a0-fa94-458c-9e19-b4da1525ece8  =&gt;  34.234.234.77&#34;
-</span></span><span class="line"><span class="cl">&#34;i-007a536fedbdd74bc  :  kubernetes.twfulfillment-uat.k8s.local-c9:e4:2e:2e:a7:6d:f9:4b:d8:20:56:80:3b:2c:12:01  =&gt;  34.201.19.66&#34;
-</span></span></code></pre></div><p>Kubectl in local docker now will show multiple options</p>
-<p><img src="/images/2018-05-07_18-45-52.png" alt=""></p>
+</span></span><span class="line"><span class="cl">&#34;i-007a536fedbdd74bc  :  kubernetes.twfulfillment-uat.k8s.local-c9:e4:2e:2e:a7:6d:f9:4b:d8:20:56:80:3b:2c:12:01  =&gt;  34.201.19.66&#34;</span></span></code></pre></div></div>
+<p>Kubectl in local docker now will show multiple options</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="/images/2018-05-07_18-45-52.png"
+    ></figure>
+</p>
 <p>link to a <a href="/posts/2014-08-28-elastic-tutorial/">post</a></p>
 
-    </div>
-
-    <div class="post-copyright">
-  <p class="copyright-item">
-    <span class="item-title">Author</span>
-    <span class="item-content">Miro Adamy</span>
-  </p>
-  <p class="copyright-item">
-    <span class="item-title">LastMod</span>
-    <span class="item-content">
-        2018-05-07
-        
-    </span>
-  </p>
-  
-  <p class="copyright-item">
-    <span class="item-title">License</span>
-    <span class="item-content">(c) 2006-2020 Miro Adamy</span>
-  </p>
-</div>
-<footer class="post-footer">
-      <div class="post-tags">
-          <a href="/tags/aws/">aws</a>
-          <a href="/tags/kubernetes/">kubernetes</a>
-          <a href="/tags/kops/">kops</a>
-          </div>
-      <nav class="post-nav">
-        <a class="prev" href="/posts/2018-06-03-botd/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Blog of the day - Tapas Forever</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/posts/2018-04-12-karel/">
-            <span class="next-text nav-default">Remembering Karel Kryl</span>
-            <span class="next-text nav-mobile">Next</span>
-            <i class="iconfont icon-right"></i>
-          </a>
-      </nav>
-    </footer>
-  </article>
+          
+          
+          
         </div>
         
+        
 
-  
+        
 
-  
+        
 
       </div>
-    </main>
+    </section>
 
-    <footer id="footer" class="footer">
-      <div class="social-links">
-      <a href="mailto:miro.adamy@gmail.com" class="iconfont icon-email" title="email"></a>
-      <a href="https://www.linkedin.com/in/miroadamy/" class="iconfont icon-linkedin" title="linkedin"></a>
-      <a href="https://stackoverflow.com/users/369692/miro-a" class="iconfont icon-stack-overflow" title="stack-overflow"></a>
-      <a href="https://github.com/miroadamy" class="iconfont icon-github" title="github"></a>
-      <a href="https://gitlab.com/miro.adamy" class="iconfont icon-gitlab" title="gitlab"></a>
-      <a href="https://bitbucket.org/%7Bc05adff9-951c-4ad1-9a83-e43a1af1b81a%7D/" class="iconfont icon-link" title="link"></a>
-      <a href="https://www.instagram.com/miro.adamy/?hl=sk" class="iconfont icon-instagram" title="instagram"></a>
-      <a href="https://twitter.com/miroadamy" class="iconfont icon-twitter" title="twitter"></a>
-      <a href="https://www.facebook.com/miro.adamy" class="iconfont icon-facebook" title="facebook"></a>
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
   
-</div>
-
-<div class="copyright">
-  <span class="power-by">
-    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
-  </span>
-  <span class="division">|</span>
-  <span class="theme-info">
-    Theme - 
-    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
-  </span>
-
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2018-04-12-karel/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Remembering Karel Kryl
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2018-04-12T11:22:48&#43;08:00">April 12, 2018</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2018-06-03-botd/">
+              <span class="leading-6">
+                Blog of the day - Tapas Forever&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2018-06-07T11:22:48&#43;08:00">June 7, 2018</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
   
 
-  <span class="copyright-year">
-    &copy; 
-    2006 - 
-    2026<span class="heart"><i class="iconfont icon-heart"></i></span><span>Miro Adamy</span>
-  </span>
-</div>
+
+      
 
     </footer>
+  </article>
 
-    <div class="back-to-top" id="back-to-top">
-      <i class="iconfont icon-up"></i>
-    </div>
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Miro Adamy
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
   </div>
-  <script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Search"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          aria-label="Search"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
 
-
-
-<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
-
-
-
-
-
-
-
-
-</body>
+    </div>
+    
+    
+  </body>
+  
 </html>

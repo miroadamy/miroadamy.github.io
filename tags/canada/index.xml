@@ -1,108 +1,143 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Canada on Miro&#39;s World</title>
-		<link>https://miroadamy.com/tags/canada/</link>
-		<description>Recent content in Canada on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Sun, 26 May 2019 11:22:48 +0800</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/tags/canada/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Visit in Canada</title>
-				<link>https://miroadamy.com/posts/2019-05-25-ottawa/</link>
-				<pubDate>Sun, 26 May 2019 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-05-25-ottawa/</guid>
-				<description>&lt;p&gt;I did quick 2 week visit to Canada.&lt;/p&gt;&#xA;&lt;p&gt;I spent some time with our son and daughter-in-law, visited many dear friends and places in the city and nature, worked for couple of days in the office and met new colleagues and even met current my boss for the first time in 3D. I must say, he is taller than in Zoom :-D&lt;/p&gt;&#xA;&lt;p&gt;I also visited our ex-cat with her new human servants and as expected, Lucy duly ignored me. Oh, well - cats.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Christmas in Canada</title>
-				<link>https://miroadamy.com/posts/2017-01-26-canada/</link>
-				<pubDate>Fri, 26 Jan 2018 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2017-01-26-canada/</guid>
-				<description>&lt;p&gt;We have visited Canada for the winter season.&lt;/p&gt;&#xA;&lt;p&gt;It was very nice to see old friends and family.&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiro.adamy%2Fposts%2F10213581839314317%3A0&amp;width=500&#34; width=&#34;500&#34; height=&#34;594&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;&#xA;&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiro.adamy%2Fposts%2F10213556715566239&amp;width=500&#34; width=&#34;500&#34; height=&#34;650&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;</description>
-			</item>
-			<item>
-				<title>Rogers, iPhone and the dreaded kCFErrorDomainCFNetwork Error 302</title>
-				<link>https://miroadamy.com/posts/2008-08-23-rogers-iphone-and-the-dreaded-kcferrordomaincfnetwork-error-302/</link>
-				<pubDate>Sat, 23 Aug 2008 22:57:15 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-08-23-rogers-iphone-and-the-dreaded-kcferrordomaincfnetwork-error-302/</guid>
-				<description>&lt;p&gt;Many people recently (including myself) had experiences difficulties with Web access on the iPhone. Quite often the following error message pops up:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-519&#34; src=&#34;https://miroadamy.com/images/img_00022.png&#34; alt=&#34;&#34; width=&#34;320&#34; height=&#34;480&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;Usually repeating the web page access helps. Sometimes you have to try third time or wait few minutes.&lt;/p&gt;&#xA;&lt;p&gt;This has nothing to do with signal strenght - as you can see, there are 4 bars and 3G is on. I saw it happen on Edge as well. Reseting the phone sometimes helps, but it is hard to say whether because of the reset or time delay ..&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>DMCA for Canada ? Act now !</title>
-				<link>https://miroadamy.com/posts/2008-06-02-dmca-for-canada-act-now/</link>
-				<pubDate>Mon, 02 Jun 2008 23:33:21 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-06-02-dmca-for-canada-act-now/</guid>
-				<description>&lt;p&gt;I have got a letter from Online Rights Canada. I believe that what is about to hapen, may have pretty deep implications down the stream. Minimum thing I can do is try to help spreading the word.&lt;/p&gt;&#xA;&lt;p&gt;Here is the message:&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Dear Online Rights Canada Supporter,&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;We understand that the government will imminently introduce legislation to amend the Copyright Act - and it intends to push it through quickly. We at Online Rights Canada wanted to let you know what was ahead in the next few weeks, and what you can do to protect Canada from a new DMCA.&lt;/em&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Rogers, Bell and Net neutrality</title>
-				<link>https://miroadamy.com/posts/2008-05-03-rogers-bell-and-net-neutrality/</link>
-				<pubDate>Sat, 03 May 2008 20:09:14 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-05-03-rogers-bell-and-net-neutrality/</guid>
-				<description>&lt;p&gt;I do not blog on political issues, but this one is kind of different.&lt;/p&gt;&#xA;&lt;p&gt;Couple of weeks ago I received a letter from my ISP provider (&lt;a href=&#34;http://www.rogers.com/web/Rogers.portal?_nfpb=true&amp;amp;_pageLabel=INTER_LANDING&#34; target=&#34;_blank&#34;&gt;Rogers Cable&lt;/a&gt;), stating that days of unlimited downloads are over. More or less. Rogers capped the monthly transfer depending on your subscription plan, which in my case means maximum 95 GB / month for sum of upload and download.&lt;/p&gt;&#xA;&lt;p&gt;They started to monitor the traffic in December and will start charging for the transfer exceeding the cap in June.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Heroes Happened ... here</title>
-				<link>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</link>
-				<pubDate>Thu, 17 Apr 2008 09:50:06 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</guid>
-				<description>&lt;p&gt;Last week I attended one day event organized by Microsoft named &lt;a href=&#34;http://www.microsoft.com/heroeshappenhere/default.mspx&#34; target=&#34;_blank&#34;&gt;Heroes Happens Here&lt;/a&gt;. It is series of introduction targeting new products: Windows Server 2008 (not out yet) SQL Server 2008 (not out yet) and Visual Studio 2008 (out and well).&lt;/p&gt;&#xA;&lt;p&gt;I do not do much Microsoft development these days - my world is currently rather unevenly divided between Java (about 70 %), Web-ish technologies (XHTML, CSS, JavaScript, some Ruby) and OS-X (Objective C) which I am trying to squeeze in and get finally started. But Microsoft is such important platform that one must pay attention what is going on.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>On White Stuff and Other Disasters</title>
-				<link>https://miroadamy.com/posts/2008-03-13-on-white-stuff-and-other-disasters/</link>
-				<pubDate>Thu, 13 Mar 2008 21:29:13 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2008-03-13-on-white-stuff-and-other-disasters/</guid>
-				<description>&lt;p&gt;Guess what are three most useful tools without which no proper Ottawa household can exist ? Snow shovel, snow pusher and car window ice scratcher. If the number was 4, the next would be snowblower. Up to yesterday, our family was in safe position being equipped with several shovels, four or five scratchers and one pusher.&lt;/p&gt;&#xA;&lt;p&gt;Then disaster stroke: my son broke the pusher while moving away few cube meters of snow we removed from the roof. In case you do not understand - removing snow from roof is another favorite winter leisure time activity in Ottawa: almost everybody is doing it. Not that it would be so much fun, but because of the dreadful consequences - avoid it and you may end up like &lt;a href=&#34;http://www.canada.com/ottawacitizen/news/story.html?k=53521&amp;amp;id=fc227aa1-d404-4cb8-92ff-d50600fe48e9&#34; target=&#34;_blank&#34;&gt;this guy&lt;/a&gt;.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Great way how to deal with telemarketers</title>
-				<link>https://miroadamy.com/posts/2007-10-08-great-way-how-to-deal-with-telemarketers/</link>
-				<pubDate>Mon, 08 Oct 2007 22:39:03 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-10-08-great-way-how-to-deal-with-telemarketers/</guid>
-				<description>&lt;p&gt;and similar plague (for some reason they were pretty active last few days):&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=un_PjRXV5l8&#34; target=&#34;_blank&#34;&gt;http://www.youtube.com/watch?v=un_PjRXV5l8&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I wish I could pull similar stunt - but I am not really a good actor and my accent would make it hard to believe. But it is hilarious anyway (video is a recording of phone call and contains text transcription ...). Enjoy.&lt;/p&gt;&#xA;&lt;p&gt;Thanks to Peter M. for the link. I would link his blog or home page, if he had one :-).&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Game over, back to business</title>
-				<link>https://miroadamy.com/posts/2007-06-07-game-over-back-to-business/</link>
-				<pubDate>Thu, 07 Jun 2007 20:34:51 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-06-07-game-over-back-to-business/</guid>
-				<description>&lt;p&gt;The wild ride is over and the city gets back to normal. I wish we had won the &lt;a href=&#34;http://en.wikipedia.org/wiki/Stanley_Cup&#34; target=&#34;_blank&#34;&gt;Cup&lt;/a&gt;, but - Ducks were playing pretty good and found what worked on our team. Thanks, &lt;a href=&#34;http://www.nhl.com/nhl/app/?service=page&amp;amp;page=PlayerDetail&amp;amp;playerId=8460621&#34; target=&#34;_blank&#34;&gt;Alfie&lt;/a&gt; and the &lt;a href=&#34;http://www.nhl.com/nhl/app?service=page&amp;amp;page=PlayerSearchPage&amp;amp;team=OTT&#34; target=&#34;_blank&#34;&gt;Sens&lt;/a&gt; - for all the great moments. You were fantastic. There will be another season in few months and another chance to bring the cup home.&lt;/p&gt;&#xA;&lt;p&gt;On the positive side - it is good to have 2-3 more free evenings a week, now - when there is again nothing on the TV :-). Time  to start catching up with neglected podcasts, blogs and feeds.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Unify Tour 2007 and Open Source</title>
-				<link>https://miroadamy.com/posts/2007-04-19-unify-tour-2007-and-open-source/</link>
-				<pubDate>Thu, 19 Apr 2007 23:44:16 -0400</pubDate>
-				<guid>https://miroadamy.com/posts/2007-04-19-unify-tour-2007-and-open-source/</guid>
-				<description>&lt;p&gt;This week was full with attending the demos and workshops.  On Tuesday, I spent half day on the Microsoft &lt;a href=&#34;http://msdn.microsoft.com/canada/unify/&#34; target=&#34;_blank&#34;&gt;Unify Tour 2007&lt;/a&gt;. I planned to be there full day but an important business meeting made me change the plan. Fortunately, the sessions should be available recorded on the Web, so I will be able to check them later. The topic was bang-on - considering that we are in final phase of large project, using distributed network of SQL Server 2005 installations with replication and location was same as &lt;a href=&#34;http://maps.google.com/maps?f=q&amp;amp;hl=en&amp;amp;q=3090+Carling+Ave,+Ottawa&amp;amp;layer=&amp;amp;sll=45.437008,-75.723267&amp;amp;sspn=0.301133,0.6427&amp;amp;ie=UTF8&amp;amp;om=1&amp;amp;msid=113097201857276025606.000001120c4f0fc450fb4&amp;amp;msa=0&amp;amp;z=14&amp;amp;ll=45.359865,-75.803776&amp;amp;spn=0.037693,0.080338&amp;amp;t=h&#34; target=&#34;_blank&#34;&gt;usual&lt;/a&gt;.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Sales as Con Art - or welcome to Direct Energy flat rate plan</title>
-				<link>https://miroadamy.com/posts/2006-12-28-sales-as-con-art-or-welcome-to-direct-energy-flat-rate-plan/</link>
-				<pubDate>Thu, 28 Dec 2006 21:59:16 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-12-28-sales-as-con-art-or-welcome-to-direct-energy-flat-rate-plan/</guid>
-				<description>&lt;p&gt;During over 8 years living on this continent I&#39;ve developed reasonably thick skin in dealing with business calls, unsolicited mailings and other annoyances of aggressive selling. I was pretty sure nothing can make me really upset. Up until yesterday. Thanks to amazing capability of the &lt;a href=&#34;http://www.directenergy.com/EN/Pages/default.aspx&#34;&gt;Direct Energy&lt;/a&gt; sales force who does not take No for an answer.&lt;/p&gt;&#xA;&lt;p&gt;But let&#39;s start from the beginning. About 3 weeks ago I started to get frequent calls from Direct Energy about their flat rate plan. After avoiding them few times, I realized that they will not give up and answered the call. I have got myself into a discussion with guy who wanted me to lock up my price per kWh for next 5 years. Sort of protection plan. The idea is that you pay same amount - starting with higher than market price - and as the price goes up, you may end up to be better off over time.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Ready for a new day (continued)</title>
-				<link>https://miroadamy.com/posts/2006-12-13-ready-for-a-new-day-continued/</link>
-				<pubDate>Wed, 13 Dec 2006 22:05:28 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-12-13-ready-for-a-new-day-continued/</guid>
-				<description>&lt;p&gt;As I mentioned yesterday, my expectations regarding Office 2007 were fairly low. I am not a big fan of office application suites and for most of my editing I am using either on-line tools (like Google docs or Writeboard) or Open Office. True, neither of them has the smoothness and fine polish of Microsoft Office 2003, neither has all of it&#39;s features, but - let&#39;s face it - I barely use maybe 10-20% of Word or Excel capabilities anyway. For which reason, I am not willing to pay premium just for improved user comfort.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Ready for a new day - or Vista-Office-Exchange launch</title>
-				<link>https://miroadamy.com/posts/2006-12-12-ready-for-a-new-day-or-vista-office-exchange-launch/</link>
-				<pubDate>Tue, 12 Dec 2006 23:56:18 -0500</pubDate>
-				<guid>https://miroadamy.com/posts/2006-12-12-ready-for-a-new-day-or-vista-office-exchange-launch/</guid>
-				<description>&lt;p&gt;Today was a big day in Ottawa Microsoft community. The &lt;a href=&#34;http://www.ottawacongresscentre.com/&#34;&gt;Congress Centre&lt;/a&gt; was hosting large event - simultaneous launch of Windows Vista, Office 2007 and Exchange server 2007. Because I have &lt;em&gt;almost&lt;/em&gt; registered about two months ago, I attended the event. The &#34;almost&#34; means that I tried to register right after receiving MSDN Flash email, but many people must have been faster - I was put on waiting list on two of the 3 tracks (Developers and IT Pros) and before I could even try to register for the third track (Business), everything crashed, Web site hang and I have never heard back from them, nor received any email. Until yesterday, when an automated voice reminder service managed to catch me by phone in underground garage under &lt;a href=&#34;http://www.brookstreethotel.com/&#34;&gt;Brookstreet Hotel&lt;/a&gt;, and delivered first part of reminder - telling me that I was registered to attend something ... Too bad it did not tell me to what, when and where did I registered, before it broke off and I lost the signal. But I deducted that the only reason to call me would be a reminder of the Launch and after logging on to My Events, voila - the ticket was there. So I went. It was a tough decision, whether to sacrifice full work day and possibly evening ping-pong at Igor&#39;s - but - what the heck. Microsoft does not produce new releases that often so going away once in 5 years should be OK. And now I am glad I did go.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Canada on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/canada/</link>
+    <description>Recent content in Canada on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Sun, 26 May 2019 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/canada/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Visit in Canada</title>
+      <link>https://miroadamy.com/posts/2019-05-25-ottawa/</link>
+      <pubDate>Sun, 26 May 2019 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-05-25-ottawa/</guid>
+      <description>&lt;p&gt;I did quick 2 week visit to Canada.&lt;/p&gt;&#xA;&lt;p&gt;I spent some time with our son and daughter-in-law, visited many dear friends and places in the city and nature, worked for couple of days in the office and met new colleagues and even met current my boss for the first time in 3D. I must say, he is taller than in Zoom :-D&lt;/p&gt;&#xA;&lt;p&gt;I also visited our ex-cat with her new human servants and as expected, Lucy duly ignored me. Oh, well - cats.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Christmas in Canada</title>
+      <link>https://miroadamy.com/posts/2017-01-26-canada/</link>
+      <pubDate>Fri, 26 Jan 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2017-01-26-canada/</guid>
+      <description>&lt;p&gt;We have visited Canada for the winter season.&lt;/p&gt;&#xA;&lt;p&gt;It was very nice to see old friends and family.&lt;/p&gt;&#xA;&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiro.adamy%2Fposts%2F10213581839314317%3A0&amp;width=500&#34; width=&#34;500&#34; height=&#34;594&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;&#xA;&lt;iframe src=&#34;https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fmiro.adamy%2Fposts%2F10213556715566239&amp;width=500&#34; width=&#34;500&#34; height=&#34;650&#34; style=&#34;border:none;overflow:hidden&#34; scrolling=&#34;no&#34; frameborder=&#34;0&#34; allowTransparency=&#34;true&#34; allow=&#34;encrypted-media&#34;&gt;&lt;/iframe&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Rogers, iPhone and the dreaded kCFErrorDomainCFNetwork Error 302</title>
+      <link>https://miroadamy.com/posts/2008-08-23-rogers-iphone-and-the-dreaded-kcferrordomaincfnetwork-error-302/</link>
+      <pubDate>Sat, 23 Aug 2008 22:57:15 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-08-23-rogers-iphone-and-the-dreaded-kcferrordomaincfnetwork-error-302/</guid>
+      <description>&lt;p&gt;Many people recently (including myself) had experiences difficulties with Web access on the iPhone. Quite often the following error message pops up:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img class=&#34;alignnone size-full wp-image-519&#34; src=&#34;https://miroadamy.com/images/img_00022.png&#34; alt=&#34;&#34; width=&#34;320&#34; height=&#34;480&#34; /&gt;&lt;/p&gt;&#xA;&lt;p&gt;Usually repeating the web page access helps. Sometimes you have to try third time or wait few minutes.&lt;/p&gt;&#xA;&lt;p&gt;This has nothing to do with signal strenght - as you can see, there are 4 bars and 3G is on. I saw it happen on Edge as well. Reseting the phone sometimes helps, but it is hard to say whether because of the reset or time delay ..&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>DMCA for Canada ? Act now !</title>
+      <link>https://miroadamy.com/posts/2008-06-02-dmca-for-canada-act-now/</link>
+      <pubDate>Mon, 02 Jun 2008 23:33:21 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-06-02-dmca-for-canada-act-now/</guid>
+      <description>&lt;p&gt;I have got a letter from Online Rights Canada. I believe that what is about to hapen, may have pretty deep implications down the stream. Minimum thing I can do is try to help spreading the word.&lt;/p&gt;&#xA;&lt;p&gt;Here is the message:&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;Dear Online Rights Canada Supporter,&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;em&gt;We understand that the government will imminently introduce legislation to amend the Copyright Act - and it intends to push it through quickly. We at Online Rights Canada wanted to let you know what was ahead in the next few weeks, and what you can do to protect Canada from a new DMCA.&lt;/em&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Rogers, Bell and Net neutrality</title>
+      <link>https://miroadamy.com/posts/2008-05-03-rogers-bell-and-net-neutrality/</link>
+      <pubDate>Sat, 03 May 2008 20:09:14 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-05-03-rogers-bell-and-net-neutrality/</guid>
+      <description>&lt;p&gt;I do not blog on political issues, but this one is kind of different.&lt;/p&gt;&#xA;&lt;p&gt;Couple of weeks ago I received a letter from my ISP provider (&lt;a href=&#34;http://www.rogers.com/web/Rogers.portal?_nfpb=true&amp;amp;_pageLabel=INTER_LANDING&#34; target=&#34;_blank&#34;&gt;Rogers Cable&lt;/a&gt;), stating that days of unlimited downloads are over. More or less. Rogers capped the monthly transfer depending on your subscription plan, which in my case means maximum 95 GB / month for sum of upload and download.&lt;/p&gt;&#xA;&lt;p&gt;They started to monitor the traffic in December and will start charging for the transfer exceeding the cap in June.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Heroes Happened ... here</title>
+      <link>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</link>
+      <pubDate>Thu, 17 Apr 2008 09:50:06 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</guid>
+      <description>&lt;p&gt;Last week I attended one day event organized by Microsoft named &lt;a href=&#34;http://www.microsoft.com/heroeshappenhere/default.mspx&#34; target=&#34;_blank&#34;&gt;Heroes Happens Here&lt;/a&gt;. It is series of introduction targeting new products: Windows Server 2008 (not out yet) SQL Server 2008 (not out yet) and Visual Studio 2008 (out and well).&lt;/p&gt;&#xA;&lt;p&gt;I do not do much Microsoft development these days - my world is currently rather unevenly divided between Java (about 70 %), Web-ish technologies (XHTML, CSS, JavaScript, some Ruby) and OS-X (Objective C) which I am trying to squeeze in and get finally started. But Microsoft is such important platform that one must pay attention what is going on.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>On White Stuff and Other Disasters</title>
+      <link>https://miroadamy.com/posts/2008-03-13-on-white-stuff-and-other-disasters/</link>
+      <pubDate>Thu, 13 Mar 2008 21:29:13 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2008-03-13-on-white-stuff-and-other-disasters/</guid>
+      <description>&lt;p&gt;Guess what are three most useful tools without which no proper Ottawa household can exist ? Snow shovel, snow pusher and car window ice scratcher. If the number was 4, the next would be snowblower. Up to yesterday, our family was in safe position being equipped with several shovels, four or five scratchers and one pusher.&lt;/p&gt;&#xA;&lt;p&gt;Then disaster stroke: my son broke the pusher while moving away few cube meters of snow we removed from the roof. In case you do not understand - removing snow from roof is another favorite winter leisure time activity in Ottawa: almost everybody is doing it. Not that it would be so much fun, but because of the dreadful consequences - avoid it and you may end up like &lt;a href=&#34;http://www.canada.com/ottawacitizen/news/story.html?k=53521&amp;amp;id=fc227aa1-d404-4cb8-92ff-d50600fe48e9&#34; target=&#34;_blank&#34;&gt;this guy&lt;/a&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Great way how to deal with telemarketers</title>
+      <link>https://miroadamy.com/posts/2007-10-08-great-way-how-to-deal-with-telemarketers/</link>
+      <pubDate>Mon, 08 Oct 2007 22:39:03 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-10-08-great-way-how-to-deal-with-telemarketers/</guid>
+      <description>&lt;p&gt;and similar plague (for some reason they were pretty active last few days):&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.youtube.com/watch?v=un_PjRXV5l8&#34; target=&#34;_blank&#34;&gt;http://www.youtube.com/watch?v=un_PjRXV5l8&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;I wish I could pull similar stunt - but I am not really a good actor and my accent would make it hard to believe. But it is hilarious anyway (video is a recording of phone call and contains text transcription ...). Enjoy.&lt;/p&gt;&#xA;&lt;p&gt;Thanks to Peter M. for the link. I would link his blog or home page, if he had one :-).&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Game over, back to business</title>
+      <link>https://miroadamy.com/posts/2007-06-07-game-over-back-to-business/</link>
+      <pubDate>Thu, 07 Jun 2007 20:34:51 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-07-game-over-back-to-business/</guid>
+      <description>&lt;p&gt;The wild ride is over and the city gets back to normal. I wish we had won the &lt;a href=&#34;http://en.wikipedia.org/wiki/Stanley_Cup&#34; target=&#34;_blank&#34;&gt;Cup&lt;/a&gt;, but - Ducks were playing pretty good and found what worked on our team. Thanks, &lt;a href=&#34;http://www.nhl.com/nhl/app/?service=page&amp;amp;page=PlayerDetail&amp;amp;playerId=8460621&#34; target=&#34;_blank&#34;&gt;Alfie&lt;/a&gt; and the &lt;a href=&#34;http://www.nhl.com/nhl/app?service=page&amp;amp;page=PlayerSearchPage&amp;amp;team=OTT&#34; target=&#34;_blank&#34;&gt;Sens&lt;/a&gt; - for all the great moments. You were fantastic. There will be another season in few months and another chance to bring the cup home.&lt;/p&gt;&#xA;&lt;p&gt;On the positive side - it is good to have 2-3 more free evenings a week, now - when there is again nothing on the TV :-). Time  to start catching up with neglected podcasts, blogs and feeds.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Unify Tour 2007 and Open Source</title>
+      <link>https://miroadamy.com/posts/2007-04-19-unify-tour-2007-and-open-source/</link>
+      <pubDate>Thu, 19 Apr 2007 23:44:16 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-19-unify-tour-2007-and-open-source/</guid>
+      <description>&lt;p&gt;This week was full with attending the demos and workshops.  On Tuesday, I spent half day on the Microsoft &lt;a href=&#34;http://msdn.microsoft.com/canada/unify/&#34; target=&#34;_blank&#34;&gt;Unify Tour 2007&lt;/a&gt;. I planned to be there full day but an important business meeting made me change the plan. Fortunately, the sessions should be available recorded on the Web, so I will be able to check them later. The topic was bang-on - considering that we are in final phase of large project, using distributed network of SQL Server 2005 installations with replication and location was same as &lt;a href=&#34;http://maps.google.com/maps?f=q&amp;amp;hl=en&amp;amp;q=3090+Carling+Ave,+Ottawa&amp;amp;layer=&amp;amp;sll=45.437008,-75.723267&amp;amp;sspn=0.301133,0.6427&amp;amp;ie=UTF8&amp;amp;om=1&amp;amp;msid=113097201857276025606.000001120c4f0fc450fb4&amp;amp;msa=0&amp;amp;z=14&amp;amp;ll=45.359865,-75.803776&amp;amp;spn=0.037693,0.080338&amp;amp;t=h&#34; target=&#34;_blank&#34;&gt;usual&lt;/a&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Sales as Con Art - or welcome to Direct Energy flat rate plan</title>
+      <link>https://miroadamy.com/posts/2006-12-28-sales-as-con-art-or-welcome-to-direct-energy-flat-rate-plan/</link>
+      <pubDate>Thu, 28 Dec 2006 21:59:16 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-28-sales-as-con-art-or-welcome-to-direct-energy-flat-rate-plan/</guid>
+      <description>&lt;p&gt;During over 8 years living on this continent I&#39;ve developed reasonably thick skin in dealing with business calls, unsolicited mailings and other annoyances of aggressive selling. I was pretty sure nothing can make me really upset. Up until yesterday. Thanks to amazing capability of the &lt;a href=&#34;http://www.directenergy.com/EN/Pages/default.aspx&#34;&gt;Direct Energy&lt;/a&gt; sales force who does not take No for an answer.&lt;/p&gt;&#xA;&lt;p&gt;But let&#39;s start from the beginning. About 3 weeks ago I started to get frequent calls from Direct Energy about their flat rate plan. After avoiding them few times, I realized that they will not give up and answered the call. I have got myself into a discussion with guy who wanted me to lock up my price per kWh for next 5 years. Sort of protection plan. The idea is that you pay same amount - starting with higher than market price - and as the price goes up, you may end up to be better off over time.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Ready for a new day (continued)</title>
+      <link>https://miroadamy.com/posts/2006-12-13-ready-for-a-new-day-continued/</link>
+      <pubDate>Wed, 13 Dec 2006 22:05:28 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-13-ready-for-a-new-day-continued/</guid>
+      <description>&lt;p&gt;As I mentioned yesterday, my expectations regarding Office 2007 were fairly low. I am not a big fan of office application suites and for most of my editing I am using either on-line tools (like Google docs or Writeboard) or Open Office. True, neither of them has the smoothness and fine polish of Microsoft Office 2003, neither has all of it&#39;s features, but - let&#39;s face it - I barely use maybe 10-20% of Word or Excel capabilities anyway. For which reason, I am not willing to pay premium just for improved user comfort.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Ready for a new day - or Vista-Office-Exchange launch</title>
+      <link>https://miroadamy.com/posts/2006-12-12-ready-for-a-new-day-or-vista-office-exchange-launch/</link>
+      <pubDate>Tue, 12 Dec 2006 23:56:18 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-12-ready-for-a-new-day-or-vista-office-exchange-launch/</guid>
+      <description>&lt;p&gt;Today was a big day in Ottawa Microsoft community. The &lt;a href=&#34;http://www.ottawacongresscentre.com/&#34;&gt;Congress Centre&lt;/a&gt; was hosting large event - simultaneous launch of Windows Vista, Office 2007 and Exchange server 2007. Because I have &lt;em&gt;almost&lt;/em&gt; registered about two months ago, I attended the event. The &#34;almost&#34; means that I tried to register right after receiving MSDN Flash email, but many people must have been faster - I was put on waiting list on two of the 3 tracks (Developers and IT Pros) and before I could even try to register for the third track (Business), everything crashed, Web site hang and I have never heard back from them, nor received any email. Until yesterday, when an automated voice reminder service managed to catch me by phone in underground garage under &lt;a href=&#34;http://www.brookstreethotel.com/&#34;&gt;Brookstreet Hotel&lt;/a&gt;, and delivered first part of reminder - telling me that I was registered to attend something ... Too bad it did not tell me to what, when and where did I registered, before it broke off and I lost the signal. But I deducted that the only reason to call me would be a reminder of the Launch and after logging on to My Events, voila - the ticket was there. So I went. It was a tough decision, whether to sacrifice full work day and possibly evening ping-pong at Igor&#39;s - but - what the heck. Microsoft does not produce new releases that often so going away once in 5 years should be OK. And now I am glad I did go.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
 </rss>

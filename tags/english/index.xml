@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>English on Miro&#39;s World</title>
-		<link>https://miroadamy.com/tags/english/</link>
-		<description>Recent content in English on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Tue, 06 Mar 2018 11:22:48 +0800</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/tags/english/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Europanto</title>
-				<link>https://miroadamy.com/posts/2018-03-05-poly/</link>
-				<pubDate>Tue, 06 Mar 2018 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2018-03-05-poly/</guid>
-				<description>&lt;p&gt;This is how my mind often works, triggered by using 4 languages every day and 5-6 every week&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://miroadamy.com/images/poly.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>English on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/english/</link>
+    <description>Recent content in English on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Tue, 06 Mar 2018 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/english/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Europanto</title>
+      <link>https://miroadamy.com/posts/2018-03-05-poly/</link>
+      <pubDate>Tue, 06 Mar 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-03-05-poly/</guid>
+      <description>&lt;p&gt;This is how my mind often works, triggered by using 4 languages every day and 5-6 every week&lt;/p&gt;&#xA;&lt;p&gt;&lt;figure&gt;&lt;img&#xA;    class=&#34;my-0 rounded-md&#34;&#xA;    loading=&#34;lazy&#34;&#xA;    decoding=&#34;async&#34;&#xA;    fetchpriority=&#34;low&#34;&#xA;    alt=&#34;&#34;&#xA;    src=&#34;https://miroadamy.com/images/poly.jpg&#34;&#xA;    &gt;&lt;/figure&gt;&#xA;&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
 </rss>

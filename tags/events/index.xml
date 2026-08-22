@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Events on Miro&#39;s World</title>
-		<link>https://miroadamy.com/tags/events/</link>
-		<description>Recent content in Events on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Thu, 06 Sep 2018 11:22:48 +0800</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/tags/events/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Simonyi Karoly in Valencia</title>
-				<link>https://miroadamy.com/posts/2018-09-06-simonyi/</link>
-				<pubDate>Thu, 06 Sep 2018 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2018-09-06-simonyi/</guid>
-				<description>&lt;p&gt;One of the Microsoft old-timer bilionaries, Charles Simonyi, Hungarian born software engineer, famous for his &lt;code&gt;Hungarian naming notation&lt;/code&gt; - who would not remember &lt;code&gt;lpstrzDescription&lt;/code&gt; or &lt;code&gt;wFlag&lt;/code&gt; - is visiting Valencia on his yacht Skat.&lt;/p&gt;&#xA;&lt;p&gt;Those who do not write code (or better said - did not write code 20 years ago) may be familiar with his other contribution - Microsoft Word, something I feel much less positive about than &lt;code&gt;lpstrzDescription&lt;/code&gt;.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Events on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/events/</link>
+    <description>Recent content in Events on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Thu, 06 Sep 2018 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/events/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Simonyi Karoly in Valencia</title>
+      <link>https://miroadamy.com/posts/2018-09-06-simonyi/</link>
+      <pubDate>Thu, 06 Sep 2018 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2018-09-06-simonyi/</guid>
+      <description>&lt;p&gt;One of the Microsoft old-timer bilionaries, Charles Simonyi, Hungarian born software engineer, famous for his &lt;code&gt;Hungarian naming notation&lt;/code&gt; - who would not remember &lt;code&gt;lpstrzDescription&lt;/code&gt; or &lt;code&gt;wFlag&lt;/code&gt; - is visiting Valencia on his yacht Skat.&lt;/p&gt;&#xA;&lt;p&gt;Those who do not write code (or better said - did not write code 20 years ago) may be familiar with his other contribution - Microsoft Word, something I feel much less positive about than &lt;code&gt;lpstrzDescription&lt;/code&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
 </rss>

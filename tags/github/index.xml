@@ -1,45 +1,53 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Github on Miro&#39;s World</title>
-		<link>https://miroadamy.com/tags/github/</link>
-		<description>Recent content in Github on Miro&#39;s World</description>
-		<generator>Hugo</generator>
-		<language>en</language>
-		
-		
-		
-		
-			<lastBuildDate>Wed, 17 Feb 2021 13:00:00 +0800</lastBuildDate>
-		
-			<atom:link href="https://miroadamy.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>How to mirror Github and Bitbucket repositories</title>
-				<link>https://miroadamy.com/posts/2021-02-17-mirroring-repos/</link>
-				<pubDate>Wed, 17 Feb 2021 13:00:00 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2021-02-17-mirroring-repos/</guid>
-				<description>&lt;h1 id=&#34;mirroring-large-number-of-github-or-bitbucket-repositories&#34;&gt;Mirroring large number of GitHub or Bitbucket repositories&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Use case&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;p&gt;I want to create local clone of a large number of repositories from an organization in GitHub / Bitbucket.&lt;/p&gt;&#xA;&lt;h2 id=&#34;assumptions&#34;&gt;Assumptions&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;user has SSH key registered with the GH / BB - can clone using ssh protocol&lt;/li&gt;&#xA;&lt;li&gt;user has successfully cloned at least one repo from command line before (the /etc/hosts contains host entries for BB and GH)&lt;/li&gt;&#xA;&lt;li&gt;user has modern version of Python 3 installed (3.6 or better)&lt;/li&gt;&#xA;&lt;li&gt;user has local installation of a reasonably modern Git&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;steps&#34;&gt;Steps&lt;/h2&gt;&#xA;&lt;p&gt;First I use the &lt;code&gt;./bb-repo-links.sh&lt;/code&gt; and &lt;code&gt;./gh-repo-links.sh&lt;/code&gt; to generate list of repositories.&#xA;See these blog articles: &lt;a href=&#34;https://miroadamy.com/posts/2021-02-15-bitbucket-list-repos/&#34;&gt;How to list repositories in Bitbucket&lt;/a&gt; and &lt;a href=&#34;https://miroadamy.com/posts/2021-02-16-github-list-repos/&#34;&gt;How to list repositories in github&lt;/a&gt;&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>How to list Github repositories and users</title>
-				<link>https://miroadamy.com/posts/2021-02-16-github-list-repos/</link>
-				<pubDate>Tue, 16 Feb 2021 13:00:00 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2021-02-16-github-list-repos/</guid>
-				<description>&lt;h1 id=&#34;how-to-list-repositories-in-github&#34;&gt;How to list repositories in GitHub&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Use Case&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;p&gt;I want to maintain repositories in an organization in GitHub.  To make sure I do not miss newly added ones,&#xA;I want to use API access to retrieve the list of repositories in the organization.&lt;/p&gt;&#xA;&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;&#xA;&lt;p&gt;GitHub requires a token to access the API.  This token is stored in an environment variable&#xA;&lt;code&gt;github_token&lt;/code&gt; and can be generated in the user profile section - settings - developer settings.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Building Hugo as well on GitLab pages</title>
-				<link>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</link>
-				<pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</guid>
-				<description>&lt;h1 id=&#34;parallel-building-challenges&#34;&gt;Parallel building challenges&lt;/h1&gt;&#xA;&lt;p&gt;Unlike Github, Gitlab considers Hugo blogs first class citizens and does not impose any restrictions on repo naming.&lt;/p&gt;&#xA;&lt;p&gt;I had 3 challenges to overcome related to co-existence of GH and GL versions:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;I need to use same repo for both GH and GL&lt;/li&gt;&#xA;&lt;li&gt;the submodule link for &lt;code&gt;public&lt;/code&gt; does not work on GL&lt;/li&gt;&#xA;&lt;li&gt;the site root is different - I have no custom domain forward for GitLab&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;using-same-repo&#34;&gt;Using same repo&lt;/h2&gt;&#xA;&lt;p&gt;To separate the GH and GL, I have added 2 remotes to repo and special branch &lt;code&gt;gitlab-pages&lt;/code&gt;.&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>GitHub identity mixup</title>
-				<link>https://miroadamy.com/posts/2012-04-15-github/</link>
-				<pubDate>Sun, 15 Apr 2012 11:22:48 +0800</pubDate>
-				<guid>https://miroadamy.com/posts/2012-04-15-github/</guid>
-				<description>&lt;p&gt;After I created the ThinkWrap GitHub account and uploaded the public key, this key got somehow bound to GitHub identity &amp;lsquo;madamy&amp;rsquo;&lt;/p&gt;&#xA;&lt;p&gt;I had to add user madamy to my public GitHub repo - where I keep the dot-files - &lt;a href=&#34;https://github.com/radegast/dotvim&#34;&gt;https://github.com/radegast/dotvim&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This may be an issue for people that have their own private accounts - the key management is the key.&lt;/p&gt;&#xA;&lt;p&gt;This article is useful:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://sealedabstract.com/code/github-ssh-with-multiple-identities-the-slightly-more-definitive-guide/&#34;&gt;http://sealedabstract.com/code/github-ssh-with-multiple-identities-the-slightly-more-definitive-guide/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://net.tutsplus.com/tutorials/tools-and-tips/how-to-work-with-github-and-multiple-accounts/&#34;&gt;http://net.tutsplus.com/tutorials/tools-and-tips/how-to-work-with-github-and-multiple-accounts/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;alternative&#34;&gt;Alternative&lt;/h2&gt;&#xA;&lt;p&gt;Use https for forking , instead read/write ssh. No keys involved there&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Github on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/github/</link>
+    <description>Recent content in Github on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Wed, 17 Feb 2021 13:00:00 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to mirror Github and Bitbucket repositories</title>
+      <link>https://miroadamy.com/posts/2021-02-17-mirroring-repos/</link>
+      <pubDate>Wed, 17 Feb 2021 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2021-02-17-mirroring-repos/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;Mirroring large number of GitHub or Bitbucket repositories&#xA;    &lt;div id=&#34;mirroring-large-number-of-github-or-bitbucket-repositories&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#mirroring-large-number-of-github-or-bitbucket-repositories&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Use case&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;p&gt;I want to create local clone of a large number of repositories from an organization in GitHub / Bitbucket.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Assumptions&#xA;    &lt;div id=&#34;assumptions&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#assumptions&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;user has SSH key registered with the GH / BB - can clone using ssh protocol&lt;/li&gt;&#xA;&lt;li&gt;user has successfully cloned at least one repo from command line before (the /etc/hosts contains host entries for BB and GH)&lt;/li&gt;&#xA;&lt;li&gt;user has modern version of Python 3 installed (3.6 or better)&lt;/li&gt;&#xA;&lt;li&gt;user has local installation of a reasonably modern Git&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Steps&#xA;    &lt;div id=&#34;steps&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#steps&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;First I use the &lt;code&gt;./bb-repo-links.sh&lt;/code&gt; and &lt;code&gt;./gh-repo-links.sh&lt;/code&gt; to generate list of repositories.&#xA;See these blog articles: &lt;a href=&#34;https://miroadamy.com/posts/2021-02-15-bitbucket-list-repos/&#34; &gt;How to list repositories in Bitbucket&lt;/a&gt; and &lt;a href=&#34;https://miroadamy.com/posts/2021-02-16-github-list-repos/&#34; &gt;How to list repositories in github&lt;/a&gt;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How to list Github repositories and users</title>
+      <link>https://miroadamy.com/posts/2021-02-16-github-list-repos/</link>
+      <pubDate>Tue, 16 Feb 2021 13:00:00 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2021-02-16-github-list-repos/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;How to list repositories in GitHub&#xA;    &lt;div id=&#34;how-to-list-repositories-in-github&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#how-to-list-repositories-in-github&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;strong&gt;Use Case&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;p&gt;I want to maintain repositories in an organization in GitHub.  To make sure I do not miss newly added ones,&#xA;I want to use API access to retrieve the list of repositories in the organization.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Setup&#xA;    &lt;div id=&#34;setup&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#setup&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;GitHub requires a token to access the API.  This token is stored in an environment variable&#xA;&lt;code&gt;github_token&lt;/code&gt; and can be generated in the user profile section - settings - developer settings.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Building Hugo as well on GitLab pages</title>
+      <link>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</link>
+      <pubDate>Sat, 23 Nov 2019 22:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2019-11-23-gitlab-hugo/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;Parallel building challenges&#xA;    &lt;div id=&#34;parallel-building-challenges&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#parallel-building-challenges&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;Unlike Github, Gitlab considers Hugo blogs first class citizens and does not impose any restrictions on repo naming.&lt;/p&gt;&#xA;&lt;p&gt;I had 3 challenges to overcome related to co-existence of GH and GL versions:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;I need to use same repo for both GH and GL&lt;/li&gt;&#xA;&lt;li&gt;the submodule link for &lt;code&gt;public&lt;/code&gt; does not work on GL&lt;/li&gt;&#xA;&lt;li&gt;the site root is different - I have no custom domain forward for GitLab&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Using same repo&#xA;    &lt;div id=&#34;using-same-repo&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#using-same-repo&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;To separate the GH and GL, I have added 2 remotes to repo and special branch &lt;code&gt;gitlab-pages&lt;/code&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>GitHub identity mixup</title>
+      <link>https://miroadamy.com/posts/2012-04-15-github/</link>
+      <pubDate>Sun, 15 Apr 2012 11:22:48 +0800</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2012-04-15-github/</guid>
+      <description>&lt;p&gt;After I created the ThinkWrap GitHub account and uploaded the public key, this key got somehow bound to GitHub identity &amp;lsquo;madamy&amp;rsquo;&lt;/p&gt;&#xA;&lt;p&gt;I had to add user madamy to my public GitHub repo - where I keep the dot-files - &lt;a href=&#34;https://github.com/radegast/dotvim&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://github.com/radegast/dotvim&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;This may be an issue for people that have their own private accounts - the key management is the key.&lt;/p&gt;&#xA;&lt;p&gt;This article is useful:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://sealedabstract.com/code/github-ssh-with-multiple-identities-the-slightly-more-definitive-guide/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;http://sealedabstract.com/code/github-ssh-with-multiple-identities-the-slightly-more-definitive-guide/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://net.tutsplus.com/tutorials/tools-and-tips/how-to-work-with-github-and-multiple-accounts/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;http://net.tutsplus.com/tutorials/tools-and-tips/how-to-work-with-github-and-multiple-accounts/&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Alternative&#xA;    &lt;div id=&#34;alternative&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#alternative&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;Use https for forking , instead read/write ssh. No keys involved there&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
 </rss>
