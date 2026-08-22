@@ -392,6 +392,24 @@
       
   
     <a
+      href="/notes/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Notes"
+      title="Notes">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Notes
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
       href="/tags/"
       
       class="flex items-center bf-icon-color-hover"
@@ -419,6 +437,24 @@
       
         <span class="text-sm font-medium break-normal">
           Categories
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/now/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Now"
+      title="Now">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Now
         </span>
       
     </a>
@@ -607,6 +643,25 @@
     <div class="px-2">
       <div class="flex items-center gap-4">
         <a
+          href="/notes/"
+          aria-label="Notes"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Notes" class="text-2xl font-bold tracking-tight">
+            Notes
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
           href="/tags/"
           aria-label="Tags"
           
@@ -633,6 +688,25 @@
           
           <span title="" class="text-2xl font-bold tracking-tight">
             Categories
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/now/"
+          aria-label="Now"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Now" class="text-2xl font-bold tracking-tight">
+            Now
           </span>
         </a>
         
@@ -857,6 +931,204 @@
 
 
 <section class="space-y-10 w-full">
+  
+    
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="article-link--simple group flex flex-col md:flex-row relative">
+  
+  <div class=" mt-3 md:mt-0">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
+          href="/posts/2017-05-15-sensitive-git/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Storing sensitive information in Git
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2017-05-17T11:22:48&#43;08:00">May 17, 2017</time><span class="px-2 text-primary-500">&middot;</span><span>1017 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/devops/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    DevOps
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/git/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Git
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+        The purpose of this is to evaluate options and suggest possible approaches for handling the sensitive information in Git repositories such as database credentials, API credentials, passwords, keys, certificates etc. Joel asked this question a few weeks ago - this is part of Milos&rsquo;s security awareness program.
+The issue # Git repos store in cleartext all credentials, that may also be including PROD credentials.
+
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
   
     
 
@@ -2845,247 +3117,6 @@ The code # #!/usr/bin/env ruby require &#39;rubygems&#39; gem &#39;term-ansicolo
         Git command git shortlog is very handy to see what is team activity.
 Show committer activity - whole project # (output shortened to first 20 lines)
 git shortlog -sn | head -20 2991	Paul King 1757	Cedric Champeau 1615	Jochen Theodorou 1031	James Strachan 749	Guillaume Laforge 312	Roshan Dawrani 306	Jason Dillon 301	Danno Ferrin 284	Alex Tkachman 273	PascalSchumacher 230	John Wilson 217	Pascal Schumacher 204	pascalschumacher 160	Thibault Kruse 158	Jeremy Rayner 134	Russel Winder 123	Cédric Champeau 122	Hamlet D&#39;Arcy 116	Dierk Koenig 104	Pilho Kim variant (without n) has different ordering:
-
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-  
-    
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article class="article-link--simple group flex flex-col md:flex-row relative">
-  
-  <div class=" mt-3 md:mt-0">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
-          href="/posts/2016-03-20-gitinspector/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          Git project statistic tool
-          
-        </h2>
-      </a>
-      
-      
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2016-03-20T12:57:35-05:00">March 20, 2016</time><span class="px-2 text-primary-500">&middot;</span><span>756 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/categories/devops/">
-                  
-                  <span class="flex cursor-pointer">
-  
-  
-  
-    
-    
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    DevOps
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/categories/technology/">
-                  
-                  <span class="flex cursor-pointer">
-  
-  
-  
-    
-    
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Technology
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/osx/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Osx
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/git/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Git
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        Git project statistic tool # Python based, requires Python 2.6+
-Works OOTB on Mac
-Installation # Download TAR from Github unzipped to /opt ➜ ll /opt/gitinspector-0.3.2 total 52K -rw-r--r-- 1 miro 999 Jul 29 2013 DESCRIPTION.txt -rw-r--r-- 1 miro 32K Jun 14 2013 LICENSE.txt -rw-r--r-- 1 miro 78 Jul 2 2013 MANIFEST.in -rw-r--r-- 1 miro 681 Jan 13 2014 README.txt drwxr-xr-x 45 miro 1.5K Mar 20 2015 gitinspector -rw-r--r-- 1 miro 1.9K Jan 14 2014 setup.py -rw-r--r-- 1 miro 110 Jul 27 2013 stdeb.cfg create symlink from ~/bin (or from whatever directory on $PATH) ln -s /opt/gitinspector-0.3.2/gitinspector/gitinspector.py ~/bin/gitinspector.py ➜ ~ ll ~/bin | grep gitin lrwxr-xr-x 1 miro 52 Mar 20 16:06 gitinspector.py -&gt; /opt/gitinspector-0.3.2/gitinspector/gitinspector.py Example # Look at scala sources - git@github.com:scala/scala.git
 
       </div>
     

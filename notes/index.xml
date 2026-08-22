@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Miro&#39;s World</title>
+    <link>https://miroadamy.com/notes/</link>
+    <description>Recent content in Notes on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Sat, 22 Aug 2026 11:20:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>https://miroadamy.com/notes/2026-08-22-notes-stream-exists/</link>
+      <pubDate>Sat, 22 Aug 2026 11:20:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/notes/2026-08-22-notes-stream-exists/</guid>
+      <description>&lt;p&gt;This blog now has a notes stream — short things that don&amp;rsquo;t warrant a full&#xA;post. It has its own &lt;a href=&#34;https://miroadamy.com/notes/index.xml&#34; &gt;RSS feed&lt;/a&gt;. This is the first one,&#xA;mostly to prove the machinery works.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

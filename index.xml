@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Sat, 22 Aug 2026 09:24:08 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Aug 2026 16:39:14 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Now</title>
+      <link>https://miroadamy.com/now/</link>
+      <pubDate>Sat, 22 Aug 2026 11:15:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/now/</guid>
+      <description>&lt;h1 class=&#34;relative group&#34;&gt;What I&amp;rsquo;m doing now&#xA;    &lt;div id=&#34;what-im-doing-now&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-im-doing-now&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h1&gt;&#xA;&lt;p&gt;&lt;em&gt;Updated 2026-08-22, from Bratislava, Slovakia.&lt;/em&gt;&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Work&#xA;    &lt;div id=&#34;work&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#work&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;DevOps/Cloud engineering&lt;/li&gt;&#xA;&lt;li&gt;AI-supported software development and change-process consulting&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Building&#xA;    &lt;div id=&#34;building&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#building&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;ABM — a Python tool that manages my audiobook library (DRM-free&#xA;purchases from Audioteka and AudioLibrix)&lt;/li&gt;&#xA;&lt;li&gt;Deduplication and integrity verification of decades of accumulated&#xA;file archives&lt;/li&gt;&#xA;&lt;li&gt;The digital garden: this blog&amp;rsquo;s revival plus an&#xA;Obsidian-vault-to-web publishing pipeline&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Learning&#xA;    &lt;div id=&#34;learning&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#learning&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;AI tooling&lt;/li&gt;&#xA;&lt;li&gt;Rust&lt;/li&gt;&#xA;&lt;li&gt;Italian&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Reading / Listening&#xA;    &lt;div id=&#34;reading--listening&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#reading--listening&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Finished: the Czech translation of the Game of Thrones saga&lt;/li&gt;&#xA;&lt;li&gt;Listening: the Kurt Wallander series, in chronological order&lt;/li&gt;&#xA;&lt;li&gt;Reading: &lt;em&gt;LazyVim for Ambitious Developers&lt;/em&gt; (Dusty Phillips)&lt;/li&gt;&#xA;&lt;li&gt;Reading: &lt;em&gt;Suroviny a moc – geopolitika nerostného bohatství&lt;/em&gt;&#xA;(Michel Jébrak)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Life&#xA;    &lt;div id=&#34;life&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#life&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Training for the traditional September hiking trip to the High Tatras&lt;/li&gt;&#xA;&lt;li&gt;Looking forward to an October trip to Napoli&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;This is a &lt;a href=&#34;https://nownownow.com/about&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;now page&lt;/a&gt;. If you have your own&#xA;site, you should make one too.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>About</title>
@@ -22,10 +32,30 @@
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Sat, 22 Aug 2026 09:24:08 +0000</pubDate>
+      <pubDate>Sat, 22 Aug 2026 16:39:14 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
-      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.164.0+extended+withdeploy darwin/arm64 BuildDate=2026-07-06T16:39:30Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: 7693ef139725f2c71b98fddfc3458424d76eb9f7&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: e03080913d6148d055471f76027a33f28234cb32&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-08-22T09:24:08Z&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.164.0+extended+withdeploy darwin/arm64 BuildDate=2026-07-06T16:39:30Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: 66f17273a5973ccff35eb283de981b0b8a249238&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: be63d03bea2fb8b624e00cb382423639f86ddc7f&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-08-22T16:39:14Z&amp;rdquo;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://miroadamy.com/notes/2026-08-22-notes-stream-exists/</link>
+      <pubDate>Sat, 22 Aug 2026 11:20:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/notes/2026-08-22-notes-stream-exists/</guid>
+      <description>&lt;p&gt;This blog now has a notes stream — short things that don&amp;rsquo;t warrant a full&#xA;post. It has its own &lt;a href=&#34;https://miroadamy.com/notes/index.xml&#34; &gt;RSS feed&lt;/a&gt;. This is the first one,&#xA;mostly to prove the machinery works.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>The Five-Year Intermission</title>
+      <link>https://miroadamy.com/posts/2026-08-22-the-five-year-intermission/</link>
+      <pubDate>Sat, 22 Aug 2026 11:15:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-08-22-the-five-year-intermission/</guid>
+      <description>&lt;p&gt;The last post here is dated February 18, 2021. It was a perfectly ordinary&#xA;how-to about Bitbucket permissions, and nothing about it suggested it would&#xA;be the last one for five and a half years. There was no farewell post,&#xA;no &amp;ldquo;taking a break&amp;rdquo; announcement. The blog just — stopped.&lt;/p&gt;&#xA;&lt;p&gt;This post is the missing announcement, written from the other side.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;What happened&#xA;    &lt;div id=&#34;what-happened&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#what-happened&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The short version: life kept running, and the writing habit didn&amp;rsquo;t.&lt;/p&gt;</description>
       
     </item>
     

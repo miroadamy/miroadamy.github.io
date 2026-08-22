@@ -7,7 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Thu, 18 Feb 2021 13:00:00 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 22 Aug 2026 11:15:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Blog</title>
+      <link>https://miroadamy.com/tags/blog/</link>
+      <pubDate>Sat, 22 Aug 2026 11:15:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/blog/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Catching-Up</title>
+      <link>https://miroadamy.com/tags/catching-up/</link>
+      <pubDate>Sat, 22 Aug 2026 11:15:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/catching-up/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Meta</title>
+      <link>https://miroadamy.com/tags/meta/</link>
+      <pubDate>Sat, 22 Aug 2026 11:15:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/meta/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>API</title>
@@ -120,7 +150,7 @@
     </item>
     
     <item>
-      <title>Aws</title>
+      <title>AWS</title>
       <link>https://miroadamy.com/tags/aws/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
@@ -130,7 +160,7 @@
     </item>
     
     <item>
-      <title>Ecommerce</title>
+      <title>ECommerce</title>
       <link>https://miroadamy.com/tags/ecommerce/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
@@ -140,7 +170,7 @@
     </item>
     
     <item>
-      <title>IaaC</title>
+      <title>Iaac</title>
       <link>https://miroadamy.com/tags/iaac/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
@@ -245,16 +275,6 @@
       <pubDate>Tue, 17 Dec 2019 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/30daychallenge/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Blog</title>
-      <link>https://miroadamy.com/tags/blog/</link>
-      <pubDate>Tue, 17 Dec 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/blog/</guid>
       <description></description>
       
     </item>
