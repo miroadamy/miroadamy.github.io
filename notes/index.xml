@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Sat, 22 Aug 2026 11:20:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://miroadamy.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title></title>
       <link>https://miroadamy.com/notes/2026-08-22-notes-stream-exists/</link>
-      <pubDate>Sat, 22 Aug 2026 11:20:00 +0200</pubDate>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://miroadamy.com/notes/2026-08-22-notes-stream-exists/</guid>
       <description>&lt;p&gt;This blog now has a notes stream — short things that don&amp;rsquo;t warrant a full&#xA;post. It has its own &lt;a href=&#34;https://miroadamy.com/notes/index.xml&#34; &gt;RSS feed&lt;/a&gt;. This is the first one,&#xA;mostly to prove the machinery works.&lt;/p&gt;</description>
