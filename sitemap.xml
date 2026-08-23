@@ -4,6 +4,7 @@
 
   <url>
     <loc>https://miroadamy.com/notes/</loc>
+    <lastmod>2026-08-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -21,13 +22,19 @@
   </url>
   <url>
     <loc>https://miroadamy.com/</loc>
-    <lastmod>2026-08-23T16:13:24+00:00</lastmod>
+    <lastmod>2026-08-23T16:32:36+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://miroadamy.com/status/</loc>
-    <lastmod>2026-08-23T16:13:24+00:00</lastmod>
+    <lastmod>2026-08-23T16:32:36+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://miroadamy.com/notes/obsidian-to-hugo-pipeline-is-alive/</loc>
+    <lastmod>2026-08-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -40,6 +47,12 @@
   <url>
     <loc>https://miroadamy.com/posts/2026-08-22-the-five-year-intermission/</loc>
     <lastmod>2026-08-22T11:15:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://miroadamy.com/notes/notes-stream-exists/</loc>
+    <lastmod>2026-08-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -3346,11 +3359,6 @@
   <url>
     <loc>https://miroadamy.com/posts/2006-08-19-hello-world-2/</loc>
     <lastmod>2006-08-19T18:24:13-04:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://miroadamy.com/notes/2026-08-22-notes-stream-exists/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
