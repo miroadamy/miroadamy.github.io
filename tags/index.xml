@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Sat, 22 Aug 2026 11:15:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Aug 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Blog</title>
-      <link>https://miroadamy.com/tags/blog/</link>
-      <pubDate>Sat, 22 Aug 2026 11:15:00 +0200</pubDate>
+      <title>Bratislava</title>
+      <link>https://miroadamy.com/tags/bratislava/</link>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0200</pubDate>
       
-      <guid>https://miroadamy.com/tags/blog/</guid>
+      <guid>https://miroadamy.com/tags/bratislava/</guid>
       <description></description>
       
     </item>
@@ -22,9 +22,39 @@
     <item>
       <title>Catching-Up</title>
       <link>https://miroadamy.com/tags/catching-up/</link>
-      <pubDate>Sat, 22 Aug 2026 11:15:00 +0200</pubDate>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0200</pubDate>
       
       <guid>https://miroadamy.com/tags/catching-up/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>https://miroadamy.com/tags/life/</link>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/life/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Spain</title>
+      <link>https://miroadamy.com/tags/spain/</link>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/spain/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Blog</title>
+      <link>https://miroadamy.com/tags/blog/</link>
+      <pubDate>Sat, 22 Aug 2026 11:15:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/blog/</guid>
       <description></description>
       
     </item>
@@ -40,7 +70,7 @@
     </item>
     
     <item>
-      <title>API</title>
+      <title>Api</title>
       <link>https://miroadamy.com/tags/api/</link>
       <pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
       
@@ -150,7 +180,7 @@
     </item>
     
     <item>
-      <title>Aws</title>
+      <title>AWS</title>
       <link>https://miroadamy.com/tags/aws/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
@@ -160,7 +190,7 @@
     </item>
     
     <item>
-      <title>ECommerce</title>
+      <title>Ecommerce</title>
       <link>https://miroadamy.com/tags/ecommerce/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
@@ -170,7 +200,7 @@
     </item>
     
     <item>
-      <title>IaaC</title>
+      <title>Iaac</title>
       <link>https://miroadamy.com/tags/iaac/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
@@ -340,16 +370,6 @@
     </item>
     
     <item>
-      <title>Spain</title>
-      <link>https://miroadamy.com/tags/spain/</link>
-      <pubDate>Sun, 24 Nov 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/spain/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Valencia</title>
       <link>https://miroadamy.com/tags/valencia/</link>
       <pubDate>Sun, 24 Nov 2019 11:22:48 +0800</pubDate>
@@ -445,16 +465,6 @@
       <pubDate>Thu, 12 Sep 2019 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/spanish/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Bratislava</title>
-      <link>https://miroadamy.com/tags/bratislava/</link>
-      <pubDate>Thu, 29 Aug 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/bratislava/</guid>
       <description></description>
       
     </item>

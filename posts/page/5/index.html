@@ -285,10 +285,10 @@
       "sameAs": ["https://www.linkedin.com/in/miroadamy/", "https://stackoverflow.com/users/369692/miro-a", "https://github.com/miroadamy", "https://gitlab.com/miro.adamy", "https://twitter.com/miroadamy", "https://www.facebook.com/miro.adamy", "https://www.instagram.com/miro.adamy/?hl=sk"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-22T11:15:00\u002b02:00",
-    "datePublished": "2026-08-22T11:15:00\u002b02:00",
+    "dateCreated": "2026-08-28T00:00:00\u002b02:00",
+    "datePublished": "2026-08-28T00:00:00\u002b02:00",
     
-    "dateModified": "2026-08-22T11:15:00\u002b02:00",
+    "dateModified": "2026-08-28T00:00:00\u002b02:00",
     
     
     
@@ -841,6 +841,233 @@
           
             
               <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+                2019
+              </h2>
+            
+            
+              
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="article-link--simple group flex flex-col md:flex-row relative">
+  
+  <div class=" mt-3 md:mt-0">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
+          href="/posts/2019-01-14-gitbits/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Gitbits
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2019-01-14T11:22:48&#43;08:00">January 14, 2019</time><span class="px-2 text-primary-500">&middot;</span><span>262 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/devops/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    DevOps
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/git/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Git
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/tools/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Tools
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+        Two small utilities I have places into ~/bin:
+git-attic # Source: https://github.com/maximeh/dotfiles/blob/master/common/.bin/git-attic
+#!/bin/sh # git-attic [-M] [PATH] - list deleted files of Git repositories # # Use -M to not show renamed files, and other git-log options as you like. git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; | less Example # ➜ kubernetes-the-hard-way git:(master) ✗ git log --raw --no-renames --date=short --format=&#34;%h %cd&#34; &#34;$@&#34; | awk &#39;/^[0-9a-f]/ { commit=$1; date=$2 } /^:/ &amp;&amp; $5 == &#34;D&#34; { print date, commit &#34;^:&#34; $6 }&#39; 2019-11-20 374e8d9^:docs/using-rst/pdp-template-rst.rst 2019-11-17 7911114^:src/certificates/admin-csr.json 2019-11-17 7911114^:src/certificates/admin-key.pem 2019-11-17 7911114^:src/certificates/admin.csr 2019-11-17 7911114^:src/certificates/admin.pem 2019-11-17 7911114^:src/certificates/ca-config.json 2019-11-17 7911114^:src/certificates/ca-csr.json 2019-11-17 7911114^:src/certificates/ca-key.pem 2019-11-17 7911114^:src/certificates/ca.csr 2019-11-17 7911114^:src/certificates/ca.pem 2019-11-17 7911114^:src/certificates/copy-certificates-to-servers.sh git trail # I cannot remember where is this one from :-(
+
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+            
+          
+            
+              <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
                 2018
               </h2>
             
@@ -1024,6 +1251,8 @@
               
             
           
+        
+      
         
       
         
@@ -1222,6 +1451,8 @@ But let&rsquo;s take things in order. First location - Barcelona. Hard to pick b
               
             
           
+        
+      
         
       
         
@@ -1430,7 +1661,7 @@ But let&rsquo;s take things in order. First location - Barcelona. Hard to pick b
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Devops
+    DevOps
   </span>
 </span>
 
@@ -1438,6 +1669,8 @@ But let&rsquo;s take things in order. First location - Barcelona. Hard to pick b
               
             
           
+        
+      
         
       
         
@@ -1453,7 +1686,7 @@ But let&rsquo;s take things in order. First location - Barcelona. Hard to pick b
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Aws
+    AWS
   </span>
 </span>
 
@@ -1647,7 +1880,7 @@ https://www.certmetrics.com/amazon/public/badge.aspx?i=2&t=c&d=2018-11-28&ci=AWS
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Devops
+    DevOps
   </span>
 </span>
 
@@ -1678,6 +1911,8 @@ https://www.certmetrics.com/amazon/public/badge.aspx?i=2&t=c&d=2018-11-28&ci=AWS
               
             
           
+        
+      
         
       
         
@@ -1899,6 +2134,8 @@ Installation # brew install skopeo Usage # ➜ deploy-2018-10-24 skopeo --overri
         
       
         
+      
+        
           
             
               
@@ -2114,6 +2351,8 @@ Happy.
               
             
           
+        
+      
         
       
         
@@ -2335,6 +2574,8 @@ Fast forward to now: on Sunday while watching Prime (https://en.wikipedia.org/wi
         
       
         
+      
+        
           
             
               
@@ -2552,6 +2793,8 @@ Those who do not write code (or better said - did not write code 20 years ago) m
         
       
         
+      
+        
           
             
               
@@ -2748,6 +2991,8 @@ Here are the pictures.
         
       
         
+      
+        
           
             
               
@@ -2797,222 +3042,6 @@ Here are the pictures.
     
       <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
          
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-            
-              
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article class="article-link--simple group flex flex-col md:flex-row relative">
-  
-  <div class=" mt-3 md:mt-0">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
-          href="/posts/2018-06-25-oracle/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          Per core licensing
-          
-        </h2>
-      </a>
-      
-      
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2018-06-25T11:22:48&#43;08:00">June 25, 2018</time><span class="px-2 text-primary-500">&middot;</span><span>10 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/categories/jokes/">
-                  
-                  <span class="flex cursor-pointer">
-  
-  
-  
-    
-    
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Jokes
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/languages/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Languages
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/spanish/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Spanish
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        If one uses Oracle per core licensing strategy in cloud:
-
       </div>
     
   </div>

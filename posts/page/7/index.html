@@ -285,10 +285,10 @@
       "sameAs": ["https://www.linkedin.com/in/miroadamy/", "https://stackoverflow.com/users/369692/miro-a", "https://github.com/miroadamy", "https://gitlab.com/miro.adamy", "https://twitter.com/miroadamy", "https://www.facebook.com/miro.adamy", "https://www.instagram.com/miro.adamy/?hl=sk"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-08-22T11:15:00\u002b02:00",
-    "datePublished": "2026-08-22T11:15:00\u002b02:00",
+    "dateCreated": "2026-08-28T00:00:00\u002b02:00",
+    "datePublished": "2026-08-28T00:00:00\u002b02:00",
     
-    "dateModified": "2026-08-22T11:15:00\u002b02:00",
+    "dateModified": "2026-08-28T00:00:00\u002b02:00",
     
     
     
@@ -905,6 +905,245 @@
     <header class="items-center text-start text-xl font-semibold">
       <a
         
+          href="/posts/2017-11-14-install-aws-cli-mac/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Install AWS CLI on Mac
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2017-11-14T14:22:48&#43;08:00">November 14, 2017</time><span class="px-2 text-primary-500">&middot;</span><span>1229 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">6 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/devops/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    DevOps
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/aws/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    AWS
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/cloud/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Cloud
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/commandline/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Commandline
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+        Install AWS CLI on Mac # The Mac comes with Python 2.7 and no pip
+This guide recommends upgrade to Python 3 which I want to avoid: http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html
+Unsuccesfull path - keep the Python 2.7 # ➜ ~ pip --version zsh: command not found: pip ➜ ~ sudo easy_install pip Password: Searching for pip Reading https://pypi.python.org/simple/pip/ Best match: pip 9.0.1 Downloading https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz#md5=35f01da33009719497f01a4ba69d63c9 Processing pip-9.0.1.tar.gz Writing /tmp/easy_install-QnLLJp/pip-9.0.1/setup.cfg Running pip-9.0.1/setup.py -q bdist_egg --dist-dir /tmp/easy_install-QnLLJp/pip-9.0.1/egg-dist-tmp-03hMh7 /System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/distutils/dist.py:267: UserWarning: Unknown distribution option: &#39;python_requires&#39; warnings.warn(msg) warning: no previously-included files found matching &#39;.coveragerc&#39; warning: no previously-included files found matching &#39;.mailmap&#39; warning: no previously-included files found matching &#39;.travis.yml&#39; warning: no previously-included files found matching &#39;.landscape.yml&#39; warning: no previously-included files found matching &#39;pip/_vendor/Makefile&#39; warning: no previously-included files found matching &#39;tox.ini&#39; warning: no previously-included files found matching &#39;dev-requirements.txt&#39; warning: no previously-included files found matching &#39;appveyor.yml&#39; no previously-included directories found matching &#39;.github&#39; no previously-included directories found matching &#39;.travis&#39; no previously-included directories found matching &#39;docs/_build&#39; no previously-included directories found matching &#39;contrib&#39; no previously-included directories found matching &#39;tasks&#39; no previously-included directories found matching &#39;tests&#39; creating /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Extracting pip-9.0.1-py2.7.egg to /Library/Python/2.7/site-packages Adding pip 9.0.1 to easy-install.pth file Installing pip script to /usr/local/bin Installing pip2.7 script to /usr/local/bin Installing pip2 script to /usr/local/bin Installed /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg Processing dependencies for pip Finished processing dependencies for pip ➜ ~ pip --version pip 9.0.1 from /Library/Python/2.7/site-packages/pip-9.0.1-py2.7.egg (python 2.7) ➜ ~ pip install awscli --upgrade --user Collecting awscli Downloading awscli-1.11.185-py2.py3-none-any.whl (1.2MB) 100% |████████████████████████████████| 1.2MB 1.1MB/s Collecting colorama&lt;=0.3.7,&gt;=0.2.5 (from awscli) Downloading colorama-0.3.7-py2.py3-none-any.whl Collecting s3transfer&lt;0.2.0,&gt;=0.1.9 (from awscli) Downloading s3transfer-0.1.11-py2.py3-none-any.whl (54kB) 100% |████████████████████████████████| 61kB 6.2MB/s Collecting botocore==1.7.43 (from awscli) Downloading botocore-1.7.43-py2.py3-none-any.whl (3.7MB) 100% |████████████████████████████████| 3.7MB 363kB/s Collecting docutils&gt;=0.10 (from awscli) Downloading docutils-0.14-py2-none-any.whl (543kB) 100% |████████████████████████████████| 552kB 2.4MB/s Collecting rsa&lt;=3.5.0,&gt;=3.1.2 (from awscli) Downloading rsa-3.4.2-py2.py3-none-any.whl (46kB) 100% |████████████████████████████████| 51kB 5.9MB/s Collecting PyYAML&lt;=3.12,&gt;=3.10 (from awscli) Downloading PyYAML-3.12.tar.gz (253kB) 100% |████████████████████████████████| 256kB 3.5MB/s Collecting futures&lt;4.0.0,&gt;=2.2.0; python_version == &#34;2.6&#34; or python_version == &#34;2.7&#34; (from s3transfer&lt;0.2.0,&gt;=0.1.9-&gt;awscli) Downloading futures-3.1.1-py2-none-any.whl Collecting jmespath&lt;1.0.0,&gt;=0.7.1 (from botocore==1.7.43-&gt;awscli) Downloading jmespath-0.9.3-py2.py3-none-any.whl Collecting python-dateutil&lt;3.0.0,&gt;=2.1 (from botocore==1.7.43-&gt;awscli) Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB) 100% |████████████████████████████████| 194kB 4.5MB/s Collecting pyasn1&gt;=0.1.3 (from rsa&lt;=3.5.0,&gt;=3.1.2-&gt;awscli) Downloading pyasn1-0.3.7-py2.py3-none-any.whl (63kB) 100% |████████████████████████████████| 71kB 7.8MB/s Collecting six&gt;=1.5 (from python-dateutil&lt;3.0.0,&gt;=2.1-&gt;botocore==1.7.43-&gt;awscli) Downloading six-1.11.0-py2.py3-none-any.whl Installing collected packages: colorama, futures, jmespath, docutils, six, python-dateutil, botocore, s3transfer, pyasn1, rsa, PyYAML, awscli Running setup.py install for PyYAML ... done Successfully installed PyYAML-3.12 awscli-1.11.185 botocore-1.7.43 colorama-0.3.7 docutils-0.14 futures-3.1.1 jmespath-0.9.3 pyasn1-0.3.7 python-dateutil-2.6.1 rsa-3.4.2 s3transfer-0.1.11 six-1.11.0 ➜ ~ aws --version zsh: command not found: aws ➜ ~ sw_vers ProductName: Mac OS X ProductVersion: 10.13.1 BuildVersion: 17B48 This does not work.
+
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+            
+              
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="article-link--simple group flex flex-col md:flex-row relative">
+  
+  <div class=" mt-3 md:mt-0">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
           href="/posts/2017-05-15-sensitive-git/"
         
         class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
@@ -993,7 +1232,7 @@
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Devops
+    DevOps
   </span>
 </span>
 
@@ -1001,6 +1240,8 @@
               
             
           
+        
+      
         
       
         
@@ -1191,7 +1432,7 @@ The issue # Git repos store in cleartext all credentials, that may also be inclu
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Devops
+    DevOps
   </span>
 </span>
 
@@ -1199,6 +1440,8 @@ The issue # Git repos store in cleartext all credentials, that may also be inclu
               
             
           
+        
+      
         
       
         
@@ -1398,7 +1641,7 @@ on client side we have a worktree that is Git repository the files needs to be c
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Devops
+    DevOps
   </span>
 </span>
 
@@ -1406,6 +1649,8 @@ on client side we have a worktree that is Git repository the files needs to be c
               
             
           
+        
+      
         
       
         
@@ -1634,7 +1879,7 @@ User setup # List all keys in Gitolite must have access to Gitolite admin interf
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Devops
+    DevOps
   </span>
 </span>
 
@@ -1642,6 +1887,8 @@ User setup # List all keys in Gitolite must have access to Gitolite admin interf
               
             
           
+        
+      
         
       
         
@@ -1834,7 +2081,7 @@ Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Devops
+    DevOps
   </span>
 </span>
 
@@ -1842,6 +2089,8 @@ Create file named git-ffwd-update somewhere on the path (in my case ~/bin)
               
             
           
+        
+      
         
       
         
@@ -2052,7 +2301,7 @@ List of lists: https://github.com/learnbyexample/scripting_course/blob/master/Li
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Devops
+    DevOps
   </span>
 </span>
 
@@ -2060,6 +2309,8 @@ List of lists: https://github.com/learnbyexample/scripting_course/blob/master/Li
               
             
           
+        
+      
         
       
         
@@ -2269,7 +2520,7 @@ Good news 1 # It can coexist with previous Docker installation (mostly) - see th
     <span
       class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
   
-    Devops
+    DevOps
   </span>
 </span>
 
@@ -2277,6 +2528,8 @@ Good news 1 # It can coexist with previous Docker installation (mostly) - see th
               
             
           
+        
+      
         
       
         
@@ -2522,6 +2775,8 @@ Fix # Set the variable JAVA_VM to path to executable command on your system.
         
       
         
+      
+        
           
             
               
@@ -2763,6 +3018,8 @@ Show merged and unmerged branches # This command allows you to show all local br
         
       
         
+      
+        
           
             
               
@@ -2816,228 +3073,6 @@ The credits for creation goes to Zach Dennis. The script is decribed in his blog
 The source is here
 Example # This is beginning of very long output from Groovy source
 The code # #!/usr/bin/env ruby require &#39;rubygems&#39; gem &#39;term-ansicolor&#39;, &#39;&gt;=1.0.5&#39; require &#39;term/ansicolor&#39; class GitCommit attr_reader :content def initialize(content) @content = content end def sha @content.split[1] end def to_s `git log --pretty=format:&#34;%h %ad %an - %s&#34; #{sha}~1..#{sha}` end def unmerged? content =~ /^\+/ end def equivalent? content =~ /^\-/ end end class GitBranch attr_reader :name, :commits def initialize(name, commits) @name = name @commits = commits end # Returns origin from origin/some/branch/here def repository name.split(&#34;/&#34;, 2).first end # Returns some/branch/here from origin/some/branch/here def branch_name name.split(&#34;/&#34;, 2).last end def unmerged_commits commits.select{ |commit| commit.unmerged? } end def equivalent_commits commits.select{ |commit| commit.equivalent? } end end class GitBranches &lt; Array def self.clean_branch_output(str) str.split(/\n/).map{ |e| e.strip.gsub(/\*\s+/, &#39;&#39;) }.reject{ |branch| branch =~ /\b#{Regexp.escape(UPSTREAM)}\b/ }.sort end def self.local_branches clean_branch_output `git branch` end def self.remote_branches clean_branch_output `git branch -r` end def self.load(options) git_branches = new branches = if options[:local] local_branches elsif options[:remote] remote_branches end branches.each do |branch| raw_commits = `git cherry -v #{UPSTREAM} #{branch}`.split(/\n/).map{ |c| GitCommit.new(c) } git_branches &lt;&lt; GitBranch.new(branch, raw_commits) end git_branches end def unmerged reject{ |branch| branch.commits.empty? }.sort_by{ |branch| branch.name } end def any_missing_commits? select{ |branch| branch.commits.any? }.any? end end class GitUnmerged VERSION = &#34;1.1&#34; include Term::ANSIColor attr_reader :branches def initialize(args) @options = {} @branches_to_prune = [] extract_options_from_args(args) end def load @branches ||= GitBranches.load(:local =&gt; local?, :remote =&gt; remote?) @branches.reject!{|b| @options[:exclude].include?(b.name)} if @options[:exclude].is_a?(Array) @branches.select!{|b| @options[:only].include?(b.name)} if @options[:only].is_a?(Array) end def print_overview load if @options[:exclude] &amp;&amp; @options[:exclude].length &gt; 0 puts &#34;The following branches have been excluded&#34; @options[:exclude].each do |branch_name| puts &#34; #{branch_name}&#34; end puts end if @options[:only] &amp;&amp; @options[:only].length &gt; 0 puts &#34;The following branches will be compared against:&#34; @options[:only].each do |branch_name| puts &#34; #{branch_name}&#34; end puts end if branches.any_missing_commits? puts &#34;The following branches possibly have commits not merged to #{upstream}:&#34; branches.each do |branch| num_unmerged = yellow(branch.unmerged_commits.size.to_s) num_equivalent = green(branch.equivalent_commits.size.to_s) puts %| #{branch.name} (#{num_unmerged}/#{num_equivalent} commits)| end end end def print_help puts &lt;&lt;-EOT.gsub(/^\s+\|/, &#39;&#39;) |Usage: #{$0} [-a] [--upstream &lt;branch&gt;] [--remote] [--prune] | |This script wraps the &#34;git cherry&#34; command. It reports the commits from all local |branches which have not been merged into an upstream branch. | | #{yellow(&#34;yellow&#34;)} commits have not been merged | #{green(&#34;green&#34;)} commits have equivalent changes in &lt;upstream&gt; but different SHAs | |The default upstream is &#39;master&#39; (or &#39;origin/master&#39; if running with --remote) | |OPTIONS: | -a display all unmerged commits (verbose) | --remote (-r) compare remote branches instead of local branches | --upstream &lt;branch&gt; specify a specific upstream branch (defaults to master) | --exclude &lt;branch&gt;[,&lt;branch&gt;,...] specify a comma-separated list of branches to exclude | --only &lt;branch&gt;[,&lt;branch&gt;,...] specify a comma-separated list of branches to include | --prune prompts user to delete branches which have no differences with the upstream | |EXAMPLE: check for all unmerged commits | #{$0} | |EXAMPLE: check for all unmerged commits and merged commits (but with a different SHA) | #{$0} -a | |EXAMPLE: use a different upstream than master | #{$0} --upstream otherbranch | |EXAMPLE: compare remote branches against origin/master | #{$0} --remote (-r) | |EXAMPLE: delete branches without unmerged commits | #{$0} --prune | |EXAMPLE: delete remote branches without unmerged commits | #{$0} --remote --prune | |GITCONFIG: | If you name this file git-unmerged and place it somewhere in your PATH | you will be able to type &#34;git unmerged&#34; to use it. If you&#39;d like to name | it something else and still refer to it with &#34;git unmerged&#34; then you&#39;ll | need to set up an alias: | git config --global alias.unmerged \\!#{$0} | |Version: #{VERSION} |Author: Zach Dennis &lt;zdennis@mutuallyhuman.com&gt; EOT exit end def print_version puts &#34;#{VERSION}&#34; end def branch_description local? ? &#34;local&#34; : &#34;remote&#34; end def print_specifics load if branches.any_missing_commits? print_breakdown else puts &#34;There are no #{branch_description} branches out of sync with #{upstream}&#34; end end def print_breakdown puts &#34;Below is a breakdown for each branch. Here&#39;s a legend:&#34; puts print_legend branches.each do |branch| puts print &#34;#{branch.name}:&#34; if branch.unmerged_commits.empty? &amp;&amp; !show_equivalent_commits? print &#34;(no unmerged commits&#34; if prune? print &#34;,&#34;, red(&#34; this will be pruned&#34;) @branches_to_prune &lt;&lt; branch end print &#34;)\n&#34; else puts end branch.unmerged_commits.each { |commit| puts yellow(commit.to_s) } if show_equivalent_commits? branch.equivalent_commits.each do |commit| puts green(commit.to_s) end end end end def print_legend load puts &#34; &#34; + yellow(&#34;yellow&#34;) + &#34; commits have not been merged&#34; puts &#34; &#34; + green(&#34;green&#34;) + &#34; commits have equivalent changes in #{UPSTREAM} but different SHAs&#34; if show_equivalent_commits? end def prune return unless prune? if @branches_to_prune.empty? puts &#34;&#34;, &#34;There are no branches to prune.&#34; else # Protects Heroku repo&#39;s rejected_master_branches = @branches_to_prune.reject!{|branch| branch.branch_name =~ /master/} puts &#34;&#34;, &#34;Are you sure you want to prune the following #{@branches_to_prune.size} branches?&#34;, &#34;&#34; puts red(&#34;(Keep in mind this will remove these branches from the remote repository)&#34;) if @remote @branches_to_prune.each do |branch| puts red(&#34; #{branch.name}&#34;) end puts &#34;(omitting branches named master)&#34; if rejected_master_branches puts print &#34;y or n: &#34; if STDIN.gets=~/y/i @branches_to_prune.each do |branch| if local? `git branch -D #{branch.name}` elsif remote? puts &#34;pruning: #{branch.branch_name} with &#39;git push #{branch.repository} :#{branch.branch_name}&#39;&#34; `git push #{branch.repository} :#{branch.branch_name}` end end puts &#34;&#34;, &#34;Pruned #{@branches_to_prune.size} branches.&#34; else puts &#34;&#34;, &#34;Pruning aborted. All branches were left unharmed.&#34; end end end def prune? ; @options[:prune ] ; end def show_help? ; @options[:show_help] ; end def show_equivalent_commits? ; @options[:show_equivalent_commits] ; end def show_version? ; @options[:show_version] ; end def upstream if @options[:upstream] @options[:upstream] elsif local? &#34;master&#34; elsif remote? &#34;origin/master&#34; end end private def extract_options_from_args(args) if args.include?(&#34;--remote&#34;) || args.include?(&#34;-r&#34;) @options[:remote] = true else @options[:local] = true end @options[:prune] = true if args.include?(&#34;--prune&#34;) @options[:show_help] = true if args.include?(&#34;-h&#34;) || args.include?(&#34;--help&#34;) @options[:show_equivalent_commits] = true if args.include?(&#34;-a&#34;) @options[:show_version] = true if args.include?(&#34;-v&#34;) || args.include?(&#34;--version&#34;) if index=args.index(&#34;--upstream&#34;) @options[:upstream] = args[index+1] end if index=args.index(&#34;--exclude&#34;) @options[:exclude] = args[index+1].split(&#39;,&#39;) end if index=args.index(&#34;--only&#34;) @options[:only] = args[index+1].split(&#39;,&#39;) end end def local? ; @options[:local] ; end def remote? ; @options[:remote] ; end end unmerged = GitUnmerged.new ARGV UPSTREAM = unmerged.upstream if unmerged.show_help? unmerged.print_help exit elsif unmerged.show_version? unmerged.print_version exit else unmerged.print_overview puts unmerged.print_specifics unmerged.prune end
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-            
-              
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article class="article-link--simple group flex flex-col md:flex-row relative">
-  
-  <div class=" mt-3 md:mt-0">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
-          href="/posts/2016-03-21-gitbits1/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          Git committer activity
-          
-        </h2>
-      </a>
-      
-      
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2016-03-21T12:57:35-05:00">March 21, 2016</time><span class="px-2 text-primary-500">&middot;</span><span>672 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/categories/programming/">
-                  
-                  <span class="flex cursor-pointer">
-  
-  
-  
-    
-    
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Programming
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/categories/technology/">
-                  
-                  <span class="flex cursor-pointer">
-  
-  
-  
-    
-    
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Technology
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/git/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Git
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        Git command git shortlog is very handy to see what is team activity.
-Show committer activity - whole project # (output shortened to first 20 lines)
-git shortlog -sn | head -20 2991	Paul King 1757	Cedric Champeau 1615	Jochen Theodorou 1031	James Strachan 749	Guillaume Laforge 312	Roshan Dawrani 306	Jason Dillon 301	Danno Ferrin 284	Alex Tkachman 273	PascalSchumacher 230	John Wilson 217	Pascal Schumacher 204	pascalschumacher 160	Thibault Kruse 158	Jeremy Rayner 134	Russel Winder 123	Cédric Champeau 122	Hamlet D&#39;Arcy 116	Dierk Koenig 104	Pilho Kim variant (without n) has different ordering:
-
       </div>
     
   </div>
