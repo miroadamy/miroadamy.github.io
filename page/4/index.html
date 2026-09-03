@@ -992,6 +992,224 @@
     <header class="items-center text-start text-xl font-semibold">
       <a
         
+          href="/posts/2019-08-29-post/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Cafe Eleven
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2019-08-29T11:22:48&#43;08:00">August 29, 2019</time><span class="px-2 text-primary-500">&middot;</span><span>6 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/life/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Life
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/bratislava/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Bratislava
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/slovakia/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Slovakia
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+        Cafe and books. &rsquo;nough said &hellip;
+
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
+  
+    
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="article-link--simple group flex flex-col md:flex-row relative">
+  
+  <div class=" mt-3 md:mt-0">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
           href="/posts/2019-08-25-foldvari/"
         
         class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
@@ -2902,227 +3120,6 @@ Travelling at 300 km/h is unreal. It is actually quieter and more smooth than Ca
       <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
         Adding Bash to Tensorflow notebook # I commented out PHP and C++ stuff that I do not really need:
 FROM jupyter/tensorflow-notebook USER root # install dependencies RUN apt-get update &amp;&amp; apt-get install -yq --no-install-recommends \ php-cli php-dev php-pear \ pkg-config \ &amp;&amp; apt-get clean # rm -rf /var/lib/apt/lists/* # install zeromq and zmq php extension #RUN wget https://github.com/zeromq/zeromq4-1/releases/download/v4.1.5/zeromq-4.1.5.tar.gz &amp;&amp; \ # tar -xvf zeromq-4.1.5.tar.gz &amp;&amp; \ # cd zeromq-* &amp;&amp; \ # ./configure &amp;&amp; make &amp;&amp; make install &amp;&amp; \ # printf &#34;\n&#34; | pecl install zmq-beta &amp;&amp; \ # echo &#34;extension=zmq.so&#34; &gt; /etc/php/7.0/cli/conf.d/zmq.ini # install PHP composer #RUN wget https://getcomposer.org/installer -O composer-setup.php &amp;&amp; \ # wget https://litipk.github.io/Jupyter-PHP-Installer/dist/jupyter-php-installer.phar &amp;&amp; \ # php composer-setup.php &amp;&amp; \ # php ./jupyter-php-installer.phar -vvv install &amp;&amp; \ # mv composer.phar /usr/local/bin/composer &amp;&amp; \ # rm -rf zeromq-* jupyter-php* &amp;&amp; \ # rm composer-setup.php # install ijavascript #RUN apt-get install -yq nodejs npm libzmq3-dev node-gyp &amp;&amp; \ # npm install -g ijavascript &amp;&amp; \ # ijs --ijs-install=global #RUN cd .. &amp;&amp; \ # apt-get install -yq --no-install-recommends cmake &amp;&amp; \ # wget https://raw.githubusercontent.com/root-mirror/cling/master/tools/packaging/cpt.py &amp;&amp; \ # chmod +x cpt.py &amp;&amp; \ # ./cpt.py --check-requirements &amp;&amp; ./cpt.py --create-dev-env Debug --with-workdir=./cling/ #RUN cd .. &amp;&amp; \ # wget https://root.cern.ch/download/cling/cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \ # tar -xvjf cling_2017-09-15_ubuntu16.tar.bz2 &amp;&amp; \ # rm cling_*.tar.bz2 &amp;&amp; \ # mv cling_* cling #RUN cd .. &amp;&amp; \ # ln -s $(pwd)/cling/bin/* /usr/bin/ &amp;&amp; \ # cd cling/share/cling/Jupyter/kernel &amp;&amp; \ # pip install -e . &amp;&amp; \ # jupyter-kernelspec install cling-cpp17 &amp;&amp; \ # jupyter-kernelspec install cling-cpp14 &amp;&amp; \ # jupyter-kernelspec install cling-cpp11 RUN chown -R $NB_USER /home/$NB_USER &amp;&amp; \ rm -rf /home/$NB_USER/.local/share/jupyter # install java jre for h2o RUN apt-get install -yq openjdk-8-jre # Reset user from jupyter/base-notebook USER $NB_USER # install jupyter-bash RUN /opt/conda/bin/pip install --no-cache-dir bash_kernel RUN /opt/conda/bin/python -m bash_kernel.install # install h2o RUN /opt/conda/bin/pip install --no-cache-dir --upgrade h2o &amp;&amp; \ /opt/conda/bin/pip install --no-cache-dir --upgrade pandas # disable authentication RUN mkdir -p .jupyter RUN echo &#34;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py RUN echo &#34;c.NotebookApp.token = &#39;&#39;&#34; &gt;&gt; ~/.jupyter/jupyter_notebook_config.py Source: https://bitbucket.org/snippets/klassify/Ee9Myk/jupyter-notebook-with-bash-kernel
-
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-  
-    
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article class="article-link--simple group flex flex-col md:flex-row relative">
-  
-  <div class=" mt-3 md:mt-0">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
-          href="/posts/2019-02-10-ssl-poke/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          SSL Poke
-          
-        </h2>
-      </a>
-      
-      
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2019-02-10T11:22:48&#43;08:00">February 10, 2019</time><span class="px-2 text-primary-500">&middot;</span><span>84 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/categories/tools/">
-                  
-                  <span class="flex cursor-pointer">
-  
-  
-  
-    
-    
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Tools
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/java/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Java
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/ssl/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Ssl
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        Cybersource Testing Tool # Java utility that we used before when we were debugging the TLS 1.2 issues.
-It needs to be compiled with JDK 1.8 - ideally the same one that runs in production and then run like:
-java -Djavax.net.debug=ssl:handshake:verbose SSLPoke api.cybersource.com 443 replace api.cybersource.com with whatever the cybersource endpoint needs to be.
-If the utility responds with &lsquo;Successfully connected’, it was able to handshake with the SSL server and establish the secure connection.
 
       </div>
     

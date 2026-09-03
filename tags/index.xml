@@ -7,7 +7,57 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Fri, 28 Aug 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Sep 2026 15:30:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Aws</title>
+      <link>https://miroadamy.com/tags/aws/</link>
+      <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/aws/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Devops</title>
+      <link>https://miroadamy.com/tags/devops/</link>
+      <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/devops/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Dns</title>
+      <link>https://miroadamy.com/tags/dns/</link>
+      <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/dns/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Github-Pages</title>
+      <link>https://miroadamy.com/tags/github-pages/</link>
+      <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/github-pages/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Route53</title>
+      <link>https://miroadamy.com/tags/route53/</link>
+      <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/route53/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Bratislava</title>
@@ -70,7 +120,7 @@
     </item>
     
     <item>
-      <title>Api</title>
+      <title>API</title>
       <link>https://miroadamy.com/tags/api/</link>
       <pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
       
@@ -180,17 +230,7 @@
     </item>
     
     <item>
-      <title>Aws</title>
-      <link>https://miroadamy.com/tags/aws/</link>
-      <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/aws/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Ecommerce</title>
+      <title>ECommerce</title>
       <link>https://miroadamy.com/tags/ecommerce/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
@@ -200,7 +240,7 @@
     </item>
     
     <item>
-      <title>Iaac</title>
+      <title>IaaC</title>
       <link>https://miroadamy.com/tags/iaac/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       

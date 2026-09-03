@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Thu, 03 Sep 2026 13:38:10 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Sep 2026 17:37:49 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Now</title>
@@ -32,10 +32,20 @@
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Thu, 03 Sep 2026 13:38:10 +0000</pubDate>
+      <pubDate>Thu, 03 Sep 2026 17:37:49 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
-      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.164.0+extended+withdeploy darwin/arm64 BuildDate=2026-07-06T16:39:30Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: b38dba3ccefbcfedfbe641fb1aa6613f36d362a6&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: be63d03bea2fb8b624e00cb382423639f86ddc7f&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-09-03T13:38:10Z&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.164.0+extended+withdeploy darwin/arm64 BuildDate=2026-07-06T16:39:30Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: 0c726942f9377e25c4f485cb1e093b0a7c8dd9ec&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: be63d03bea2fb8b624e00cb382423639f86ddc7f&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-09-03T17:37:49Z&amp;rdquo;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>How klassify.com went live: one static page, GitHub Pages and Route 53</title>
+      <link>https://miroadamy.com/posts/2026-09-03-how-klassify-com-went-live-on-github-pages/</link>
+      <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-09-03-how-klassify-com-went-live-on-github-pages/</guid>
+      <description>&lt;p&gt;My company, Klassify s.r.o., has had a domain for a long time before it was even registered (I registered klassify.com way back in early 2000 in Canada, but never actually did anything with it) - and a web page since this afternoon. For all that time klassify.com carried only my email - there was no A record at all, nothing was served, and whoever looked up the company from an invoice or a contract got a browser error and, I suppose, some doubts about whether the company exists. So here is how it got fixed in one afternoon, in the order it happened and with the reasoning. Nothing here is clever or sophisticated or the only/the best way. The point is the sequence of creation: there are two places in it where it is quite easy to break something that matters more than a web page.&lt;/p&gt;</description>
       
     </item>
     

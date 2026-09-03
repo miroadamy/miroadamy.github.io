@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Route53 on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/route53/</link>
+    <description>Recent content in Route53 on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Thu, 03 Sep 2026 15:30:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/route53/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How klassify.com went live: one static page, GitHub Pages and Route 53</title>
+      <link>https://miroadamy.com/posts/2026-09-03-how-klassify-com-went-live-on-github-pages/</link>
+      <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-09-03-how-klassify-com-went-live-on-github-pages/</guid>
+      <description>&lt;p&gt;My company, Klassify s.r.o., has had a domain for a long time before it was even registered (I registered klassify.com way back in early 2000 in Canada, but never actually did anything with it) - and a web page since this afternoon. For all that time klassify.com carried only my email - there was no A record at all, nothing was served, and whoever looked up the company from an invoice or a contract got a browser error and, I suppose, some doubts about whether the company exists. So here is how it got fixed in one afternoon, in the order it happened and with the reasoning. Nothing here is clever or sophisticated or the only/the best way. The point is the sequence of creation: there are two places in it where it is quite easy to break something that matters more than a web page.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>

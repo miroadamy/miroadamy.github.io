@@ -22,13 +22,25 @@
   </url>
   <url>
     <loc>https://miroadamy.com/</loc>
-    <lastmod>2026-09-03T13:38:10+00:00</lastmod>
+    <lastmod>2026-09-03T17:37:49+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://miroadamy.com/status/</loc>
-    <lastmod>2026-09-03T13:38:10+00:00</lastmod>
+    <lastmod>2026-09-03T17:37:49+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://miroadamy.com/posts/2026-09-03-how-klassify-com-went-live-on-github-pages/</loc>
+    <lastmod>2026-09-03T15:30:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://miroadamy.com/posts/</loc>
+    <lastmod>2026-09-03T15:30:00+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -40,12 +52,6 @@
   </url>
   <url>
     <loc>https://miroadamy.com/posts/2026-08-28-from-spain-to-bratislava-again/</loc>
-    <lastmod>2026-08-28T00:00:00+02:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://miroadamy.com/posts/</loc>
     <lastmod>2026-08-28T00:00:00+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
