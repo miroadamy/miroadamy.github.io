@@ -1,21 +1,71 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Microsoft&#34; on Miro&#39;s World</title>
+    <title>Microsoft on Miro&#39;s World</title>
     <link>https://miroadamy.com/tags/microsoft/</link>
-    <description>Recent content in Microsoft&#34; on Miro&#39;s World</description>
+    <description>Recent content in Microsoft on Miro&#39;s World</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Wed, 13 Dec 2006 22:05:28 -0500</lastBuildDate><atom:link href="https://miroadamy.com/tags/microsoft/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Apr 2008 09:50:06 -0400</lastBuildDate><atom:link href="https://miroadamy.com/tags/microsoft/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Ready for a new day (continued)</title>
-      <link>https://miroadamy.com/posts/2006-12-13-ready-for-a-new-day-continued/</link>
-      <pubDate>Wed, 13 Dec 2006 22:05:28 -0500</pubDate>
+      <title>Heroes Happened ... here</title>
+      <link>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</link>
+      <pubDate>Thu, 17 Apr 2008 09:50:06 -0400</pubDate>
       
-      <guid>https://miroadamy.com/posts/2006-12-13-ready-for-a-new-day-continued/</guid>
-      <description>&lt;p&gt;As I mentioned yesterday, my expectations regarding Office 2007 were fairly low. I am not a big fan of office application suites and for most of my editing I am using either on-line tools (like Google docs or Writeboard) or Open Office. True, neither of them has the smoothness and fine polish of Microsoft Office 2003, neither has all of it&#39;s features, but - let&#39;s face it - I barely use maybe 10-20% of Word or Excel capabilities anyway. For which reason, I am not willing to pay premium just for improved user comfort.&lt;/p&gt;</description>
+      <guid>https://miroadamy.com/posts/2008-04-17-heroes-happened-here/</guid>
+      <description>&lt;p&gt;Last week I attended one day event organized by Microsoft named &lt;a href=&#34;http://www.microsoft.com/heroeshappenhere/default.mspx&#34; target=&#34;_blank&#34;&gt;Heroes Happens Here&lt;/a&gt;. It is series of introduction targeting new products: Windows Server 2008 (not out yet) SQL Server 2008 (not out yet) and Visual Studio 2008 (out and well).&lt;/p&gt;&#xA;&lt;p&gt;I do not do much Microsoft development these days - my world is currently rather unevenly divided between Java (about 70 %), Web-ish technologies (XHTML, CSS, JavaScript, some Ruby) and OS-X (Objective C) which I am trying to squeeze in and get finally started. But Microsoft is such important platform that one must pay attention what is going on.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>MSDN Documentation - the follow up</title>
+      <link>https://miroadamy.com/posts/2007-06-15-msdn-documentation-the-follow-up/</link>
+      <pubDate>Fri, 15 Jun 2007 20:01:02 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-15-msdn-documentation-the-follow-up/</guid>
+      <description>&lt;p&gt;Judging by the number of hits, Joel (and myself) are not the only people who would like to see nicer, better and faster MSDN documentation. As a very nice surprise,  some of the feedback came directly from the people than actually can do something about it - like Darren Parker from Microsoft and Anand Raman from the Sandcastle project. Rob Relyea  suggested and &lt;a href=&#34;http://xamlt.com/&#34; target=&#34;_blank&#34;&gt;interesting looking tool&lt;/a&gt; based on XAML.&lt;/p&gt;&#xA;&lt;p&gt;Thanks everybody - it is always nice to find out that even &lt;a href=&#34;http://www.microsoft.com/&#34; target=&#34;_blank&#34;&gt;really big companies&lt;/a&gt; listen to the developers and want to address the problems. It almost feels like OpenSource experience where (it was few years back) we have encountered an issue in one of many Java templating libraries, posted to discussion group a question and few hours + several emails later had patch for the bug from the library creator :-). But back to the topic.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>MSDN Documentation - the worst in class ?</title>
+      <link>https://miroadamy.com/posts/2007-06-14-msdn-documentation-the-worse-in-class/</link>
+      <pubDate>Thu, 14 Jun 2007 22:41:36 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-06-14-msdn-documentation-the-worse-in-class/</guid>
+      <description>&lt;p&gt;Did it ever happened to you that you were using some tool day after day - and never realized it&#39;s pretty big deficiencies ? Until somebody, coming from different background pointed out what everything is wrong with the tool ? Before that moment of revelation,  the issues were just inconvenience, but right after that they became real annoyance ?&lt;/p&gt;&#xA;&lt;p&gt;Exactly this happened to me last week and the credit for pointing out what is wrong with MSDN documentation (and the &#34;standard&#34; .NET documentation format in general) goes to Joel :-)&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Microsoft is getting more dynamic</title>
+      <link>https://miroadamy.com/posts/2007-05-01-microsoft-is-getting-more-dynamic/</link>
+      <pubDate>Tue, 01 May 2007 22:08:12 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-05-01-microsoft-is-getting-more-dynamic/</guid>
+      <description>&lt;p&gt;at least as the programming language languages are concerned. One of the things that will be presented on the &lt;a href=&#34;http://visitmix.com/&#34; target=&#34;_blank&#34;&gt;MIX07&lt;/a&gt; is Dynamic Language Runtime, a new platform suitable to host high level, dynamic languages such as Python and Ruby. For Python, there is already pretty decent .NET implementation - namely IronPython. What is coming now is IronPython 2.0 based on the DLR as well as - yesss - IronRuby.&lt;/p&gt;&#xA;&lt;p&gt;It is great that this is happening. In Java world, JRuby is very close to being full implementation of the language. The speed of the JRuby is still not quite in the proximity of the C implementation, but the large selling point of JRuby is its capability of deploying Ruby application (or even a Rails application) inside Tomcat or any other Java Web container. This removes largest obstacle of using Ruby in enterprise environment - namely being &#34;new&#34; and not approved platform. When the .NET runtime will be able to host Ruby code, acceptance in enterprise space will be even higher.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Unify Tour 2007 and Open Source</title>
+      <link>https://miroadamy.com/posts/2007-04-19-unify-tour-2007-and-open-source/</link>
+      <pubDate>Thu, 19 Apr 2007 23:44:16 -0400</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2007-04-19-unify-tour-2007-and-open-source/</guid>
+      <description>&lt;p&gt;This week was full with attending the demos and workshops.  On Tuesday, I spent half day on the Microsoft &lt;a href=&#34;http://msdn.microsoft.com/canada/unify/&#34; target=&#34;_blank&#34;&gt;Unify Tour 2007&lt;/a&gt;. I planned to be there full day but an important business meeting made me change the plan. Fortunately, the sessions should be available recorded on the Web, so I will be able to check them later. The topic was bang-on - considering that we are in final phase of large project, using distributed network of SQL Server 2005 installations with replication and location was same as &lt;a href=&#34;http://maps.google.com/maps?f=q&amp;amp;hl=en&amp;amp;q=3090+Carling+Ave,+Ottawa&amp;amp;layer=&amp;amp;sll=45.437008,-75.723267&amp;amp;sspn=0.301133,0.6427&amp;amp;ie=UTF8&amp;amp;om=1&amp;amp;msid=113097201857276025606.000001120c4f0fc450fb4&amp;amp;msa=0&amp;amp;z=14&amp;amp;ll=45.359865,-75.803776&amp;amp;spn=0.037693,0.080338&amp;amp;t=h&#34; target=&#34;_blank&#34;&gt;usual&lt;/a&gt;.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Ready for a new day - or Vista-Office-Exchange launch</title>
+      <link>https://miroadamy.com/posts/2006-12-12-ready-for-a-new-day-or-vista-office-exchange-launch/</link>
+      <pubDate>Tue, 12 Dec 2006 23:56:18 -0500</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2006-12-12-ready-for-a-new-day-or-vista-office-exchange-launch/</guid>
+      <description>&lt;p&gt;Today was a big day in Ottawa Microsoft community. The &lt;a href=&#34;http://www.ottawacongresscentre.com/&#34;&gt;Congress Centre&lt;/a&gt; was hosting large event - simultaneous launch of Windows Vista, Office 2007 and Exchange server 2007. Because I have &lt;em&gt;almost&lt;/em&gt; registered about two months ago, I attended the event. The &#34;almost&#34; means that I tried to register right after receiving MSDN Flash email, but many people must have been faster - I was put on waiting list on two of the 3 tracks (Developers and IT Pros) and before I could even try to register for the third track (Business), everything crashed, Web site hang and I have never heard back from them, nor received any email. Until yesterday, when an automated voice reminder service managed to catch me by phone in underground garage under &lt;a href=&#34;http://www.brookstreethotel.com/&#34;&gt;Brookstreet Hotel&lt;/a&gt;, and delivered first part of reminder - telling me that I was registered to attend something ... Too bad it did not tell me to what, when and where did I registered, before it broke off and I lost the signal. But I deducted that the only reason to call me would be a reminder of the Launch and after logging on to My Events, voila - the ticket was there. So I went. It was a tough decision, whether to sacrifice full work day and possibly evening ping-pong at Igor&#39;s - but - what the heck. Microsoft does not produce new releases that often so going away once in 5 years should be OK. And now I am glad I did go.&lt;/p&gt;</description>
       
     </item>
     

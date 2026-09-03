@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Sun, 23 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>https://miroadamy.com/notes/klassify-has-a-landing-page/</link>
+      <pubDate>Thu, 03 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/notes/klassify-has-a-landing-page/</guid>
+      <description>&lt;p&gt;My company, Klassify s.r.o., finally has a web page: &lt;a href=&#34;https://klassify.com&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;klassify.com&lt;/a&gt;.&#xA;Until now the domain carried only my email, and anyone who looked it up from an&#xA;invoice or a contract found nothing at all.&lt;/p&gt;&#xA;&lt;p&gt;It is a single static page, no framework: who Klassify is, what kind of&#xA;engagements I take, the certifications, and where to find more. The &amp;ldquo;more&amp;rdquo; is&#xA;this blog, so the landing page points here, and this note points back.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title></title>
