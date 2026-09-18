@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Thu, 03 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>https://miroadamy.com/notes/i-always-run-out-of-tokens/</link>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/notes/i-always-run-out-of-tokens/</guid>
+      <description>&lt;p&gt;Whatever I sit down to do with an AI coding assistant, the session ends the same&#xA;way: the token budget is gone. It does not seem to matter what the task was. Fix&#xA;one small bug, plan a migration, write a three-paragraph note like this one - by&#xA;the end I am watching the context meter instead of the work.&lt;/p&gt;&#xA;&lt;p&gt;For a while I read that as bad estimation on my part. I think it is something&#xA;duller. The work is not what costs; the &lt;em&gt;situating&lt;/em&gt; is. Before anything useful&#xA;happens, the assistant has to be told where it is: which repo, which&#xA;conventions, what was decided last week and why, which of my rules are real&#xA;rules. That bill is roughly the same whether the edit that follows is one line or&#xA;two hundred. So a trivial task and a serious one cost about the same to start,&#xA;and only the serious one feels worth it afterwards.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title></title>
