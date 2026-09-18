@@ -7,10 +7,50 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Thu, 03 Sep 2026 15:30:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>AWS</title>
+      <title>Catching-Up</title>
+      <link>https://miroadamy.com/tags/catching-up/</link>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/catching-up/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Note-Taking</title>
+      <link>https://miroadamy.com/tags/note-taking/</link>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/note-taking/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Obsidian</title>
+      <link>https://miroadamy.com/tags/obsidian/</link>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/obsidian/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Pkm</title>
+      <link>https://miroadamy.com/tags/pkm/</link>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/pkm/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Aws</title>
       <link>https://miroadamy.com/tags/aws/</link>
       <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
       
@@ -65,16 +105,6 @@
       <pubDate>Fri, 28 Aug 2026 00:00:00 +0200</pubDate>
       
       <guid>https://miroadamy.com/tags/bratislava/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Catching-Up</title>
-      <link>https://miroadamy.com/tags/catching-up/</link>
-      <pubDate>Fri, 28 Aug 2026 00:00:00 +0200</pubDate>
-      
-      <guid>https://miroadamy.com/tags/catching-up/</guid>
       <description></description>
       
     </item>

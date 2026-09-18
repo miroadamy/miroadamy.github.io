@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Fri, 18 Sep 2026 17:34:08 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 18 Sep 2026 20:17:19 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Now</title>
@@ -32,10 +32,10 @@
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Fri, 18 Sep 2026 17:34:08 +0000</pubDate>
+      <pubDate>Fri, 18 Sep 2026 20:17:19 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
-      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.164.0+extended+withdeploy darwin/arm64 BuildDate=2026-07-06T16:39:30Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: 1d0a755ad79a5948e594c012790d14590d7bb561&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: be63d03bea2fb8b624e00cb382423639f86ddc7f&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-09-18T17:34:08Z&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.164.0+extended+withdeploy darwin/arm64 BuildDate=2026-07-06T16:39:30Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: 2d81f5da684f7f0d3bf8a709027436dd3537e0b7&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: be63d03bea2fb8b624e00cb382423639f86ddc7f&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-09-18T20:17:19Z&amp;rdquo;&lt;/p&gt;</description>
       
     </item>
     
@@ -46,6 +46,16 @@
       
       <guid>https://miroadamy.com/notes/i-always-run-out-of-tokens/</guid>
       <description>&lt;p&gt;Whatever I sit down to do with an AI coding assistant, the session ends the same&#xA;way: the token budget is gone. It does not seem to matter what the task was. Fix&#xA;one small bug, plan a migration, write a three-paragraph note like this one - by&#xA;the end I am watching the context meter instead of the work.&lt;/p&gt;&#xA;&lt;p&gt;For a while I read that as bad estimation on my part. I think it is something&#xA;duller. The work is not what costs; the &lt;em&gt;situating&lt;/em&gt; is. Before anything useful&#xA;happens, the assistant has to be told where it is: which repo, which&#xA;conventions, what was decided last week and why, which of my rules are real&#xA;rules. That bill is roughly the same whether the edit that follows is one line or&#xA;two hundred. So a trivial task and a serious one cost about the same to start,&#xA;and only the serious one feels worth it afterwards.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Catching up: My Note-Taking Odyssey</title>
+      <link>https://miroadamy.com/posts/2026-09-17-my-note-taking-odyssey/</link>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-09-17-my-note-taking-odyssey/</guid>
+      <description>&lt;p&gt;I have always taken notes. At first on paper - there are still many handwritten&#xA;notebooks somewhere in the archives - but for the last thirty years or so most of&#xA;them, if not all, have been digital. And digital always means an application and a&#xA;format. I have tried a lot of them.&lt;/p&gt;&#xA;&lt;p&gt;While doing so I made pretty much every mistake one can make when it comes to&#xA;choosing an application and settling on a workflow. What follows is a tour of the&#xA;graveyard: a long line of tools, most of them now dead, and the lesson each one&#xA;charged me on the way out.&lt;/p&gt;</description>
       
     </item>
     
