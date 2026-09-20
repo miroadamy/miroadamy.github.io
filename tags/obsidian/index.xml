@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Thu, 17 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Catching up: Why Obsidian Won</title>
+      <link>https://miroadamy.com/posts/2026-09-20-why-obsidian/</link>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-09-20-why-obsidian/</guid>
+      <description>&lt;p&gt;The pitch I once wrote for a conference talk still says it best: Obsidian has a cult following &amp;ldquo;not because it&amp;rsquo;s clever software, but because of what it isn&amp;rsquo;t: your notes are just plain markdown files in a folder on your computer. No database, no cloud lock-in, no proprietary format. Just files.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Nothing ages as well as plain text; it has been the same since, well, files were invented. Markdown is just a very thin layer that gives the plain text some structure, and allows it to be rendered and displayed in an aesthetically pleasing way.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Catching up: My Note-Taking Odyssey</title>

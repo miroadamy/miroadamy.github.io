@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Fri, 18 Sep 2026 20:17:19 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Sep 2026 09:21:20 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Now</title>
@@ -32,10 +32,20 @@
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Fri, 18 Sep 2026 20:17:19 +0000</pubDate>
+      <pubDate>Sun, 20 Sep 2026 09:21:20 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
-      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.164.0+extended+withdeploy darwin/arm64 BuildDate=2026-07-06T16:39:30Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: 2d81f5da684f7f0d3bf8a709027436dd3537e0b7&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: be63d03bea2fb8b624e00cb382423639f86ddc7f&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-09-18T20:17:19Z&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.164.0+extended+withdeploy darwin/arm64 BuildDate=2026-07-06T16:39:30Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: 470baa47aebcf2e3b4ad079f5b476306ec2eecea&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: be63d03bea2fb8b624e00cb382423639f86ddc7f&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-09-20T09:21:20Z&amp;rdquo;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Catching up: Why Obsidian Won</title>
+      <link>https://miroadamy.com/posts/2026-09-20-why-obsidian/</link>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-09-20-why-obsidian/</guid>
+      <description>&lt;p&gt;The pitch I once wrote for a conference talk still says it best: Obsidian has a cult following &amp;ldquo;not because it&amp;rsquo;s clever software, but because of what it isn&amp;rsquo;t: your notes are just plain markdown files in a folder on your computer. No database, no cloud lock-in, no proprietary format. Just files.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;Nothing ages as well as plain text; it has been the same since, well, files were invented. Markdown is just a very thin layer that gives the plain text some structure, and allows it to be rendered and displayed in an aesthetically pleasing way.&lt;/p&gt;</description>
       
     </item>
     
