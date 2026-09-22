@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://miroadamy.com/notes/</loc>
-    <lastmod>2026-09-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -22,24 +22,36 @@
   </url>
   <url>
     <loc>https://miroadamy.com/</loc>
-    <lastmod>2026-09-20T21:04:05+00:00</lastmod>
+    <lastmod>2026-09-22T11:37:45+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://miroadamy.com/status/</loc>
-    <lastmod>2026-09-20T21:04:05+00:00</lastmod>
+    <lastmod>2026-09-22T11:37:45+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://miroadamy.com/posts/2026-09-20-why-obsidian/</loc>
-    <lastmod>2026-09-20T00:00:00+02:00</lastmod>
+    <loc>https://miroadamy.com/posts/2026-09-22-riding-the-llm-wave/</loc>
+    <lastmod>2026-09-22T00:00:00+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://miroadamy.com/posts/</loc>
+    <lastmod>2026-09-22T00:00:00+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://miroadamy.com/notes/claude-the-garden-planner/</loc>
+    <lastmod>2026-09-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://miroadamy.com/posts/2026-09-20-why-obsidian/</loc>
     <lastmod>2026-09-20T00:00:00+02:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
