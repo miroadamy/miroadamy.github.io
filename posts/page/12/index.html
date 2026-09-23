@@ -285,10 +285,10 @@
       "sameAs": ["https://www.linkedin.com/in/miroadamy/", "https://stackoverflow.com/users/369692/miro-a", "https://github.com/miroadamy", "https://gitlab.com/miro.adamy", "https://twitter.com/miroadamy", "https://www.facebook.com/miro.adamy", "https://www.instagram.com/miro.adamy/?hl=sk"]
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-09-22T00:00:00\u002b02:00",
-    "datePublished": "2026-09-22T00:00:00\u002b02:00",
+    "dateCreated": "2026-09-23T00:00:00\u002b02:00",
+    "datePublished": "2026-09-23T00:00:00\u002b02:00",
     
-    "dateModified": "2026-09-22T00:00:00\u002b02:00",
+    "dateModified": "2026-09-23T00:00:00\u002b02:00",
     
     
     
@@ -844,6 +844,225 @@
                 2014
               </h2>
             
+            
+              
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+    
+
+    
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    
+    
+      
+      
+    
+
+    
+    
+      
+    
+  
+
+
+
+<article class="article-link--simple group flex flex-col md:flex-row relative">
+  
+  <div class=" mt-3 md:mt-0">
+    <header class="items-center text-start text-xl font-semibold">
+      <a
+        
+          href="/posts/2014-04-22-autorename-screenshots/"
+        
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2>
+          Folder action to autorename screenshots
+          
+        </h2>
+      </a>
+      
+      
+    </header>
+    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+      
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2014-04-22T11:22:48&#43;08:00">April 22, 2014</time><span class="px-2 text-primary-500">&middot;</span><span>55 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/programming/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Programming
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/applescript/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Applescript
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/osx/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Osx
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+    </div>
+    
+      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
+        Move the location of the screenshots # I do not want to have ~/Desktop polluted with files. Thus
+mkdir -p ~/Documents/Screenshots defaults write com.apple.screencapture location ~/Documents/Screenshots killall SystemUIServer Test the screenshot - it does it
+Automator based auto-rename # Create Folder action for ~/Documents/Screenshots 
+      </div>
+    
+  </div>
+  <div class="px-6 pt-4 pb-2"></div>
+</article>
+
             
               
 
@@ -2767,224 +2986,6 @@ nothing - do not push anything. matching - push all matching branches. All branc
     
       <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
         Sublime text macro to insert timestamp # platform-edc $ cat ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/time_stamp.py import sublime_plugin from datetime import datetime class TimeStampCommand(sublime_plugin.TextCommand): def run(self, edit): # formatting options at http://docs.python.org/2/library/datetime.html#strftime-strptime-behavior stamp = datetime.now().strftime(&#34;%Y-%m-%d_%H:%M:%S&#34;) # 2013-07-18 14:54:23 for r in self.view.sel(): if r.empty(): self.view.insert(edit, r.a, stamp) else: self.view.replace(edit, r, stamp) platform-edc $ Documentation - see
-
-      </div>
-    
-  </div>
-  <div class="px-6 pt-4 pb-2"></div>
-</article>
-
-            
-              
-
-
-
-
-
-
-
-
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    
-    
-
-    
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    
-    
-      
-      
-    
-
-    
-    
-      
-    
-  
-
-
-
-<article class="article-link--simple group flex flex-col md:flex-row relative">
-  
-  <div class=" mt-3 md:mt-0">
-    <header class="items-center text-start text-xl font-semibold">
-      <a
-        
-          href="/posts/2013-09-24-screenshot-cli/"
-        
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
-        <h2>
-          How to make screenshot from command line
-          
-        </h2>
-      </a>
-      
-      
-    </header>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-
-  
-    
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2013-09-24T11:22:48&#43;08:00">September 24, 2013</time><span class="px-2 text-primary-500">&middot;</span><span>58 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
-    
-
-    
-    
-  </div>
-
-  
-
-  
-  
-    <div class="flex flex-row flex-wrap items-center">
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/categories/lifehacks/">
-                  
-                  <span class="flex cursor-pointer">
-  
-  
-  
-    
-    
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Lifehacks
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-        
-      
-        
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/osx/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Osx
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-            
-              
-                <a class="relative mt-[0.5rem] me-2" href="/tags/virtualbox/">
-                  <span class="flex cursor-pointer">
-  
-  
-  
-  
-    <span
-      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
-  
-    Virtualbox
-  </span>
-</span>
-
-                </a>
-              
-            
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-      <div class="article-link__summary prose dark:prose-invert max-w-fit mt-1 line-clamp-3">
-        How to make screenshot from command line # platform-edc $ screencapture -i ~/Desktop/$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk platform-edc $ screencapture ~/Desktop/A$(date +%Y%m%d%H%M%S).png libpng warning: zero length keyword libpng warning: Empty language field in iTXt chunk First one is &ldquo;interactive&rdquo; - Cmd-Shift-3 with selection tool, second is full screen
 
       </div>
     

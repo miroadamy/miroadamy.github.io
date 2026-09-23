@@ -7,12 +7,12 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Tue, 22 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ai</title>
       <link>https://miroadamy.com/tags/ai/</link>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0200</pubDate>
       
       <guid>https://miroadamy.com/tags/ai/</guid>
       <description></description>
@@ -22,7 +22,7 @@
     <item>
       <title>Catching-Up</title>
       <link>https://miroadamy.com/tags/catching-up/</link>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0200</pubDate>
       
       <guid>https://miroadamy.com/tags/catching-up/</guid>
       <description></description>
@@ -32,9 +32,29 @@
     <item>
       <title>Claude</title>
       <link>https://miroadamy.com/tags/claude/</link>
-      <pubDate>Tue, 22 Sep 2026 00:00:00 +0200</pubDate>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0200</pubDate>
       
       <guid>https://miroadamy.com/tags/claude/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Obsidian</title>
+      <link>https://miroadamy.com/tags/obsidian/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/obsidian/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Pkm</title>
+      <link>https://miroadamy.com/tags/pkm/</link>
+      <pubDate>Wed, 23 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/pkm/</guid>
       <description></description>
       
     </item>
@@ -60,26 +80,6 @@
     </item>
     
     <item>
-      <title>Obsidian</title>
-      <link>https://miroadamy.com/tags/obsidian/</link>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0200</pubDate>
-      
-      <guid>https://miroadamy.com/tags/obsidian/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Pkm</title>
-      <link>https://miroadamy.com/tags/pkm/</link>
-      <pubDate>Sun, 20 Sep 2026 00:00:00 +0200</pubDate>
-      
-      <guid>https://miroadamy.com/tags/pkm/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Note-Taking</title>
       <link>https://miroadamy.com/tags/note-taking/</link>
       <pubDate>Thu, 17 Sep 2026 00:00:00 +0200</pubDate>
@@ -90,7 +90,7 @@
     </item>
     
     <item>
-      <title>Aws</title>
+      <title>AWS</title>
       <link>https://miroadamy.com/tags/aws/</link>
       <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
       
