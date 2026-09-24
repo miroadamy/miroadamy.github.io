@@ -7,7 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Catching-Up</title>
+      <link>https://miroadamy.com/tags/catching-up/</link>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/catching-up/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Data-Hygiene</title>
+      <link>https://miroadamy.com/tags/data-hygiene/</link>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/data-hygiene/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Declutter</title>
+      <link>https://miroadamy.com/tags/declutter/</link>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/declutter/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Nas</title>
+      <link>https://miroadamy.com/tags/nas/</link>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/nas/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Ai</title>
@@ -15,16 +55,6 @@
       <pubDate>Wed, 23 Sep 2026 00:00:00 +0200</pubDate>
       
       <guid>https://miroadamy.com/tags/ai/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Catching-Up</title>
-      <link>https://miroadamy.com/tags/catching-up/</link>
-      <pubDate>Wed, 23 Sep 2026 00:00:00 +0200</pubDate>
-      
-      <guid>https://miroadamy.com/tags/catching-up/</guid>
       <description></description>
       
     </item>
@@ -190,7 +220,7 @@
     </item>
     
     <item>
-      <title>Api</title>
+      <title>API</title>
       <link>https://miroadamy.com/tags/api/</link>
       <pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
       
@@ -310,7 +340,7 @@
     </item>
     
     <item>
-      <title>IaaC</title>
+      <title>Iaac</title>
       <link>https://miroadamy.com/tags/iaac/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       

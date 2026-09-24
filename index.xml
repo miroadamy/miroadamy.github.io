@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Wed, 23 Sep 2026 14:38:18 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Sep 2026 10:40:39 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Now</title>
@@ -32,10 +32,20 @@
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Wed, 23 Sep 2026 14:38:18 +0000</pubDate>
+      <pubDate>Thu, 24 Sep 2026 10:40:39 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
-      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.164.0+extended+withdeploy darwin/arm64 BuildDate=2026-07-06T16:39:30Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: 145fb97a601e6802594da9d35a47894465cb3be3&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: be63d03bea2fb8b624e00cb382423639f86ddc7f&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-09-23T14:38:18Z&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.166.0+extended+withdeploy darwin/arm64 BuildDate=2026-09-09T14:45:02Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: fc4d116d20b92371a3ef0297084134174c3fc9c5&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: be63d03bea2fb8b624e00cb382423639f86ddc7f&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-09-24T10:40:39Z&amp;rdquo;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Catching up: Reorganizing My Digital Life</title>
+      <link>https://miroadamy.com/posts/2026-09-24-reorganizing-my-digital-life/</link>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-09-24-reorganizing-my-digital-life/</guid>
+      <description>&lt;p&gt;I have always been a pack rat when it came to digital assets. I didn&amp;rsquo;t like the idea of deleting files. What if I want to come back to them later? After all, they don&amp;rsquo;t really take almost any physical space compared to paper books (certainly not now, in the age of multi-terabyte hard drives and the cloud). So what I did - I kept archiving them.&lt;/p&gt;&#xA;&lt;p&gt;It started in the late &amp;rsquo;80s and the &amp;rsquo;90s with floppy disks, eventually migrated to external hard drives, CDs, DVDs and with the ascent of the cloud they ended up in a variety of various storage solutions.&lt;/p&gt;</description>
       
     </item>
     
@@ -285,7 +295,7 @@
       <pubDate>Tue, 17 Dec 2019 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/posts/2019-12-17-30-day-commit-challenge-1/</guid>
-      <description>&lt;p&gt;Time to make checkpoint number 1 - it is day 11 of 30.&lt;/p&gt;&#xA;&lt;p&gt;So far - out of this 11 days I have 10 days with commits. The missing day was fully dedicated to working on presentation and documentation, that unfortunately ends up Confluence and Google Doc, not in some proper textual format (read: Markdown or RestructuredText) backed by a repository.&lt;/p&gt;&#xA;&lt;p&gt;Stuff that I worked on:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;some minor updates to resume (added AWS badges, fixed some typos)&lt;/li&gt;&#xA;&lt;li&gt;notes from certification courses + code fragments&lt;/li&gt;&#xA;&lt;li&gt;scripts for automation of documents / ebooks backup from iCloud to local drives&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Most commits went to documentation / practice code for my project &amp;ldquo;Many ways to Kubernetes&amp;rdquo; where I play with building up K8s clusters using different approaches. So far I did the &amp;ldquo;Kubernetes the hard way&amp;rdquo; - following the course from Linux Academy (&lt;a href=&#34;https://linuxacademy.com/cp/modules/view/id/221%29&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://linuxacademy.com/cp/modules/view/id/221)&lt;/a&gt;,&lt;/p&gt;</description>
+      <description>&lt;p&gt;Time to make checkpoint number 1 - it is day 11 of 30.&lt;/p&gt;&#xA;&lt;p&gt;So far - out of this 11 days I have 10 days with commits. The missing day was fully dedicated to working on presentation and documentation, that unfortunately ends up Confluence and Google Doc, not in some proper textual format (read: Markdown or RestructuredText) backed by a repository.&lt;/p&gt;&#xA;&lt;p&gt;Stuff that I worked on:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;some minor updates to resume (added AWS badges, fixed some typos)&lt;/li&gt;&#xA;&lt;li&gt;notes from certification courses + code fragments&lt;/li&gt;&#xA;&lt;li&gt;scripts for automation of documents / ebooks backup from iCloud to local drives&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Most commits went to documentation / practice code for my project &amp;ldquo;Many ways to Kubernetes&amp;rdquo; where I play with building up K8s clusters using different approaches. So far I did the &amp;ldquo;Kubernetes the hard way&amp;rdquo; - following the course from Linux Academy (&lt;a href=&#34;https://linuxacademy.com/cp/modules/view/id/221&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://linuxacademy.com/cp/modules/view/id/221&lt;/a&gt;),&lt;/p&gt;</description>
       
     </item>
     
@@ -1245,7 +1255,7 @@
       <pubDate>Tue, 31 Dec 2013 00:57:35 -0500</pubDate>
       
       <guid>https://miroadamy.com/posts/2013-12-31-binding-dashdoc-with-editors-and-eclipse/</guid>
-      <description>&lt;p&gt;If you use DashDoc (see &lt;a href=&#34;http://kapeli.com/dash%29&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;http://kapeli.com/dash)&lt;/a&gt;, it can be integrated with editor or Eclipse to allow automatically find selected text in Dash documentation sets:&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Sublime Text&#xA;    &lt;div id=&#34;sublime-text&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#sublime-text&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;This is easy - there is DashDoc plugin - &lt;a href=&#34;https://sublime.wbond.net/packages/DashDoc&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://sublime.wbond.net/packages/DashDoc&lt;/a&gt;&lt;br&gt;&#xA;The plugin is OS-X specific, because the DashDoc is&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Start Package Control (Cmd-Shift-P)&lt;/li&gt;&#xA;&lt;li&gt;select Install Package (type Install)&lt;/li&gt;&#xA;&lt;li&gt;select DashDoc&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The Ctrl-H does the search&lt;/p&gt;</description>
+      <description>&lt;p&gt;If you use DashDoc (see &lt;a href=&#34;http://kapeli.com/dash&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;http://kapeli.com/dash&lt;/a&gt;), it can be integrated with editor or Eclipse to allow automatically find selected text in Dash documentation sets:&lt;/p&gt;&#xA;&#xA;&lt;h3 class=&#34;relative group&#34;&gt;Sublime Text&#xA;    &lt;div id=&#34;sublime-text&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#sublime-text&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;This is easy - there is DashDoc plugin - &lt;a href=&#34;https://sublime.wbond.net/packages/DashDoc&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://sublime.wbond.net/packages/DashDoc&lt;/a&gt;&lt;br&gt;&#xA;The plugin is OS-X specific, because the DashDoc is&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Start Package Control (Cmd-Shift-P)&lt;/li&gt;&#xA;&lt;li&gt;select Install Package (type Install)&lt;/li&gt;&#xA;&lt;li&gt;select DashDoc&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;The Ctrl-H does the search&lt;/p&gt;</description>
       
     </item>
     

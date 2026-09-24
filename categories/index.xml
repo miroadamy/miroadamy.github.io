@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Wed, 23 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 24 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Lifehacks</title>
+      <link>https://miroadamy.com/categories/lifehacks/</link>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/categories/lifehacks/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Technology</title>
@@ -125,16 +135,6 @@
       <pubDate>Tue, 31 Mar 2020 11:24:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/categories/startup-life/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Lifehacks</title>
-      <link>https://miroadamy.com/categories/lifehacks/</link>
-      <pubDate>Tue, 17 Dec 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/categories/lifehacks/</guid>
       <description></description>
       
     </item>

@@ -161,8 +161,8 @@ José was responsible (among other things) for setting up integration and QA env
   <link
     type="text/css"
     rel="stylesheet"
-    href="/css/main.bundle.min.109d05baab980c4b552cffcf3c585559d3979bc7da97727e30e07886dec2dffbcf308e213e7e92a19c9c1641392f2901de07dcd784b311ec17dfaa88200741d9.css"
-    integrity="sha512-EJ0FuquYDEtVLP/PPFhVWdOXm8fal3J&#43;MOB4ht7C3/vPMI4hPn6SoZycFkE5LykB3gfc14SzEewX36qIIAdB2Q==">
+    href="/css/main.bundle.min.8e346258e19ead6d6cf569c124ed077af36b8362d57a92c76ecf2bcba4b335e32c4c1dbaabc0e10eaca6a37355d5f54830e02be1f69f61591104a1f91c7c8460.css"
+    integrity="sha512-jjRiWOGerW1s9WnBJO0HevNrg2LVepLHbs8ry6SzNeMsTB26q8DhDqymo3NV1fVIMOAr4fafYVkRBKH5HHyEYA==">
 
   
   
@@ -1093,7 +1093,7 @@ José was responsible (among other things) for setting up integration and QA env
 <li>Sonarqube server that provided code quality tools (internally consisting of Java based server and a database - usually PostgreSQL)</li>
 </ul>
 <p>Setting up and maintaining this cuckoo-clock of servers and services and especially running multiple environments without going overboard with server management overhead was definitely not easy. It would take 1-2 days setting up such an environment from scratch (meaning start with OS). Just a single one environment &hellip;</p>
-<p>José did not have that amount of time and did not particularly like doing the same steps over and over. He also could not guarantee he would not never make a mistake or leave out and would not have to start over. In accordance with 3 virtues of Great Programmers (see <a href="http://threevirtues.com/%29"  target="_blank" rel="noreferrer">http://threevirtues.com/)</a>, José decided to package and automate the hell out of that.</p>
+<p>José did not have that amount of time and did not particularly like doing the same steps over and over. He also could not guarantee he would not never make a mistake or leave out and would not have to start over. In accordance with 3 virtues of Great Programmers (see <a href="http://threevirtues.com/"  target="_blank" rel="noreferrer">http://threevirtues.com/</a>), José decided to package and automate the hell out of that.</p>
 <p>Thinkwrap Valencia office had good experience with using containers so José started there: using existing public images for Jenkins, Sonar, Solr, Nginx and database and Thinkwrap custom-built images for Hybris app servers he quickly managed to build working docker-compose setup that allowed him (and any developer brave enough to run Docker on her Mac) to spin up the multitude of containers that encapsulated all apps and configurations for the environment.</p>
 <p>Yes, Macbooks are powerful beasts, but even on Quad-core i7 with 16 GB RAM the environment cannot run 6-7 docker images easily, when one or two of them are 6 GB monster Hybris containers. Other applications that are memory hogs (yes, I am looking at you - Chrome, Slack, Visual Studio Code and IntelliJ) will become annoyingly slow and using this environment will eventually become an exercise of patience. And do not even think of running two copies of the environment &hellip;</p>
 <p>So José started to search for a server. There is this place called AWS that has plenty of servers, but there is a small problem with them: they cost money. Unfortunately, most clients are rather unfriendly when asked for additional monthly funds to run something businesswise unimportant such as unit tests and code quality tools. As a consequence, most PMs were not brave enough to raise that topic with clients, so José had to look elsewhere.</p>
