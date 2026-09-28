@@ -7,7 +7,57 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Thu, 24 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ai</title>
+      <link>https://miroadamy.com/tags/ai/</link>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ai/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Commons</title>
+      <link>https://miroadamy.com/tags/commons/</link>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/commons/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Wikidata</title>
+      <link>https://miroadamy.com/tags/wikidata/</link>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/wikidata/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Wikimedia</title>
+      <link>https://miroadamy.com/tags/wikimedia/</link>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/wikimedia/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Wikipedia</title>
+      <link>https://miroadamy.com/tags/wikipedia/</link>
+      <pubDate>Mon, 28 Sep 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/wikipedia/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Catching-Up</title>
@@ -45,16 +95,6 @@
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
       
       <guid>https://miroadamy.com/tags/nas/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Ai</title>
-      <link>https://miroadamy.com/tags/ai/</link>
-      <pubDate>Wed, 23 Sep 2026 00:00:00 +0200</pubDate>
-      
-      <guid>https://miroadamy.com/tags/ai/</guid>
       <description></description>
       
     </item>
@@ -120,7 +160,7 @@
     </item>
     
     <item>
-      <title>AWS</title>
+      <title>Aws</title>
       <link>https://miroadamy.com/tags/aws/</link>
       <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
       
@@ -340,7 +380,7 @@
     </item>
     
     <item>
-      <title>Iaac</title>
+      <title>IaaC</title>
       <link>https://miroadamy.com/tags/iaac/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
