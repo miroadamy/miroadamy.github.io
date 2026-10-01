@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Backup on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/backup/</link>
+    <description>Recent content in Backup on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/backup/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Catching up: Offsite Backups That Let Me Sleep</title>
+      <link>https://miroadamy.com/posts/2026-10-01-offsite-backups-with-restic-and-hetzner/</link>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-10-01-offsite-backups-with-restic-and-hetzner/</guid>
+      <description>&lt;p&gt;Consolidating a digital life onto one NAS has an ugly side effect: everything now burns in the same fire. In the previous posts I described how I moved decades of files, photos and documents onto a single &lt;a href=&#34;https://www.synology.com/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Synology&lt;/a&gt; box at home. This post is about the second half of that story - getting a copy of it out of the house, encrypted, in a way that lets me sleep.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;Picking the provider&#xA;    &lt;div id=&#34;picking-the-provider&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#picking-the-provider&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;The first lesson was that where a company keeps its servers and where it is registered are two different things. &lt;a href=&#34;https://www.backblaze.com/&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Backblaze&lt;/a&gt; has European data centers, but it is a Californian company, and the US CLOUD Act follows the company, not the building. For a family archive I wanted a European company in a European data center.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
