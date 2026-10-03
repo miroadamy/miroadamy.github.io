@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title></title>
+      <link>https://miroadamy.com/notes/what-to-blue/</link>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/notes/what-to-blue/</guid>
+      <description>&lt;p&gt;Na slovenskej Wikipédii je veľa červených odkazov - teda odkazov na články, ktoré zatiaľ neexistujú. Na to existuje šikovný nástroj: &lt;a href=&#34;https://whattodo.toolforge.org/whattoblue?lang=sk&amp;amp;topic=Computing&amp;amp;importance=Any&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;What to Blue&lt;/a&gt;, ktorý chýbajúce články zoradí podľa popularity, takže hneď vidno, ktorý nový článok by Wikipédii pomohol najviac.&lt;/p&gt;&#xA;&lt;p&gt;Chvíľu som sa s ním hral a rozhodol som sa sústrediť na oblasť, ktorej rozumiem najviac: softvérové inžinierstvo, open source a ľudia zo sveta softvéru, ktorých pozná každý programátor, ale málokto iný. Na slovenskej Wikipédii sú výrazne podreprezentovaní. Ich články buď úplne chýbajú, alebo sú to len krátke výhonky - oveľa kratšie ako česká verzia, o anglickej ani nehovoriac. Špeciálnou kategóriou sú ženy v tejto oblasti - zastúpenie stránok venovaných ženám v Computer Science na slovenskej Wikipédii je hanebne žalostné.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title></title>

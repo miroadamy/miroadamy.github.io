@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Thu, 01 Oct 2026 22:19:54 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Oct 2026 15:18:54 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Now</title>
@@ -32,10 +32,30 @@
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Thu, 01 Oct 2026 22:19:54 +0000</pubDate>
+      <pubDate>Sat, 03 Oct 2026 15:18:54 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
-      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.166.0+extended+withdeploy darwin/arm64 BuildDate=2026-09-09T14:45:02Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: a9a0ccacc83fd24bbb95038922d95a6fc730708b&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: 51a361e068b9975c7f1df8e2bb223db03fe49c2b&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-10-01T22:19:54Z&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.166.0+extended+withdeploy darwin/arm64 BuildDate=2026-09-09T14:45:02Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: e8b7961a4e9a2fb995c0611b4e8bdd4734f8d28a&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: 51a361e068b9975c7f1df8e2bb223db03fe49c2b&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-10-03T15:18:54Z&amp;rdquo;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Catching up: Taming the Online Storages</title>
+      <link>https://miroadamy.com/posts/2026-10-03-taming-the-online-storages/</link>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-10-03-taming-the-online-storages/</guid>
+      <description>&lt;p&gt;In July 2023 I sat down to list every place my files lived. The list had eight entries - seven online storages and one line for &amp;ldquo;external volumes&amp;rdquo; - and at the bottom a checkbox: &amp;ldquo;Finish this list&amp;rdquo;. It stayed unchecked for three years, which tells you everything about the problem.&lt;/p&gt;&#xA;&lt;p&gt;In the &lt;a href=&#34;https://miroadamy.com/posts/2026-09-24-reorganizing-my-digital-life/&#34; &gt;earlier post about reorganizing my digital life&lt;/a&gt; I described the big picture: the Data Map, the disk catalog, the new NAS. This one zooms in on the clouds, one by one.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://miroadamy.com/notes/what-to-blue/</link>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/notes/what-to-blue/</guid>
+      <description>&lt;p&gt;Na slovenskej Wikipédii je veľa červených odkazov - teda odkazov na články, ktoré zatiaľ neexistujú. Na to existuje šikovný nástroj: &lt;a href=&#34;https://whattodo.toolforge.org/whattoblue?lang=sk&amp;amp;topic=Computing&amp;amp;importance=Any&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;What to Blue&lt;/a&gt;, ktorý chýbajúce články zoradí podľa popularity, takže hneď vidno, ktorý nový článok by Wikipédii pomohol najviac.&lt;/p&gt;&#xA;&lt;p&gt;Chvíľu som sa s ním hral a rozhodol som sa sústrediť na oblasť, ktorej rozumiem najviac: softvérové inžinierstvo, open source a ľudia zo sveta softvéru, ktorých pozná každý programátor, ale málokto iný. Na slovenskej Wikipédii sú výrazne podreprezentovaní. Ich články buď úplne chýbajú, alebo sú to len krátke výhonky - oveľa kratšie ako česká verzia, o anglickej ani nehovoriac. Špeciálnou kategóriou sú ženy v tejto oblasti - zastúpenie stránok venovaných ženám v Computer Science na slovenskej Wikipédii je hanebne žalostné.&lt;/p&gt;</description>
       
     </item>
     

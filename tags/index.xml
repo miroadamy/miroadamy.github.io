@@ -7,7 +7,47 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Oct 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Catching-Up</title>
+      <link>https://miroadamy.com/tags/catching-up/</link>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/catching-up/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Cloud-Storage</title>
+      <link>https://miroadamy.com/tags/cloud-storage/</link>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/cloud-storage/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Declutter</title>
+      <link>https://miroadamy.com/tags/declutter/</link>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/declutter/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Icloud</title>
+      <link>https://miroadamy.com/tags/icloud/</link>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/icloud/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Backup</title>
@@ -15,16 +55,6 @@
       <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
       
       <guid>https://miroadamy.com/tags/backup/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Catching-Up</title>
-      <link>https://miroadamy.com/tags/catching-up/</link>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
-      
-      <guid>https://miroadamy.com/tags/catching-up/</guid>
       <description></description>
       
     </item>
@@ -145,16 +175,6 @@
       <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
       
       <guid>https://miroadamy.com/tags/data-hygiene/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Declutter</title>
-      <link>https://miroadamy.com/tags/declutter/</link>
-      <pubDate>Thu, 24 Sep 2026 00:00:00 +0200</pubDate>
-      
-      <guid>https://miroadamy.com/tags/declutter/</guid>
       <description></description>
       
     </item>
@@ -440,7 +460,7 @@
     </item>
     
     <item>
-      <title>Ecommerce</title>
+      <title>ECommerce</title>
       <link>https://miroadamy.com/tags/ecommerce/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
@@ -450,7 +470,7 @@
     </item>
     
     <item>
-      <title>Iaac</title>
+      <title>IaaC</title>
       <link>https://miroadamy.com/tags/iaac/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       

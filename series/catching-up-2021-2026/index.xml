@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Thu, 01 Oct 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/series/catching-up-2021-2026/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Oct 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/series/catching-up-2021-2026/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Catching up: Taming the Online Storages</title>
+      <link>https://miroadamy.com/posts/2026-10-03-taming-the-online-storages/</link>
+      <pubDate>Sat, 03 Oct 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-10-03-taming-the-online-storages/</guid>
+      <description>&lt;p&gt;In July 2023 I sat down to list every place my files lived. The list had eight entries - seven online storages and one line for &amp;ldquo;external volumes&amp;rdquo; - and at the bottom a checkbox: &amp;ldquo;Finish this list&amp;rdquo;. It stayed unchecked for three years, which tells you everything about the problem.&lt;/p&gt;&#xA;&lt;p&gt;In the &lt;a href=&#34;https://miroadamy.com/posts/2026-09-24-reorganizing-my-digital-life/&#34; &gt;earlier post about reorganizing my digital life&lt;/a&gt; I described the big picture: the Data Map, the disk catalog, the new NAS. This one zooms in on the clouds, one by one.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Catching up: Offsite Backups That Let Me Sleep</title>
