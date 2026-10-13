@@ -7,7 +7,57 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Mon, 05 Oct 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Oct 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>History</title>
+      <link>https://miroadamy.com/tags/history/</link>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/history/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Italy</title>
+      <link>https://miroadamy.com/tags/italy/</link>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/italy/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Napoli</title>
+      <link>https://miroadamy.com/tags/napoli/</link>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/napoli/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Pompeii</title>
+      <link>https://miroadamy.com/tags/pompeii/</link>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/pompeii/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Travel</title>
+      <link>https://miroadamy.com/tags/travel/</link>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 +0200</pubDate>
+      
+      <guid>https://miroadamy.com/tags/travel/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Catching-Up</title>
@@ -290,7 +340,7 @@
     </item>
     
     <item>
-      <title>AWS</title>
+      <title>Aws</title>
       <link>https://miroadamy.com/tags/aws/</link>
       <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
       
@@ -380,7 +430,7 @@
     </item>
     
     <item>
-      <title>Api</title>
+      <title>API</title>
       <link>https://miroadamy.com/tags/api/</link>
       <pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
       
@@ -750,16 +800,6 @@
     </item>
     
     <item>
-      <title>Travel</title>
-      <link>https://miroadamy.com/tags/travel/</link>
-      <pubDate>Sun, 29 Sep 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/travel/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Spanish</title>
       <link>https://miroadamy.com/tags/spanish/</link>
       <pubDate>Thu, 12 Sep 2019 11:22:48 +0800</pubDate>
@@ -775,16 +815,6 @@
       <pubDate>Thu, 29 Aug 2019 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/slovakia/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>History</title>
-      <link>https://miroadamy.com/tags/history/</link>
-      <pubDate>Wed, 21 Aug 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/history/</guid>
       <description></description>
       
     </item>
@@ -1415,16 +1445,6 @@
       <pubDate>Thu, 27 Sep 2007 23:00:05 -0400</pubDate>
       
       <guid>https://miroadamy.com/tags/dot-net/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Italy</title>
-      <link>https://miroadamy.com/tags/italy/</link>
-      <pubDate>Mon, 20 Aug 2007 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/italy/</guid>
       <description></description>
       
     </item>
