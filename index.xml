@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Tue, 13 Oct 2026 09:13:06 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Oct 2026 11:56:45 +0000</lastBuildDate><atom:link href="https://miroadamy.com/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Now</title>
@@ -32,10 +32,20 @@
     <item>
       <title>status</title>
       <link>https://miroadamy.com/status/</link>
-      <pubDate>Tue, 13 Oct 2026 09:13:06 +0000</pubDate>
+      <pubDate>Tue, 27 Oct 2026 11:56:45 +0000</pubDate>
       
       <guid>https://miroadamy.com/status/</guid>
-      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.166.0+extended+withdeploy darwin/arm64 BuildDate=2026-09-09T14:45:02Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: c3200104c7a4048e22059aa08a0b665ba4758950&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: 51a361e068b9975c7f1df8e2bb223db03fe49c2b&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-10-13T09:13:06Z&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;h3 class=&#34;relative group&#34;&gt;Status&#xA;    &lt;div id=&#34;status&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#status&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h3&gt;&#xA;&lt;p&gt;hugo v0.166.0+extended+withdeploy darwin/arm64 BuildDate=2026-09-09T14:45:02Z VendorInfo=Homebrew&lt;/p&gt;&#xA;&lt;p&gt;Pygments version 2.21.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.&lt;/p&gt;&#xA;&lt;p&gt;Blog commit: 88257b73ac5bc66f4b44278db881cae5f81d3ca7&lt;/p&gt;&#xA;&lt;p&gt;Theme commit: 51a361e068b9975c7f1df8e2bb223db03fe49c2b&lt;/p&gt;&#xA;&lt;p&gt;Published: &amp;ldquo;2026-10-27T11:56:45Z&amp;rdquo;&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Feri, My LLM Coach</title>
+      <link>https://miroadamy.com/posts/2026-10-27-feri-my-llm-coach/</link>
+      <pubDate>Tue, 27 Oct 2026 00:00:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-10-27-feri-my-llm-coach/</guid>
+      <description>&lt;p&gt;In &lt;a href=&#34;https://miroadamy.com/posts/2026-09-23-obsidian-plus-claude/&#34; &gt;the post about Obsidian and Claude&lt;/a&gt; Feri got one paragraph, as the only agent in my vault named after a real person. He deserves a post, because he is the reason the rest of the health machinery exists. The watch, the lifting app, the daily export, the scripts that turn it all into notes: none of that was the goal. The goal was to have a coach again.&lt;/p&gt;&#xA;&#xA;&lt;h2 class=&#34;relative group&#34;&gt;The real Feri&#xA;    &lt;div id=&#34;the-real-feri&#34; class=&#34;anchor&#34;&gt;&lt;/div&gt;&#xA;    &#xA;    &lt;span&#xA;        class=&#34;absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none&#34;&gt;&#xA;        &lt;a class=&#34;text-primary-300 dark:text-neutral-700 !no-underline&#34; href=&#34;#the-real-feri&#34; aria-label=&#34;Anchor&#34;&gt;#&lt;/a&gt;&#xA;    &lt;/span&gt;&#xA;    &#xA;&lt;/h2&gt;&#xA;&lt;p&gt;I got my first personal trainer in Spain. His name was Carles and he was fantastic. We originally started working on certain pains and injuries I had picked up while pushing myself to performance levels that were, in hindsight, obviously meant for younger and fitter bodies. Carles was very well versed in physiotherapy and his exercises worked.&lt;/p&gt;</description>
       
     </item>
     
