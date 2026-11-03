@@ -7,14 +7,64 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Nov 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ai</title>
       <link>https://miroadamy.com/tags/ai/</link>
-      <pubDate>Tue, 27 Oct 2026 00:00:00 +0100</pubDate>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0100</pubDate>
       
       <guid>https://miroadamy.com/tags/ai/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Apple-Watch</title>
+      <link>https://miroadamy.com/tags/apple-watch/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/tags/apple-watch/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Automation</title>
+      <link>https://miroadamy.com/tags/automation/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/tags/automation/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Health</title>
+      <link>https://miroadamy.com/tags/health/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/tags/health/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hevy</title>
+      <link>https://miroadamy.com/tags/hevy/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/tags/hevy/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Obsidian</title>
+      <link>https://miroadamy.com/tags/obsidian/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/tags/obsidian/</guid>
       <description></description>
       
     </item>
@@ -45,16 +95,6 @@
       <pubDate>Tue, 27 Oct 2026 00:00:00 +0100</pubDate>
       
       <guid>https://miroadamy.com/tags/fitness/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Obsidian</title>
-      <link>https://miroadamy.com/tags/obsidian/</link>
-      <pubDate>Tue, 27 Oct 2026 00:00:00 +0100</pubDate>
-      
-      <guid>https://miroadamy.com/tags/obsidian/</guid>
       <description></description>
       
     </item>
@@ -450,7 +490,7 @@
     </item>
     
     <item>
-      <title>Api</title>
+      <title>API</title>
       <link>https://miroadamy.com/tags/api/</link>
       <pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
       
@@ -570,7 +610,7 @@
     </item>
     
     <item>
-      <title>Iaac</title>
+      <title>IaaC</title>
       <link>https://miroadamy.com/tags/iaac/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       

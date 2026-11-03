@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Tue, 27 Oct 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://miroadamy.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 Nov 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://miroadamy.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Devops</title>
+      <link>https://miroadamy.com/categories/devops/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/categories/devops/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Technology</title>
@@ -35,16 +45,6 @@
       <pubDate>Sat, 03 Oct 2026 00:00:00 +0200</pubDate>
       
       <guid>https://miroadamy.com/categories/lifehacks/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>DevOps</title>
-      <link>https://miroadamy.com/categories/devops/</link>
-      <pubDate>Thu, 01 Oct 2026 00:00:00 +0200</pubDate>
-      
-      <guid>https://miroadamy.com/categories/devops/</guid>
       <description></description>
       
     </item>

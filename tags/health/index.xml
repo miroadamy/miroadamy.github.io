@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Health on Miro&#39;s World</title>
+    <link>https://miroadamy.com/tags/health/</link>
+    <description>Recent content in Health on Miro&#39;s World</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2026 Miro Adamy</copyright>
+    <lastBuildDate>Tue, 03 Nov 2026 00:00:00 +0100</lastBuildDate><atom:link href="https://miroadamy.com/tags/health/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How My Health Data Flows Into My Notes</title>
+      <link>https://miroadamy.com/posts/2026-11-03-how-my-health-data-flows-into-my-notes/</link>
+      <pubDate>Tue, 03 Nov 2026 00:00:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-11-03-how-my-health-data-flows-into-my-notes/</guid>
+      <description>&lt;p&gt;In the &lt;a href=&#34;https://miroadamy.com/posts/2026-09-23-obsidian-plus-claude/&#34; &gt;post about Obsidian and Claude&lt;/a&gt; I said that the health-data flow deserves a post of its own, and the &lt;a href=&#34;https://miroadamy.com/posts/2026-10-05-what-changed/&#34; &gt;last part of the series&lt;/a&gt; promised it again. Here it is: how numbers from the watch on my wrist and the app on my phone end up in my notes every morning, without me touching anything. The reason it has to be every morning is &lt;a href=&#34;https://miroadamy.com/posts/2026-10-27-feri-my-llm-coach/&#34; &gt;Feri, my LLM coach&lt;/a&gt;: he prescribes the next session from that morning&amp;rsquo;s data, and he is only as good as what he is given.&lt;/p&gt;</description>
+      
+    </item>
+    
+  </channel>
+</rss>
