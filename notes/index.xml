@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Wed, 04 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Be kind to the machine, just in case</title>
+      <link>https://miroadamy.com/notes/be-kind-to-the-machine-just-in-case/</link>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/notes/be-kind-to-the-machine-just-in-case/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://medium.com/towards-artificial-intelligence/anthropic-abuse-policy-313daf11db22&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;https://medium.com/towards-artificial-intelligence/anthropic-abuse-policy-313daf11db22&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Enzo Lombardi takes apart one clause in Anthropic&amp;rsquo;s updated usage policy, the one that bans &amp;ldquo;sustained and needless abusive or cruel behavior toward our models&amp;rdquo;. Not cruelty to people. Cruelty to the model. It covers only extreme, pointless cases; arguing with the model or writing dark fiction stays fine.&lt;/p&gt;&#xA;&lt;p&gt;He finds three paradoxes. The model itself decides what counts as abuse, so the possible victim is also the judge. The company admits it does not know whether a model can suffer, and writes an enforceable rule anyway. And harm to humans is handled as a compliance checklist, while harm to software gets the language of moral concern.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>The Buddha and the Angry Man</title>

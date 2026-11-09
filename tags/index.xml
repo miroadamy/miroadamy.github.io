@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Wed, 04 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ai</title>
+      <link>https://miroadamy.com/tags/ai/</link>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ai/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Claude</title>
+      <link>https://miroadamy.com/tags/claude/</link>
+      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/tags/claude/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Philosophy</title>
@@ -25,16 +45,6 @@
       <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://miroadamy.com/tags/stories/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Ai</title>
-      <link>https://miroadamy.com/tags/ai/</link>
-      <pubDate>Tue, 03 Nov 2026 00:00:00 +0100</pubDate>
-      
-      <guid>https://miroadamy.com/tags/ai/</guid>
       <description></description>
       
     </item>
@@ -85,16 +95,6 @@
       <pubDate>Tue, 03 Nov 2026 00:00:00 +0100</pubDate>
       
       <guid>https://miroadamy.com/tags/obsidian/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Claude</title>
-      <link>https://miroadamy.com/tags/claude/</link>
-      <pubDate>Tue, 27 Oct 2026 00:00:00 +0100</pubDate>
-      
-      <guid>https://miroadamy.com/tags/claude/</guid>
       <description></description>
       
     </item>
@@ -640,7 +640,7 @@
     </item>
     
     <item>
-      <title>ECommerce</title>
+      <title>Ecommerce</title>
       <link>https://miroadamy.com/tags/ecommerce/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
@@ -650,7 +650,7 @@
     </item>
     
     <item>
-      <title>IaaC</title>
+      <title>Iaac</title>
       <link>https://miroadamy.com/tags/iaac/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
