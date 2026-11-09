@@ -59,5 +59,25 @@
       
     </item>
     
+    <item>
+      <title>Claude, the garden planner</title>
+      <link>https://miroadamy.com/notes/claude-the-garden-planner/</link>
+      <pubDate>Mon, 21 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/notes/claude-the-garden-planner/</guid>
+      <description>&lt;p&gt;Both my wife and I have our favorite toys and leisure activities: mine are gadgets, books, internet and recently AI. And one of hers was always the garden. We also have many shared leisure activities like hiking and traveling, but that&amp;rsquo;s not the point; the point is how these two worlds, the world of AI and the world of gardening, suddenly connected.&lt;/p&gt;&#xA;&lt;p&gt;She has been using AI, mainly Google Gemini, for some time, and was quite impressed with its results. I couldn&amp;rsquo;t really convince her that Claude (especially Opus and Fable) is in a different league. Technically, it wasn&amp;rsquo;t a fair comparison, because she was using the free models from Gemini and I was using the top models from Claude, but nevertheless.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>I always run out of tokens</title>
+      <link>https://miroadamy.com/notes/i-always-run-out-of-tokens/</link>
+      <pubDate>Fri, 18 Sep 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/notes/i-always-run-out-of-tokens/</guid>
+      <description>&lt;p&gt;Whatever I sit down to do with an AI coding assistant, the session ends the same&#xA;way: the token budget is gone. It does not seem to matter what the task was. Fix&#xA;one small bug, plan a migration, write a three-paragraph note like this one - by&#xA;the end I am watching the context meter instead of the work.&lt;/p&gt;&#xA;&lt;p&gt;For a while I read that as bad estimation on my part. I think it is something&#xA;duller. The work is not what costs; the &lt;em&gt;situating&lt;/em&gt; is. Before anything useful&#xA;happens, the assistant has to be told where it is: which repo, which&#xA;conventions, what was decided last week and why, which of my rules are real&#xA;rules. That bill is roughly the same whether the edit that follows is one line or&#xA;two hundred. So a trivial task and a serious one cost about the same to start,&#xA;and only the serious one feels worth it afterwards.&lt;/p&gt;</description>
+      
+    </item>
+    
   </channel>
 </rss>

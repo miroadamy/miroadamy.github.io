@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0200</lastBuildDate><atom:link href="https://miroadamy.com/tags/wikipedia/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/tags/wikipedia/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>What to blue</title>
+      <link>https://miroadamy.com/notes/what-to-blue/</link>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/notes/what-to-blue/</guid>
+      <description>&lt;p&gt;Na slovenskej Wikipédii je veľa červených odkazov - teda odkazov na články, ktoré zatiaľ neexistujú. Na to existuje šikovný nástroj: &lt;a href=&#34;https://whattodo.toolforge.org/whattoblue?lang=sk&amp;amp;topic=Computing&amp;amp;importance=Any&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;What to Blue&lt;/a&gt;, ktorý chýbajúce články zoradí podľa popularity, takže hneď vidno, ktorý nový článok by Wikipédii pomohol najviac.&lt;/p&gt;&#xA;&lt;p&gt;Chvíľu som sa s ním hral a rozhodol som sa sústrediť na oblasť, ktorej rozumiem najviac: softvérové inžinierstvo, open source a ľudia zo sveta softvéru, ktorých pozná každý programátor, ale málokto iný. Na slovenskej Wikipédii sú výrazne podreprezentovaní. Ich články buď úplne chýbajú, alebo sú to len krátke výhonky - oveľa kratšie ako česká verzia, o anglickej ani nehovoriac. Špeciálnou kategóriou sú ženy v tejto oblasti - zastúpenie stránok venovaných ženám v Computer Science na slovenskej Wikipédii je hanebne žalostné.&lt;/p&gt;</description>
+      
+    </item>
+    
+    <item>
+      <title>Wiki miluje film</title>
+      <link>https://miroadamy.com/notes/wiki-miluje-film/</link>
+      <pubDate>Thu, 01 Oct 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/notes/wiki-miluje-film/</guid>
+      <description>&lt;p&gt;Wikimedia Editaton - &amp;ldquo;Wiki miluje film&amp;rdquo; sa včera skončil. Tento rok editori slovenskej Wikipédie pridali 45 nových článkov na tému film, herci, seriály a všetko, čo súvisí s filmovým umením. Je to skoro 50% nárast oproti minulému roku. Samozrejme, som sa zapojil a tiež som prispel. Bola to zábava, naučil som sa veľa nových vecí pri hľadaní zdrojov a prekladaní článkov z anglickej a španielskej Wikipédie.&lt;/p&gt;&#xA;&lt;p&gt;Dúfam, že moje obľúbené filmy, ako sú &lt;a href=&#34;https://sk.wikipedia.org/wiki/Divok%C3%A9_historky&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Divoké historky&lt;/a&gt;, alebo &lt;a href=&#34;https://sk.wikipedia.org/wiki/V%C3%A1%C5%BEen%C3%BD_ob%C4%8Dan&#34;  target=&#34;_blank&#34; rel=&#34;noreferrer&#34;&gt;Vážený občan&lt;/a&gt;, si nájdu nových divákov aj vďaka slovenskej Wikipédii.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>A Wiki Wiki Wikend</title>

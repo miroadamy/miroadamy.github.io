@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Sat, 23 Nov 2019 22:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 23 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Obsidian to Hugo pipeline is alive</title>
+      <link>https://miroadamy.com/notes/obsidian-to-hugo-pipeline-is-alive/</link>
+      <pubDate>Sun, 23 Aug 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/notes/obsidian-to-hugo-pipeline-is-alive/</guid>
+      <description>&lt;p&gt;Most of my note-taking and thinking happens in Obsidian, so natural extension of this tool was to allow a pipeline that allows me to publish a thought or a quick note directly from Obsidian Vault into the this blog.&lt;/p&gt;&#xA;&lt;p&gt;Every note starts its life as obsidian note, and through dedicated set of tags and custom attribute for publishing, it finds its way to the repository holding the source of this blog. Then another pipeline: the one that pre-compiles static website and publishes to GitHub takes over and makes the note visible.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Building Hugo as well on GitLab pages</title>
