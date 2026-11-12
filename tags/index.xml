@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Mon, 09 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Life</title>
+      <link>https://miroadamy.com/tags/life/</link>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/tags/life/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Thinknostic</title>
+      <link>https://miroadamy.com/tags/thinknostic/</link>
+      <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/tags/thinknostic/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Ai</title>
@@ -195,16 +215,6 @@
       <pubDate>Mon, 05 Oct 2026 00:00:00 +0200</pubDate>
       
       <guid>https://miroadamy.com/tags/consulting/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Life</title>
-      <link>https://miroadamy.com/tags/life/</link>
-      <pubDate>Mon, 05 Oct 2026 00:00:00 +0200</pubDate>
-      
-      <guid>https://miroadamy.com/tags/life/</guid>
       <description></description>
       
     </item>
@@ -440,7 +450,7 @@
     </item>
     
     <item>
-      <title>AWS</title>
+      <title>Aws</title>
       <link>https://miroadamy.com/tags/aws/</link>
       <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
       
@@ -650,7 +660,7 @@
     </item>
     
     <item>
-      <title>ECommerce</title>
+      <title>Ecommerce</title>
       <link>https://miroadamy.com/tags/ecommerce/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
@@ -660,7 +670,7 @@
     </item>
     
     <item>
-      <title>IaaC</title>
+      <title>Iaac</title>
       <link>https://miroadamy.com/tags/iaac/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
