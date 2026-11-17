@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Thu, 12 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 17 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Meme</title>
+      <link>https://miroadamy.com/tags/meme/</link>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/tags/meme/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Politika</title>
+      <link>https://miroadamy.com/tags/politika/</link>
+      <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/tags/politika/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Life</title>
@@ -55,16 +75,6 @@
       <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://miroadamy.com/tags/claude/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Meme</title>
-      <link>https://miroadamy.com/tags/meme/</link>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://miroadamy.com/tags/meme/</guid>
       <description></description>
       
     </item>
@@ -460,7 +470,7 @@
     </item>
     
     <item>
-      <title>AWS</title>
+      <title>Aws</title>
       <link>https://miroadamy.com/tags/aws/</link>
       <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
       
@@ -560,7 +570,7 @@
     </item>
     
     <item>
-      <title>Api</title>
+      <title>API</title>
       <link>https://miroadamy.com/tags/api/</link>
       <pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
       
@@ -670,7 +680,7 @@
     </item>
     
     <item>
-      <title>ECommerce</title>
+      <title>Ecommerce</title>
       <link>https://miroadamy.com/tags/ecommerce/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
