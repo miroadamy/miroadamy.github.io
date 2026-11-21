@@ -4,7 +4,7 @@
 
   <url>
     <loc>https://miroadamy.com/notes/</loc>
-    <lastmod>2026-11-18T00:00:00+00:00</lastmod>
+    <lastmod>2026-11-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -22,13 +22,19 @@
   </url>
   <url>
     <loc>https://miroadamy.com/</loc>
-    <lastmod>2026-11-18T10:09:10+00:00</lastmod>
+    <lastmod>2026-11-21T09:28:46+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://miroadamy.com/status/</loc>
-    <lastmod>2026-11-18T10:09:10+00:00</lastmod>
+    <lastmod>2026-11-21T09:28:46+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://miroadamy.com/notes/wikipedia-article-depth-meta-wiki/</loc>
+    <lastmod>2026-11-21T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

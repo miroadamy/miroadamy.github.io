@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Wed, 18 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Wikipedia</title>
+      <link>https://miroadamy.com/tags/wikipedia/</link>
+      <pubDate>Sat, 21 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/tags/wikipedia/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Meme</title>
@@ -285,16 +295,6 @@
       <pubDate>Sat, 03 Oct 2026 00:00:00 +0200</pubDate>
       
       <guid>https://miroadamy.com/tags/icloud/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Wikipedia</title>
-      <link>https://miroadamy.com/tags/wikipedia/</link>
-      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://miroadamy.com/tags/wikipedia/</guid>
       <description></description>
       
     </item>
@@ -680,7 +680,7 @@
     </item>
     
     <item>
-      <title>ECommerce</title>
+      <title>Ecommerce</title>
       <link>https://miroadamy.com/tags/ecommerce/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
@@ -690,7 +690,7 @@
     </item>
     
     <item>
-      <title>IaaC</title>
+      <title>Iaac</title>
       <link>https://miroadamy.com/tags/iaac/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
