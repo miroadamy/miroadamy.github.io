@@ -7,7 +7,57 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Sat, 21 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Nov 2026 00:01:00 +0100</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Ai</title>
+      <link>https://miroadamy.com/tags/ai/</link>
+      <pubDate>Sun, 22 Nov 2026 00:01:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/tags/ai/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Dictation</title>
+      <link>https://miroadamy.com/tags/dictation/</link>
+      <pubDate>Sun, 22 Nov 2026 00:01:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/tags/dictation/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Soniox</title>
+      <link>https://miroadamy.com/tags/soniox/</link>
+      <pubDate>Sun, 22 Nov 2026 00:01:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/tags/soniox/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Speech-to-Text</title>
+      <link>https://miroadamy.com/tags/speech-to-text/</link>
+      <pubDate>Sun, 22 Nov 2026 00:01:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/tags/speech-to-text/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Tools</title>
+      <link>https://miroadamy.com/tags/tools/</link>
+      <pubDate>Sun, 22 Nov 2026 00:01:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/tags/tools/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Wikipedia</title>
@@ -65,16 +115,6 @@
       <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
       
       <guid>https://miroadamy.com/tags/wisdom/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Ai</title>
-      <link>https://miroadamy.com/tags/ai/</link>
-      <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
-      
-      <guid>https://miroadamy.com/tags/ai/</guid>
       <description></description>
       
     </item>
@@ -690,7 +730,7 @@
     </item>
     
     <item>
-      <title>Iaac</title>
+      <title>IaaC</title>
       <link>https://miroadamy.com/tags/iaac/</link>
       <pubDate>Mon, 10 Aug 2020 13:00:00 +0800</pubDate>
       
@@ -1025,16 +1065,6 @@
       <pubDate>Sun, 10 Feb 2019 11:22:48 +0800</pubDate>
       
       <guid>https://miroadamy.com/tags/ssl/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Tools</title>
-      <link>https://miroadamy.com/tags/tools/</link>
-      <pubDate>Mon, 14 Jan 2019 11:22:48 +0800</pubDate>
-      
-      <guid>https://miroadamy.com/tags/tools/</guid>
       <description></description>
       
     </item>

@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Mon, 14 Jan 2019 11:22:48 +0800</lastBuildDate><atom:link href="https://miroadamy.com/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Nov 2026 00:01:00 +0100</lastBuildDate><atom:link href="https://miroadamy.com/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Talking to My Computer: Three Dictation Tools in One Year</title>
+      <link>https://miroadamy.com/posts/2026-11-22-talking-to-my-computer/</link>
+      <pubDate>Sun, 22 Nov 2026 00:01:00 +0100</pubDate>
+      
+      <guid>https://miroadamy.com/posts/2026-11-22-talking-to-my-computer/</guid>
+      <description>&lt;p&gt;I talk to my computer for a living and for entertainment now. Not in meetings, I mean it literally: most of what I &amp;ldquo;type&amp;rdquo; into a terminal, into notes and into the chat window of an LLM, I say out loud. A year ago I typed all of it. This is the story of how I got from one to the other, through three tools, and what it ended up costing.&lt;/p&gt;</description>
+      
+    </item>
     
     <item>
       <title>Gitbits</title>
