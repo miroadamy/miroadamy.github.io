@@ -22,13 +22,19 @@
   </url>
   <url>
     <loc>https://miroadamy.com/</loc>
-    <lastmod>2026-11-25T22:23:56+00:00</lastmod>
+    <lastmod>2026-11-25T22:35:03+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://miroadamy.com/status/</loc>
-    <lastmod>2026-11-25T22:23:56+00:00</lastmod>
+    <lastmod>2026-11-25T22:35:03+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://miroadamy.com/notes/mind-simulation/</loc>
+    <lastmod>2026-11-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
