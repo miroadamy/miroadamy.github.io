@@ -1,0 +1,1373 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="light"
+  data-auto-appearance="true"><head>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>One Button From Thought to Note &middot; Miro&#39;s World</title>
+    <meta name="title" content="One Button From Thought to Note &middot; Miro&#39;s World">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="Miro&#39;s World - personal blog of Miro Adamy">
+  
+  
+    <meta name="keywords" content="dictation,speech-to-text,soniox,iphone,obsidian,automation,">
+  
+  
+  
+  <link rel="canonical" href="https://miroadamy.com/posts/2026-11-23-one-button-from-thought-to-note/">
+  
+  
+  
+
+  
+  
+    <meta name="author" content="Miro Adamy">
+  
+  
+    
+      
+        
+      
+    
+      
+        
+          <link href="https://www.linkedin.com/in/miroadamy/" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://stackoverflow.com/users/369692/miro-a" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://github.com/miroadamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://gitlab.com/miro.adamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://twitter.com/miroadamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.facebook.com/miro.adamy" rel="me">
+        
+      
+    
+      
+        
+          <link href="https://www.instagram.com/miro.adamy/?hl=sk" rel="me">
+        
+      
+    
+  
+
+  
+  <meta property="og:url" content="https://miroadamy.com/posts/2026-11-23-one-button-from-thought-to-note/">
+	<meta property="og:site_name" content="Miro&#39;s World">
+	<meta property="og:title" content="One Button From Thought to Note">
+	<meta property="og:description" content="In the previous post I described how I ended up with a speech-to-text service that understands my mixture of Slovak and English, and how little it costs when you pay for it directly. This post is the practical half: how I use it on the Mac, and what I built for the phone over one weekend.
+On the Mac: hold a key # There is not much to say, which is the point. I hold the right Command key and speak. When I let go, the text is where the cursor was. The audio goes to Soniox as I speak and the words come back while I am still talking.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-11-23T00:02:00+01:00">
+		<meta property="article:modified_time" content="2026-11-23T00:02:00+01:00">
+		<meta property="article:tag" content="Dictation">
+		<meta property="article:tag" content="Speech-to-Text">
+		<meta property="article:tag" content="Soniox">
+		<meta property="article:tag" content="Iphone">
+		<meta property="article:tag" content="Obsidian">
+		<meta property="article:tag" content="Automation">
+
+  
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="One Button From Thought to Note">
+	<meta name="twitter:description" content="In the previous post I described how I ended up with a speech-to-text service that understands my mixture of Slovak and English, and how little it costs when you pay for it directly. This post is the practical half: how I use it on the Mac, and what I built for the phone over one weekend.
+On the Mac: hold a key # There is not much to say, which is the point. I hold the right Command key and speak. When I let go, the text is where the cursor was. The audio goes to Soniox as I speak and the words come back while I am still talking.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+      
+    
+  
+    
+      
+    
+  
+  
+    
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.99edf876ce7a7b7e8a3e94f4bba198cbd79590bda4b1a587e1de0b2e374c3251dec699612061f922867c2eaf74c9de226bffa214fa11f8fccbaf317c735c0629.css"
+    integrity="sha512-me34ds56e36KPpT0u6GYy9eVkL2ksaWH4d4LLjdMMlHexplhIGH5IoZ8Lq90yd4ia/&#43;iFPoR&#43;PzLrzF8c1wGKQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.764f412f07ea715415e9123a5eb5f355429502d0b760146b9bcab854bc50829dee14488594acd935dfcdc6a0fe7e6d14d7bee914ebb9272b251aa238cb52c4dd.js"
+    integrity="sha512-dk9BLwfqcVQV6RI6XrXzVUKVAtC3YBRrm8q4VLxQgp3uFEiFlKzZNd/NxqD&#43;fm0U177pFOu5JyslGqI4y1LE3Q=="></script>
+  
+
+
+  
+  
+  
+  
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+    
+    <script defer src="/js/medium-zoom.67b71ecf7eecce38673a92244d1ffd93edb5f1aeedd12e725d0f67fe901828fa3562f6a6d64ad290b36b7d7034b8ea16e63486d75d957bcf6a2732923e5d46e6.js" integrity="sha512-Z7cez37szjhnOpIkTR/9k&#43;218a7t0S5yXQ9n/pAYKPo1Yvam1krSkLNrfXA0uOoW5jSG112Ve89qJzKSPl1G5g=="></script>
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.17b3d3bbe00602f12ed247330588c186dd330147642a44a8aca5159f5905a7a6e0a70abb06315b581aef2c4f6d0e4d4bac82dbc1b0916818b057f9ad42c4aae6.js"
+      integrity="sha512-F7PTu&#43;AGAvEu0kczBYjBht0zAUdkKkSorKUVn1kFp6bgpwq7BjFbWBrvLE9tDk1LrILbwbCRaBiwV/mtQsSq5g=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "One Button From Thought to Note",
+    "headline": "One Button From Thought to Note",
+    
+    "inLanguage": "en",
+    "url" : "https://miroadamy.com/posts/2026-11-23-one-button-from-thought-to-note/",
+    "author" : {
+      "@type": "Person",
+      "name": "Miro Adamy",
+      "sameAs": ["https://www.linkedin.com/in/miroadamy/", "https://stackoverflow.com/users/369692/miro-a", "https://github.com/miroadamy", "https://gitlab.com/miro.adamy", "https://twitter.com/miroadamy", "https://www.facebook.com/miro.adamy", "https://www.instagram.com/miro.adamy/?hl=sk"]
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-11-23T00:02:00\u002b01:00",
+    "datePublished": "2026-11-23T00:02:00\u002b01:00",
+    
+    "dateModified": "2026-11-23T00:02:00\u002b01:00",
+    
+    "keywords": ["dictation","speech-to-text","soniox","iphone","obsidian","automation"],
+    
+    "mainEntityOfPage": "https://miroadamy.com/posts/2026-11-23-one-button-from-thought-to-note/",
+    "wordCount":  1473 
+  }]
+  </script>
+
+
+
+  
+  
+    
+
+
+
+
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    <header>
+      
+      
+        <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Miro&rsquo;s World
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="Main menu" class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Home"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Home
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Archives"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Archives
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/notes/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Notes"
+      title="Notes">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Notes
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/categories/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Categories"
+      title="">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Categories
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/now/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Now"
+      title="Now">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Now
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Switch to dark appearance"
+        type="button"
+        class="text-sm bf-icon-color-hover"
+        title="Switch to dark appearance">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd
+        id="search-shortcut-hint"
+        class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400"
+        aria-hidden="true">
+        ⌘K
+      </kbd>
+    </button>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row relative flex items-center h-14 gap-4">
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Switch to dark appearance"
+      title="Switch to dark appearance"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label
+      for="mobile-menu-toggle"
+      tabindex="0"
+      role="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu-dialog"
+      aria-label="Main menu"
+      class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      id="mobile-menu-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Main menu"
+      style="scrollbar-gutter: stable;"
+      class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100
+      
+        fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99
+      
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        tabindex="0"
+        role="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu-dialog"
+        class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only">Close menu</span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav
+        aria-label="Mobile menu"
+        class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/"
+          aria-label="Home"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Home
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/posts/"
+          aria-label="Archives"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Archives
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/notes/"
+          aria-label="Notes"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Notes" class="text-2xl font-bold tracking-tight">
+            Notes
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/tags/"
+          aria-label="Tags"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Tags
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/categories/"
+          aria-label="Categories"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="" class="text-2xl font-bold tracking-tight">
+            Categories
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/now/"
+          aria-label="Now"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Now" class="text-2xl font-bold tracking-tight">
+            Now
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/about/"
+          aria-label="About"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="About" class="text-2xl font-bold tracking-tight">
+            About
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+      
+    </header>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  
+  
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        One Button From Thought to Note
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2026-11-23T00:02:00&#43;01:00">November 23, 2026</time><span class="px-2 text-primary-500">&middot;</span><span>1473 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">7 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/categories/lifehacks/">
+                  
+                  <span class="flex cursor-pointer">
+  
+  
+  
+    
+    
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Lifehacks
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+        
+      
+        
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/dictation/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Dictation
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/speech-to-text/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Speech-to-Text
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/soniox/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Soniox
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/iphone/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Iphone
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/obsidian/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Obsidian
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+            
+              
+                <a class="relative mt-[0.5rem] me-2" href="/tags/automation/">
+                  <span class="flex cursor-pointer">
+  
+  
+  
+  
+    <span
+      class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+  
+    Automation
+  </span>
+</span>
+
+                </a>
+              
+            
+          
+        
+      
+    </div>
+  
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+  
+
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents" aria-label="Table of Contents">
+  <ul>
+    <li><a href="#on-the-mac-hold-a-key">On the Mac: hold a key</a></li>
+    <li><a href="#on-the-phone-a-pile-of-recordings">On the phone: a pile of recordings</a></li>
+    <li><a href="#the-chain">The chain</a></li>
+    <li><a href="#a-deliberate-choice-slow-is-fine">A deliberate choice: slow is fine</a></li>
+    <li><a href="#three-things-that-went-wrong">Three things that went wrong</a></li>
+    <li><a href="#the-small-stuff">The small stuff</a></li>
+    <li><a href="#what-it-is-not">What it is not</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContentsMobile" aria-label="Table of Contents">
+  <ul>
+    <li><a href="#on-the-mac-hold-a-key">On the Mac: hold a key</a></li>
+    <li><a href="#on-the-phone-a-pile-of-recordings">On the phone: a pile of recordings</a></li>
+    <li><a href="#the-chain">The chain</a></li>
+    <li><a href="#a-deliberate-choice-slow-is-fine">A deliberate choice: slow is fine</a></li>
+    <li><a href="#three-things-that-went-wrong">Three things that went wrong</a></li>
+    <li><a href="#the-small-stuff">The small stuff</a></li>
+    <li><a href="#what-it-is-not">What it is not</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>In the <a href="/posts/2026-11-22-talking-to-my-computer/" >previous post</a> I described how I ended up with a speech-to-text service that understands my mixture of Slovak and English, and how little it costs when you pay for it directly. This post is the practical half: how I use it on the Mac, and what I built for the phone over one weekend.</p>
+
+<h2 class="relative group">On the Mac: hold a key
+    <div id="on-the-mac-hold-a-key" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#on-the-mac-hold-a-key" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>There is not much to say, which is the point. I hold the right Command key and speak. When I let go, the text is where the cursor was. The audio goes to Soniox as I speak and the words come back while I am still talking.</p>
+<p>I use this pretty much everywhere: in Obsidian, in Claude Code, in email, in Google Docs. The one exception is code. Dictating Rust or Python is weird and awkward, and you end up editing more than if you had typed it in the first place. But the moments when I type code myself, rather than prompt Claude to write it for me, are rare these days.</p>
+<p>It works well enough that I stopped thinking about it. The phone was where I still had a problem.</p>
+
+<h2 class="relative group">On the phone: a pile of recordings
+    <div id="on-the-phone-a-pile-of-recordings" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#on-the-phone-a-pile-of-recordings" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>I have had &ldquo;quick capture&rdquo; apps on my phone for years. One of them holds notes from 2021 and 2022 that I never looked at again, because nothing carried them anywhere. Another one was supposed to send notes straight into my vault and stopped delivering after I changed phones. Voice memos were worse: audio files that nobody, including me, ever listened to again.</p>
+<p>The capture was never the problem. The other end was. A thought that lands in an app I do not open is a thought I have thrown away with extra steps.</p>
+<p>What I wanted was simple to say. Press one button. Speak. Find the text in my notes, in the one inbox file I already go through every week. No app in the middle, nothing to open, nothing to remember.</p>
+
+<h2 class="relative group">The chain
+    <div id="the-chain" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-chain" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The new iPhone has a programmable button on the side, the Action button. Out of the box it starts Siri. (The new Siri is considerably smarter than the old one, but still leagues away from what Claude can do for me.)</p>
+<p>On my phone, the button now does this:</p>
+<ol>
+<li>The button runs an Apple Shortcut with three steps: record audio, save the file into a folder on iCloud Drive, show a notification.</li>
+<li>iCloud Drive carries the file to a Mac mini at home that is switched on all the time.</li>
+<li>A small script on the Mac mini notices the new file and sends it to Soniox.</li>
+<li>The text comes back, and the script appends it as one dated line to the inbox file in my Obsidian vault.</li>
+<li>Obsidian&rsquo;s own sync delivers that line to my laptop and back to the phone.</li>
+</ol>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="capture-shortcut.jpg"
+    src="/img/vpub/capture-shortcut.jpg"
+    ></figure>
+</p>
+<p>That is the whole Shortcut. It works from a locked phone with a dark screen, which I did not expect and which is what makes it useful: I can do it while walking, without looking.</p>
+<p>The recording itself is an ordinary audio file in an ordinary folder, so I can play it back in the Files app if I doubt what I said. Right next to it is a text file with the raw output of the transcription model.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt="capture-shortcut-folders.jpg"
+    src="/img/vpub/capture-shortcut-folders.jpg"
+    ></figure>
+</p>
+<p>And this is what arrives:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-text" data-lang="text"><span class="line"><span class="cl">- 2026-11-22 23:06 No tak dobre, tak ideme vyskúšať, mixing English and Slovak in the middle of the one- jednej nahrávky. Budeme skúšať prepínať back and forth, back and forth, and we will see ako to celé dopadne.</span></span></code></pre></div></div>
+<p>I said exactly that, switching languages in the middle of sentences on purpose. It is the most faithful transcription of my own speech I have ever seen from a machine.</p>
+
+<h2 class="relative group">A deliberate choice: slow is fine
+    <div id="a-deliberate-choice-slow-is-fine" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-deliberate-choice-slow-is-fine" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The phone does not transcribe anything. It only records. The text is not on the screen a second later; it is in my notes a little later.</p>
+<p>I chose that on purpose. Transcription on the phone was the part that never worked for the way I mix languages, and I do not need to see the text immediately. I need it to be right and to be in the right place when I sit down. So the phone does the one thing it is good at, and a machine with a good connection and a proper speech model does the rest.</p>
+<p>This is not to dismiss the phone&rsquo;s own abilities. As long as you stay within a single language, Apple&rsquo;s dictation on the phone is pretty darn good. But you <em>have to</em> select the language up front with the keyboard switcher and stick with it. That is why I have seven keyboards installed on my iPhone: Slovak, English, Czech, German, Spanish, Italian and Hungarian. With that I get an estimated 95 to 99% accuracy in every language I use, and the text appears right in the app I am in, whether that is Obsidian, Google Docs or Claude.</p>
+<p>That is the fast path, and its price is staying in one language. If you want the freedom to switch languages mid-sentence, as I often do, you have to use the Shortcut, and the text arrives later.</p>
+<p>How much later? On the first evening I measured three recordings. Two took about 34 seconds from the end of the recording to the line in the vault. One took four minutes, three of which were the phone taking its time to upload the file. That is a small sample, and iCloud does what it wants, but it is the right order of magnitude: half a minute when things are awake, a few minutes when they are not.</p>
+
+<h2 class="relative group">Three things that went wrong
+    <div id="three-things-that-went-wrong" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#three-things-that-went-wrong" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>I built this in a conversation with Claude, over two evenings, and it did not work the first time. The failures were more instructive than the parts that worked.</p>
+<p>We looked for the notes in the wrong place. The Mac mini has its own synced copy of my vault, but not in the folder where the laptop keeps it. The check came back &ldquo;no vault here&rdquo;, and for a while the plan was being redesigned around a fact that was not true. Lesson: &ldquo;I did not find it where I looked&rdquo; is not &ldquo;it is not there&rdquo;.</p>
+<p>The script worked by hand and hung when the system ran it. Started from a terminal, it read the iCloud folder without complaint. Started by the scheduler in the background, it froze, silently, forever. macOS was showing a dialog on the Mac mini&rsquo;s screen asking whether Python may read iCloud Drive, and the Mac mini has no screen attached. One click through remote desktop fixed it. Lesson: on a Mac, &ldquo;it works when I run it&rdquo; and &ldquo;it works unattended&rdquo; are two different permissions.</p>
+<p>The first automatic run crashed on a file that was not there yet. iCloud announces a file before it has downloaded it: the name and the size are visible, the content is still in the cloud. Reading it fails with an error message about a deadlock, which is as helpful as it sounds. The scheduler tried again a few seconds later and it worked, so nothing was lost, and now the script waits until the content has really arrived.</p>
+
+<h2 class="relative group">The small stuff
+    <div id="the-small-stuff" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#the-small-stuff" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Fillers. A faithful transcription includes every &ldquo;ehm&rdquo; and &ldquo;uh&rdquo;. Soniox has no switch for that, so the script removes a short list of hesitation sounds before writing the line. The untouched transcript stays in the text file next to the audio. It does not rephrase anything. I do not want a machine tidying up my thoughts, only my throat-clearing.</p>
+<p>Nothing is deleted. Processed recordings move to a &ldquo;done&rdquo; folder. If the transcription is ever wrong, the original is one tap away.</p>
+<p>Cost. Recorded audio is billed at about ten cents an hour. One hundred notes a month, fifteen seconds each, come to roughly four cents.</p>
+
+<h2 class="relative group">What it is not
+    <div id="what-it-is-not" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#what-it-is-not" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>It is not a to-do app and it is not a reminder. Something that has to happen today does not belong in a file I empty once a week.</p>
+<p>It is also not finished. The same button could take typed text, or a link shared from another app, and the lines that turn out to be diary entries should end up in my journal and not in an inbox. Those are for another weekend.</p>
+<p>But the main thing works, and it is the thing I never got from the apps I tried: I press a button, I say what I am thinking, in whatever languages it comes out, and it is waiting for me in my notes. The whole apparatus is a three-step Shortcut, one script of about three hundred lines, and a speech service that costs me cents a month.</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2026-11-22-talking-to-my-computer/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Talking to My Computer: Three Dictation Tools in One Year
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2026-11-22T00:01:00&#43;01:00">November 22, 2026</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Miro Adamy
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Search"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          aria-label="Search"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+    
+    
+  </body>
+  
+</html>
