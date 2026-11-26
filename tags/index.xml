@@ -7,7 +7,27 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2026 Miro Adamy</copyright>
-    <lastBuildDate>Mon, 23 Nov 2026 00:02:00 +0100</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Nov 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://miroadamy.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bratislava</title>
+      <link>https://miroadamy.com/tags/bratislava/</link>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/tags/bratislava/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Citylife</title>
+      <link>https://miroadamy.com/tags/citylife/</link>
+      <pubDate>Thu, 26 Nov 2026 00:00:00 +0000</pubDate>
+      
+      <guid>https://miroadamy.com/tags/citylife/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Automation</title>
@@ -30,7 +50,7 @@
     </item>
     
     <item>
-      <title>Iphone</title>
+      <title>IPhone</title>
       <link>https://miroadamy.com/tags/iphone/</link>
       <pubDate>Mon, 23 Nov 2026 00:02:00 +0100</pubDate>
       
@@ -520,7 +540,7 @@
     </item>
     
     <item>
-      <title>Aws</title>
+      <title>AWS</title>
       <link>https://miroadamy.com/tags/aws/</link>
       <pubDate>Thu, 03 Sep 2026 15:30:00 +0200</pubDate>
       
@@ -570,16 +590,6 @@
     </item>
     
     <item>
-      <title>Bratislava</title>
-      <link>https://miroadamy.com/tags/bratislava/</link>
-      <pubDate>Fri, 28 Aug 2026 00:00:00 +0200</pubDate>
-      
-      <guid>https://miroadamy.com/tags/bratislava/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Spain</title>
       <link>https://miroadamy.com/tags/spain/</link>
       <pubDate>Fri, 28 Aug 2026 00:00:00 +0200</pubDate>
@@ -620,7 +630,7 @@
     </item>
     
     <item>
-      <title>Api</title>
+      <title>API</title>
       <link>https://miroadamy.com/tags/api/</link>
       <pubDate>Thu, 18 Feb 2021 13:00:00 +0800</pubDate>
       
